@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Header from "./component/core-ui/header/header"
+import Footer from "./component/core-ui/footer/footer"
 import SignUp from "./component/views/sign-up";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
@@ -46,6 +47,7 @@ function App() {
                     <SignUp />
                 </Route>
             </Switch>
+            <Footer />
         </div>
     </Router>
   );
