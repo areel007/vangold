@@ -98,6 +98,7 @@ footer {
   color: #d9dbe1;
 }
 .right_bottom_f {
+  padding-bottom: 26px;
   display: flex;
   gap: var(--fs-10);
 }

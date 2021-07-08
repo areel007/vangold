@@ -116,7 +116,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="terms-policy">
+          {/* <div className="terms-policy">
             <div className="terms-policy-links">
               <ul>
                 <li>
@@ -130,7 +130,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
