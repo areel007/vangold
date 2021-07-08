@@ -22,7 +22,7 @@ const Footer = () => {
                 <Link to="">Overview</Link>
               </li>
               <li>
-                <Link to="">Features New</Link>
+                <Link to="">Features</Link> &nbsp;<Link style={{color: "#2EC5CE"}} to=""><i>New</i></Link>
               </li>
               <li>
                 <Link to="">Tutorials</Link>
