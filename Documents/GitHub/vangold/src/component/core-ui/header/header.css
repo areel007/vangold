@@ -41,7 +41,7 @@ header {
     font-size: var(--fs-18);
     line-height: 2.3rem;
     color: var(--primary);
-    font-family: mulish;
+    font-family: var(--mulish);
     font-weight: var(--font-wieght-bold);
     border-radius: .4rem;
 }
@@ -53,6 +53,7 @@ header {
 .hamburger {
     fill: var(--primary);
     display: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1100px){
