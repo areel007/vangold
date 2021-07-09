@@ -4,6 +4,7 @@
     background-color: var(--primary);
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 .close {
     fill: var(--white);

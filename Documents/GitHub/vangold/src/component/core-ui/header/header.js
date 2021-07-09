@@ -56,7 +56,7 @@ const Header = (props) => {
                         { props.buttons.map(
                             button => {
                                 return (
-                                    <NavLink to={button.to}>{ button.buttonName }</NavLink>
+                                    <NavLink key={button.buttonName} to={button.to}>{ button.buttonName }</NavLink>
                                 )
                             }
                         )}
