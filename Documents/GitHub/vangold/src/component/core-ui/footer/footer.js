@@ -1,11 +1,11 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
-import icon1 from "../images/svgicons/Path-4.svg";
-import icon2 from "../images/svgicons/Path-2.svg";
-import icon3 from "../images/svgicons/Path-6.svg";
-import icon4 from "../images/svgicons/Path-5.svg";
-import icon5 from "../images/svgicons/Path.svg";
-import icon6 from "../images/svgicons/Path-3.svg";
+import icon1 from "../../../assets/images/svgicons/Path-4.svg";
+import icon2 from "../../../assets/images/svgicons/Path-2.svg";
+import icon3 from "../../../assets/images/svgicons/Path-6.svg";
+import icon4 from "../../../assets/images/svgicons/Path-5.svg";
+import icon5 from "../../../assets/images/svgicons/Path.svg";
+import icon6 from "../../../assets/images/svgicons/Path-3.svg";
 
 const Footer = () => {
   return (
