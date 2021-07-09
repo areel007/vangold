@@ -1,6 +1,5 @@
 header {
     background-color: var(--white);
-    border: 1px solid red;
 }
 .header__inner {
     height: 7.2rem;
@@ -44,14 +43,12 @@ header {
     color: var(--primary);
     font-family: mulish;
     font-weight: var(--font-wieght-bold);
+    border-radius: .4rem;
 }
 .links a:last-child {
     margin-right: 0;
-}
-.active {
     background-color: var(--primary);
-    color: var(--white) !important;
-    border-radius: .4rem;
+    color: var(--white);
 }
 .hamburger {
     fill: var(--primary);
