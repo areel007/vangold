@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, useHistory} from "react-router-dom";
 import Header from "./component/core-ui/header/header"
 import Footer from "./component/core-ui/footer/footer"
 import SignUp from "./component/views/sign-up";
@@ -8,6 +8,13 @@ import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 
 function App() {
+
+    const history = useHistory();
+
+    const routeChange = () =>{
+        let path = `sign-up`;
+        history.push(path);
+    }
 
     const [links] = useState(
         [
@@ -38,8 +45,18 @@ function App() {
   return (
     <Router>
         <div className="App">
-            <Header links={links} buttons={buttons} toggleMobileNav={toggleMobileNav} />
-            <MobileNav links={links} buttons={buttons} isMobileNavOut={isMobileNavOut} close={close}/>
+            <Header
+                links={links}
+                buttons={buttons}
+                toggleMobileNav={toggleMobileNav}
+            />
+            <MobileNav
+                links={links}
+                buttons={buttons}
+                isMobileNavOut={isMobileNavOut}
+                close={close}
+                routeChange={routeChange}
+            />
             <Switch>
                 <Route path="/" exact>
                     Hello World
