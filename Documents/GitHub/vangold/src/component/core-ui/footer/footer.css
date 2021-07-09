@@ -31,10 +31,10 @@ footer {
 .logo-container {
   width: 100%;
 }
-.logo {
+.logo-container .logo {
   width: 10rem;
   height: 4rem;
-  background-color: var(--primary);
+  background-color: var(--white);
   color: var(--white);
   font-family: var(--mulish);
 }

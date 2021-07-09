@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Header from "./component/core-ui/header/header"
 import Footer from "./component/core-ui/footer/footer"
 import SignUp from "./component/views/sign-up";
+import LogIn from "./component/views/log-in";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 
@@ -45,6 +46,9 @@ function App() {
                 </Route>
                 <Route path="/sign-up">
                     <SignUp />
+                </Route>
+                <Route path="/login">
+                    <LogIn />
                 </Route>
             </Switch>
             <Footer />
