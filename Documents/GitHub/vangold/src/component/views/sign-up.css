@@ -1,0 +1,23 @@
+.sign-up__inner {
+    width: 100%;
+    display: flex;
+}
+.already-have-account {
+    width: 100%;
+    text-align: right;
+    margin-top: 3.2rem;
+    font-size: var(--fs-14);
+    line-height: 1.644rem;
+    font-weight: var(--font-wieght-semibold);
+    font-family: var(--raleway);
+    color: #767676;
+}
+.already-have-account a {
+    color: var(--primary);
+}
+.sign-up__image {
+    margin-right: 5rem;}
+.sign-up__image img {
+    width: 100%;
+    object-fit: cover;
+}
