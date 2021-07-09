@@ -1,13 +1,7 @@
-.log-in{
-    margin-bottom: 20px;
-}
 .log-in__inner {
   width: 100%;
   display: flex;
-  gap: 30px;
-  margin-top: 20px;
 }
-
 .already-have-account {
   width: 100%;
   text-align: right;
@@ -21,14 +15,18 @@
 .already-have-account a {
   color: var(--primary);
 }
-.log-in__image, .log-in__form {
+.log-in__form{
   width: 100%;
 }
-.log-in__image img {
-  width: 80%;
-}
-@media screen and (max-width: 767px){
+.log-in__image {
+  width: 100%;
+  margin-right: 5rem;}
+  @media screen and (max-width: 767px) {
     .log-in__image {
-        display: none;
-      }
+      display: none;
+    }
+  }
+.log-in__image img {
+  width: 100%;
+  object-fit: cover;
 }

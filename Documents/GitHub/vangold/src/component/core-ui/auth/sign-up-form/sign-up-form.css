@@ -98,6 +98,7 @@ h1.form__title {
     background-color: var(--primary);
     color: var(--white);
     outline: none;
+    cursor: pointer;
     border: none;
     border-radius: .4rem;
     height: 4.8rem;
@@ -149,6 +150,7 @@ h1.form__title {
     align-items: center;
     justify-content: center;
     height: 4.8rem;
+    cursor: pointer;
     padding: 1.6rem;
 }
 .icon-btns button svg {
