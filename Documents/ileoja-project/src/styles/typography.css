@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --montserat: 'Montserrat', sans-serif;
+    --inter: 'Inter', sans-serif;
+
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-wieght-semibold: 600;
+    --font-wieght-bold: 700;
+    --font-wieght-extrabold: 800;
+    --font-wieght-black: 900;
+
+    --fs-10: calc(8px + (10 - 8) * ((100vw - 320px) / (1440 - 320)));
+    --fs-11: calc(9px + (11 - 9) * ((100vw - 320px) / (1440 - 320)));
+    --fs-12: calc(10px + (12 - 10) * ((100vw - 320px) / (1440 - 320)));
+    --fs-14: calc(12px + (14 - 12) * ((100vw - 320px) / (1440 - 320)));
+    --fs-16: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+    --fs-18: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)));
+    --fs-19: calc(17px + (19 - 17) * ((100vw - 320px) / (1440 - 320)));
+    --fs-20: calc(18px + (20 - 18) * ((100vw - 320px) / (1440 - 320)));
+    --fs-24: calc(22px + (24 - 22) * ((100vw - 320px) / (1440 - 320)));
+    --fs-30: calc(28px + (30 - 28) * ((100vw - 320px) / (1440 - 320)));
+    --fs-32: calc(30px + (32 - 30) * ((100vw - 320px) / (1440 - 320)));
+    --fs-33: calc(31px + (33 - 31) * ((100vw - 320px) / (1440 - 320)));
+    --fs-34: calc(33px + (34 - 32) * ((100vw - 320px) / (1440 - 320)));
+    --fs-50: calc(48px + (40 - 48) * ((100vw - 320px) / (1440 - 320)));
+    --fs-60: calc(58px + (60 - 58) * ((100vw - 320px) / (1440 - 320)));
+}
+
