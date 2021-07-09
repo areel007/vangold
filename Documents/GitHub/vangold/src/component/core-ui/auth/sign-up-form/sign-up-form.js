@@ -87,11 +87,9 @@ const SignUpForm = () => {
                 </div>
             </div>
 
-            <div className="terms">
-                <label>
-                    <input type="checkbox"/>
-                    <p>By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</p>
-                </label>
+            <div className="signin__terms">
+                <input type="checkbox" id="signinterms" name="signinterms" value="signinterms"></input>
+                <label for="signinterms" className="login-label"> &nbsp;By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</label>
             </div>
 
             <button className="create__account__button">Create account</button>
