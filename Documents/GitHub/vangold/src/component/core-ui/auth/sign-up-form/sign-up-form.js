@@ -1,6 +1,14 @@
 import "./sign-up-form.css"
+import {useState} from "react";
 
 const SignUpForm = () => {
+
+    const [passwordShown, setPasswordShown] = useState(false);
+
+    function togglePasswordVisibility() {
+        setPasswordShown(passwordShown ? false : true);
+    }
+
     return (
         <form>
 
@@ -23,12 +31,13 @@ const SignUpForm = () => {
             <div className="form__control">
                 <label>Create Password</label>
                 <div className="input__box">
-                    <input type="password"/>
+                    <input type={passwordShown ? "text" : "password"} />
                     <svg
                         width="22"
                         height="19"
                         viewBox="0 0 22 19"
                         fill="none"
+                        onClick={togglePasswordVisibility}
                     >
                         <path d="M11 4C13.76 4 16 6.24 16 9C16 9.65 15.87 10.26
                         15.64 10.83L18.56 13.75C20.07 12.49 21.26 10.86 21.99
@@ -47,12 +56,13 @@ const SignUpForm = () => {
             <div className="form__control">
                 <label>Confirm Password</label>
                 <div className="input__box">
-                    <input type="password"/>
+                    <input type={passwordShown ? "text" : "password"} />
                     <svg
                         width="22"
                         height="19"
                         viewBox="0 0 22 19"
                         fill="none"
+                        onClick={togglePasswordVisibility}
                     >
                         <path d="M11 4C13.76 4 16 6.24 16 9C16 9.65 15.87 10.26
                         15.64 10.83L18.56 13.75C20.07 12.49 21.26 10.86 21.99
