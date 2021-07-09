@@ -8,7 +8,7 @@
   margin-top: 20px;
 }
 
-.already-have-account {
+.dont-have-account {
   width: 100%;
   text-align: right;
   margin-top: 3.2rem;
@@ -18,7 +18,7 @@
   font-family: var(--raleway);
   color: #767676;
 }
-.already-have-account a {
+.dont-have-account a {
   color: var(--primary);
 }
 .log-in__image, .log-in__form {

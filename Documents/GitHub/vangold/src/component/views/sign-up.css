@@ -1,6 +1,8 @@
 .sign-up__inner {
     width: 100%;
     display: flex;
+    gap: 30px;
+    margin-top: 20px;
 }
 .already-have-account {
     width: 100%;
@@ -15,9 +17,14 @@
 .already-have-account a {
     color: var(--primary);
 }
-.sign-up__image {
-    margin-right: 5rem;}
-.sign-up__image img {
+.sign-up__image, .sign-up__form {
     width: 100%;
-    object-fit: cover;
+}
+.sign-up__image img {
+    width: 80%;
+}
+@media screen and (max-width: 767px){
+    .sign-up__image{
+        display: none;
+    }
 }
