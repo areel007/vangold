@@ -19,7 +19,7 @@ const LogInForm = () => {
           <label for="lname">Password</label>
           <input type="text" id="lname" name="lname"></input>
           <input type="checkbox" id="fruit4" name="fruit-4" value="Strawberry"></input>
-          <label for="fruit4">Keep me logged in</label>
+          <label for="fruit4"> &nbsp;Keep me logged in</label>
           <input type="submit" value="Log in" className="buttom"></input>
           <div className="or">
             <p>or</p>
