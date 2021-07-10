@@ -82,6 +82,32 @@ form {
   cursor: pointer;
 }
 /*To delete later*/
+.login-terms__forgot-pwrd {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 350px) {
+  .login-terms__forgot-pwrd {
+    flex-direction: column;
+  }
+  .login-terms__forgot-pwrd .forgot-pwrd {
+    padding-bottom: 15px;
+  }
+}
+.login-terms__forgot-pwrd .forgot-pwrd {
+  width: 100%;
+  text-align: right;
+  padding-top: 8px;
+}
+.login-terms__forgot-pwrd .forgot-pwrd a {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--primary);
+}
 .login__terms {
   width: 100%;
   margin-bottom: 2.4rem;
@@ -93,7 +119,6 @@ form {
   font-weight: var(--font-wieght-semibold);
   line-height: 16px;
   color: #767676;
-  
 }
 
 .login__terms input {
@@ -201,4 +226,3 @@ form {
   font-family: var(--raleway);
   font-weight: var(--font-wieght-bold);
 }
-
