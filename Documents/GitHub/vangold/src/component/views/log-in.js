@@ -7,7 +7,7 @@ const LogIn = () => {
     return (
         <div className='log-in'>
             <div className="container">
-                <p className="already-have-account">Don’t have an account? <Link to="/sign-up">Create account</Link></p>
+                <p className="dont-have-account">Don’t have an account? <Link to="/sign-up">Create account</Link></p>
                 <div className="log-in__inner">
                     <div className="log-in__image">
                         <img src={ LogInImage } alt="login up image"/>
