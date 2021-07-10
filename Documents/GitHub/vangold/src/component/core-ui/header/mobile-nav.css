@@ -1,16 +1,16 @@
-.mobile-nav {
+.mobile-menu-in {
     width: 100%;
     height: 100vh;
-    background-color: var(--primary);
+    background-color: var(--white);
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 100;
     position: fixed;
     top: 0;
-    z-index: 10;
+    padding: 1rem;
 }
-.close {
-    fill: var(--white);
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+.mobile-menu-out {
+    transform: translateX(0);
 }
 .mobile-nav ul {
     width: 100%;
@@ -32,4 +32,66 @@
     justify-content: center;
     color: var(--white);
     font-size: var(--fs-18);
+}
+.mobile-menu-header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+.mobile-menu-header .logo {
+    width: 10rem;
+    height: 4rem;
+    background-color: var(--primary);
+    margin-right: auto;
+}
+.close {
+    fill: var(--primary);
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.mobile-menu-header a {
+    font-size: var(--fs-16);
+    font-weight: var(--font-wieght-semibold);
+    color: #767676;
+}
+.mobile-menu-in ul {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mobile-menu-in ul li {
+    width: 100%;
+    height: 100%;
+}
+.mobile-menu-in ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--primary);
+    font-size: var(--fs-16);
+    font-weight: var(--font-wieght-semibold);
+}
+.mobile-menu-sign-up-button {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.mobile-menu-sign-up-button a {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--primary);
+    outline: none;
+    border: 1px solid transparent;
+    color: var(--white);
+    border-radius: 4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
