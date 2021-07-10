@@ -16,14 +16,14 @@ const LogInForm = () => {
       </div>
 
       <div className="form__control">
-        <label>Email</label>
+        <label htmlFor="email">Email</label>
         <div className="input__box">
           <input type="text" />
         </div>
       </div>
 
       <div className="form__control">
-        <label>Password</label>
+        <label htmlFor="password">Password</label>
         <div className="input__box">
           <input type={passwordShown ? "text" : "password"} />
           <svg
@@ -52,7 +52,7 @@ const LogInForm = () => {
 
       <div className="login__terms">
         <input type="checkbox" id="loginterm" name="loginterm" value="Loginterms"></input>
-        <label for="loginterm" className="login-label"> &nbsp;Keep me logged in</label>
+        <label htmlFor="loginterm" className="login-label"> &nbsp;Keep me logged in</label>
       </div>
 
       <button className="login__account__button">Login</button>
