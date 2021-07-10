@@ -5,6 +5,7 @@ import Footer from "./component/core-ui/footer/footer"
 import SignUp from "./component/views/sign-up";
 import LogIn from "./component/views/log-in";
 import ChangePassword from "./component/views/change-password";
+import PasswordResetSuccess from "./component/views/password-reset-success";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 
@@ -70,6 +71,9 @@ function App() {
                 </Route>
                 <Route path="/changepassword">
                     <ChangePassword />
+                </Route>
+                <Route path="/passwordresetsuccessful">
+                    <PasswordResetSuccess />
                 </Route>
             </Switch>
             <Footer />
