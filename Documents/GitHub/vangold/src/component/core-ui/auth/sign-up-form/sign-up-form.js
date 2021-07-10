@@ -15,21 +15,21 @@ const SignUpForm = () => {
             <h1 className="form__title">Create account</h1>
 
             <div className="form__control">
-                <label>Username</label>
+                <label htmlFor="username">Username</label>
                 <div className="input__box">
                     <input type="text"/>
                 </div>
             </div>
 
             <div className="form__control">
-                <label>Email</label>
+                <label htmlFor="email">Email</label>
                 <div className="input__box">
                     <input type="text"/>
                 </div>
             </div>
 
             <div className="form__control">
-                <label>Create Password</label>
+                <label htmlFor="create password">Create Password</label>
                 <div className="input__box">
                     <input type={passwordShown ? "text" : "password"} />
                     <svg
@@ -54,7 +54,7 @@ const SignUpForm = () => {
             </div>
 
             <div className="form__control">
-                <label>Confirm Password</label>
+                <label htmlFor="confirm password">Confirm Password</label>
                 <div className="input__box">
                     <input type={passwordShown ? "text" : "password"} />
                     <svg
@@ -89,7 +89,7 @@ const SignUpForm = () => {
 
             <div className="signin__terms">
                 <input type="checkbox" id="signinterms" name="signinterms" value="signinterms"></input>
-                <label for="signinterms" className="login-label"> &nbsp;By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</label>
+                <label htmlFor="signinterms" className="login-label"> &nbsp;By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</label>
             </div>
 
             <button className="create__account__button">Create account</button>
