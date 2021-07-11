@@ -6,6 +6,8 @@ import SignUp from "./component/views/sign-up";
 import LogIn from "./component/views/log-in";
 import ChangePassword from "./component/views/change-password";
 import PasswordResetSuccess from "./component/views/password-reset-success";
+import TermsAndConditions from "./component/views/terms-and-conditions";
+import PrivacyPolicy from "./component/views/privacy-policy";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 
@@ -74,6 +76,12 @@ function App() {
                 </Route>
                 <Route path="/passwordresetsuccessful">
                     <PasswordResetSuccess />
+                </Route>
+                <Route path="/terms-and-conditions">
+                    <TermsAndConditions />
+                </Route>
+                <Route path="/privacypolicy">
+                    <PrivacyPolicy />
                 </Route>
             </Switch>
             <Footer />
