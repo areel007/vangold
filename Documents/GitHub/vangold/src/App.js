@@ -6,6 +6,7 @@ import SignUp from "./component/views/sign-up";
 import LogIn from "./component/views/log-in";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
+import ResetPassword from "./component/views/reset-password/reset-password";
 
 function App() {
 
@@ -66,6 +67,9 @@ function App() {
                 </Route>
                 <Route path="/login">
                     <LogIn />
+                </Route>
+                <Route path="/reset-password">
+                    <ResetPassword />
                 </Route>
             </Switch>
             <Footer />
