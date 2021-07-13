@@ -1,0 +1,122 @@
+.page__title__inner {
+    margin-top: 3.8rem;
+}
+.collaborate {
+    padding: 6.4rem 0;
+    background-color: #F9FAFC;
+}
+.collaborate__inner {
+    display: flex;
+    align-items: center;
+    gap: 7.8rem;
+}
+.collaborate-image {
+    width: 50%;
+}
+.collaborate-text {
+    width: 50%;
+}
+.collaborate img {
+    width: 100%;
+    object-fit: cover;
+}
+.collaborate-text__title {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-wieght-extrabold);
+    font-size: 4rem;
+    line-height: 5.4rem;
+    color: #18191F;
+    margin-bottom: 3.2rem;
+}
+.collaborate-text__subtitle {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 3.2rem;
+    color: #18191F;
+    margin-bottom: 3.2rem;
+}
+.collaborate-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.collaborate-button span {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 2.4rem;
+    color: #45B618;
+    margin-right: .9rem;
+}
+.collaborate-button:hover svg {
+    transform: translateX(.5rem);
+    transition: transform .3s ease;
+}
+.manage-your-team {
+    padding: 6.4rem 0;
+    background-color: #fff;
+}
+.manage-your-team-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    margin-bottom: 4.8rem;
+    align-items: center;
+}
+.manage-your-team-title {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-wieght-extrabold);
+    font-size: 4rem;
+    line-height: 5.4rem;
+    color: #18191F;
+    margin-bottom: 3.2rem;
+}
+.manage-your-team-subtitle {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 3.2rem;
+    color: #18191F;
+    margin-bottom: 3.2rem;
+}
+.become-a-business-banner {
+    padding: 8rem 0;
+    background-color: var(--primary);
+    margin-bottom: .2rem;
+    text-align: center;
+}
+.become-a-business-banner p {
+    color: var(--white);
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-wieght-extrabold);
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    max-width: 75.7rem;
+    margin: 0 auto 4rem auto;
+}
+.become-a-business-banner button {
+    width: 21.4rem;
+    height: 4.8rem;
+    background: #FFFFFF;
+    border-radius: 6px;
+    color: var(--primary);
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 2.4rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
