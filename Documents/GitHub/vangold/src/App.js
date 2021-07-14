@@ -8,6 +8,7 @@ import ChangePassword from "./component/views/change-password";
 import PasswordResetSuccess from "./component/views/password-reset-success";
 import TermsAndConditions from "./component/views/terms-and-conditions";
 import PrivacyPolicy from "./component/views/privacy-policy";
+import CookiesPolicy from "./component/views/cookies-policy";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 
@@ -82,6 +83,9 @@ function App() {
                 </Route>
                 <Route path="/privacypolicy">
                     <PrivacyPolicy />
+                </Route>
+                <Route path="/cookiepolicy">
+                    <CookiesPolicy />
                 </Route>
             </Switch>
             <Footer />
