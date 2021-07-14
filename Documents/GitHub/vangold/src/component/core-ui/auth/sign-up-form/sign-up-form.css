@@ -117,7 +117,7 @@ h1.form__title {
     margin-right: 0.2em;
     vertical-align: bottom;
     color: transparent;
-    transition: .2s;
+    /* transition: .2s; */
   }
   
   .signin__terms input[type="checkbox"] + label:active:before {

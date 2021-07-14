@@ -4,7 +4,7 @@ header {
 .header__inner {
     height: 7.2rem;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
 }
 .logo {
@@ -12,10 +12,12 @@ header {
     height: 4rem;
     background-color: var(--primary);
     color: var(--white);
+    margin-right: 3.2rem;
 }
 .header__inner ul {
     display: flex;
     align-items: center;
+    margin-right: auto;
 }
 .header__inner ul li {
     margin-right: 3rem;

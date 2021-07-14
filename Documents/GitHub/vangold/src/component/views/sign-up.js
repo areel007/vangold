@@ -10,7 +10,7 @@ const SignUp = () => {
                 <p className="already-have-account">Already have an account? <Link to="/login">Login</Link></p>
                 <div className="sign-up__inner">
                     <div className="sign-up__image">
-                        <img src={ signUpImage } alt="sign up"/>
+                        <img src={ signUpImage } alt="sign up pic"/>
                     </div>
                     <div className="sign-up__form">
                         <SignUpForm />

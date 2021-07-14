@@ -19,19 +19,19 @@ const Footer = () => {
             <h2>Product</h2>
             <ul>
               <li>
-                <Link to="">Overview</Link>
+                <Link to="/over">Overview</Link>
               </li>
               <li>
-                <Link to="">Features</Link> &nbsp;<Link style={{color: "#2EC5CE"}} to=""><i>New</i></Link>
+                <Link to="/over">Features</Link> &nbsp;<Link style={{color: "#2EC5CE"}} to=""><i>New</i></Link>
               </li>
               <li>
-                <Link to="">Tutorials</Link>
+                <Link to="/over">Tutorials</Link>
               </li>
               <li>
-                <Link to="">Pricing</Link>
+                <Link to="/over">Pricing</Link>
               </li>
               <li>
-                <Link to="">Releases</Link>
+                <Link to="/over">Releases</Link>
               </li>
             </ul>
           </div>
@@ -39,19 +39,19 @@ const Footer = () => {
             <h2>Company</h2>
             <ul>
               <li>
-                <Link to="">About</Link>
+                <Link to="/over">About</Link>
               </li>
               <li>
-                <Link to="">Press</Link>
+                <Link to="/over">Press</Link>
               </li>
               <li>
-                <Link to="">Careers</Link>
+                <Link to="/over">Careers</Link>
               </li>
               <li>
-                <Link to="">Contact</Link>
+                <Link to="/over">Contact</Link>
               </li>
               <li>
-                <Link to="">Partners</Link>
+                <Link to="/over">Partners</Link>
               </li>
             </ul>
           </div>
@@ -59,19 +59,19 @@ const Footer = () => {
             <h2>Support</h2>
             <ul>
               <li>
-                <Link to="">Help Center</Link>
+                <Link to="/over">Help Center</Link>
               </li>
               <li>
-                <Link to="">Terms of service</Link>
+                <Link to="/over">Terms of service</Link>
               </li>
               <li>
-                <Link to="">Legal</Link>
+                <Link to="/over">Legal</Link>
               </li>
               <li>
-                <Link to="">Privacy Policy</Link>
+                <Link to="/over">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="">Status</Link>
+                <Link to="/over">Status</Link>
               </li>
             </ul>
           </div>
@@ -85,31 +85,38 @@ const Footer = () => {
             </div>
             <div className="right_bottom_f">
               <Link to="">
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon1} alt="icon1" />
                 </div>
               </Link>
               <Link to="">
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon2} alt="icon2" />
                 </div>
               </Link>
               <Link to="">
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon3} alt="icon3" />
                 </div>
               </Link>
               <Link to="">
+
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon4} alt="icon4" />
                 </div>
               </Link>
               <Link to="">
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon5} alt="icon5" />
                 </div>
               </Link>
               <Link to="">
+              <Link to="/over">
                 <div className="icon_box">
                   <img src={icon6} alt="icon6" />
                 </div>

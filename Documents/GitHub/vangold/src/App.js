@@ -6,6 +6,8 @@ import SignUp from "./component/views/sign-up";
 import LogIn from "./component/views/log-in";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
+import ResetPassword from "./component/views/reset-password/reset-password";
+import Home from "./component/views/home/home";
 
 function App() {
 
@@ -42,6 +44,13 @@ function App() {
         setIsMobileNavOut(false)
     }
 
+    const [cardDetails] = useState([
+        { cardImage: "voice-over.png", voiceOverAvatar: "voice-over-avatar.png", position: "Voice Over Artist" },
+        { cardImage: "frontend-dev.png", voiceOverAvatar: "frontend-avatar.png", position: "Frontend Developer" },
+        { cardImage: "product-designer.png", voiceOverAvatar: "product-designer-avatar.png", position: "Product Designer" },
+        { cardImage: "graphic-designer.png", voiceOverAvatar: "graphic-designer-avatar.png", position: "Graphic Designer" },
+    ])
+
   return (
     <Router>
         <div className="App">
@@ -59,13 +68,16 @@ function App() {
             />
             <Switch>
                 <Route path="/" exact>
-                    Hello World
+                    <Home cardDetails={cardDetails} />
                 </Route>
                 <Route path="/sign-up">
                     <SignUp />
                 </Route>
                 <Route path="/login">
                     <LogIn />
+                </Route>
+                <Route path="/reset-password">
+                    <ResetPassword />
                 </Route>
             </Switch>
             <Footer />
