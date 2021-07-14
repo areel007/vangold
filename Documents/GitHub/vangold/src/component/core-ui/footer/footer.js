@@ -84,31 +84,38 @@ const Footer = () => {
               <p>© 2020 Vangold Technologies. All rights reserved</p>
             </div>
             <div className="right_bottom_f">
+              <Link to="">
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon1} alt="icon1" />
                 </div>
               </Link>
+              <Link to="">
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon2} alt="icon2" />
                 </div>
               </Link>
+              <Link to="">
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon3} alt="icon3" />
                 </div>
               </Link>
+              <Link to="">
+
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon4} alt="icon4" />
                 </div>
               </Link>
+              <Link to="">
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon5} alt="icon5" />
                 </div>
               </Link>
+              <Link to="">
               <Link to="/over">
                 <div className="icon_box">
                   <img src={icon6} alt="icon6" />
