@@ -1,5 +1,6 @@
 import "./log-in-form.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LogInForm = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -50,9 +51,14 @@ const LogInForm = () => {
         </div>
       </div>
 
-      <div className="login__terms">
-        <input type="checkbox" id="loginterm" name="loginterm" value="Loginterms"></input>
-        <label htmlFor="loginterm" className="login-label"> &nbsp;Keep me logged in</label>
+      <div className="login-terms__forgot-pwrd">
+        <div className="login__terms">
+          <input type="checkbox" id="loginterm" name="loginterm" value="Loginterms"></input>
+          <label htmlFor="loginterm" className="login-label"> &nbsp;Keep me logged in</label>
+        </div>
+        <div className="forgot-pwrd">
+          <p><Link to="/changepassword">Forgot Password</Link></p>
+        </div>
       </div>
 
       <button className="login__account__button">Login</button>
