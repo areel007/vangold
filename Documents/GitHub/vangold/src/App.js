@@ -95,6 +95,7 @@ function App() {
                 </Route>
                 <Route path="/cookiepolicy">
                     <CookiesPolicy />
+                </Route>
                 <Route path="/reset-password">
                     <ResetPassword />
                 </Route>
@@ -103,6 +104,6 @@ function App() {
         </div>
     </Router>
   );
-}
+};
 
 export default App;
