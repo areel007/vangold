@@ -1,0 +1,205 @@
+.top-jobs {
+    width: 100%;
+    --imageless-banner-background-color: var(--primary);
+}
+.top-jobs__inner {
+    padding: 2.4rem 0;
+}
+.page-nav {
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 3.2rem;
+    color: #18191F;
+    margin-bottom: 4.1rem;
+}
+.search-component {
+    display: grid;
+    grid-template-columns: 17.7rem 60rem 24.7rem 19.2rem;
+    grid-column-gap: .8rem;
+    margin-bottom: 2.4rem;
+}
+.total-freelance {
+    font-family: var(--inter);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 3.2rem;
+    color: #333333;
+    margin-bottom: 3.2rem;
+}
+.jobs-list {
+    margin-bottom: 4.6rem;
+}
+.jobs-list__job {
+    background: var(--white);
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    border-radius: 4px;
+    padding: 2.4rem 3.2rem;
+    margin-bottom: 1.2rem;
+}
+.jobs-list__job-job-title-and-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+}
+.jobs-list__job-job-title-and-amount h1 {
+    display: flex;
+    align-items: center;
+    font-family: var(--raleway);
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-24);
+    line-height: 2.8rem;
+    color: #333333;
+}
+.jobs-list__job-job-title-and-amount h1 span {
+    margin-right: 1.3rem;
+}
+.jobs-list__job-job-title-and-amount span {
+    font-family: var(--mulish);
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-18);
+    line-height: 2.3rem;
+    color: #333333;
+}
+.jobs-list__job-category-star-and-bid-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+.jobs-list__job-category-star-and-bid-button h2 {
+    margin-right: 2.4rem;
+    font-family: var(--inter);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-18);
+    line-height: 2.2rem;
+    color: #45B618;
+}
+.jobs-list__job-stars {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.jobs-list__job-star-number {
+    width: 3.8rem;
+    height: 2.5rem;
+    background-color: #F5A623;
+    padding: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--inter);
+    font-weight: var(--font-wieght-semibold);
+    font-size: var(--fs-14);
+    line-height: 1.7rem;
+    color: #FFFFFF;
+    margin-right: .6rem;
+    border-radius: .4rem;
+}
+.jobs-list__job-bid-button {
+    width: 10.9rem;
+    height: 3.7rem;
+    background: #45B618;
+    border-radius: 4px;
+    font-family: var(--mulish);
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-18);
+    line-height: 2.3rem;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.posted-on {
+    font-family: var(--inter);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 2.2rem;
+    color: #333333;
+    margin-bottom: 2.4rem;
+}
+.job-details {
+    font-family: var(--mulish);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 2.3rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+}
+.job-related__category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+.category__job {
+    padding: .8rem 1.2rem;
+    height: 3.3rem;
+    margin-right: 1.2rem;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--inter);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-14);
+    line-height: 1.7rem;
+    color: #333333;
+    white-space: nowrap;
+}
+.category__job:last-child {
+    margin-right: 0;
+}
+.job-duration {
+    font-family: var(--inter);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--fs-18);
+    line-height: 2.2rem;
+    color: #333333;
+}
+.job-duration span {
+    font-weight: var(--font-wieght-bold);
+}
+
+/* Pagination Styling */
+.paginationBttns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11.5rem;
+}
+.paginationBttns a {
+    padding: .4rem .9rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: .8rem;
+    border-radius: .4rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: var(--raleway);
+    font-size: var(--fs-14);
+    line-height: 1.6rem;
+    cursor: pointer;
+    outline: none;
+}
+.paginationBttns a:hover {
+    color: var(--white);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.paginationBttns a svg {
+    width: 20px;
+}
+.paginationBttns a:hover svg path {
+    fill: var(--white);
+}
+.paginationActive a {
+    color: var(--white);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}

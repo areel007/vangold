@@ -13,6 +13,7 @@ import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/reset-password/reset-password";
 import Home from "./component/views/home/home";
+import TopJobs from "./component/views/top-jobs/top-jobs";
 
 function App() {
 
@@ -98,6 +99,9 @@ function App() {
                 </Route>
                 <Route path="/reset-password">
                     <ResetPassword />
+                </Route>
+                <Route path="/browse-jobs">
+                    <TopJobs />
                 </Route>
             </Switch>
             <Footer />

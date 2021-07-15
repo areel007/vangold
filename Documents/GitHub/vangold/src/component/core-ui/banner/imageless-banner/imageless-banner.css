@@ -1,0 +1,16 @@
+.imageless-banner {
+    width: 100%;
+    background-color: var(--imageless-banner-background-color, var(--primary));
+}
+.imageless-banner__inner {
+    padding: 4.5rem 0;
+    height: 15rem;
+}
+.imageless-banner__inner span {
+    font-family: var(--mulish);
+    font-style: normal;
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-50);
+    line-height: 5.9rem;
+    color: #FFFFFF;
+}
