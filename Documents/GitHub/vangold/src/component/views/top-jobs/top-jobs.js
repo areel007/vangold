@@ -5,6 +5,7 @@ import {useState} from "react";
 import ReactPaginate from "react-paginate"
 import Star from "../../core-ui/star/star";
 import MockData from "../../../mock-data.json"
+import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
 
 const TopJobs = props => {
 
@@ -90,7 +91,9 @@ const TopJobs = props => {
                     <p className="page-nav">Vangold > Browse Jobs</p>
                     <div className="search-component">
                         <SelectInputComponent selectOptions={selectOptions} />
-                        gdhdhdh
+                        <SearchInputComponent />
+                        <SearchInputComponent />
+                        <button>Search</button>
                     </div>
                     <div className="jobs-list">
                         <p className="total-freelance">

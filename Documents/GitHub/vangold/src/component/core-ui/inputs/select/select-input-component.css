@@ -1,0 +1,80 @@
+.select-input-component {
+    width: 100%;
+    /*position: relative;*/
+    user-select: none;
+}
+.select-input-component .select-input-button {
+    height: 100%;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*padding: 1.8rem 1.6rem;*/
+    font-family: var(--raleway);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 1.9rem;
+    color: #141414;
+    border-radius: .4rem;
+    padding: 0 1.6rem;
+    cursor: pointer;
+}
+.select-input-component .select-input-dropdown-content {
+    position: absolute;
+    top: 103%;
+    background-color: var(--white);
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    display: flex;
+}
+.select-input-dropdown-category {
+    width: min-content;
+    padding: 2.4rem 0 2.4rem 2.4rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+.select-input-dropdown-content-title {
+    font-family: var(--mulish);
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-16);
+    line-height: 2rem;
+    letter-spacing: .2rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+    padding-left: 1.2rem;
+}
+.select-input-dropdown-item {
+    font-family: var(--mulish);
+    font-weight: var(--font-weight-normal);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    letter-spacing: .2rem;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.6rem;
+    height: 4.4rem;
+    background: var(--white);
+    border-radius: .8rem;
+    padding: 1.2rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.select-input-dropdown-item:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+.select-input-dropdown-item:hover svg path {
+    fill: var(--white);
+}
+.select-input-dropdown-subcategory,
+.select-input-dropdown-skill {
+    width: min-content;
+    padding: 2.4rem 0 2.4rem 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+.select-input-dropdown-skill {
+    border-right: none;
+}
