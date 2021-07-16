@@ -2,7 +2,7 @@ import "./top-jobs.css"
 import ImagelessBanner from "../../core-ui/banner/imageless-banner/imageless-banner";
 import SelectInputComponent from "../../core-ui/inputs/select/select-input-component";
 import {useState} from "react";
-import ReactPaginate from "react-paginate"
+import ReactPaginate from "react-paginate";
 import Star from "../../core-ui/star/star";
 import MockData from "../../../mock-data.json"
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";

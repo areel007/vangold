@@ -14,6 +14,7 @@ import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/reset-password/reset-password";
 import Home from "./component/views/home/home";
 import TopJobs from "./component/views/top-jobs/top-jobs";
+import TopFreelancers from "./component/views/top-freelancers/top-freelancers";
 
 function App() {
 
@@ -102,6 +103,9 @@ function App() {
                 </Route>
                 <Route path="/browse-jobs">
                     <TopJobs />
+                </Route>
+                <Route path="/browse-freelancers">
+                    <TopFreelancers />
                 </Route>
             </Switch>
             <Footer />
