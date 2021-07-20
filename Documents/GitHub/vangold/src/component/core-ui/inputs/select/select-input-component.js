@@ -146,7 +146,10 @@ const SelectInputComponent = props => {
                         }
 
                     </div>
-                    <div className="select-input__footer"></div>
+                    <div className="select-input__footer">
+                        <div className="btns">Clear All</div>
+                        <div className="btns">Apply</div>
+                    </div>
                 </div>
             )}
         </div>

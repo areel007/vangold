@@ -78,3 +78,34 @@
     line-height: 20px;
     color: #333333;
 }
+.select-input__footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2.1rem 3.2rem;
+}
+.btns {
+    font-family: var(--raleway);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 19px;
+    color: #141414;
+    width: 75px;
+    height: 39px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btns:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
