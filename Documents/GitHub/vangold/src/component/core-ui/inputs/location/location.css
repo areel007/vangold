@@ -1,0 +1,22 @@
+.location {
+    width: 100%;
+    user-select: none;
+}
+.location-input-button {
+    height: 100%;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    font-family: var(--raleway);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 1.9rem;
+    color: #141414;
+    border-radius: .4rem;
+    padding: 0 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.location-input-button svg {
+    margin-right: .9rem;
+}

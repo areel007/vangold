@@ -205,3 +205,15 @@
     background-color: var(--primary);
     border: 1px solid var(--primary);
 }
+.search-component button {
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    font-family: var(--mulish);
+    font-weight: var(--font-wieght-bold);
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    border-radius: .4rem;
+    cursor: pointer;
+}

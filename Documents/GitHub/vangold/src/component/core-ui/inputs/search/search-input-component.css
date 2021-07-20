@@ -1,0 +1,25 @@
+.search-input-component {
+    width: 100%;
+    padding: 1.8rem 1.6rem;
+    border: 1px solid rgba(0, 0, 0, .5);
+    height: 5.6rem;
+    background-color: #fff;
+    border-radius: .4rem;
+    display: flex;
+    align-items: center;
+}
+.search-box-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #000;
+}
+.search-box-input::placeholder {
+    color: #141414;
+}
+.search-input-component svg {
+    margin-right: .75rem;
+}

@@ -6,6 +6,7 @@ import ReactPaginate from "react-paginate";
 import Star from "../../core-ui/star/star";
 import MockData from "../../../mock-data.json"
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
+import Location from "../../core-ui/inputs/location/location";
 
 const TopJobs = props => {
 
@@ -92,7 +93,7 @@ const TopJobs = props => {
                     <div className="search-component">
                         <SelectInputComponent selectOptions={selectOptions} />
                         <SearchInputComponent />
-                        <SearchInputComponent />
+                        <Location />
                         <button>Search</button>
                     </div>
                     <div className="jobs-list">
