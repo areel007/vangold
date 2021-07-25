@@ -15,6 +15,7 @@ import ResetPassword from "./component/views/reset-password/reset-password";
 import Home from "./component/views/home/home";
 import TopJobs from "./component/views/top-jobs/top-jobs";
 import TopFreelancers from "./component/views/top-freelancers/top-freelancers";
+import FreelancerRegistration from "./component/views/auth/freelancer-registration/freelancer-registration";
 
 function App() {
 
@@ -106,6 +107,9 @@ function App() {
                 </Route>
                 <Route path="/browse-freelancers">
                     <TopFreelancers />
+                </Route>
+                <Route path="/freelancer-registration">
+                    <FreelancerRegistration />
                 </Route>
             </Switch>
             <Footer />

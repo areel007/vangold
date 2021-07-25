@@ -10,7 +10,7 @@ const LogInForm = () => {
   }
 
   return (
-    <form>
+    <form className="sign-in__form">
       <div className="form__title">
         <h1>Log in</h1>
         <p>Log in with your data that you entered during your registration</p>
