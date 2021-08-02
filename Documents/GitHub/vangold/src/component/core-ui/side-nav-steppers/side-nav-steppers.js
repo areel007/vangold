@@ -2,7 +2,7 @@ import "./side-nav-steppers.css"
 import Stepper from "./stepper";
 import {useState} from "react";
 
-const SideNavSteppers = () => {
+const SideNavSteppers = (props) => {
     const [steps] = useState([
         {
             description: "Personal Info",
@@ -53,7 +53,7 @@ const SideNavSteppers = () => {
     return (
         <div className="side-nav-steppers">
             <p className="steppers__title">My Application</p>
-            <Stepper  steps={steps} />
+            <Stepper  steps={steps} stepPage={props.stepPage} />
         </div>
     )
 }
