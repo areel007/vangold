@@ -1,0 +1,36 @@
+.freelancer-registration {
+    padding: 4.8rem 0;
+}
+.freelancer-registration__inner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 32.2rem 1fr;
+    grid-column-gap: 4rem;
+}
+.save-and-next {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 2/-1;
+}
+.save-and-next button {
+    width: 174px;
+    height: 39px;
+    background: #45B618;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font-family: var(--mulish);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.save-and-next__button {
+    margin-left: auto;
+}
+.back__button {
+    background: rgba(69, 182, 24, 0.3) !important;
+    color: var(--primary) !important;
+}

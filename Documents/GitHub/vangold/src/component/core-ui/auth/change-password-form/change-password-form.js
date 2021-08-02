@@ -9,7 +9,7 @@ const ChangePasswordForm = () => {
   }
 
   return (
-    <form>
+    <form className="change-password__form">
       <div className="form__title">
         <h1>Reset your Password</h1>
         <p>Create a new password for your account. It must be at least 8 characters long.</p>
