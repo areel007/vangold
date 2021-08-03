@@ -7,6 +7,7 @@ import Star from "../../core-ui/star/star";
 import FreelancerData from "../../../top-freelancers-data.json";
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
 import profileImg from "../../../assets/images/Ellipse-111.png";
+import Location from "../../core-ui/inputs/location/location";
 
 const TopFreelancers = (props) => {
   const stars = Array(5).fill(0);
@@ -93,7 +94,7 @@ const TopFreelancers = (props) => {
           <div className="search-component">
             <SelectInputComponent selectOptions={selectOptions} />
             <SearchInputComponent />
-            <SearchInputComponent />
+            <Location />
             <button>Search</button>
           </div>
           <div className="freelancers-list">
