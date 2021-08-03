@@ -24,7 +24,7 @@ const PersonalInfo = () => {
                 </div>
             </form>
             <div className="upload-passport">
-                <label>Upload Passport Photograph</label>
+                <label>Upload Passport Photograph </label>
                 <div class='file'>
                     <label for='input-file'>
                     <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
