@@ -78,6 +78,15 @@
 .upload-passport .file > label:hover {
     background-color: rgba(217, 218, 215, 0.8);
 }
+
+.upload-passport .file > label .PassportPic{
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+
 .step-subtitle {
   font-family: var(--raleway);
   font-style: normal;
