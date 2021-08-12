@@ -10,10 +10,10 @@
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-wieght-semibold: 600;
-    --font-wieght-bold: 700;
-    --font-wieght-extrabold: 800;
-    --font-wieght-black: 900;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
 
     --fs-10: calc(8px + (10 - 8) * ((100vw - 320px) / (1440 - 320)));
     --fs-11: calc(9px + (11 - 9) * ((100vw - 320px) / (1440 - 320)));
