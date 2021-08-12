@@ -1,41 +1,64 @@
 .talent-card {
-    min-width: 27.3rem;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .15);
+  min-width: 27.3rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.about-us-u-card {
+  min-width: 22.3rem;
+  height: 375px;
+  overflow: hidden;
+  /* cursor: pointer; */
+}
+.about-us-u-card:hover .about-us-card-image{
+    opacity:0.9;
+}
+.about-us-card-image {
+  height: 375px;
 }
 .talent-card:hover .card-image img {
-    transform: scale(1.2);
-    transition: all .5s ease;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 .talent-card__inner {
-    width: 100%;
+  width: 100%;
 }
 .card-image {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 .card-image img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 .card-client-details {
-    width: 100%;
-    padding: 2rem 2.4rem 1rem 2.4rem;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  padding: 2rem 2.4rem 1rem 2.4rem;
+  display: flex;
+  align-items: center;
 }
 .card-avatar {
-    margin-right: 1.6rem;
+  margin-right: 1.6rem;
 }
 .card-avatar img {
-    object-fit: cover;
+  object-fit: cover;
+}
+.about-us-card-caption {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-24);
+  line-height: 32px;
+  color: var(--white);
+  position: relative;
+  text-align: center;
+  top: -50px;
 }
 .position {
-    font-family: var(--inter);
-    font-style: normal;
-    font-weight: var(--font-weight-normal);
-    font-size: var(--fs-14);
-    line-height: 1.7rem;
-    color: #18191F;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-14);
+  line-height: 1.7rem;
+  color: #18191f;
 }

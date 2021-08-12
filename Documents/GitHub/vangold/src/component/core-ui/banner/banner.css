@@ -1,40 +1,77 @@
 .banner {
-    width: 100%;
-    background-color: var(--white);
+  width: 100%;
+  background-color: var(--white);
 }
 .banner__inner {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .banner__image {
-    width: 80rem;
+  width: 80rem;
 }
 .banner__image img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+}
+.bannerTwo__image {
+  width: 80rem;
+}
+.bannerTwo__image img {
+  width: 100%;
+  object-fit: cover;
+}
+.bannerTwo__text {
+  margin-top: 90px;
 }
 .banner__text__title {
-    font-family: var(--inter);
-    font-style: normal;
-    font-weight: var(--font-wieght-extrabold);
-    font-size: var(--fs-48);
-    line-height: 6.4rem;
-    color: #18191F;
-    width: 63.9rem;
-    margin-bottom: 1.6rem;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 6.4rem;
+  color: #18191f;
+  width: 63.9rem;
+  margin-bottom: 1.6rem;
+}
+.banner2__text__title{
+    color: var(--primary);
 }
 .banner__text__subtitle {
-    font-family: var(--inter);
-    font-style: normal;
-    font-weight: var(--font-weight-normal);
-    font-size: var(--fs-18);
-    line-height: 3.2rem;
-    color: #18191F;
-    margin-bottom: 3.2rem;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-18);
+  line-height: 3.2rem;
+  color: #18191f;
+  margin-bottom: 3.2rem;
+}
+.banner__button {
+  display: flex;
+  gap: 20px;
 }
 .banner__text__button {
+  padding: 12px 32px;
+  background: var(--primary);
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  line-height: 24px;
+  border-radius: 6px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.findwork__btn {
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+/* .banner__text__button {
     padding: 1.2rem 3.2rem;
     width: 15.4rem;
     height: 4.8rem;
@@ -49,4 +86,4 @@
     line-height: 2.4rem;
     color: var(--white);
     cursor: pointer;
-}
+} */

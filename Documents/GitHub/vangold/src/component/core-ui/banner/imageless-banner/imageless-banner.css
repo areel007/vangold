@@ -1,6 +1,7 @@
 .imageless-banner {
     width: 100%;
     background-color: var(--imageless-banner-background-color, var(--primary));
+    margin-bottom: 24px;
 }
 .imageless-banner__inner {
     padding: 4.5rem 0;

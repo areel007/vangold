@@ -1,0 +1,55 @@
+.customModal {
+  background-color: var(--white);
+  width: 652px;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 100px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.closeIcon {
+  display: none;
+}
+.customModal h2 {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+.sign-up__form2{
+    margin: 6rem 0 0 0;
+}
+.separator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.separator .line {
+  flex: 1;
+  opacity: 0.5;
+  border: 1px solid #000000;
+}
+
+.separator p {
+  padding: 0 2rem;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: #767676;
+}
+.bannerAlready-have-acct {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+  text-align: center;
+}
+.bannerAlready-have-acct a{
+    color: var(--primary);
+}

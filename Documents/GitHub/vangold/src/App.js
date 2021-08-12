@@ -13,9 +13,11 @@ import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/reset-password/reset-password";
 import Home from "./component/views/home/home";
+import HomeTwo from './component/views/home/home2';
 import TopJobs from "./component/views/top-jobs/top-jobs";
 import TopFreelancers from "./component/views/top-freelancers/top-freelancers";
 import FreelancerRegistration from "./component/views/auth/freelancer-registration/freelancer-registration";
+
 
 function App() {
 
@@ -59,6 +61,14 @@ function App() {
         { cardImage: "graphic-designer.png", voiceOverAvatar: "graphic-designer-avatar.png", position: "Graphic Designer" },
     ])
 
+    const [aboutUsCardDetails] = useState([
+        { cardImage: "popular-service1.png", productServiceCaption: "Voice Over" },
+        { cardImage: "popular-service2.png", productServiceCaption: "Social Media" },
+        { cardImage: "popular-service3.png", productServiceCaption: "Illustration" },
+        { cardImage: "popular-service4.png", productServiceCaption: "Product Design" },
+        { cardImage: "popular-service5.png", productServiceCaption: "Graphic Designer" },
+    ])
+
   return (
     <Router>
         <div className="App">
@@ -76,6 +86,9 @@ function App() {
             />
             <Switch>
                 <Route path="/" exact>
+                    <HomeTwo aboutUsCardDetails={aboutUsCardDetails} />
+                </Route>
+                <Route path="/home">
                     <Home cardDetails={cardDetails} />
                 </Route>
                 <Route path="/sign-up">
@@ -105,12 +118,14 @@ function App() {
                 <Route path="/browse-jobs">
                     <TopJobs />
                 </Route>
+
                 <Route path="/browse-freelancers">
                     <TopFreelancers />
                 </Route>
                 <Route path="/freelancer-registration">
                     <FreelancerRegistration />
                 </Route>
+
             </Switch>
             <Footer />
         </div>
