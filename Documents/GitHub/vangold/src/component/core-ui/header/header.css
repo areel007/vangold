@@ -1,69 +1,172 @@
 header {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 .header__inner {
-    height: 7.2rem;
-    display: flex;
-    /*justify-content: space-between;*/
-    align-items: center;
+  height: 7.2rem;
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
 }
 .logo {
-    width: 10rem;
-    height: 4rem;
-    background-color: var(--primary);
-    color: var(--white);
-    margin-right: 3.2rem;
+  width: 10rem;
+  height: 4rem;
+  background-color: var(--primary);
+  color: var(--white);
+  margin-right: 3.2rem;
 }
 .header__inner ul {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 .header__inner ul li {
-    margin-right: 3rem;
+  margin-right: 3rem;
 }
 .header__inner ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
-.header__inner ul li a {
-    font-size: var(--fs-18);
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    font-family: var(--mulish);
+.header__inner ul li a,
+.language {
+  font-size: var(--fs-18);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  font-family: var(--mulish);
+}
+.language {
+  cursor: pointer;
 }
 .header__inner ul li a svg {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 .links a {
-    height: 4.3rem;
-    width: 8.6rem;
-    padding: 1rem;
-    margin-right: 1rem;
-    font-size: var(--fs-18);
-    line-height: 2.3rem;
-    color: var(--primary);
-    font-family: var(--mulish);
-    font-weight: var(--font-wieght-bold);
-    border-radius: .4rem;
+  height: 4.3rem;
+  width: 8.6rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  font-size: var(--fs-18);
+  line-height: 2.3rem;
+  color: var(--primary);
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  border-radius: 0.4rem;
 }
 .links a:last-child {
-    margin-right: 0;
+  margin-right: 0;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.hamburger {
+  fill: var(--primary);
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .header__inner ul,
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-trigger {
+  background: #ffffff;
+  border-radius: 90px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
+  margin-left: auto; /* Strictly for positioning */
+}
+
+.menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-trigger span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.menu-trigger img {
+  border-radius: 90px;
+}
+
+.dropDownLanguage {
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: 48%;
+  z-index: 10;
+  top: 60px;
+  width: 248px;
+  height: 327px;
+  background: #ffffff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  padding: 24px;
+  /* transform: translateY(-20px); */
+  /* transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s; */
+}
+@media screen and (max-width: 1100px){
+    .dropDownLanguage {
+        display: none;
+    }
+}
+.dropDownLanguage.active {
+  opacity: 1;
+  visibility: visible;
+  /* transform: translateY(0); */
+}
+
+.dropDownLanguage ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropDownLanguage li a {
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  height: 56px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
+  line-height: 20px;
+  color: var(--secondary);
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
+}
+.dropDownLanguage li .activeLink{
     background-color: var(--primary);
     color: var(--white);
 }
-.hamburger {
-    fill: var(--primary);
-    display: none;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1100px){
-    .header__inner ul,
-    .links {
-        display: none;
-    }
-    .hamburger {
-        display: block;
-    }
+.dropDownLanguage li a:hover {
+    background-color: var(--primary);
+    color: var(--white);
 }

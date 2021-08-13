@@ -21,8 +21,7 @@ const Header = (props) => {
                                 link => {
                                     switch (link.linkName) {
                                         case 'English': return (
-                                            <li onClick={onClick} key={link.linkName}>
-                                                <Link to={link.to}>
+                                            <li className="language" onClick={onClick} key={link.linkName}>
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                         <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
                                                         20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM16.92 6H13.97C13.65
@@ -40,8 +39,7 @@ const Header = (props) => {
                                                         10.69 17.9 11.36 17.74 12H14.36Z" fill="#333333"/>
                                                     </svg>
 
-                                                    { link.linkName }
-                                                </Link>
+                                                    &nbsp;{ link.linkName }
                                             </li>
                                         )
                                         default: return (
@@ -80,16 +78,22 @@ const Header = (props) => {
                     </svg>
                 </div>
             </div>
-            <nav ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
+            <nav ref={dropdownRef} className={`dropDownLanguage ${isActive ? "active" : "inactive"}`}>
                 <ul>
                     <li>
-                        <a href="#">Messages</a>
+                        <a className="activeLink" href="#">English</a>
                     </li>
                     <li>
-                        <a href="#">Trips</a>
+                        <a href="#">Deutsch</a>
                     </li>
                     <li>
-                        <a href="#">Saved</a>
+                        <a href="#">Spanish</a>
+                    </li>
+                    <li>
+                        <a href="#">French</a>
+                    </li>
+                    <li>
+                        <a href="#">Portuguese</a>
                     </li>
                 </ul>
             </nav>
