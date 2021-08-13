@@ -1,8 +1,13 @@
+import React, { useRef } from "react";
 import "./header.css"
 import {Link, NavLink} from "react-router-dom";
+import { useDetectOutsideClick } from "./useDetectOutsideClick";
 
 const Header = (props) => {
-
+    const dropdownRef = useRef(null);
+    const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+    const onClick = () => setIsActive(!isActive);
+  
     return (
         <header>
 
@@ -16,7 +21,7 @@ const Header = (props) => {
                                 link => {
                                     switch (link.linkName) {
                                         case 'English': return (
-                                            <li key={link.linkName}>
+                                            <li onClick={onClick} key={link.linkName}>
                                                 <Link to={link.to}>
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                         <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
@@ -75,7 +80,19 @@ const Header = (props) => {
                     </svg>
                 </div>
             </div>
-
+            <nav ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
+                <ul>
+                    <li>
+                        <a href="#">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#">Trips</a>
+                    </li>
+                    <li>
+                        <a href="#">Saved</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }

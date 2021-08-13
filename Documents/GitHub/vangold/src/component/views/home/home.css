@@ -1,3 +1,9 @@
+.homepage__header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 111px;
+}
 .page__title__inner {
     margin-top: 3.8rem;
 }
