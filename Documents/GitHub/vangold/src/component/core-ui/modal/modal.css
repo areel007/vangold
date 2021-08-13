@@ -17,8 +17,8 @@
   font-size: 36px;
   line-height: 42px;
 }
-.sign-up__form2{
-    margin: 6rem 0 0 0;
+.sign-up__form2 {
+  margin: 6rem 0 0 0;
 }
 .separator {
   display: flex;
@@ -42,14 +42,100 @@
   color: #767676;
 }
 .bannerAlready-have-acct {
-  font-family: Mulish;
+  font-family: var(--mulish);
   font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
   line-height: 24px;
   color: #4f4f4f;
   text-align: center;
 }
-.bannerAlready-have-acct a{
-    color: var(--primary);
+.bannerAlready-have-acct a {
+  color: var(--primary);
+}
+.topJobsViewModal {
+  padding: 20px;
+  width: 850px;
+}
+.topJobsViewModal h2 {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-36);
+  line-height: 42px;
+  color: #141414;
+  margin-bottom: 48px;
+
+}
+.top-jobs-view-modal{
+  padding-bottom: 56px;
+  padding-bottom: 32px;
+}
+/* .top-jobs-view-modal form {
+  padding-top: 48px;
+} */
+.banner2__form .modalLabel {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #808080;
+}
+.top-jobs-view-modal form .form__control textarea {
+  width: 100%;
+  height: 300px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 20px;
+  resize: none;
+  margin-top: 4px;
+}
+.top-jobs-view-modal__btn{
+  display: flex;
+  gap: 40px;
+}
+.inner-top-jobs-view-modal__btn{
+  width: 100%;
+}
+.inner-top-jobs-view-modal__btn .apply {
+  text-align: center;
+  width: 99px;
+  height: 39px;
+  background: var(--primary);
+  border-radius: 4px;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: var(--white);
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.inner-top-jobs-view-modal__btn{
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.inner-top-jobs-view-modal__btn .cancel {
+  text-align: center;
+  width: 106px;
+  height: 39px;
+  background: rgba(69, 182, 24, 0.3);
+  border-radius: 4px;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: var(--primary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  /* margin-right: 40px; */
 }
