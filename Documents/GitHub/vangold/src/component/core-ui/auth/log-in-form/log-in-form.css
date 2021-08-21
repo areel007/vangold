@@ -1,3 +1,15 @@
+.form__title{
+  margin-bottom: 32px;
+}
+.form__title p{
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: #767676;
+  margin-top: 12px;
+}
 .sign-in__form .form__control {
   width: 452px;
   margin-bottom: 24px;
@@ -9,9 +21,25 @@
 .login-terms__forgot-pwrd {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: 24px;
+}
+.login__terms{
+  width: 100%;
+}
+.login__terms label {
+  font-family: var(--raleway);
+  font-size: var(--fs-14);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  line-height: 16px;
+  color: #767676;
 }
 
+.login__terms input {
+  margin-right: 0.6rem;
+}
 .login-terms__forgot-pwrd .forgot-pwrd {
   width: 100%;
   text-align: right;
@@ -40,13 +68,13 @@
   cursor: pointer;
 }
 
-.or {
+.login-or {
   width: 100%;
   position: relative;
   margin-top: 40px;
   margin-bottom: 5;
 }
-.or:before {
+.login-or:before {
   border-top: 1px solid #767676;
   content: "";
   margin: 0 auto;
@@ -58,7 +86,7 @@
   width: 95%;
   z-index: -1;
 }
-.or p {
+.login-or p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
