@@ -58,7 +58,7 @@ const LogInForm = () => {
       </div>
     </div>
     <button className="login__account__button">Login</button>
-    <div className="or">
+    <div className="login-or">
       <p>or</p>
     </div>
     <div className="icon-btns login-icon-btns">
