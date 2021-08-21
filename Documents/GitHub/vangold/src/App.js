@@ -12,6 +12,7 @@ import CookiesPolicy from "./component/views/cookies-policy";
 import {useState} from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/reset-password/reset-password";
+import VerifyEmail from './component/views/verify-email';
 import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
 import TopJobs from "./component/views/top-jobs/top-jobs";
@@ -100,6 +101,9 @@ function App() {
                 </Route>
                 <Route path="/changepassword">
                     <ChangePassword />
+                </Route>
+                <Route path="/emailverification">
+                    <VerifyEmail />
                 </Route>
                 <Route path="/passwordresetsuccessful">
                     <PasswordResetSuccess />
