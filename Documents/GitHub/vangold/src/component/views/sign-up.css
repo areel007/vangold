@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 .already-have-account {
     width: 100%;
@@ -21,7 +21,8 @@
     width: 100%;
 }
 .sign-up__image img {
-    width: 80%;
+    max-width: 685px;
+    height: 593.14px;    
 }
 @media screen and (max-width: 767px){
     .sign-up__image{

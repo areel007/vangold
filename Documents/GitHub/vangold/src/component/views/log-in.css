@@ -1,11 +1,10 @@
-.log-in{
-    margin-bottom: 20px;
-}
+
 .log-in__inner {
   width: 100%;
   display: flex;
   gap: 30px;
-  margin-top: 20px;
+  margin-top: 60px;
+  margin-bottom: 6rem;
 }
 
 .dont-have-account {
@@ -21,14 +20,19 @@
 .dont-have-account a {
   color: var(--primary);
 }
-.log-in__image, .log-in__form {
+.log-in__image{
+  margin-bottom: 175px;
+}
+.log-in__image,
+.log-in__form {
   width: 100%;
 }
 .log-in__image img {
-  width: 80%;
+  width: 685px;
+  height: 664.3px;
 }
-@media screen and (max-width: 767px){
-    .log-in__image {
-        display: none;
-      }
+@media screen and (max-width: 767px) {
+  .log-in__image {
+    display: none;
+  }
 }

@@ -1,100 +1,17 @@
-.sign-in__form {
-  margin: 6rem 0 19.6rem 0;
+.sign-in__form .form__control {
+  width: 452px;
+  margin-bottom: 24px;
 }
-.form__title h1 {
-  font-size: var(--fs-32);
-  font-family: var(--raleway);
-  line-height: 4.2rem;
-  color: #141414;
-  margin-bottom: 3rem;
-  font-weight: var(--font-wieght-bold);
+.sign-in__form .form__control .input__box input {
+  width: 452px;
+  height: 48px;
 }
-.form__title p {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: var(--font-wieght-semibold);
-  font-size: var(--fs-14);
-  margin-bottom: 3.5rem;
-  line-height: 16px;
-  color: #767676;
-}
-.form__control {
-  margin-bottom: 2.4rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-.form__control label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: var(--font-wieght-semibold);
-  font-size: var(--fs-16);
-  line-height: 1.9rem;
-  font-family: var(--raleway);
-  color: #333;
-}
-.input__box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  background-color: rgba(217, 218, 215, 0.5);
-  border-radius: 0.4rem;
-}
-.input__box input {
-  width: 95%;
-  border: none;
-  outline: none;
-  margin-right: 2rem;
-  height: 4.8rem;
-  background-color: transparent;
-  padding-left: 2rem;
-}
-.input__box svg {
-  margin-right: 2rem;
-  cursor: pointer;
-}
-.sign-up-options {
-  width: 100%;
-  margin-bottom: 2.4rem;
-}
-.sign-up-options p {
-  text-align: center;
-  font-weight: var(--font-wieght-semibold);
-  font-family: var(--raleway);
-  font-size: var(--fs-16);
-  color: #333;
-  margin-bottom: 0.4rem;
-}
-.option-buttons {
-  /*width: 77%;*/
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.option-buttons button {
-  height: 4.8rem;
-  padding: 1.6rem 3.2rem;
-  border: 1px solid #808080;
-  line-height: 1.644rem;
-  font-size: var(--fs-14);
-  color: #4f4f4f;
-  font-weight: var(--font-wieght-semibold);
-  white-space: nowrap;
-  cursor: pointer;
-}
-/*To delete later*/
 .login-terms__forgot-pwrd {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 350px) {
-  .login-terms__forgot-pwrd {
-    flex-direction: column;
-  }
-  .login-terms__forgot-pwrd .forgot-pwrd {
-    padding-bottom: 15px;
-  }
-}
+
 .login-terms__forgot-pwrd .forgot-pwrd {
   width: 100%;
   text-align: right;
@@ -108,73 +25,26 @@
   line-height: 16px;
   color: var(--primary);
 }
-.login__terms {
-  width: 100%;
-  margin-bottom: 2.4rem;
-}
-.login__terms label {
-  font-family: var(--raleway);
-  font-size: var(--fs-14);
-  font-style: normal;
-  font-weight: var(--font-wieght-semibold);
-  line-height: 16px;
-  color: #767676;
-}
-
-.login__terms input {
-  margin-right: 0.6rem;
-}
-.login__terms input[type="checkbox"] + label {
-  display: block;
-  margin: 0.2em;
-  cursor: pointer;
-  padding: 0.2em;
-}
-
-.login__terms input[type="checkbox"] {
-  display: none;
-}
-
-.login__terms input[type="checkbox"] + label:before {
-  content: "\2714";
-  border: 0.1em solid rgba(217, 218, 215, 0.5);
-  border-radius: 0.2em;
-  display: inline-block;
-  background-color: rgba(217, 218, 215, 0.5);
-  width: 1.1em;
-  height: 1em;
-  padding-left: 0.2em;
-  padding-bottom: 0.3em;
-  margin-right: 0.2em;
-  vertical-align: bottom;
-  color: transparent;
-  /* transition: .2s; */
-}
-
-.login__terms input[type="checkbox"] + label:active:before {
-  transform: scale(0);
-}
-
-.login__terms input[type="checkbox"]:checked + label:before {
-  color: #000;
-}
-
 .login__account__button {
-  width: 100%;
-  background-color: var(--primary);
+  width: 452px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-14);
+  line-height: 16px;
   color: var(--white);
-  outline: none;
   border: none;
-  border-radius: 0.4rem;
-  height: 4.8rem;
-  padding: 1.6rem;
-  margin-bottom: 3.2rem;
   cursor: pointer;
 }
+
 .or {
   width: 100%;
   position: relative;
-  margin-bottom: 3.2rem;
+  margin-top: 40px;
+  margin-bottom: 5;
 }
 .or:before {
   border-top: 1px solid #767676;
@@ -204,26 +74,6 @@
   background-color: var(--white);
   padding: 0.5rem 1.6rem;
 }
-.icon-btns {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.icon-btns button {
-  width: 100%;
-  margin-bottom: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4.8rem;
-  padding: 1.6rem;
-}
-.icon-btns button svg {
-  margin-right: 2rem;
-}
-.icon-btns button span {
-  font-size: var(--fs-14);
-  color: #000;
-  font-family: var(--raleway);
-  font-weight: var(--font-wieght-bold);
+.login-icon-btns{
+  margin-top: 80px;
 }
