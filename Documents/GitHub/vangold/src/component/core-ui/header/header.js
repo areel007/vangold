@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./header.css"
 import {Link, NavLink} from "react-router-dom";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
+import HeaderLogo from "../../../assets/images/logo.png"
 
 const Header = (props) => {
     const dropdownRef = useRef(null);
@@ -13,7 +14,10 @@ const Header = (props) => {
 
             <div className='container'>
                 <div className='header__inner'>
-                    <div className='logo'></div>
+                    <div className='logo'>
+                        <img src={HeaderLogo} alt="Header Logo" />
+                        <h2>Vangold</h2>
+                    </div>
 
                     <ul>
                         {

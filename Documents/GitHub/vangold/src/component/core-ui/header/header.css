@@ -8,11 +8,23 @@ header {
   align-items: center;
 }
 .logo {
-  width: 10rem;
-  height: 4rem;
-  background-color: var(--primary);
-  color: var(--white);
-  margin-right: 3.2rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 12px;
+ margin-right: 32px;
+}
+.logo img{
+  width: 28px;
+  height: 26.11px;
+}
+.logo h2 {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--secondary);
 }
 .header__inner ul {
   display: flex;
