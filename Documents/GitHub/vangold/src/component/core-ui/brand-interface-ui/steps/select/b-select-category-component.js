@@ -18,21 +18,21 @@ const BrSelectCategoryComponent = props => {
     }
     
 
-    
+
     return (
         <div className="br-select-category-component">
            <div className='b-category-dropdown'>
-            <div className='b-dropdown-header b-category-dropdown-header' onClick={toggleDropdown}>
-                {selectedItem ? items.find(item => item.id == selectedItem).label : "Select a Category"}
-                <TiArrowSortedDown/>
-            </div>
-            <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
-                {items.map(item => (
-                <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
-                    {item.label}
+                <div className='b-dropdown-header b-category-dropdown-header' onClick={toggleDropdown}>
+                    {selectedItem ? items.find(item => item.id == selectedItem).label : "Select a Category"}
+                    <TiArrowSortedDown/>
                 </div>
-                ))}
-            </div>
+                <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
+                    {items.map(item => (
+                    <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
+                        {item.label}
+                    </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
