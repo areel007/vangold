@@ -18,6 +18,7 @@ const BrSelectCategoryComponent = props => {
     }
     
 
+    
     return (
         <div className="br-select-category-component">
            <div className='b-category-dropdown'>
