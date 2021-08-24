@@ -12,7 +12,7 @@ import LanguageSelectTwo from '../inputs/select/f-language-select2';
 
 
 const styles = {
-    paper: { 
+    paper: {
         minWidth: "850px",
         paddingTop: "20px",
     },

@@ -279,7 +279,7 @@
 }
 .step .rate-form .form-control input {
   width: 350px;
-  padding-left: 48px;
+  border-left: 48px solid rgba(217, 218, 215, 0.5);;
   margin: 0;
 }
 .rate-currency-symbol {
@@ -342,5 +342,4 @@
 }
 .lang-category-dropdown-item{
   width: 300px;
-  border: 1px solid red;
 }

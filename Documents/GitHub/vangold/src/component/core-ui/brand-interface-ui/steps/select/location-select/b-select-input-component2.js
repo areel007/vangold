@@ -24,7 +24,7 @@ const BrSelectInputComponentTwo = props => {
                 {selectedItem ? items.find(item => item.id == selectedItem).label : "Select a State"}
                 <TiArrowSortedDown/>
             </div>
-            <div className={`b-dropdown-body ${isOpen && 'open'}`}>
+            <div className={`b-dropdown-body b-location-dropdown-body ${isOpen && 'open'}`}>
                 {items.map(item => (
                 <div className="b-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                     {item.label}
