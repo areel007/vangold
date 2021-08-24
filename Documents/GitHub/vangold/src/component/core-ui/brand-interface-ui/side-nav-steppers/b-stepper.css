@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     padding: 1.8rem;
+    background: rgba(217, 218, 215, 0.2);
     border-radius: .8rem;
-    margin-bottom: .2rem;
+    margin-bottom: 0;
 }
 .stepper-icon {
     margin-right: 2.4rem;
