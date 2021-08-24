@@ -22,7 +22,7 @@
     color: var(--secondary);
 }
 .stepper-check svg path {
-    fill: var(--secondary);
+    fill: rgba(51, 51, 51, 0.3);;
 }
 .stepper-active {
     background-color: var(--primary);
