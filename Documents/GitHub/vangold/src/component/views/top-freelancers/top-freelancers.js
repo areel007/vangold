@@ -1,15 +1,18 @@
 import "./top-freelancers.css";
 import ImagelessBanner from "../../core-ui/banner/imageless-banner/imageless-banner";
 import SelectInputComponent from "../../core-ui/inputs/select/select-input-component";
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import Star from "../../core-ui/star/star";
 import FreelancerData from "../../../top-freelancers-data.json";
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
 import profileImg from "../../../assets/images/Ellipse-111.png";
 import Location from "../../core-ui/inputs/location/location";
+import TopJobsViewModal from "../../core-ui/modal/top-jobs-view";
 
 const TopFreelancers = (props) => {
+  const [open, setOpen] = React.useState(false);
+
   const stars = Array(5).fill(0);
   const [selectOptions] = useState(["Select Category"]);
 
@@ -86,62 +89,64 @@ const TopFreelancers = (props) => {
   };
 
   return (
-    <div className="top-freelancers">
-      <ImagelessBanner bannerText="Top Freelancers" />
-      <div className="container">
-        <div className="top-freelancers__inner">
-          <p className="page-nav">Vangold > Browse freelancers</p>
-          <div className="search-component">
-            <SelectInputComponent selectOptions={selectOptions} />
-            <SearchInputComponent />
-            <Location />
-            <button>Search</button>
+    <div>
+      <div className="top-freelancers">
+        <ImagelessBanner bannerText="Top Freelancers" />
+        <div className="container">
+          <div className="top-freelancers__inner">
+            <p className="page-nav">Vangold > Browse freelancers</p>
+            <div className="search-component">
+              <SelectInputComponent selectOptions={selectOptions} />
+              <SearchInputComponent />
+              <Location />
+              <button>Search</button>
+            </div>
+            <div className="freelancers-list">
+              <p className="total-freelance">
+                We have 1,027 freelancers offereing 24 services
+              </p>
+              {displayfreelancers}
+            </div>
+            <ReactPaginate
+              previousLabel={
+                <svg
+                  width="8"
+                  height="12"
+                  viewBox="0 0 8 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.00016 12L7.41016 10.59L2.83016 6L7.41016 1.41L6.00016 1.23266e-07L0.000155878 6L6.00016 12Z"
+                    fill="#333333"
+                  />
+                </svg>
+              }
+              nextLabel={
+                <svg
+                  width="8"
+                  height="12"
+                  viewBox="0 0 8 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.99984 0L0.589844 1.41L5.16984 6L0.589844 10.59L1.99984 12L7.99984 6L1.99984 0Z"
+                    fill="#333333"
+                  />
+                </svg>
+              }
+              pageCount={pageCount}
+              onPageChange={changePage}
+              containerClassName={"paginationBttns"}
+              previousLinkClassName={"previousBttn"}
+              nextLinkClassName={"nextBttn"}
+              disabledClassName={"paginationDisabled"}
+              activeClassName={"paginationActive"}
+              breakLabel={"..."}
+              className="paginated"
+            />
           </div>
-          <div className="freelancers-list">
-            <p className="total-freelance">
-              We have 1,027 freelancers offereing 24 services
-            </p>
-            {displayfreelancers}
-          </div>
-          <ReactPaginate
-            previousLabel={
-              <svg
-                width="8"
-                height="12"
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.00016 12L7.41016 10.59L2.83016 6L7.41016 1.41L6.00016 1.23266e-07L0.000155878 6L6.00016 12Z"
-                  fill="#333333"
-                />
-              </svg>
-            }
-            nextLabel={
-              <svg
-                width="8"
-                height="12"
-                viewBox="0 0 8 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.99984 0L0.589844 1.41L5.16984 6L0.589844 10.59L1.99984 12L7.99984 6L1.99984 0Z"
-                  fill="#333333"
-                />
-              </svg>
-            }
-            pageCount={pageCount}
-            onPageChange={changePage}
-            containerClassName={"paginationBttns"}
-            previousLinkClassName={"previousBttn"}
-            nextLinkClassName={"nextBttn"}
-            disabledClassName={"paginationDisabled"}
-            activeClassName={"paginationActive"}
-            breakLabel={"..."}
-            className="paginated"
-          />
         </div>
       </div>
     </div>

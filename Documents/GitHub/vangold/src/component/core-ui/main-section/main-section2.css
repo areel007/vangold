@@ -1,0 +1,87 @@
+.home-two {
+  margin-top: 40px;
+}
+.home-two-title h2 {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 64px;
+  color: #164d00;
+}
+.popular-service-text__title {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: 4rem;
+  line-height: 5.4rem;
+  color: #164d00;
+  margin-bottom: 3.2rem;
+}
+.secure-payment-section {
+  background-color: #f9fafc;
+}
+.inner__secure-payment-section {
+  display: flex;
+  align-items: center;
+  padding: 6.4rem 0;
+  gap: 120px;
+}
+.secure-payment-section-img {
+  width: 495px;
+  height: 536px;
+}
+.card-title h2 {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-24);
+  line-height: 32px;
+  color: var(--primary);
+}
+.card-article {
+  margin-top: 12px;
+}
+.card-article p {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: #18191f;
+}
+.home-two-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  margin-bottom: 64px;
+}
+.home-two-card {
+  padding: 40px 32px;
+  width: 350px;
+  height: 290px;
+  background-color: var(--white);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.card-icon {
+  margin-bottom: 41.44px;
+}
+.popular-service-title {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 64px;
+  color: #164d00;
+  margin-bottom: 26px;
+}
+.our-top-freelancers{
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+.inner-our-top-freelancers{
+  height: 300px;
+}

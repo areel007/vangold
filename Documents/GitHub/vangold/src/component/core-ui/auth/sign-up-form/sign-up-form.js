@@ -82,8 +82,8 @@ const SignUpForm = () => {
             <div className="sign-up-options">
                 <p>I want to:</p>
                 <div className="option-buttons">
-                    <button>Hire for a project</button>
-                    <button>Work as a freelancer</button>
+                    <button className="option-btn">Hire for a project</button>
+                    <button className="option-btn">Work as a freelancer</button>
                 </div>
             </div>
 
