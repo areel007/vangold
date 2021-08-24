@@ -1,8 +1,6 @@
 import React from "react";
 import ImagelessBanner from "../../core-ui/banner/imageless-banner/imageless-banner";
 import "./top-jobs-view.css";
-import { Modal } from 'react-responsive-modal';
-import 'react-responsive-modal/styles.css';
 import TopJobsViewModal from "../../core-ui/modal/top-jobs-view";
 
 const TopJobsView = () => {
@@ -154,32 +152,11 @@ const TopJobsView = () => {
                             </p>
                         </div>
                         <div className="jobs-view-apply-btn">
-                            <button onClick={() => setOpen(true)}>Apply</button>
+                            <button>Apply</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <>
-                <Modal
-                    open={open}
-                    onClose={() => setOpen(false)}
-                    center
-                    classNames={{
-                    overlay: 'customOverlay',
-                    modal: 'topJobsViewModal',
-                    closeButton: 'closeIcon',
-                    }}
-                >
-                    
-                    <div className="banner2__form">
-                    <h2>Send a bid for this job</h2>
-                    <label className="modalLabel" htmlFor="username">
-                        What makes you the right person for this job
-                    </label>
-                        <TopJobsViewModal />
-                    </div>
-                </Modal>
-            </>
         </div>
     )
 }

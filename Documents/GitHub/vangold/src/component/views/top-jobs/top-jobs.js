@@ -8,8 +8,6 @@ import Star from "../../core-ui/star/star";
 import MockData from "../../../mock-data.json"
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
 import Location from "../../core-ui/inputs/location/location";
-import { Modal } from 'react-responsive-modal';
-import 'react-responsive-modal/styles.css';
 import TopJobsViewModal from "../../core-ui/modal/top-jobs-view";
 
 const TopJobs = props => {
@@ -130,24 +128,6 @@ const TopJobs = props => {
 
                 </div>
             </div>
-            <>
-                <Modal
-                    open={open}
-                    onClose={() => setOpen(false)}
-                    center
-                    classNames={{
-                    overlay: 'customOverlay',
-                    modal: 'topJobsViewModal',
-                    closeButton: 'closeIcon',
-                    }}
-                >
-                    
-                    <div className="banner2__form">
-                    <h2>Send a bid for this job</h2>
-                        <TopJobsViewModal />
-                    </div>
-                </Modal>
-            </>
         </div>
     )
 }

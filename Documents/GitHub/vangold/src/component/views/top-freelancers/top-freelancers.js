@@ -8,8 +8,6 @@ import FreelancerData from "../../../top-freelancers-data.json";
 import SearchInputComponent from "../../core-ui/inputs/search/search-input-component";
 import profileImg from "../../../assets/images/Ellipse-111.png";
 import Location from "../../core-ui/inputs/location/location";
-import { Modal } from 'react-responsive-modal';
-import 'react-responsive-modal/styles.css';
 import TopJobsViewModal from "../../core-ui/modal/top-jobs-view";
 
 const TopFreelancers = (props) => {
@@ -58,7 +56,7 @@ const TopFreelancers = (props) => {
                 <Star stars={stars} currentValue={currentValue} />
                 <span>{freelancer.freelancerAmount}</span>
               </div>
-              <button className="freelancers-list__freelancer-bid-button" onClick={() => setOpen(true)}>
+              <button className="freelancers-list__freelancer-bid-button">
                 Hire Me
               </button>
             </div>
@@ -151,27 +149,6 @@ const TopFreelancers = (props) => {
           </div>
         </div>
       </div>
-      <>
-        <Modal
-            open={open}
-            onClose={() => setOpen(false)}
-            center
-            classNames={{
-            overlay: 'customOverlay',
-            modal: 'topJobsViewModal',
-            closeButton: 'closeIcon',
-            }}
-        >
-            
-            <div className="banner2__form">
-            <h2>Send an offer to Daramola</h2>
-            <label className="modalLabel" htmlFor="username">
-              State clearly what you want Daramola to do for you
-            </label>
-                <TopJobsViewModal />
-            </div>
-        </Modal>
-      </>
     </div>
   );
 };

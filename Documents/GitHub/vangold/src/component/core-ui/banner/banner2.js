@@ -1,13 +1,10 @@
 import React from 'react';
 import "./banner.css"
 import bannerImage from "../../../assets/images/vangold-banner-img2.png"
-import { Modal } from 'react-responsive-modal';
-import 'react-responsive-modal/styles.css';
 import "../modal/modal.css";
 import BannerTwoModal from '../auth/banner2modal/banner2modal';
 
 const AbBanner = () => {
-    const [open, setOpen] = React.useState(false);
 
     return (
         <div>
@@ -19,8 +16,8 @@ const AbBanner = () => {
                             <p className="banner__text__subtitle">Hire top-notch professionals to get your project done. Worry not about their competence, we did our due diligence. 
                             </p>
                             <div className="banner__button">
-                                <button className="banner__text__button" onClick={() => setOpen(true)}>Hire a Freelancer</button>
-                                <button className="banner__text__button findwork__btn" onClick={() => setOpen(true)}>Find Work</button>
+                                <button className="banner__text__button">Hire a Freelancer</button>
+                                <button className="banner__text__button findwork__btn">Find Work</button>
                             </div>
                         </div>
                         <div className="bannerTwo__image">
@@ -29,23 +26,6 @@ const AbBanner = () => {
                     </div>
                 </div>
             </div>
-            <>
-                <Modal
-                    open={open}
-                    onClose={() => setOpen(false)}
-                    center
-                    classNames={{
-                    overlay: 'customOverlay',
-                    modal: 'customModal',
-                    closeButton: 'closeIcon',
-                    }}
-                >
-                    <h2>Build a successful career with us</h2>
-                    <div className="banner2__form">
-                        <BannerTwoModal />
-                    </div>
-                </Modal>
-            </>
         </div>
     )
 }
