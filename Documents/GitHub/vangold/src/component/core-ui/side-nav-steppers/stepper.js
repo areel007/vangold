@@ -13,9 +13,10 @@ const Stepper = (props) => {
             </div>
             <div className="stepper-description">{step.description}</div>
             <div className="stepper-check">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="white"/>
-                </svg>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#333333"/>
+            </svg>
+
             </div>
 
         </div> : step.description === 'Description' ? <div className={`stepper ${props.stepPage===2 ? 'stepper-active' : null}`}>
@@ -136,7 +137,7 @@ const Stepper = (props) => {
 
         </div>
     })
-    return <div>{displaySteps}</div>
+    return <div className="steps-container">{displaySteps}</div>
 }
 
 export default Stepper
