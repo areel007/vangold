@@ -17,10 +17,10 @@
   grid-row-gap: 2.4rem;
   margin-bottom: 2.4rem;
 }
-.b-step form .form-control {
+.b-step form .vangold-input {
   width: 100%;
 }
-.b-step form .form-control label {
+.b-step form .vangold-input label {
   display: block;
   margin-bottom: 0.4rem;
   font-family: var(--raleway);
@@ -30,7 +30,7 @@
   line-height: 19px;
   color: #333333;
 }
-.b-step form .form-control input {
+.b-step form .vangold-input input {
   width: 740px;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);

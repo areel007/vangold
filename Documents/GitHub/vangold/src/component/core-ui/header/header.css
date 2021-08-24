@@ -63,6 +63,7 @@ header {
   font-family: var(--mulish);
   font-weight: var(--font-wieght-bold);
   border-radius: 0.4rem;
+  text-decoration: none;
 }
 .links a:last-child {
   margin-right: 0;

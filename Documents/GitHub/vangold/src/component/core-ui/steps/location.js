@@ -12,11 +12,11 @@ const Location = (props) => {
             </div>
             <p className="location-p">We take privacy very seriously. Only your country and city will be revealed to clients</p>
             <form className="location-form">
-                <div className="form-control Address">
+                <div className="vangold-input Address">
                     <label>Address</label>
                     <input type="text" />
                 </div>
-                <div className="form-control zip-postal-code">
+                <div className="vangold-input zip-postal-code">
                     <label>Zip/Postal Code</label>
                     <input type="email" />
                 </div>
