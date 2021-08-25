@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./header.css"
-import {Link, NavLink} from "react-router-dom";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import HeaderLogo from "../../../assets/images/logo.png"
 
@@ -8,24 +8,25 @@ const Header = (props) => {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
     const onClick = () => setIsActive(!isActive);
-  
+    const location = useLocation()
+
     return (
-        <header>
+        location.pathname === '/' ?
+            <header>
+                <div className='container'>
+                    <div className='header__inner'>
+                        <div className='logo'>
+                            <img src={HeaderLogo} alt="Header Logo" />
+                            <h2>Vangold</h2>
+                        </div>
 
-            <div className='container'>
-                <div className='header__inner'>
-                    <div className='logo'>
-                        <img src={HeaderLogo} alt="Header Logo" />
-                        <h2>Vangold</h2>
-                    </div>
-
-                    <ul>
-                        {
-                            props.links.map(
-                                link => {
-                                    switch (link.linkName) {
-                                        case 'English': return (
-                                            <li className="language" onClick={onClick} key={link.linkName}>
+                        <ul>
+                            {
+                                props.links.map(
+                                    link => {
+                                        switch (link.linkName) {
+                                            case 'English': return (
+                                                <li className="language" onClick={onClick} key={link.linkName}>
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                         <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
                                                         20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM16.92 6H13.97C13.65
@@ -44,64 +45,64 @@ const Header = (props) => {
                                                     </svg>
 
                                                     &nbsp;{ link.linkName }
-                                            </li>
-                                        )
-                                        default: return (
-                                            <li key={link.linkName}>
-                                                <Link to={link.to}>
-                                                    { link.linkName }
-                                                </Link>
-                                            </li>
-                                        )
+                                                </li>
+                                            )
+                                            default: return (
+                                                <li key={link.linkName}>
+                                                    <Link to={link.to}>
+                                                        { link.linkName }
+                                                    </Link>
+                                                </li>
+                                            )
+                                        }
                                     }
-                                }
-                            )
-                        }
-                    </ul>
-
-                    <div className='links'>
-                        { props.buttons.map(
-                            button => {
-                                return (
-                                    <NavLink key={button.buttonName} to={button.to}>{ button.buttonName }</NavLink>
                                 )
                             }
-                        )}
-                    </div>
+                        </ul>
 
-                    <svg
-                        height="24px"
-                        viewBox="0 0 24 24"
-                        width="24px"
-                        fill="#000000"
-                        className='hamburger'
-                        onClick={props.toggleMobileNav}
-                    >
-                        <path d="M0 0h24v24H0V0z" fill="none"/>
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                    </svg>
+                        <div className='links'>
+                            { props.buttons.map(
+                                button => {
+                                    return (
+                                        <NavLink key={button.buttonName} to={button.to}>{ button.buttonName }</NavLink>
+                                    )
+                                }
+                            )}
+                        </div>
+
+                        <svg
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            width="24px"
+                            fill="#000000"
+                            className='hamburger'
+                            onClick={props.toggleMobileNav}
+                        >
+                            <path d="M0 0h24v24H0V0z" fill="none"/>
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <nav ref={dropdownRef} className={`dropDownLanguage ${isActive ? "active" : "inactive"}`}>
-                <ul>
-                    <li>
-                        <a className="activeLink" href="#">English</a>
-                    </li>
-                    <li>
-                        <a href="#">Deutsch</a>
-                    </li>
-                    <li>
-                        <a href="#">Spanish</a>
-                    </li>
-                    <li>
-                        <a href="#">French</a>
-                    </li>
-                    <li>
-                        <a href="#">Portuguese</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+                <nav ref={dropdownRef} className={`dropDownLanguage ${isActive ? "active" : "inactive"}`}>
+                    <ul>
+                        <li>
+                            <a className="activeLink" href="#">English</a>
+                        </li>
+                        <li>
+                            <a href="#">Deutsch</a>
+                        </li>
+                        <li>
+                            <a href="#">Spanish</a>
+                        </li>
+                        <li>
+                            <a href="#">French</a>
+                        </li>
+                        <li>
+                            <a href="#">Portuguese</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header> : null
     )
 }
 
