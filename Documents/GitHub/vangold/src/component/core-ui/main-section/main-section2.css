@@ -78,9 +78,18 @@
   color: #164d00;
   margin-bottom: 26px;
 }
-.our-top-freelancers{
-  margin-bottom: 64px;
-  margin-top: 64px;
+.our-top-freelancers {
+  padding-bottom: 64px;
+  padding-top: 64px;
+}
+.inner-our-top-freelancers h2 {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 64px;
+  color: #164d00;
+  margin-bottom: 40px;
 }
 .inner-our-top-freelancers{
   height: 300px;

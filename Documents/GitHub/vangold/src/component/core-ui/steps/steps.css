@@ -1,3 +1,21 @@
+.freelancer-regs-step {
+  margin-bottom: 300px;
+}
+.skills-expert__box {
+  width: 740px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+.popular_skills__select {
+  margin-top: 12px;
+  margin-bottom: 88px;
+}
+.popular_skills__selected {
+  min-height: 50px;
+}
 .step-title {
   font-family: var(--raleway);
   font-style: normal;
@@ -14,10 +32,16 @@
   grid-row-gap: 2.4rem;
   margin-bottom: 2.4rem;
 }
-.step form .form-control {
+.step form .vangold-input {
   width: 100%;
 }
-.step form .form-control label {
+.f-form__control {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.date-attended-box label,
+.descriptionTextarea label {
   display: block;
   margin-bottom: 0.4rem;
   font-family: var(--raleway);
@@ -27,7 +51,17 @@
   line-height: 19px;
   color: #333333;
 }
-.step form .form-control input {
+.step form .vangold-input label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.step form .vangold-input input {
   width: 100%;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
@@ -76,18 +110,27 @@
   align-items: center;
 }
 .upload-passport .file > label:hover {
-    background-color: rgba(217, 218, 215, 0.8);
+  background-color: rgba(217, 218, 215, 0.8);
 }
 
-.upload-passport .file > label .PassportPic{
+.upload-passport .file > label .PassportPic {
   width: 58px;
   height: 58px;
   position: absolute;
   border-radius: 10px;
 }
 
-
 .step-subtitle {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  margin-bottom: 16px;
+  display: block;
+}
+.skill-subtitle {
   font-family: var(--raleway);
   font-style: normal;
   font-weight: 600;
@@ -106,4 +149,197 @@
   outline: none;
   padding: 1em;
   margin-bottom: 150px;
+  resize: none;
+}
+
+/* EDUCATION STEPS*/
+.add_edu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  width: 167px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #767676;
+  border: none;
+  margin-bottom: 85px;
+  cursor: pointer;
+}
+.DialogTitle {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-36);
+  line-height: 42px;
+  color: #141414;
+  position: relative;
+  left: 22px;
+  width: 740px;
+}
+.edu__form form {
+  max-width: 740px;
+  margin: auto;
+  /* margin-top: 70px; */
+}
+.MuiDialogContent-root {
+  overflow: hidden;
+}
+.edu-btns {
+  width: 740px;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-end;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+.form-input label,
+.datePickerBox label {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--secondary);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 4px;
+}
+.form-input input {
+  width: 740px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 47px;
+}
+.form-input textarea {
+  width: 740px;
+  height: 100px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  resize: none;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.add_employ-btn {
+  width: 188px;
+}
+.skip_this_step {
+  margin-bottom: 32px;
+}
+.skip_this_step a {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: var(--primary);
+}
+.inn__datePickerBox {
+  display: flex;
+  gap: 40px;
+}
+.inn__datePickerBox .form-input input {
+  width: 350px;
+}
+.descriptionTextarea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+.descriptionTextarea textarea {
+  width: 100%;
+  height: 100px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  border: none;
+  resize: none;
+  margin-top: 4px;
+}
+
+/* RATE HOURLY*/
+.step .rate-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 350px;
+}
+.step .rate-form .vangold-input input {
+  width: 350px;
+  border-left: 48px solid rgba(217, 218, 215, 0.5);;
+  margin: 0;
+}
+.rate-currency-symbol {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: #767676;
+  position: relative;
+  top: -35px;
+  left: 20px;
+}
+.rate-step {
+  margin-bottom: 80px;
+}
+.rate-form-P {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-normal);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--secondary);
+  position: absolute;
+  margin-top: -18px;
+}
+
+/* LAnguage Step */
+.languageSelectTwo{
+  position: relative;
+  z-index: 10;
+}
+.language-p {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--secondary);
+  margin-bottom: 29px;
+}
+.step .location-form {
+  display: flex;
+  flex-direction: column;
+}
+.location-p {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fs-14);
+  line-height: 16px;
+  margin-bottom: 24px;
+  color: #808080;
+}
+.lang-select-component,
+.lang-dropdown,
+.lang-dropdown-header,
+.lang-category-dropdown-body {
+  width: 350px;
+}
+.lang-category-dropdown-item{
+  width: 300px;
 }

@@ -1,0 +1,35 @@
+.stepper {
+    display: flex;
+    align-items: center;
+    padding: 1.8rem;
+    background: rgba(217, 218, 215, 0.2);
+    border-radius: .8rem;
+    margin-bottom: 0;
+}
+.stepper-icon {
+    margin-right: 2.4rem;
+}
+.stepper-icon svg path {
+    fill: var(--secondary);
+}
+.stepper-description {
+    margin-right: auto;
+    font-family: var(--mulish);
+    font-style: normal;
+    font-weight: var(--font-weight-normal);
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--secondary);
+}
+.stepper-check svg path {
+    fill: rgba(51, 51, 51, 0.3);;
+}
+.stepper-active {
+    background-color: var(--primary);
+}
+.stepper-active .stepper-description {
+    color: var(--white);
+}
+.stepper-active svg path {
+    fill: var(--white);
+}

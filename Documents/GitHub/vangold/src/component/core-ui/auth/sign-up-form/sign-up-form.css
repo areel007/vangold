@@ -30,6 +30,8 @@ h1.form__title {
 }
 .input__box input {
   width: 95%;
+  width: 452px;
+  height: 48px;
   border: none;
   outline: none;
   margin-right: 2rem;

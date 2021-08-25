@@ -1,0 +1,62 @@
+#employer-setting {
+  background: #f9f9f9;
+}
+#employer-setting h1 {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  margin-bottom: 2rem;
+}
+#employer-setting h5 {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#employer-setting p {
+  font-family: var(--mulish);
+}
+#employer-setting .submit-btn {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: #fff;
+  line-height: 22.59px;
+  background-color: var(--primary);
+  padding: 1rem 2.5rem;
+  text-transform: none;
+}
+#employer-setting .form-control:not(active) {
+  background-color: #e9eae8;
+}
+#employer-setting .box-upload {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 160px;
+  width: 160px;
+  background: #fbfbff;
+  border-radius: 20px;
+}
+#employer-setting .image-upload {
+  display: flex;
+  flex-wrap: wrap;
+}
+#employer-setting label {
+  cursor: pointer;
+}
+
+#upload-input {
+  display: none;
+}
+#employer-setting .image-preview {
+  position: relative;
+}
+#uploaded-image {
+  height: 160px;
+  width: 160px;
+  object-fit: cover;
+}
+
+#employer-setting .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+}
