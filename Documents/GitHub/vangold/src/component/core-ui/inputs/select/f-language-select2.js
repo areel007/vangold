@@ -3,7 +3,7 @@ import React from "react";
 import { TiArrowSortedDown } from 'react-icons/ti';
 import LanguageSelectData from "../../steps/languageData.json";
 
-const LanguageSelectTwo = props => {
+const LanguageSelect = props => {
     
     const { useState } = React;
   
@@ -20,13 +20,13 @@ const LanguageSelectTwo = props => {
 
 
     return (
-        <div className="br-select-category-component">
+        <div style={{width: "740px"}} className="br-select-category-component lang-select-component">
            <div className='b-category-dropdown'>
                 <div className='b-dropdown-header b-category-dropdown-header' onClick={toggleDropdown}>
-                    {selectedItem ? items.find(item => item.id == selectedItem).label : "Select "}
+                    {selectedItem ? items.find(item => item.id == selectedItem).label : "Select"}
                     <TiArrowSortedDown/>
                 </div>
-                <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
+                <div className={`b-category-dropdown-body b-language-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
                     <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                         {item.label}
@@ -39,4 +39,4 @@ const LanguageSelectTwo = props => {
     )
 }
 
-export default LanguageSelectTwo
+export default LanguageSelect

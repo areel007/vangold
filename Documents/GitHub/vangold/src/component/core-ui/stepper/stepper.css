@@ -1,0 +1,45 @@
+.stepper-component {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.step {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+}
+.bullet {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.bullet svg {
+    margin: auto;
+}
+.stepper-component .step p {
+    font-family: var(--mulish);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #333333;
+}
+.step .bullet:before,
+.step .bullet:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 44px;
+    right: 5px;
+    top: 50%;
+    background-color: red;
+}
+.step:last-child .bullet:before,
+.step:last-child .bullet:after {
+    display: none;
+}

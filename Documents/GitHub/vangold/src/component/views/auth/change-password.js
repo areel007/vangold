@@ -1,7 +1,7 @@
 import "./change-password.css"
-import ChangePasswordForm from "../core-ui/auth/change-password-form/change-password-form";
+import ChangePasswordForm from "../../core-ui/auth/change-password-form/change-password-form";
 import {Link} from "react-router-dom";
-import ChangePasswordImage from "../../assets/images/amico-change-password-form.png"
+import ChangePasswordImage from "../../../assets/images/amico-change-password-form.png"
 
 const ChangePassword = () => {
     return (

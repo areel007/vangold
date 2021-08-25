@@ -26,7 +26,7 @@ const LanguageSelect = props => {
                     {selectedItem ? items.find(item => item.id == selectedItem).label : "Select "}
                     <TiArrowSortedDown/>
                 </div>
-                <div style={{width: "350px"}} className={`b-category-dropdown-body ${isOpen && 'open'}`}>
+                <div style={{width: "350px"}} className={`b-category-dropdown-body b-language-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
                     <div style={{width: "300px"}} className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                         {item.label}

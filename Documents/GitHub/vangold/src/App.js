@@ -2,23 +2,20 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import Header from "./component/core-ui/header/header"
 import Footer from "./component/core-ui/footer/footer"
-import SignUp from "./component/views/sign-up";
-import LogIn from "./component/views/log-in";
-import ChangePassword from "./component/views/change-password";
-import PasswordResetSuccess from "./component/views/password-reset-success";
+import SignUp from "./component/views/auth/sign-up";
+import LogIn from "./component/views/auth/log-in";
+import ChangePassword from "./component/views/auth/change-password";
+import PasswordResetSuccess from "./component/views/auth/password-reset-success";
 import TermsAndConditions from "./component/views/terms-and-conditions";
 import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
 import { useState } from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
-import ResetPassword from "./component/views/reset-password/reset-password";
+import ResetPassword from "./component/views/auth/reset-password/reset-password";
 import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
-import TopJobs from "./component/views/top-jobs/top-jobs";
-import TopJobsView from './component/views/top-jobs/top-jobs-view';
-import TopFreelancers from "./component/views/top-freelancers/top-freelancers";
-import FreelancerRegistration from "./component/views/auth/freelancer-registration/freelancer-registration";
-import BrandRegistration from './component/views/BrandInterface/brand-registration';
+import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
+import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
 import EmployerSetting from './component/views/EmployerViews/EmployerSetting/EmployerSetting';
 import PayToEmployer from './component/views/EmployerViews/PayToEmployer/PayToEmployer';
@@ -31,6 +28,8 @@ import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
 import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
 
+// import DashboardHeader from './component/core-ui/header/dashboard-header';
+import ChatComponent from './component/views/ChatView/ChatComponent';
 
 function App() {
 
@@ -128,15 +127,6 @@ function App() {
                     <Route path="/reset-password">
                         <ResetPassword />
                     </Route>
-                    <Route path="/browse-jobs">
-                        <TopJobs />
-                    </Route>
-                    <Route path="/top-jobs-view">
-                        <TopJobsView />
-                    </Route>
-                    <Route path="/browse-freelancers">
-                        <TopFreelancers />
-                    </Route>
                     <Route path="/freelancer-registration">
                         <FreelancerRegistration />
                     </Route>
@@ -173,6 +163,10 @@ function App() {
                     <Route path="/profile/talent/find-talent">
                         <FindTalent />
                     </Route>
+                    <Route path="/profile/messages">
+                        <ChatComponent />
+                    </Route> 
+                    
                 </Switch>
                 <Footer />
             </div>
