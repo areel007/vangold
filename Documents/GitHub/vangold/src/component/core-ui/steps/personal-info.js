@@ -20,27 +20,27 @@ const PersonalInfo = () => {
     <div className="step">
       <p className="step-title">Personal Info</p>
       <form>
-        <div className="form-control first-name">
+        <div className="vangold-input first-name">
           <label>First Name</label>
           <input type="text" />
         </div>
-        <div className="form-control last-name">
+        <div className="vangold-input last-name">
           <label>Last Name</label>
           <input type="text" />
         </div>
-        <div className="form-control email">
+        <div className="vangold-input email">
           <label>Email</label>
           <input type="text" />
         </div>
-        <div className="form-control linkedin-profile">
+        <div className="vangold-input linkedin-profile">
           <label>LinkedIn Profile URL</label>
           <input type="text" />
         </div>
       </form>
       <div className="upload-passport">
         <label>Upload Passport Photograph </label>
-        <div class="file">
-          <label for="input-file">
+        <div className="file">
+          <label htmlFor="input-file">
             <svg
               width="54"
               height="54"
@@ -51,7 +51,7 @@ const PersonalInfo = () => {
               <path
                 d="M54 48V6C54 2.7 51.3 0 48 0H6C2.7 0 0 2.7 0 6V48C0 51.3 2.7 54 6 54H48C51.3 54 54 51.3 54 48ZM16.5 31.5L24 40.53L34.5 27L48 45H6L16.5 31.5Z"
                 fill="black"
-                fill-opacity="0.3"
+                fillOpacity="0.3"
               />
             </svg>
                 <img className="PassportPic" src={imgData} />

@@ -1,0 +1,209 @@
+#profile-dash .bg-color {
+  background-color: #f9f9f9;
+  padding: 4rem 3rem;
+}
+#profile-dash h1 {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #000000;
+}
+#profile-dash h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--mulish);
+  color: #fff;
+}
+#profile-dash .dash-card {
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+#profile-dash .card-btn {
+  border-radius: 8px;
+  padding: 1rem;
+}
+#profile-dash .bg-percent {
+  border-radius: 12px;
+  background: #ffffff4d;
+  padding: 0.5rem 1rem 0 1rem;
+}
+#profile-dash .user {
+  background: #3751ff33;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+#profile-dash .employee-btn {
+  background: #3751ff33;
+  color: #3751ff;
+  padding: 0.7rem;
+  border-radius: 3px;
+  border: transparent;
+  font-size: 12px;
+}
+#profile-dash .text-12px {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+}
+#profile-dash .text-14px {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #141414b2;
+}
+#profile-dash .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #141414b2;
+}
+#profile-dash .text-18px {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #808080b2;
+}
+
+@media (max-width: 350px) {
+  #profile-dash .text-20px {
+    font-size: 12px;
+  }
+}
+
+.chat__container-title {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-30);
+  line-height: 20px;
+  color: #000000;
+}
+.chat__container-subtitle,
+.message__box-container .msg-P {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-20);
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.6;
+}
+.chat__box__contaniner {
+  margin-top: 47px;
+  display: flex;
+}
+.chat__box__contaniner-left {
+  width: 334px;
+  display: flex;
+  flex-direction: column;
+}
+.chat__box__contaniner-left .personal__avatar {
+  height: 70px;
+  background: rgba(69, 182, 24, 0.2);
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 24px 9px 24px;
+}
+.chat__avatar {
+  height: 53px;
+  width: 53px;
+  border-radius: 0px;
+}
+.chat__box__contaniner-left .personal__avatar svg {
+  cursor: pointer;
+}
+.chat__search_box--user-avatar {
+  height: 696px;
+  background: #f2f2f2;
+  border-radius: 6px 0px 0px 6px;
+}
+.chat__search-box {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chat__search-box input {
+  width: 210px;
+  height: 25px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  padding-left: 30px;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 11px;
+  color: var(--secondary);
+  /* opacity: 0.3; */
+}
+.chat__search-box svg {
+  position: absolute;
+  margin-left: -89px;
+}
+.users__chat__avatar {
+  height: 55px;
+}
+
+.chat__component_users-data {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-left: 24px;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.chat__component_users-data:hover {
+  background-color: #eeeded;
+}
+.chat__users_name,
+.chat__users_title {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-14);
+  line-height: 18px;
+  color: var(--secondary);
+}
+.chat__users_title {
+  font-size: var(--fs-12);
+  line-height: 15px;
+  color: #666666;
+  font-weight: normal;
+}
+.message__box-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message__box-container .msg-h2 {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 23px;
+  text-align: center;
+}
+.message__box-container .msg-h2 {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 23px;
+  text-align: center;
+}
+.message__box-container .msg-P {
+  text-align: center;
+  margin-top: 9.58px;
+}
+.message__box-container .msg-photo {
+  margin-top: 24.86px;
+}

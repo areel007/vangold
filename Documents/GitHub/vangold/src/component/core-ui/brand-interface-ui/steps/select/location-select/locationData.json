@@ -1,0 +1,36 @@
+[
+    {"id": 0, "label": "Agriculture"
+    },
+    {"id": 1, "label": "IT & Software"
+    },
+    {"id": 2, "label": "Construction"
+    },
+    {"id": 3, "label": "Education"
+    },
+    {"id": 4, "label": "Electronics"
+    },
+    {"id": 5, "label": "Energy"
+    },
+    {"id": 6, "label": "Entertainment"
+    },
+    {"id": 7, "label": "Food"
+    },
+    {"id": 8, "label": "Healthcare"
+    },
+    {"id": 9, "label": "Hospitality"
+    },
+    {"id": 10, "label": "Manufacturing"
+    },
+    {"id": 11, "label": "Mining"
+    },
+    {"id": 12, "label": "Music"
+    },
+    {"id": 13, "label": "News Media"
+    },
+    {"id": 14, "label": "Pharmaceutical"
+    },
+    {"id": 15, "label": "Telecommunication"
+    },
+    {"id": 16, "label": "Transport"
+    }
+]

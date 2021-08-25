@@ -1,0 +1,74 @@
+#pay-to-employer h1 {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  margin-bottom: 1rem;
+}
+#pay-to-employer h2 {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  margin-bottom: 1rem;
+}
+#pay-to-employer .card-order {
+  background-color: #f6fbf3;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+}
+#pay-to-employer .submit-btn {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: #fff;
+  line-height: 22.59px;
+  background-color: var(--primary);
+  padding: 1rem 3rem;
+  text-transform: none;
+}
+#pay-to-employer .custom-radio {
+  position: relative;
+  border: 1px solid #0000004d;
+  height: 6rem;
+  width: 15rem;
+  border-radius: 5px;
+}
+#pay-to-employer .radio-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+}
+#pay-to-employer .form-control:not(active) {
+  background-color: #e9eae8;
+}
+#pay-to-employer .text-14px-a {
+  font-size: 14px;
+  font-weight: var(--font-weight-light);
+  font-family: var(--mulish);
+}
+#pay-to-employer .text-14px-b {
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--mulish);
+}
+#pay-to-employer .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 7rem;
+}
+#pay-to-employer .text-16px-a {
+  font-size: 16px;
+  font-weight: var(--font-weight-normal);
+  color: #333333;
+}
+#pay-to-employer .text-18px {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 335px) {
+  #pay-to-employer .text-14px-a {
+    font-size: 10px;
+  }
+  #pay-to-employer .text-14px-b {
+    font-size: 10px;
+  }
+}
