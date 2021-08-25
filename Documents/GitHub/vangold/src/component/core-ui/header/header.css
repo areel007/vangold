@@ -2,6 +2,7 @@ header {
   background-color: var(--white);
 }
 .header__inner {
+  width: 100%;
   height: 7.2rem;
   display: flex;
   /*justify-content: space-between;*/
@@ -26,7 +27,7 @@ header {
   line-height: 30px;
   color: var(--secondary);
 }
-.header__inner ul {
+.header-before-login ul {
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -183,4 +184,76 @@ header {
 .dropDownLanguage li a:hover {
     background-color: var(--primary);
     color: var(--white);
+}
+.search__container {
+  width: 738px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__container input {
+  background: #f8f8f8;
+  border-radius: 8px;
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  padding-left: 53px;
+  font-family: var(--lato);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: #4f4f4f;
+  border: none;
+  outline: none;
+}
+.search__container svg {
+  position: relative;
+  left: 35px;
+}
+.header-after-login {
+  display: flex;
+}
+.header-before-login {
+  display: flex;
+  width: 100%;
+}
+.dashboard-avatar-name-notify {
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notification {
+  margin-right: 34px;
+}
+.dashboard-avatar-name-notify .circleNotification {
+  position: absolute;
+  margin-left: -5px;
+}
+.avatarImg {
+  margin-right: 14px;
+}
+.avatarImg img {
+  width: 44px;
+  height: 44px;
+}
+.dashboard__name h2 {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-14);
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: var(--secondary);
+}
+.dashboard__name p {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-10);
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #4f4f4f;
 }
