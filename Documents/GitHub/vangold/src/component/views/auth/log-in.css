@@ -5,7 +5,6 @@
   gap: 30px;
   margin-top: 60px;
   margin-bottom: 6rem;
-  border: 1px solid blue;
 }
 
 .dont-have-account {
@@ -23,7 +22,6 @@
 }
 .log-in__image{
   margin-bottom: 175px;
-  border: 1px solid red;
 }
 .log-in__image,
 .log-in__form {
