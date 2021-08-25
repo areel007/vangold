@@ -42,7 +42,7 @@ const ProfileMyJob = () => {
                     <Col xs={10} lg={2} className="mx-auto mt-4">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={4} className="mx-auto bg-color p-4">
+                    <Col xs={10} lg={4} className="mx-auto bg-color-w p-4">
                         <Card className="my-job-card">
                             <div className="d-flex justify-content-between">
                                 <h1 className="head">Website Designer</h1>
@@ -93,7 +93,7 @@ const ProfileMyJob = () => {
                             </div>
                         </Card>
                     </Col>
-                    <Col xs={10} lg={6} className="mx-auto bg-color py-4 ps-4 pe-5">
+                    <Col xs={10} lg={6} className="mx-auto bg-color-w py-4 ps-4 pe-5">
                         <Card className="my-job-card-1">
                             {
                                 applicant &&
