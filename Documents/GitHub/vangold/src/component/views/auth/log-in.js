@@ -1,7 +1,7 @@
 import "./log-in.css"
-import LogInForm from "../core-ui/auth/log-in-form/log-in-form";
+import LogInForm from "../../core-ui/auth/log-in-form/log-in-form";
 import {Link} from "react-router-dom";
-import LogInImage from "../../assets/images/amico-login.png"
+import LogInImage from "../../../assets/images/amico-login.png"
 
 const LogIn = () => {
     return (

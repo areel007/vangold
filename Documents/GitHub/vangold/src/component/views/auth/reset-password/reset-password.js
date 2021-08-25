@@ -1,6 +1,6 @@
 import "./reset-password.css"
 import {Link} from "react-router-dom";
-import resetPassageImage from "../../../assets/images/bro.png"
+import resetPassageImage from "../../../../assets/images/bro.png"
 
 const ResetPassword = () => {
     return (

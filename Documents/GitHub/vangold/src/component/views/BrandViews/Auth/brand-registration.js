@@ -1,10 +1,10 @@
 import "./brand-registration.css"
-import BrSideNavSteppers from "../../core-ui/brand-interface-ui/side-nav-steppers/b-side-nav-steppers";
-import CompanyInfo from "../../core-ui/brand-interface-ui/steps/company-info";
-import Description from "../../core-ui/brand-interface-ui/steps/description";
+import BrSideNavSteppers from "../../../core-ui/brand-interface-ui/side-nav-steppers/b-side-nav-steppers";
+import CompanyInfo from "../../../core-ui/brand-interface-ui/steps/company-info";
+import Description from "../../../core-ui/brand-interface-ui/steps/description";
 import {useState} from "react";
-import Category from "../../core-ui/brand-interface-ui/steps/category";
-import BrLocation from "../../core-ui/brand-interface-ui/steps/location";
+import Category from "../../../core-ui/brand-interface-ui/steps/category";
+import BrLocation from "../../../core-ui/brand-interface-ui/steps/location";
 
 const BrandRegistration = () => {
 
