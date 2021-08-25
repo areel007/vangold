@@ -9,7 +9,6 @@ const DashboardHeader = (props) => {
     const location = useLocation()
   
     return (
-        location.pathname === '/profile/dashboard' ?
         <header>
 
             <div className='container'>
@@ -54,7 +53,7 @@ const DashboardHeader = (props) => {
                     </svg>
                 </div>
             </div>
-        </header>: null
+        </header>
     )
 }
 
