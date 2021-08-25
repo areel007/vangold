@@ -11,7 +11,7 @@ const Header = (props) => {
     const location = useLocation()
 
     return (
-        location.pathname === '/' ?
+        location.pathname === '/'?
             <header>
                 <div className='container'>
                     <div className='header__inner'>

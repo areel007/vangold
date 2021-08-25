@@ -25,7 +25,7 @@ import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
 import DashboardHeader from './component/core-ui/header/dashboard-header';
-
+import ChatComponent from './component/views/ChatView/ChatComponent';
 
 function App() {
 
@@ -157,6 +157,9 @@ function App() {
                     </Route>
                     <Route path="/profile/jobs/my-job">
                         <ProfileMyJob />
+                    </Route> 
+                    <Route path="/profile/messages">
+                        <ChatComponent />
                     </Route> 
                     
                 </Switch>
