@@ -20,19 +20,19 @@ const PersonalInfo = () => {
     <div className="step">
       <p className="step-title">Personal Info</p>
       <form>
-        <div className="form-control first-name">
+        <div className="vangold-input first-name">
           <label>First Name</label>
           <input type="text" />
         </div>
-        <div className="form-control last-name">
+        <div className="vangold-input last-name">
           <label>Last Name</label>
           <input type="text" />
         </div>
-        <div className="form-control email">
+        <div className="vangold-input email">
           <label>Email</label>
           <input type="text" />
         </div>
-        <div className="form-control linkedin-profile">
+        <div className="vangold-input linkedin-profile">
           <label>LinkedIn Profile URL</label>
           <input type="text" />
         </div>

@@ -32,7 +32,7 @@
   grid-row-gap: 2.4rem;
   margin-bottom: 2.4rem;
 }
-.step form .form-control {
+.step form .vangold-input {
   width: 100%;
 }
 .f-form__control {
@@ -51,7 +51,7 @@
   line-height: 19px;
   color: #333333;
 }
-.step form .form-control label {
+.step form .vangold-input label {
   display: block;
   margin-bottom: 0.4rem;
   font-family: var(--raleway);
@@ -61,7 +61,7 @@
   line-height: 19px;
   color: #333333;
 }
-.step form .form-control input {
+.step form .vangold-input input {
   width: 100%;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
@@ -277,9 +277,9 @@
   grid-template-columns: 1fr;
   width: 350px;
 }
-.step .rate-form .form-control input {
+.step .rate-form .vangold-input input {
   width: 350px;
-  padding-left: 48px;
+  border-left: 48px solid rgba(217, 218, 215, 0.5);;
   margin: 0;
 }
 .rate-currency-symbol {
@@ -342,5 +342,4 @@
 }
 .lang-category-dropdown-item{
   width: 300px;
-  border: 1px solid red;
 }
