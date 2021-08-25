@@ -1,7 +1,7 @@
 import "./sign-up.css"
-import SignUpForm from "../core-ui/auth/sign-up-form/sign-up-form";
+import SignUpForm from "../../core-ui/auth/sign-up-form/sign-up-form";
 import {Link} from "react-router-dom";
-import signUpImage from "../../assets/images/amico.png"
+import signUpImage from "../../../assets/images/amico.png"
 
 const SignUp = () => {
     return (
