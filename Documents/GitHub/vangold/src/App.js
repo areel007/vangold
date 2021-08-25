@@ -163,7 +163,7 @@ function App() {
                     </Route>
                     <Route path="/profile/jobs/my-job">
                         <ProfileMyJob />
-                    </Route>
+                    </Route> 
                 </Switch>
                 <Footer />
             </div>
