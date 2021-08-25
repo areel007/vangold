@@ -67,6 +67,13 @@ const SelectInputComponent = props => {
                     setIsActive(!isActive)
                 }}
             >
+            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.8125 0H1.40625V16.9688H0V21.1875H1.40625V24H2.8125V21.1875H4.21875V16.9688H2.8125V0Z" fill="#45B618"/>
+                <path d="M19.7344 16.9688V0H18.3281V16.9688H16.9219V21.1875H18.3281V24H19.7344V21.1875H21.1406V16.9688H19.7344Z" fill="#45B618"/>
+                <path d="M14.1094 0H12.7031V10.4062H11.2969V14.625H12.7031V24H14.1094V14.625H15.5156V10.4062H14.1094V0Z" fill="#45B618"/>
+                <path d="M8.4375 0H7.03125V2.51494H5.625V6.73369H7.03125V24H8.4375V6.73369H9.84375V2.51494H8.4375V0Z" fill="#45B618"/>
+            </svg>
+
                 Select Category
                 { isActive ? (
                     <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">

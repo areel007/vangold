@@ -1,0 +1,173 @@
+#profile-alljobs,
+#job-descrip,
+#my-job .bg-color {
+  background-color: #f9f9f9;
+}
+#profile-alljobs,
+#my-job .head {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #333333;
+}
+#profile-alljobs .card-bg {
+  background-color: #f2f2f2;
+  padding: 2rem;
+  border: transparent;
+  margin-bottom: 2rem;
+}
+#profile-alljobs .card-pic {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+}
+#profile-alljobs .card-icon {
+  color: #4f4f4f80;
+  font-size: 2rem;
+}
+#profile-alljobs .job-time {
+  background-color: #e9242433;
+  color: #e92424;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#profile-alljobs .job-level {
+  background-color: #45b61833;
+  color: #45b618;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#profile-alljobs .job-price {
+  background-color: #083eb133;
+  color: #083eb1;
+  font-size: 16px;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  border-radius: 3px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#profile-alljobs .paginat {
+  font-size: 14px;
+  margin-top: 3rem;
+}
+#profile-alljobs .text-16px {
+  font-size: 16px;
+  font-family: var(--mulish);
+  color: #808080;
+}
+#profile-alljobs .text-18px {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--mulish);
+  color: #4f4f4f;
+}
+#job-descrip .bg-color1 {
+  background-color: #f2f2f2;
+}
+#job-descrip .job-logo {
+  background-color: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  margin-top: -4.5rem;
+  margin-left: 2.5rem;
+}
+#job-descrip .head {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  color: #333333;
+  margin-top: 2.5rem;
+}
+#job-descrip .head2 {
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  color: #333333;
+  margin: 4rem 0 1.5rem 0;
+}
+#job-descrip .job-icon {
+  font-size: 2rem;
+  color: #4f4f4f;
+}
+#job-descrip .job-btn {
+  border: 1px solid #00000033;
+  padding: 0.5rem 1rem;
+}
+#job-descrip .row-border {
+  border: 1px solid #00000033;
+  border-radius: 11px;
+}
+#job-descrip .border-right {
+  border-right: 1px solid #00000033;
+}
+#job-descrip .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+}
+#job-descrip .text-16px-1 {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  color: #4f4f4f;
+}
+#my-job .my-job-card {
+  border: transparent;
+  padding: 2rem;
+  border-radius: 10px;
+}
+#my-job .my-job-card-1 {
+  border: transparent;
+  padding: 2rem 0 5rem 0;
+  border-radius: 10px;
+}
+#my-job .fb {
+  font-size: 2rem;
+  color: #3c5a9a;
+}
+#my-job .twit {
+  font-size: 2rem;
+  color: #1da1f2;
+  margin: 0 1rem;
+}
+#my-job .btn-1 {
+  background-color: var(--primary);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  border: transparent;
+  padding: 0.7rem 2rem;
+  margin-right: 1rem;
+}
+#my-job .btn-2 {
+  background-color: #45b6184d;
+  color: #45b618;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  border: transparent;
+  padding: 0.7rem 2rem;
+  margin-right: 2.5rem;
+}
+#my-job .noti {
+  font-size: 8px;
+  color: #ffffff;
+  background-color: #da1b1b;
+  padding: 1px 4px;
+  border-radius: 50px;
+}
+#my-job .text-14px {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#my-job .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--inter);
+}

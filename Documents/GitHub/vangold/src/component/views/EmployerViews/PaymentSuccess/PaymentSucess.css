@@ -1,0 +1,23 @@
+#payment-success {
+  margin: 6rem 0 15rem 0;
+}
+#payment-success h1 {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  margin: 2rem 0;
+}
+#payment-success .text-16px {
+  font-size: 16px;
+  padding: 0 4rem;
+  margin-bottom: 3rem;
+  font-weight: var(--font-weight-semibold);
+}
+#payment-success .submit-btn {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: #fff;
+  line-height: 16.44px;
+  background-color: var(--primary);
+  padding: 1rem 7rem;
+  text-transform: none;
+}

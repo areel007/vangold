@@ -6,14 +6,54 @@
   position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  gap: 80px;
+}
+.banner__text {
+  width: 100%;
+}
+.banner-image__container {
+  width: 100%;
+  padding-top: 10px;
 }
 .banner__image {
-  width: 80rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.banner__image img {
-  width: 100%;
-  object-fit: cover;
+.banner__image .bigG {
+  max-width: 400px;
+  height: 400px;
+  position: relative;
+  top: -80px;
+}
+.banner__imag__top__left {
+  width: 280px;
+  height: 72px;
+  position: relative;
+  z-index: 1;
+  left: -44%;
+  top: 18px;
+  background: #ffffff;
+  box-shadow: -2px 4px 45px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.banner__imag__bottom__right {
+  width: 221px;
+  height: 72px;
+  background: #ffffff;
+  box-shadow: -2px 4px 45px rgba(0, 0, 0, 0.13);
+  border-radius: 8px;
+  position: relative;
+  top: -134px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
 }
 .bannerTwo__image {
   width: 80rem;
@@ -34,9 +74,10 @@
   color: #18191f;
   width: 63.9rem;
   margin-bottom: 1.6rem;
+  width: 450px;
 }
-.banner2__text__title{
-    color: var(--primary);
+.banner2__text__title {
+  color: var(--primary);
 }
 .banner__text__subtitle {
   font-family: var(--inter);
@@ -70,6 +111,22 @@
   background-color: var(--white);
   border: 1px solid var(--primary);
   color: var(--primary);
+}
+.top-left-banner-small-img {
+  width: 57px;
+  height: 24px;
+}
+.banner__image:hover .banner__imag__top__left .imgOne{
+  transform: scale(1.1);
+  transition: all 0.8s ease-in-out;
+}
+.banner__image:hover .banner__imag__bottom__right .bell{
+  transform: scale(1.1);
+  transition: all 0.8s ease-in-out;
+}
+.banner__image:hover .banner__imag__top__left .top-left-banner-small-img{
+  transform: scale(1.1);
+  transition: all 0.8s ease-in-out;
 }
 /* .banner__text__button {
     padding: 1.2rem 3.2rem;

@@ -1,11 +1,12 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
-import icon1 from "../../../assets/images/svgicons/Path-4.svg";
-import icon2 from "../../../assets/images/svgicons/Path-2.svg";
-import icon3 from "../../../assets/images/svgicons/Path-6.svg";
-import icon4 from "../../../assets/images/svgicons/Path-5.svg";
-import icon5 from "../../../assets/images/svgicons/Path.svg";
-import icon6 from "../../../assets/images/svgicons/Path-3.svg";
+import Facebook from "../../../assets/images/svgicons/Path-4.svg";
+import Twitter from "../../../assets/images/svgicons/Path-2.svg";
+import Telegram from "../../../assets/images/svgicons/Path-6.svg";
+import Linkedln from "../../../assets/images/svgicons/Path-5.svg";
+import Instagram from "../../../assets/images/svgicons/Path.svg";
+import Youtube from "../../../assets/images/svgicons/Path-3.svg";
+import footerLogo from "../../../assets/images/logo.png";
 
 const Footer = () => {
   return (
@@ -13,67 +14,76 @@ const Footer = () => {
       <div className="container">
         <div className="footer__inner">
           <div className="logo-container">
-            <div className="logo"></div>
+            <div className="footer-logo">
+              <img src={footerLogo} alt="footer logo" />
+              <h2>Vangold</h2>
+            </div>
+            <div className="footer__text">
+              <p>We match you with top professionals in whatever
+                  field you requiremto help you scale your business and increase revenue for you. </p>
+            </div>
           </div>
           <div className="footer__links">
-            <h2>Product</h2>
+            <h2>RESOURCE</h2>
             <ul>
               <li>
-                <Link to="/over">Overview</Link>
+                <Link to="/over">Terms & Conditions</Link>
               </li>
               <li>
-                <Link to="/over">Features</Link> &nbsp;<Link style={{color: "#2EC5CE"}} to=""><i>New</i></Link>
+                <Link to="/over">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/over">Tutorials</Link>
+                <Link to="/over">Contact Us</Link>
               </li>
               <li>
-                <Link to="/over">Pricing</Link>
-              </li>
-              <li>
-                <Link to="/over">Releases</Link>
+                <Link to="/over">News</Link>
               </li>
             </ul>
           </div>
           <div className="footer__links">
-            <h2>Company</h2>
+            <h2>SUPPORT</h2>
             <ul>
               <li>
-                <Link to="/over">About</Link>
+                <Link to="/over">FAQ’s</Link>
               </li>
               <li>
-                <Link to="/over">Press</Link>
+                <Link to="/over">Proof of Payment</Link>
               </li>
               <li>
-                <Link to="/over">Careers</Link>
+                <Link to="/over">Feedback</Link>
               </li>
               <li>
-                <Link to="/over">Contact</Link>
-              </li>
-              <li>
-                <Link to="/over">Partners</Link>
+                <Link to="/over">Home</Link>
               </li>
             </ul>
           </div>
-          <div className="footer__links">
-            <h2>Support</h2>
-            <ul>
-              <li>
-                <Link to="/over">Help Center</Link>
-              </li>
-              <li>
-                <Link to="terms-and-conditions">Terms of service</Link>
-              </li>
-              <li>
-                <Link to="/over">Legal</Link>
-              </li>
-              <li>
-                <Link to="/privacypolicy">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/over">Status</Link>
-              </li>
-            </ul>
+          <div className="footer__contacts">
+            <h2>CONTACTS</h2>
+            <p>Address: Park Avenue, 5th Street, Manhattan
+              NYC. <br/>Phones: 987-7654-3210   987-7654-3210<br/>
+              Email: Info@website.com</p>
+              <div className="footer__contacts-icons">
+              <Link to="/over">
+                <div className="icon_box">
+                  <img src={Twitter} alt="Twitter" />
+                </div>
+              </Link>
+              <Link to="/over">
+                <div className="icon_box">
+                  <img src={Instagram} alt="Instagram" />
+                </div>
+              </Link>
+              <Link to="/over">
+                <div className="icon_box">
+                  <img src={Linkedln} alt="Linkedln" />
+                </div>
+              </Link>
+              <Link to="/over">
+                <div className="icon_box">
+                  <img src={Youtube} alt="Youtube" />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -84,36 +94,8 @@ const Footer = () => {
               <p>© 2020 Vangold Technologies. All rights reserved</p>
             </div>
             <div className="right_bottom_f">
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon1} alt="icon1" />
-                </div>
-              </Link>
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon2} alt="icon2" />
-                </div>
-              </Link>
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon3} alt="icon3" />
-                </div>
-              </Link>
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon4} alt="icon4" />
-                </div>
-              </Link>
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon5} alt="icon5" />
-                </div>
-              </Link>
-              <Link to="/over">
-                <div className="icon_box">
-                  <img src={icon6} alt="icon6" />
-                </div>
-              </Link>
+              <a href="">Privacy Policy</a>
+              <a href="">Terms of Use</a>
             </div>
           </div>
         </div>

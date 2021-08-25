@@ -1,0 +1,110 @@
+
+.br-select-input-component {
+  width: 100%;
+  user-select: none;
+}
+.br-select-category-component {
+  width: 740px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #808080;
+  margin-bottom: 30px;
+
+}
+.br-select-category-component.lang-select-component{
+  width: 350px;
+}
+.b-category-dropdown-header {
+  margin-bottom: 8px;
+}
+.b-dropdown {
+  width: 350px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #808080;
+}
+.b-category-dropdown {
+  width: 740px;
+}
+.b-dropdown-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.b-dropdown-body {
+  width: 350px;
+  padding: 5px;
+  display: none;
+  border-radius: 8px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  margin-top: 8px;
+
+}
+.b-category-dropdown-body {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 740px;
+  height: 300px;
+  overflow: auto;
+  display: none;
+  border-radius: 8px;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  text-align: center;
+}
+.b-location-dropdown-body{
+  height: 300px;
+  overflow: auto;
+}
+.b-language-dropdown-body{
+  height: 100%;
+  overflow: auto;
+}
+.b-dropdown-body.open {
+  display: block;
+}
+.b-category-dropdown-body.open {
+  display: block;
+}
+
+.b-dropdown-item {
+  padding: 10px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 20px;
+  color: var(--secondary);
+}
+.b-category-dropdown-item {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.b-dropdown-item:hover {
+  cursor: pointer;
+  background: var(--primary);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+}

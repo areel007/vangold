@@ -1,5 +1,5 @@
 footer {
-  background-color: #45b618;
+  background-color: #1b2231;
   width: 100%;
 }
 
@@ -14,7 +14,6 @@ footer {
     padding-top: 20%;
     padding-bottom: 20%;
   }
-
 }
 @media screen and (max-width: 767px) {
   .footer__inner {
@@ -29,17 +28,39 @@ footer {
   }
 }
 .logo-container {
-  width: 100%;
+  width: 385px;
 }
-.logo-container .logo {
-  width: 10rem;
+.logo-container .footer-logo {
+  width: 100%;
   height: 4rem;
-  background-color: var(--white);
-  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.logo-container .footer-logo img {
+  width: 28px;
+  height: 26.11px;
+}
+.logo-container .footer-logo h2 {
   font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--white);
+}
+.logo-container .footer__text {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: #eeeff4;
 }
 .footer__inner .footer__links {
-  width: 400px;
+  width: 160px;
 }
 .footer__inner .footer__links h2 {
   font-size: var(--fs-20);
@@ -47,21 +68,20 @@ footer {
   font-weight: var(--font-weight-medium);
   font-family: var(--inter);
   line-height: 30px;
-  font-feature-settings: "salt" on, "liga" off;
   color: #f4f5f7;
+  margin-bottom: 32px;
 }
 .footer__inner .footer__links ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: var(--fs-20);
 }
 .footer__inner .footer__links ul li a {
   font-size: var(--fs-16);
   color: var(--white);
   font-family: var(--inter);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--font-weight-normal);
   line-height: 26px;
   font-feature-settings: "salt" on, "liga" off;
   color: #eeeff4;
@@ -69,15 +89,37 @@ footer {
 .footer__inner .footer__links ul li a:hover {
   text-decoration: underline;
 }
+.footer__contacts {
+  width: 347px;
+}
+.footer__contacts h2{
+  font-size: var(--fs-20);
+  color: var(--white);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--inter);
+  line-height: 30px;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #f4f5f7;
+  margin-bottom: 32px;
+}
+.footer__contacts p {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: #eeeff4;
+}
 .bottomfooter {
-  background-color: #2d7c0e;
-  padding-top: var(--fs-30);
-  padding-bottom: var(--fs-10);
+  background-color: #1b2231;
 }
 .bottomfooter__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 1px solid #ffffff;
+  padding-top: 25px;
+  padding-bottom: 23px;
 }
 @media screen and (max-width: 767px) {
   .bottomfooter__inner {
@@ -91,21 +133,36 @@ footer {
 .left_bottom_f p {
   font-family: var(--inter);
   font-style: normal;
-  font-weight: normal;
+  font-weight: var(--font-weight-normal);
   font-size: var(--fs-14);
   line-height: 24px;
   font-feature-settings: "salt" on, "liga" off;
   color: #d9dbe1;
 }
 .right_bottom_f {
-  padding-bottom: 26px;
   display: flex;
   gap: var(--fs-10);
 }
+.right_bottom_f a {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: #eeeff4;
+}
+.right_bottom_f a:hover {
+  text-decoration: underline;
+}
+.footer__contacts-icons{
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
 .icon_box {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.267);
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.267);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -114,11 +171,12 @@ footer {
   transition: 0.3s ease-in-out;
 }
 .icon_box:hover {
-  background-color: rgba(255, 255, 255, 0.267);
+  background-color: var(--primary);
+  border-radius: 0;
 }
 .icon_box img {
-  width: var(--fs-20);
-  height: var(--fs-20);
+  width: 12px;
+  height: 12px;
 }
 .icon_box.img {
   cursor: pointer;

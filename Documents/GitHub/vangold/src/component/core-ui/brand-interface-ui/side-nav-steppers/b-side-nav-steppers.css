@@ -1,0 +1,13 @@
+.side-nav-steppers {
+    background: rgba(217, 218, 215, 0.2);
+    padding: 2.4rem;
+}
+.steppers__title {
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-wieght-semibold);
+    font-size: 18px;
+    line-height: 21px;
+    color: #141414;
+    margin-bottom: 2.4rem;
+}
