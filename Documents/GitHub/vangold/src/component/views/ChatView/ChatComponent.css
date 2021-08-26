@@ -1,39 +1,39 @@
-#profile-dash .bg-color {
+#chat-component .bg-color {
   background-color: #f9f9f9;
   padding: 4rem 3rem;
 }
-#profile-dash h1 {
+#chat-component h1 {
   font-size: 24px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
   color: #000000;
 }
-#profile-dash h2 {
+#chat-component h2 {
   font-size: 24px;
   font-weight: var(--font-weight-medium);
   font-family: var(--mulish);
   color: #fff;
 }
-#profile-dash .dash-card {
+#chat-component .dash-card {
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 2rem;
 }
-#profile-dash .card-btn {
+#chat-component .card-btn {
   border-radius: 8px;
   padding: 1rem;
 }
-#profile-dash .bg-percent {
+#chat-component .bg-percent {
   border-radius: 12px;
   background: #ffffff4d;
   padding: 0.5rem 1rem 0 1rem;
 }
-#profile-dash .user {
+#chat-component .user {
   background: #3751ff33;
   padding: 0.5rem;
   border-radius: 2px;
 }
-#profile-dash .employee-btn {
+#chat-component .employee-btn {
   background: #3751ff33;
   color: #3751ff;
   padding: 0.7rem;
@@ -41,23 +41,23 @@
   border: transparent;
   font-size: 12px;
 }
-#profile-dash .text-12px {
+#chat-component .text-12px {
   font-size: 12px;
   font-weight: var(--font-weight-medium);
 }
-#profile-dash .text-14px {
+#chat-component .text-14px {
   font-size: 14px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
   color: #141414b2;
 }
-#profile-dash .text-16px {
+#chat-component .text-16px {
   font-size: 16px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
   color: #141414b2;
 }
-#profile-dash .text-18px {
+#chat-component .text-18px {
   font-size: 18px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: 350px) {
-  #profile-dash .text-20px {
+  #chat-component .text-20px {
     font-size: 12px;
   }
 }

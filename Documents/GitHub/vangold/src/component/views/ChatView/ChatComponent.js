@@ -38,7 +38,7 @@ const otherUsersData = [
 const ChatComponent = () => {
   
     return (
-        <section id="profile-dash" className="my-3 py-3">
+        <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className="mx-auto mt-5">
@@ -90,19 +90,8 @@ const ChatComponent = () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </div>
     );
 }
 
 export default ChatComponent;
-
-
-const userData = () => {
-  
-    return (
-        <>
-
-        </>
-
-    )
-}

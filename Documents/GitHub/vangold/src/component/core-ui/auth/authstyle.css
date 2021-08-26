@@ -1,0 +1,206 @@
+
+.auth__form {
+    width: 100%;
+  }
+  .form__title {
+    margin-bottom: 32px;
+  }
+  .form__title h1 {
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-36);
+    line-height: 42px;
+    color: #141414;
+  }
+  .form__title p {
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: 500;
+    font-size: var(--fs-14);
+    line-height: 16px;
+    color: #767676;
+    margin-top: 12px;
+  }
+  .form-input__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .form__-control label {
+    font-family: var(--raleway);
+    font-size: var(--fs-14);
+    font-style: normal;
+    font-weight: var(--font-wieght-semibold);
+    line-height: 16px;
+    color: var(--secondary);
+    margin-bottom: 4px;
+  }
+  .form__-control input {
+    width: 452px;
+    height: 48px;
+    background: rgba(217, 218, 215, 0.5);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+  .form__-terms {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  .auth-checkbox{
+      display: flex;
+  }
+  .auth-checkbox-label {
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-wieght-semibold);
+    font-size: var(--fs-14);
+    line-height: 16px;
+    color: #767676;
+  }
+  .forgot-pwrd a {
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-wieght-semibold);
+    font-size: var(--fs-14);
+    line-height: 16px;
+    color: var(--primary);
+    position: relative;
+    top: 9px;
+  }
+  .forgot-pwrd a:hover {
+    text-decoration: underline;
+  }
+  .submit__btn {
+    width: 452px;
+    height: 48px;
+    background: var(--primary);
+    border-radius: 4px;
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--fs-14);
+    line-height: 16px;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .or {
+    margin-top: 40.5px;
+    margin-bottom: 40.5px;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 5;
+  }
+  .or:before {
+    border-top: 1px solid #767676;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+  .or p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -1.3rem;
+    font-family: var(--raleway);
+    font-weight: var(--font-wieght-semibold);
+    font-size: var(--fs-14);
+    line-height: 1.644rem;
+    color: #767676;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    z-index: 1;
+    background-color: var(--white);
+    padding: 0.5rem 1.6rem;
+  }
+  .auth-icon-btns {
+    margin-top: 80.5px;
+  }
+  
+  .auth-icon-btns button {
+    width: 100%;
+    margin-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.8rem;
+    padding: 1.6rem;
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .auth-icon-btns button svg {
+    margin-right: 2rem;
+    
+  }
+  /* .auth-icon-btns button .google-auth-icon{
+      position: relative;
+      left: -90px;
+  } */
+  .auth-icon-btns button span {
+    font-size: var(--fs-14);
+    color: #000;
+    font-family: var(--raleway);
+    font-weight: var(--font-wieght-bold);
+  }
+  
+  /*SIGN UP PAGE*/
+  
+  .sign-up-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-top: 32px;
+  }
+  .sign-up-options p {
+    text-align: center;
+    font-weight: var(--font-wieght-semibold);
+    font-family: var(--raleway);
+    font-size: var(--fs-16);
+    color: #333;
+    margin-bottom: 0.4rem;
+  }
+  .option-buttons {
+    display: flex;
+  }
+  .option-buttons button {
+    width: 175px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(217, 218, 215, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    box-sizing: border-box;
+    border-radius: 0px 4px 4px 0px;
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-wieght-semibold);
+    font-size: var(--fs-14);
+    line-height: 16px;
+    color: #4f4f4f;
+    outline: none;
+  }
+  .reset-btn{
+    width: 187px;
+    margin-top: 40px;
+  }
