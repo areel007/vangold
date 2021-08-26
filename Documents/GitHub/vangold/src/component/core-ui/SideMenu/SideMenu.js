@@ -15,6 +15,7 @@ import chat from "../../../assets/images/sideMenu/chat.png";
 import person from "../../../assets/images/sideMenu/person.png";
 import signout from "../../../assets/images/sideMenu/signout.png";
 import { useHistory, useLocation } from "react-router-dom";
+import LogoutModal from "../LogoutModal/LogoutModal";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#45B618',
         borderLeft: '6px solid #45B618',
     },
-    lists:{
+    lists: {
         height: "100vh"
     },
-    signout:{
+    signout: {
         position: "absolute",
         bottom: 0
     }
@@ -49,6 +50,7 @@ const SideMenu = () => {
     const [talentList, setTalentList] = useState(false);
     const history = useHistory();
     const location = useLocation();
+    const [modalShow, setModalShow] = useState(false);
 
     return (
         <div className={classes.root}>
@@ -211,9 +213,10 @@ const SideMenu = () => {
                     />
                 </ListItem>
                 <ListItem
-                className={classes.signout}
+                    className={classes.signout}
                     button
                     classes={{ root: classes.root, button: classes.button }}
+                    onClick={() => setModalShow(true)}
                 >
                     <ListItemIcon>
                         <img src={signout} alt="Sign Out" />
@@ -224,6 +227,10 @@ const SideMenu = () => {
                     />
                 </ListItem>
             </List>
+            {/* <LogoutModal
+                show={modalShow}
+                onHide={() => setModalShow(false)} /> */}
+                {/* <LogoutModal /> */}
         </div>
     );
 };

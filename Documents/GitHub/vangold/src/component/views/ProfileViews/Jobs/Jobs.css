@@ -1,10 +1,9 @@
-#profile-alljobs,
-#job-descrip,
-#my-job .bg-color {
+.bg-color-w {
   background-color: #f9f9f9;
 }
 #profile-alljobs,
-#my-job .head {
+#my-job,
+#my-job-projects .head {
   font-size: 24px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
@@ -161,7 +160,8 @@
   padding: 1px 4px;
   border-radius: 50px;
 }
-#my-job .text-14px {
+#my-job,
+#my-job-projects .text-14px {
   font-size: 14px;
   font-weight: var(--font-weight-bold);
   font-family: var(--mulish);
@@ -170,4 +170,59 @@
   font-size: 16px;
   font-weight: var(--font-weight-medium);
   font-family: var(--inter);
+}
+#my-job-projects .btn-pro-job {
+  border: 1px solid #80808080;
+  margin-right: 1rem;
+  color: #808080;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#my-job-projects .btn-pro-job-1 {
+  border: transparent;
+  margin-right: 1rem;
+  color: #45b618;
+  background-color: #45b6184d;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#my-job-projects .menu-icon {
+  padding: 0.35rem 0.5rem 0.5rem 0.3rem;
+  background-color: #fff;
+  margin-left: 0.5rem;
+}
+#my-job-projects h2 {
+  font-size: 18px;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--mulish);
+  color: #333333;
+}
+#my-job-projects .project-card {
+  border: transparent;
+  border-radius: 8px;
+  padding: 1rem;
+}
+#my-job-projects .project-status {
+  font-size: 14px;
+  color: #14e273;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+}
+#my-job-projects .status-bg {
+  background-color: #14e27333;
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+}
+#my-job-projects .text-12px {
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #808080;
+}
+#my-job-projects .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
 }

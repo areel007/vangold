@@ -12,7 +12,6 @@ import {
     withStyles,
 } from "@material-ui/core";
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
-import { Button, Form } from "react-bootstrap";
 import "./SideCheckBoxes.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -41,18 +40,15 @@ const GreenCheckbox = withStyles({
     checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-const SideCheckBoxes = () => {
+const SideCheckBoxes1 = () => {
     const classes = useStyles();
-    const [value, setValue] = useState('')
     const [checkValue, setCheckValue] = useState('')
-    const [employementTypes, setEmployementTypes] = useState(true);
+    const [skills, setSkills] = useState(true);
+    const [tools, setTools] = useState(true);
     const [experience, setExperience] = useState(true);
+    const [teamTypes, setTeamTypes] = useState(true);
     const [salaryRange, setSalaryRange] = useState(true);
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        setValue(e.target.value)
-    }
     const handleChange = (e) => {
         setCheckValue(e.target.value)
         console.log(checkValue);
@@ -60,37 +56,107 @@ const SideCheckBoxes = () => {
 
     return (
         <>
-            <div className="sidecheck-bg-1">
-                <h1 className="sidecheck-head">Create Job Alert</h1>
-                <p style={{ fontSize: "14px" }}>Create a job alert now and never
-                    miss a job.</p>
-                <Form onSubmit={submitHandler}>
-                    <Form.Group className="mt-5 mb-4">
-                        <Form.Control required size='lg' placeholder="Enter job keyword" />
-                    </Form.Group>
-                    <Button type="submit" className="sidecheck-btn">Create Job Alert</Button>
-                </Form>
-            </div>
 
             {/* ----------------------------------CHECK BOXES STARTS FROM HERE------------------------------ */}
             <div className={classes.root}>
                 <List component="nav">
 
-                    {/* ---------------------------Type of Employment check boxes---------------------- */}
+                    {/* ---------------------------Skills check boxes---------------------- */}
                     <ListItem
                         button
                         onClick={() => {
-                            setEmployementTypes(!employementTypes);
+                            setSkills(!skills);
                         }}
                     >
                         <ListItemText
                             classes={{ primary: classes.listItemText }}
-                            primary="Type of Employment"
+                            primary="Skills"
                         />
-                        {employementTypes ? <MdExpandLess /> : <MdExpandMore />}
+                        {skills ? <MdExpandLess /> : <MdExpandMore />}
                     </ListItem>
 
-                    <Collapse in={employementTypes} timeout="auto" unmountOnExit>
+                    <Collapse in={skills} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem>
+                                <FormControl component="fieldset" className={classes.formControl}>
+                                    <FormGroup>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="Designer" onChange={handleChange} />}
+                                                label="Designer"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="Visual Design" onChange={handleChange} />}
+                                                label="Visual Design"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="UI/UX Designer" onChange={handleChange} />}
+                                                label="UI/UX Designer"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="Illustrations" onChange={handleChange} />}
+                                                label="Illustrations"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="3D Artists" onChange={handleChange} />}
+                                                label="3D Artists"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="3D Animation" onChange={handleChange} />}
+                                                label="3D Animation"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="2D Animation" onChange={handleChange} />}
+                                                label="2D Animation"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                    </FormGroup>
+                                </FormControl>
+                            </ListItem>
+                        </List>
+                    </Collapse>
+
+                    {/* ---------------------------Tools check boxes---------------------- */}
+                    <ListItem
+                        button
+                        onClick={() => {
+                            setTools(!tools);
+                        }}
+                    >
+                        <ListItemText
+                            classes={{ primary: classes.listItemText }}
+                            primary="Tools"
+                        />
+                        {tools ? <MdExpandLess /> : <MdExpandMore />}
+                    </ListItem>
+
+                    <Collapse in={tools} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                             <ListItem>
                                 <FormControl component="fieldset" className={classes.formControl}>
@@ -190,7 +256,47 @@ const SideCheckBoxes = () => {
                         </List>
                     </Collapse>
 
-                    {/* ---------------------------Salary Range check boxes---------------------- */}
+                    {/* ---------------------------Team Types check boxes---------------------- */}
+                    <ListItem
+                        button
+                        onClick={() => {
+                            setTeamTypes(!teamTypes);
+                        }}
+                    >
+                        <ListItemText
+                            classes={{ primary: classes.listItemText }}
+                            primary="Team Types"
+                        />
+                        {teamTypes ? <MdExpandLess /> : <MdExpandMore />}
+                    </ListItem>
+
+                    <Collapse in={teamTypes} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem>
+                                <FormControl component="fieldset" className={classes.formControl}>
+                                    <FormGroup>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="Single Team" onChange={handleChange} />}
+                                                label="Single Team"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                        <div className='d-flex justify-content-between mb-4'>
+                                            <FormControlLabel
+                                                classes={{ label: classes.label }}
+                                                control={<GreenCheckbox value="Multi Team" onChange={handleChange} />}
+                                                label="Multi Team"
+                                            />
+                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                        </div>
+                                    </FormGroup>
+                                </FormControl>
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    {/* ---------------------------Salary Range boxes---------------------- */}
                     <ListItem
                         button
                         onClick={() => {
@@ -245,4 +351,4 @@ const SideCheckBoxes = () => {
     );
 };
 
-export default SideCheckBoxes;
+export default SideCheckBoxes1;
