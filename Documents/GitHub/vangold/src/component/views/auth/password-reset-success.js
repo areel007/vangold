@@ -1,6 +1,6 @@
 import "./password-reset-success.css"
 import {Link} from "react-router-dom";
-import SucessIcon from '../../assets/images/svgicons/success.svg'
+import SucessIcon from '../../../assets/images/svgicons/success.svg'
 
 const PasswordResetSuccess = () => {
     return (

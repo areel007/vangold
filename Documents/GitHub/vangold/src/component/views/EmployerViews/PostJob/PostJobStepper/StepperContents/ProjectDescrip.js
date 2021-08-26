@@ -5,7 +5,8 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescrip }) => {
     const [value, setValue] = useState('');
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
+        e.preventDefault();
         setPostJobData({ ...postJobData, projectDescrip: value });
         handleNext();
     }
