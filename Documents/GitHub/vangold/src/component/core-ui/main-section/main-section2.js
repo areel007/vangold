@@ -1,6 +1,7 @@
 import React from "react";
 import "./main-section2.css";
 import AboutUsCard from "../card/talent-card/about-us-card";
+import HomePageCards from "../card/homepage-card";
 import BrownsingIcon from "../../../assets/images/svgicons/browsing.svg";
 import PostIcon from "../../../assets/images/svgicons/Post.svg";
 import FindIcon from "../../../assets/images/svgicons/find.svg";
@@ -98,10 +99,11 @@ const MainSectionTwo = (props) => {
           </div>
         </div>
         <div className="our-top-freelancers">
-            <div className="container">
               <div className="inner-our-top-freelancers">
-
-              </div>
+                <div className="container">
+                  <h2>Our Top Freelancers</h2>
+                </div>
+                <HomePageCards cardDetails={props.cardDetails} />
             </div>
         </div>
       </div>

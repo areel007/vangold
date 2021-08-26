@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "../sign-up-form/sign-up-form.css";
-
 const BannerTwoModal = () => {
   const [passwordShown, setPasswordShown] = useState(false);
 
