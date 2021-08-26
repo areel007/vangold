@@ -11,9 +11,10 @@ import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
 import { useState } from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
-import ResetPassword from "./component/views/auth/reset-password/reset-password";
+import ResetPassword from "./component/views/auth/reset-password";
 import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
+import VerifyEmail from './component/views/verify-email';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
 import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
@@ -23,6 +24,7 @@ import PaymentSuccess from './component/views/EmployerViews/PaymentSuccess/Payme
 import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDashboard';
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
+<<<<<<< HEAD
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip'
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
@@ -30,6 +32,15 @@ import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
 import ChatComponent from './component/views/ChatView/ChatComponent';
 import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfile/FreelancerProfile';
 import FreelancerProfileEdit from './component/views/FreelancerViews/FreelancerProfileEdit/FreelancerProfileEdit';
+=======
+import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
+import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
+import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
+import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
+
+// import DashboardHeader from './component/core-ui/header/dashboard-header';
+import ChatComponent from './component/views/ChatView/ChatComponent';
+>>>>>>> dfd4375eb772e4fd8235033fd52ab83d18bef726
 
 function App() {
 
@@ -115,6 +126,9 @@ function App() {
                     <Route path="/passwordresetsuccessful">
                         <PasswordResetSuccess />
                     </Route>
+                    <Route path="/VerifyEmail">
+                        <VerifyEmail />
+                    </Route>
                     <Route path="/terms-and-conditions">
                         <TermsAndConditions />
                     </Route>
@@ -175,11 +189,10 @@ function App() {
                     <Route path="/freelancer-profile-edit">
                         <FreelancerProfileEdit />
                     </Route>
-
                 </Switch>
                 <Footer />
             </div>
-        </Router>
+        </Router >
     );
 };
 

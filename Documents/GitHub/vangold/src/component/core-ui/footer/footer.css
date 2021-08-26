@@ -8,6 +8,7 @@ footer {
   justify-content: space-between;
   padding-top: 8%;
   padding-bottom: 8%;
+  gap: 20px;
 }
 @media screen and (max-width: 450px) {
   .footer__inner {
@@ -28,7 +29,7 @@ footer {
   }
 }
 .logo-container {
-  width: 385px;
+  max-width: 385px;
 }
 .logo-container .footer-logo {
   width: 100%;
