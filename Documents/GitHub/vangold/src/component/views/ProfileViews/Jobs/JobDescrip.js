@@ -28,10 +28,10 @@ const JobDescrip = () => {
                     <Col xs={10} lg={2} className="mx-auto mt-4">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color py-5">
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={10} lg={8} className="mx-auto bg-color p-5">
+                    <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
                         <div className="bg-color1">
                             <div>
                                 <img src={cover} alt="cover" className='img-fluid' />

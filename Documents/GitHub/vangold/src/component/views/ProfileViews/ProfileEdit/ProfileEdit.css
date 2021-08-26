@@ -1,0 +1,22 @@
+#profile-edit h1 {
+  font-size: 36px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 4rem;
+}
+#profile-edit .submit-btn {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--mulish);
+  color: #fff;
+  line-height: 22.59px;
+  background-color: var(--primary);
+  padding: 1rem 2.5rem;
+  text-transform: none;
+}
+#profile-edit .form-control:not(active) {
+  background-color: #e9eae8;
+}
+#profile-edit .text-16px {
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+}

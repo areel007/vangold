@@ -24,6 +24,10 @@ import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDa
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
+import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
+import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
+import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
+
 // import DashboardHeader from './component/core-ui/header/dashboard-header';
 import ChatComponent from './component/views/ChatView/ChatComponent';
 
@@ -152,7 +156,13 @@ function App() {
                     </Route>
                     <Route path="/profile/jobs/my-job">
                         <ProfileMyJob />
-                    </Route> 
+                    </Route>
+                    <Route path="/profile/edit">
+                        <ProfileEdit />
+                    </Route>
+                    <Route path="/profile/talent/find-talent">
+                        <FindTalent />
+                    </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
                     </Route> 
