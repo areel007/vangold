@@ -1,0 +1,113 @@
+<<<<<<< HEAD
+=======
+.sign-in__form{
+  width: 452px;
+}
+.form__title{
+  margin-bottom: 32px;
+}
+.form__title p{
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: #767676;
+  margin-top: 12px;
+}
+.sign-in__form .form__control {
+  width: 452px;
+  margin-bottom: 24px;
+}
+.sign-in__form .form__control .input__box input {
+  width: 452px;
+  height: 48px;
+}
+.login-terms__forgot-pwrd {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.login__terms{
+  width: 100%;
+}
+.login__terms label {
+  font-family: var(--raleway);
+  font-size: var(--fs-14);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  line-height: 16px;
+  color: #767676;
+}
+
+.login__terms input {
+  margin-right: 0.6rem;
+}
+.login-terms__forgot-pwrd .forgot-pwrd {
+  width: 100%;
+  text-align: right;
+  padding-top: 8px;
+}
+.login-terms__forgot-pwrd .forgot-pwrd a {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--primary);
+}
+.login__account__button {
+  width: 452px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+.login-or {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 5;
+}
+.login-or:before {
+  border-top: 1px solid #767676;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+.login-or p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -1.3rem;
+  font-family: var(--raleway);
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-14);
+  line-height: 1.644rem;
+  color: #767676;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  z-index: 1;
+  background-color: var(--white);
+  padding: 0.5rem 1.6rem;
+}
+.login-icon-btns{
+  margin-top: 80px;
+}
+>>>>>>> f09faef320a89caca9168bddbe445a73f64a2f64
