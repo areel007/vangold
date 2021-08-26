@@ -11,6 +11,7 @@ import RequestVerfication1 from "./SettingContent/RequestVerfication1";
 import Jobs from "./SettingContent/Jobs";
 import ResetPassword1 from "./SettingContent/ResetPassword1";
 import Payment from "./SettingContent/Payment";
+import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,10 +46,13 @@ const EmployerSetting = () => {
     };
 
     return (
-        <section id="employer-setting" className='py-5 my-5'>
-            <Container>
+        <section id="employer-setting" className='py-3 my-5'>
+            <Container fluid>
                 <Row>
-                    <Col xs={10} md={4} className='mx-auto'>
+                    <Col xs={10} lg={2} className='mx-auto'>
+                        <SideMenu />
+                    </Col>
+                    <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>
                         <div className={classes.root}>
                             <List component="nav">
                                 <ListItem
@@ -109,7 +113,7 @@ const EmployerSetting = () => {
                             </List>
                         </div>
                     </Col>
-                    <Col xs={10} md={8} className='mx-auto mt-md-0 mt-5'>
+                    <Col xs={10} lg={7} className='mx-auto mt-md-0 mt-5 bg-color-w p-4'>
                         {
                             component === 'payment' ? <Payment /> : component === 'resetPassword' ? <ResetPassword1 /> : component === 'notification' ? <Notification /> : component === 'requestVerification' ? <RequestVerfication /> : component === 'jobs' ? <Jobs /> : null
                         }

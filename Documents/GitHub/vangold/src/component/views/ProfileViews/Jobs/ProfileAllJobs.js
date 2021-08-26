@@ -39,16 +39,16 @@ const jobs = [
 ];
 const ProfileAllJobs = () => {
     return (
-        <section id="profile-alljobs" className="my-5 py-3 bg-color">
+        <section id="profile-alljobs" className="my-5 py-3">
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className="mx-auto mt-4">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color py-5">
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={10} lg={8} className="mx-auto bg-color p-5">
+                    <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
                         <Row>
                             {jobs.map(job => (
                                 <Col xs={10} lg={12} className="mx-auto">

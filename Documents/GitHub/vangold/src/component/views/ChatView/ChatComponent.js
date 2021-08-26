@@ -5,7 +5,27 @@ import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
 import './ChatComponent.css'
 
-const chatUsersData = [
+const chatUserData = {
+    userAvatar: avatar
+}
+
+const otherUsersData = [
+    {
+        avatar: avatar,
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
+    },
+    {
+        avatar: avatar,
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
+    },
     {
         avatar: avatar,
         usersAvatar: chatUsersAvatar,
@@ -32,11 +52,8 @@ const ChatComponent = () => {
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
                                 <div className="personal__avatar">
-                                {
-                                    chatUsersData.map((userChatData) => (
-                                        <img className="chat__avatar" src={userChatData.avatar} alt="fff" />
-                                    ))
-                                }
+                                    <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
+
                                     <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
                                     </svg>
@@ -50,7 +67,7 @@ const ChatComponent = () => {
                                     </div>
                                     <div className="users__chat__avatar">
                                         {
-                                            chatUsersData.map((userChatData) => (
+                                            otherUsersData.map((userChatData) => (
                                                 <div className="chat__component_users-data">
                                                     <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
                                                     <div className="userChatData">
@@ -60,50 +77,7 @@ const ChatComponent = () => {
                                                 </div>
                                             ))
                                         }
-                                        {
-                                            chatUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title2}</p>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                        {
-                                            chatUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title}</p>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                        {
-                                            chatUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title3}</p>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                                        {
-                                            chatUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title3}</p>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
+
                                     </div>
                                 </div>
                             </div>
