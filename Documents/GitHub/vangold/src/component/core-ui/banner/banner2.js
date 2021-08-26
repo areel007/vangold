@@ -1,8 +1,6 @@
 import React from 'react';
 import "./banner.css"
 import bannerImage from "../../../assets/images/vangold-banner-img2.png"
-import "../modal/modal.css";
-import BannerTwoModal from '../auth/banner2modal/banner2modal';
 
 const AbBanner = () => {
 
