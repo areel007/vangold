@@ -31,7 +31,7 @@ const LogInForm = () => {
           <label htmlFor="auth terms checkbox" className="auth-checkbox-label"> &nbsp;Keep me logged in</label>
         </div>
         <div className="forgot-pwrd">
-          <p><Link to="/changepassword">Forgot Password</Link></p>
+          <p><Link to="/reset-password">Forgot Password</Link></p>
         </div>
       </div>
       <button className="submit__btn">Log in</button>

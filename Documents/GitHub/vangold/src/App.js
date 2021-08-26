@@ -11,7 +11,7 @@ import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
 import { useState } from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
-import ResetPassword from "./component/views/auth/reset-password/reset-password";
+import ResetPassword from "./component/views/auth/reset-password";
 import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
