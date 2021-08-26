@@ -14,6 +14,7 @@ import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/auth/reset-password";
 import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
+import VerifyEmail from './component/views/verify-email';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
 import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
@@ -114,6 +115,9 @@ function App() {
                     </Route>
                     <Route path="/passwordresetsuccessful">
                         <PasswordResetSuccess />
+                    </Route>
+                    <Route path="/VerifyEmail">
+                        <VerifyEmail />
                     </Route>
                     <Route path="/terms-and-conditions">
                         <TermsAndConditions />
