@@ -1,0 +1,57 @@
+
+.SearchBox {
+    margin-bottom: 29px;
+  }
+  .inn_SearchInputBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .inn_SearchInputBox input,
+  .inn_SearchInputBoxRight input {
+    width: 783px;
+    height: 64px;
+    background: rgba(217, 218, 215, 0.5);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--fs-16);
+    line-height: 19px;
+    color: rgba(20, 20, 20, 0.5);
+    padding: 10px;
+    padding-left: 50px;
+  }
+  .inn_SearchInputBoxRight input {
+    width: 445px;
+  }
+  .inn_SearchInputBoxRight {
+    display: flex;
+  }
+  .top-_-search-btn {
+    position: absolute;
+    width: 124px;
+    height: 48px;
+    right: 120px;
+    margin-top: 7px;
+    background: #45b618;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-family: var(--mulish);
+    font-style: normal;
+    font-weight: var(--font-wieght-bold);
+    font-size: var(--fs-18);
+    line-height: 23px;
+    color: #ffffff;
+  }
+  .inn_SearchInputBox svg {
+    position: absolute;
+    margin-left: 15px;
+  }
+  .inn_SearchInputBoxRight svg {
+    margin-top: 18px;
+  }
