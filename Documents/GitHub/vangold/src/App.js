@@ -17,6 +17,7 @@ import HomeTwo from './component/views/home/home2';
 import VerifyEmail from './component/views/verify-email';
 import TopFreelancer from './component/views/TopFreelancerView/TopFreelancer';
 import TopJobs from './component/views/TopJobsView/TopJobs';
+import TopJobsTwo from './component/views/TopJobsView/TopJobs2';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
 import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
@@ -126,6 +127,9 @@ function App() {
                     </Route>
                     <Route path="/top-jobs">
                         <TopJobs />
+                    </Route>
+                    <Route path="/top-jobs-view">
+                        <TopJobsTwo />
                     </Route>
                     <Route path="/terms-and-conditions">
                         <TermsAndConditions />
