@@ -1,0 +1,64 @@
+.modal-style{
+   width: 50vw;
+   max-width: 50vw;  
+}
+.modal-head {
+  font-family: var(--mulish);
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 23px;
+}
+.modal-para {
+  font-size: 18px;
+  line-height: 23px;
+  font-family: var(--mulish);
+  margin-top: 2rem;
+}
+.modal-para-1 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;  
+  color: #808080;
+  margin-top: 5rem;
+}
+.text-box:not(active) {
+  background-color: #D9DAD780;
+}
+.modal-btn {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: var(--font-wieght-bold);
+  color: #fff;
+  background-color: var(--primary);
+  padding: 1rem 3.5rem;
+  text-transform: none;
+  border: transparent;
+  border-radius: 4px;
+}
+.modal-btn:hover {
+  background-color: var(--primary);
+}
+.modal-close{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+.modal-close:hover{
+    cursor: pointer;
+}
+.modal-btn-cancel{
+  font-size: 16px;
+  font-weight: var(--font-wieght-bold);
+  color: var(--primary);
+  line-height: 20px;
+  background-color: #45b6184d;
+  padding: 1rem 3.5rem;
+  margin-left: 8.5rem;
+  text-transform: none;
+  border: transparent;
+}
+.modal-btn-cancel:hover {
+  background-color: #45b6184d;
+  color: var(--primary);
+}

@@ -4,17 +4,18 @@
 }
 .sidecheck-head {
   font-size: 16px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
 }
 .sidecheck-btn {
   font-size: 12px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   color: #fff;
   line-height: 14.09px;
   background-color: var(--primary);
   padding: 1rem;
   text-transform: none;
   border: 5px;
+  border-radius: 4px;
 }
 .sidecheck-btn:hover {
   background-color: var(--primary);

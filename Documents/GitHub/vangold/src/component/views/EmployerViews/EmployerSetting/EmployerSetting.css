@@ -1,12 +1,12 @@
 #employer-setting h1 {
   font-size: 36px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   margin-bottom: 2rem;
 }
 #employer-setting h5 {
   font-size: 18px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
 }
 #employer-setting p {
@@ -14,7 +14,7 @@
 }
 #employer-setting .submit-btn {
   font-size: 16px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   color: #fff;
   line-height: 22.59px;
   background-color: var(--primary);
@@ -55,5 +55,5 @@
 
 #employer-setting .text-16px {
   font-size: 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
 }

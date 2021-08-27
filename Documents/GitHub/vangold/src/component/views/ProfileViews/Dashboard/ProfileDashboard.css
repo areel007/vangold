@@ -4,7 +4,7 @@
 }
 #profile-dash h1 {
   font-size: 24px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   color: #000000;
 }
@@ -47,19 +47,19 @@
 }
 #profile-dash .text-14px {
   font-size: 14px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   color: #141414b2;
 }
 #profile-dash .text-16px {
   font-size: 16px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   color: #141414b2;
 }
 #profile-dash .text-18px {
   font-size: 18px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   color: #808080b2;
 }
