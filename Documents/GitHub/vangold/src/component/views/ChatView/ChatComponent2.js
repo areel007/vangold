@@ -1,0 +1,171 @@
+import React, { useState } from "react";
+import { Card, Col, Container, Row, Button } from "react-bootstrap"
+import SideMenu from "../../core-ui/SideMenu/SideMenu"
+import avatar from "../../../assets/images/avatar/Ellipse7.png";
+import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
+import './ChatComponent.css'
+
+const chatUserData = {
+    userAvatar: avatar
+}
+
+const otherUsersData = [
+    {
+        avatar: avatar,
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
+    },
+    {
+        avatar: avatar,
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
+    },
+    {
+        avatar: avatar,
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
+    },
+]
+const ChatComponentTwo = () => {
+  
+    return (
+        <div id="chat-component" className="my-3 py-3">
+            <Container fluid>
+                <Row>
+                    <Col xs={10} lg={2} className="mx-auto mt-5">
+                        <SideMenu />
+                    </Col>
+                    <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
+                        <div className="chat__container-header">
+                            <p className="chat__container-title">Inbox</p>
+                            <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                        </div>
+                        <div className="chat__box__contaniner">
+                            <div className="chat__box__contaniner-left">
+                                <div className="personal__avatar">
+                                    <p className="chat__TEXT">Chat</p>
+                                </div>
+                                <div className="chat__search_box--user-avatar">
+                                    <div className="chat__search-box">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.2028 9.85162C11.1006 9.74942 11.0866 9.57302 11.165 9.45122C11.781 8.50342 12.1422 7.37502 12.1422 6.16262C12.1422 2.81382 9.4178 0.0908203 6.0718 0.0908203C2.723 0.0908203 0 2.81382 0 6.16262C0 9.51002 2.723 12.233 6.0718 12.233C7.3752 12.233 8.582 11.8144 9.5732 11.1116C9.6894 11.0276 9.8644 11.0388 9.9666 11.1396L12.1366 13.3096C12.1506 13.3236 12.166 13.3376 12.1814 13.3488C12.2066 13.3698 12.3116 13.4678 12.4124 13.57L12.67 13.8262C12.7722 13.927 12.9374 13.927 13.0382 13.8262L13.923 12.9414C14.0252 12.8392 14.0252 12.674 13.9244 12.5718L11.2028 9.85162ZM9.744 8.99062C9.5438 9.25102 9.3184 9.48902 9.0692 9.70042C8.26 10.3878 7.2142 10.805 6.0718 10.805C3.5112 10.805 1.428 8.72182 1.428 6.16262C1.428 3.60342 3.5112 1.51882 6.0718 1.51882C8.631 1.51882 10.7142 3.60202 10.7142 6.16262C10.7142 7.22662 10.3488 8.20662 9.744 8.99062Z" fill="#4F4F4F"/>
+                                        </svg>
+                                        <input type="text" placeholder="Type contact name" />
+                                    </div>
+                                    <div className="users__chat__avatar">
+                                        {
+                                            otherUsersData.map((userChatData) => (
+                                                <div className="chat__component_users-data">
+                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
+                                                    <div className="userChatData">
+                                                        <p className="chat__users_name">{userChatData.userName}</p>
+                                                        <p className="chat__users_title">{userChatData.title}</p>
+                                                    </div>
+                                                </div>
+                                            ))
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="message__box-component2">
+                                <div className="message__box-component2_header">
+                                    <div className="chatBox__profile">
+                                        <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
+                                        <p>VanGold Website Design</p>
+                                    </div>
+                                    <svg style={{cursor: "pointer"}} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
+                                    </svg>
+                                </div>
+                                <div className="chat-messager-container">
+                                    <div className="send-message-box">
+                                        <div className="inn-send-message-box">
+                                            Okay, some other time, I guess. Lorem Ipsum jji jksn jikkkms jkola kopol; kppp
+                                        </div>
+                                    </div>
+                                    <div className="send-message-time-date">
+                                        Saturday 11:50 PM
+                                    </div>
+                                    <div className="middle-message-time-date">
+                                        June 20, 10:46 pm
+                                    </div>
+                                    <div className="reply-message-box">
+                                        <div className="replied-message-to">
+                                            Replied to Damola
+                                        </div>
+                                        <div className="inn-reply-message-box">
+                                            Hey, Devon. Can we get on a quick call?
+                                        </div>
+                                        <div className="inn-reply-message-box2">
+                                            <span className="replyName">Koyote Stark</span>
+                                            Hi, Damola. Sure, but now I’m busy rn.
+                                        </div>
+                                        <div className="reply-message-ime-date">
+                                            11:50 AM
+                                        </div>
+                                        <div style={{marginTop: 24}} className="inn-reply-message-box2">
+                                            <span style={{color: "#00237B"}} className="replyName">Femi</span>
+                                            Hi, Emmie. Sure, but now I’m busy rn.
+                                        </div>
+                                        <div className="reply-message-ime-date">
+                                            Saturday 11:50 PM
+                                        </div>
+                                    </div>
+                                    <div className="send-message-box">
+                                        <div className="inn-send-message-box inn-send-message-box2">
+                                            Okay, some other time, I guess.
+                                        </div>
+                                    </div>
+                                    <div className="send-message-time-date">
+                                        Saturday 11:50 PM
+                                    </div>
+                                    <div style={{marginTop: 24}} className="inn-reply-message-box2 inn-reply-message-box3">
+                                            <span style={{color: "#00237B"}} className="replyName">Tola</span>
+                                            Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
+                                        </div>
+                                        <div className="reply-message-ime-date">
+                                            Saturday 11:50 PM
+                                        </div>
+                                    </div>
+                                    <div className="bottom-chat-footer">
+                                        <div className="chat-input-box">
+                                            <input type="text" placeholder="Message..." />
+                                            <div className="chat-input-icons">
+                                                <div className="inn-chat-input-icons">
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.5 9C14.3284 9 15 8.32843 15 7.5C15 6.67157 14.3284 6 13.5 6C12.6716 6 12 6.67157 12 7.5C12 8.32843 12.6716 9 13.5 9Z" fill="#333333"/>
+                                                        <path d="M6.5 9C7.32843 9 8 8.32843 8 7.5C8 6.67157 7.32843 6 6.5 6C5.67157 6 5 6.67157 5 7.5C5 8.32843 5.67157 9 6.5 9Z" fill="#333333"/>
+                                                        <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM10 18C5.58 18 2 14.42 2 10C2 5.58 5.58 2 10 2C14.42 2 18 5.58 18 10C18 14.42 14.42 18 10 18ZM10 15.5C12.33 15.5 14.32 14.05 15.12 12H13.45C12.76 13.19 11.48 14 10 14C8.52 14 7.25 13.19 6.55 12H4.88C5.68 14.05 7.67 15.5 10 15.5Z" fill="#333333"/>
+                                                    </svg>
+                                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.28215 18.4242C2.13255 16.2746 2.13255 12.7957 4.28215 10.6461L11.7068 3.22145C13.2695 1.65874 15.8009 1.65874 17.3636 3.22145C18.9263 4.78415 18.9263 7.3156 17.3636 8.8783L11.3532 14.8887C10.3774 15.8645 8.79349 15.8645 7.81769 14.8887C6.84188 13.9129 6.84188 12.329 7.81769 11.3532L13.121 6.04988L14.5352 7.46409L9.16826 12.831C8.77935 13.2199 9.48646 13.927 9.87537 13.5381L15.9494 7.46409C16.7272 6.68627 16.7272 5.41348 15.9494 4.63566C15.1716 3.85784 13.8988 3.85784 13.121 4.63566L5.69637 12.0603C4.33165 13.425 4.33165 15.6453 5.69637 17.01C7.06108 18.3747 9.2814 18.3747 10.6461 17.01L17.3636 10.2925L18.7778 11.7067L12.0603 18.4242C9.91072 20.5738 6.43176 20.5738 4.28215 18.4242Z" fill="#333333"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <svg className="send__message-btn" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="48" height="48" rx="8" fill="#45B618"/>
+                                            <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    );
+}
+const Text = () => <div>You clicked the button!</div>;
+export default ChatComponentTwo;
