@@ -1,27 +1,27 @@
 #postjob h1 {
   font-size: 36px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
 }
 #postjob .project-title {
   font-size: 24px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   margin-top: 3rem;
 }
 #postjob p {
   font-size: 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
   margin-top: 4rem;
 }
 #postjob li {
   font-size: 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
   margin-top: 2rem;
   list-style-type: disc;
   color: #767676;
 }
 #postjob .submit-btn {
   font-size: 18px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   color: #fff;
   line-height: 22.59px;
   background-color: var(--primary);
@@ -30,7 +30,7 @@
 }
 #postjob .back-btn {
   font-size: 18px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   color: var(--primary);
   line-height: 22.59px;
   background-color: #45b6184d;
@@ -39,7 +39,7 @@
   text-transform: none;
 }
 #postjob .pills-btn {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-size: 16px;
   color: #767676;
   line-height: 18.78px;

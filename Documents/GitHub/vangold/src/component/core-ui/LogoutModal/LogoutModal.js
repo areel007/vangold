@@ -1,34 +1,21 @@
-import { Modal } from "bootstrap";
-import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import './LogoutModal.css'
 
 const LogoutModal = (props) => {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Launch demo modal
-            </Button>
-
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+        <Modal
+            {...props}
+            centered
+            dialogClassName="modal-style"
+        >
+            <Modal.Body className="text-center">
+                <AiOutlineCloseCircle className="modal-close" onClick={props.onHide} />
+                <h1 className="modal-head" style={{ marginTop: "12rem" }}>Log out from  VanGold</h1>
+                <p className="modal-para">Are  you sure you want to  log out from your VanGold account?</p>
+                <Button className="modal-btn" variant='success' style={{ margin: "10rem 0" }}>Logout</Button>
+            </Modal.Body>
+        </Modal>
     );
 }
 

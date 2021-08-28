@@ -27,6 +27,8 @@ import PaymentSuccess from './component/views/EmployerViews/PaymentSuccess/Payme
 import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDashboard';
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
+import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfile/FreelancerProfile';
+import FreelancerProfileEdit from './component/views/FreelancerViews/FreelancerProfileEdit/FreelancerProfileEdit';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
@@ -176,6 +178,9 @@ function App() {
                     <Route path="/profile/jobs/my-job">
                         <ProfileMyJob />
                     </Route>
+                    <Route path="/profile/jobs/my-job-projects">
+                        <MyJobProjects />
+                    </Route>
                     <Route path="/profile/edit">
                         <ProfileEdit />
                     </Route>
@@ -194,11 +199,16 @@ function App() {
                     <Route path="/profile/group-chat2">
                         <GroupChatViewTwo />
                     </Route>
-                    
+                    <Route path="/freelancer-profile">
+                        <FreelancerProfile />
+                    </Route>
+                    <Route path="/freelancer-profile-edit">
+                        <FreelancerProfileEdit />
+                    </Route>
                 </Switch>
                 <Footer />
             </div>
-        </Router>
+        </Router >
     );
 };
 

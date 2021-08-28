@@ -343,3 +343,62 @@
 .lang-category-dropdown-item{
   width: 300px;
 }
+
+/* Expertise */
+form {
+  width: 100%;
+  height: 100%;
+}
+.text-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding-left: 1rem;
+}
+.skill-selected-list,
+.popular_skills__select {
+  width: 100%;
+}
+.skill-selected-list li {
+  display: inline-block;
+  padding: 8px;
+  background-color: var(--primary);
+  border-radius: 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.popular_skills__select li {
+  display: inline-block;
+  padding: 8px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 16px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.skill-selected-list li div,
+.popular_skills__select li div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.skill-selected-list li span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-right: 5px;
+}
+
+.popular_skills__select li span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #767676;
+  margin-right: 5px;
+}

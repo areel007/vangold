@@ -1,12 +1,12 @@
 #pay-to-employer h1 {
   font-size: 36px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   margin-bottom: 1rem;
 }
 #pay-to-employer h2 {
   font-size: 24px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   margin-bottom: 1rem;
 }
@@ -17,7 +17,7 @@
 }
 #pay-to-employer .submit-btn {
   font-size: 14px;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-wieght-bold);
   color: #fff;
   line-height: 22.59px;
   background-color: var(--primary);
@@ -46,12 +46,12 @@
 }
 #pay-to-employer .text-14px-b {
   font-size: 14px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
   font-family: var(--mulish);
 }
 #pay-to-employer .text-16px {
   font-size: 16px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
   margin-bottom: 7rem;
 }
 #pay-to-employer .text-16px-a {
@@ -61,7 +61,7 @@
 }
 #pay-to-employer .text-18px {
   font-size: 18px;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-wieght-semibold);
 }
 
 @media (max-width: 335px) {

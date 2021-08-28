@@ -68,7 +68,7 @@ const SideCheckBoxes = () => {
                     <Form.Group className="mt-5 mb-4">
                         <Form.Control required size='lg' placeholder="Enter job keyword" />
                     </Form.Group>
-                    <Button type="submit" className="sidecheck-btn">Create Job Alert</Button>
+                    <button type="submit" className="sidecheck-btn">Create Job Alert</button>
                 </Form>
             </div>
 

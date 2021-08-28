@@ -3,9 +3,11 @@ import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ImShare2 } from "react-icons/im";
+import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
+import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
 import "./Jobs.css";
 
 const jobs =
@@ -21,6 +23,9 @@ const jobs =
 }
 
 const JobDescrip = () => {
+    const [modalShow, setModalShow] = useState(false);
+    const [freelancer, setFreelancer] = useState(true);
+
     return (
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
@@ -92,6 +97,18 @@ const JobDescrip = () => {
                                     <li className='mb-3'><span className='me-2'><img src={dot} alt="dot" /></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                                     <li className='mb-3'><span className='me-2'><img src={dot} alt="dot" /></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
                                 </ul>
+                                <div className='mt-5 text-end'>
+                                    {freelancer ? (
+                                        <button className="modal-btn" onClick={() => setModalShow(true)}>Apply</button>
+                                    ) : null}
+                                </div>
+
+                                <SendBidModal
+                                    show={modalShow}
+                                    onHide={() => setModalShow(false)}
+                                    head="Send a bid for this job"
+                                    para="What makes you the right person for this job"
+                                    btnText='Apply' />
                             </div>
                         </div>
                     </Col>

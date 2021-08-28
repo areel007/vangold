@@ -1,0 +1,63 @@
+#freelancer-profile-edit .box-upload {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: -7rem;
+  margin-left: 1rem;
+}
+#freelancer-profile-edit .label {
+  position: absolute;
+  bottom: 0.7rem;
+  right: 2.2rem;
+  cursor: pointer;
+}
+#freelancer-profile-edit .form-control-1:not(active) {
+  background-color: #e9eae8;
+  border-radius: 4px;
+  height: 48px;
+}
+#freelancer-profile-edit .form-text-box:not(active) {
+  background-color: #e9eae8;
+  border-radius: 4px;
+}
+#freelancer-profile-edit .box-edu {
+  background-color: #e9eae8;
+  border-radius: 5px;
+  padding: 2rem;
+}
+#freelancer-profile-edit .three-dots {
+  font-size: 2rem;
+}
+#freelancer-profile-edit .submit-btn {
+  font-size: 18px;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--mulish);
+  color: #fff;
+  line-height: 22.59px;
+  background-color: var(--primary);
+  padding: 1rem 2.5rem;
+  text-transform: none;
+  border: transparent;
+}
+#uploaded-image {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#upload-input {
+  display: none;
+}
+#freelancer-profile-edit .text-16px {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+#freelancer-profile-edit .text-18px {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 19px;
+}
