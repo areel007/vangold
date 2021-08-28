@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
 import Button from '@material-ui/core/Button';
@@ -59,7 +60,7 @@ const Employment = (props) => {
         setOpen(false);
     };
     
-    const { classes, children, className, ...other } = props;
+    const { classes } = props;
     return (
         <div className="step">
             <p className="step-title">Employment</p>
@@ -124,7 +125,7 @@ const Employment = (props) => {
                 
             </Dialog>
             <div className="skip_this_step">
-                <a href="#">Skip this step</a>
+                <Link to="#">Skip this step</Link>
             </div>
         </div>
     )

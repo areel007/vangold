@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Col, Container, Row, Button } from "react-bootstrap"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../core-ui/SideMenu/SideMenu"
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
@@ -65,7 +65,7 @@ const ChatComponentTwo = () => {
                                         {
                                             otherUsersData.map((userChatData) => (
                                                 <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
+                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat Avatar" />
                                                     <div className="userChatData">
                                                         <p className="chat__users_name">{userChatData.userName}</p>
                                                         <p className="chat__users_title">{userChatData.title}</p>
@@ -167,5 +167,5 @@ const ChatComponentTwo = () => {
         </div>
     );
 }
-const Text = () => <div>You clicked the button!</div>;
+
 export default ChatComponentTwo;

@@ -1,5 +1,4 @@
 import "./description"
-import PersonalInfo from "./personal-info";
 
 const Description = () => {
     return (

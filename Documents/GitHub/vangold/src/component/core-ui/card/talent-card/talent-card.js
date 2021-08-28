@@ -5,7 +5,7 @@ const TalentCard = (props) => {
         <div className="talent-card">
             <div className="talent-card__inner">
                 <div className="card-image">
-                    <img src={`images/${props.cardDetail.cardImage}`}/>
+                    <img src={`images/${props.cardDetail.cardImage}`} alt="card-img"/>
                 </div>
                 <div className="card-client-details">
                     <div className="card-avatar">

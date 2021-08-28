@@ -227,10 +227,9 @@ const SideMenu = () => {
                     />
                 </ListItem>
             </List>
-            {/* <LogoutModal
+            <LogoutModal
                 show={modalShow}
-                onHide={() => setModalShow(false)} /> */}
-                {/* <LogoutModal /> */}
+                onHide={() => setModalShow(false)} />
         </div>
     );
 };

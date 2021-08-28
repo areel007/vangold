@@ -1,11 +1,7 @@
-import { useState } from "react";
+import React from "react";
 
 const ChangePasswordForm = () => {
-  const [passwordShown, setPasswordShown] = useState(false);
-
-  function togglePasswordVisibility() {
-    setPasswordShown(passwordShown ? false : true);
-  }
+  
 
   return (
     <form className="auth__form">

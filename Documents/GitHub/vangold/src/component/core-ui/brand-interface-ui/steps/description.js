@@ -1,5 +1,4 @@
 import "./description"
-import CompanyInfo from "./company-info"
 
 const Description = () => {
     return (

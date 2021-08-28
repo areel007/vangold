@@ -1,40 +1,13 @@
-import React, { useState } from "react";
-import { Card, Col, Container, Row, Button } from "react-bootstrap"
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../../core-ui/SideMenu/SideMenu"
 import avatar from "../../../../assets/images/avatar/Ellipse7.png";
-import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import '../ChatComponent.css'
 
 const chatUserData = {
     userAvatar: avatar
 }
 
-const otherUsersData = [
-    {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-    {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-    {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-]
 const GroupChatViewTwo = () => {
   
     return (
@@ -125,5 +98,5 @@ const GroupChatViewTwo = () => {
         </div>
     );
 }
-const Text = () => <div>You clicked the button!</div>;
+
 export default GroupChatViewTwo;

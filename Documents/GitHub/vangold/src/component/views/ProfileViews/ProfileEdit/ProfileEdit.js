@@ -83,7 +83,7 @@ const ProfileEdit = () => {
                                     </Row>
                                     <Form.Group className="mb-4">
                                         <Form.Label className="text-16px">Password</Form.Label>
-                                        <Form.Control required size='lg' type='password' className='form-control' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
+                                        <Form.Control required size='lg' type='password' className='form-control' onChange={(e) => setData({ ...data, password: e.target.value })} />
                                     </Form.Group>
                                     <div className="text-end mt-5">
                                         <Button type="submit" className="submit-btn">Save</Button>

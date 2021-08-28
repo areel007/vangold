@@ -1,4 +1,4 @@
-import { Card, Col, Container, Row, Button } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../core-ui/SideMenu/SideMenu"
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
@@ -69,7 +69,7 @@ const ChatComponent = () => {
                                         {
                                             otherUsersData.map((userChatData) => (
                                                 <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="" />
+                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
                                                     <div className="userChatData">
                                                         <p className="chat__users_name">{userChatData.userName}</p>
                                                         <p className="chat__users_title">{userChatData.title}</p>
@@ -84,7 +84,7 @@ const ChatComponent = () => {
                             <div className="message__box-container">
                                 <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
                                 <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
-                                <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message Pic" />
+                                <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
                             </div>
                         </div>
                     </Col>
