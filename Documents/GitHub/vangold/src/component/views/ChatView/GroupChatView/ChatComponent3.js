@@ -6,6 +6,7 @@ import avatar from "../../../../assets/images/avatar/Ellipse7.png";
 import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png"
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import '../ChatComponent.css';
+import useOnclickOutside from "react-cool-onclickoutside";
 
 const chatUserData = {
     userAvatar: avatar,
@@ -40,6 +41,20 @@ const otherUsersData = [
 ]
 
 const GroupChatComponentThree = () => {
+    const [isShow, setIsShow] = React.useState(false);
+
+  const openPopover = () => {
+    setIsShow(!isShow);
+};
+
+const closePopover = () => {
+    setIsShow(false);
+};
+
+const ref = useOnclickOutside(() => {
+    setIsShow(false);
+  });
+
   
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -99,9 +114,27 @@ const GroupChatComponentThree = () => {
                                         <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
                                         <p>VanGold Website Design</p>
                                     </div>
-                                    <svg style={{cursor: "pointer"}} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
+                                    <svg className="open_popover_btn" onClick={openPopover} style={{cursor: "pointer"}} width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.125 4.5C11.3676 4.5 12.375 3.49264 12.375 2.25C12.375 1.00736 11.3676 0 10.125 0C8.88236 0 7.875 1.00736 7.875 2.25C7.875 3.49264 8.88236 4.5 10.125 4.5Z" fill="black"/>
+                                        <path d="M18 4.5C19.2426 4.5 20.25 3.49264 20.25 2.25C20.25 1.00736 19.2426 0 18 0C16.7574 0 15.75 1.00736 15.75 2.25C15.75 3.49264 16.7574 4.5 18 4.5Z" fill="black"/>
+                                        <path d="M2.25 4.5C3.49264 4.5 4.5 3.49264 4.5 2.25C4.5 1.00736 3.49264 0 2.25 0C1.00736 0 0 1.00736 0 2.25C0 3.49264 1.00736 4.5 2.25 4.5Z" fill="black"/>
                                     </svg>
+                                    {isShow &&
+                                        <div ref={ref} class="popoverBox arrow-top">
+                                            <div className="popover__close-btns">
+                                                <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
+                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div className="popover__links">
+                                                <Link onClick={closePopover} to="#">Group Participant</Link>
+                                                <Link onClick={closePopover} to="#">Search</Link>
+                                                <Link onClick={closePopover} to="#">Report Group</Link>
+                                                <Link onClick={closePopover} to="#">Exit Group</Link>
+                                            </div>                                     
+                                        </div>
+                                    }  
                                 </div>
                                 <div className="chat-messager-container">
                                     <div className="send-message-box group-chat-send-message-box">
