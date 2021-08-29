@@ -120,12 +120,14 @@ function getSteps() {
 
 const PostJobStepper = () => {
   const classes = useStyles();
+  const [showDescrip, setShowDescrip] = useState(false);
+  const [showSkills1, setShowSkills1] = useState(false);
+  const [showScope1, setShowScope1] = useState(false);
 
   // ---------------------------------------ALL THE DATA COMES HERE FROM THE STEPPER FORM---------------------------------------
   const [postJobData, setPostJobData] = useState({
     projectTitle: '',
     selectedSkills: [],
-    addedSkills: [],
     levelOfExpertise: '',
     projectScope: '',
     workTime: '',
@@ -142,11 +144,11 @@ const PostJobStepper = () => {
   function getStepContent(step) {
     switch (step) {
       case 0:
-        return <ProjectTitle postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} activeStep={activeStep} />
+        return <ProjectTitle showDescrip={showDescrip} setShowDescrip={setShowDescrip} postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} activeStep={activeStep} />
       case 1:
-        return <Skills postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} />
+        return <Skills showSkills1={showSkills1} setShowSkills1={setShowSkills1} postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} />
       case 2:
-        return <Scope postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} />;
+        return <Scope showScope1={showScope1} setShowScope1={setShowScope1} postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} handleBack={handleBack} />;
       default:
         return <Budget postJobData={postJobData} setPostJobData={setPostJobData} handleBack={handleBack} />;
     }

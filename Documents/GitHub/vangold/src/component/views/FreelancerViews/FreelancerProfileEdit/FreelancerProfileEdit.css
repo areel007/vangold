@@ -42,13 +42,13 @@
   text-transform: none;
   border: transparent;
 }
-#uploaded-image {
+#freelancer-profile-edit #uploaded-image {
   height: 150px;
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
-#upload-input {
+#freelancer-profile-edit #upload-input {
   display: none;
 }
 #freelancer-profile-edit .text-16px {

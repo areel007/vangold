@@ -1,12 +1,14 @@
-import { Card, Col, Container, Pagination, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
-import { BsFillHeartFill } from "react-icons/bs";
 import apple from "../../../../assets/images/profile/apple.png";
+import ReactPaginate from "react-paginate";
 import "./Jobs.css";
+import { useState } from "react";
 
-const jobs = [
+const jobsLists = [
     {
+        id:1,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -17,6 +19,7 @@ const jobs = [
         img: apple,
     },
     {
+        id:2,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -27,6 +30,7 @@ const jobs = [
         img: apple,
     },
     {
+        id:3,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -38,6 +42,16 @@ const jobs = [
     },
 ];
 const ProfileAllJobs = () => {
+    const [jobs, setJobs] = useState(jobsLists.slice(0, 30));
+    const [pageNumber, setPageNumber] = useState(0);
+    const jobsPerPage = 4;
+    const pagesVisited = pageNumber * jobsPerPage;
+    const pageCount = Math.ceil(jobs.length / jobsPerPage);
+
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+    };
+
     return (
         <section id="profile-alljobs" className="my-5 py-3">
             <Container fluid>
@@ -50,49 +64,86 @@ const ProfileAllJobs = () => {
                     </Col>
                     <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
                         <Row>
-                            {jobs.map(job => (
-                                <Col xs={10} lg={12} className="mx-auto">
-                                    <Card className='card-bg'>
-                                        <div className='text-end me-4'><BsFillHeartFill className='card-icon' /></div>
-                                        <Row>
-                                            <Col xs={10} lg={2} className="">
-                                                <img src={job.img} alt="image" className="img-fluid card-pic" />
-                                            </Col>
-                                            <Col xs={10} lg={9} className="">
-                                                <h1 className="head">{job.name}</h1>
-                                                <p className='text-18px'>{job.address}</p>
-                                                <p className='text-16px'>{job.descrip}</p>
-                                            </Col>
-                                        </Row>
-                                        <div className="d-flex mt-4 mb-3 justify-content-between">
-                                            <div className='d-flex'>
-                                                <div className='job-time'>{job.time}</div>
-                                                <div className='job-level'>{job.level}</div>
-                                                <div className='job-price'>{job.price}</div>
+                            {jobs
+                                .slice(pagesVisited, pagesVisited + jobsPerPage)
+                                .map(job => (
+                                    <Col xs={10} lg={12} className="mx-auto" key={job.id}>
+                                        <Card className='card-bg'>
+                                            <div className='text-end me-4'>
+                                                <div className="love-icon">
+                                                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 18.35L8.55 17.03C3.4 12.36 0 9.28 0 5.5C0 2.42 2.42 0 5.5 0C7.24 0 8.91 0.81 10 2.09C11.09 0.81 12.76 0 14.5 0C17.58 0 20 2.42 20 5.5C20 9.28 16.6 12.36 11.45 17.04L10 18.35Z" fill="#4F4F4F" fillOpacity="0.5" />
+                                                    </svg>
+                                                </div>
                                             </div>
-                                            <div className='align-self-center'>
-                                                <span className='text-16px me-4' style={{ color: "#083EB1", fontWeight: "bold" }}>New</span>
-                                                <span className='text-16px me-4' style={{ fontWeight: "bold" }}>4d</span>
+                                            <Row>
+                                                <Col xs={10} lg={2}>
+                                                    <img src={job.img} alt="image" className="img-fluid card-pic" />
+                                                </Col>
+                                                <Col xs={10} lg={9}>
+                                                    <h1 className="head">{job.name}</h1>
+                                                    <p className='text-18px'>{job.address}</p>
+                                                    <p className='text-16px'>{job.descrip}</p>
+                                                </Col>
+                                            </Row>
+                                            <div className="d-flex mt-4 mb-3 justify-content-between">
+                                                <div className='d-flex'>
+                                                    <div className='job-time'>{job.time}</div>
+                                                    <div className='job-level'>{job.level}</div>
+                                                    <div className='job-price'>{job.price}</div>
+                                                </div>
+                                                <div className='align-self-center'>
+                                                    <span className='text-16px me-4' style={{ color: "#083EB1", fontWeight: "bold" }}>New</span>
+                                                    <span className='text-16px me-4' style={{ fontWeight: "bold" }}>4d</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </Card>
-                                </Col>
-                            ))}
+                                        </Card>
+                                    </Col>
+                                ))}
                         </Row>
                         <Row>
                             <Col xs={10} md={4} className="mx-auto">
-                                <Pagination className='paginat'>
-                                    <Pagination.First />
-                                    <Pagination.Prev />
-                                    <Pagination.Item active>{1}</Pagination.Item>
-                                    <Pagination.Item>{2}</Pagination.Item>
-                                    <Pagination.Item>{3}</Pagination.Item>
-                                    <Pagination.Item>{4}</Pagination.Item>
-                                    <Pagination.Ellipsis />
-                                    <Pagination.Item>{36}</Pagination.Item>
-                                    <Pagination.Next />
-                                    <Pagination.Last />
-                                </Pagination>
+                                <div className="paginationContainer">
+                                    <ReactPaginate
+                                        previousLabel={
+                                            <svg
+                                                width="8"
+                                                height="12"
+                                                viewBox="0 0 8 12"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M6.00016 12L7.41016 10.59L2.83016 6L7.41016 1.41L6.00016 1.23266e-07L0.000155878 6L6.00016 12Z"
+                                                    fill="#333333"
+                                                />
+                                            </svg>
+                                        }
+                                        nextLabel={
+                                            <svg
+                                                width="8"
+                                                height="12"
+                                                viewBox="0 0 8 12"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M1.99984 0L0.589844 1.41L5.16984 6L0.589844 10.59L1.99984 12L7.99984 6L1.99984 0Z"
+                                                    fill="#333333"
+                                                />
+                                            </svg>
+                                        }
+                                        pageCount={pageCount}
+                                        onPageChange={changePage}
+                                        containerClassName={"paginationBttns"}
+                                        previousLinkClassName={"previousBttn"}
+                                        nextLinkClassName={"nextBttn"}
+                                        disabledClassName={"paginationDisabled"}
+                                        activeClassName={"paginationActive"}
+                                        breakLabel={"..."}
+                                        className="paginated"
+                                    />
+                                </div>
                             </Col>
                         </Row>
                     </Col>

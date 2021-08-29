@@ -72,7 +72,7 @@ const Budget = ({ postJobData, setPostJobData, handleBack }) => {
                     className='submit-btn'
                     onClick={handler}
                 >
-                    Preview Job Post
+                    Post Job
                 </Button>
             </div>
         </>

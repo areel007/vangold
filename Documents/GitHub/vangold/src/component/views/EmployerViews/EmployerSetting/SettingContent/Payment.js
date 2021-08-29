@@ -23,21 +23,21 @@ const Payment = () => {
                     <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-4">
                             <Form.Label className="text-16px">Cardholder Name</Form.Label>
-                            <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cardholderName: e.target.value })} />
+                            <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, cardholderName: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-4">
                             <Form.Label className="text-16px">Card Number</Form.Label>
-                            <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cardNumber: e.target.value })} />
+                            <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, cardNumber: e.target.value })} />
                         </Form.Group>
                         <Row className="mb-4">
                             <Form.Group className="mb-4" as={Col}>
                                 <Form.Label className="text-16px">Exp Date</Form.Label>
-                                <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, expDate: e.target.value })} />
+                                <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, expDate: e.target.value })} />
                             </Form.Group>
 
                             <Form.Group className="mb-4" as={Col}>
                                 <Form.Label className="text-16px">CVV</Form.Label>
-                                <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
+                                <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
                             </Form.Group>
                         </Row>
                         <div className="text-center">

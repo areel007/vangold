@@ -108,7 +108,7 @@ const JobDescrip = () => {
                                     onHide={() => setModalShow(false)}
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
-                                    btnText='Apply' />
+                                    btntext='Apply' />
                             </div>
                         </div>
                     </Col>

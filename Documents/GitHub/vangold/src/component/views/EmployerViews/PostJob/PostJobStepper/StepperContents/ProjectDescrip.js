@@ -33,7 +33,7 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
                     Back
                 </Button>
                 <Button
-                    type="submit" 
+                    type="submit"
                     form="myform"
                     className='submit-btn'
                 >

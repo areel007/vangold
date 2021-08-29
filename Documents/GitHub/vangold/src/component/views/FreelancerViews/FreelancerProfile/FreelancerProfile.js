@@ -228,7 +228,7 @@ const FreelancerProfile = () => {
                     onHide={() => setModalShow(false)}
                     head="Send an offer to Daramola"
                     para="State clearly what you want Daramola to do for you"
-                    btnText='Send' />
+                    btntext='Send' />
             </Container>
         </section>
     );

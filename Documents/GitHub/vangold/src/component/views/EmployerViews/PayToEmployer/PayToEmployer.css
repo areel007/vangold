@@ -36,8 +36,9 @@
   top: 1.5rem;
   left: 1rem;
 }
-#pay-to-employer .form-control:not(active) {
+#pay-to-employer .form-control-pay:not(active) {
   background-color: #e9eae8;
+  height: 48px;
 }
 #pay-to-employer .text-14px-a {
   font-size: 14px;

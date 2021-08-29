@@ -18,9 +18,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const Scope = ({ postJobData, setPostJobData, handleNext, handleBack }) => {
+const Scope = ({ postJobData, setPostJobData, handleNext, handleBack, showScope1, setShowScope1 }) => {
     const classes = useStyles();
-    const [showScope1, setShowScope1] = useState(false);
     const [value, setValue] = useState('')
 
     const handler = () => {

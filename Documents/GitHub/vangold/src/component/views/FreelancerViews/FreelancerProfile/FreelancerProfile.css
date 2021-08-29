@@ -61,13 +61,13 @@
   right: 2.2rem;
   cursor: pointer;
 }
-#uploaded-image {
+#freelancer-profile #uploaded-image {
   height: 150px;
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
-#upload-input {
+#freelancer-profile #upload-input {
   display: none;
 }
 #freelancer-profile .text-16px {

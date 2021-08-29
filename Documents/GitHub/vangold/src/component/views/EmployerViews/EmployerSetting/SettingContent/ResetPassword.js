@@ -19,7 +19,7 @@ const ResetPassword = () => {
                     <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-5">
                             <Form.Label className="text-16px">Email</Form.Label>
-                            <Form.Control required size='lg' className='form-control' type="email" onChange={(e) => setValue(e.target.value)} />
+                            <Form.Control required size='lg' className='form-control-emp' type="email" onChange={(e) => setValue(e.target.value)} />
                         </Form.Group>
                         <Button type="submit" className="submit-btn">Submit</Button>
                     </Form>

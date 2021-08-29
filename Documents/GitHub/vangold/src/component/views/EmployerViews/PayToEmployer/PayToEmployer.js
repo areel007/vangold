@@ -83,21 +83,21 @@ const PayToEmployer = () => {
                             <p className="text-18px my-5">Payment Details</p>
                             <Form.Group className="mb-4 me-lg-5 me-0">
                                 <Form.Label className="text-16px-a">Cardholder Name</Form.Label>
-                                <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cardholderName: e.target.value })} />
+                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cardholderName: e.target.value })} />
                             </Form.Group>
                             <Form.Group className="mb-4 me-lg-5 me-0">
                                 <Form.Label className="text-16px-a">Card Number</Form.Label>
-                                <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cardNumber: e.target.value })} />
+                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cardNumber: e.target.value })} />
                             </Form.Group>
                             <Row className="mb-4">
                                 <Form.Group className="mb-4 me-lg-5 me-0" as={Col}>
                                     <Form.Label className="text-16px-a">Exp Date</Form.Label>
-                                    <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, expDate: e.target.value })} />
+                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, expDate: e.target.value })} />
                                 </Form.Group>
 
                                 <Form.Group className="mb-4 me-lg-5 me-0" as={Col}>
                                     <Form.Label className="text-16px-a">CVV</Form.Label>
-                                    <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
+                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
                                 </Form.Group>
                             </Row>
                         </Form>
