@@ -63,7 +63,7 @@ const Language = (props) => {
         setOpen(false);
     };
     
-    const { classes, children, className, ...other } = props;
+    const { classes } = props;
 
     return (
         <div className="step">

@@ -28,7 +28,7 @@ const FreelancerProfile = () => {
     return (
         <section id="freelancer-profile" className="pb-5 my-4">
             <div>
-                <img src={cover} alt="cover picture" className="img-fluid" />
+                <img src={cover} alt="cover" className="img-fluid" />
             </div>
             <Container>
                 <Row>

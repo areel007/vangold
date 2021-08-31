@@ -37,13 +37,20 @@ const TopJobsData = [
         price: '$1200',
         img: apple,
     },
+    {
+        name: "User Experience Design",
+        address: "2972 Westminister Rd, Santa Ana",
+        descrip:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus semper ipsum est ut blandit fringilla. Tincidunt diam, accumsan, diam pretium amet habitasse. Viverra vel enim magna nibh neque curabitur egestas. ",
+        time: 'Full Time',
+        level: 'Expert',
+        price: '$1200',
+        img: apple,
+    },
 ];
 
 const TopJobs = (props) => {
-const stars = Array(5).fill(0);
-  const [currentValue] = useState(3);
-
-  const [jobs, setJobs] = useState(TopJobsData.slice(0, 30));
+  const [jobs] = useState(TopJobsData.slice(0, 30));
   const [pageNumber, setPageNumber] = useState(0);
   const jobsPerPage = 4;
   const pagesVisited = pageNumber * jobsPerPage;

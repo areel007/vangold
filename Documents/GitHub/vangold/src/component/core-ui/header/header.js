@@ -26,6 +26,7 @@ const Header = (props) => {
                         location.pathname==='/profile/talent/find-talent'||
                         location.pathname==='/profile/jobs/all-jobs'||
                         location.pathname==='/profile/jobs/my-job'||
+                        location.pathname==='/profile/chat'||
                         location.pathname==='/profile/edit'?
                             <div className='header-after-login'>
                                 <div className="search__container">
@@ -121,19 +122,19 @@ const Header = (props) => {
             <nav ref={dropdownRef} className={`dropDownLanguage ${isActive ? "active" : "inactive"}`}>
                 <ul>
                     <li>
-                        <a className="activeLink" href="#">English</a>
+                        <Link to="#" className="activeLink" href="#">English</Link>
                     </li>
                     <li>
-                        <a href="#">Deutsch</a>
+                        <Link to="#" href="#">Deutsch</Link>
                     </li>
                     <li>
-                        <a href="#">Spanish</a>
+                        <Link to="#" href="#">Spanish</Link>
                     </li>
                     <li>
-                        <a href="#">French</a>
+                        <Link to="#" href="#">French</Link>
                     </li>
                     <li>
-                        <a href="#">Portuguese</a>
+                        <Link to="#" href="#">Portuguese</Link>
                     </li>
                 </ul>
             </nav>

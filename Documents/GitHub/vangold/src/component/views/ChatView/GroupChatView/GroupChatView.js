@@ -1,13 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../core-ui/SideMenu/SideMenu"
-import avatar from "../../../assets/images/avatar/Ellipse7.png";
-import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-import messageBoxImg from "../../../assets/images/chat/rafiki.png";
-import './ChatComponent.css'
-
-const chatUserData = {
-    userAvatar: avatar
-}
+import SideMenu from "../../../core-ui/SideMenu/SideMenu"
+import avatar from "../../../../assets/images/avatar/Ellipse7.png";
+import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
+import messageBoxImg from "../../../../assets/images/group-therapy/rafiki.png";
+import '../ChatComponent.css'
 
 const otherUsersData = [
     {
@@ -35,7 +31,7 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
-const ChatComponent = () => {
+const GroupChatView = () => {
   
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -51,12 +47,11 @@ const ChatComponent = () => {
                         </div>
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
-                                <div className="personal__avatar">
-                                    <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
-
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
+                                <div className="arrow-top-G-Chat">
+                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 15L1 8L8 1" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
+                                    <span>Add group participants</span>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
                                     <div className="chat__search-box">
@@ -82,8 +77,8 @@ const ChatComponent = () => {
                                 </div>
                             </div>
                             <div className="message__box-container">
-                                <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
-                                <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
+                                <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Group chats</h2>
+                                <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest as  a group</p>
                                 <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
                             </div>
                         </div>
@@ -94,4 +89,4 @@ const ChatComponent = () => {
     );
 }
 
-export default ChatComponent;
+export default GroupChatView;

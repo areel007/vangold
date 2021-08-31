@@ -1,12 +1,11 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -61,7 +60,7 @@ const Education = (props) => {
         setOpen(false);
     };
     
-    const { classes, children, className, ...other } = props;
+    const { classes } = props;
     return (
         <div className="step">
             <p className="step-title">Education</p>
@@ -115,7 +114,7 @@ const Education = (props) => {
                 
             </Dialog>
             <div className="skip_this_step">
-                <a href="#">Skip this step</a>
+                <Link to="#">Skip this step</Link>
             </div>
         </div>
     )
