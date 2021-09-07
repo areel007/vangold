@@ -21,3 +21,11 @@
   padding: 1rem 7rem;
   text-transform: none;
 }
+@media (max-width: 700px) {
+  #payment-success h1 {
+    font-size: 24px;
+  }
+  #payment-success .text-16px {
+    font-size: 14px;
+  }
+}

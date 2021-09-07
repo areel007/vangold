@@ -86,3 +86,16 @@
     font-size: 12px;
   }
 }
+@media (max-width: 380px) {
+  #profile-dash .employee-btn {
+    font-size: 10px;
+  }
+}
+@media (max-width: 700px) {
+  #profile-dash h1 {
+    font-size: 18px;
+  }
+  #profile-dash h2 {
+    font-size: 18px;
+  }
+}

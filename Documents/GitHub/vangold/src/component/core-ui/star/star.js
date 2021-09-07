@@ -1,11 +1,5 @@
-import {useState} from "react";
 
 const Star = props => {
-
-    const colors = {
-        yellow: "#F5A623",
-        grey: "#5f5e5e"
-    }
 
     return(
         <div className="star">

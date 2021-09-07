@@ -54,16 +54,18 @@ const PayToEmployer = () => {
         <section id="pay-to-employer" className="my-4 py-5">
             <Container>
                 <Row>
-                    <Col xs={10} md={12} className="mx-auto text-end">
+                    <Col xs={10} lg={12} className="mx-auto text-end d-none d-lg-block">
                         <Link to="">
                             <Button>Back to Login</Button>
                         </Link>
                     </Col>
                 </Row>
                 <Row>
-                    <h1>Confirm order and pay</h1>
-                    <p className="text-muted text-16px">Proceed to make payment so your order can be activated</p>
-                    <Col xs={10} lg={8} className='mx-auto'>
+                    <Col xs={10} lg={12} className='mx-auto'>
+                        <h1>Confirm order and pay</h1>
+                        <p className="text-muted text-16px">Proceed to make payment so your order can be activated</p>
+                    </Col>
+                    <Col xs={10} lg={8} className='mx-auto order-2 order-lg-1 mt-5 mt-lg-0'>
                         <Form id="myform" onSubmit={submitHandler}>
                             <p className="text-18px mb-5">Select Payment Method</p>
                             <FormControl component="fieldset">
@@ -102,7 +104,7 @@ const PayToEmployer = () => {
                             </Row>
                         </Form>
                     </Col>
-                    <Col xs={10} lg={4} className='mx-auto mt-lg-0 mt-5'>
+                    <Col xs={10} lg={4} className='mx-auto mt-lg-0 mt-2 order-1 order-lg-2'>
                         <Card className="p-5 card-order">
                             <h2>Order Details</h2>
                             <p className="text-18px my-4">You are paying</p>

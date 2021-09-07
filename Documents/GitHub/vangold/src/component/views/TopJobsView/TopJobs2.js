@@ -1,23 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TopJobs.css";
 import SearchBox from "../../core-ui/SearchInput/SearchBox";
 import TopJobsHeader from "./TopJobsHeader";
 import SideCheckBoxes from "../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import BannerCoverImg from "../../../assets/images/profile/cover.png";
 import JobsLogImg from "../../../assets/images/profile/micro.png"
-
-const TopJobsData = [
-  {
-    name: "User Experience Design",
-    address: "Santa Ana,CA",
-    descrip:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque egestas leo tempor in ut eget. Euismod et scelerisque aliquam viverra. Vel, nullam pellentesque neque, elit ut cras vitae. Facilisis non sit elit quis consectetur lobortis. Mollis fusce nibh elementum eget bibendum quam proin. Arcu lacus mauris pellentesque in risus. Consectetur cras adipiscing accumsan, lacus id a. Nibh dictum eget amet nec ultricies purus porttitor pretium. Dignissim ridiculus molestie vestibulum suscipit at tempus. Vitae risus fringilla quis in sagittis nulla auctor. Donec vulputate feugiat massa turpis. Id sed quis nulla sed. Auctor porttitor felis in vulputate. Cras enim, vulputate nunc, ornare. ",
-    experience: "Minimum 1 Year",
-    employmentType: "Contract",
-    duration: "6 Months",
-    offerSalary: "$2150/Month",
-  },
-];
 
 const TopJobsTwo = (props) => {
   return (
@@ -32,10 +19,10 @@ const TopJobsTwo = (props) => {
           </div>
           <div className="top__Jobs__view">
             <div className="jobs-view-banner">
-              <img src={BannerCoverImg} alt="" />
+              <img src={BannerCoverImg} alt="jobs view" />
             </div>
             <div className="jobs-view-logo">
-                <img src={JobsLogImg} alt="" />
+                <img src={JobsLogImg} alt="jobs view logo" />
             </div>
             <div style={{padding: 24}}>
                 <div class="row ">

@@ -1,13 +1,8 @@
+import React from "react";
 import "../authstyle.css";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const LogInForm = () => {
-  const [passwordShown, setPasswordShown] = useState(false);
-
-  function togglePasswordVisibility() {
-    setPasswordShown(passwordShown ? false : true);
-  }
 
   return (
     <form className="auth__form">

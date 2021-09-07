@@ -15,7 +15,7 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
         <>
             <Container>
                 <Row>
-                    <Col xs={10} md={8} className='offset-1 ps-lg-4 mb-5'>
+                    <Col xs={10} lg={8} className='offset-1 ps-lg-4 mb-5'>
                         <h1 className="project-title">Give your job post a description</h1>
                         <Form id="myform" onSubmit={submitHandler}>
                             <Form.Group className="mt-5">

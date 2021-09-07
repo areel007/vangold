@@ -84,7 +84,7 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} md={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
                                 <h1 className="project-title mb-5">Select skill or add your own</h1>
 
                                 <Form.Group>

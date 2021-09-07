@@ -238,7 +238,7 @@ const ProfileDashboard = () => {
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5">
+                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
@@ -295,28 +295,28 @@ const ProfileDashboard = () => {
                                             </List>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4 mt-4 mt-lg-0" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                         <Row>
-                                            <Col sm={9} className="align-self-center">
+                                            <Col xs={9} className="align-self-center">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Positive Review</p>
                                                     <p className='text-12px'>60%</p>
                                                 </div>
                                                 <BorderLinearProgress variant="determinate" value={60} />
                                             </Col>
-                                            <Col sm={3}>
+                                            <Col xs={3}>
                                                 <img src={emoji1} alt="emoji" className="img-fluid" />
                                             </Col>
                                         </Row>
                                         <Row className='mt-5'>
-                                            <Col sm={9} className="align-self-center">
+                                            <Col xs={9} className="align-self-center">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Negative Review</p>
                                                     <p className='text-12px'>60%</p>
                                                 </div>
                                                 <BorderLinearProgress variant="determinate" value={60} />
                                             </Col>
-                                            <Col sm={3}>
+                                            <Col xs={3}>
                                                 <img src={emoji2} alt="emoji" className="img-fluid" />
                                             </Col>
                                         </Row>
@@ -341,7 +341,7 @@ const ProfileDashboard = () => {
                                             </List>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4 mt-4 mt-lg-0" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                         <p className="text-end text-12px" style={{ color: '#3751FF' }}>Saticfactory</p>
                                         <div style={{ width: 100, height: 100, margin: '0 auto' }}>
                                             <CircularProgressbar
@@ -353,9 +353,9 @@ const ProfileDashboard = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={12} lg={6} className="mx-auto p-3">
+                            <Col xs={12} lg={6} className="mx-auto p-3 mt-5 mt-lg-0">
                                 <Row>
-                                    <Col xs={10}>
+                                    <Col xs={12} lg={10}>
                                         <div className="d-flex justify-content-between">
                                             <div>
                                                 <h1>Calender</h1>
@@ -383,10 +383,10 @@ const ProfileDashboard = () => {
                                     <Col xs={12}>
                                         <div className="graph-card" style={{ marginRight: '1rem' }}>
                                             <Row>
-                                                <Col xs={12} md={6}>
+                                                <Col xs={4} md={6}>
                                                     <p className="text-13px ms-5">Earnings</p>
                                                 </Col>
-                                                <Col xs={12} md={6}>
+                                                <Col xs={8} md={6}>
                                                     <div className='d-flex justify-content-end'>
                                                         <p className="text-10px me-5"><GoPrimitiveDot style={{ color: '#5F2EEA', fontSize: "1.5rem", marginBottom: "0.3rem" }} />Last 6 months</p>
                                                         <p className="text-10px"><GoPrimitiveDot style={{ fontSize: "1.5rem", marginBottom: "0.3rem" }} />Previous</p>
@@ -394,10 +394,10 @@ const ProfileDashboard = () => {
                                                 </Col>
                                             </Row>
                                             <Row>
-                                                <Col xs={12} md={6}>
+                                                <Col xs={4} md={6}>
                                                     <p className="ms-5">Nov - July</p>
                                                 </Col>
-                                                <Col xs={12} md={6}>
+                                                <Col xs={8} md={6}>
                                                     <div className='d-flex justify-content-end'>
                                                         <p className="text-13px me-5">475 273</p>
                                                         <p className="text-13px">782 396</p>
@@ -431,29 +431,27 @@ const ProfileDashboard = () => {
                                 </Row>
                                 <Row>
                                     <h1 style={{ marginTop: "5rem" }}>Employee Application</h1>
-                                    <Col xs={12} className='px-4'>
+                                    <Col xs={12} className='px-lg-4'>
                                         {
                                             application.map((person) => (
-                                                <Row className='mt-4 p-3' key={person.id} style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
-                                                    <Col xs={12}>
-                                                        <div className="d-flex justify-content-between">
-                                                            <div className=" align-self-center" style={{ fontSize: "12px" }}>
-                                                                <img src={avatar} alt="avatar" className="me-3" />
-                                                                {person.name}
-                                                            </div>
-                                                            <div className=" align-self-center" style={{ fontSize: "12px" }}>
-                                                                <img src={user} alt="user" className='user me-3' />
-                                                                {person.gender}
-                                                            </div>
-                                                            <div className="align-self-center" style={{ fontSize: "12px" }}>
-                                                                {person.level}
-                                                            </div>
-                                                            <div>
-                                                                <Button className='employee-btn'>View Profile</Button>
-                                                            </div>
+                                                <div className='mt-4 p-3' key={person.id} style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                                    <div className="d-flex justify-content-between">
+                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
+                                                            <img src={avatar} alt="avatar" className="me-3" />
+                                                            {person.name}
                                                         </div>
-                                                    </Col>
-                                                </Row>
+                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
+                                                            <img src={user} alt="user" className='user me-3' />
+                                                            {person.gender}
+                                                        </div>
+                                                        <div className="align-self-center" style={{ fontSize: "12px" }}>
+                                                            {person.level}
+                                                        </div>
+                                                        <div>
+                                                            <Button className='employee-btn'>View Profile</Button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             ))
                                         }
                                     </Col>

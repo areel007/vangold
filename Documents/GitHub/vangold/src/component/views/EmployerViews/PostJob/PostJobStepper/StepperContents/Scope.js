@@ -39,7 +39,7 @@ const Scope = ({ postJobData, setPostJobData, handleNext, handleBack, showScope1
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} md={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
                                 <h1 className='mb-5 project-title'>Estimate the scope of your project</h1>
                                 <FormControl component="fieldset">
                                     <RadioGroup name="expertise" onChange={(e) => setValue(e.target.value)}>

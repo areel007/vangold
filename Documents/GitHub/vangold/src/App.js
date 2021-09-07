@@ -33,6 +33,10 @@ import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
 import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
+import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
+import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
+import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
+import GroupChatComponentThree from './component/views/ChatView/GroupChatView/ChatComponent3';
 
 // import DashboardHeader from './component/core-ui/header/dashboard-header';
 import ChatComponent from './component/views/ChatView/ChatComponent';
@@ -186,6 +190,18 @@ function App() {
                     </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
+                    </Route> 
+                    <Route path="/profile/chat">
+                        <ChatComponentTwo />
+                    </Route> 
+                    <Route path="/profile/group-chat">
+                        <GroupChatView />
+                    </Route>
+                    <Route path="/profile/group-chat2">
+                        <GroupChatViewTwo />
+                    </Route>
+                    <Route path="/profile/group-chat3">
+                        <GroupChatComponentThree />
                     </Route>
                     <Route path="/freelancer-profile">
                         <FreelancerProfile />
@@ -196,7 +212,7 @@ function App() {
                 </Switch>
                 <Footer />
             </div>
-        </Router >
+        </Router>
     );
 };
 

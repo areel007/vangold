@@ -17,7 +17,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} md={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
                                 <h1 className="project-title">Give your job post a title</h1>
                                 <div>
 
@@ -28,7 +28,6 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                                     </Form>
                                 </div>
                                 <div>
-
                                     <p>Example titles</p>
                                     <ul>
                                         <li>Build a crypto app that allows users to buy, sell or trade bitcoin</li>
@@ -39,7 +38,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                             </Col>
                         </Row>
                     </Container>
-                    <div className='mt-5 text-center text-lg-end'>
+                    <div className='mt-5 me-5 text-end'>
                         <Button
                             type="submit"
                             form="myform"

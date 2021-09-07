@@ -10,7 +10,7 @@ const VerifyEmail = () => {
                 <div className="verify-email__inner">
                     <h2 className="verify-email-title">Verify your email</h2>
                     <p className="verify-email-subtitle">You will need to verify your email to complete registration</p>
-                    <img src={EmailVerificationImg} alt="email verification image"/>
+                    <img src={EmailVerificationImg} alt="email verification img"/>
                     <p className="verify-email-subtitle verify-email-subtitle-bottom">We just sent an email to <b>Janedoe@gmail.com</b>
                     Please check your email and click the link provided to verify your account.</p>
                     <div className="email-verify-btns">

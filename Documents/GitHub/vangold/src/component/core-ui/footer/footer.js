@@ -1,8 +1,6 @@
 import "./footer.css";
 import { Link } from "react-router-dom";
-import Facebook from "../../../assets/images/svgicons/Path-4.svg";
 import Twitter from "../../../assets/images/svgicons/Path-2.svg";
-import Telegram from "../../../assets/images/svgicons/Path-6.svg";
 import Linkedln from "../../../assets/images/svgicons/Path-5.svg";
 import Instagram from "../../../assets/images/svgicons/Path.svg";
 import Youtube from "../../../assets/images/svgicons/Path-3.svg";
@@ -94,8 +92,8 @@ const Footer = () => {
               <p>© 2020 Vangold Technologies. All rights reserved</p>
             </div>
             <div className="right_bottom_f">
-              <a href="">Privacy Policy</a>
-              <a href="">Terms of Use</a>
+              <Link to="#">Privacy Policy</Link>
+              <Link to="#">Terms of Use</Link>
             </div>
           </div>
         </div>

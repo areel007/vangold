@@ -49,7 +49,7 @@ const EmployerSetting = () => {
         <section id="employer-setting" className='py-3 my-5'>
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className='mx-auto'>
+                    <Col lg={2} className='mx-auto d-none d-lg-block'>
                         <SideMenu />
                     </Col>
                     <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>

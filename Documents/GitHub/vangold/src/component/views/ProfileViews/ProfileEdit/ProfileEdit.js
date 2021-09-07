@@ -28,13 +28,13 @@ const ProfileEdit = () => {
 
             <Container fluid>
                 <Row>
-                    <Col xs={10} md={2} className="mt-5">
+                    <Col xs={10} lg={2} className="mt-5 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} className="p-5 bg-color-w">
+                    <Col xs={12} lg={10} className="p-5 bg-color-w">
                         <h1>Edit Profile</h1>
                         <Row>
-                            <Col xs={10} md={9}>
+                            <Col xs={12} lg={9}>
                                 <Form onSubmit={submitHandler}>
                                     <Row className="mb-4">
                                         <Form.Group as={Col}>

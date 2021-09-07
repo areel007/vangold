@@ -63,3 +63,9 @@
   font-size: 16px;
   font-weight: var(--font-wieght-semibold);
 }
+
+@media (max-width: 700px) {
+  #employer-setting h1 {
+    font-size: 24px;
+  }
+}

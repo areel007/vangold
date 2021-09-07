@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const jobsLists = [
     {
-        id:1,
+        id: 1,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -19,7 +19,7 @@ const jobsLists = [
         img: apple,
     },
     {
-        id:2,
+        id: 2,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -30,7 +30,7 @@ const jobsLists = [
         img: apple,
     },
     {
-        id:3,
+        id: 3,
         name: "User Experience Design",
         address: "2972 Westminister Rd, Santa Ana",
         descrip:
@@ -56,18 +56,18 @@ const ProfileAllJobs = () => {
         <section id="profile-alljobs" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4">
+                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5">
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
+                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
                         <Row>
                             {jobs
                                 .slice(pagesVisited, pagesVisited + jobsPerPage)
                                 .map(job => (
-                                    <Col xs={10} lg={12} className="mx-auto" key={job.id}>
+                                    <Col xs={12} lg={12} className="mx-auto" key={job.id}>
                                         <Card className='card-bg'>
                                             <div className='text-end me-4'>
                                                 <div className="love-icon">
@@ -77,22 +77,22 @@ const ProfileAllJobs = () => {
                                                 </div>
                                             </div>
                                             <Row>
-                                                <Col xs={10} lg={2}>
+                                                <Col xs={4} lg={2}>
                                                     <img src={job.img} alt="image" className="img-fluid card-pic" />
                                                 </Col>
-                                                <Col xs={10} lg={9}>
+                                                <Col xs={8} lg={9}>
                                                     <h1 className="head">{job.name}</h1>
                                                     <p className='text-18px'>{job.address}</p>
                                                     <p className='text-16px'>{job.descrip}</p>
                                                 </Col>
                                             </Row>
-                                            <div className="d-flex mt-4 mb-3 justify-content-between">
+                                            <div className="d-md-flex mt-4 mb-3 justify-content-between">
                                                 <div className='d-flex'>
                                                     <div className='job-time'>{job.time}</div>
                                                     <div className='job-level'>{job.level}</div>
                                                     <div className='job-price'>{job.price}</div>
                                                 </div>
-                                                <div className='align-self-center'>
+                                                <div className='align-self-center text-end'>
                                                     <span className='text-16px me-4' style={{ color: "#083EB1", fontWeight: "bold" }}>New</span>
                                                     <span className='text-16px me-4' style={{ fontWeight: "bold" }}>4d</span>
                                                 </div>

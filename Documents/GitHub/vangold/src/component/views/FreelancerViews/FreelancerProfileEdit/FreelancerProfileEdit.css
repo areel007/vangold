@@ -8,6 +8,9 @@
   margin-top: -7rem;
   margin-left: 1rem;
 }
+#freelancer-profile-edit .cover {
+  width: 100vw;
+}
 #freelancer-profile-edit .label {
   position: absolute;
   bottom: 0.7rem;
@@ -61,3 +64,30 @@
   font-size: 18px;
   line-height: 19px;
 }
+
+@media (max-width: 700px) {
+  #freelancer-profile-edit .box-upload {
+    height: 100px;
+    width: 100px;
+    margin-top: -3rem;
+  }
+  #freelancer-profile-edit #uploaded-image {
+    height: 100px;
+    width: 100px;
+  }
+  #freelancer-profile-edit .freelance-btn {
+    font-size: 14px;
+  }
+  #freelancer-profile-edit .label {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 1rem;
+  }
+  #freelancer-profile-edit h1 {
+    font-size: 24px;
+  }
+  #freelancer-profile-edit h2 {
+    font-size: 18px;
+  }
+}
+

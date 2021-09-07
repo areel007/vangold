@@ -62,7 +62,9 @@ const ResetPassword1 = () => {
                                 </IconButton>
                             </InputGroup.Text>
                         </InputGroup>
-                        <Button type="submit" className="submit-btn">Submit</Button>
+                        <div className="text-end text-lg-start">
+                            <Button type="submit" className="submit-btn">Submit</Button>
+                        </div>
                     </Form>
                 </Col>
             </Row>

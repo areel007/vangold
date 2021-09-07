@@ -77,6 +77,12 @@
   #postjob .back-btn {
     margin-left: 2rem;
   }
+  #postjob .project-title {
+    font-size: 18px;
+  }
+  #postjob h1 {
+    font-size: 20px;
+  }
 }
 @media (min-width: 200px) and (max-width: 530px) {
   #postjob .custom-radio {

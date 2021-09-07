@@ -40,8 +40,8 @@ const Payment = () => {
                                 <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
                             </Form.Group>
                         </Row>
-                        <div className="text-center">
-                            <Button type="submit" className="submit-btn">Add Card</Button>
+                        <div className="text-end text-lg-center">
+                            <Button type="submit" className="submit-btn">Submit</Button>
                         </div>
                     </Form>
                 </Col>
