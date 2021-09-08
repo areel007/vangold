@@ -1,6 +1,6 @@
-.modal-style{
-   width: 50vw;
-   max-width: 50vw;  
+.modal-style {
+  width: 50vw;
+  max-width: 50vw;
 }
 .modal-head {
   font-family: var(--mulish);
@@ -17,12 +17,12 @@
 .modal-para-1 {
   font-weight: bold;
   font-size: 16px;
-  line-height: 19px;  
+  line-height: 19px;
   color: #808080;
   margin-top: 5rem;
 }
 .text-box:not(active) {
-  background-color: #D9DAD780;
+  background-color: #d9dad780;
 }
 .modal-btn {
   font-size: 16px;
@@ -38,16 +38,16 @@
 .modal-btn:hover {
   background-color: var(--primary);
 }
-.modal-close{
-    font-size: 2.5rem;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+.modal-close {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
-.modal-close:hover{
-    cursor: pointer;
+.modal-close:hover {
+  cursor: pointer;
 }
-.modal-btn-cancel{
+.modal-btn-cancel {
   font-size: 16px;
   font-weight: var(--font-wieght-bold);
   color: var(--primary);
@@ -61,4 +61,19 @@
 .modal-btn-cancel:hover {
   background-color: #45b6184d;
   color: var(--primary);
+}
+@media (max-width: 825px) {
+  .modal-style {
+    width: 95vw;
+    max-width: 95vw;
+  }
+  .modal-btn {
+    font-size: 14px;
+  }
+  .modal-btn-cancel {
+    margin-left: 0rem;
+  }
+  .modal-head {
+    font-size: 24px;
+  }
 }

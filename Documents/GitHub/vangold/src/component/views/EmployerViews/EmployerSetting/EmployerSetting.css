@@ -21,10 +21,16 @@
   padding: 1rem 2.5rem;
   text-transform: none;
 }
-#employer-setting .form-control:not(active) {
+#employer-setting .form-control-emp:not(active) {
   background-color: #e9eae8;
+  height: 48px;
+  border-right: transparent;
 }
-#employer-setting .box-upload {
+#employer-setting .form-control-eye:not(active) {
+  background-color: #e9eae8;
+  height: 48px;
+}
+#employer-setting .box-upload1 {
   display: grid;
   place-items: center;
   position: relative;
@@ -33,7 +39,7 @@
   background: #fbfbff;
   border-radius: 20px;
 }
-#employer-setting .image-upload {
+#employer-setting .image-upload1 {
   display: flex;
   flex-wrap: wrap;
 }
@@ -44,7 +50,7 @@
 #upload-input {
   display: none;
 }
-#employer-setting .image-preview {
+#employer-setting .image-preview1 {
   position: relative;
 }
 #uploaded-image {
@@ -56,4 +62,10 @@
 #employer-setting .text-16px {
   font-size: 16px;
   font-weight: var(--font-wieght-semibold);
+}
+
+@media (max-width: 700px) {
+  #employer-setting h1 {
+    font-size: 24px;
+  }
 }

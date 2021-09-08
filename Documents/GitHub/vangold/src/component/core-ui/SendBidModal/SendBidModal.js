@@ -29,7 +29,7 @@ const SendBidModal = (props) => {
                     <Button className="modal-btn-cancel me-4" variant='success' onClick={props.onHide}>Cancel</Button>
                     <Button className="modal-btn" variant='success'
                         type="submit"
-                        form="myform">{props.btnText}</Button>
+                        form="myform">{props.btntext}</Button>
                 </div>
             </Modal.Body>
         </Modal>

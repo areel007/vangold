@@ -43,7 +43,7 @@ const Budget = ({ postJobData, setPostJobData, handleBack }) => {
             <Container>
                 <Row>
                     <Col xs={10} md={12} className='offset-1 mb-5'>
-                        <h1 className='ms-4 mb-5 project-title'>Almost done! Tell us about your budget</h1>
+                        <h1 className='ms-md-4 mb-5 project-title'>Almost done! Tell us about your budget</h1>
                         <FormControl component="fieldset">
                             <RadioGroup row name="expertise" onChange={(e) => setValue(e.target.value)}>
                                 <div className='custom-radio mx-4'>
@@ -72,7 +72,7 @@ const Budget = ({ postJobData, setPostJobData, handleBack }) => {
                     className='submit-btn'
                     onClick={handler}
                 >
-                    Preview Job Post
+                    Post Job
                 </Button>
             </div>
         </>

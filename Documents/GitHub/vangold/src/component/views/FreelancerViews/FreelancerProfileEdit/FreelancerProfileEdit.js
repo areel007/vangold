@@ -47,41 +47,39 @@ const FreelancerProfileEdit = () => {
         <section id="freelancer-profile-edit" className="pb-5 my-4">
             <Container fluid>
                 <Row>
-                    <Col xs={10} md={2} className="mx-auto mt-4">
+                    <Col xs={12} lg={2} className="mx-auto mt-4 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} md={10} className="mx-auto bg-color-w">
+                    <Col xs={12} lg={10} className="mx-auto bg-color-w">
                         <div>
-                            <img src={cover} alt="cover picture" className="img-fluid" />
+                            <img src={cover} alt="cover picture" className="img-fluid cover" />
                         </div>
-                        <Row>
-                            <Col xs={3} className="offset-5">
-                                <div className="box-upload">
-                                    <div className="image-upload">
-                                        <div className="d-flex">
-                                            <img
-                                                id="uploaded-image"
-                                                src={image ? image : avatar}
-                                                draggable={false}
-                                                alt="uploaded-img"
-                                            />
-                                            <div className="align-self-end cam">
-                                                <label className="label" htmlFor="upload-input">
-                                                    <img src={cam} draggable={"false"} alt="placeholder" />
-                                                </label>
+                        <div className='d-flex justify-content-center'>
+                            <div className="box-upload">
+                                <div className="image-upload">
+                                    <div className="d-flex">
+                                        <img
+                                            id="uploaded-image"
+                                            src={image ? image : avatar}
+                                            draggable={false}
+                                            alt="uploaded-img"
+                                        />
+                                        <div className="align-self-end cam">
+                                            <label className="label" htmlFor="upload-input">
+                                                <img src={cam} draggable={"false"} alt="placeholder" />
+                                            </label>
 
-                                                <input
-                                                    id="upload-input"
-                                                    type="file"
-                                                    accept=".jpg,.jpeg,.gif,.png"
-                                                    onChange={handleImageChange}
-                                                />
-                                            </div>
+                                            <input
+                                                id="upload-input"
+                                                type="file"
+                                                accept=".jpg,.jpeg,.gif,.png"
+                                                onChange={handleImageChange}
+                                            />
                                         </div>
                                     </div>
                                 </div>
-                            </Col>
-                        </Row>
+                            </div>
+                        </div>
                         <div className="text-center">
                             <p className="text-16px mt-3">Lagos Nigeria</p>
                         </div>
@@ -95,7 +93,7 @@ const FreelancerProfileEdit = () => {
                             <p className="text-16px mt-3 fw-bold">Product Designer</p>
                         </div>
                         <Row className="p-5" style={{ marginTop: "5rem" }}>
-                            <Col xs={10} md={9}>
+                            <Col xs={12} lg={9}>
                                 <Form onSubmit={submitHandler}>
                                     <Row className="mb-5">
                                         <Form.Group as={Col}>
