@@ -63,7 +63,11 @@ const Education = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
-    
+    let textInput = React.createRef();  // React use ref to get input value
+
+  let onOnclickHandler = (e) => {
+    console.log(textInput.current.value); 
+  };
     const { classes } = props;
     return (
         <div className="step">
@@ -77,7 +81,7 @@ const Education = (props) => {
                     <form action="">
                         <div className="form-input">
                             <label htmlFor="School">School</label>
-                            <input type="text" />
+                            <input ref={textInput} type="text" />
                         </div>
                         <div className="form-input">
                             <label htmlFor="Area of Study">Area of Study</label>
@@ -117,7 +121,7 @@ const Education = (props) => {
                                 <Button className={classes.Button1} onClick={handleClose} color="primary">
                                     Cancel
                                 </Button>
-                                <Button className={classes.Button2} onClick={handleClose} color="primary">
+                                <Button className={classes.Button2} onClick={() => { handleClose(); onOnclickHandler();}} color="primary">
                                     Save and Next
                                 </Button>
                             </div>

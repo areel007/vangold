@@ -28,9 +28,9 @@ const FrSelectCategoryComponentTwo = props => {
                     {selectedItem ? items.find(item => item.id == selectedItem).label : "Select a Subcategory"}
                     <TiArrowSortedDown/>
                 </div>
-                <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
+                <div ref={ref} className={`b-category-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
-                    <div ref={ref} className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
+                    <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                         {item.label}
                     </div>
                     ))}

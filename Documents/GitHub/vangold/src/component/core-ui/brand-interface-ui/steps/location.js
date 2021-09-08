@@ -3,7 +3,7 @@ import BrSelectInputComponentTwo from "./select/location-select/b-select-input-c
 
 const BrLocation = () => {
     return (
-        <div style={{height: "450px"}} className="b-step">
+        <div className="b-step">
             <p className="b-step-title">Location</p>
             <span className="b-step-subtitle">Where is your company located?</span>
             <div className="location-br-select">
