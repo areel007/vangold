@@ -2,6 +2,7 @@ import "./style.css"
 import React from "react";
 import { TiArrowSortedDown } from 'react-icons/ti';
 import LanguageSelectData from "../../steps/languageData.json";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 const LanguageSelect = props => {
     
@@ -17,7 +18,9 @@ const LanguageSelect = props => {
         selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
     }
     
-
+    const ref = useOnclickOutside(() => {
+        setOpen(false);
+      });
 
     return (
         <div style={{width: "740px"}} className="br-select-category-component lang-select-component">
@@ -26,7 +29,7 @@ const LanguageSelect = props => {
                     {selectedItem ? items.find(item => item.id == selectedItem).label : "Select"}
                     <TiArrowSortedDown/>
                 </div>
-                <div className={`b-category-dropdown-body b-language-dropdown-body ${isOpen && 'open'}`}>
+                <div ref={ref} className={`b-category-dropdown-body b-language-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
                     <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                         {item.label}

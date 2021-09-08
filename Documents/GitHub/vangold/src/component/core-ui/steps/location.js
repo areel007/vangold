@@ -1,6 +1,6 @@
 import BrSelectInputComponent from "../brand-interface-ui/steps/select/location-select/b-select-input-component"
 import BrSelectInputComponentTwo from "../brand-interface-ui/steps/select/location-select/b-select-input-component2"
-
+ 
 const Location = (props) => {
     return (
         <div className="step">
