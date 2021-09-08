@@ -11,9 +11,13 @@ import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.pn
 import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
 import '../ChatComponent.css';
 import useOnclickOutside from "react-cool-onclickoutside";
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import { Menu, Message } from "semantic-ui-react";
+import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
 
+const handleClick = (e, data) => {
+    console.log(data);
+  };
+  
 const chatUserData = {
     userAvatar: avatar,
     userAvatarTwo: avatarTwo
@@ -215,19 +219,23 @@ const GroupChatComponentThree = () => {
                                 </div>
                                 <div className="chat-messager-container">
                                     <div className="send-message-box group-chat-send-message-box">
+                                        <ContextMenuTrigger id="some_unique_identifier">
                                         <div style={{ cursor: 'context-menu' }} className="inn-group-chat-send-message-box">
                                             <span style={{color: "#FC7300"}} className="replyName">Klaus</span>
                                             Hey, Devon. Can we get on a quick call?
                                         </div>
+                                        </ContextMenuTrigger>
                                     </div>
                                     <div className="send-message-time-date">
                                         Saturday 11:50 PM
                                     </div>
                                     <div className="reply-message-box">
+                                    <ContextMenuTrigger id="some_unique_identifier">
                                         <div className="inn-group-chat-reply-message-box2">
                                             <span style={{color: "#00237B"}} className="replyName">Damon</span>
                                             Hi, Emmie. Sure, but now I’m busy rn.
                                         </div>
+                                    </ContextMenuTrigger>
                                         <div className="reply-message-ime-date">
                                             11:50 AM
                                         </div>
@@ -242,36 +250,45 @@ const GroupChatComponentThree = () => {
                                         <div className="inn-reply-message-box">
                                             Hey, Devon. Can we get on a quick call?
                                         </div>
-                                        <div className="inn-group-chat-reply-message-box2">
-                                            <span style={{color: "#009BBC"}} className="replyName">Koyote Stark</span>
-                                            Hi, Damola. Sure, but now I’m busy rn.
-                                        </div>
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn-group-chat-reply-message-box2">
+                                                <span style={{color: "#009BBC"}} className="replyName">Koyote Stark</span>
+                                                Hi, Damola. Sure, but now I’m busy rn.
+                                            </div>
+                                        </ContextMenuTrigger>
                                         <div className="reply-message-ime-date">
                                             11:50 AM
                                         </div>
-                                        <div style={{marginTop: 24}} className="inn-group-chat-reply-message-box2">
-                                            <span style={{color: "#00237B"}} className="replyName">Femi</span>
-                                            Hi, Emmie. Sure, but now I’m busy rn.
-                                        </div>
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div style={{marginTop: 24}} className="inn-group-chat-reply-message-box2">
+                                                <span style={{color: "#00237B"}} className="replyName">Femi</span>
+                                                Hi, Emmie. Sure, but now I’m busy rn.
+                                            </div>
+                                        </ContextMenuTrigger>
                                         <div className="reply-message-ime-date">
                                             Saturday 11:50 PM
                                         </div>
                                     </div>
                                     <div className="send-message-box group-chat-send-message-box">
+                                    <ContextMenuTrigger id="some_unique_identifier">
                                         <div className="inn-group-chat-send-message-box">
                                             <span style={{color: "#FC7300"}} className="replyName">Kareem</span>
                                             Okay, some other time, I guess.
                                         </div>
+                                    </ContextMenuTrigger>
                                     </div>
                                     <div className="send-message-time-date">
                                         Saturday 11:50 PM
                                     </div>
-                                    
-                                    <div className="inn-group-chat-reply-message-box2">
-                                        <span style={{color: "#009BBC"}} className="replyName">Tola</span>
-                                        Hey y’all, Burna new event is 
-                                        coming up. Check out this new 
-                                        link to register.
+                                    <div className="reply-message-box">
+                                    <ContextMenuTrigger id="some_unique_identifier">
+                                        <div className="inn-group-chat-reply-message-box2">
+                                            <span style={{color: "#009BBC"}} className="replyName">Tola</span>
+                                            Hey y’all, Burna new event is 
+                                            coming up. Check out this new 
+                                            link to register.
+                                        </div>
+                                    </ContextMenuTrigger>
                                     </div>
                                     <div className="reply-message-ime-date">
                                         11:50 AM
@@ -304,6 +321,23 @@ const GroupChatComponentThree = () => {
                     </Col>
                 </Row>
             </Container>
+            <Menu className="right__click_menu" as={ContextMenu} id="some_unique_identifier" vertical>
+                <MenuItem className="right__click_menu_links" data={"some_data"} onClick={handleClick}>
+                    <Menu.Item>Star</Menu.Item>
+                </MenuItem>
+
+                <MenuItem className="right__click_menu_links" data={"some_data"} onClick={handleClick}>
+                    <Menu.Item>Reply</Menu.Item>
+                </MenuItem>
+
+                <MenuItem className="right__click_menu_links" data={"some_data"} onClick={handleClick}>
+                    <Menu.Item>Copy</Menu.Item>
+                </MenuItem>
+
+                <MenuItem className="right__click_menu_links" data={"some_data"} onClick={handleClick}>
+                    <Menu.Item>Delete</Menu.Item>
+                </MenuItem>
+            </Menu>
         </div>
     );
 }

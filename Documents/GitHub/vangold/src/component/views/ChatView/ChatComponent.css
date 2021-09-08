@@ -349,6 +349,7 @@
 .reply-message-ime-date {
   margin-top: 6px;
 }
+
 .inn-reply-message-box {
   width: 176px;
   height: 38px;
@@ -637,13 +638,17 @@
   font-weight: bold;
 }
 
+.reply-message-box{
+  /* width: 144px; */
+  display: inline-block;
+}
 .inn-group-chat-reply-message-box2 {
-  width: 144px;
+  min-width: 144px;
+  display: inline-block;
   display: flex;
   flex-direction: column;
   gap: 11px;
   background: #fbfbfb;
-  border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 6px 6px 6px 0px;
   padding: 5px 23px 6px 17px;
@@ -794,5 +799,32 @@
   outline: none;
 }
 .chat__group__component_participants-data .choose-group-admin-button:hover {
-  background-color: #DAF0D1;
+  background-color: #daf0d1;
+}
+
+.right__click_menu {
+  width: 150px;
+  height: 169px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.right__click_menu .right__click_menu_links {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12px;
+  cursor: pointer;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-16);
+  line-height: 23px;
+  border-radius: 10px;
+  color: #333333;
+}
+.right__click_menu .right__click_menu_links:hover {
+  background: #f7f6f6;
+  font-weight: bold;
 }
