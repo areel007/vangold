@@ -2,6 +2,7 @@ import "./style.css"
 import React from "react";
 import { TiArrowSortedDown } from 'react-icons/ti';
 import CategoryDataJson from "../../steps/categoryData.json";
+import useOnclickOutside from "react-cool-onclickoutside";
 
 
 const FrSelectCategoryComponent = props => {
@@ -17,8 +18,10 @@ const FrSelectCategoryComponent = props => {
         selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
     }
     
-
-
+    const ref = useOnclickOutside(() => {
+        setOpen(false);
+      });
+ 
     return (
         <div className="br-select-category-component">
            <div className='b-category-dropdown'>
@@ -28,8 +31,8 @@ const FrSelectCategoryComponent = props => {
                 </div>
                 <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
-                    <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
-                        {item.label}
+                    <div ref={ref} className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
+                        <p>{item.label}</p>
                     </div>
                     ))}
                 </div>
@@ -37,5 +40,5 @@ const FrSelectCategoryComponent = props => {
         </div>
     )
 }
-
+ 
 export default FrSelectCategoryComponent

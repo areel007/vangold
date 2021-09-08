@@ -7,6 +7,8 @@ import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png"
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import '../ChatComponent.css';
 import useOnclickOutside from "react-cool-onclickoutside";
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const chatUserData = {
     userAvatar: avatar,
@@ -40,20 +42,26 @@ const otherUsersData = [
     },
 ]
 
+const initialState = {
+    mouseX: null,
+    mouseY: null,
+  };
+  
+
 const GroupChatComponentThree = () => {
     const [isShow, setIsShow] = React.useState(false);
 
-  const openPopover = () => {
-    setIsShow(!isShow);
-};
+        const openPopover = () => {
+            setIsShow(!isShow);
+        };
 
-const closePopover = () => {
-    setIsShow(false);
-};
+        const closePopover = () => {
+            setIsShow(false);
+        };
 
-const ref = useOnclickOutside(() => {
-    setIsShow(false);
-  });
+        const ref = useOnclickOutside(() => {
+            setIsShow(false);
+        });
 
   
     return (
@@ -138,7 +146,7 @@ const ref = useOnclickOutside(() => {
                                 </div>
                                 <div className="chat-messager-container">
                                     <div className="send-message-box group-chat-send-message-box">
-                                        <div className="inn-group-chat-send-message-box">
+                                        <div style={{ cursor: 'context-menu' }} className="inn-group-chat-send-message-box">
                                             <span style={{color: "#FC7300"}} className="replyName">Klaus</span>
                                             Hey, Devon. Can we get on a quick call?
                                         </div>

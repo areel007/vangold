@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
@@ -8,6 +8,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
   const styles = {
     paper: { 
@@ -51,6 +53,8 @@ import { withStyles } from '@material-ui/core/styles';
   };
 const Education = (props) => {
     const [open, setOpen] = React.useState(false);
+    const [startDate, setStartDate] = useState(new Date());
+    const [startDateTwo, setStartDateTwo] = useState(new Date());
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -87,10 +91,20 @@ const Education = (props) => {
                             <label htmlFor="Degree">Date Attended</label>
                             <div className="inn__datePickerBox">
                                 <div className="form-input">
-                                    <input type="text" />
+                                    <DatePicker
+                                        selected={startDate}
+                                        onChange={(date) => setStartDate(date)}
+                                        placeholderText="From"
+                                        calendarClassName="rasta-stripes"
+                                    />
                                 </div>
                                 <div className="form-input">
-                                    <input type="text" />
+                                    <DatePicker
+                                        selected={startDateTwo}
+                                        onChange={(date) => setStartDateTwo(date)}
+                                        placeholderText="To"
+                                        calendarClassName="rasta-stripes"
+                                    />
                                 </div>
                             </div>
                         </div>
