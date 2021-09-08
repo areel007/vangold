@@ -1,4 +1,4 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import pencil from "../../../../assets/images/profile/pencil.png";
 import clip from "../../../../assets/images/profile/clip.png";
@@ -12,22 +12,26 @@ import ApplicantsApplied from "./ApplicantsApplied";
 
 const applicantsList = [
     {
+        id: 1,
         name: "Kali Jay",
         position: 'Designer',
         avatar: avatar
     },
     {
+        id: 2,
         name: "Kali Jay",
         position: 'Designer',
         avatar: avatar,
         notification: 2
     },
     {
+        id: 3,
         name: "Kali Jay",
         position: 'Designer',
         avatar: avatar
     },
     {
+        id: 4,
         name: "Kali Jay",
         position: 'Designer',
         avatar: avatar
@@ -101,12 +105,12 @@ const ProfileMyJob = () => {
                                     <div className="text-center">
                                         <h1 className="head mb-4">4 Applicants applied</h1>
                                     </div>
-                                    <hr style={{border: "1px solid #0000004D"}} />
+                                    <hr style={{ border: "1px solid #0000004D" }} />
                                 </>
                             }
                             {
                                 applicant ? applicant.map((appli) => (
-                                    <ApplicantsApplied {...appli} />
+                                    <ApplicantsApplied key={appli.id} {...appli} />
                                 ))
                                     : (
                                         <div className="text-center" style={{ margin: "10rem 0" }}>
@@ -114,7 +118,7 @@ const ProfileMyJob = () => {
                                                 <img src={rafiki} alt="rafiki" className="img-fluid" />
                                             </div>
                                             <p className="fw-bold fs-4 mt-5 mb-4">0 Applicants applied</p>
-                                            <p className="fs-4">Don’t worry. People will notice the join
+                                            <p className="fs-4" style={{ color: "#333333" }}>Don’t worry. People will notice the join
                                                 soon. Invite people.</p>
                                         </div>
                                     )

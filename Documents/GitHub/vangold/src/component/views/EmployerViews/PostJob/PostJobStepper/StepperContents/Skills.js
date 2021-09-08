@@ -1,8 +1,7 @@
 import { Button, Chip } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-import ChipInput from "material-ui-chip-input";
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Form, Row } from "react-bootstrap";
 import { AiOutlinePlus } from "react-icons/ai";
 import Skills1 from "./Skills1";
 
@@ -51,20 +50,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Skills = ({ postJobData, setPostJobData, handleNext, handleBack }) => {
+const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkills1, setShowSkills1 }) => {
     const classes = useStyles();
     const [chipData, setChipData] = useState([]);
-    const [tags, setTags] = useState([]);
-    const [showSkills1, setShowSkills1] = useState(false);
+    const [value, setValue] = useState('');
     var dispSkills = [];
     var dispSkills = chipData.filter(function (elem, pos) {
         return chipData.indexOf(elem) == pos;
     });
-
-    const addHandler = (tag) => setTags([...tags, tag]);
-
-    const deleteHandler = (tagDelete) =>
-        setTags(tags.filter((tag) => tag !== tagDelete));
 
     const handleDelete = (chipToDelete) => () => {
         setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
@@ -73,8 +66,15 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack }) => {
         if (chipData.length === 0) {
             alert('Please select your skills.')
         } else {
-            setPostJobData({ ...postJobData, selectedSkills: dispSkills, addedSkills: tags });
+            setPostJobData({ ...postJobData, selectedSkills: dispSkills });
             setShowSkills1(true)
+        }
+    }
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            setChipData(prevCount => [...chipData, { key: prevCount + 200, label: value }])
+            setValue('')
         }
     }
 
@@ -84,17 +84,12 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack }) => {
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} md={7} className='offset-1 ps-lg-4 mb-5'>
-                                <h1 className="project-title">Select skill or add your own</h1>
+                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                                <h1 className="project-title mb-5">Select skill or add your own</h1>
 
-                                <ChipInput
-                                    style={{ margin: "10px 0" }}
-                                    value={tags}
-                                    onAdd={addHandler}
-                                    onDelete={deleteHandler}
-                                    variant="outlined"
-                                    fullWidth
-                                />
+                                <Form.Group>
+                                    <Form.Control type="text" value={value} className="form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
+                                </Form.Group>
 
                                 {chipData.length > 0 && <p>Selected Skills</p>}
 

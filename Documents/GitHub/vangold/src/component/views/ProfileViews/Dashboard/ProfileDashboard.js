@@ -14,6 +14,8 @@ import { List, ListItem, LinearProgress, ListItemText } from "@material-ui/core"
 import { useState } from "react";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import { GoPrimitiveDot } from "react-icons/go";
 import 'react-circular-progressbar/dist/styles.css';
 import './ProfileDashboard.css'
 
@@ -158,21 +160,63 @@ const calender = [
 
 const application = [
     {
+        id: 1,
         name: 'John Adams',
         gender: 'Male',
         level: 'Expert',
     },
     {
+        id: 2,
         name: 'John Adams',
         gender: 'Male',
         level: 'Expert',
     },
     {
+        id: 3,
         name: 'John Adams',
         gender: 'Male',
         level: 'Expert',
     },
 ]
+
+const chartData = [
+    {
+        xAxis: 'Mon',
+        value: 25,
+        value1: 30
+    },
+    {
+        xAxis: 'Tues',
+        value: 50,
+        value1: 80
+    },
+    {
+        xAxis: 'Wed',
+        value: 60,
+        value1: 30
+    },
+    {
+        xAxis: 'Thurs',
+        value: 70,
+        value1: 40
+    },
+    {
+        xAxis: 'Fri',
+        value: 30,
+        value1: 40
+    },
+    {
+        xAxis: 'Sat',
+        value: 40,
+        value1: 70
+    },
+    {
+        xAxis: 'Sun',
+        value: 60,
+        value1: 50
+    },
+];
+
 const percentage = 81.2;
 
 const ProfileDashboard = () => {
@@ -194,12 +238,12 @@ const ProfileDashboard = () => {
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5">
+                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Row>
-                            <Col xs={12} lg={6} className="mx-auto">
+                            <Col xs={12} lg={6} className="mx-auto p-3">
                                 <h1 className='mb-4'>Activity</h1>
                                 <Row>
                                     {
@@ -239,6 +283,7 @@ const ProfileDashboard = () => {
                                             <List component="nav">
                                                 {activityList.map((list) => (
                                                     <ListItem
+                                                        key={list.id}
                                                         button
                                                         classes={{ root: classes.root, selected: classes.selected, button: classes.button }}
                                                         selected={selectedIndex === list.id}
@@ -250,28 +295,28 @@ const ProfileDashboard = () => {
                                             </List>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4 mt-4 mt-lg-0" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                         <Row>
-                                            <Col sm={9} className="align-self-center">
+                                            <Col xs={9} className="align-self-center">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Positive Review</p>
                                                     <p className='text-12px'>60%</p>
                                                 </div>
                                                 <BorderLinearProgress variant="determinate" value={60} />
                                             </Col>
-                                            <Col sm={3}>
+                                            <Col xs={3}>
                                                 <img src={emoji1} alt="emoji" className="img-fluid" />
                                             </Col>
                                         </Row>
                                         <Row className='mt-5'>
-                                            <Col sm={9} className="align-self-center">
+                                            <Col xs={9} className="align-self-center">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Negative Review</p>
                                                     <p className='text-12px'>60%</p>
                                                 </div>
                                                 <BorderLinearProgress variant="determinate" value={60} />
                                             </Col>
-                                            <Col sm={3}>
+                                            <Col xs={3}>
                                                 <img src={emoji2} alt="emoji" className="img-fluid" />
                                             </Col>
                                         </Row>
@@ -285,6 +330,7 @@ const ProfileDashboard = () => {
                                                 {alertList.map((list) => (
                                                     <ListItem
                                                         button
+                                                        key={list.title}
                                                         classes={{ root: classes.root, selected: classes.selected, button: classes.button }}
                                                         selected={selectedIndex1 === list.id}
                                                         onClick={(event) => { handleListItemClick1(event, list.id); setComponent1(list.title); }}
@@ -295,7 +341,7 @@ const ProfileDashboard = () => {
                                             </List>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                    <Col xs={12} lg={8} className="mx-auto ps-4 py-4 mt-4 mt-lg-0" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                         <p className="text-end text-12px" style={{ color: '#3751FF' }}>Saticfactory</p>
                                         <div style={{ width: 100, height: 100, margin: '0 auto' }}>
                                             <CircularProgressbar
@@ -307,9 +353,9 @@ const ProfileDashboard = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={12} lg={6} className="mx-auto">
+                            <Col xs={12} lg={6} className="mx-auto p-3 mt-5 mt-lg-0">
                                 <Row>
-                                    <Col xs={10}>
+                                    <Col xs={12} lg={10}>
                                         <div className="d-flex justify-content-between">
                                             <div>
                                                 <h1>Calender</h1>
@@ -323,7 +369,7 @@ const ProfileDashboard = () => {
                                         <div className='mt-4' style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                             <Row>
                                                 {calender.map((cal) => (
-                                                    <Col className="text-center my-4 mx-3" xs={1}>
+                                                    <Col className="text-center my-4 mx-3" xs={1} key={cal.date}>
                                                         <p className="text-16px">{cal.day}</p>
                                                         <p className="text-18px">{cal.date}</p>
                                                     </Col>
@@ -333,34 +379,79 @@ const ProfileDashboard = () => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <h1 className='my-4'>Income Statistics</h1>
+                                    <h1 className='mb-3' style={{ marginTop: "5rem" }}>Income Statistics</h1>
+                                    <Col xs={12}>
+                                        <div className="graph-card" style={{ marginRight: '1rem' }}>
+                                            <Row>
+                                                <Col xs={4} md={6}>
+                                                    <p className="text-13px ms-5">Earnings</p>
+                                                </Col>
+                                                <Col xs={8} md={6}>
+                                                    <div className='d-flex justify-content-end'>
+                                                        <p className="text-10px me-5"><GoPrimitiveDot style={{ color: '#5F2EEA', fontSize: "1.5rem", marginBottom: "0.3rem" }} />Last 6 months</p>
+                                                        <p className="text-10px"><GoPrimitiveDot style={{ fontSize: "1.5rem", marginBottom: "0.3rem" }} />Previous</p>
+                                                    </div>
+                                                </Col>
+                                            </Row>
+                                            <Row>
+                                                <Col xs={4} md={6}>
+                                                    <p className="ms-5">Nov - July</p>
+                                                </Col>
+                                                <Col xs={8} md={6}>
+                                                    <div className='d-flex justify-content-end'>
+                                                        <p className="text-13px me-5">475 273</p>
+                                                        <p className="text-13px">782 396</p>
+                                                    </div>
+                                                </Col>
+                                            </Row>
 
+                                            <ResponsiveContainer width="100%" height={200}>
+                                                <AreaChart
+                                                    data={chartData}
+                                                    margin={{
+                                                        top: 10,
+                                                        right: 15
+                                                    }}
+                                                >
+                                                    <defs>
+                                                        <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
+                                                            <stop offset="0%" stopColor="#3751FF" stopOpacity={0.6} />
+                                                            <stop offset="75%" stopColor="#3751FF" stopOpacity={0} />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <XAxis axisLine={false} tickLine={false} dataKey="xAxis" />
+                                                    <YAxis axisLine={false} tickLine={false} type="number" domain={[0, 100]} />
+                                                    <Tooltip />
+                                                    <Area type="monotone" dataKey="value" stroke="#3751FF" fill="url(#color)" />
+                                                    <Area type="monotone" dataKey="value1" stroke="#a9a9a9" fill="url(#color)" />
+                                                </AreaChart>
+                                            </ResponsiveContainer>
+                                        </div>
+                                    </Col>
                                 </Row>
                                 <Row>
-                                    <h1 className='my-4'>Employee Application</h1>
-                                    <Col xs={12}>
+                                    <h1 style={{ marginTop: "5rem" }}>Employee Application</h1>
+                                    <Col xs={12} className='px-lg-4'>
                                         {
                                             application.map((person) => (
-                                                <Row className='mt-4 p-3' style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
-                                                    <Col xs={12}>
-                                                        <div className="d-flex justify-content-between">
-                                                            <div className=" align-self-center" style={{ fontSize: "12px" }}>
-                                                                <img src={avatar} alt="avatar" className="me-3" />
-                                                                {person.name}
-                                                            </div>
-                                                            <div className=" align-self-center" style={{ fontSize: "12px" }}>
-                                                                <img src={user} alt="user" className='user me-3' />
-                                                                {person.gender}
-                                                            </div>
-                                                            <div className="align-self-center" style={{ fontSize: "12px" }}>
-                                                                {person.level}
-                                                            </div>
-                                                            <div>
-                                                                <Button className='employee-btn'>View Profile</Button>
-                                                            </div>
+                                                <div className='mt-4 p-3' key={person.id} style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                                    <div className="d-flex justify-content-between">
+                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
+                                                            <img src={avatar} alt="avatar" className="me-3" />
+                                                            {person.name}
                                                         </div>
-                                                    </Col>
-                                                </Row>
+                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
+                                                            <img src={user} alt="user" className='user me-3' />
+                                                            {person.gender}
+                                                        </div>
+                                                        <div className="align-self-center" style={{ fontSize: "12px" }}>
+                                                            {person.level}
+                                                        </div>
+                                                        <div>
+                                                            <Button className='employee-btn'>View Profile</Button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             ))
                                         }
                                     </Col>

@@ -37,10 +37,10 @@ const ResetPassword1 = () => {
                                 size="lg"
                                 required
                                 type={showPassword ? 'text' : 'password'}
-                                className="form-control"
+                                className="form-control-emp"
                                 onChange={e => { setPassword(e.target.value) }}
                             />
-                            <InputGroup.Text>
+                            <InputGroup.Text className="form-control-eye">
                                 <IconButton onClick={handleShowPassword}>
                                     {!showPassword ? <AiOutlineEye style={{ fontSize: '20px' }} /> : <AiOutlineEyeInvisible style={{ fontSize: '20px' }} />}
                                 </IconButton>
@@ -53,16 +53,18 @@ const ResetPassword1 = () => {
                                 size="lg"
                                 required
                                 type={showPassword ? 'text' : 'password'}
-                                className="form-control"
+                                className="form-control-emp"
                                 onChange={e => { setConfirmPassword(e.target.value) }}
                             />
-                            <InputGroup.Text>
+                            <InputGroup.Text className="form-control-eye">
                                 <IconButton onClick={handleShowPassword}>
                                     {!showPassword ? <AiOutlineEye style={{ fontSize: '20px' }} /> : <AiOutlineEyeInvisible style={{ fontSize: '20px' }} />}
                                 </IconButton>
                             </InputGroup.Text>
                         </InputGroup>
-                        <Button type="submit" className="submit-btn">Submit</Button>
+                        <div className="text-end text-lg-start">
+                            <Button type="submit" className="submit-btn">Submit</Button>
+                        </div>
                     </Form>
                 </Col>
             </Row>

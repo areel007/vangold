@@ -13,12 +13,12 @@ const ResetPassword = () => {
     return (
         <Container>
             <Row>
-                <Col xs={8} >
+                <Col xs={12} md={8} >
                     <h1>Job Settings</h1>
                     <p className="text-muted text-16px mb-5">Choose the number of jobs you can create and assign per time</p>
                     <Form onSubmit={submitHandler}>
                         <Form.Label className="text-16px">Number of Jobs</Form.Label>
-                        <Form.Select className='form-control' size='lg' onChange={(e) => setValue(e.target.value)}>
+                        <Form.Select className='form-control-emp' size='lg' onChange={(e) => setValue(e.target.value)}>
                             <option></option>
                             <option value="1">1</option>
                             <option value="2">2</option>

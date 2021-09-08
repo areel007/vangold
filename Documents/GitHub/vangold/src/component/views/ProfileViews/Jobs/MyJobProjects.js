@@ -15,6 +15,7 @@ import "./Jobs.css";
 
 const progressWork = [
     {
+        id: 1,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         position: "Lead Designer - Daramola O.",
@@ -25,6 +26,7 @@ const progressWork = [
         avatar
     },
     {
+        id: 2,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         position: "Lead Designer - Daramola O.",
@@ -35,6 +37,7 @@ const progressWork = [
         avatar
     },
     {
+        id: 3,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         position: "Lead Designer - Daramola O.",
@@ -47,6 +50,7 @@ const progressWork = [
 ]
 const reviewWork = [
     {
+        id: 1,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         car,
@@ -55,6 +59,7 @@ const reviewWork = [
         avatar
     },
     {
+        id: 2,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         position: "Lead Designer - Daramola O.",
@@ -63,6 +68,7 @@ const reviewWork = [
         avatar
     },
     {
+        id: 3,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
         position: "Lead Designer - Daramola O.",
@@ -73,6 +79,7 @@ const reviewWork = [
 ]
 const completeWork = [
     {
+        id: 1,
         title: "Car Care - Landing Page",
         status: "Done",
         position: "Lead Designer - Daramola O.",
@@ -81,6 +88,7 @@ const completeWork = [
         avatar
     },
     {
+        id: 2,
         title: "Car Care - Landing Page",
         status: "Done",
         position: "Lead Designer - Daramola O.",
@@ -89,6 +97,7 @@ const completeWork = [
         avatar
     },
     {
+        id: 3,
         title: "Car Care - Landing Page",
         status: "Done",
         car,
@@ -138,7 +147,7 @@ const MyJobProjects = () => {
                             <Col xs={10} lg={4} className="mx-auto  p-3">
                                 <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#45B618" }} />IN PROGRESS</h2>
                                 {progressWork.map(work => (
-                                    <Row key={work.views} className='mb-4'>
+                                    <Row key={work.id} className='mb-4'>
                                         <Col xs={12}>
                                             <Card className='project-card'>
                                                 <Row>
@@ -174,7 +183,7 @@ const MyJobProjects = () => {
                             <Col xs={10} lg={4} className="mx-auto p-3">
                                 <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#EED600" }} />IN REVIEW</h2>
                                 {reviewWork.map(work => (
-                                    <Row key={work.views} className='mb-4'>
+                                    <Row key={work.id} className='mb-4'>
                                         <Col xs={12}>
                                             <Card className='project-card'>
                                                 <Row>
@@ -208,7 +217,7 @@ const MyJobProjects = () => {
                             <Col xs={10} lg={4} className="mx-auto p-3">
                                 <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#14E273" }} />COMPLETED</h2>
                                 {completeWork.map(work => (
-                                    <Row key={work.views} className='mb-4'>
+                                    <Row key={work.id} className='mb-4'>
                                         <Col xs={12}>
                                             <Card className='project-card'>
                                                 <Row>

@@ -42,21 +42,21 @@ const RequestVerfication = () => {
                     <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-4">
                             <Form.Label className="text-16px">Username</Form.Label>
-                            <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, username: e.target.value })} />
+                            <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, username: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-4">
                             <Form.Label className="text-16px">Full Name</Form.Label>
-                            <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, fullName: e.target.value })} />
+                            <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, fullName: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="mb-4">
                             <Form.Label className="text-16px">Category</Form.Label>
-                            <Form.Control required size='lg' className='form-control' onChange={(e) => setData({ ...data, category: e.target.value })} />
+                            <Form.Control required size='lg' className='form-control-emp' onChange={(e) => setData({ ...data, category: e.target.value })} />
                         </Form.Group>
                         <Form.Group className="">
                             <Form.Label className="text-16px">Upload your ID</Form.Label>
                         </Form.Group>
-                        <div className='box-upload'>
-                            <div className='image-upload'>
+                        <div className='box-upload1'>
+                            <div className='image-upload1'>
                                 {!isUploaded ? (
                                     <>
                                         <label htmlFor="upload-input">
@@ -75,7 +75,7 @@ const RequestVerfication = () => {
                                         />
                                     </>
                                 ) : (
-                                    <div className="image-preview">
+                                    <div className="image-preview1">
                                         <img
                                             id="uploaded-image"
                                             src={data.image}

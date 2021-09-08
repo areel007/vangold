@@ -5,14 +5,14 @@ const InputAmount = ({ postJobData, setPostJobData }) => {
         <>
             <Container className="mt-5">
                 <Row>
-                    <Col xs={10} md={4} lg={3}>
+                    <Col xs={10} md={5} lg={3}>
                         <Form.Label style={{ fontSize: '16px' }}>From</Form.Label>
                         <InputGroup size='lg' className="mb-3">
                             <InputGroup.Text>$</InputGroup.Text>
                             <FormControl type='number' onChange={(e) => setPostJobData({ ...postJobData, budgetFrom: e.target.value })} />
                         </InputGroup>
                     </Col>
-                    <Col xs={10} md={4} lg={3}>
+                    <Col xs={10} md={5} lg={3}>
                         <Form.Label style={{ fontSize: '16px' }}>To</Form.Label>
                         <InputGroup size='lg' className="mb-3">
                             <InputGroup.Text>$</InputGroup.Text>

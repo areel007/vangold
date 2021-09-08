@@ -49,7 +49,7 @@ const EmployerSetting = () => {
         <section id="employer-setting" className='py-3 my-5'>
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className='mx-auto'>
+                    <Col lg={2} className='mx-auto d-none d-lg-block'>
                         <SideMenu />
                     </Col>
                     <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>
@@ -115,7 +115,7 @@ const EmployerSetting = () => {
                     </Col>
                     <Col xs={10} lg={7} className='mx-auto mt-md-0 mt-5 bg-color-w p-4'>
                         {
-                            component === 'payment' ? <Payment /> : component === 'resetPassword' ? <ResetPassword1 /> : component === 'notification' ? <Notification /> : component === 'requestVerification' ? <RequestVerfication1 /> : component === 'jobs' ? <Jobs /> : null
+                            component === 'payment' ? <Payment /> : component === 'resetPassword' ? <ResetPassword1 /> : component === 'notification' ? <Notification /> : component === 'requestVerification' ? <RequestVerfication /> : component === 'jobs' ? <Jobs /> : null
                         }
                     </Col>
                 </Row>

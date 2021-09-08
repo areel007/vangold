@@ -1,6 +1,9 @@
 #freelancer-profile {
   background-color: #f9f9f9;
 }
+#freelancer-profile .cover {
+  width: 100vw;
+}
 #freelancer-profile h1 {
   font-weight: bold;
   font-size: 36px;
@@ -61,13 +64,13 @@
   right: 2.2rem;
   cursor: pointer;
 }
-#uploaded-image {
+#freelancer-profile #uploaded-image {
   height: 150px;
   width: 150px;
   object-fit: cover;
   border-radius: 50%;
 }
-#upload-input {
+#freelancer-profile #upload-input {
   display: none;
 }
 #freelancer-profile .text-16px {
@@ -77,4 +80,29 @@
 }
 #freelancer-profile .text-18px {
   font-size: 18px;
+}
+@media (max-width: 700px) {
+  #freelancer-profile .box-upload {
+    height: 100px;
+    width: 100px;
+    margin-top: -3rem;
+  }
+  #freelancer-profile #uploaded-image {
+    height: 100px;
+    width: 100px;
+  }
+  #freelancer-profile .freelance-btn {
+    font-size: 14px;
+  }
+  #freelancer-profile label {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 1rem;
+  }
+  #freelancer-profile h1 {
+    font-size: 24px;
+  }
+  #freelancer-profile h2 {
+    font-size: 18px;
+  }
 }

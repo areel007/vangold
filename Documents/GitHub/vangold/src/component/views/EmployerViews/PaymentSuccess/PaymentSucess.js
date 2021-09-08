@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
         <>
             <Container className="py-5">
                 <Row>
-                    <Col xs={10} md={12} className="mx-auto text-end">
+                    <Col xs={10} md={12} className="mx-auto text-end d-none d-lg-block">
                         <Link to="">
                             <Button>Back to Login</Button>
                         </Link>

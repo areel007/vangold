@@ -30,13 +30,13 @@ const JobDescrip = () => {
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4">
+                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5">
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
+                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
                         <div className="bg-color1">
                             <div>
                                 <img src={cover} alt="cover" className='img-fluid' />
@@ -46,11 +46,11 @@ const JobDescrip = () => {
                             </div>
                             <div className='p-5'>
                                 <Row>
-                                    <Col xs={10} lg={8}>
+                                    <Col xs={8} lg={8}>
                                         <h1 className='head'>{jobs.name}</h1>
                                     </Col>
-                                    <Col xs={10} lg={4} className="align-self-center text-end">
-                                        <Button variant='light' className='job-btn me-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
+                                    <Col xs={4} lg={4} className="align-self-center text-end">
+                                        <Button variant='light' className='job-btn me-2 me-lg-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
                                         <Button variant='light' className='job-btn mt-4' ><ImShare2 className='job-icon' /></Button>
                                     </Col>
                                 </Row>
@@ -61,27 +61,27 @@ const JobDescrip = () => {
                                             <p className="text-16px-1">{jobs.address}</p>
                                         </div>
                                     </Col>
-                                    <Col xs={10} lg={6} className="align-self-center text-end">
-                                        <div className="d-flex justify-content-end">
+                                    <Col xs={12} lg={6} className="align-self-center text-lg-end">
+                                        <div className="d-flex justify-lg-content-end">
                                             <p className="text-16px-1 me-3">Posted 8 Days ago</p>
                                             <p className="text-16px" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                         </div>
                                     </Col>
                                 </Row>
                                 <Row className='mt-4 row-border'>
-                                    <Col xs={10} lg={3} className='border-right px-5 py-4'>
+                                    <Col xs={6} lg={3} className='border-right px-4 px-lg-5 py-4 border-botom'>
                                         <p className="text-16px-1">Experience</p>
                                         <p className="text-16px" style={{ color: "#4F4F4F" }}>{jobs.experience}</p>
                                     </Col>
-                                    <Col xs={10} lg={3} className='border-right px-5 py-4'>
+                                    <Col xs={6} lg={3} className='border-right px-4 px-lg-5 py-4 border-botom'>
                                         <p className="text-16px-1">Employment Type</p>
                                         <p className="text-16px" style={{ color: "#4F4F4F" }}>{jobs.employmentType}</p>
                                     </Col>
-                                    <Col xs={10} lg={3} className='border-right px-5 py-4'>
+                                    <Col xs={6} lg={3} className='border-right px-4 px-lg-5 py-4'>
                                         <p className="text-16px-1">Duration</p>
                                         <p className="text-16px" style={{ color: "#4F4F4F" }}>{jobs.duration}</p>
                                     </Col>
-                                    <Col xs={10} lg={3} className='px-5 py-4'>
+                                    <Col xs={6} lg={3} className='px-4 px-lg-5 py-4'>
                                         <p className="text-16px-1">Offer Salary</p>
                                         <p className="text-16px" style={{ color: "#4F4F4F" }}>{jobs.offerSalary}</p>
                                     </Col>
@@ -108,7 +108,7 @@ const JobDescrip = () => {
                                     onHide={() => setModalShow(false)}
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
-                                    btnText='Apply' />
+                                    btntext='Apply' />
                             </div>
                         </div>
                     </Col>

@@ -41,9 +41,26 @@
   border: transparent;
   font-size: 12px;
 }
+#profile-dash .graph-card {
+  background: #ffffff;
+  box-shadow: 0px 12.7812px 42.6042px rgba(160, 163, 189, 0.1);
+  border-radius: 8.52083px;
+  padding: 1rem;
+}
+#profile-dash .text-10px {
+  font-size: 10.23px;
+  font-weight: var(--font-weight-medium);
+  color: #b9b9b9;
+}
 #profile-dash .text-12px {
   font-size: 12px;
   font-weight: var(--font-weight-medium);
+}
+#profile-dash .text-13px {
+  font-size: 13px;
+  font-weight: var(--font-wieght-semibold);
+  color: #171717;
+  font-family: var(--inter);
 }
 #profile-dash .text-14px {
   font-size: 14px;
@@ -67,5 +84,18 @@
 @media (max-width: 350px) {
   #profile-dash .text-20px {
     font-size: 12px;
+  }
+}
+@media (max-width: 380px) {
+  #profile-dash .employee-btn {
+    font-size: 10px;
+  }
+}
+@media (max-width: 700px) {
+  #profile-dash h1 {
+    font-size: 18px;
+  }
+  #profile-dash h2 {
+    font-size: 18px;
   }
 }

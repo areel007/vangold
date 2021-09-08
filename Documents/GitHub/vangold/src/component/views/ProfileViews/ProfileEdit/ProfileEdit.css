@@ -14,8 +14,9 @@
   text-transform: none;
   border: transparent;
 }
-#profile-edit .form-control:not(active) {
+#profile-edit .form-control-edit:not(active) {
   background-color: #e9eae8;
+  height: 48px;
 }
 #profile-edit .text-16px {
   font-size: 16px;
