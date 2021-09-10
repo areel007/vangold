@@ -402,3 +402,54 @@ form {
   color: #767676;
   margin-right: 5px;
 }
+
+.education-history__education {
+  margin-bottom: 40px;
+}
+
+.education-history__education .education-history {
+  display: flex;
+  justify-content: space-between;
+}
+
+.school-name {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+}
+
+.degree {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.school-name-and-degree {
+  max-width: 344px;
+}
+
+.edit-and-delete-icon {
+  display: flex;
+}
+
+.education-history__edit {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.education-history__edit svg {
+  margin: auto;
+}
+
+.education__edit {
+  margin-right: 12px;
+}

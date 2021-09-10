@@ -10,6 +10,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import {v4 as uuidv4} from "uuid"
 
   const styles = {
     paper: { 
@@ -55,6 +56,13 @@ const Education = (props) => {
     const [open, setOpen] = React.useState(false);
     const [startDate, setStartDate] = useState(new Date());
     const [startDateTwo, setStartDateTwo] = useState(new Date());
+    const [educationHistory, setEducationHistory] = useState([])
+
+    const [schoolInput, setSchoolInput] = useState("")
+
+    const [schoolDegree, setSchoolDegree] = useState("")
+
+    //Actions - Methods
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -63,6 +71,34 @@ const Education = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const onSchoolInputChange = (event) => {
+        setSchoolInput(event.target.value)
+    }
+
+    const onSchoolDegreeChange = (event) => {
+        setSchoolDegree(event.target.value)
+    }
+
+    const onFormSubmit = () => {
+        setEducationHistory([...educationHistory, {schoolName: schoolInput, degree: schoolDegree, id: uuidv4()}])
+        setSchoolInput("")
+        setSchoolDegree("")
+    }
+
+    const editHistory = (history) => {
+        setOpen(true)
+        setSchoolInput(history.schoolName)
+        setSchoolDegree(history.degree)
+        if (schoolInput !== history.schoolName || schoolDegree !== history.degree) {
+            deleteHistory(history)
+        }
+    }
+
+    const deleteHistory = ({id}) => {
+        setEducationHistory(educationHistory.filter((education) => education.id !== id))
+    }
+
     let textInput = React.createRef();  // React use ref to get input value
 
   let onOnclickHandler = (e) => {
@@ -73,15 +109,58 @@ const Education = (props) => {
         <div className="step">
             <p className="step-title">Education</p>
             <span className="step-subtitle">Add the schools you attended, course of study and degrees earned</span>
+            <div className="education-history__education">
+                {
+                    educationHistory.map((_educationHistory, index) => {
+                        return <div className="education-history" key={index}>
+                            <div className="school-name-and-degree">
+                                <p className="school-name">{_educationHistory.schoolName}</p>
+                                <p className="degree">{_educationHistory.degree}</p>
+                            </div>
+                            <div className="edit-and-delete-icon">
+                                <div className="education__edit education-history__edit">
+                                    <svg
+                                        width="19"
+                                        height="19"
+                                        viewBox="0 0 19 19"
+                                        fill="none"
+                                        onClick={() => editHistory(_educationHistory)}
+                                    >
+                                        <path d="M0 15.2496V18.9996H3.75L14.81 7.93957L11.06 4.18957L0 15.2496ZM17.71 5.03957C18.1 4.64957 18.1 4.01957 17.71 3.62957L15.37 1.28957C14.98 0.89957 14.35 0.89957 13.96 1.28957L12.13 3.11957L15.88 6.86957L17.71 5.03957Z" fill="#808080"/>
+                                    </svg>
+                                </div>
+                                <div className="education-history__edit">
+                                    <svg
+                                        width="14"
+                                        height="18"
+                                        viewBox="0 0 14 18"
+                                        fill="none"
+                                        onClick={() => deleteHistory(_educationHistory)}
+                                    >
+                                        <path d="M1 16C1 17.1 1.9 18 3 18H11C12.1 18 13 17.1 13 16V4H1V16ZM14 1H10.5L9.5 0H4.5L3.5 1H0V3H14V1Z" fill="#808080"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                    })
+                }
+
+            </div>
             <button className="add_edu-btn" onClick={handleClickOpen}><FiPlus /> Add Education</button>
             <Dialog classes={{ paper: classes.paper}} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle disableTypography className="DialogTitle">Add Education</DialogTitle>
                 <DialogContent>
                 <div className="edu__form">
-                    <form action="">
+                    <form>
                         <div className="form-input">
                             <label htmlFor="School">School</label>
-                            <input ref={textInput} type="text" />
+                            <input
+                                ref={textInput}
+                                type="text"
+                                value={schoolInput}
+                                onChange={onSchoolInputChange}
+                            />
                         </div>
                         <div className="form-input">
                             <label htmlFor="Area of Study">Area of Study</label>
@@ -89,7 +168,11 @@ const Education = (props) => {
                         </div>
                         <div className="form-input">
                             <label htmlFor="Degree">Degree</label>
-                            <input type="text" />
+                            <input
+                                type="text"
+                                value={schoolDegree}
+                                onChange={onSchoolDegreeChange}
+                            />
                         </div>
                         <div className="datePickerBox">
                             <label htmlFor="Degree">Date Attended</label>
@@ -121,7 +204,7 @@ const Education = (props) => {
                                 <Button className={classes.Button1} onClick={handleClose} color="primary">
                                     Cancel
                                 </Button>
-                                <Button className={classes.Button2} onClick={() => { handleClose(); onOnclickHandler();}} color="primary">
+                                <Button className={classes.Button2} onClick={ () => { handleClose(); onOnclickHandler(); onFormSubmit(); } } color="primary">
                                     Save and Next
                                 </Button>
                             </div>
