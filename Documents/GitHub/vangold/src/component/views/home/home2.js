@@ -27,12 +27,10 @@ const HomeTwo = (props) => {
                             <div className="collaborate-image2">
                                     <div className="inner-collaborate-image2">
                                     <img className="Ellipse1477" src="imagestwo/Ellipse1477.png" alt="collaborate"/>
-
                                         <div className="round-glowing">
                                             <img className="glowinglogo" src="imagestwo/glowinglogo.png" alt="collaborate"/>
                                         </div>
                                         <img className="Ellipse1478" src="imagestwo/Ellipse1478.png" alt="collaborate"/>
-
                                     </div>
                             </div>
                         </div>
