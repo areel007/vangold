@@ -24,7 +24,7 @@
   margin-bottom: 3.2rem;
   max-width: 500px;
 }
-.collaborate-text__subtitle2{
+.collaborate-text__subtitle2 {
   width: 540px;
 }
 .collaborate-text__title2 strong {
@@ -52,42 +52,97 @@
   color: var(--white);
 }
 .collaborate-image2 {
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex;
+  justify-content: flex-end; */
   max-width: 646px;
 }
 .inner-collaborate-image2 {
   margin-bottom: 100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(69, 182, 24, 0.15);
 }
-.inner-collaborate-image2 .EllipseGr {
+.round-glowing {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  -webkit-animation: glowing 0.8s ease-in-out infinite alternate;
+  -moz-animation: glowing 0.8s ease-in-out infinite alternate;
+  animation: glowing 0.8s ease-in-out infinite alternate;
+}
+.round-glowing img {
+  width: 32px;
+  height: 29.84px;
+  transition: all 1s ease;
+}
+
+.collaborate-image2:hover .round-glowing img {
+  transform: scale(1.2);
+}
+
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 130px green;
+  }
+}
+
+.collaborate-image2 .Ellipse1477 {
+  position: absolute;
+
+  width: 175px;
+  height: 175px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.collaborate-image2 .Ellipse1478 {
+  position: absolute;
+
+  width: 175px;
+  height: 175px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.collaborate-image2:hover .Ellipse1477,
+.collaborate-image2:hover .Ellipse1478 {
+  transform: scale(1.1);
+  transition: all 0.9s ease-in-out;
+} 
+.inner-collaborate-image2 .Ellipse1477 {
+  margin-left: -13%;
+  margin-top: -120px;
+}
+.inner-collaborate-image2 .Ellipse1478 {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+/* .inner-collaborate-image2 .EllipseGr {
   width: 350px;
   height: 350px;
   position: relative;
-}
-.inner-collaborate-image2:hover .EllipseGr {
+} */
+/* .inner-collaborate-image2:hover .EllipseGr {
   transform: rotate(360deg);
   transform-style: preserve-3d;
   transition: all 0.3s ease-in-out 0s;
-}
-.inner-collaborate-image2 .Ellipse1477,
+} */
+/* .inner-collaborate-image2 .Ellipse1477,
 .inner-collaborate-image2 .Ellipse1478 {
   width: 175px;
   height: 175px;
   position: absolute;
 }
-.inner-collaborate-image2 .Ellipse1477 {
-  margin-left: -29%;
-  margin-top: -90px;
-}
-.inner-collaborate-image2 .Ellipse1478 {
-  margin-left: -10%;
-  margin-top: 20%;
-}
+
 .inner-collaborate-image2:hover .Ellipse1477,
 .inner-collaborate-image2:hover .Ellipse1478 {
   transform: scale(1.1);
   transition: all 0.8s ease-in-out;
-}
+} */
 
 .get-notify-banner {
   max-width: 887px;

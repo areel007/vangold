@@ -1,12 +1,73 @@
-import React from "react";
+import React, {useState} from "react";
 import "./TopJobs.css";
 import SearchBox from "../../core-ui/SearchInput/SearchBox";
 import TopJobsHeader from "./TopJobsHeader";
 import SideCheckBoxes from "../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import BannerCoverImg from "../../../assets/images/profile/cover.png";
-import JobsLogImg from "../../../assets/images/profile/micro.png"
+import JobsLogImg from "../../../assets/images/profile/micro.png";
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+    paper: { 
+        minWidth: 652,
+        minHeight: 580,
+        paddingTop: "20px",
+        paddingBottom: 56,
+    },
+    Button1: {
+      backgroundColor: 'rgba(69, 182, 24, 0.3)',
+      borderRadius: '4px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontFamily: 'mulish',
+      fontSize: '18px',
+      textAlign: 'center',
+      width: '106px',
+      textTransform: 'capitalize',
+      height: '39px',
+      color: '#45B618',
+    '&:hover': {
+        backgroundColor: 'rgba(69, 182, 24, 0.3)',
+      }
+    },
+    Button2: {
+      backgroundColor: '#45B618',
+      borderRadius: '4px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      fontSize: '18px',
+      textAlign: 'center',
+      fontFamily: 'mulish',
+      textTransform: 'capitalize',
+      width: 99,
+      height: 39,
+      color: '#ffffff',
+      '&:hover': {
+        backgroundColor: '#45B618',
+      }
+    }
+  };
 
 const TopJobsTwo = (props) => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+ 
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const { classes } = props;
+
   return (
     <div className="top-freelancer">
       <TopJobsHeader />
@@ -101,7 +162,15 @@ const TopJobsTwo = (props) => {
                                 <circle cx="6" cy="6" r="5.5" fill="#F2F2F2" stroke="#45B618"/>
                                 </svg>
                             </span> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque egestas leo tempor in ut eget.
+                        </li>
+                        <li class="mb-3">
+                            <span class="me-2">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6" cy="6" r="5.5" fill="#F2F2F2" stroke="#45B618"/>
+                                </svg>
+                            </span> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque egestas leo tempor in ut eget.
                         </li>
                         <li class="mb-3">
                             <span class="me-2">
@@ -117,7 +186,7 @@ const TopJobsTwo = (props) => {
                                 <circle cx="6" cy="6" r="5.5" fill="#F2F2F2" stroke="#45B618"/>
                                 </svg>
                             </span> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque egestas leo tempor in ut eget.
                         </li>
                         <li class="mb-3">
                             <span class="me-2">
@@ -125,11 +194,37 @@ const TopJobsTwo = (props) => {
                                 <circle cx="6" cy="6" r="5.5" fill="#F2F2F2" stroke="#45B618"/>
                                 </svg>
                             </span> 
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque egestas leo tempor in ut eget.
                         </li>
                         
                     </ul>
                 </div>
+                <div className="topjobsview-applyBtn">
+                    <button onClick={handleClickOpen}>Apply</button>
+                </div>
+                <Dialog classes={{ paper: classes.paper}} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                        <DialogContent>
+                        <div>
+                          <form className="auth__form">
+                            <h2 className="description__about-yourself-header">Send a bid for this job</h2>
+
+                            <span className="step-subtitle">Give a brief description about yourself</span>
+                            <textarea className="description__about-yourself">
+                            </textarea>
+                                <DialogActions>
+                                    <div className="description__about-yourself-btn">
+                                        <Button className={classes.Button1} onClick={handleClose} color="primary">
+                                            Cancel
+                                        </Button>
+                                        <Button className={classes.Button2} onClick={handleClose} color="primary">
+                                            Apply
+                                        </Button>
+                                    </div>
+                                </DialogActions>
+                           </form>
+                        </div>
+                        </DialogContent>
+                    </Dialog>
             </div>
           </div>
         </div>
@@ -138,4 +233,4 @@ const TopJobsTwo = (props) => {
   );
 };
 
-export default TopJobsTwo;
+export default withStyles(styles)(TopJobsTwo);
