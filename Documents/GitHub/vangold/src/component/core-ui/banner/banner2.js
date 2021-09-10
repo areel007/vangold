@@ -82,7 +82,7 @@ const AbBanner = (props) => {
                         <div className="homepage-Auth">
                           <form className="auth__form">
                             <h2 className="homepage-Auth-header">Build a successful career with us</h2>
-                            <div className="form-input__container">
+                            <div className="form-input__container"> 
                                 <div className="form__-control">
                                     <label htmlFor="Username">Username</label>
                                     <input type="text" />

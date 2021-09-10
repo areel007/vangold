@@ -8,6 +8,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
+import YearsSelect from "../inputs/select/years-select";
+import MonthsSelect from '../inputs/select/months-select';
 
   const styles = {
     paper: { 
@@ -82,23 +84,15 @@ const Employment = (props) => {
                         <div className="datePickerBox">
                             <label htmlFor="Duration of Employment">Duration of Employment</label>
                             <div className="inn__datePickerBox">
-                                <div className="form-input">
-                                    <input type="text" />
-                                </div>
-                                <div className="form-input">
-                                    <input type="text" />
-                                </div>
+                                <MonthsSelect />
+                                <YearsSelect toAdd='Year'/>
                             </div>
                         </div>
                         <div className="datePickerBox datePickerBox__TO">
                             <label htmlFor="Duration of Employment">to</label>
                             <div className="inn__datePickerBox">
-                                <div className="form-input">
-                                    <input type="text" />
-                                </div>
-                                <div className="form-input">
-                                    <input type="text" />
-                                </div>
+                                <MonthsSelect />
+                                <YearsSelect toAdd='Year'/>
                             </div>
                         </div>
                         <div className="form-input">

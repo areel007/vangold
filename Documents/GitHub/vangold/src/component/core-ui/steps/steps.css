@@ -249,12 +249,31 @@
   line-height: 23px;
   color: var(--primary);
 }
+
 .inn__datePickerBox {
   display: flex;
   gap: 40px;
 }
 .inn__datePickerBox .form-input input {
   width: 350px;
+  height: 48px;
+  position: relative;
+  top: 23px;
+}
+.ant-picker-input{
+  width: 350px;
+  height: 100%;
+}
+.ant-picker{
+  width: 350px;
+  height: 48px;
+  background: rgba(217, 218, 215, 0.5) !important;
+  border-radius: 4px !important;
+}
+.inn__datePickerBox{
+  height: 100%;
+  padding: 2px !important;
+  
 }
 .descriptionTextarea {
   display: flex;
@@ -402,3 +421,6 @@ form {
   color: #767676;
   margin-right: 5px;
 }
+
+/*DatePicker*/
+
