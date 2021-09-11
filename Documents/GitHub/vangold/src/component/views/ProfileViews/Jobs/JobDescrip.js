@@ -7,7 +7,7 @@ import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
-import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
+import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
 import "./Jobs.css";
 
 const jobs =

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { AiOutlineCloseCircle } from "react-icons/ai";
-
+ 
 const SendBidModal = (props) => {
     const [value, setValue] = useState('');
 
