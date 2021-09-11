@@ -8,10 +8,12 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import {v4 as uuidv4} from "uuid";
-import YearsSelect from "../inputs/select/years-select";
+import {v4 as uuidv4} from "uuid"
+import SelectDropdown from "../select-dropdown/select-dropdown";
+// import YearsSelect from "../inputs/select/years-select";
+import {years} from "./years"
 
   const styles = {
     paper: { 
@@ -58,12 +60,44 @@ const Education = (props) => {
     const [startDate, setStartDate] = useState(new Date());
     const [startDateTwo, setStartDateTwo] = useState(new Date());
     const [educationHistory, setEducationHistory] = useState([])
-
     const [schoolInput, setSchoolInput] = useState("")
-
     const [schoolDegree, setSchoolDegree] = useState("")
+    const [course, setCourse] = useState("")
+    // const [dataToDisplay] = useState(years)
+    const [showDropdownFrom, setShowDropdownFrom] = useState(false)
+    const [showDropdownTo, setShowDropdownTo] = useState(false)
+    const [selectDropdownHeaderFrom, setSelectDropdownHeaderFrom] = useState("From")
+    const [selectDropdownHeaderTo, setSelectDropdownHeaderTo] = useState("To")
+    // const [from, setFrom] = useState("")
+    // const [to, setTo] = useState("")
 
     //Actions - Methods
+
+    const upDateDropdownHeaderFrom = (event) => {
+        setSelectDropdownHeaderFrom(event.target.innerText)
+        setShowDropdownFrom(false)
+    }
+
+    const upDateDropdownHeaderTo = (event) => {
+        setSelectDropdownHeaderTo(event.target.innerText)
+        setShowDropdownTo(false)
+    }
+
+    const toggleDropdownFrom = () => {
+        if (!showDropdownFrom) {
+            setShowDropdownFrom(true)
+        } else {
+            setShowDropdownFrom(false)
+        }
+    }
+
+    const toggleDropdownTo = () => {
+        if (!showDropdownTo) {
+            setShowDropdownTo(true)
+        } else {
+            setShowDropdownTo(false)
+        }
+    }
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -81,8 +115,22 @@ const Education = (props) => {
         setSchoolDegree(event.target.value)
     }
 
+    const onCourseInputChange = (event) => {
+        setCourse(event.target.value)
+    }
+
     const onFormSubmit = () => {
-        setEducationHistory([...educationHistory, {schoolName: schoolInput, degree: schoolDegree, id: uuidv4()}])
+        setEducationHistory([
+            ...educationHistory,
+            {
+                schoolName: schoolInput,
+                degree: schoolDegree,
+                course: course,
+                id: uuidv4(),
+                from: selectDropdownHeaderFrom,
+                to: selectDropdownHeaderTo
+            }
+        ])
         setSchoolInput("")
         setSchoolDegree("")
     }
@@ -116,7 +164,10 @@ const Education = (props) => {
                         return <div className="education-history" key={index}>
                             <div className="school-name-and-degree">
                                 <p className="school-name">{_educationHistory.schoolName}</p>
-                                <p className="degree">{_educationHistory.degree}</p>
+                                <p className="degree">
+                                    {_educationHistory.degree} - {_educationHistory.course} <br/>
+                                    {_educationHistory.from} - {_educationHistory.to}
+                                </p>
                             </div>
                             <div className="edit-and-delete-icon">
                                 <div className="education__edit education-history__edit">
@@ -165,7 +216,11 @@ const Education = (props) => {
                         </div>
                         <div className="form-input">
                             <label htmlFor="Area of Study">Area of Study</label>
-                            <input type="text" />
+                            <input
+                                type="text"
+                                value={course}
+                                onChange={onCourseInputChange}
+                            />
                         </div>
                         <div className="form-input">
                             <label htmlFor="Degree">Degree</label>
@@ -178,8 +233,37 @@ const Education = (props) => {
                         <div className="datePickerBox">
                             <label htmlFor="Degree">Date Attended</label>
                             <div className="inn__datePickerBox">
-                                <YearsSelect toAdd = "From"/>
-                                <YearsSelect toAdd = "To"/>
+                                <SelectDropdown
+                                    dataToDisplay={years}
+                                    toggleDropdown={toggleDropdownFrom}
+                                    showDropdown={showDropdownFrom}
+                                    selectDropdownHeader={selectDropdownHeaderFrom}
+                                    upDateDropdownHeader={upDateDropdownHeaderFrom}
+                                />
+                                <SelectDropdown
+                                    dataToDisplay={years}
+                                    toggleDropdown={toggleDropdownTo}
+                                    showDropdown={showDropdownTo}
+                                    selectDropdownHeader={selectDropdownHeaderTo}
+                                    upDateDropdownHeader={upDateDropdownHeaderTo}
+                                />
+                                {/*<div className="form-input">*/}
+                                {/*    <DatePicker*/}
+                                {/*        selected={startDate}*/}
+                                {/*        onChange={(date) => setStartDate(date)}*/}
+                                {/*        placeholderText="From"*/}
+                                {/*        calendarClassName="rasta-stripes"*/}
+                                {/*    />*/}
+                                {/*</div>*/}
+                                {/*<div className="form-input">*/}
+                                {/*    <DatePicker*/}
+                                {/*        selected={startDateTwo}*/}
+                                {/*        onChange={(date) => setStartDateTwo(date)}*/}
+                                {/*        placeholderText="To"*/}
+                                {/*        calendarClassName="rasta-stripes"*/}
+                                {/*    />*/}
+
+                                {/*</div>*/}
                             </div>
                         </div>
                         <div className="form-input">
