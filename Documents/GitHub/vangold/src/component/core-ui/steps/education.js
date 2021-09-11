@@ -10,7 +10,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { withStyles } from '@material-ui/core/styles';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import {v4 as uuidv4} from "uuid"
+import {v4 as uuidv4} from "uuid";
+import YearsSelect from "../inputs/select/years-select";
 
   const styles = {
     paper: { 
@@ -177,22 +178,8 @@ const Education = (props) => {
                         <div className="datePickerBox">
                             <label htmlFor="Degree">Date Attended</label>
                             <div className="inn__datePickerBox">
-                                <div className="form-input">
-                                    <DatePicker
-                                        selected={startDate}
-                                        onChange={(date) => setStartDate(date)}
-                                        placeholderText="From"
-                                        calendarClassName="rasta-stripes"
-                                    />
-                                </div>
-                                <div className="form-input">
-                                    <DatePicker
-                                        selected={startDateTwo}
-                                        onChange={(date) => setStartDateTwo(date)}
-                                        placeholderText="To"
-                                        calendarClassName="rasta-stripes"
-                                    />
-                                </div>
+                                <YearsSelect toAdd = "From"/>
+                                <YearsSelect toAdd = "To"/>
                             </div>
                         </div>
                         <div className="form-input">

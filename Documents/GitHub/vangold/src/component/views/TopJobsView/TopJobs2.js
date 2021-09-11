@@ -5,68 +5,10 @@ import TopJobsHeader from "./TopJobsHeader";
 import SideCheckBoxes from "../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import BannerCoverImg from "../../../assets/images/profile/cover.png";
 import JobsLogImg from "../../../assets/images/profile/micro.png";
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import { withStyles } from '@material-ui/core/styles';
-
-const styles = {
-    paper: { 
-        minWidth: 652,
-        minHeight: 580,
-        paddingTop: "20px",
-        paddingBottom: 56,
-    },
-    Button1: {
-      backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontFamily: 'mulish',
-      fontSize: '18px',
-      textAlign: 'center',
-      width: '106px',
-      textTransform: 'capitalize',
-      height: '39px',
-      color: '#45B618',
-    '&:hover': {
-        backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      }
-    },
-    Button2: {
-      backgroundColor: '#45B618',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: '18px',
-      textAlign: 'center',
-      fontFamily: 'mulish',
-      textTransform: 'capitalize',
-      width: 99,
-      height: 39,
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#45B618',
-      }
-    }
-  };
+import SendBidModal from "../../core-ui/SendBidModal/SendBidModal";
 
 const TopJobsTwo = (props) => {
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
- 
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const { classes } = props;
+    const [modalShow, setModalShow] = useState(false);
 
   return (
     <div className="top-freelancer">
@@ -200,31 +142,14 @@ const TopJobsTwo = (props) => {
                     </ul>
                 </div>
                 <div className="topjobsview-applyBtn">
-                    <button onClick={handleClickOpen}>Apply</button>
+                    <button onClick={() => setModalShow(true)}>Apply</button>
                 </div>
-                <Dialog classes={{ paper: classes.paper}} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                        <DialogContent>
-                        <div>
-                          <form className="auth__form">
-                            <h2 className="description__about-yourself-header">Send a bid for this job</h2>
-
-                            <span className="step-subtitle">Give a brief description about yourself</span>
-                            <textarea className="description__about-yourself">
-                            </textarea>
-                                <DialogActions>
-                                    <div className="description__about-yourself-btn">
-                                        <Button className={classes.Button1} onClick={handleClose} color="primary">
-                                            Cancel
-                                        </Button>
-                                        <Button className={classes.Button2} onClick={handleClose} color="primary">
-                                            Apply
-                                        </Button>
-                                    </div>
-                                </DialogActions>
-                           </form>
-                        </div>
-                        </DialogContent>
-                    </Dialog>
+                <SendBidModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                head="Send a bid for this job"
+                para="What makes you the right person for this job"
+                btntext='Apply' />
             </div>
           </div>
         </div>
@@ -233,4 +158,4 @@ const TopJobsTwo = (props) => {
   );
 };
 
-export default withStyles(styles)(TopJobsTwo);
+export default TopJobsTwo;
