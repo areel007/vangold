@@ -27,6 +27,7 @@ const Header = (props) => {
                         location.pathname==='/profile/jobs/all-jobs'||
                         location.pathname==='/profile/jobs/my-job'||
                         location.pathname==='/profile/chat'||
+                        location.pathname==='/profile/group-chat'||
                         location.pathname==='/profile/edit'?
                             <div className='header-after-login'>
                                 <div className="search__container">

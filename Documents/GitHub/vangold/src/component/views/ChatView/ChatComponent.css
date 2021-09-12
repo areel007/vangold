@@ -658,7 +658,8 @@
 }
 .popoverBox {
   width: 340px;
-  height: 264px;
+  max-height: 264px;
+  padding-bottom: 20px;
   background: #ffffff;
   box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -709,6 +710,12 @@
 }
 .popover__links a:hover {
   background: #f7f6f6;
+}
+.chat-component-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
 }
 .open_popover_btn {
   height: 100%;
