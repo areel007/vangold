@@ -37,6 +37,8 @@ import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
 import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
 import GroupChatComponentThree from './component/views/ChatView/GroupChatView/ChatComponent3';
+import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
+import Stories from './component/views/ChatView/GroupChatView/Stories';
 
 // import DashboardHeader from './component/core-ui/header/dashboard-header';
 import ChatComponent from './component/views/ChatView/ChatComponent';
@@ -202,6 +204,12 @@ function App() {
                     </Route>
                     <Route path="/profile/group-chat3">
                         <GroupChatComponentThree />
+                    </Route>
+                    <Route path="/profile/ChatCall">
+                        <ChatCall />
+                    </Route>
+                    <Route path="/profile/stories">
+                        <Stories />
                     </Route>
                     <Route path="/freelancer-profile">
                         <FreelancerProfile />
