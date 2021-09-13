@@ -1,6 +1,6 @@
 import React from 'react';
 import "../../core-ui/auth/authstyle.css"
-import bannerImage from "../../../assets/images/vangold-banner-img2.png"
+import bannerImage from "../../../assets/images/vangold-homepae-baner-img.png"
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import { withStyles } from '@material-ui/core/styles';
@@ -71,7 +71,7 @@ const AbBanner = (props) => {
                             <div className="banner__button">
                                 <button className="banner__text__button" onClick={handleClickOpen}>Hire a Freelancer</button>
                                 <button className="banner__text__button findwork__btn" onClick={handleClickOpen}>Find Work</button>
-                            </div>
+                            </div> 
                         </div>
                         <div className="bannerTwo__image">
                             <img src={bannerImage} alt="banner"/>

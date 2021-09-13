@@ -20,7 +20,7 @@ const MainSectionTwo = (props) => {
             </div>
             <div className="card-title">
               <h2>Browse Jobs</h2>
-            </div>
+            </div> 
             <div className="card-article">
               <p>
                 Freelancers can bid for different jobs on VanGold based on their
@@ -79,13 +79,13 @@ const MainSectionTwo = (props) => {
         <div className="secure-payment-section">
           <div className="container">
             <div className="inner__secure-payment-section">
-              <div className="looking-for-talent-image secure-payment-section-img">
+              <div className="secure-payment-section-img">
                 <img
                   src="images/popular-service.png"
                   alt="looking for talent"
                 />
               </div>
-              <div className="looking-for-talent-text">
+              <div className="secure-payment-text">
                 <p className="popular-service-text__title">
                   Secured Payment System
                 </p>
@@ -100,7 +100,7 @@ const MainSectionTwo = (props) => {
         </div>
         <div className="our-top-freelancers">
               <div className="inner-our-top-freelancers">
-                <div className="container">
+                <div className="container our-top-freelancers-header">
                   <h2>Our Top Freelancers</h2>
                 </div>
                 <HomePageCards cardDetails={props.cardDetails} />

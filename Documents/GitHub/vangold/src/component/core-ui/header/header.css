@@ -23,7 +23,7 @@ header {
   font-family: var(--mulish);
   font-style: normal;
   font-weight: var(--font-wieght-bold);
-  font-size: 24px;
+  font-size: var(--fs-24);
   line-height: 30px;
   color: var(--secondary);
 }
@@ -46,6 +46,21 @@ header {
   align-items: center;
   font-family: var(--mulish);
   text-decoration: none;
+}
+.mobile-sign-in-link {
+  width: 100%;
+  position: relative;
+  left: 30px;
+  display: none;
+}
+.mobile-sign-in-link a {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-14);
+  line-height: 21px;
+  text-align: center;
+  color: #4F4F4F;
 }
 .language {
   cursor: pointer;
@@ -193,7 +208,7 @@ header {
   line-height: 24px;
   color: #333333;
 }
-.nav-text-pro{
+.nav-text-pro {
   font-family: var(--mulish);
   font-style: normal;
   font-weight: bold;

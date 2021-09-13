@@ -1,12 +1,4 @@
 
-.log-in__inner {
-  width: 100%;
-  display: flex;
-  gap: 30px;
-  margin-top: 60px;
-  margin-bottom: 6rem;
-}
-
 .dont-have-account {
   width: 100%;
   text-align: right;
@@ -19,20 +11,4 @@
 }
 .dont-have-account a {
   color: var(--primary);
-}
-.log-in__image{
-  margin-bottom: 175px;
-}
-.log-in__image,
-.log-in__form {
-  width: 100%;
-}
-.log-in__image img {
-  width: 685px;
-  height: 664.3px;
-}
-@media screen and (max-width: 767px) {
-  .log-in__image {
-    display: none;
-  }
 }

@@ -10,8 +10,8 @@
   overflow: hidden;
   /* cursor: pointer; */
 }
-.about-us-u-card:hover .about-us-card-image{
-    opacity:0.9;
+.about-us-u-card:hover .about-us-card-image {
+  opacity: 0.9;
 }
 .about-us-card-image {
   height: 375px;
@@ -19,6 +19,10 @@
 .talent-card:hover .card-image img {
   transform: scale(1.2);
   transition: all 0.5s ease;
+}
+.card-image img {
+  width: 273px;
+  height: 229px;
 }
 .talent-card__inner {
   width: 100%;

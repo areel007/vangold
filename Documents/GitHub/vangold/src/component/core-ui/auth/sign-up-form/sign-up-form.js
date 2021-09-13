@@ -4,9 +4,11 @@ import "../authstyle.css";
 const SignUpForm = () => {
 
   return (
-    <form className="auth__form">
+    <>
+      <form className="auth__form">
       <div className="form__title">
-        <h1>Create account</h1>
+        <h1 className="desktopAuth_h1">Create account</h1>
+        <h1 className="mobileAuth_h1">Create a VanGold account</h1>
       </div>
       <div className="form-input__container">
         <div className="form__-control">
@@ -79,7 +81,8 @@ const SignUpForm = () => {
                 <span>Continue with Facebook</span>
             </button>
         </div>
-    </form>
+      </form>
+    </>
   );
 };
 

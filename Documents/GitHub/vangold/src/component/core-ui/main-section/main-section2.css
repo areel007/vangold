@@ -24,12 +24,16 @@
 .inner__secure-payment-section {
   display: flex;
   align-items: center;
-  padding: 6.4rem 0;
-  gap: 120px;
+  padding-top: 32px;
+  padding-bottom: 32.25px;
+  gap: 70px;
 }
 .secure-payment-section-img {
-  width: 495px;
-  height: 536px;
+  max-width: 495px;
+  /* height: 536px; */
+}
+.secure-payment-section-img img{
+  width: 100%;
 }
 .card-title h2 {
   font-family: var(--inter);
@@ -51,15 +55,17 @@
   color: #18191f;
 }
 .home-two-card-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 48px;
   margin-bottom: 64px;
+  gap: 95px;
 }
 .home-two-card {
   padding: 40px 32px;
-  width: 350px;
-  height: 290px;
+  max-width: 350px;
+  min-height: 290px;
   background-color: var(--white);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -84,4 +90,12 @@
 }
 .inner-our-top-freelancers{
   height: 300px;
+}
+.our-top-freelancers-header h2{
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 64px;
+  color: #164d00;
 }

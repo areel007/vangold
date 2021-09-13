@@ -27,6 +27,9 @@ const Header = (props) => {
                         location.pathname==='/profile/jobs/all-jobs'||
                         location.pathname==='/profile/jobs/my-job'||
                         location.pathname==='/profile/chat'||
+                        location.pathname==='/profile/group-chat'||
+                        location.pathname==='/profile/ChatCall'||
+                        location.pathname==='/profile/stories'||
                         location.pathname==='/profile/edit'?
                             <div className='header-after-login'>
                                 <div className="search__container">
@@ -135,10 +138,14 @@ const Header = (props) => {
                                 </div>
                     }
 
+                    {/* <div className="mobile-sign-in-link">
+                        <Link to="/login">Sign in</Link>
+                    </div> */}
+
                     <svg
-                        height="24px"
+                        height="50px"
                         viewBox="0 0 24 24"
-                        width="24px"
+                        width="50px"
                         fill="#000000"
                         className='hamburger'
                         onClick={props.toggleMobileNav}
