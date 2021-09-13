@@ -1,5 +1,5 @@
 .banner {
-  width: 100%;
+  max-width: 100%;
   background-color: var(--white);
 }
 .banner__inner {
@@ -64,17 +64,16 @@
 }
 .bannerTwo__text {
   margin-top: 90px;
-}
+} 
 .banner__text__title {
   font-family: var(--inter);
   font-style: normal;
   font-weight: var(--font-wieght-extrabold);
-  font-size: var(--fs-48);
+  font-size: 48px;
   line-height: 6.4rem;
   color: #18191f;
-  width: 63.9rem;
   margin-bottom: 1.6rem;
-  width: 450px;
+  max-width: 450px;
 }
 .banner2__text__title {
   color: var(--primary);

@@ -23,7 +23,7 @@ header {
   font-family: var(--mulish);
   font-style: normal;
   font-weight: var(--font-wieght-bold);
-  font-size: 24px;
+  font-size: var(--fs-24);
   line-height: 30px;
   color: var(--secondary);
 }

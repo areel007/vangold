@@ -71,7 +71,7 @@ const AbBanner = (props) => {
                             <div className="banner__button">
                                 <button className="banner__text__button" onClick={handleClickOpen}>Hire a Freelancer</button>
                                 <button className="banner__text__button findwork__btn" onClick={handleClickOpen}>Find Work</button>
-                            </div>
+                            </div> 
                         </div>
                         <div className="bannerTwo__image">
                             <img src={bannerImage} alt="banner"/>
