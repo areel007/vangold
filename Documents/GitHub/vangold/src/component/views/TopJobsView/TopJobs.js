@@ -68,10 +68,10 @@ const TopJobs = (props) => {
                             <div className="TopJobs-info">
                                 <h1 className="job-_-_name">{job.name}</h1>
                                 <p className="job-_-_address">{job.address}</p>
-                                <p className="job-_-_descrip">{job.descrip}</p>
+                                <span className="job-_-_descrip">{job.descrip}</span>
                             </div>
                             <div className="love-icon">
-                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg className="love__icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M10 18.35L8.55 17.03C3.4 12.36 0 9.28 0 5.5C0 2.42 2.42 0 5.5 0C7.24 0 8.91 0.81 10 2.09C11.09 0.81 12.76 0 14.5 0C17.58 0 20 2.42 20 5.5C20 9.28 16.6 12.36 11.45 17.04L10 18.35Z" fill="#4F4F4F" fill-opacity="0.5" />
                                 </svg>
                             </div>
@@ -86,6 +86,10 @@ const TopJobs = (props) => {
                                 <span className='text-16px top-jobs_NEW-TEXT me-4' style={{ color: "#083EB1", fontWeight: "bold" }}>New</span>
                                 <span className='text-16px top-jobs_NEW-TEXT me-4' style={{ fontWeight: "bold" }}>4d</span>
                             </div>
+                        </div>
+                        <div className='top-jobs_NEW-TEXT-box'>
+                            <span className='text-16px top-jobs_NEW-TEXT me-4' style={{ color: "#083EB1", fontWeight: "bold" }}>New</span>
+                            <span className='text-16px top-jobs_NEW-TEXT me-4' style={{ fontWeight: "bold" }}>4d</span>
                         </div>
                     </div>
                 </div>
@@ -104,11 +108,11 @@ const TopJobs = (props) => {
             <div className="container">
                 <p className="top__jobs__freelancers">Vangold > Browse Jobs</p>
                 <SearchBox />
-                <div className="inn-top-freelancer">
-                    <div className="">
+                <div className="inn-top-freelancer"> 
+                    <div className="sideBarTopJobs">
                         <SideCheckBoxes />
                     </div>
-                    <div className="freelancers-list__freelancer">
+                    <div className="freelancers-list__freelancer jobs-list__jobs">
                         {displayjobs}
                         <div className="paginationContainer">
                             <ReactPaginate

@@ -6,8 +6,8 @@ const ChangePasswordForm = () => {
   return (
     <form className="auth__form">
       <div className="form__title">
-        <h1>Reset your Password</h1>
-        <p>Create a new password for your account. It must be at least 8 characters long.</p>
+        <h1>Reset your Password</h1> 
+        <p className="authResetPassword__P">Create a new password for your account. It must be at least 8 characters long.</p>
       </div>
       <div className="form-input__container">
         <div className="form__-control">
