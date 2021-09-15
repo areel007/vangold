@@ -10,7 +10,7 @@ const LogInForm = () => {
       <div className="form__title">
         <h1 className="desktopAuth_h1">Log in</h1>
         <h1 className="mobileAuth_h1">Sign in to VanGold</h1>
-        <p>Log in with your data that you entered during your registration</p>
+        <p className="authLogin__P">Log in with your data that you entered during your registration</p>
       </div>
       <div className="form-input__container">
         <div className="form__-control">

@@ -16,6 +16,7 @@ const SignUp = () => {
                         <SignUpForm />
                     </div>
                 </div>
+                <p className="authBottomLink">Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </div>
     )

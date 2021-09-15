@@ -7,7 +7,7 @@ const Star = props => {
                 props.stars.map((_, index) => {
                     return (
                         props.currentValue > index ?
-                            <svg
+                            <svg className="stars"
                                 width="20"
                                 height="20"
                                 viewBox="0 0 20 20"
@@ -18,7 +18,7 @@ const Star = props => {
                             7.99994H0.000488281L6.18049 12.4099L3.83049 19.9999L10.0005
                             15.3099L16.1805 19.9999L13.8305 12.4099L20.0005 7.99994H12.4305Z" fill="#F5A623"/>
                             </svg> :
-                            <svg
+                            <svg className="stars"
                                 width="20"
                                 height="19"
                                 viewBox="0 0 20 19"

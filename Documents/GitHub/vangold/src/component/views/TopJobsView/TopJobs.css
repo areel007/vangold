@@ -33,19 +33,15 @@
   line-height: 59px;
   color: var(--white);
 }
-.sideBarTopJobs {
-  width: 250px;
-  height: 1579px;
-  background: #c2c4bfab;
+.jobs-list__jobs{
+  width: 100% !important;
 }
-
 .TopJobsContent__BOX {
-  width: 100%;
-  height: 250px;
+  max-width: 100%;
   background: #f2f2f2;
   border-radius: 4px;
   margin-bottom: 12px;
-  padding: 24px;
+  padding: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +68,8 @@
 }
 .TopJobs-info {
   width: 100%;
+  height: 100%;
+  white-space: normal;
 }
 .TopJobsContent__BOX-BOTTOM {
   width: 100%;

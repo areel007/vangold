@@ -6,6 +6,7 @@ import SignUp from "./component/views/auth/sign-up";
 import LogIn from "./component/views/auth/log-in";
 import ChangePassword from "./component/views/auth/change-password";
 import PasswordResetSuccess from "./component/views/auth/password-reset-success";
+import AccountVerifySuccessful from "./component/views/auth/account-verify-success";
 import TermsAndConditions from "./component/views/terms-and-conditions";
 import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
@@ -126,6 +127,9 @@ function App() {
                     </Route>
                     <Route path="/passwordresetsuccessful">
                         <PasswordResetSuccess />
+                    </Route>
+                    <Route path="/accountverifysuccessful">
+                        <AccountVerifySuccessful />
                     </Route>
                     <Route path="/VerifyEmail">
                         <VerifyEmail />
