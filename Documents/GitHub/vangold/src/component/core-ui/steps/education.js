@@ -56,14 +56,13 @@ import {years} from "./years"
     }
   };
 const Education = (props) => {
-    const [open, setOpen] = React.useState(false);
-    const [startDate, setStartDate] = useState(new Date());
-    const [startDateTwo, setStartDateTwo] = useState(new Date());
+    const [open, setOpen] = useState(false);
+    // const [startDate, setStartDate] = useState(new Date());
+    // const [startDateTwo, setStartDateTwo] = useState(new Date());
     const [educationHistory, setEducationHistory] = useState([])
     const [schoolInput, setSchoolInput] = useState("")
     const [schoolDegree, setSchoolDegree] = useState("")
     const [course, setCourse] = useState("")
-    // const [dataToDisplay] = useState(years)
     const [showDropdownFrom, setShowDropdownFrom] = useState(false)
     const [showDropdownTo, setShowDropdownTo] = useState(false)
     const [selectDropdownHeaderFrom, setSelectDropdownHeaderFrom] = useState("From")
@@ -133,6 +132,9 @@ const Education = (props) => {
         ])
         setSchoolInput("")
         setSchoolDegree("")
+        setCourse("")
+        setSelectDropdownHeaderFrom("From")
+        setSelectDropdownHeaderTo("To")
     }
 
     const editHistory = (history) => {
@@ -247,23 +249,6 @@ const Education = (props) => {
                                     selectDropdownHeader={selectDropdownHeaderTo}
                                     upDateDropdownHeader={upDateDropdownHeaderTo}
                                 />
-                                {/*<div className="form-input">*/}
-                                {/*    <DatePicker*/}
-                                {/*        selected={startDate}*/}
-                                {/*        onChange={(date) => setStartDate(date)}*/}
-                                {/*        placeholderText="From"*/}
-                                {/*        calendarClassName="rasta-stripes"*/}
-                                {/*    />*/}
-                                {/*</div>*/}
-                                {/*<div className="form-input">*/}
-                                {/*    <DatePicker*/}
-                                {/*        selected={startDateTwo}*/}
-                                {/*        onChange={(date) => setStartDateTwo(date)}*/}
-                                {/*        placeholderText="To"*/}
-                                {/*        calendarClassName="rasta-stripes"*/}
-                                {/*    />*/}
-
-                                {/*</div>*/}
                             </div>
                         </div>
                         <div className="form-input">
@@ -276,7 +261,7 @@ const Education = (props) => {
                                     Cancel
                                 </Button>
                                 <Button className={classes.Button2} onClick={ () => { handleClose(); onOnclickHandler(); onFormSubmit(); } } color="primary">
-                                    Save and Next
+                                    Save
                                 </Button>
                             </div>
                         </DialogActions>

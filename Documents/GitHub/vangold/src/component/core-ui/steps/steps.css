@@ -25,6 +25,10 @@
   color: #141414;
   margin-bottom: 4rem;
 }
+.step {
+  --select-dropdown-component-width: 350px;
+  --select-dropdown-component-margin-bottom: 32px;
+}
 .step form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -452,4 +456,31 @@ form {
 
 .education__edit {
   margin-right: 12px;
+}
+
+.work__experience {
+  display: flex;
+  justify-content: space-between;
+}
+.language-and-edit {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.language__language {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+  margin-bottom: 8px;
+}
+.language__proficiency {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
 }
