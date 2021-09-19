@@ -1,6 +1,9 @@
 .select-dropdown-component {
   width: 100%;
   position: relative;
+  width: var(--select-dropdown-component-width, 100%);
+  margin-bottom: var(--select-dropdown-component-margin-bottom, 0);
+  position: relative;
 }
 .select-dropdown-header {
   padding: 15px;
@@ -50,4 +53,23 @@
 }
 .select-dropdown-item:hover p {
   color: white !important;
+}
+.work-experience-history {
+  margin-bottom: 40px;
+}
+.position-and-company {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+}
+.start-and-end-date {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
 }

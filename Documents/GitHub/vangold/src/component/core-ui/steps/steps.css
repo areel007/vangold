@@ -28,6 +28,10 @@
   color: #141414;
   margin-bottom: 4rem;
 }
+.step {
+  --select-dropdown-component-width: 350px;
+  --select-dropdown-component-margin-bottom: 32px;
+}
 .step form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -175,7 +179,7 @@
   margin-bottom: 85px;
   cursor: pointer;
 }
-.modalformHeader{
+.modalformHeader {
   max-width: 750px;
   margin: auto;
 }
@@ -206,7 +210,7 @@
   background-color: #ffffff !important;
   font-size: 4rem !important;
 }
-.pure-modal .panel-heading{
+.pure-modal .panel-heading {
   background-color: #ffffff !important;
 }
 .edu-btns {
@@ -234,7 +238,7 @@
   outline: none;
 }
 .edu-btns .button2 {
-  background-color: #45B618;
+  background-color: #45b618;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -500,4 +504,30 @@ form {
 
 .education__edit {
   margin-right: 12px;
+}
+.work__experience {
+  display: flex;
+  justify-content: space-between;
+}
+.language-and-edit {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.language__language {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+  margin-bottom: 8px;
+}
+.language__proficiency {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
 }

@@ -1,9 +1,7 @@
-
 .stepper {
   display: flex;
   align-items: center;
   padding: 1.8rem;
-  border-radius: 0.8rem;
   background: rgba(217, 218, 215, 0.2);
   border-radius: 8px;
 }

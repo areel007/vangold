@@ -11,11 +11,13 @@ import 'react-pure-modal/dist/react-pure-modal.min.css';
 
 const Education = (props) => {
     const [modal, setModal] = useState(false);
+    const [open, setOpen] = useState(false);
+    // const [startDate, setStartDate] = useState(new Date());
+    // const [startDateTwo, setStartDateTwo] = useState(new Date());
     const [educationHistory, setEducationHistory] = useState([])
     const [schoolInput, setSchoolInput] = useState("")
     const [schoolDegree, setSchoolDegree] = useState("")
     const [course, setCourse] = useState("")
-    // const [dataToDisplay] = useState(years)
     const [showDropdownFrom, setShowDropdownFrom] = useState(false)
     const [showDropdownTo, setShowDropdownTo] = useState(false)
     const [selectDropdownHeaderFrom, setSelectDropdownHeaderFrom] = useState("From")
@@ -77,6 +79,9 @@ const Education = (props) => {
         ])
         setSchoolInput("")
         setSchoolDegree("")
+        setCourse("")
+        setSelectDropdownHeaderFrom("From")
+        setSelectDropdownHeaderTo("To")
     }
 
     const editHistory = (history) => {

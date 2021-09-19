@@ -2,12 +2,6 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import { withStyles } from '@material-ui/core/styles';
 import {v4 as uuidv4} from "uuid"
 import SelectDropdown from "../select-dropdown/select-dropdown";
 import {years} from "./years";
@@ -15,46 +9,6 @@ import {months} from "./months";
 import PureModal from 'react-pure-modal';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 
-  const styles = {
-    paper: { 
-        maxWidth: "850px",
-        paddingTop: "20px",
-    },
-    Button1: {
-      backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontFamily: 'mulish',
-      fontSize: '18px',
-      textAlign: 'center',
-      width: '106px',
-      textTransform: 'capitalize',
-      height: '39px',
-      color: '#45B618',
-    '&:hover': {
-        backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      }
-    },
-    Button2: {
-      backgroundColor: '#45B618',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: '18px',
-      textAlign: 'center',
-      fontFamily: 'mulish',
-      textTransform: 'capitalize',
-      width: '174px',
-      height: '39px',
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#45B618',
-      }
-    }
-  };
 const Employment = (props) => {
     const [modal, setModal] = useState(false);
     const [educationHistory, setEducationHistory] = useState([])
@@ -121,18 +75,6 @@ const Employment = (props) => {
         } else {
             setShowDropdownYearsTwo(false)
         }
-    }
-
-    const onSchoolInputChange = (event) => {
-        setSchoolInput(event.target.value)
-    }
-
-    const onSchoolDegreeChange = (event) => {
-        setSchoolDegree(event.target.value)
-    }
-
-    const onCourseInputChange = (event) => {
-        setCourse(event.target.value)
     }
 
     const onFormSubmit = () => {
@@ -302,4 +244,4 @@ const Employment = (props) => {
     )
 }
 
-export default withStyles(styles)(Employment);
+export default Employment;
