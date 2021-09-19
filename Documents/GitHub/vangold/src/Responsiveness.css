@@ -44,7 +44,6 @@
     flex-direction: column;
     gap: 32px;
   }
-  .collaborate-image2,
   .bannerTwo__image {
     display: none;
   }
