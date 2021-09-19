@@ -15,6 +15,11 @@
   width: 100%;
   gap: 24px;
 }
+.sideBarTopJobs {
+  height: 1079px;
+  background: #c2c4bfab;
+}
+
 .top-jobs_header {
   background: #45b618;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
@@ -33,7 +38,10 @@
   line-height: 59px;
   color: var(--white);
 }
-.jobs-list__jobs{
+.top-jobs_NEW-TEXT-box {
+  display: none;
+}
+.jobs-list__jobs {
   width: 100% !important;
 }
 .TopJobsContent__BOX {
@@ -309,7 +317,7 @@
   padding: 15px;
 }
 
-.description__about-yourself-btn{
+.description__about-yourself-btn {
   display: flex;
   gap: 40px;
   margin-top: 40px;

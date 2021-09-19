@@ -17,7 +17,7 @@ const TopJobsTwo = (props) => {
         <p className="top__jobs__freelancers">Vangold > Browse Jobs</p>
         <SearchBox />
         <div className="inn-top-freelancer">
-          <div className="">
+          <div className="sideBarTopJobs d-none d-lg-block">
             <SideCheckBoxes />
           </div>
           <div className="top__Jobs__view">

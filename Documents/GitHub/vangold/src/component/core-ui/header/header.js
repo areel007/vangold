@@ -26,7 +26,7 @@ const Header = (props) => {
                         location.pathname==='/profile/talent/find-talent'||
                         location.pathname==='/profile/jobs/all-jobs'||
                         location.pathname==='/profile/jobs/my-job'||
-                        location.pathname==='/profile/chat'||
+                        location.pathname==='/profile/chatv'||
                         location.pathname==='/profile/group-chat'||
                         location.pathname==='/profile/ChatCall'||
                         location.pathname==='/profile/stories'||

@@ -131,7 +131,7 @@ const TopFreelancer = (props) => {
                 <p className="top__jobs__freelancers">Vangold > Browse Jobs</p>
                 <SearchBox />
                 <div className="inn-top-freelancer">
-                    <div className="sideBarTopFreealancer">
+                    <div className="sideBarTopFreealancer d-none d-lg-block">
                         <SideCheckBoxes />
                     </div> 
                     <div className="freelancers-list__freelancer">

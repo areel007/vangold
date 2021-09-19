@@ -1,43 +1,34 @@
 import "./style.css"
-import React from "react";
-import { TiArrowSortedDown } from 'react-icons/ti';
-import LanguageSelectData from "../../steps/languageData.json";
-import useOnclickOutside from "react-cool-onclickoutside";
-
+import React, { useState } from "react";
+import {languages} from "../../steps/languageData";
+import SelectDropdown from "../../select-dropdown/select-dropdown";
 
 const LanguageSelect = props => {
-    
-    const { useState } = React;
-  
-    const [isOpen, setOpen] = useState(false);
-    const [items] = useState(LanguageSelectData);
-    const [selectedItem, setSelectedItem] = useState(null);
-    
-    const toggleDropdown = () => setOpen(!isOpen);
-    
-    const handleItemClick = (id) => {
-        selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
-    }
-    
-    const ref = useOnclickOutside(() => {
-        setOpen(false);
-      });
+    const [showDropdownTo, setShowDropdownTo] = useState(false)
+    const [selectDropdownHeaderTo, setSelectDropdownHeaderTo] = useState("Select")
 
+    const upDateDropdownHeaderTo = (event) => {
+        setSelectDropdownHeaderTo(event.target.innerText)
+        setShowDropdownTo(false)
+    }
+
+    const toggleDropdownTo = () => {
+        if (!showDropdownTo) {
+            setShowDropdownTo(true)
+        } else {
+            setShowDropdownTo(false)
+        }
+    }
     return (
-        <div className="br-select-category-component lang-select-component">
-           <div style={{width: "350px"}} className='b-category-dropdown'>
-                <div style={{width: "350px"}} className='b-dropdown-header b-category-dropdown-header' onClick={toggleDropdown}>
-                    {selectedItem ? items.find(item => item.id == selectedItem).label : "Select "}
-                    <TiArrowSortedDown/>
-                </div>
-                <div ref={ref} style={{width: "350px"}} className={`b-category-dropdown-body b-language-dropdown-body ${isOpen && 'open'}`}>
-                    {items.map(item => (
-                    <div style={{width: "300px"}} className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
-                        {item.label}
-                    </div>
-                    ))}
-                </div>
-                
+        <div className="lang-select-component">
+            <div className="languageSelectTwo">
+                <SelectDropdown
+                    dataToDisplay={languages}
+                    toggleDropdown={toggleDropdownTo}
+                    showDropdown={showDropdownTo}
+                    selectDropdownHeader={selectDropdownHeaderTo}
+                    upDateDropdownHeader={upDateDropdownHeaderTo}
+                />
             </div>
         </div>
     )

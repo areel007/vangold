@@ -40,7 +40,7 @@ const GroupChatView = () => {
                     <Col xs={10} lg={2} className="mx-auto mt-5">
                         <SideMenu />
                     </Col>
-                    <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
+                    <Col xs={12} md={10} lg={10} className="mx-auto bg-color d-none d-lg-block">
                         <div className="chat__container-header">
                             <p className="chat__container-title">Inbox</p>
                             <p className="chat__container-subtitle">Read, respond and respond to messages</p>

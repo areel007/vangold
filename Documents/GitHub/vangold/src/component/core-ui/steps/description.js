@@ -5,7 +5,7 @@ const Description = () => {
         <div className="step">
             <p className="step-title">Description</p>
             <span className="step-subtitle">Give a brief description about yourself</span>
-            <textarea>
+            <textarea className="textarea-description-steps">
             </textarea>
 
         </div>
