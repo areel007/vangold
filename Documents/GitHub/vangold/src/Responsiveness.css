@@ -10,16 +10,19 @@
   .mobile-sign-in-link {
     display: block !important;
   }
-  .sideBarTopFreealancer,
-  .sideBarTopJobs {
-    display: none !important;
-  }
   .TopFreealancerContent,
   .freelancers-list__freelancer {
     width: 100% !important;
   }
   .TopFreealancerContent {
     width: 100% !important;
+  }
+  .side-nav-steppers {
+    display: none !important;
+  }
+  .brand-registration__inner,
+  .freelancer-registration__inner {
+    grid-template-columns: 1fr !important;
   }
 }
 @media screen and (max-width: 523px) {
@@ -41,7 +44,6 @@
     flex-direction: column;
     gap: 32px;
   }
-  .collaborate-image2,
   .bannerTwo__image {
     display: none;
   }
@@ -70,6 +72,10 @@
     position: relative;
     z-index: 1;
   }
+  .modal__body {
+    width: 700px !important;
+    margin-top: 20px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .home-two .home-two-title h2,
@@ -78,13 +84,19 @@
   .inner-our-top-freelancers .our-top-freelancers-header h2,
   .collaborate-text2 .collaborate-text__title2,
   .getNotifyBannerPara1,
-  .getNotifyBannerPara2 {
+  .getNotifyBannerPara2,
+  .b-step-title,
+  .step-title,
+  .modalformHeader h2 {
     font-size: var(--fs-24) !important;
   }
   .mobileAuth_h1,
   .form__title h1 {
     font-size: var(--fs-16) !important;
     text-align: center;
+  }
+  .rate-form-P {
+    font-size: var(--fs-12) !important;
   }
   .authResetPassword__P {
     text-align: center;
@@ -107,8 +119,23 @@
     font-size: var(--fs-18);
   }
   .home-two-card .card-article p,
-  .collaborate-text2 .collaborate-button2 {
-    font-size: var(--fs-14);
+  .collaborate-text2 .collaborate-button2,
+  .b-step form .vangold-input label,
+  .step form .vangold-input label,
+  .upload-passport label,
+  .step-subtitle,
+  .form-input label,
+  .datePickerBox label,
+  .select-dropdown-item p,
+  .add_edu-btn {
+    font-size: var(--fs-14) !important;
+  }
+  .b-save-and-next button,
+  .save-and-next button {
+    width: 122px !important;
+    height: 42px !important;
+    font-size: var(--fs-14) !important;
+    text-align: center;
   }
   .collaborate-text2 .collaborate-button2 {
     width: 143px;
@@ -136,7 +163,7 @@
     text-align: center;
   }
   .left_bottom_f {
-    margin-bottom: var(--fs-20);
+    margin-bottom: 20px;
   }
 
   .footer__inner {
@@ -207,6 +234,16 @@
   .top__jobs__freelancers {
     display: none;
   }
+  .freelancer-regs-step,
+  .step textarea {
+    margin-bottom: 32px !important;
+  }
+  .edu-btns {
+    justify-content: space-between !important;
+  }
+  .inn__datePickerBox {
+    gap: 21px !important;
+  }
 }
 @media screen and (max-width: 450px) {
   .header__inner .logo {
@@ -251,6 +288,9 @@
     left: 0 !important;
     margin-top: 24px;
   }
+  .top-jobs_NEW-TEXT-box{
+    display: block !important;
+  }
   .verify-logo h2 {
     font-size: var(--fs-18) !important;
   }
@@ -287,12 +327,17 @@
     width: 100%;
     text-align: right;
   }
+  .location-br-select {
+    gap: 21px !important;
+  }
   .job-_-_descrip,
-  .TopJobsContent__BOX-BOTTOM_button button {
+  .TopJobsContent__BOX-BOTTOM_button button,
+  .select-dropdown-header p {
     font-size: var(--fs-12) !important;
   }
   .inn__TopFreealancerContent__BOX-details_BOTTOM button,
-  .job-_-_address, .top-jobs_NEW-TEXT {
+  .job-_-_address,
+  .top-jobs_NEW-TEXT {
     font-size: var(--fs-14) !important;
   }
   .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1) {
@@ -324,6 +369,10 @@
     width: 13.33px !important;
     height: 12.23px !important;
   }
+  .edu-btns .button1,
+  .edu-btns .button2 {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 850px) {
   .auth-form__image {
@@ -354,5 +403,18 @@
   }
   .inn_SearchInputBoxRight {
     display: none !important;
+  }
+  .brand-registration,
+  .freelancer-registration {
+    margin-bottom: 100px !important;
+  }
+  .brand-registration__inner {
+    grid-template-columns: 1fr !important;
+  }
+  .b-save-and-next {
+    margin-top: 36px !important;
+  }
+  .b-step textarea {
+    margin-bottom: 32px !important;
   }
 }

@@ -2,60 +2,15 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import { withStyles } from '@material-ui/core/styles';
-// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import {v4 as uuidv4} from "uuid"
 import SelectDropdown from "../select-dropdown/select-dropdown";
-// import YearsSelect from "../inputs/select/years-select";
 import {years} from "./years"
+import PureModal from 'react-pure-modal';
+import 'react-pure-modal/dist/react-pure-modal.min.css';
 
-  const styles = {
-    paper: { 
-        minWidth: "850px",
-        paddingTop: "20px",
-    },
-    Button1: {
-      backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontFamily: 'mulish',
-      fontSize: '18px',
-      textAlign: 'center',
-      width: '106px',
-      textTransform: 'capitalize',
-      height: '39px',
-      color: '#45B618',
-    '&:hover': {
-        backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      }
-    },
-    Button2: {
-      backgroundColor: '#45B618',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: '18px',
-      textAlign: 'center',
-      fontFamily: 'mulish',
-      textTransform: 'capitalize',
-      width: '174px',
-      height: '39px',
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#45B618',
-      }
-    }
-  };
 const Education = (props) => {
+    const [modal, setModal] = useState(false);
     const [open, setOpen] = useState(false);
     // const [startDate, setStartDate] = useState(new Date());
     // const [startDateTwo, setStartDateTwo] = useState(new Date());
@@ -98,14 +53,6 @@ const Education = (props) => {
         }
     }
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
     const onSchoolInputChange = (event) => {
         setSchoolInput(event.target.value)
     }
@@ -138,7 +85,7 @@ const Education = (props) => {
     }
 
     const editHistory = (history) => {
-        setOpen(true)
+        setModal(true)
         setSchoolInput(history.schoolName)
         setSchoolDegree(history.degree)
         if (schoolInput !== history.schoolName || schoolDegree !== history.degree) {
@@ -155,7 +102,6 @@ const Education = (props) => {
   let onOnclickHandler = (e) => {
     console.log(textInput.current.value); 
   };
-    const { classes } = props;
     return (
         <div className="step">
             <p className="step-title">Education</p>
@@ -201,11 +147,21 @@ const Education = (props) => {
                 }
 
             </div>
-            <button className="add_edu-btn" onClick={handleClickOpen}><FiPlus /> Add Education</button>
-            <Dialog classes={{ paper: classes.paper}} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle disableTypography className="DialogTitle">Add Education</DialogTitle>
-                <DialogContent>
+            <button className="add_edu-btn" onClick={() => setModal(true)}><FiPlus /> Add Education</button>
+            <PureModal className="modal__body"
+                header={
+                    <div className="modalformHeader">
+                        <h2>Add Education</h2>
+                    </div>
+                }
+                isOpen={modal}
+                onClose={() => {
+                    setModal(false);
+                    return true;
+                }}
+                >
                 <div className="edu__form">
+                    
                     <form>
                         <div className="form-input">
                             <label htmlFor="School">School</label>
@@ -255,21 +211,17 @@ const Education = (props) => {
                             <label htmlFor="Description">Description</label>
                             <textarea></textarea>
                         </div>
-                        <DialogActions>
-                            <div className="edu-btns">
-                                <Button className={classes.Button1} onClick={handleClose} color="primary">
-                                    Cancel
-                                </Button>
-                                <Button className={classes.Button2} onClick={ () => { handleClose(); onOnclickHandler(); onFormSubmit(); } } color="primary">
-                                    Save
-                                </Button>
-                            </div>
-                        </DialogActions>
+                        <div className="edu-btns">
+                            <button className="button1" onClick={() => setModal(false)} color="primary">
+                                Cancel
+                            </button>
+                            <button className="button2" onClick={ () => { onOnclickHandler(); onFormSubmit(); setModal(false) } } color="primary">
+                                Save and Next
+                            </button>
+                        </div>
                     </form>
                 </div>
-                </DialogContent>
-                
-            </Dialog>
+            </PureModal>;
             <div className="skip_this_step">
                 <Link to="#">Skip this step</Link>
             </div>
@@ -277,4 +229,4 @@ const Education = (props) => {
     )
 }
 
-export default withStyles(styles)(Education);
+export default Education;

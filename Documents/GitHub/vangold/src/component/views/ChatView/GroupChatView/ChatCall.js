@@ -39,7 +39,7 @@ const ChatCall = () => {
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5">
+                    <Col xs={10} lg={2} className="mx-auto d-none d-lg-block mt-5">
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">

@@ -64,7 +64,7 @@
 }
 .bannerTwo__text {
   margin-top: 90px;
-} 
+}
 .banner__text__title {
   font-family: var(--inter);
   font-style: normal;
@@ -127,7 +127,20 @@
   transform: scale(1.1);
   transition: all 0.8s ease-in-out;
 }
-
+.homepage__modal__body {
+  width: 652px !important;
+  margin-top: 20px;
+}
+.homepage__modal__body-Header h2{
+  max-width: 452px;
+  margin: auto;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-36);
+  line-height: 42px;
+  color: #141414;
+}
 .homepage-Auth {
   display: flex;
   align-items: center;
