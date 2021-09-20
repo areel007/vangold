@@ -531,3 +531,18 @@ form {
   line-height: 19px;
   color: #333333;
 }
+.employment-history {
+  display: flex;
+  justify-content: space-between;
+}
+.company-and-position {
+  text-transform: capitalize;
+}
+.date-from-to {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
