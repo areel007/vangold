@@ -531,3 +531,43 @@ form {
   line-height: 19px;
   color: #333333;
 }
+.employment-history {
+  display: flex;
+  justify-content: space-between;
+}
+.company-and-position {
+  text-transform: capitalize;
+}
+.date-from-to {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.languages__language {
+  margin-bottom: 30px;
+}
+.language-and-proficiency {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.language-chosen {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+  text-transform: capitalize;
+}
+.language-proficiency {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}

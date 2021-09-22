@@ -1,4 +1,6 @@
 export const months = [
+    {"id": 12, "label": "Present"
+    },
     {"id": 0, "label": "January"
     },
     {"id": 1, "label": "February"
