@@ -245,7 +245,7 @@ header {
 }
 .search__container {
   width: 738px;
-  height: 40px;
+  margin-left: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,17 +270,21 @@ header {
   position: relative;
   left: 35px;
 }
-.header-after-login {
+header .header-after-login {
   display: flex;
+  justify-content: space-between;
+  padding-left: 34.78px;
+  padding-right: 32px;
+  padding: 24px;
 }
 .header-before-login {
   display: flex;
   width: 100%;
 }
 .dashboard-avatar-name-notify {
-  width: 320px;
+  width: 194px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .notification {
@@ -291,12 +295,13 @@ header {
   margin-left: -5px;
 }
 .avatarImg {
-  margin-right: 14px;
+  margin-right: 12px;
 }
 .avatarImg img {
   width: 44px;
   height: 44px;
 }
+
 .dashboard__name h2 {
   font-family: var(--mulish);
   font-style: normal;
