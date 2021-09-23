@@ -38,10 +38,12 @@ import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
 import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
 import GroupChatComponentThree from './component/views/ChatView/GroupChatView/ChatComponent3';
+import ChatBoxMobile from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile';
+import ChatBoxMobileTwo from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile2';
+import ChatBoxMobileThree from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile3';
+import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupParticipate';
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
-
-// import DashboardHeader from './component/core-ui/header/dashboard-header';
 import ChatComponent from './component/views/ChatView/ChatComponent';
 
 function App() {
@@ -208,6 +210,18 @@ function App() {
                     </Route>
                     <Route path="/profile/group-chat3">
                         <GroupChatComponentThree />
+                    </Route>
+                    <Route path="/profile/group-chat-mobile">
+                        <ChatBoxMobile/>
+                    </Route>
+                    <Route path="/profile/chat-mobile">
+                        <ChatBoxMobileTwo/>
+                    </Route>
+                    <Route path="/profile/group-chat-mobile2">
+                        <ChatBoxMobileThree/>
+                    </Route>
+                    <Route path="/profile/GroupParticipants">
+                        <GroupParticipate/>
                     </Route>
                     <Route path="/profile/ChatCall">
                         <ChatCall />

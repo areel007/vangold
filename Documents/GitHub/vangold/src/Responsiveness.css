@@ -1,3 +1,13 @@
+@media screen and (max-width: 991px) {
+  #job-descrip .border-botom {
+    border-bottom: 1px solid #00000033;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bottom-chat-footer {
+    padding-left: 12px !important;
+  }
+}
 @media screen and (max-width: 1100px) {
   header {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -17,8 +27,35 @@
   .TopFreealancerContent {
     width: 100% !important;
   }
-  .side-nav-steppers {
+  .side-nav-steppers,
+  .search__container,
+  .dashboard__name {
     display: none !important;
+  }
+  .dashboard-avatar-name-notify {
+    width: 130px !important;
+  }
+  .dashboard-avatar-name-notify .avatarImg img {
+    width: 24px;
+    height: 23.98px;
+  }
+  header .header-after-login {
+    padding-top: 12px;
+    padding-bottom: 11.62px;
+    padding: 24px;
+  }
+  .logo img{
+    width: 24px !important;
+    height: 22.38px !important;
+  }
+  .logo h2{
+    font-size: var(--fs-16) !important;
+  }
+  .dashboard-avatar-name-notify .avatarImg {
+    margin-right: 8px;
+  }
+  .dashboard-avatar-name-notify .notification {
+    margin-right: 12px;
   }
   .brand-registration__inner,
   .freelancer-registration__inner {
@@ -87,13 +124,58 @@
   .getNotifyBannerPara2,
   .b-step-title,
   .step-title,
-  .modalformHeader h2 {
+  .modalformHeader h2,
+  .chat__container-title {
     font-size: var(--fs-24) !important;
   }
   .mobileAuth_h1,
-  .form__title h1 {
+  .form__title h1,
+  .group_chat-messager-container p {
     font-size: var(--fs-16) !important;
     text-align: center;
+  }
+  .inn-chat-input-icons {
+    gap: 10px !important;
+  }
+  .mobile-message__box-component_header {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .reply__to-message__box {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+  }
+  .chat-messager-container {
+    padding: 24px !important;
+    padding-top: 16px !important;
+    padding-bottom: 5px !important;
+  }
+  .chat__container-subtitle,
+  .message__box-container .msg-P,
+  .chat__box__contaniner-left .arrow-top-G-Chat span {
+    font-size: var(--fs-16) !important;
+  }
+  .inn-send-message-box,
+  .middle-message-time-date {
+    font-size: var(--fs-12) !important;
+    line-height: 15px !important;
+  }
+  .send-message-time-date {
+    margin-bottom: 16px;
+  }
+  .created-_-Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .reply-message-box .inn-reply-message-box2 {
+    padding: 9px;
+    width: 250px;
+    font-size: var(--fs-12);
+    height: 46px;
+    background: #fbfbfb;
+    border-radius: 6px 6px 6px 0px;
   }
   .rate-form-P {
     font-size: var(--fs-12) !important;
@@ -108,6 +190,35 @@
   .getNotifyBannerPara2 {
     line-height: 10px !important;
   }
+  .banner {
+    background-color: #ffffff !important;
+    min-height: 400px !important;
+    padding-bottom: 10px;
+  }
+  .banner__inner .bannerTwo__text {
+    margin-top: 34px;
+  }
+  .bannerTwo__text .banner__text__title {
+    color: var(--primary);
+    line-height: 48px;
+  }
+  .bannerTwo__text .banner__text__subtitle {
+    color: #18191f;
+    line-height: 32px;
+  }
+  .banner__button .banner__text__button {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  .home-two {
+    margin-top: 0 !important;
+  }
+  .banner__button .findwork__btn {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
   .getNotifyBannerPara2 {
     margin-bottom: 18px;
   }
@@ -118,6 +229,10 @@
   .card-image .about-us-card-caption {
     font-size: var(--fs-18);
   }
+  .chat__avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
   .home-two-card .card-article p,
   .collaborate-text2 .collaborate-button2,
   .b-step form .vangold-input label,
@@ -127,8 +242,14 @@
   .form-input label,
   .datePickerBox label,
   .select-dropdown-item p,
-  .add_edu-btn {
+  .add_edu-btn,
+  .banner__text__button,
+  .chatBox__profile p {
     font-size: var(--fs-14) !important;
+  }
+  .chatBox__profile p {
+    position: relative;
+    top: 5px;
   }
   .b-save-and-next button,
   .save-and-next button {
@@ -244,6 +365,37 @@
   .inn__datePickerBox {
     gap: 21px !important;
   }
+  .message__box-component2,
+  .message__box-container {
+    display: none !important;
+  }
+  .chat__box__contaniner-left,
+  .group__subject {
+    width: 100% !important;
+  }
+  .group__subject {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  #chat-mobile-box {
+    display: block !important;
+  }
+  #chat-mobile-box .chat-mobile-box-container {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .group__subject {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .collaborate-image2 .Ellipse1477 {
+    left: -20px !important;
+  }
+  .collaborate-image2 .Ellipse1478 {
+    left: 20px !important;
+  }
 }
 @media screen and (max-width: 450px) {
   .header__inner .logo {
@@ -288,7 +440,7 @@
     left: 0 !important;
     margin-top: 24px;
   }
-  .top-jobs_NEW-TEXT-box{
+  .top-jobs_NEW-TEXT-box {
     display: block !important;
   }
   .verify-logo h2 {
@@ -375,8 +527,31 @@
   }
 }
 @media screen and (max-width: 850px) {
-  .auth-form__image {
+  .auth-form__image,
+  .top__jobs__freelancers,
+  .desktop-freelancers-searchBar {
     display: none;
+  }
+  .inn_SearchInputBox .mobile-freelancers-searchBar {
+    display: block !important;
+  }
+  .top-freelancer_header {
+    margin-bottom: 16px;
+  }
+  .inn_SearchInputBox input,
+  .inn_SearchInputBoxRight input {
+    height: 36px !important;
+    background: rgba(118, 118, 128, 0.12) !important;
+    border-radius: 8px !important;
+  }
+  .inn_SearchInputBox .inn_SearchInputBox_svg path {
+    fill: #808080;
+    width: 17.49px;
+    height: 17.49px;
+  }
+  .inn_SearchInputBox svg.inn_SearchInputBox_svg {
+    width: 17.49px;
+    height: 17.49px;
   }
   .auth-form__form {
     max-width: 100% !important;
