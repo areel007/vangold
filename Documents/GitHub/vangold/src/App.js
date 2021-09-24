@@ -190,10 +190,10 @@ function App() {
                     </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
-                    </Route> 
+                    </Route>
                     <Route path="/profile/chat">
                         <ChatComponentTwo />
-                    </Route> 
+                    </Route>
                     <Route path="/profile/group-chat">
                         <GroupChatView />
                     </Route>

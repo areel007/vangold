@@ -54,10 +54,10 @@ const Header = (props) => {
                             </div>
                             : location.pathname === '/profile/jobs/my-job-projects' ?
                                 <div className='header-after-login'>
-                                    <div className=' align-self-center'>
+                                    <div className=' align-self-center d-none d-lg-block'>
                                         <h1 className='nav-pro-head me-5'>My Projects</h1>
                                     </div>
-                                    <div className=' align-self-center'>
+                                    <div className=' align-self-center d-none d-lg-block'>
                                         <p className='nav-text-pro me-5'>6 Running Projects</p>
                                     </div>
                                     <div className="search__container-pro">

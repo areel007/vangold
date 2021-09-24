@@ -80,13 +80,13 @@ const FindTalent = () => {
 
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4">
+                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-2">
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-2 d-none d-lg-block">
                         <SideCheckBoxes1 />
                     </Col>
-                    <Col xs={10} lg={8} className="mx-auto bg-color-w p-5">
+                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
                         {displayfreelancers}
                         <div className="paginationContainer">
 
