@@ -2,7 +2,7 @@ import "./style.css"
 import React from "react";
 import { TiArrowSortedDown } from 'react-icons/ti';
 import CategoryDataJson from "../../steps/categoryData.json";
-
+import useOnclickOutside from "react-cool-onclickoutside";
 
 const FrSelectCategoryComponentTwo = props => {
     const { useState } = React;
@@ -17,7 +17,9 @@ const FrSelectCategoryComponentTwo = props => {
         selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
     }
     
-
+    const ref = useOnclickOutside(() => {
+        setOpen(false);
+      });
 
     return (
         <div className="br-select-category-component">
@@ -26,7 +28,7 @@ const FrSelectCategoryComponentTwo = props => {
                     {selectedItem ? items.find(item => item.id == selectedItem).label : "Select a Subcategory"}
                     <TiArrowSortedDown/>
                 </div>
-                <div className={`b-category-dropdown-body ${isOpen && 'open'}`}>
+                <div ref={ref} className={`b-category-dropdown-body ${isOpen && 'open'}`}>
                     {items.map(item => (
                     <div className="b-dropdown-item b-category-dropdown-item" onClick={e => handleItemClick(e.target.id)} id={item.id}>
                         {item.label}

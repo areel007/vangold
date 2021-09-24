@@ -10,24 +10,7 @@ footer {
   padding-bottom: 8%;
   gap: 20px;
 }
-@media screen and (max-width: 450px) {
-  .footer__inner {
-    padding-top: 20%;
-    padding-bottom: 20%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .footer__inner {
-    flex-direction: column;
-    gap: var(--fs-30);
-    /* align-items: center; */
-  }
 
-  .footer__inner .footer__links {
-    max-width: 100%;
-    border: none;
-  }
-}
 .logo-container {
   max-width: 385px;
 }
@@ -60,8 +43,14 @@ footer {
   line-height: 26px;
   color: #eeeff4;
 }
+.footer-links-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+}
 .footer__inner .footer__links {
-  width: 160px;
+  max-width: 160px;
 }
 .footer__inner .footer__links h2 {
   font-size: var(--fs-20);
@@ -72,12 +61,12 @@ footer {
   color: #f4f5f7;
   margin-bottom: 32px;
 }
-.footer__inner .footer__links ul {
+.footer__inner .footer__links .ul {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.footer__inner .footer__links ul li a {
+.footer__inner .footer__links .ul li a {
   font-size: var(--fs-16);
   color: var(--white);
   font-family: var(--inter);
@@ -87,11 +76,11 @@ footer {
   font-feature-settings: "salt" on, "liga" off;
   color: #eeeff4;
 }
-.footer__inner .footer__links ul li a:hover {
+.footer__inner .footer__links .ul li a:hover {
   text-decoration: underline;
 }
 .footer__contacts {
-  width: 347px;
+  max-width: 347px;
 }
 .footer__contacts h2{
   font-size: var(--fs-20);
@@ -121,15 +110,6 @@ footer {
   border-top: 1px solid #ffffff;
   padding-top: 25px;
   padding-bottom: 23px;
-}
-@media screen and (max-width: 767px) {
-  .bottomfooter__inner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .left_bottom_f {
-    margin-bottom: var(--fs-20);
-  }
 }
 .left_bottom_f p {
   font-family: var(--inter);
@@ -187,12 +167,6 @@ footer {
   border-top: 1px solid #d9dbe1c9;
   padding-top: var(--fs-14);
   padding-bottom: 40px;
-}
-@media screen and (max-width: 767px) {
-  .terms-policy-links ul {
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .terms-policy-links ul {

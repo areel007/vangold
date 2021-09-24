@@ -6,6 +6,7 @@ import SignUp from "./component/views/auth/sign-up";
 import LogIn from "./component/views/auth/log-in";
 import ChangePassword from "./component/views/auth/change-password";
 import PasswordResetSuccess from "./component/views/auth/password-reset-success";
+import AccountVerifySuccessful from "./component/views/auth/account-verify-success";
 import TermsAndConditions from "./component/views/terms-and-conditions";
 import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
@@ -37,9 +38,14 @@ import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
 import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
 import GroupChatComponentThree from './component/views/ChatView/GroupChatView/ChatComponent3';
-
-// import DashboardHeader from './component/core-ui/header/dashboard-header';
+import ChatBoxMobile from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile';
+import ChatBoxMobileTwo from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile2';
+import ChatBoxMobileThree from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile3';
+import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupParticipate';
+import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
+import Stories from './component/views/ChatView/GroupChatView/Stories';
 import ChatComponent from './component/views/ChatView/ChatComponent';
+import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
 
 function App() {
 
@@ -125,6 +131,9 @@ function App() {
                     <Route path="/passwordresetsuccessful">
                         <PasswordResetSuccess />
                     </Route>
+                    <Route path="/accountverifysuccessful">
+                        <AccountVerifySuccessful />
+                    </Route>
                     <Route path="/VerifyEmail">
                         <VerifyEmail />
                     </Route>
@@ -188,6 +197,9 @@ function App() {
                     <Route path="/profile/talent/find-talent">
                         <FindTalent />
                     </Route>
+                    <Route path="/profile/talent/manage-talent">
+                        <ManageTalent1 />
+                    </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
                     </Route>
@@ -202,6 +214,24 @@ function App() {
                     </Route>
                     <Route path="/profile/group-chat3">
                         <GroupChatComponentThree />
+                    </Route>
+                    <Route path="/profile/group-chat-mobile">
+                        <ChatBoxMobile/>
+                    </Route>
+                    <Route path="/profile/chat-mobile">
+                        <ChatBoxMobileTwo/>
+                    </Route>
+                    <Route path="/profile/group-chat-mobile2">
+                        <ChatBoxMobileThree/>
+                    </Route>
+                    <Route path="/profile/GroupParticipants">
+                        <GroupParticipate/>
+                    </Route>
+                    <Route path="/profile/ChatCall">
+                        <ChatCall />
+                    </Route>
+                    <Route path="/profile/stories">
+                        <Stories />
                     </Route>
                     <Route path="/freelancer-profile">
                         <FreelancerProfile />

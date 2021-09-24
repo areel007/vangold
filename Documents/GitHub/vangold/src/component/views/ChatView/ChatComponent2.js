@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap"
 import { Link } from "react-router-dom";
 import SideMenu from "../../core-ui/SideMenu/SideMenu"
@@ -56,7 +56,7 @@ const ChatComponentTwo = () => {
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5">
+                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
@@ -112,10 +112,8 @@ const ChatComponentTwo = () => {
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
-                                                <Link onClick={closePopover} to="#">Group Participant</Link>
-                                                <Link onClick={closePopover} to="#">Search</Link>
-                                                <Link onClick={closePopover} to="#">Report Group</Link>
-                                                <Link onClick={closePopover} to="#">Exit Group</Link>
+                                                <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
+                                                <Link onClick={closePopover} to="#">View Team Members</Link>
                                             </div>                                     
                                         </div>
                                     }
@@ -186,11 +184,13 @@ const ChatComponentTwo = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <svg className="send__message-btn" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="48" height="48" rx="8" fill="#45B618"/>
-                                            <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                                        <div className="send__message-btn">
+                                            <svg className="send__message-btn-svg" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="48" height="48" rx="8" fill="#45B618"/>
+                                                <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
                                     </div>
                             </div>
                         </div>

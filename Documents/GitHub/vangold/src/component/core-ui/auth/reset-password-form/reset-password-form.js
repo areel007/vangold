@@ -3,7 +3,7 @@ const ResetPasswordForm = () => {
     <form className="auth__form">
       <div className="form__title">
         <h1>Reset your Password</h1>
-        <p>Enter the registered email address to get a password reset link</p>
+        <p className="authResetPassword__P">Enter the registered email address to get a password reset link</p>
       </div>
       <div className="form-input__container">
         <div className="form__-control">

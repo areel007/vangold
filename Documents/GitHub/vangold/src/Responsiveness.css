@@ -1,7 +1,595 @@
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 991px) {
+  #job-descrip .border-botom {
+    border-bottom: 1px solid #00000033;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bottom-chat-footer {
+    padding-left: 12px !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .form__-control input,
+  .submit__btn {
+    max-width: 100%;
+  }
+  .mobile-sign-in-link {
+    display: block !important;
+  }
+  .TopFreealancerContent,
+  .freelancers-list__freelancer {
+    width: 100% !important;
+  }
+  .TopFreealancerContent {
+    width: 100% !important;
+  }
+  .side-nav-steppers,
+  .search__container,
+  .dashboard__name {
+    display: none !important;
+  }
+  .dashboard-avatar-name-notify {
+    width: 130px !important;
+  }
+  .dashboard-avatar-name-notify .avatarImg img {
+    width: 24px;
+    height: 23.98px;
+  }
+  header .header-after-login {
+    padding-top: 12px;
+    padding-bottom: 11.62px;
+    padding: 24px;
+  }
+  .logo img{
+    width: 24px !important;
+    height: 22.38px !important;
+  }
+  .logo h2{
+    font-size: var(--fs-16) !important;
+  }
+  .dashboard-avatar-name-notify .avatarImg {
+    margin-right: 8px;
+  }
+  .dashboard-avatar-name-notify .notification {
+    margin-right: 12px;
+  }
+  .brand-registration__inner,
+  .freelancer-registration__inner {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media screen and (max-width: 523px) {
+  .bannerTwo__text .banner__text__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .home-two .home-two-card-container {
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .container .inner__secure-payment-section {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+  .container .collaborate__inner2 {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .bannerTwo__image {
+    display: none;
+  }
+  .banner__button .banner__text__button {
+    width: 100%;
+    padding: 10px 5px;
+  }
 
-    .form__-control input, .submit__btn {
-        max-width: 100%;
-    }
-    
+  .collaborate-image2 .collaborate-circle {
+    width: 223px;
+    height: 225px;
+  }
+  .collaborate-circle .pulse,
+  .pulse .glowinglogo {
+    width: 55px;
+    height: 55px;
+  }
+  .pulse .glowinglogo img {
+    width: 20.51px;
+    height: 19.12px;
+  }
+  .collaborate-image2 .Ellipse1477,
+  .collaborate-image2 .Ellipse1478 {
+    width: 112px !important;
+    height: 112px !important;
+    position: relative;
+    z-index: 1;
+  }
+  .modal__body {
+    width: 700px !important;
+    margin-top: 20px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-two .home-two-title h2,
+  .popular-service .popular-service-title,
+  .secure-payment-text .popular-service-text__title,
+  .inner-our-top-freelancers .our-top-freelancers-header h2,
+  .collaborate-text2 .collaborate-text__title2,
+  .getNotifyBannerPara1,
+  .getNotifyBannerPara2,
+  .b-step-title,
+  .step-title,
+  .modalformHeader h2,
+  .chat__container-title {
+    font-size: var(--fs-24) !important;
+  }
+  .mobileAuth_h1,
+  .form__title h1,
+  .group_chat-messager-container p {
+    font-size: var(--fs-16) !important;
+    text-align: center;
+  }
+  .inn-chat-input-icons {
+    gap: 10px !important;
+  }
+  .mobile-message__box-component_header {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .reply__to-message__box {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+  }
+  .chat-messager-container {
+    padding: 24px !important;
+    padding-top: 16px !important;
+    padding-bottom: 5px !important;
+  }
+  .chat__container-subtitle,
+  .message__box-container .msg-P,
+  .chat__box__contaniner-left .arrow-top-G-Chat span {
+    font-size: var(--fs-16) !important;
+  }
+  .inn-send-message-box,
+  .middle-message-time-date {
+    font-size: var(--fs-12) !important;
+    line-height: 15px !important;
+  }
+  .send-message-time-date {
+    margin-bottom: 16px;
+  }
+  .created-_-Img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .reply-message-box .inn-reply-message-box2 {
+    padding: 9px;
+    width: 250px;
+    font-size: var(--fs-12);
+    height: 46px;
+    background: #fbfbfb;
+    border-radius: 6px 6px 6px 0px;
+  }
+  .rate-form-P {
+    font-size: var(--fs-12) !important;
+  }
+  .authResetPassword__P {
+    text-align: center;
+  }
+  .collaborate-text2 .collaborate-text__title2 {
+    line-height: 40px;
+  }
+  .getNotifyBannerPara1,
+  .getNotifyBannerPara2 {
+    line-height: 10px !important;
+  }
+  .banner {
+    background-color: #ffffff !important;
+    min-height: 400px !important;
+    padding-bottom: 10px;
+  }
+  .banner__inner .bannerTwo__text {
+    margin-top: 34px;
+  }
+  .bannerTwo__text .banner__text__title {
+    color: var(--primary);
+    line-height: 48px;
+  }
+  .bannerTwo__text .banner__text__subtitle {
+    color: #18191f;
+    line-height: 32px;
+  }
+  .banner__button .banner__text__button {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+  .home-two {
+    margin-top: 0 !important;
+  }
+  .banner__button .findwork__btn {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+
+  .getNotifyBannerPara2 {
+    margin-bottom: 18px;
+  }
+  .secure-payment-text .popular-service-text__title {
+    margin-bottom: 12px;
+  }
+  .home-two-card .card-title h2,
+  .card-image .about-us-card-caption {
+    font-size: var(--fs-18);
+  }
+  .chat__avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .home-two-card .card-article p,
+  .collaborate-text2 .collaborate-button2,
+  .b-step form .vangold-input label,
+  .step form .vangold-input label,
+  .upload-passport label,
+  .step-subtitle,
+  .form-input label,
+  .datePickerBox label,
+  .select-dropdown-item p,
+  .add_edu-btn,
+  .banner__text__button,
+  .chatBox__profile p {
+    font-size: var(--fs-14) !important;
+  }
+  .chatBox__profile p {
+    position: relative;
+    top: 5px;
+  }
+  .b-save-and-next button,
+  .save-and-next button {
+    width: 122px !important;
+    height: 42px !important;
+    font-size: var(--fs-14) !important;
+    text-align: center;
+  }
+  .collaborate-text2 .collaborate-button2 {
+    width: 143px;
+    height: 36px;
+  }
+  .talent-card__inner .about-us-card-image {
+    height: 274.73px;
+  }
+  .card-image img {
+    height: 168px;
+  }
+  .footer__inner {
+    flex-direction: column;
+    gap: var(--fs-30);
+    /* align-items: center; */
+  }
+
+  .footer__inner .footer__links {
+    max-width: 100%;
+    border: none;
+  }
+
+  .bottomfooter__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .left_bottom_f {
+    margin-bottom: 20px;
+  }
+
+  .footer__inner {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+  .footer__inner .footer__links h2,
+  .footer__contacts h2,
+  .logo-container .footer-logo h2 {
+    font-size: var(--fs-16) !important;
+  }
+  .logo-container .footer-logo img {
+    width: 24px !important;
+    height: 22.38px !important;
+  }
+
+  .footer__contacts h2 {
+    margin-bottom: 16px !important;
+  }
+  .terms-policy-links ul {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .TopFreealancerContent__BOX-details_TOP,
+  .TopFreealancerContent__BOX_images {
+    display: none !important;
+  }
+  .MobileView-TopFreealancerContent__BOX-details_TOP {
+    display: block !important;
+  }
+  .MobileView-TopFreealancerContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+    margin-bottom: 16px !important;
+    min-height: 100px;
+  }
+  .inn__TopFreealancerContent__BOX-details_TOP {
+    margin-bottom: 0 !important;
+  }
+  .MobileView-TopFreealancerContent__BOX_images {
+    height: 100% !important;
+    margin-bottom: 12.25px;
+  }
+  .Top__Freelancer_pic {
+    position: relative;
+    top: 7px;
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 50% !important;
+  }
+  .Top__Freelancer_pic img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50% !important;
+  }
+  .paginationContainer {
+    margin-top: 40px !important;
+  }
+  .inn-top-freelancer-header {
+    height: 73px !important;
+    margin-bottom: 16px !important;
+  }
+  .inn-top-freelancer-header h2 {
+    font-size: var(--fs-24) !important;
+  }
+  .top__jobs__freelancers {
+    display: none;
+  }
+  .freelancer-regs-step,
+  .step textarea {
+    margin-bottom: 32px !important;
+  }
+  .edu-btns {
+    justify-content: space-between !important;
+  }
+  .inn__datePickerBox {
+    gap: 21px !important;
+  }
+  .message__box-component2,
+  .message__box-container {
+    display: none !important;
+  }
+  .chat__box__contaniner-left,
+  .group__subject {
+    width: 100% !important;
+  }
+  .group__subject {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  #chat-mobile-box {
+    display: block !important;
+  }
+  #chat-mobile-box .chat-mobile-box-container {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .group__subject {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .collaborate-image2 .Ellipse1477 {
+    left: -20px !important;
+  }
+  .collaborate-image2 .Ellipse1478 {
+    left: 20px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header__inner .logo {
+    gap: 8px;
+  }
+  .header__inner .logo h2 {
+    font-size: var(--fs-16);
+  }
+  .header__inner .logo img {
+    width: 24px;
+    height: 22.38px;
+  }
+  .footer__inner .footer__links .ul li a,
+  .logo-container .footer__text,
+  .footer__contacts p,
+  .right_bottom_f a {
+    font-size: var(--fs-14) !important;
+  }
+
+  .option-buttons button {
+    max-width: 150px !important;
+    /* height: 36px !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .password-reset-success-box p {
+    font-size: var(--fs-14) !important;
+  }
+  .success__title.h1 {
+    font-size: var(--fs-24) !important;
+  }
+  .password-reset-success-box img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .getNotifyInput button {
+    float: none !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-top: 24px;
+  }
+  .top-jobs_NEW-TEXT-box {
+    display: block !important;
+  }
+  .verify-logo h2 {
+    font-size: var(--fs-18) !important;
+  }
+  .Top__Freelancer_info h3,
+  .job-_-_name {
+    font-size: var(--fs-16) !important;
+  }
+  .stars {
+    width: 13.33px;
+  }
+  .verify-logo {
+    gap: 11px !important;
+  }
+  .verify-svg-logo {
+    width: 14.67px;
+    height: 14px;
+  }
+  .inn-TopFreealancerContent__BOX_images {
+    width: 90px !important;
+    height: 96.75px !important;
+  }
+  .TopJobs-pic {
+    height: 48px !important;
+    width: 48px !important;
+  }
+  .TopJobs-pic img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .align-self-center {
+    display: none;
+  }
+  .top-jobs_NEW-TEXT-box {
+    width: 100%;
+    text-align: right;
+  }
+  .location-br-select {
+    gap: 21px !important;
+  }
+  .job-_-_descrip,
+  .TopJobsContent__BOX-BOTTOM_button button,
+  .select-dropdown-header p {
+    font-size: var(--fs-12) !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button,
+  .job-_-_address,
+  .top-jobs_NEW-TEXT {
+    font-size: var(--fs-14) !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1) {
+    max-width: 60px !important;
+    height: 42px !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(2) {
+    max-width: 83px !important;
+    height: 42px !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(3) {
+    max-width: 129px !important;
+    height: 42px !important;
+  }
+
+  .TopJobsContent__BOX-BOTTOM_button button:nth-child(1) {
+    width: 84px !important;
+    height: 33px !important;
+  }
+  .TopJobsContent__BOX-BOTTOM_button button:nth-child(2) {
+    width: 70px !important;
+    height: 33px !important;
+  }
+  .TopJobsContent__BOX-BOTTOM_button button:nth-child(3) {
+    width: 68px !important;
+    height: 33px !important;
+  }
+  .love__icon {
+    width: 13.33px !important;
+    height: 12.23px !important;
+  }
+  .edu-btns .button1,
+  .edu-btns .button2 {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 850px) {
+  .auth-form__image,
+  .top__jobs__freelancers,
+  .desktop-freelancers-searchBar {
+    display: none;
+  }
+  .inn_SearchInputBox .mobile-freelancers-searchBar {
+    display: block !important;
+  }
+  .top-freelancer_header {
+    margin-bottom: 16px;
+  }
+  .inn_SearchInputBox input,
+  .inn_SearchInputBoxRight input {
+    height: 36px !important;
+    background: rgba(118, 118, 128, 0.12) !important;
+    border-radius: 8px !important;
+  }
+  .inn_SearchInputBox .inn_SearchInputBox_svg path {
+    fill: #808080;
+    width: 17.49px;
+    height: 17.49px;
+  }
+  .inn_SearchInputBox svg.inn_SearchInputBox_svg {
+    width: 17.49px;
+    height: 17.49px;
+  }
+  .auth-form__form {
+    max-width: 100% !important;
+  }
+  .form__title .desktopAuth_h1,
+  .form__title .authLogin__P {
+    display: none !important;
+  }
+  .form__title .mobileAuth_h1,
+  .authResetPassword__P {
+    display: block !important;
+  }
+  .change-account-pswrd,
+  .dont-have-account,
+  .already-have-account {
+    display: none !important;
+  }
+  .reset__change__password {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 24px;
+  }
+  .reset-btn {
+    width: 100% !important;
+  }
+  .inn_SearchInputBoxRight {
+    display: none !important;
+  }
+  .brand-registration,
+  .freelancer-registration {
+    margin-bottom: 100px !important;
+  }
+  .brand-registration__inner {
+    grid-template-columns: 1fr !important;
+  }
+  .b-save-and-next {
+    margin-top: 36px !important;
+  }
+  .b-step textarea {
+    margin-bottom: 32px !important;
+  }
 }

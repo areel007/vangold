@@ -21,39 +21,41 @@ const Footer = () => {
                   field you requiremto help you scale your business and increase revenue for you. </p>
             </div>
           </div>
-          <div className="footer__links">
-            <h2>RESOURCE</h2>
-            <ul>
-              <li>
-                <Link to="/over">Terms & Conditions</Link>
-              </li>
-              <li>
-                <Link to="/over">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/over">Contact Us</Link>
-              </li>
-              <li>
-                <Link to="/over">News</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer__links">
-            <h2>SUPPORT</h2>
-            <ul>
-              <li>
-                <Link to="/over">FAQ’s</Link>
-              </li>
-              <li>
-                <Link to="/over">Proof of Payment</Link>
-              </li>
-              <li>
-                <Link to="/over">Feedback</Link>
-              </li>
-              <li>
-                <Link to="/over">Home</Link>
-              </li>
-            </ul>
+          <div className="footer-links-container">
+            <div className="footer__links">
+              <h2>RESOURCE</h2>
+              <div className="ul">
+                <li>
+                  <Link to="/over">Terms & Conditions</Link>
+                </li>
+                <li>
+                  <Link to="/over">Privacy Policy</Link>
+                </li>
+                <li>
+                  <Link to="/over">Contact Us</Link>
+                </li>
+                <li>
+                  <Link to="/over">News</Link>
+                </li>
+              </div>
+            </div>
+            <div className="footer__links">
+              <h2>SUPPORT</h2>
+              <div className="ul">
+                <li>
+                  <Link to="/over">FAQ’s</Link>
+                </li>
+                <li>
+                  <Link to="/over">Proof of Payment</Link>
+                </li>
+                <li>
+                  <Link to="/over">Feedback</Link>
+                </li>
+                <li>
+                  <Link to="/over">Home</Link>
+                </li>
+              </div>
+            </div>
           </div>
           <div className="footer__contacts">
             <h2>CONTACTS</h2>

@@ -5,17 +5,18 @@ import LogInImage from "../../../assets/images/amico-login.png"
 
 const LogIn = () => {
     return (
-        <div className='log-in'>
+        <div className='auth-form'>
             <div className="container">
                 <p className="dont-have-account">Don’t have an account? <Link to="/sign-up">Create account</Link></p>
-                <div className="log-in__inner">
-                    <div className="log-in__image">
+                <div className="auth-form__inner">
+                    <div className="auth-form__image">
                         <img src={ LogInImage } alt="log in pic"/>
                     </div>
-                    <div className="log-in__form">
+                    <div className="auth-form__form">
                         <LogInForm />
                     </div>
                 </div>
+                <p className="authBottomLink">Don’t have an account? <Link to="/sign-up">Create account</Link></p>
             </div>
         </div>
     )

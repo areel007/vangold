@@ -1,3 +1,6 @@
+.home {
+  width: 100%;
+}
 .page__title__inner {
   margin-top: 3.8rem;
 }
@@ -5,8 +8,9 @@
   max-width: 646px;
 }
 .collaborate.collaborate2 {
-  padding-top: 180px;
+  padding-top: 100px;
   padding-bottom: 80px;
+  margin-top: 110px;
 }
 .collaborate__inner2 {
   display: flex;
@@ -24,16 +28,16 @@
   margin-bottom: 3.2rem;
   max-width: 500px;
 }
-.collaborate-text__subtitle2{
-  width: 540px;
+.collaborate-text__subtitle2 {
+  max-width: 540px;
 }
 .collaborate-text__title2 strong {
   color: var(--secondary);
-  font-size: var(--fs-48);
 }
 .collaborate-button2 {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 12px 32px;
   width: 154px;
   height: 48px;
@@ -52,43 +56,121 @@
   color: var(--white);
 }
 .collaborate-image2 {
-  display: flex;
-  justify-content: flex-end;
   max-width: 646px;
 }
-.inner-collaborate-image2 {
-  margin-bottom: 100px;
-}
-.inner-collaborate-image2 .EllipseGr {
+.collaborate-circle {
   width: 350px;
   height: 350px;
-  position: relative;
-}
-.inner-collaborate-image2:hover .EllipseGr {
-  transform: rotate(360deg);
-  transform-style: preserve-3d;
-  transition: all 0.3s ease-in-out 0s;
-}
-.inner-collaborate-image2 .Ellipse1477,
-.inner-collaborate-image2 .Ellipse1478 {
-  width: 175px;
-  height: 175px;
-  position: absolute;
-}
-.inner-collaborate-image2 .Ellipse1477 {
-  margin-left: -29%;
-  margin-top: -90px;
-}
-.inner-collaborate-image2 .Ellipse1478 {
-  margin-left: -10%;
-  margin-top: 20%;
-}
-.inner-collaborate-image2:hover .Ellipse1477,
-.inner-collaborate-image2:hover .Ellipse1478 {
-  transform: scale(1.1);
-  transition: all 0.8s ease-in-out;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(69, 182, 24, 0.15);
 }
 
+.pulse {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  /* background-color: white; */
+  border-radius: 50%;
+  /* left: 200px;
+  margin-top: 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: green;
+  border-radius: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  animation: animate 2.5s linear infinite;
+}
+.pulse span.one {
+  animation-delay: calc(-0.5s * 1);
+}
+.pulse span.two {
+  animation-delay: calc(-0.5s * 2);
+}
+.pulse span.three {
+  animation-delay: calc(-0.5s * 3);
+}
+.pulse span.four {
+  animation-delay: calc(-0.5s * 4);
+}
+.pulse span.five {
+  animation-delay: calc(-0.5s * 5);
+}
+
+.glowinglogo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10000;
+}
+
+.glowinglogo img {
+  width: 32px;
+  height: 29.84px;
+}
+
+@keyframes anim {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  90% {
+    transform: scale(3);
+  }
+
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.collaborate-image2 .Ellipse1477 {
+  max-width: 175px;
+  height: 175px;
+  position: relative;
+  top: 90px;
+  left: -60px;
+}
+.collaborate-image2 .Ellipse1478 {
+  max-width: 175px;
+  height: 175px;
+  position: relative;
+  top: -90px;
+  left: 60px;
+  float: right;
+}
+
+.collaborate-image2:hover .Ellipse1477,
+.collaborate-image2:hover .Ellipse1478 {
+  transform: scale(1.1);
+  transition: all 0.9s ease-in-out;
+}
 .get-notify-banner {
   max-width: 887px;
   margin: auto;
@@ -98,6 +180,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .get-notify-banner .getNotifyBannerPara1 {
   color: var(--primary);
@@ -119,6 +202,7 @@
   max-width: 75.7rem;
 }
 .get-notify-banner .getNotifyBannerPara3 {
+  
   color: #18191f;
   font-size: var(--fs-16);
   line-height: 32px;
@@ -128,9 +212,10 @@
 }
 .getNotifyInput {
   margin-top: 24px;
+  width: 100%;
 }
 .getNotifyInput input {
-  width: 887px;
+  width: 100%;
   height: 64px;
   background: #f9fafc;
   border-radius: 8px;

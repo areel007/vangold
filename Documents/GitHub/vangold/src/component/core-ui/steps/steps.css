@@ -1,8 +1,11 @@
+.step {
+  width: 100%;
+}
 .freelancer-regs-step {
   margin-bottom: 300px;
 }
 .skills-expert__box {
-  width: 740px;
+  max-width: 740px;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
   border-radius: 4px;
@@ -24,6 +27,10 @@
   line-height: 42px;
   color: #141414;
   margin-bottom: 4rem;
+}
+.step {
+  --select-dropdown-component-width: 350px;
+  --select-dropdown-component-margin-bottom: 32px;
 }
 .step form {
   display: grid;
@@ -57,7 +64,7 @@
   font-family: var(--raleway);
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--fs-16);
   line-height: 19px;
   color: #333333;
 }
@@ -83,7 +90,7 @@
   font-family: var(--raleway);
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: var(--fs-16);
   line-height: 19px;
   color: #333333;
 }
@@ -140,7 +147,7 @@
   margin-bottom: 16px;
   display: block;
 }
-.step textarea {
+.step .textarea-description-steps {
   width: 100%;
   height: 300px;
   background: rgba(217, 218, 215, 0.5);
@@ -172,32 +179,79 @@
   margin-bottom: 85px;
   cursor: pointer;
 }
-.DialogTitle {
+.modalformHeader {
+  max-width: 750px;
+  margin: auto;
+}
+.modalformHeader h2 {
   font-family: var(--raleway);
   font-style: normal;
   font-weight: var(--font-wieght-semibold);
   font-size: var(--fs-36);
   line-height: 42px;
   color: #141414;
-  position: relative;
-  left: 22px;
-  width: 740px;
+  /* margin-bottom: 24px; */
 }
-.edu__form form {
+.edu__form {
   max-width: 740px;
   margin: auto;
-  /* margin-top: 70px; */
 }
-.MuiDialogContent-root {
-  overflow: hidden;
+.edu__form form {
+  display: flex !important;
+  max-width: 100%;
+  flex-direction: column;
+  gap: 0px;
+}
+.modal__body {
+  width: 850px !important;
+  margin-top: 20px !important;
+}
+.pure-modal .close {
+  background-color: #ffffff !important;
+  font-size: 4rem !important;
+}
+.pure-modal .panel-heading {
+  background-color: #ffffff !important;
 }
 .edu-btns {
-  width: 740px;
+  max-width: 740px;
   display: flex;
   gap: 40px;
   justify-content: flex-end;
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+.edu-btns .button1 {
+  background-color: rgba(69, 182, 24, 0.3);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--mulish);
+  font-size: var(--fs-18);
+  text-align: center;
+  width: 106px;
+  text-transform: capitalize;
+  height: 39px;
+  color: #45b618;
+  border: none;
+  outline: none;
+}
+.edu-btns .button2 {
+  background-color: #45b618;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--mulish);
+  font-size: var(--fs-18);
+  text-align: center;
+  width: 174px;
+  text-transform: capitalize;
+  height: 39px;
+  color: #ffffff;
+  border: none;
+  outline: none;
 }
 .form-input {
   display: flex;
@@ -216,17 +270,17 @@
   margin-bottom: 4px;
 }
 .form-input input {
-  width: 740px;
+  max-width: 740px;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
   border-radius: 4px;
   padding: 10px;
   outline: none;
   border: none;
-  margin-bottom: 47px;
+  margin-bottom: 24px;
 }
 .form-input textarea {
-  width: 740px;
+  max-width: 740px;
   height: 100px;
   background: rgba(217, 218, 215, 0.5);
   border-radius: 4px;
@@ -248,6 +302,9 @@
   font-size: var(--fs-18);
   line-height: 23px;
   color: var(--primary);
+}
+.datePickerBox {
+  margin-bottom: 24px;
 }
 .inn__datePickerBox {
   display: flex;
@@ -275,11 +332,11 @@
 .step .rate-form {
   display: grid;
   grid-template-columns: 1fr;
-  width: 350px;
+  max-width: 350px;
 }
 .step .rate-form .vangold-input input {
-  width: 350px;
-  border-left: 48px solid rgba(217, 218, 215, 0.5);;
+  max-width: 350px;
+  border-left: 48px solid rgba(217, 218, 215, 0.5);
   margin: 0;
 }
 .rate-currency-symbol {
@@ -308,7 +365,7 @@
 }
 
 /* LAnguage Step */
-.languageSelectTwo{
+.languageSelectTwo {
   position: relative;
   z-index: 10;
 }
@@ -334,16 +391,11 @@
   margin-bottom: 24px;
   color: #808080;
 }
-.lang-select-component,
-.lang-dropdown,
-.lang-dropdown-header,
-.lang-category-dropdown-body {
-  width: 350px;
+.f-select-category {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
-.lang-category-dropdown-item{
-  width: 300px;
-}
-
 /* Expertise */
 form {
   width: 100%;
@@ -389,7 +441,7 @@ form {
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-right: 5px;
 }
 
@@ -401,4 +453,121 @@ form {
   line-height: 19px;
   color: #767676;
   margin-right: 5px;
+}
+
+.education-history__education {
+  margin-bottom: 40px;
+}
+
+.education-history__education .education-history {
+  display: flex;
+  justify-content: space-between;
+}
+
+.school-name {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+}
+
+.degree {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.school-name-and-degree {
+  max-width: 344px;
+}
+
+.edit-and-delete-icon {
+  display: flex;
+}
+
+.education-history__edit {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.education-history__edit svg {
+  margin: auto;
+}
+
+.education__edit {
+  margin-right: 12px;
+}
+.work__experience {
+  display: flex;
+  justify-content: space-between;
+}
+.language-and-edit {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.language__language {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+  margin-bottom: 8px;
+}
+.language__proficiency {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.employment-history {
+  display: flex;
+  justify-content: space-between;
+}
+.company-and-position {
+  text-transform: capitalize;
+}
+.date-from-to {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.languages__language {
+  margin-bottom: 30px;
+}
+.language-and-proficiency {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.language-chosen {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #141414;
+  text-transform: capitalize;
+}
+.language-proficiency {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
 }

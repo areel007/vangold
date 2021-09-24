@@ -1,7 +1,10 @@
 .brand-registration {
     padding: 4.8rem 0;
-    max-width: 100%;
+    width: 100%;
     margin: auto;
+}
+.brand-registration__form{
+    width: 100%;
 }
 .brand-registration__inner {
     width: 100%;

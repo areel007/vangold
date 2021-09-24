@@ -48,8 +48,7 @@ const Expertise = (props) => {
     }
 
     const addPopularSkill = (popularSkill) => {
-        setAddedSkills([...addedSkills, popularSkill])
-        setPopularSkills(popularSkills.filter((skill) => skill.id !== popularSkill.id))
+        if (addedSkills.includes(popularSkill) === false) setAddedSkills([...addedSkills, popularSkill]);
     }
 
     const onFormSubmit = (event) => {

@@ -1,63 +1,11 @@
-import React from 'react';
+import React, { useState } from "react";
 import "../../core-ui/auth/authstyle.css"
-import bannerImage from "../../../assets/images/vangold-banner-img2.png"
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import { withStyles } from '@material-ui/core/styles';
+import bannerImage from "../../../assets/images/vangold-homepae-baner-img.png"
+import PureModal from 'react-pure-modal';
+import 'react-pure-modal/dist/react-pure-modal.min.css';
 
-  const styles = {
-    paper: { 
-        minWidth: 652,
-        paddingTop: "20px",
-    },
-    Button1: {
-      backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontFamily: 'mulish',
-      fontSize: '18px',
-      textAlign: 'center',
-      width: '106px',
-      textTransform: 'capitalize',
-      height: '39px',
-      color: '#45B618',
-    '&:hover': {
-        backgroundColor: 'rgba(69, 182, 24, 0.3)',
-      }
-    },
-    Button2: {
-      backgroundColor: '#45B618',
-      borderRadius: '4px',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      fontSize: '18px',
-      textAlign: 'center',
-      fontFamily: 'mulish',
-      textTransform: 'capitalize',
-      width: '174px',
-      height: '39px',
-      color: '#ffffff',
-      '&:hover': {
-        backgroundColor: '#45B618',
-      }
-    }
-  };
 const AbBanner = (props) => {
-    const [open, setOpen] = React.useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
- 
-    const handleClose = () => {
-        setOpen(false);
-    };
-  
-    
-    const { classes } = props;
+    const [modal, setModal] = useState(false);
 
     return (
         <div>
@@ -69,20 +17,29 @@ const AbBanner = (props) => {
                             <p className="banner__text__subtitle">Hire top-notch professionals to get your project done. Worry not about their competence, we did our due diligence. 
                             </p>
                             <div className="banner__button">
-                                <button className="banner__text__button" onClick={handleClickOpen}>Hire a Freelancer</button>
-                                <button className="banner__text__button findwork__btn" onClick={handleClickOpen}>Find Work</button>
-                            </div>
+                                <button className="banner__text__button" onClick={() => setModal(true)}>Hire a Freelancer</button>
+                                <button className="banner__text__button findwork__btn" onClick={() => setModal(true)}>Find Work</button>
+                            </div> 
                         </div>
                         <div className="bannerTwo__image">
                             <img src={bannerImage} alt="banner"/>
                         </div>
                     </div>
-                    <Dialog classes={{ paper: classes.paper}} open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-                        <DialogContent>
+                    <PureModal className="homepage__modal__body"
+                        header={
+                            <div className="homepage__modal__body-Header">
+                                <h2>Build a successful career with us</h2>
+                            </div>
+                        }
+                        isOpen={modal}
+                        onClose={() => {
+                            setModal(false);
+                            return true;
+                        }}
+                        >
                         <div className="homepage-Auth">
                           <form className="auth__form">
-                            <h2 className="homepage-Auth-header">Build a successful career with us</h2>
-                            <div className="form-input__container">
+                            <div className="form-input__container"> 
                                 <div className="form__-control">
                                     <label htmlFor="Username">Username</label>
                                     <input type="text" />
@@ -156,8 +113,7 @@ const AbBanner = (props) => {
                                 </div>
                             </form>
                           </div>
-                        </DialogContent>
-                    </Dialog>
+                    </PureModal>;
                     
                 </div>
             </div>
@@ -165,4 +121,4 @@ const AbBanner = (props) => {
     )
 }
 
-export default withStyles(styles)(AbBanner);
+export default AbBanner;

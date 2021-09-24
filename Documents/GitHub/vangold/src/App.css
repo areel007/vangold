@@ -10,9 +10,15 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+  width: 83%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
 
 body {
     font-family: var(--raleway);
+    user-select: none;
 }
 
 

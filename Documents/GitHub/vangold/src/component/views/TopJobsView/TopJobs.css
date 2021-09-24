@@ -1,6 +1,10 @@
 .top-jobs {
   margin-bottom: 107px;
 }
+.top-jobs-view {
+  max-width: 1140px;
+  margin: auto;
+}
 .top__jobs__freelancers {
   font-family: var(--inter);
   font-style: normal;
@@ -10,11 +14,61 @@
   color: #18191f;
   margin-top: 24px;
 }
+.follow-visit-site-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.follow-visit-site-btn button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jobs-followers-text{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.follow-visit-site-btn button:nth-child(1) {
+  width: 100px;
+  height: 42px;
+  background: #45b618;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-12);
+  line-height: 14px;
+  color: #ffffff;
+}
+.follow-visit-site-btn button:nth-child(2) {
+  width: 134px;
+  height: 42px;
+  background: #f8f8f8;
+  border: 1px solid #45b618;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-12);
+  line-height: 14px;
+  color: var(--primary);
+  
+}
 .inn-top-jobs {
   display: flex;
   width: 100%;
   gap: 24px;
 }
+.sideBarTopJobs {
+  height: 1079px;
+  background: #c2c4bfab;
+}
+
 .top-jobs_header {
   background: #45b618;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
@@ -33,19 +87,18 @@
   line-height: 59px;
   color: var(--white);
 }
-.sideBarTopJobs {
-  width: 250px;
-  height: 1579px;
-  background: #c2c4bfab;
+.top-jobs_NEW-TEXT-box {
+  display: none;
 }
-
+.jobs-list__jobs {
+  width: 100% !important;
+}
 .TopJobsContent__BOX {
-  width: 100%;
-  height: 250px;
+  max-width: 100%;
   background: #f2f2f2;
   border-radius: 4px;
   margin-bottom: 12px;
-  padding: 24px;
+  padding: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,6 +125,8 @@
 }
 .TopJobs-info {
   width: 100%;
+  height: 100%;
+  white-space: normal;
 }
 .TopJobsContent__BOX-BOTTOM {
   width: 100%;
@@ -144,7 +199,7 @@
 /*TOP JOBS VIEW*/
 .top__Jobs__view {
   width: 100%;
-  background: #F2F2F2;
+  background: #f2f2f2;
   padding-bottom: 50px;
 }
 .jobs-view-banner {
@@ -201,6 +256,9 @@
   line-height: 19px;
   color: #4f4f4f;
 }
+.row-_-border {
+  border: 1px solid red;
+}
 .top_jobs_view-paragraph-2 p:nth-child(1),
 .row-_-border p:nth-child(1) {
   font-family: var(--raleway);
@@ -240,6 +298,7 @@
   color: #4f4f4f;
 }
 .top__jobs__view-description {
+  max-width: 680px;
   margin-top: 48px;
 }
 .top__jobs__view-description h1 {
@@ -251,7 +310,8 @@
   color: var(--secondary);
   margin-bottom: 16px;
 }
-.top__jobs__view-description p, .top__jobs__view-description li {
+.top__jobs__view-description p,
+.top__jobs__view-description li {
   font-family: var(--raleway);
   font-style: normal;
   font-weight: var(--font-wieght-semibold);
@@ -259,7 +319,58 @@
   line-height: 24px;
   color: #4f4f4f;
 }
-.top__jobs__view-description li span{
+.top__jobs__view-description li span {
   position: relative;
   top: -2.5px;
+}
+
+.topjobsview-applyBtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 40px;
+}
+.topjobsview-applyBtn button {
+  width: 120px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  border-radius: 4px;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--white);
+  outline: none;
+  border: none;
+}
+
+.description__about-yourself-header {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fs-36);
+  line-height: 42px;
+  color: #141414;
+  margin-bottom: 48px;
+}
+
+.description__about-yourself {
+  width: 590px;
+  height: 300px;
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  border: none;
+  padding: 15px;
+}
+
+.description__about-yourself-btn {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
 }
