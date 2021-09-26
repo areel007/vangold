@@ -184,11 +184,13 @@ const ChatComponentTwo = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <svg className="send__message-btn" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="48" height="48" rx="8" fill="#45B618"/>
-                                            <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
+                                        <div className="send__message-btn">
+                                            <svg className="send__message-btn-svg" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="48" height="48" rx="8" fill="#45B618"/>
+                                                <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
                                     </div>
                             </div>
                         </div>

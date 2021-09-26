@@ -43,10 +43,10 @@ const ProfileMyJob = () => {
         <section id="my-job" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4">
+                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={4} className="mx-auto bg-color-w p-4">
+                    <Col xs={12} lg={4} className="mx-auto bg-color-w p-4">
                         <Card className="my-job-card">
                             <div className="d-flex justify-content-between">
                                 <h1 className="head">Website Designer</h1>
@@ -56,20 +56,20 @@ const ProfileMyJob = () => {
                             </div>
                             <p className="text-16px">Lagos, Nigeria</p>
                             <Row className="mt-4">
-                                <Col xs={10} md={6} className="mx-auto">
+                                <Col xs={12} md={6} className="mx-auto">
                                     <p className="text-16px mb-0" style={{ color: "#808080" }}>
                                         Budget
                                     </p>
                                     <p className="text-16px fw-bold">₦200,000-₦500,000</p>
                                 </Col>
-                                <Col xs={10} md={6} className="mx-auto">
+                                <Col xs={12} md={6} className="mx-auto">
                                     <p className="text-16px mb-0" style={{ color: "#808080" }}>
                                         Category
                                     </p>
                                     <p className="text-16px fw-bold">Product Design</p>
                                 </Col>
                             </Row>
-                            <p className="fw-bold fs-3 mt-4">Description</p>
+                            <p className="fw-bold fs-1 fs-lg-3 mt-4">Description</p>
                             <p className="text-16px" style={{ color: "#333333" }}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Scelerisque egestas leo tempor in ut eget. Euismod et
@@ -97,7 +97,7 @@ const ProfileMyJob = () => {
                             </div>
                         </Card>
                     </Col>
-                    <Col xs={10} lg={6} className="mx-auto bg-color-w py-4 ps-4 pe-5">
+                    <Col xs={12} lg={6} className="mx-auto bg-color-w py-4 ps-4 pe-4 pe-lg-5">
                         <Card className="my-job-card-1">
                             {
                                 applicant &&
