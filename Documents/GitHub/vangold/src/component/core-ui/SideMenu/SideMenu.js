@@ -178,6 +178,20 @@ const SideMenu = () => {
                                 primary="Find Talent"
                             />
                         </ListItem>
+                        <ListItem
+                            button
+                            classes={{ root: classes.root, button: classes.button }}
+                            onClick={() => {
+                                history.push("/profile/talent/manage-talent");
+                            }}
+                            className={location.pathname === "/profile/talent/manage-talent" ? classes.active : null}
+                        >
+                            <ListItemIcon></ListItemIcon>
+                            <ListItemText
+                                classes={{ primary: classes.listItemText }}
+                                primary="Manage Talent"
+                            />
+                        </ListItem>
                     </List>
                 </Collapse>
                 <ListItem

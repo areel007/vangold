@@ -66,7 +66,7 @@ const PayToEmployer = () => {
                         <p className="text-muted text-16px">Proceed to make payment so your order can be activated</p>
                     </Col>
                     <Col xs={10} lg={8} className='mx-auto order-2 order-lg-1 mt-5 mt-lg-0'>
-                        <Form id="myform" onSubmit={submitHandler}>
+                        <Form onSubmit={submitHandler}>
                             <p className="text-18px mb-5">Select Payment Method</p>
                             <FormControl component="fieldset">
                                 <RadioGroup row name="expertise" onChange={(e) => setData({ ...data, paymentMethod: e.target.value })}>
@@ -102,6 +102,9 @@ const PayToEmployer = () => {
                                     <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
                                 </Form.Group>
                             </Row>
+                            <div className="text-lg-end mt-5 me-lg-5 d-grid d-lg-block">
+                                <Button type="submit" className="submit-btn">Make Payment</Button>
+                            </div>
                         </Form>
                     </Col>
                     <Col xs={10} lg={4} className='mx-auto mt-lg-0 mt-2 order-1 order-lg-2'>
@@ -129,9 +132,6 @@ const PayToEmployer = () => {
                                     <p className="text-14px-a">Date</p>
                                     <p className="text-14px-b">July 03, 2021</p>
                                 </div>
-                            </div>
-                            <div className="text-center mt-5">
-                                <Button type="submit" form="myform" className="submit-btn">Add Card</Button>
                             </div>
                         </Card>
                     </Col>

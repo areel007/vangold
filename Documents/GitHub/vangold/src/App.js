@@ -47,6 +47,7 @@ import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupPart
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
 import ChatComponent from './component/views/ChatView/ChatComponent';
+import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
 
 function App() {
 
@@ -198,12 +199,15 @@ function App() {
                     <Route path="/profile/talent/find-talent">
                         <FindTalent />
                     </Route>
+                    <Route path="/profile/talent/manage-talent">
+                        <ManageTalent1 />
+                    </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
-                    </Route> 
+                    </Route>
                     <Route path="/profile/chat">
                         <ChatComponentTwo />
-                    </Route> 
+                    </Route>
                     <Route path="/profile/group-chat">
                         <GroupChatView />
                     </Route>

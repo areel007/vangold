@@ -211,6 +211,19 @@
   padding: 0.4rem 0.7rem;
   border-radius: 4px;
 }
+#my-job-projects .project-select {
+  border: 1px solid #45b618;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 1rem 10rem 1rem 1rem;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  font-family: var(--mulish);
+  cursor: pointer;
+  margin-top: 2rem;
+}
 #my-job-projects .text-12px {
   font-size: 12px;
   font-weight: var(--font-wieght-bold);
@@ -244,5 +257,19 @@
   }
   #job-descrip .head2 {
     font-size: 18px;
+  }
+  #job-descrip .text-16px-1 {
+    font-size: 14px;
+  }
+  #my-job .btn-2,
+  #my-job .btn-1 {
+    font-size: 12px;
+    margin-right: 0.5rem;
+    padding: 0.7rem 1rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1110px) {
+  #my-job .btn-2 {
+    margin-right: 0.5rem;
   }
 }

@@ -5,8 +5,8 @@ const ApplicantsApplied = ({ name, position, avatar, notification }) => {
     return (
         <>
             <Row className="my-3">
-                <Col xs={10} md={4} className="mx-auto">
-                    <div className="d-flex">
+                <Col xs={5} md={4} className='mx-auto'>
+                    <div className="d-flex ps-3 ps-lg-5">
                         <div className='me-3'><img src={avatar} alt="person" className="img-fluid" /></div>
                         <div className="align-self-center">
                             <p className="text-14px mb-0">{name}</p>
@@ -14,7 +14,7 @@ const ApplicantsApplied = ({ name, position, avatar, notification }) => {
                         </div>
                     </div>
                 </Col>
-                <Col xs={10} md={6} className="mx-auto align-self-center">
+                <Col xs={7} md={8} className="mx-auto align-self-center ps-lg-5">
                     <Button className='btn-1'>Approve</Button>
                     {notification ? (
                         <Button className='btn-2'>Message <span className='noti'>{notification}</span></Button>
