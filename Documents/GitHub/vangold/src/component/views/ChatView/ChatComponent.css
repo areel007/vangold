@@ -360,6 +360,15 @@
   color: var(--secondary);
   /* opacity: 0.3; */
 }
+.addParticipants {
+  padding-left: 30px;
+  padding-right: 58px;
+  margin-bottom: 38px;
+}
+.inn-addParticipants {
+  background: #f6f6f6;
+  border-radius: 10px;
+}
 .chat__search-box svg {
   position: relative;
   left: 23px;
@@ -384,9 +393,10 @@
 .chat__users_title {
   font-family: var(--mulish);
   font-style: normal;
-  font-weight: bold;
-  font-size: var(--fs-14);
-  line-height: 18px;
+  font-weight: normal;
+  font-size: var(--fs-12);
+  line-height: 15px;
+  letter-spacing: 0.2px;
   color: var(--secondary);
 }
 .chat__users_title {
@@ -439,6 +449,7 @@
   justify-content: space-between;
   align-items: center;
   padding-left: 35px;
+  position: relative;
   padding-right: 35px;
 }
 .chatBox__profile {
@@ -603,7 +614,6 @@
   height: 48px;
   display: flex;
   justify-content: flex-end;
-  
 }
 .bottom-chat-footer .chat-input-box input {
   width: 100%;
@@ -751,7 +761,7 @@
   margin-top: 24px;
   margin-bottom: 12px;
 }
-.direct-group-text a{
+.direct-group-text a {
   pointer-events: none;
 }
 .direct-group-text a:nth-child(1) {
@@ -864,8 +874,8 @@
   border-radius: 10px;
   position: absolute;
   z-index: 1;
-  right: 61px;
-  top: 260px;
+  right: 0px;
+  top: 30px;
 }
 
 .popoverBox.arrow-top {
@@ -894,6 +904,7 @@
   flex-direction: column;
   margin-top: 9.12px;
 }
+.popover__links li,
 .popover__links a {
   display: block;
   height: 43px;
@@ -906,7 +917,9 @@
   align-items: center;
   color: var(--secondary);
   padding-left: 24px;
+  cursor: pointer;
 }
+.popover__links li:hover,
 .popover__links a:hover {
   background: #f7f6f6;
 }
@@ -920,16 +933,21 @@
   height: 100%;
 }
 .popover__participants {
-  background-color: #daf0d1;
+  background-color: #ebecea;
+  border-radius: 0px 10px 0px 0px;
   position: relative;
+  max-width: 272px;
+  min-height: 620px;
   z-index: 1;
-  top: 180px;
+  top: 275px;
   left: 35px;
 }
 .popover__participants-header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #daf0d1;
+  min-height: 70px;
   gap: 47px;
 }
 .participants__close-btns {
@@ -945,7 +963,6 @@
 }
 .popover__participants__links {
   width: 272px;
-  background: rgba(217, 218, 215, 0.5);
   border-radius: 0px 10px 0px 0px;
   position: relative;
   top: 12px;
@@ -960,7 +977,7 @@
   padding-top: 12px;
   margin-bottom: 27px;
 }
-.mobile-popover__partcipants_link__header{
+.mobile-popover__partcipants_link__header {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;

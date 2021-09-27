@@ -1,0 +1,64 @@
+.modal_-_channelHead {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-24);
+  line-height: 28px;
+  color: #141414;
+  margin-bottom: 32px;
+}
+#myform .form-input .modal_-_channel-_-label {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--secondary);
+}
+.modal_-_channel-_-bottom span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-18);
+  line-height: 21px;
+  color: var(--secondary);
+}
+.modal_-_channel-_private {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.modal_-_channel-_-bottom .modal_-_channel-_private {
+  margin-top: 8px;
+  margin-bottom: 58px;
+}
+.modal_-_channel-_-bottom .modal_-_channel-_private span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #4f4f4f;
+}
+
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.modal_-_channel-_private input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.ant-switch-checked{
+  background-color: var(--primary);
+}

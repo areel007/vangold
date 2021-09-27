@@ -37,10 +37,12 @@ import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
 import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
 import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
-import GroupChatComponentThree from './component/views/ChatView/GroupChatView/ChatComponent3';
+import GroupChatComponentThree from './component/views/ChatView/ChatComponent3';
 import ChatBoxMobile from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile';
 import ChatBoxMobileTwo from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile2';
 import ChatBoxMobileThree from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile3';
+import BusinessChatView from './component/views/ChatView/BusinessChatView/BusinessChatView';
+import BusinessChatViewTwo from './component/views/ChatView/BusinessChatView/BusinessChatView2';
 import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupParticipate';
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
@@ -222,6 +224,12 @@ function App() {
                     </Route>
                     <Route path="/profile/GroupParticipants">
                         <GroupParticipate/>
+                    </Route>
+                    <Route path="/profile/business-chat">
+                        <BusinessChatView/>
+                    </Route>
+                    <Route path="/profile/business-chat-1">
+                        <BusinessChatViewTwo/>
                     </Route>
                     <Route path="/profile/ChatCall">
                         <ChatCall />

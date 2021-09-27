@@ -44,11 +44,11 @@
     padding-bottom: 11.62px;
     padding: 24px;
   }
-  .logo img{
+  .logo img {
     width: 24px !important;
     height: 22.38px !important;
   }
-  .logo h2{
+  .logo h2 {
     font-size: var(--fs-16) !important;
   }
   .dashboard-avatar-name-notify .avatarImg {
@@ -232,6 +232,14 @@
   .chat__avatar {
     width: 40px !important;
     height: 40px !important;
+  }
+  .stories-profile-details,
+  .addStories_-img__svg {
+    width: 80px;
+  }
+  .stories__container .stories-show-box .avatar__stories {
+    width: 44px !important;
+    height: 44px !important;
   }
   .home-two-card .card-article p,
   .collaborate-text2 .collaborate-button2,

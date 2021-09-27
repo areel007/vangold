@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import "./header.css"
+import "./header.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 import HeaderLogo from "../../../assets/images/logo.png"
@@ -22,7 +22,10 @@ const Header = (props) => {
             location.pathname==='/profile/chat'||
             location.pathname==='/profile/group-chat'||
             location.pathname==='/profile/group-chat2'||
+            location.pathname==='/profile/group-chat3'||
             location.pathname==='/profile/ChatCall'||
+            location.pathname==='/profile/business-chat'||
+            location.pathname==='/profile/business-chat-1'||
             location.pathname==='/profile/stories'||
             location.pathname==='/profile/edit'?
                 <div className='header-after-login'>

@@ -1,25 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../authstyle.css";
 import { Link } from "react-router-dom";
+import 'antd/dist/antd.css';
+import { Form, Input, Button, Checkbox } from 'antd';
 
 const LogInForm = () => {
 
   return (
     <>
-      <form className="auth__form">
+      <Form name="basic" className="auth__form">
       <div className="form__title">
         <h1 className="desktopAuth_h1">Log in</h1>
         <h1 className="mobileAuth_h1">Sign in to VanGold</h1>
         <p className="authLogin__P">Log in with your data that you entered during your registration</p>
       </div>
       <div className="form-input__container">
+      <Form.Item
+          name="email"
+          rules={[
+            {
+              type: 'email',
+              required: true,
+              message: 'Please input a valid email address!',
+            },
+          ]}
+        >
         <div className="form__-control">
           <label htmlFor="Email">Email</label>
-          <input type="email" />
+          
+          <input type="email" name="email" rules={[
+          {
+            required: true,
+            message: 'Please input your email!',
+          },
+        ]}  />
         </div>
+        </Form.Item>
+
         <div className="form__-control">
           <label htmlFor="Password">Password</label>
-          <input type="password" />
+          <input type="password" name="password"  />
         </div>
       </div>
       <div className="form__-terms">
@@ -31,7 +51,7 @@ const LogInForm = () => {
           <p><Link to="/reset-password">Forgot Password</Link></p>
         </div>
       </div>
-      <button className="submit__btn">Create account</button>
+      <button type="submit" className="submit__btn">Log in</button>
       <div className="or">
         <p>or</p>
       </div>
@@ -73,7 +93,7 @@ const LogInForm = () => {
                 <span>Continue with Facebook</span>
             </button>
         </div>
-      </form>
+      </Form>
     </>
   );
 };
