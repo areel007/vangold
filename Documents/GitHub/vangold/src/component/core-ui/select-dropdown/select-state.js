@@ -1,7 +1,7 @@
 import "./select-dropdown.css"
 
 
-const SelectCountry = props => {
+const SelectState = props => {
     return <div className="select-dropdown-component">
         <div
             onClick={props.toggleDropdown}
@@ -26,7 +26,7 @@ const SelectCountry = props => {
                 {
                     props.dataToDisplay.map((_data, index) => {
                         return <div className="select-dropdown-item" key={index}>
-                            <p>{_data.country}</p>
+                            <p>{_data}</p>
                         </div>
                     })
                 }
@@ -35,4 +35,4 @@ const SelectCountry = props => {
     </div>
 }
 
-export default SelectCountry
+export default SelectState

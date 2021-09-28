@@ -64,6 +64,7 @@ header {
 }
 .language {
   cursor: pointer;
+  position: relative;
 }
 .header__inner ul li a svg {
   margin-right: 1rem;
@@ -320,4 +321,29 @@ header .header-after-login {
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #4f4f4f;
+}
+
+/* Language selection styling */
+.language-selection {
+  position: relative;
+}
+.language-selection-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 110%;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px;
+  left: 0;
+  border-radius: 5px;
+}
+.language-selection-dropdown li {
+  margin: 0 0 3px 0 !important;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+.language-selection-dropdown li:hover {
+  background-color: var(--primary);
+  color: var(--white) !important;
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, {useRef, useState} from "react";
 import "./header.css"
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
@@ -10,6 +10,24 @@ const Header = (props) => {
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
     const onClick = () => setIsActive(!isActive);
     const location = useLocation()
+    const [languageDropdown, setLanguageDropdown] = useState(false)
+    const [languages] = useState([
+        'English',
+        'Deutsch',
+        'Spanish',
+        'French',
+        'Portuguese',
+    ])
+    const [languageDropdownHeader, setLanguageDropdownHeader] = useState('English')
+
+    const toggleLanguageSelection = () => {
+        setLanguageDropdown(!languageDropdown)
+    }
+
+    const updateLanguageDropdownHeader = (event) => {
+        setLanguageDropdownHeader(event.target.innerText)
+        setLanguageDropdown(false)
+    }
 
     return (
         <header>
@@ -111,8 +129,8 @@ const Header = (props) => {
                                 <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                             </svg>
                         </div>
-                        
-                    </div> : 
+
+                    </div> :
                     <div className='container'>
                         <div className='header__inner'>
                     <div className='header-before-login'>
@@ -127,8 +145,9 @@ const Header = (props) => {
                                         switch (link.linkName) {
                                             case 'English': return (
                                                 <li className="language" onClick={onClick} key={link.linkName}>
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                        <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
+                                                    <div>
+                                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                            <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
                                             20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM16.92 6H13.97C13.65
                                             4.75 13.19 3.55 12.59 2.44C14.43 3.07 15.96 4.35 16.92 6ZM10
                                             2.04C10.83 3.24 11.48 4.57 11.91 6H8.09C8.52 4.57 9.17 3.24 10
@@ -142,9 +161,19 @@ const Header = (props) => {
                                             13.97 14H16.92C15.96 15.65 14.43 16.93 12.59 17.56ZM14.36 12C14.44 11.34 14.5
                                             10.68 14.5 10C14.5 9.32 14.44 8.66 14.36 8H17.74C17.9 8.64 18 9.31 18 10C18
                                             10.69 17.9 11.36 17.74 12H14.36Z" fill="#333333" />
-                                                    </svg>
+                                                        </svg>
 
-                                                    &nbsp;{link.linkName}
+                                                        &nbsp;<span onClick={toggleLanguageSelection} className="language-selection">{languageDropdownHeader}</span>
+                                                    </div>
+                                                    {
+                                                        languageDropdown ? <ul className="language-selection-dropdown">
+                                                            {
+                                                                languages.map(language => {
+                                                                    return <li onClick={updateLanguageDropdownHeader}>{language}</li>
+                                                                })
+                                                            }
+                                                        </ul> : null
+                                                    }
                                                 </li>
                                             )
                                             default: return (

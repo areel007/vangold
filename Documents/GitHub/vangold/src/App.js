@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
-import Header from "./component/core-ui/header/header"
+// import Header from "./component/core-ui/header/header"
+import HeaderComponent from "./component/core-ui/header/header-component";
 import Footer from "./component/core-ui/footer/footer"
 import SignUp from "./component/views/auth/sign-up";
 import LogIn from "./component/views/auth/log-in";
@@ -100,9 +101,13 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Header
+                {/*<Header*/}
+                {/*    links={links}*/}
+                {/*    buttons={buttons}*/}
+                {/*    toggleMobileNav={toggleMobileNav}*/}
+                {/*/>*/}
+                <HeaderComponent
                     links={links}
-                    buttons={buttons}
                     toggleMobileNav={toggleMobileNav}
                 />
                 <MobileNav
