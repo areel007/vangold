@@ -52,6 +52,10 @@
   padding: 20px;
   font-size: 1.3rem;
 }
+.form-check {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
 .form__-terms {
   display: flex;
   align-items: center;
@@ -189,6 +193,7 @@
   display: flex;
 }
 .option-buttons button {
+  cursor: pointer;
   width: 175px;
   height: 48px;
   display: flex;

@@ -1,11 +1,34 @@
 import React from "react";
 import "../authstyle.css";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+
 
 const SignUpForm = () => {
 
+  const validationSchema = Yup.object().shape({
+    username: Yup.string().required('Username is required'),
+    email: Yup.string().email().required('Email is required'),
+    password: Yup.string()
+    .required('Password is required')
+    .matches(/[a-zA-Z]/, "Password can only contain Latin letters.")
+    .min(6, 'Password must be at least 6 characters'),
+    confirmPassword: Yup.string().oneOf([Yup.ref("password"), null]),
+    acceptTerms: Yup.bool()
+    .oneOf([true], 'Accept Ts & Cs is required'),
+});
+const formOptions = { resolver: yupResolver(validationSchema) };
+
+// get functions to build form with useForm() hook
+const { register, handleSubmit, reset, formState } = useForm(formOptions);
+const { errors } = formState;
+
+function onSubmit(data) {}
+
   return (
     <>
-      <form className="auth__form">
+      <form className="auth__form" onSubmit={handleSubmit(onSubmit)}>
       <div className="form__title">
         <h1 className="desktopAuth_h1">Create account</h1>
         <h1 className="mobileAuth_h1">Create a VanGold account</h1>
@@ -13,38 +36,43 @@ const SignUpForm = () => {
       <div className="form-input__container">
         <div className="form__-control">
           <label htmlFor="Username">Username</label>
-          <input type="text" />
+          <input name="text" type="username" {...register('username')} className={`form-control ${errors.username ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.username?.message}</div>
         </div>
         <div className="form__-control">
           <label htmlFor="Email">Email</label>
-          <input type="email" />
+          <input name="email" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.email?.message}</div>
         </div>
         <div className="form__-control">
           <label htmlFor="Password">Password</label>
-          <input type="password" />
+          <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.password?.message}</div>
         </div>
         <div className="form__-control">
           <label htmlFor="Confirm Password">Confirm Password</label>
-          <input type="password" />
+          <input name="confirmPassword" type="password" {...register('confirmPassword')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.confirmPassword && "Passwords don't match!"}</div>
         </div>
       </div>
       <div className="sign-up-options">
         <p>I want to:</p>
         <div className="option-buttons">
-          <button className="option-btn">Hire for a project</button>
-          <button className="option-btn">Work as a freelancer</button>
+          <button disabled={!formState.isValid} className="option-btn">Hire for a project</button>
+          <button disabled={!formState.isValid} className="option-btn">Work as a freelancer</button>
         </div>
       </div>
-      <div className="form__-terms">
-        <input type="checkbox" id="" name="" value="signinterms"></input>
-        <label htmlFor="auth terms checkbox" className="auth-checkbox-label"> &nbsp;By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</label>
+      <div className="form-group form-check">
+        <input name="acceptTerms" type="checkbox" {...register('acceptTerms')} id="acceptTerms" className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`} />
+        <label htmlFor="acceptTerms" className="form-check-label">By creating an account, you agree to the Terms of Service and Conditions and Privacy Policy</label>
+        <div className="invalid-feedback">{errors.acceptTerms?.message}</div>
       </div>
-      <button className="submit__btn">Create account</button>
+      <button type="submit" className="submit__btn">Create account</button>
       <div className="or">
         <p>or</p>
       </div>
       <div className="auth-icon-btns">
-            <button>
+            <button disabled={!formState.isValid}>
                 <svg
                     width="24"
                     height="24"
@@ -66,7 +94,7 @@ const SignUpForm = () => {
                 <span>Continue with Google</span>
 
             </button>
-            <button>
+            <button disabled={!formState.isValid}>
                 <svg
                     width="20"
                     height="20"

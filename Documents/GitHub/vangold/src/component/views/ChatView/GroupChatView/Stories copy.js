@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
-import StoriesModal from "../../../core-ui/StoriesModal/StoriesModal"; 
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
 import '../ChatComponent2.css';
 
@@ -25,47 +23,11 @@ const userStoriesData = [
         avatar: avatar3,
         userName: "Adam Sandler"
     },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar3,
-        userName: "Adam Sandler"
-    },
 
 ] 
 
 const Stories = () => {
-    const [modalShow, setModalShow] = useState(false);
+
     return (
         <div id="" className="">
             <div className="stories__box__contaniner">
@@ -80,11 +42,10 @@ const Stories = () => {
                 <span>Your story</span>
             </div>
                 <div className="stories__container">
-                    <ScrollingCarousel>
-                        {
-                            userStoriesData.map((userData) => (
+                    {
+                        userStoriesData.map((userData) => (
                                     <div className="stories-show-box">
-                                        <div onClick={() => setModalShow(true)} className="stories-profile-details">
+                                        <div className="stories-profile-details">
                                             <div className="avatar__stories">
                                                 <img className="chat__avatar" src={userData.avatar} alt="stories avatar" />
                                             </div>
@@ -93,14 +54,8 @@ const Stories = () => {
                                     </div>
                                 ))
                             }
-                    </ScrollingCarousel>,
                 </div>
             </div>
-            <StoriesModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-                head="Vangold"
-                btntext='Create' />
         </div>
     );
 }
