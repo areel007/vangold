@@ -10,6 +10,7 @@ import Employment from "../../../core-ui/steps/employment";
 import Rate from "../../../core-ui/steps/rate";
 import Language from "../../../core-ui/steps/language.js";
 import Location from "../../../core-ui/steps/location";
+import ExpertiseLevel from "../../../core-ui/steps/expertise-level";
 
 const FreelancerRegistration = () => {
 
@@ -26,20 +27,22 @@ const FreelancerRegistration = () => {
             case 4:
                 return <Expertise />
             case 5:
-                return <Education />
+                return <ExpertiseLevel />
             case 6:
-                return <Employment />
+                return <Education />
             case 7:
-                return <Rate />
+                return <Employment />
             case 8:
-                return <Language />
+                return <Rate />
             case 9:
+                return <Language />
+            case 10:
                 return <Location />
         }
     }
 
     const saveAndNext = () => {
-        stepPage < 9 ? setStepPage(stepPage = stepPage + 1) : stepPage = 9
+        stepPage < 10 ? setStepPage(stepPage = stepPage + 1) : stepPage = 10
     }
 
     const back = () => {

@@ -55,6 +55,7 @@ const Expertise = (props) => {
         event.preventDefault()
         setAddedSkills([...addedSkills, {skill: input, id: uuidv4()}])
         setInput("")
+
     }
 
     return (
@@ -115,7 +116,7 @@ const Expertise = (props) => {
                                 <li
                                     key={index}
                                     onClick={ () => addPopularSkill(popularSkill) }
-                                    >
+                                >
                                     <div>
                                         <span>{popularSkill.skill}</span>
                                         <svg

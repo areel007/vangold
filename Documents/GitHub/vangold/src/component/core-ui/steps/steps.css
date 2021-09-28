@@ -571,3 +571,53 @@ form {
   line-height: 19px;
   color: #333333;
 }
+.expertise-level__cards {
+  display: flex;
+  justify-content: space-between;
+  width: 666px;
+  margin-bottom: 80px;
+}
+
+/* Card Radio Button */
+.expertise-card {
+  display : block;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.expertise-card > input{ /* HIDE RADIO */
+  /*visibility: hidden; !* Makes input not-clickable *!*/
+  position: absolute; /* Remove input from document flow */
+  top: 5px;
+  right: 5px;
+}
+.expertise-card > input + div{ /* DIV STYLES */
+  cursor:pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+/*.expertise-card > input:checked + div{ !* (RADIO CHECKED) DIV STYLES *!*/
+/*  background-color: #ffd6bb;*/
+/*  border: 1px solid #ff6600;*/
+/*}*/
+.expertise-card__title {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+.expertise-card__subtitle {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #767676;
+  text-align: center;
+}

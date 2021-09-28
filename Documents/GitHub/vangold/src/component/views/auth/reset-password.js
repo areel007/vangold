@@ -20,7 +20,6 @@ const ResetPassword = () => {
                     </div>
                 </div>
             </div>
-            <p className="authBottomLink"><Link to="/login">Back to Login</Link></p>
         </div>
         </>
     )

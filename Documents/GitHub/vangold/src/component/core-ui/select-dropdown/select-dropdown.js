@@ -24,8 +24,8 @@ const SelectDropdown = props => {
                 onClick={props.upDateDropdownHeader}
             >
                 {
-                    props.dataToDisplay.map(_data => {
-                        return <div className="select-dropdown-item">
+                    props.dataToDisplay.map((_data, index) => {
+                        return <div className="select-dropdown-item" key={index}>
                             <p>{_data.label}</p>
                         </div>
                     })
