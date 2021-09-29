@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../../core-ui/SideMenu/SideMenu"
-import avatar from "../../../../assets/images/avatar/Ellipse7.png";
-import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png"
-import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
-import participantsAvatar1 from "../../../../assets/images/avatar/Ellipse-7.png";
-import participantsAvatar2 from "../../../../assets/images/avatar/Ellipse-7-1.png";
-import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.png";
-import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
-import '../ChatComponent.css';
+import SideMenu from "../../core-ui/SideMenu/SideMenu"
+import avatar from "../../../assets/images/avatar/Ellipse7.png";
+import avatarTwo from "../../../assets/images/profile/Rectangle9112-5.png"
+import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
+import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
+import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
+import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
+import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
+import './ChatComponent.css';
 import useOnclickOutside from "react-cool-onclickoutside";
 import { Menu } from "semantic-ui-react";
 import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
+import Stories from "./GroupChatView/Stories"
 
 const handleClick = (e, data) => {
     console.log(data);
@@ -112,6 +113,7 @@ const GroupChatComponentThree = () => {
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
+                        <Stories />
                         <div className="chat__container-header">
                             <p className="chat__container-title">Inbox</p>
                             <p className="chat__container-subtitle">Read, respond and respond to messages</p>
@@ -186,10 +188,10 @@ const GroupChatComponentThree = () => {
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
-                                                <Link onClick={() => { closePopover(); openParticantsPopover();}} to="#">Group Participant</Link>
-                                                <Link onClick={closePopover} to="#">Search</Link>
-                                                <Link onClick={closePopover} to="#">Report Group</Link>
-                                                <Link onClick={closePopover} to="#">Exit Group</Link>
+                                                <li onClick={() => { closePopover(); openParticantsPopover();}} to="#">Group Participant</li>
+                                                <li onClick={closePopover} to="#">Search</li>
+                                                <li onClick={closePopover} to="#">Report Group</li>
+                                                <li onClick={closePopover} to="#">Exit Group</li>
                                             </div>                                     
                                         </div>
                                     }  
@@ -310,6 +312,9 @@ const GroupChatComponentThree = () => {
                                         <input type="text" placeholder="Message..." />
                                         <div className="chat-input-icons">
                                             <div className="inn-chat-input-icons">
+                                                <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7 12C8.66 12 9.99 10.66 9.99 9L10 3C10 1.34 8.66 0 7 0C5.34 0 4 1.34 4 3V9C4 10.66 5.34 12 7 12ZM12.3 9C12.3 12 9.76 14.1 7 14.1C4.24 14.1 1.7 12 1.7 9H0C0 12.41 2.72 15.23 6 15.72V19H8V15.72C11.28 15.24 14 12.42 14 9H12.3Z" fill="#333333"/>
+                                                </svg>
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M13.5 9C14.3284 9 15 8.32843 15 7.5C15 6.67157 14.3284 6 13.5 6C12.6716 6 12 6.67157 12 7.5C12 8.32843 12.6716 9 13.5 9Z" fill="#333333"/>
                                                     <path d="M6.5 9C7.32843 9 8 8.32843 8 7.5C8 6.67157 7.32843 6 6.5 6C5.67157 6 5 6.67157 5 7.5C5 8.32843 5.67157 9 6.5 9Z" fill="#333333"/>
@@ -349,6 +354,7 @@ const GroupChatComponentThree = () => {
                     <Menu.Item>Delete</Menu.Item>
                 </MenuItem>
             </Menu>
+            
         </div>
     );
 }

@@ -56,7 +56,7 @@ const ChatBoxMobileTwo = () => {
                                             </div>
                                             <div className="popover__links">
                                                 <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
-                                                <Link onClick={closePopover} to="#">View Team Members</Link>
+                                                <li onClick={closePopover} to="#">View Team Members</li>
                                             </div>                                     
                                         </div>
                                     }

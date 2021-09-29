@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "../authstyle.css";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
 const LogInForm = () => {
+  const validationSchema = Yup.object().shape({
+    password: Yup.string()
+        .required('Password is required')
+        .min(6, 'Password must be at least 6 characters'),
+    
+    email: Yup.string().email().required('Email is required'),
+        
+});
+const formOptions = { resolver: yupResolver(validationSchema) };
+
+// get functions to build form with useForm() hook
+const { register, handleSubmit, reset, formState } = useForm(formOptions);
+const { errors } = formState;
+
+function onSubmit(data) {}
+
 
   return (
     <>
-      <form className="auth__form">
+      <form className="auth__form" onSubmit={handleSubmit(onSubmit)}>
       <div className="form__title">
         <h1 className="desktopAuth_h1">Log in</h1>
         <h1 className="mobileAuth_h1">Sign in to VanGold</h1>
@@ -15,11 +34,13 @@ const LogInForm = () => {
       <div className="form-input__container">
         <div className="form__-control">
           <label htmlFor="Email">Email</label>
-          <input type="email" />
+          <input name="email" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.email?.message}</div>
         </div>
         <div className="form__-control">
-          <label htmlFor="Password">Password</label>
-          <input type="password" />
+          <label htmlFor="Email">Password</label>
+          <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
+          <div className="invalid-feedback">{errors.password?.message}</div>
         </div>
       </div>
       <div className="form__-terms">
@@ -31,12 +52,12 @@ const LogInForm = () => {
           <p><Link to="/reset-password">Forgot Password</Link></p>
         </div>
       </div>
-      <button className="submit__btn">Create account</button>
+      <button type="submit" className="submit__btn">Log in</button>
       <div className="or">
         <p>or</p>
       </div>
       <div className="auth-icon-btns">
-            <button>
+            <button disabled={!formState.isValid}>
                 <svg
                     width="24"
                     height="24"
@@ -58,7 +79,7 @@ const LogInForm = () => {
                 <span>Continue with Google</span>
 
             </button>
-            <button>
+            <button disabled={!formState.isValid}>
                 <svg
                     width="20"
                     height="20"

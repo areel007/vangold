@@ -113,7 +113,9 @@ const ChatComponentTwo = () => {
                                             </div>
                                             <div className="popover__links">
                                                 <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
-                                                <Link onClick={closePopover} to="#">View Team Members</Link>
+                                                <li onClick={closePopover} to="#">View Team Members</li>
+                                                <li onClick={closePopover} to="#">Search</li>
+                                                <li onClick={closePopover} to="#">Report Contact</li>
                                             </div>                                     
                                         </div>
                                     }

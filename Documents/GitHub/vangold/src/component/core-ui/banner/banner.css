@@ -59,7 +59,7 @@
 .bannerTwo__image {
   width: 80rem;
   position: relative;
-  top: 15px;
+  top: 22px;
 }
 .bannerTwo__image img {
   width: 100%;
@@ -134,6 +134,9 @@
 }
 .homepage__modal__body {
   width: 652px !important;
+  margin-top: 20px;
+}
+.homepage__modal__body-Header{
   margin-top: 20px;
 }
 .homepage__modal__body-Header h2{

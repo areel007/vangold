@@ -1,6 +1,52 @@
+.dhhddhhd{
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}
+
 .stories__box__contaniner {
-  margin-top: 47px;
-  min-width: 100%;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border-radius: 8px;
+  min-height: 107px;
+  padding-left: 23.65px;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.addStories {
+  margin-right: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10.65px;
+  /* width: 100px; */
+}
+.addStories img{
+  width: 45.7px;
+  height: 45.25px;
+}
+.addStories span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-12);
+  line-height: 15px;
+  letter-spacing: 0.2px;
+  color: var(--secondary);
+}
+.addStories_-img__svg svg{
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 33px;
+  margin-left: -17px;
 }
 .stories-header {
   display: flex;
@@ -18,31 +64,30 @@
 }
 
 .stories__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 32px;
-}
-.stories__container .stories-show-box {
-  max-width: 100%;
-  height: 350px;
-  border-radius: 8px;
-}
-.stories__container .stories-show-box .backgroundImg {
-  max-width: 100%;
-  height: 350px;
+  position: relative;
+  top: 5px;
+  display: flex;
+  gap: 17px;
 }
 .stories__container .stories-show-box .stories-profile-details {
-  position: relative;
-  top: -102%;
-  width: 100%;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 8px 8px 0px 0px;
   display: flex;
   align-items: center;
-  padding: 16px;
-  gap: 12px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10.65px;
+  /* max-width: 100px; */
+}
+.stories__container .stories-show-box .avatar__stories {
+  width: 48.79px;
+  height: 48.79px;
+  background-color: #ffffff;
+  border: 2px solid #45b618;
+  border-radius: 50%;
+  text-align: center;
+}
+.stories__container .stories-show-box .avatar__stories img {
+  width: 45.7px;
+  height: 45.25px;
 }
 #chat-mobile-box {
   display: none;
@@ -63,6 +108,7 @@
   align-items: center;
   padding-left: 35px;
   padding-right: 35px;
+  position: relative;
 }
 .mobile-chat-messanger-container {
   background: #f2f2f2;
@@ -168,6 +214,6 @@
   background: #efefef;
   border-radius: 6px 6px 0px 6px;
 }
-.group-participants{
+.group-participants {
   min-height: 620px;
 }

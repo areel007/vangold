@@ -1,92 +1,106 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../../core-ui/SideMenu/SideMenu"
-import avatar from "../../../../assets/images/stories/Ellipse1518.png";
-import avatar2 from "../../../../assets/images/stories/Ellipse1519.png";
+import { ScrollingCarousel } from '@trendyol-js/react-carousel';
+import StoriesModal from "../../../core-ui/StoriesModal/StoriesModal"; 
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
-import avatar4 from "../../../../assets/images/stories/Ellipse1521.png";
-import avatar5 from "../../../../assets/images/stories/Ellipse1522.png";
-import avatar6 from "../../../../assets/images/stories/Ellipse1523.png";
-import backgroundImg1 from "../../../../assets/images/stories/Rectangle9135.png";
-import backgroundImg2 from "../../../../assets/images/stories/Rectangle9131.png";
-import backgroundImg3 from "../../../../assets/images/stories/Rectangle9135-1.png";
-import backgroundImg4 from "../../../../assets/images/stories/Rectangle9137.png";
-import backgroundImg5 from "../../../../assets/images/stories/Rectangle9136.png";
-import backgroundImg6 from "../../../../assets/images/stories/Rectangle9138.png";
-import '../ChatComponent.css';
 import '../ChatComponent2.css';
 
 const userStoriesData = [
     {
-        avatar: avatar,
-        backgroundImg: backgroundImg1,
-        userName: "Adam Sandler"
-    },
-    {
-        avatar: avatar2,
-        backgroundImg: backgroundImg2,
+        avatar: avatar3,
         userName: "Adam Sandler"
     },
     {
         avatar: avatar3,
-        backgroundImg: backgroundImg3,
         userName: "Adam Sandler"
     },
     {
-        avatar: avatar4,
-        backgroundImg: backgroundImg4,
+        avatar: avatar3,
         userName: "Adam Sandler"
     },
     {
-        avatar: avatar5,
-        backgroundImg: backgroundImg5,
+        avatar: avatar3,
         userName: "Adam Sandler"
     },
     {
-        avatar: avatar6,
-        backgroundImg: backgroundImg6,
+        avatar: avatar3,
         userName: "Adam Sandler"
     },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+
 ] 
 
 const Stories = () => {
-
+    const [modalShow, setModalShow] = useState(false);
     return (
-        <div id="chat-component" className="my-3 py-3">
-            <Container fluid>
-                <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
-                    </Col>
-                    <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
-                        <div className="chat__container-header stories-header">
-                            <p className="chat__container-title">Stories</p>
-                            <button>
-                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z" fill="#45B618"/>
-                                </svg>
-                                Add Story
-                            </button>
-                        </div>
-                        <div className="stories__box__contaniner">
-                            <div className="stories__container">
-                                {
-                                    userStoriesData.map((userData) => (
-                                                <div className="stories-show-box">
-                                                    <img className="backgroundImg" src={userData.backgroundImg} alt="stories avatar" />
-                                                    <div className="stories-profile-details">
-                                                        <img className="chat__avatar" src={userData.avatar} alt="stories avatar" />
-                                                        <p className="chat__users_name">{userData.userName}</p>
-                                                    </div>
-                                                </div>
-                                            ))
-                                        }
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+        <div id="" className="">
+            <div className="stories__box__contaniner">
+            <div className="addStories">
+                <div className="addStories_-img__svg">
+                    <img src={avatar3} alt="addStories" />
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" fill="#45B618"/>
+                        <path d="M11.5 8.5H8.5V11.5H7.5V8.5H4.5V7.5H7.5V4.5H8.5V7.5H11.5V8.5Z" fill="white"/>
+                    </svg>
+                </div>
+                <span>Your story</span>
+            </div>
+                <div className="stories__container">
+                    <ScrollingCarousel>
+                        {
+                            userStoriesData.map((userData) => (
+                                    <div className="stories-show-box">
+                                        <div onClick={() => setModalShow(true)} className="stories-profile-details">
+                                            <div className="avatar__stories">
+                                                <img className="chat__avatar" src={userData.avatar} alt="stories avatar" />
+                                            </div>
+                                            <p className="chat__users_name">{userData.userName}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                    </ScrollingCarousel>,
+                </div>
+            </div>
+            <StoriesModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                head="Vangold"
+                btntext='Create' />
         </div>
     );
 }

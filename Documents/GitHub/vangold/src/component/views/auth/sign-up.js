@@ -14,9 +14,9 @@ const SignUp = () => {
                     </div>
                     <div className="auth-form__form">
                         <SignUpForm />
+                        <p className="authBottomLink">Already have an account? <Link to="/login">Login</Link></p>
                     </div>
                 </div>
-                <p className="authBottomLink">Already have an account? <Link to="/login">Login</Link></p>
             </div>
         </div>
     )
