@@ -333,6 +333,7 @@ header .header-after-login {
   position: absolute;
   top: 110%;
   background-color: white;
+
   z-index: 1000;
   padding: 10px;
   left: 0;
