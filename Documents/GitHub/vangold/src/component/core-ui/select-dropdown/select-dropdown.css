@@ -1,9 +1,7 @@
 .select-dropdown-component {
-  width: 100%;
   position: relative;
   width: var(--select-dropdown-component-width, 100%);
   margin-bottom: var(--select-dropdown-component-margin-bottom, 0);
-  position: relative;
 }
 .select-dropdown-header {
   padding: 15px;
@@ -72,4 +70,10 @@
   font-size: 16px;
   line-height: 19px;
   color: #333333;
+}
+
+@media screen and (max-width: 600px) {
+  .select-dropdown-component {
+    --select-dropdown-component-width: 100%;
+  }
 }

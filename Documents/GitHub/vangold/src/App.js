@@ -103,11 +103,6 @@ function App() {
     return (
         <Router>
             <div className="App">
-                {/*<Header*/}
-                {/*    links={links}*/}
-                {/*    buttons={buttons}*/}
-                {/*    toggleMobileNav={toggleMobileNav}*/}
-                {/*/>*/}
                 <HeaderComponent
                     links={links}
                     toggleMobileNav={toggleMobileNav}
