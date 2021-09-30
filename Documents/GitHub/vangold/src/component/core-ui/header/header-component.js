@@ -109,6 +109,7 @@ const HeaderComponent = (props) => {
                     </div> : null
                 }
                 <div className="hamburger-menu">
+                    <Link className="mobile-sign-in__headerLink" to="/login">Sign in</Link>
                     <svg
                         height="24px"
                         viewBox="0 0 24 24"

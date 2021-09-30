@@ -30,8 +30,7 @@ const JoinMeetingModal = (props) => {
                     <div className="form-input__container">
                         <div className="form__-control">
                             <label htmlFor="name">Meeting ID</label>
-                            <input name="text" type="name" {...register('name')} className={`form-control ${errors.name ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.name?.message}</div>
+                            <input name="text" type="name" />
                         </div>
                     </div>
                 </form>

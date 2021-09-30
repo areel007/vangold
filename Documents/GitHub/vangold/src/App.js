@@ -23,10 +23,12 @@ import TopJobsTwo from './component/views/TopJobsView/TopJobs2';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
 import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
+import ProfilePostJob from './component/views/ProfileViews/PostJob/PostJob';
 import EmployerSetting from './component/views/EmployerViews/EmployerSetting/EmployerSetting';
 import PayToEmployer from './component/views/EmployerViews/PayToEmployer/PayToEmployer';
 import PaymentSuccess from './component/views/EmployerViews/PaymentSuccess/PaymentSucess';
 import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDashboard';
+import FreelancerProfileDashboard from './component/views/FreelancerProfileViews/Dashboard/ProfileDashboard';
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
 import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfile/FreelancerProfile';
@@ -178,6 +180,9 @@ function App() {
                     <Route path="/postjob">
                         <PostJob />
                     </Route>
+                    <Route path="/profile/postjob">
+                        <ProfilePostJob />
+                    </Route>
                     <Route path="/employer-setting">
                         <EmployerSetting />
                     </Route>
@@ -186,6 +191,9 @@ function App() {
                     </Route>
                     <Route path="/payment-successful">
                         <PaymentSuccess />
+                    </Route>
+                    <Route path="/profile/f-dashboard">
+                        <FreelancerProfileDashboard />
                     </Route>
                     <Route path="/profile/dashboard">
                         <ProfileDashboard />
@@ -262,7 +270,7 @@ function App() {
                     <Route path="/freelancer-profile">
                         <FreelancerProfile />
                     </Route>
-                    <Route path="/freelancer-profile-edit">
+                    <Route path="/profile/freelancer-profile-edit">
                         <FreelancerProfileEdit />
                     </Route>
                 </Switch>

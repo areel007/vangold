@@ -2,7 +2,7 @@ import cover from "../../../../assets/images/profile/cover1.png";
 import avatar from "../../../../assets/images/profile/avatar3.png";
 import cam from "../../../../assets/images/profile/cam.png";
 import tick from "../../../../assets/images/profile/tick.png";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu";
 import { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { BsThreeDots } from "react-icons/bs";
@@ -48,7 +48,7 @@ const FreelancerProfileEdit = () => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <SideMenu />
+                        <FreelancerProfileSideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w">
                         <div>
@@ -90,7 +90,7 @@ const FreelancerProfileEdit = () => {
                             </div>
                         </div>
                         <div className="text-center">
-                            <p className="text-16px mt-3 fw-bold">Product Designer</p>
+                            <p className="text-16px mt-3 fw-bold">Product Designers <span style={{fontSize: 16, fontWeight: 500, color: "#4F4F4F" }}>164 Followers</span></p>
                         </div>
                         <Row className="p-5" style={{ marginTop: "5rem" }}>
                             <Col xs={12} lg={9}>

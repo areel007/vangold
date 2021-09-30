@@ -4,7 +4,8 @@
   gap: 20px;
   align-items: center;
 }
-.form__-control .date-time-duration .datePickerEventModal, .form__-control .date-time-duration .durationInput{
+.form__-control .date-time-duration .datePickerEventModal,
+.form__-control .date-time-duration .durationInput {
   width: 100% !important;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
@@ -21,11 +22,12 @@
 .form__-control .date-time-duration .durationInput {
   padding-left: 38px !important;
 }
-.durationInput-Box{
+.durationInput-Box,
+.__Picker {
   position: relative;
   width: 100%;
 }
-.durationInput-Box svg{
+.durationInput-Box svg {
   position: absolute;
   top: 18px;
   margin-left: 10px;
@@ -96,13 +98,13 @@
   display: flex;
   gap: 8px;
 }
-.guestsAdded__box .guestsAdded__box-img{
+.guestsAdded__box .guestsAdded__box-img {
   position: relative;
 }
-.guestsAdded__box .guestsAdded__box-img img{
+.guestsAdded__box .guestsAdded__box-img img {
   width: 100%;
 }
-.guestsAdded__box .guestsAdded__box-img svg{
+.guestsAdded__box .guestsAdded__box-img svg {
   position: absolute;
   right: 0;
 }

@@ -184,6 +184,16 @@ p.user-name__name {
 .hamburger-menu svg {
   fill: var(--primary);
 }
+
+.hamburger-menu .mobile-sign-in__headerLink{
+  font-family: var(--mulish);
+  margin-right: 19px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-14);
+  line-height: 21px;
+  color: #4f4f4f;
+}
 .language-selection-dropdown {
   display: flex;
   flex-direction: column;

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const SideMenu = () => {
+const FreelancerProfileSideMenu = () => {
     const classes = useStyles();
     const [jobList, setJobList] = useState(false);
     const [talentList, setTalentList] = useState(false);
@@ -84,7 +84,7 @@ const SideMenu = () => {
                     </ListItemIcon>
                     <ListItemText
                         classes={{ primary: classes.listItemText }}
-                        primary="Jobs"
+                        primary="Find Work"
                     />
                     {jobList ? <MdExpandLess /> : <MdExpandMore />}
                 </ListItem>
@@ -218,9 +218,9 @@ const SideMenu = () => {
                     button
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
-                        history.push("/profile/edit");
+                        history.push("/profile/freelancer-profile-edit");
                     }}
-                    className={location.pathname === "/profile/edit" ? classes.active : null}
+                    className={location.pathname === "/profile/freelancer-profile-edit" ? classes.active : null}
                 >
                     <ListItemIcon>
                         <img src={person} alt="person" />
@@ -252,4 +252,4 @@ const SideMenu = () => {
     );
 };
 
-export default SideMenu;
+export default FreelancerProfileSideMenu;
