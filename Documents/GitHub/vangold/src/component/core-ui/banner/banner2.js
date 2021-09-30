@@ -139,7 +139,7 @@ const AbBanner = (props) => {
                                 </div>
                             </form>
                           </div>
-                    </PureModal>;
+                    </PureModal>
                     <PureModal className="homepage__modal__body"
                         header={
                             <div className="homepage__modal__body-Header">
@@ -233,7 +233,7 @@ const AbBanner = (props) => {
                                 </div>
                             </form>
                           </div>
-                    </PureModal>;
+                    </PureModal>
                     
                 </div>
             </div>

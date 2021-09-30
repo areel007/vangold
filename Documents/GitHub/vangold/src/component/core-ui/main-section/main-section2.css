@@ -32,7 +32,7 @@
   max-width: 495px;
   /* height: 536px; */
 }
-.secure-payment-section-img img{
+.secure-payment-section-img img {
   width: 100%;
 }
 .card-title h2 {
@@ -84,18 +84,49 @@
   color: #164d00;
   margin-bottom: 26px;
 }
-.our-top-freelancers{
+.our-top-freelancers {
   margin-bottom: 64px;
   margin-top: 64px;
 }
-.inner-our-top-freelancers{
+.inner-our-top-freelancers {
   height: 300px;
 }
-.our-top-freelancers-header h2{
+.our-top-freelancers-header h2 {
   font-family: var(--inter);
   font-style: normal;
   font-weight: var(--font-wieght-extrabold);
   font-size: var(--fs-48);
   line-height: 64px;
   color: #164d00;
+}
+.catalogue .inn-catalogue {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+.catalogue .inn-catalogue h2 {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-48);
+  line-height: 64px;
+  color: #164d00;
+}
+.catalogue .inn-catalogue .catalogue-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 59px;
+}
+.catalogue .inn-catalogue .catalogue-list div {
+  display: flex;
+  flex-direction: column;
+  gap: 15.89px;
+}
+.catalogue .inn-catalogue .catalogue-list div span {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: #18191f;
 }

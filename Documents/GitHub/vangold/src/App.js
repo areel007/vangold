@@ -49,6 +49,9 @@ import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
 import ChatComponent from './component/views/ChatView/ChatComponent';
 import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
+import ChatComponents from './component/core-ui/ChatComponent/ChatComponent';
+import MobileCall from "./component/core-ui/MobileCall/MobileCall";
+
 
 function App() {
 
@@ -123,7 +126,7 @@ function App() {
                     <Route path="/" exact>
                         <HomeTwo aboutUsCardDetails={aboutUsCardDetails} />
                     </Route>
-                    <Route path="/home">
+                    <Route path="/become-a-business">
                         <Home cardDetails={cardDetails} />
                     </Route>
                     <Route path="/sign-up">
@@ -144,10 +147,10 @@ function App() {
                     <Route path="/VerifyEmail">
                         <VerifyEmail />
                     </Route>
-                    <Route path="/top-freelancers">
+                    <Route path="/find-freelancer">
                         <TopFreelancer />
                     </Route>
-                    <Route path="/top-jobs">
+                    <Route path="/browse-job">
                         <TopJobs />
                     </Route>
                     <Route path="/top-jobs-view">
@@ -228,11 +231,17 @@ function App() {
                     <Route path="/profile/chat-mobile">
                         <ChatBoxMobileTwo/>
                     </Route>
+                    <Route path="/profile/mobile-call">
+                        <MobileCall/>
+                    </Route>
                     <Route path="/profile/group-chat-mobile2">
                         <ChatBoxMobileThree/>
                     </Route>
                     <Route path="/profile/GroupParticipants">
                         <GroupParticipate/>
+                    </Route>
+                    <Route path="/ChatCompo">
+                        <ChatComponents/>
                     </Route>
                     <Route path="/profile/business-chat">
                         <BusinessChatView/>

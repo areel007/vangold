@@ -182,9 +182,9 @@ const SideMenu = () => {
                             button
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
-                                history.push("/profile/talent/manage-talent");
+                                history.push("");
                             }}
-                            className={location.pathname === "/profile/talent/manage-talent" ? classes.active : null}
+                            className={location.pathname === "" ? classes.active : null}
                         >
                             <ListItemIcon></ListItemIcon>
                             <ListItemText

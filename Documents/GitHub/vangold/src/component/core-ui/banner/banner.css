@@ -3,6 +3,9 @@
   min-height: 595px;
   background-color: #164D00;
 }
+.businesspage__banner{
+  background-color: #ffffff;
+}
 .banner__inner {
   position: relative;
   width: 100%;
@@ -79,6 +82,7 @@
   margin-bottom: 1.6rem;
   max-width: 450px;
 }
+
 .banner2__text__title {
   color: var(--white);
 }
@@ -87,9 +91,12 @@
   font-style: normal;
   font-weight: var(--font-weight-normal);
   font-size: var(--fs-18);
-  line-height: 3.2rem;
+  line-height: 32px;
   color: var(--white);
   margin-bottom: 3.2rem;
+}
+.banner__text__subtitle.business-page-banner__text__subtitle {
+  color: #18191F;
 }
 .banner__button {
   display: flex;
@@ -97,9 +104,9 @@
 }
 .banner__text__button {
   padding: 12px 32px;
-  background-color: var(--white);
+  background-color: var(--primary);
   border: 1px solid var(--primary);
-  color: var(--primary);
+  color: var(--white);
   font-family: var(--inter);
   font-style: normal;
   font-weight: 500;

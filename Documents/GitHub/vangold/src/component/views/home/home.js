@@ -1,6 +1,58 @@
 import "./home.css"
 import Banner from "../../core-ui/banner/banner";
 import MainSection from "../../core-ui/main-section/main-section";
+import Accordion from 'react-bootstrap/Accordion';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import TestimonialImg from "../../../assets/images/_testimonial-clients/Picture.png"
+
+const responsive = {
+    0: { items: 1 },
+    568: { items: 2 },
+    1024: { items: 3 },
+};
+
+const items = [
+    <div className="testimonial-item" data-value="1">
+        <div className="client__testimonial-details">
+        <div className="arrow_box">
+            <span>Efficient Collaborating</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
+        </div>
+            <div className="TestimonialImg">
+                <img src={TestimonialImg} alt="TestimonialImg" />
+                <span>Jane Cooper</span>
+                <p>CEO at ABC Corporation</p>
+            </div>
+        </div>
+    </div>,
+    <div className="testimonial-item" data-value="2">
+        <div className="client__testimonial-details">
+        <div className="arrow_box">
+            <span>Team Management</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
+        </div>
+            <div className="TestimonialImg">
+                <img src={TestimonialImg} alt="TestimonialImg" />
+                <span>Jane Cooper</span>
+                <p>CEO at ABC Corporation</p>
+            </div>
+        </div>
+    </div>,
+    <div className="testimonial-item" data-value="3">
+        <div className="client__testimonial-details">
+        <div className="arrow_box">
+            <span>Mindblowing Service</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
+        </div>
+            <div className="TestimonialImg">
+                <img src={TestimonialImg} alt="TestimonialImg" />
+                <span>Jane Cooper</span>
+                <p>CEO at ABC Corporation</p>
+            </div>
+        </div>
+    </div>,
+];
 
 const Home = (props) => {
     return (
@@ -14,6 +66,19 @@ const Home = (props) => {
                     </svg>
                 </div>
                 <Banner />
+                <div className="trusted__clients">
+                    <div className="container inn-trusted__clients">
+                        <h2>Trusted by our beloved clients</h2>
+                        <div className="trustee-_-clients">
+                            <svg width="64" height="74" viewBox="0 0 64 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 0L25.2275 3.89418L6.77249 14.5608L0 18.455V55.3651L6.77249 59.2593L25.3968 69.9259L32.1693 73.8201L38.9418 69.9259L57.2275 59.2593L64 55.3651V18.455L57.2275 14.5608L38.7725 3.89418L32 0ZM13.545 47.5767V26.2434L32 15.5767L50.455 26.2434V47.5767L32 58.2434L13.545 47.5767Z" fill="#2A5ADA"/>
+                            </svg>
+                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.4587 32.0091L7.23842 39.2293L0 32.0091L7.22023 24.7889L14.4587 32.0091ZM32.0091 14.4587L44.3944 26.844L51.6147 19.6238L32.0091 0L12.3853 19.6238L19.6056 26.844L32.0091 14.4587ZM56.7798 24.7889L49.5595 32.0091L56.7798 39.2293L64 32.0091L56.7798 24.7889ZM32.0091 49.5595L19.6238 37.1742L12.4035 44.3944L32.0091 64.0182L51.6147 44.3944L44.3944 37.1742L32.0091 49.5595ZM32.0091 39.2293L39.2293 32.0091L32.0091 24.7889L24.7707 32.0091L32.0091 39.2293Z" fill="#F0B90B"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
                 <MainSection cardDetails={props.cardDetails} />
                 <div className="collaborate">
                     <div className="container">
@@ -61,6 +126,158 @@ const Home = (props) => {
                     </div>
                 </div>
 
+                <div className="ourclients__testimonial">
+                    <div className="container">
+                        <div className="container inn__ourclients__testimonial">
+                            <div className="inn__ourclients__testimonial__header">
+                                <h2>Our Clients Speak</h2>
+                                <p>We have been working with clients around the world</p>
+                            </div>
+                            <div className="testimonial-container">
+                                <AliceCarousel
+                                    mouseTracking
+                                    items={items}
+                                    responsive={responsive}
+                                    controlsStrategy="alternate"
+                                    disableButtonsControls="false"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="what-you-stand-to-gain">
+                    <div className="inn__what-you-stand-to-gain">
+                        <div className="what-you-stand-to-gain__list-container">
+                            <div className="what-you-stand-to-gain__lists">
+                                <div className="inn-what-you-stand-to-gain__lists">
+                                    <h2>What you stand to gain</h2>
+                                    <p>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#45B618"/>
+                                        </svg>
+                                        A well detailed project management tool
+                                    </p>
+                                    <p>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#45B618"/>
+                                        </svg>
+                                        Ability to collaborate as a team
+                                    </p>
+                                    <p>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#45B618"/>
+                                        </svg>
+                                        Effective and reliable payment system
+                                    </p>
+                                    <p>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#45B618"/>
+                                        </svg>
+                                        Curated management and budget flow
+                                    </p>
+                                    <p>
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#45B618"/>
+                                        </svg>
+                                        Manage your business on the go
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="unlimited__access">
+                                <div className="unlimited__access-top">
+                                    <p>Enjoy unlimited access to our resources</p>
+                                </div>
+
+                                <div className="unlimited__access_span">
+                                    <span>100% Free</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+                <div className="accordion">
+                    <div className="container">
+                        <h2 className="accordionH2">FAQ’s</h2>
+                        <Accordion>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header><h2 className="accordion-header">What is Vangold Services?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">Vangold Services is a unique platform for freelancers, where they can offer their services according to their skills and expertise. </p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header><h2 className="accordion-header">Who can join this platform?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">This platform is perfectly available for individuals, businesses, and brands. This platform is designed to work according to all of your business requirements and enhances your business by giving you your targeted customers. </p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header><h2 className="accordion-header">What kind of services can be offered on this platform?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">You can provide all kinds of freelancing services that are available on other famous freelancing platforms like graphic designing, creative writing, video editing, SEO, web development, app development, web designing, voice-over, etc. Plus you have the option to provide some extra services like virtual meetings and classrooms, job offers and recruitments, etc.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="3">
+                                <Accordion.Header><h2 className="accordion-header">How many payment methods are available at Vangold services?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">There are multiple payment methods available on this platform. You can choose any convenient method that suits you better. We accept payments through PayPal, debit card, credit card, cryptocurrency, or fiat. Vangold Services is a very secure platform in terms of payment and data security. You can also connect your account to Meta mask and trust wallet.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header><h2 className="accordion-header">What are the additional features at Vangold services as compared with other freelancing platforms?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">
+                                        Vangold Services aims to provide the best freelancing experience to both customers and sellers. We understand the need of the day and try to equip our platform with all the necessary features that will be helpful in your growth. 
+                                        Just like some traditional freelancing platforms, we are not stuck with the limited features. We introduced some additional features to add value to the freelancing profession. On the Vangold Services platform, you can:
+                                        •	Arrange virtual meetings or classes with your business partners or students<br/>
+                                        •	Do job postings and recruitments<br/>
+                                        •	Do group chat with fellow users in the same department<br/> 
+                                        •	Create/publish posts<br/>
+                                        •	Upvote or downvote other users feeds or donate a small amount of token as a tip<br/>
+                                        •	Make payments through cryptocurrency or fiat<br/> 
+                                        •	Use Meta mask and trust wallet<br/>
+                                        •	Switch between dark and light mode<br/>
+                                        •	Get a verified account to maintain your unique identity<br/>
+                                        •	Search for jobs<br/>
+                                    </p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="5">
+                                <Accordion.Header><h2 className="accordion-header">How is it beneficial for businesses and brands?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">Vangold Services takes care of all kinds of accounts. Whether it is an individual account, business, or brand, we aim to provide you best, secure, and unique selling experience on our platform. We also understand the concerns of businesses and brands. That is why we took the initiative to maintain their unique identity on our platform. You can simply get your account verified. It will give a verified account sign on your profile. And it will helpful for you to maintain your unique identity and originality. Also, customers will easily reach you out without misunderstanding similar names. </p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="6">
+                                <Accordion.Header><h2 className="accordion-header">How to get my account verified at Vangold services?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">The procedure to get a verified account is very simple. You will be given an account verification form just like Instagram. You just have to fill that form with the correct details. Our team will review that form and if they think you are eligible to get a unique identity, you will get an account verification badge on your profile. Please note that submitting the account verification form does not give a guarantee that your account will be get verified.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="7">
+                                <Accordion.Header><h2 className="accordion-header">What is a group chat feature?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">We introduced this feature to enhance your selling experience. You create a group of similar skilled persons and interact with them through chat. You can share your experience with them or get useful information or tips from experienced sellers. This will be very helpful for you to deal with your customers in a better way.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="8">
+                                <Accordion.Header><h2 className="accordion-header">Can I convert my account into a business account?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">Yes, if you think that you have got enough orders or you have enough skills, time, and recourses to handle a large number of orders, you convert your account into a business account. You can also hire a team of skilled freelancers to work for your business. And if you want, you can get a verified account for your business.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="9">
+                                <Accordion.Header><h2 className="accordion-header">Can I show my past work experience on my Profile?</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <p className="accordion__Para">Yes, you can show your past work experience on your profile. It is a very useful feature to attract new customers. Customers will be able to see your skills and work quality by visiting your profile. And will be able to decide whether to place an order or not.</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    </div>
+                </div>
                 <div className="become-a-business-banner">
                     <p>Manage your teams and projects anytime and anywhere</p>
                     <button>Become a Business</button>
