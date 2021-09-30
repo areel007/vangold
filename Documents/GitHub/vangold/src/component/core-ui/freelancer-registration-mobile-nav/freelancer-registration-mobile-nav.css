@@ -1,0 +1,20 @@
+.freelancer-registration-mobile-nav-toggle-button {
+    margin-bottom: 24px;
+    display: none;
+    align-items: center;
+}
+.freelancer-registration-mobile-nav-toggle-button .button-text {
+    margin-left: 13px;
+    font-family: var(--raleway);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #45B618;
+}
+
+@media screen and (max-width: 1100px) {
+    .freelancer-registration-mobile-nav-toggle-button {
+        display: flex;
+    }
+}

@@ -27,7 +27,7 @@
   .TopFreealancerContent {
     width: 100% !important;
   }
-  .side-nav-steppers,
+  /*.side-nav-steppers,*/
   .search__container,
   .dashboard__name {
     display: none !important;
