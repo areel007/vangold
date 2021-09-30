@@ -5,7 +5,7 @@
   align-items: center;
 }
 .form__-control .date-time-duration .datePickerEventModal, .form__-control .date-time-duration .durationInput{
-  width: 100% !important;
+  width: 200px;
   height: 48px;
   background: rgba(217, 218, 215, 0.5);
   border-radius: 4px;
@@ -19,11 +19,10 @@
   color: #bebdbd;
 }
 .form__-control .date-time-duration .durationInput {
-  padding-left: 38px !important;
+  padding-left: 45px;
 }
 .durationInput-Box{
   position: relative;
-  width: 100%;
 }
 .durationInput-Box svg{
   position: absolute;
@@ -92,15 +91,15 @@
   margin-right: 12px;
   color: #45b618;
 }
+.JoinMeetingModal-btn{
+  width: 300px;
+}
 .guestsAdded__box {
   display: flex;
   gap: 8px;
 }
 .guestsAdded__box .guestsAdded__box-img{
   position: relative;
-}
-.guestsAdded__box .guestsAdded__box-img img{
-  width: 100%;
 }
 .guestsAdded__box .guestsAdded__box-img svg{
   position: absolute;

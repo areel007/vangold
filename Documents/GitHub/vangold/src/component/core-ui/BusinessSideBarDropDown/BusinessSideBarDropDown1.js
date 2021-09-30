@@ -17,7 +17,6 @@ import Avatar2 from "../../../assets/images/business-chat-content/Group43951.png
 import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.png";
 import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 import CreateChannelModal from "../../core-ui/CreateChannelModal/CreateChanelModal";
-import CreateEventModal from "../CreateEventModal/CreateEventModal"
 
 import "./BusinessSideBarDropDown.css";
 
@@ -51,7 +50,6 @@ const GreenCheckbox = withStyles({
 
 const BusinessSideBarDropDown1 = () => {
     const [modalShow, setModalShow] = useState(false);
-    const [modalShow2, setModalShow2] = useState(false);
     const classes = BusinessUseStyles();
     const [checkValue, setCheckValue] = useState('')
     const [skills, setSkills] = useState(true);
@@ -160,7 +158,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div onClick={() => setModalShow2(true)} className="business-chat__side-bar-list">
+                        <div onClick={() => setModalShow(true)} className="business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -279,11 +277,6 @@ const BusinessSideBarDropDown1 = () => {
                         onHide={() => setModalShow(false)}
                         head="Create new channel"
                         btntext='Create' />
-                    <CreateEventModal
-                        show={modalShow2}
-                        onHide={() => setModalShow2(false)}
-                        head="Create Event"
-                        btntext='Create Event' />
                     
                 </List>
             </div>

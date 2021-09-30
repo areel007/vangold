@@ -51,7 +51,8 @@ import ChatComponent from './component/views/ChatView/ChatComponent';
 import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
 import ChatComponents from './component/core-ui/ChatComponent/ChatComponent';
 import MobileCall from "./component/core-ui/MobileCall/MobileCall";
-
+import ManageTalent from './component/views/ProfileViews/Talent/ManageTalent';
+import MeetingDetails from './component/views/ProfileViews/Talent/MeetingDetails';
 
 function App() {
 
@@ -208,7 +209,10 @@ function App() {
                         <FindTalent />
                     </Route>
                     <Route path="/profile/talent/manage-talent">
-                        <ManageTalent1 />
+                        <ManageTalent />
+                    </Route>
+                    <Route path="/profile/talent/meeting-details">
+                        <MeetingDetails />
                     </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
