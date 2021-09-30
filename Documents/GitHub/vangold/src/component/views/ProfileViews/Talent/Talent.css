@@ -1,4 +1,246 @@
 #talent .bg-color {
-    background-color: #f9f9f9;
-    padding: 4rem 3rem;
+  background-color: #f9f9f9;
+  padding: 4rem 3rem;
+}
+
+#talent .card-blue {
+  background: #4227e4;
+  border-radius: 8px;
+}
+#talent .card-green {
+  background: #45b618;
+  border-radius: 8px;
+}
+#talent .icon-bg {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 48px;
+  padding: 1rem 0;
+}
+#talent .img-bg {
+  background: #fff;
+  border-radius: 2px;
+}
+#talent .card-head {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-top: 5rem;
+}
+#talent .card-text {
+  font-family: var(--mulish);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+#talent .time-bg {
+  background: rgba(69, 182, 24, 0.1);
+  border-radius: 8px;
+}
+#talent .time {
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.2px;
+  color: #333333;
+}
+#talent .date-day {
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-semibold);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #4f4f4f;
+}
+#talent .bg-ig {
+  background: url("../../../../assets/images/profile/paralelo.png") no-repeat;
+}
+#talent .meet-bg {
+  background: #ffffff;
+  border-radius: 8px;
+  margin-top: 3rem;
+}
+#talent .meet-head {
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-semibold);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+}
+#talent .meet-text {
+  font-family: var(--mulish);
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #4f4f4f;
+}
+#talent .add-meet {
+  background: #45b618;
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+}
+#talent .meet-btn {
+  background: #f2f2f2;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  letter-spacing: 0.2px;
+  color: #333333;
+  border: transparent;
+  height: 48px;
+  width: 48px;
+}
+#talent .meet-btn1 {
+  background: #45b618;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  width: 89px;
+  height: 48px;
+  border: transparent;
+}
+#talent .meeting-head {
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+}
+#talent .meeting-text {
+  font-family: var(--mulish);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #4f4f4f;
+}
+#talent .meeting-btn {
+  background: #45b618;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  border: transparent;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  padding: 1rem 2rem;
+}
+#talent .meeting-btn1 {
+  background: #f2f2f2;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  border: transparent;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  padding: 1rem 2rem;
+}
+#talent .meeting-id {
+  background: #f2f2f2;
+  border-radius: 8px;
+  width: 300px;
+  height: 111px;
+  margin-top: 4rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+#talent .meet-id-head {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #808080;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+}
+#talent .meet-id-code {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  margin-top: 1rem;
+}
+#talent .meet-part {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  font-family: var(--mulish);
+  font-weight: var(--font-wieght-bold);
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+#talent .participant-bg {
+  background: #f2f2f2;
+  border-radius: 12px;
+  height: 175px;
+}
+#talent .participant-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #333333;
+  font-family: var(--mulish);
+  margin-top: 2rem;
+}
+#talent .invite-bg {
+  background: #45b618;
+  border-radius: 12px;
+  height: 175px;
+}
+
+@media (max-width: 600px) {
+  .avatar-dim {
+    width: 32px;
+    height: 32px;
   }
+  #talent .add-meet {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  #talent .meet-btn {
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #45b618;
+    width: 31px;
+    height: 32px;
+  }
+  #talent .meet-btn1 {
+    width: 52px;
+    height: 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+}
