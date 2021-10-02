@@ -1,18 +1,16 @@
 import React, {useState} from 'react'
 import { Col, Container, Row } from "react-bootstrap";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
-import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/BusinessSideBarDropDown1";
-import participantsAvatar1 from "../../../../assets/images/avatar/Ellipse-7.png";
-import participantsAvatar2 from "../../../../assets/images/avatar/Ellipse-7-1.png";
-import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.png";
-import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
-import Avatar1 from "../../../../assets/images/business-chat-content/Ellipse1531.png";
-import Avatar2 from "../../../../assets/images/business-chat-content/Group43951.png";
-import Avatar3 from "../../../../assets/images/business-chat-content/Ellipse1533.png";
-import Avatar4 from "../../../../assets/images/business-chat-content/Group43952.png";
-import "./BusinessChatView.css";
+import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
+import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
+import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
+import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
+import TopAvatar from "../../../assets/images/chat/Ellipse1476.png";
+import Avatar1 from "../../../assets/images/business-chat-content/Ellipse1531.png";
+import Avatar2 from "../../../assets/images/business-chat-content/Group43951.png";
+import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.png";
+import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 
-const BusinessChatView = (props) => {
+const MobileBusinessChatView = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
@@ -57,32 +55,14 @@ const BusinessChatView = (props) => {
         <div>
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
-                    </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
-                        <div className="business__chat__searchBox">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#808080"/>
-                            </svg>
-
-                            <input type="text" placeholder="Search" />
-                        </div>
                         <div className="business-chat-container">
-                            <div className="sideBarBusinessChat">
-                                <div className="business__channel-header mobile__business__channel-header">
-                                    <div className="business__channel-header-left">
-                                        <h2>Channel</h2>
-                                    </div>
-                                </div>
-                                <BusinessSideBarDropDown />
-                            </div>
                             <div className="business-chat-view">
-                                <div className="business__channel-header">
+                                <div className="business__channel-header mobile-business__channel-header">
                                     <div className="business__channel-header-right">
-                                        <div className="business__channel-header-right-left">
-                                            <span>Channel</span>
-                                            <span>12 Members</span>
+                                        <div className="mobile-business__channel-header-data">
+                                            <img src={TopAvatar} alt="TopAvatar" />
+                                            <span>Kali Jay</span>
                                         </div>
                                         <svg style={{cursor: "pointer"}} onClick={toggle} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="white"/>
@@ -90,7 +70,7 @@ const BusinessChatView = (props) => {
                                     </div>
                                 </div>
                                 <div className="inn-business-chat-view">
-                                        <div className="business-chat-box-content">
+                                        <div className="business-chat-box-content2">
                                             <div className="inn-business-chat-box-content">
                                                 <div className="send__message__container">
                                                     <div className="inn-send__message__container">
@@ -180,7 +160,7 @@ const BusinessChatView = (props) => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div> 
+                                            </div>
                                             <div className="bottom-chat-footer biz-bottom-chat-footer">
                                                 <div className="chat-input-box">
                                                     <input type="text" placeholder="Message..." />
@@ -262,4 +242,4 @@ const BusinessChatView = (props) => {
 }
 
 
-export default BusinessChatView;
+export default MobileBusinessChatView;

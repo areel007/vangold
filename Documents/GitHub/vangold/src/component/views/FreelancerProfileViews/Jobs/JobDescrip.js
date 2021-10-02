@@ -1,6 +1,5 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ImShare2 } from "react-icons/im";
 import { useState } from "react";
@@ -8,7 +7,7 @@ import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
-import "./Jobs.css";
+// import "../../Jobs.css";
 
 const jobs =
 {
@@ -22,21 +21,19 @@ const jobs =
     offerSalary: "$2150/Month",
 }
 
-const JobDescrip = () => {
+const FreelancerJobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
 
     return (
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
+            <div className="top-jobs-view">
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <SideMenu />
-                    </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
+                    <Col xs={10} lg={3} className="mx-auto py-5 d-none d-lg-block">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                    <Col xs={12} lg={9} className="mx-auto p-5">
                         <div className="bg-color1">
                             <div>
                                 <img src={cover} alt="cover" className='img-fluid' />
@@ -49,7 +46,7 @@ const JobDescrip = () => {
                                     <Col xs={8} lg={8}>
                                         <h1 className='head'>{jobs.name}</h1>
                                     </Col>
-                                    <Col xs={4} lg={4} className="align-self-center text-end">
+                                    <Col xs={4} lg={4} className="text-end">
                                         <Button variant='light' className='job-btn me-2 me-lg-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
                                         <Button variant='light' className='job-btn mt-4' ><ImShare2 className='job-icon' /></Button>
                                     </Col>
@@ -59,12 +56,22 @@ const JobDescrip = () => {
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
+                                            <p style={{marginLeft: 10}} className="text-16px-1 me-3">2,464 Followers</p>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={6} className="align-self-center text-lg-end">
-                                        <div className="d-flex justify-lg-content-end">
+                                    <Col xs={12} lg={6} className="text-lg-end">
+                                        <div className="jobs-followers-text">
                                             <p className="text-16px-1 me-3">Posted 8 Days ago</p>
-                                            <p className="text-16px" style={{ color: "#4F4F4F" }}>76 Applicants</p>
+                                            <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
+                                        </div>
+                                    </Col>
+                                    <Col xs={12} lg={6} className="">
+                                        <div className="follow-visit-site-btn">
+                                            <div className="follow__box">
+                                                <button className="follow__btn">FOLLOW</button>
+                                                <button className="following__btn">FOLLOWING</button>
+                                            </div>
+
                                         </div>
                                     </Col>
                                 </Row>
@@ -113,9 +120,10 @@ const JobDescrip = () => {
                         </div>
                     </Col>
                 </Row>
+                </div>
             </Container>
         </section>
     );
 };
 
-export default JobDescrip;
+export default FreelancerJobDescrip;

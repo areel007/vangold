@@ -7,7 +7,6 @@ import {
     Collapse,
     FormControl,
     FormGroup,
-    FormControlLabel,
     Checkbox,
     withStyles,
 } from "@material-ui/core";
@@ -17,8 +16,7 @@ import Avatar2 from "../../../assets/images/business-chat-content/Group43951.png
 import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.png";
 import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 import CreateChannelModal from "../../core-ui/CreateChannelModal/CreateChanelModal";
-
-import "./BusinessSideBarDropDown.css";
+import InvitePeopleModal from "../../core-ui/InvitePeopleModal/InvitePeopleModal";
 
 const BusinessUseStyles = makeStyles((theme) => ({
     root: {
@@ -26,12 +24,19 @@ const BusinessUseStyles = makeStyles((theme) => ({
         fontSize: "16px",
         backgroundColor: "#45B618",
         marginTop: "2rem",
+        [theme.breakpoints.down("769")]: {
+            backgroundColor: "white",
+          }
     },
     BusinessListItemText: {
         fontSize: "12px",
         fontWeight: "700",
         lineHeight: "15px",
-        color: "white"
+        color: "white",
+        [theme.breakpoints.down("769")]: {
+            color: "#333333",
+            fontWeight: "normal"
+          }
     },
     label: {
         fontSize: "14px",
@@ -50,6 +55,7 @@ const GreenCheckbox = withStyles({
 
 const BusinessSideBarDropDown1 = () => {
     const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
     const classes = BusinessUseStyles();
     const [checkValue, setCheckValue] = useState('')
     const [skills, setSkills] = useState(true);
@@ -84,11 +90,12 @@ const BusinessSideBarDropDown1 = () => {
                             classes={{ primary: classes.BusinessListItemText }}
                             primary="All Teams"
                         />
-                        {skills ? <MdExpandLess /> : <MdExpandMore />}
+                        <button className="business__chat-view__counters" disabled>2</button>
+                        {skills ? <MdExpandLess className="dropDownIcon" /> : <MdExpandMore className="dropDownIcon" />}
                     </ListItem>
 
                     <Collapse style={{marginBottom: "24px"}} in={skills} timeout="auto" unmountOnExit>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -98,6 +105,8 @@ const BusinessSideBarDropDown1 = () => {
                                                     <path d="M18 11V13H22V11H18ZM16 17.61C16.96 18.32 18.21 19.26 19.2 20C19.6 19.47 20 18.93 20.4 18.4C19.41 17.66 18.16 16.72 17.2 16C16.8 16.54 16.4 17.08 16 17.61ZM20.4 5.6C20 5.07 19.6 4.53 19.2 4C18.21 4.74 16.96 5.68 16 6.4C16.4 6.93 16.8 7.47 17.2 8C18.16 7.28 19.41 6.35 20.4 5.6ZM4 9C2.9 9 2 9.9 2 11V13C2 14.1 2.9 15 4 15H5V19H7V15H8L13 18V6L8 9H4ZM15.5 12C15.5 10.67 14.92 9.47 14 8.65V15.34C14.92 14.53 15.5 13.33 15.5 12Z" fill="white"/>
                                                 </svg>
                                                 <span>General Announcements</span>
+                                                
+                                                <button className="business__chat-view__counters" disabled>2</button>
                                             </div>
                                         
                                         </FormGroup>
@@ -105,7 +114,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -115,6 +124,7 @@ const BusinessSideBarDropDown1 = () => {
                                                     <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM8 17.5C6.62 17.5 5.5 16.38 5.5 15C5.5 13.62 6.62 12.5 8 12.5C9.38 12.5 10.5 13.62 10.5 15C10.5 16.38 9.38 17.5 8 17.5ZM9.5 8C9.5 6.62 10.62 5.5 12 5.5C13.38 5.5 14.5 6.62 14.5 8C14.5 9.38 13.38 10.5 12 10.5C10.62 10.5 9.5 9.38 9.5 8ZM16 17.5C14.62 17.5 13.5 16.38 13.5 15C13.5 13.62 14.62 12.5 16 12.5C17.38 12.5 18.5 13.62 18.5 15C18.5 16.38 17.38 17.5 16 17.5Z" fill="white"/>
                                                 </svg>
                                                 <span>Vangold Product Team</span>
+                                                <button className="business__chat-view__counters" disabled>2</button>
                                             </div>
                                         
                                         </FormGroup>
@@ -122,7 +132,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -133,6 +143,7 @@ const BusinessSideBarDropDown1 = () => {
                                                 </svg>
 
                                                 <span>Vangold Marketing Team</span>
+                                                <button className="business__chat-view__counters" disabled>2</button>
                                             </div>
                                         
                                         </FormGroup>
@@ -140,7 +151,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -151,6 +162,7 @@ const BusinessSideBarDropDown1 = () => {
                                                 </svg>
 
                                                 <span>Vangold Marketing Team</span>
+                                                <button className="business__chat-view__counters" disabled>2</button>
                                             </div>
                                         
                                         </FormGroup>
@@ -158,7 +170,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div onClick={() => setModalShow(true)} className="business-chat__side-bar-list">
+                        <div onClick={() => setModalShow(true)} className="business-chat__side-bar-list mobile__business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -191,11 +203,11 @@ const BusinessSideBarDropDown1 = () => {
                             classes={{ primary: classes.BusinessListItemText }}
                             primary="Direct Messages"
                         />
-                        {tools ? <MdExpandLess /> : <MdExpandMore />}
+                        {tools ? <MdExpandLess className="dropDownIcon" /> : <MdExpandMore className="dropDownIcon" />}
                     </ListItem>
 
                     <Collapse in={tools} timeout="auto" unmountOnExit>
-                    <div className="business-chat__side-bar-list">
+                    <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -209,7 +221,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -224,7 +236,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -239,7 +251,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -254,7 +266,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list">
+                        <div onClick={() => setModalShow2(true)} className="business-chat__side-bar-list mobile__business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
@@ -272,11 +284,16 @@ const BusinessSideBarDropDown1 = () => {
                             </List>
                         </div>
                     </Collapse>
-                    <CreateChannelModal
+                    <CreateChannelModal 
                         show={modalShow}
                         onHide={() => setModalShow(false)}
                         head="Create new channel"
                         btntext='Create' />
+                    <InvitePeopleModal 
+                        show={modalShow2}
+                        onHide={() => setModalShow2(false)}
+                        head="Invite people  to Vangold"
+                        btntext='Send' />
                     
                 </List>
             </div>

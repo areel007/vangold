@@ -1,6 +1,6 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu"
 import apple from "../../../../assets/images/profile/apple.png";
 import ReactPaginate from "react-paginate";
 import "./Jobs.css";
@@ -41,8 +41,41 @@ const jobsLists = [
         price: '$1200',
         img: apple,
     },
+    {
+        id: 4,
+        name: "User Experience Design",
+        address: "2972 Westminister Rd, Santa Ana",
+        descrip:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus semper ipsum est ut blandit fringilla. Tincidunt diam, accumsan, diam pretium amet habitasse. Viverra vel enim magna nibh neque curabitur egestas. ",
+        time: 'Full Time',
+        level: 'Expert',
+        price: '$1200',
+        img: apple,
+    },
+    {
+        id: 5,
+        name: "User Experience Design",
+        address: "2972 Westminister Rd, Santa Ana",
+        descrip:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus semper ipsum est ut blandit fringilla. Tincidunt diam, accumsan, diam pretium amet habitasse. Viverra vel enim magna nibh neque curabitur egestas. ",
+        time: 'Full Time',
+        level: 'Expert',
+        price: '$1200',
+        img: apple,
+    },
+    {
+        id: 6,
+        name: "User Experience Design",
+        address: "2972 Westminister Rd, Santa Ana",
+        descrip:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus semper ipsum est ut blandit fringilla. Tincidunt diam, accumsan, diam pretium amet habitasse. Viverra vel enim magna nibh neque curabitur egestas. ",
+        time: 'Full Time',
+        level: 'Expert',
+        price: '$1200',
+        img: apple,
+    },
 ];
-const ProfileAllJobs = () => {
+const FreelancerProfileAllJobs = () => {
     const [jobs, setJobs] = useState(jobsLists.slice(0, 30));
     const [pageNumber, setPageNumber] = useState(0);
     const jobsPerPage = 4;
@@ -60,7 +93,7 @@ const ProfileAllJobs = () => {
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <SideMenu />
+                        <FreelancerProfileSideMenu />
                     </Col>
                     <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
                         <SideCheckBoxes />
@@ -72,7 +105,7 @@ const ProfileAllJobs = () => {
                                 .map(job => (
                                     <Col xs={12} lg={12} className="mx-auto" key={job.id}>
                                         <Card className='card-bg' onClick={() => {
-                                                history.push("/profile/jobs/job-description");
+                                                history.push("/profile/jobs/f-job-description");
                                             }} style={{cursor: "pointer"}}>
                                             <div className='text-end me-4'>
                                                 <div className="love-icon">
@@ -158,4 +191,4 @@ const ProfileAllJobs = () => {
     );
 };
 
-export default ProfileAllJobs;
+export default FreelancerProfileAllJobs;

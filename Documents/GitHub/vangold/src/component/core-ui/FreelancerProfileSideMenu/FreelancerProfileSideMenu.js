@@ -59,9 +59,9 @@ const FreelancerProfileSideMenu = () => {
                     button
                     classes={{ root: classes.root, button: classes.button, }}
                     onClick={() => {
-                        history.push("/profile/dashboard");
+                        history.push("/profile/f-dashboard");
                     }}
-                    className={location.pathname === "/profile/dashboard" ? classes.active : null}
+                    className={location.pathname === "/profile/f-dashboard" ? classes.active : null}
                 >
                     <ListItemIcon>
                         <img src={dashboard} alt="dashboard" />
@@ -76,8 +76,9 @@ const FreelancerProfileSideMenu = () => {
                     button
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
-                        setJobList(!jobList);
+                        history.push("/profile/f-jobs/all-jobs");
                     }}
+                    className={location.pathname === "/profile/f-jobs/all-jobs" ? classes.active : null}
                 >
                     <ListItemIcon>
                         <img src={work} alt="work" />
@@ -86,118 +87,24 @@ const FreelancerProfileSideMenu = () => {
                         classes={{ primary: classes.listItemText }}
                         primary="Find Work"
                     />
-                    {jobList ? <MdExpandLess /> : <MdExpandMore />}
                 </ListItem>
-
-                <Collapse in={jobList} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/jobs/all-jobs");
-                            }}
-                            className={location.pathname === "/profile/jobs/all-jobs" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="All Jobs"
-                            />
-                        </ListItem>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/jobs/my-job");
-                            }}
-                            className={location.pathname === "/profile/jobs/my-job" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="My Job"
-                            />
-                        </ListItem>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/postjob");
-                            }}
-                            className={location.pathname === "/profile/postjob" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="Post a Job"
-                            />
-                        </ListItem>
-                    </List>
-                </Collapse>
 
                 <ListItem
                     button
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
-                        setTalentList(!talentList);
+                        history.push("/profile/jobs/f-my-job-projects");
                     }}
+                    className={location.pathname === "/profile/jobs/f-my-job-projects" ? classes.active : null}
                 >
                     <ListItemIcon>
                         <img src={engineering} alt="engineering" />
                     </ListItemIcon>
                     <ListItemText
                         classes={{ primary: classes.listItemText }}
-                        primary="Talent"
+                        primary="My Jobs"
                     />
-                    {talentList ? <MdExpandLess /> : <MdExpandMore />}
                 </ListItem>
-                <Collapse in={talentList} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/talent/application");
-                            }}
-                            className={location.pathname === "/profile/talent/application" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="Application"
-                            />
-                        </ListItem>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/talent/find-talent");
-                            }}
-                            className={location.pathname === "/profile/talent/find-talent" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="Find Talent"
-                            />
-                        </ListItem>
-                        <ListItem
-                            button
-                            classes={{ root: classes.root, button: classes.button }}
-                            onClick={() => {
-                                history.push("/profile/talent/manage-talent");
-                            }}
-                            className={location.pathname === "/profile/talent/manage-talent" ? classes.active : null}
-                        >
-                            <ListItemIcon></ListItemIcon>
-                            <ListItemText
-                                classes={{ primary: classes.listItemText }}
-                                primary="Manage Talent"
-                            />
-                        </ListItem>
-                    </List>
-                </Collapse>
                 <ListItem
                     button
                     classes={{ root: classes.root, button: classes.button }}

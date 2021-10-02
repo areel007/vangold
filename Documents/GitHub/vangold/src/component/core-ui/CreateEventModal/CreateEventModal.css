@@ -22,11 +22,48 @@
 .form__-control .date-time-duration .durationInput {
   padding-left: 38px !important;
 }
-.durationInput-Box,
-.__Picker {
+.form__-control .date-time-duration .__TimePicker__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.form__-control .date-time-duration .__TimePicker__box .TimePicker2{
   position: relative;
+  top: 12px;
+}
+.form__-control .date-time-duration .__TimePicker__box .timer__picker--left {
   width: 100%;
 }
+
+.form__-control .date-time-duration .__TimePicker {
+  max-width: 100%;
+}
+.form__-control .date-time-duration .__DatePicker {
+  max-width: 100%;
+}
+
+.time__to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.time-to {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--fs-14);
+  line-height: 16px;
+  color: var(--secondary);
+}
+
+/* .durationInput-Box,
+.__TimePicker,
+.durationInput-Box,
+.__DatepPicket {
+  position: relative;
+  width: 100%;
+} */
 .durationInput-Box svg {
   position: absolute;
   top: 18px;

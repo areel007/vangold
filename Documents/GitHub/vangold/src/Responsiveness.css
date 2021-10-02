@@ -27,7 +27,9 @@
   .TopFreealancerContent {
     width: 100% !important;
   }
-  /*.side-nav-steppers,*/
+  .side-nav-steppers, .chat-call-right {
+    display: none;
+  }
   .search__container,
   .dashboard__name {
     display: none !important;
@@ -194,8 +196,20 @@
     padding-top: 16px !important;
     padding-bottom: 5px !important;
   }
-  .date-time-duration {
+  .date-time-duration,
+  .form__-control .date-time-duration .__TimePicker__box,
+  .date-time-duration .__DatePicker {
     flex-direction: column !important;
+    width: 100%;
+  }
+  .time__to {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .form__-control .date-time-duration .__TimePicker__box .TimePicker2 {
+    position: relative;
+    top: 0 !important;
   }
   .chat__container-subtitle,
   .message__box-container .msg-P,
@@ -228,9 +242,46 @@
     background: #fbfbfb;
     border-radius: 6px 6px 6px 0px;
   }
+  .dropDownIcon{
+    color: #333333 !important;
+  }
   .manage-your-team-image img {
     max-width: 335px !important;
     height: 120.72px !important;
+  }
+  .business-chat-view {
+    /* display: none; */
+  }
+  .sideBarBusiness2{
+    display: none !important;
+  }
+  .BusinessChatImg-content{
+    margin-top: 63px;
+  }
+  .business-chat-container {
+    margin-top: 0 !important;
+    flex-direction: column;
+  }
+  .sideBarBusinessChat,
+  .mobile__business__channel-header,
+  .business__channel-header .business__channel-header-left {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .business__channel-header h2{
+    color: #333333 !important;
+  }
+  .business__chat-view__svg path, .business-chat__side-bar-content svg path{
+    fill: var(--primary) !important;
+  }
+  .business-chat__side-bar-content span{
+    color: #333333 !important;
+  }
+  .business-chat__side-bar-list:hover span{
+    color: #ffffff !important;
+  }
+  .business__chat__searchBox {
+    display: block !important;
   }
   .accordion-header {
     font-size: var(--fs-14) !important;
@@ -355,7 +406,7 @@
   .card-image img {
     height: 168px;
   }
-  footer{
+  footer {
     background-image: url(./assets//images/footer.PNG);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -405,7 +456,9 @@
     display: none !important;
   }
   .MobileView-TopFreealancerContent__BOX-details_TOP,
-  .mobile__call {
+  .mobile__call,
+  .chat__box__contaniner-left .personal__avatar svg,
+  .chat__box__contaniner-left .grp__chat__view-left-top svg {
     display: block !important;
   }
   .MobileView-TopFreealancerContent {
@@ -458,7 +511,8 @@
     gap: 21px !important;
   }
   .message__box-component2,
-  .message__box-container {
+  .message__box-container,
+  .Call_-_box-container {
     display: none !important;
   }
   .chat__box__contaniner-left,
@@ -537,6 +591,10 @@
   }
   .verify-logo h2 {
     font-size: var(--fs-18) !important;
+  }
+  .recentview__text {
+    font-size: var(--fs-18) !important;
+    line-height: 21px !important;
   }
   .Top__Freelancer_info h3,
   .job-_-_name,

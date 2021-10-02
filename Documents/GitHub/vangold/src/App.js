@@ -18,6 +18,7 @@ import Home from "./component/views/home/home";
 import HomeTwo from './component/views/home/home2';
 import VerifyEmail from './component/views/verify-email';
 import TopFreelancer from './component/views/TopFreelancerView/TopFreelancer';
+import RecentView from './component/views/TopFreelancerView/RecentView';
 import TopJobs from './component/views/TopJobsView/TopJobs';
 import TopJobsTwo from './component/views/TopJobsView/TopJobs2';
 import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freelancer-registration";
@@ -30,11 +31,15 @@ import PaymentSuccess from './component/views/EmployerViews/PaymentSuccess/Payme
 import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDashboard';
 import FreelancerProfileDashboard from './component/views/FreelancerProfileViews/Dashboard/ProfileDashboard';
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
+import FreelancerProfileAllJobs from './component/views/FreelancerProfileViews/Jobs/FreelancerProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
 import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfile/FreelancerProfile';
 import FreelancerProfileEdit from './component/views/FreelancerViews/FreelancerProfileEdit/FreelancerProfileEdit';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
+import FreelancerJobDescrip from './component/views/FreelancerProfileViews/Jobs/JobDescrip';
+import MobileBusinessChatView from './component/core-ui/Messages/MobileBusinessChatView';
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
+import FreelancerMyJobProjects from './component/views/FreelancerProfileViews/Jobs/FreelancerMyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
 import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
 import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
@@ -46,15 +51,18 @@ import ChatBoxMobileTwo from './component/views/ChatView/ChatBoxMobile/ChatBoxMo
 import ChatBoxMobileThree from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile3';
 import BusinessChatView from './component/views/ChatView/BusinessChatView/BusinessChatView';
 import BusinessChatViewTwo from './component/views/ChatView/BusinessChatView/BusinessChatView2';
+import BusinessChatViewThree from './component/views/ChatView/BusinessChatView/BusinessChatView3';
 import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupParticipate';
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
 import ChatComponent from './component/views/ChatView/ChatComponent';
+import ChatComponentFour from './component/views/ChatView/ChatComponent4';
 import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
 import ChatComponents from './component/core-ui/ChatComponent/ChatComponent';
 import MobileCall from "./component/core-ui/MobileCall/MobileCall";
 import ManageTalent from './component/views/ProfileViews/Talent/ManageTalent';
 import MeetingDetails from './component/views/ProfileViews/Talent/MeetingDetails';
+import MobileVideoCall from './component/views/VideoCall/MobileVideoCall';
 
 function App() {
 
@@ -148,6 +156,9 @@ function App() {
                     <Route path="/find-freelancer">
                         <TopFreelancer />
                     </Route>
+                    <Route path="/freelancer/recent-view">
+                        <RecentView />
+                    </Route>
                     <Route path="/browse-job">
                         <TopJobs />
                     </Route>
@@ -162,6 +173,9 @@ function App() {
                     </Route>
                     <Route path="/cookiepolicy">
                         <CookiesPolicy />
+                    </Route>
+                    <Route path="/ManageTalent1">
+                        <ManageTalent1 />
                     </Route>
                     <Route path="/reset-password">
                         <ResetPassword />
@@ -196,6 +210,15 @@ function App() {
                     <Route path="/profile/jobs/all-jobs">
                         <ProfileAllJobs />
                     </Route>
+                    <Route path="/profile/f-jobs/all-jobs">
+                        <FreelancerProfileAllJobs />
+                    </Route>
+                    <Route path="/profile/jobs/f-job-description">
+                        <FreelancerJobDescrip />
+                    </Route>
+                    <Route path="/mobile-biz-chat">
+                        <MobileBusinessChatView />
+                    </Route>
                     <Route path="/profile/jobs/job-description">
                         <JobDescrip />
                     </Route>
@@ -204,6 +227,9 @@ function App() {
                     </Route>
                     <Route path="/profile/jobs/my-job-projects">
                         <MyJobProjects />
+                    </Route>
+                    <Route path="/profile/jobs/f-my-job-projects">
+                        <FreelancerMyJobProjects />
                     </Route>
                     <Route path="/profile/edit">
                         <ProfileEdit />
@@ -219,6 +245,9 @@ function App() {
                     </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
+                    </Route>
+                    <Route path="/profile/messages4">
+                        <ChatComponentFour />
                     </Route>
                     <Route path="/profile/chat">
                         <ChatComponentTwo />
@@ -241,6 +270,9 @@ function App() {
                     <Route path="/profile/mobile-call">
                         <MobileCall/>
                     </Route>
+                    <Route path="/profile/mobile-video-call">
+                        <MobileVideoCall/>
+                    </Route>
                     <Route path="/profile/group-chat-mobile2">
                         <ChatBoxMobileThree/>
                     </Route>
@@ -254,6 +286,9 @@ function App() {
                         <BusinessChatView/>
                     </Route>
                     <Route path="/profile/business-chat-1">
+                        <BusinessChatViewThree/>
+                    </Route>
+                    <Route path="/profile/business-chat-2">
                         <BusinessChatViewTwo/>
                     </Route>
                     <Route path="/profile/ChatCall">

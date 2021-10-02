@@ -5,7 +5,7 @@ import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/Bu
 import BusinessChatImg from "../../../../assets/images/business-chat.png";
 import "./BusinessChatView.css";
 
-const BusinessChatViewTwo = (props) => {
+const BusinessChatViewThree = (props) => {
     
   
     return (
@@ -31,10 +31,7 @@ const BusinessChatViewTwo = (props) => {
                                         <div className="inn-business-chat-box-content BusinessChatImg-content">
                                             <img src={BusinessChatImg} alt="BusinessChatImg" />
                                             <div className="BusinessChatImg__text">
-                                                <span>This is a private group</span>
-                                                <p>Request access to join this group.</p>
-                                                <button className="request_-_access-btn">Request Access</button>
-                                                <button className="request_-_sent-btn">Request Sent</button>
+                                                <span>This is a new group</span>
                                             </div>
                                         </div>
                                     </div>
@@ -49,4 +46,4 @@ const BusinessChatViewTwo = (props) => {
 }
 
 
-export default BusinessChatViewTwo;
+export default BusinessChatViewThree;

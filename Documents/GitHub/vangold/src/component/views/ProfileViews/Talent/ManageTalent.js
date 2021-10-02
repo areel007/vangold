@@ -12,6 +12,7 @@ import avatar5 from "../../../../assets/images/profile/avatar5.png";
 import avatar6 from "../../../../assets/images/profile/avatar6.png";
 import CreateEventModal from "../../../core-ui/CreateEventModal/CreateEventModal";
 import JoinMeetingModal from "../../../core-ui/JoinMeetingModal/JoinMeetingModal";
+import PresentScreenModal from "../../../core-ui/PresentScreenModal/PresentScreenModal";
 import './Talent.css'
 
 const avatars = [
@@ -47,6 +48,7 @@ const avatars = [
 const ManageTalent = () => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
 
     return (
         <section id="talent" className="my-3 py-3">
@@ -86,7 +88,7 @@ const ManageTalent = () => {
                                             <p className='card-text'>plan your meetings</p>
                                         </Card>
                                     </Col>
-                                    <Col xs={6} className='p-2 p-md-4'>
+                                    <Col style={{cursor: "pointer"}} onClick={() => setModalShow3(true)} xs={6} className='p-2 p-md-4'>
                                         <Card className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={share} alt="share" className='img-fluid img-bg' />
@@ -159,6 +161,11 @@ const ManageTalent = () => {
                 onHide={() => setModalShow2(false)}
                 head="Join Meeting"
                 btntext='Join' />
+            <PresentScreenModal
+                show={modalShow3}
+                onHide={() => setModalShow3(false)}
+                head="Present"
+                btntext='Present' />
         </section>
     );
 }

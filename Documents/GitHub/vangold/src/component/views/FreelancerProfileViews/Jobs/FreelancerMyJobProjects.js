@@ -1,5 +1,5 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu"
 import { AiFillStar } from "react-icons/ai";
 import { RiFilterFill } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -19,7 +19,7 @@ const progressWork = [
         id: 1,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         barValue: 50,
         days: "3 days left",
         views: 12,
@@ -30,7 +30,7 @@ const progressWork = [
         id: 2,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         barValue: 50,
         days: "3 days left",
         views: 12,
@@ -41,7 +41,7 @@ const progressWork = [
         id: 3,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         barValue: 50,
         days: "3 days left",
         views: 12,
@@ -63,7 +63,7 @@ const reviewWork = [
         id: 2,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         views: 12,
         comment: 1,
         avatar
@@ -72,7 +72,7 @@ const reviewWork = [
         id: 3,
         title: "Car Care - Landing Page",
         date: "Tue, Jun 29",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         views: 12,
         comment: 1,
         avatar
@@ -83,7 +83,7 @@ const completeWork = [
         id: 1,
         title: "Car Care - Landing Page",
         status: "Done",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         views: 12,
         comment: 1,
         avatar
@@ -92,7 +92,7 @@ const completeWork = [
         id: 2,
         title: "Car Care - Landing Page",
         status: "Done",
-        position: "Lead Designer - Daramola O.",
+        position: "Lead Designer - Fred O.",
         views: 12,
         comment: 1,
         avatar
@@ -122,7 +122,7 @@ const BorderLinearProgress = withStyles((theme) => ({
     },
 }))(LinearProgress);
 
-const MyJobProjects = () => {
+const FreelancerMyJobProjects = () => {
     const [select, setSelect] = useState('IN PROGRESS');
 
     return (
@@ -130,12 +130,12 @@ const MyJobProjects = () => {
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <SideMenu />
+                        <FreelancerProfileSideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w p-5">
                         <Row>
                             <Col xs={10} lg={6} className="mx-auto">
-                                <h1 style={{ color: "#000000" }}>Welcome back, Daramola</h1>
+                                <h1 style={{ color: "#000000" }}>Welcome back, Fred</h1>
                             </Col>
                             <Col xs={10} lg={6} className="mx-auto align-self-center text-end d-none d-lg-block">
                                 <Button variant='light' className="btn-pro-job"><AiFillStar className="fs-4 me-1" /></Button>
@@ -392,4 +392,4 @@ const MyJobProjects = () => {
     );
 };
 
-export default MyJobProjects;
+export default FreelancerMyJobProjects;
