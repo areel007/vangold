@@ -212,10 +212,16 @@ p.user-name__name {
   display: flex;
   align-items: center;
 }
+.container-logged-in {
+  width: 95%;
+}
 
 @media screen and (max-width: 1200px) {
   .header__inner {
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+  }
+  .logo {
+    margin-right: auto;
   }
   .header__inner ul,
   .auth-buttons {
@@ -223,5 +229,14 @@ p.user-name__name {
   }
   .hamburger-menu {
     display: block;
+  }
+  .search-box {
+    display: none;
+  }
+  .user-name {
+    display: none;
+  }
+  .notification {
+    margin-right: 12px;
   }
 }
