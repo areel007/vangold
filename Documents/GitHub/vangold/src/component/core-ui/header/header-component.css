@@ -215,6 +215,9 @@ p.user-name__name {
 .container-logged-in {
   width: 95%;
 }
+.hamburger-hide {
+  display: none;
+}
 
 @media screen and (max-width: 1200px) {
   .header__inner {
