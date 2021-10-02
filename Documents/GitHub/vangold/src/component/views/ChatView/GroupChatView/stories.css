@@ -1,0 +1,54 @@
+.stories {
+    margin-bottom: 50px;
+}
+.add-stories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+}
+.plus-button {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}
+.plus-button svg {
+    margin: auto;
+}
+.add-stories__inner {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.add-stories__inner .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-stories__inner span {
+    white-space: nowrap;
+}
+.stories-list {
+    width: 100%;
+    height: 48px;
+    border: 1px solid red;
+}
+.stories__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

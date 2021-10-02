@@ -2,6 +2,10 @@
     background: rgba(217, 218, 215, 0.2);
     padding: 2.4rem;
 }
+.brand-side-nav-steppers {
+    background: rgba(217, 218, 215, 0.2);
+    padding: 2.4rem;
+}
 .steppers__title {
     font-family: var(--raleway);
     font-style: normal;
@@ -13,4 +17,16 @@
 }
 .side-nav-steppers-out {
     display: block !important;
+}
+.brand-side-nav-steppers-out {
+    display: block !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .side-nav-steppers {
+        display: none;
+    }
+    .brand-side-nav-steppers {
+        display: none;
+    }
 }

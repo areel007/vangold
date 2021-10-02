@@ -3,6 +3,12 @@ import Stepper from "./b-stepper"
 import {useState} from "react";
 
 const BrSideNavSteppers = (props) => {
+
+    let className = 'brand-side-nav-steppers'
+    if (props.isFreelancerRegistrationNavOut) {
+        className += ' brand-side-nav-steppers-out'
+    }
+
     const [steps] = useState([
         {
             description: "Company Info",
@@ -26,8 +32,10 @@ const BrSideNavSteppers = (props) => {
         },
     ])
     return (
-        <div className="side-nav-steppers">
-            <p className="steppers__title">My Application</p>
+        <div className={className}>
+            {
+                !props.isFreelancerRegistrationNavOut ? <p className="steppers__title">My Application</p> :null
+            }
             <Stepper  steps={steps} stepPage={props.stepPage} />
         </div>
     )
