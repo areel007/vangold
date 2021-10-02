@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 
 const HeaderComponent = (props) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(true)
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [languageDropdown, setLanguageDropdown] = useState(false)
     const [languages] = useState([
         'English',
