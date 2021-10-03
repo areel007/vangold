@@ -17,7 +17,7 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="step">
+    <div className="step personal-info">
       <p className="step-title">Personal Info</p>
       <form>
         <div className="vangold-input first-name">
@@ -40,7 +40,7 @@ const PersonalInfo = () => {
       <div className="upload-passport">
         <label>Upload Passport Photograph </label>
         <div className="file">
-          <label htmlFor="input-file">
+          <label htmlFor="input-file" className="personal-info__file-input-label">
             <svg
               width="54"
               height="54"
