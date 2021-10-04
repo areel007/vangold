@@ -7,6 +7,7 @@ import cross from "../../../../assets/images/profile/cross1.png";
 import ReactPaginate from "react-paginate";
 import "./Jobs.css";
 import { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 
 const jobsLists = [
     {
@@ -50,6 +51,8 @@ const ProfileAllJobs = ({ showSideMenu }) => {
     const jobsPerPage = 4;
     const pagesVisited = pageNumber * jobsPerPage;
     const pageCount = Math.ceil(jobs.length / jobsPerPage);
+    const history = useHistory();
+    const location = useLocation();
 
     const changePage = ({ selected }) => {
         setPageNumber(selected);
@@ -87,7 +90,9 @@ const ProfileAllJobs = ({ showSideMenu }) => {
                                 .slice(pagesVisited, pagesVisited + jobsPerPage)
                                 .map(job => (
                                     <Col xs={12} lg={12} className="mx-auto" key={job.id}>
-                                        <Card className='card-bg'>
+                                        <Card className='card-bg' onClick={() => {
+                                                history.push("/profile/jobs/job-description");
+                                            }} style={{cursor: "pointer"}}>
                                             <div className='text-end me-4'>
                                                 <div className="love-icon">
                                                     <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -68,7 +68,7 @@ const Expertise = (props) => {
                         type="text"
                         value={input}
                         onChange={onInputChange}
-                        className="text-input"
+                        className="expertise__text-input"
                     />
                 </form>
             </div>

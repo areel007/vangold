@@ -144,8 +144,8 @@ const GroupChatComponentThree = () => {
                                     </div>
                                     <div className="users__chat__avatar">
                                         {
-                                            otherUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
+                                            otherUsersData.map((userChatData, index) => (
+                                                <div key={index} className="chat__component_users-data">
                                                     <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat Avatar" />
                                                     <div className="userChatData">
                                                         <p className="chat__users_name">{userChatData.userName}</p>
@@ -184,7 +184,7 @@ const GroupChatComponentThree = () => {
                                             <div className="popover__close-btns">
                                                 <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
-                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" strokeWidth="2"/>
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
@@ -202,7 +202,7 @@ const GroupChatComponentThree = () => {
                                                 <div className="popover__close-btns participants__close-btns">
                                                     <svg onClick={closeParticantsPopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
-                                                        <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                        <circle cx="14.5" cy="14.5" r="13.5" stroke="black" strokeWidth="2"/>
                                                     </svg>
                                                 </div>
                                             </div>
@@ -214,8 +214,8 @@ const GroupChatComponentThree = () => {
                                                     </svg>
                                                 </div>
                                                 {
-                                                    groupChatParticipantsUsersData.map((groupParticipantsUsersData) => (
-                                                        <div className="chat__group__component_participants-data">
+                                                    groupChatParticipantsUsersData.map((groupParticipantsUsersData, index) => (
+                                                        <div key={index} className="chat__group__component_participants-data">
                                                             <img className="chat__avatar" src={groupParticipantsUsersData.usersAvatar} alt="chat Avatar" />
                                                             <div className="userChatData">
                                                                 <p className="chat__users_name">{groupParticipantsUsersData.userName}</p>
@@ -230,81 +230,97 @@ const GroupChatComponentThree = () => {
                                     }  
                                 </div>
                                 <div className="chat-messager-container">
-                                    <div className="send__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="send__message__box desktop__send__message__box">
-                                                <span style={{color: "#FC7300", fontWeight: "bold"}}>Klaus</span>
-                                                <span>Lorem ipsum vel, penatibus</span>
+                                    <div className="sendChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__sendChatMsg">
+                                                <span className="send__chatUser__name__">Klaus</span>
+                                                <span>
+                                                    Hey, Devon. Can we get on a quick
+                                                    call?
+                                                </span>
                                             </div>
-                                            <div className="send__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="sendChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Damon</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Damon</span>
+                                                <span>
+                                                    Hi, Emmie. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="middle-message-time-date">
+                                   </div>
+                                   <div className="middle-_-time-date">
                                         <span>June 20, 10:46 pm</span>
                                     </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__time">
-                                                <span>Replied to Damola</span>
-                                            </div>
-                                            <div className="reply__to-message__box">
-                                                <span>Hey, Devon. Can we get on a quick call?</span>
-                                            </div>
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#009BBC", fontWeight: "bold"}}>Koyote Stark</span>
-                                                <span>Hi, Damola. Sure, but now I’m busy rn.</span>
-                                            </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                    <div className="replyChatMsg">
+                                        <span className="replied__to__text">Replied to Damola</span>
+                                        <div className="replied__to">
+                                            Hey, Devon. Can we get on a quick call?
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Femi</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Koyote Stark</span>
+                                                <span>
+                                                    Hi, Damola. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="send__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="send__message__box desktop__send__message__box">
-                                                <span style={{color: "#FC7300", fontWeight: "bold"}}>Kareem</span>
-                                                <span>Okay, some other time, I guess.</span>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Femi</span>
+                                                <span>
+                                                    Hi, Emmie. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="send__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Femi</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                   </div>
+                                   <div className="sendChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__sendChatMsg">
+                                                <span className="send__chatUser__name__">Kareem</span>
+                                                <span>
+                                                    Okay, some other time, I guess.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="sendChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Tola</span>
+                                                <span>
+                                                    Hey y’all, Burna new event is 
+                                                    coming up. Check out this new 
+                                                    link to register.
+                                                </span>
+                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
+                                        </div>
+                                   </div>
                                 </div>
                                 
                                 <div className="bottom-chat-footer">
@@ -328,8 +344,8 @@ const GroupChatComponentThree = () => {
                                     </div>
                                     <svg className="send__message-btn" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="48" height="48" rx="8" fill="#45B618"/>
-                                        <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M34 15L23 26" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>
                             </div>

@@ -100,9 +100,7 @@ footer {
   line-height: 26px;
   color: #eeeff4;
 }
-.bottomfooter {
-  background-color: #1b2231;
-}
+
 .bottomfooter__inner {
   display: flex;
   justify-content: space-between;

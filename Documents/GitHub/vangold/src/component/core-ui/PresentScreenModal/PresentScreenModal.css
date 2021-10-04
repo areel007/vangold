@@ -1,0 +1,15 @@
+.Present__screen-footer button {
+  width: 300px;
+  height: 48px;
+}
+.Present__screen-footer span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--secondary);
+}
+.Present__screen-footer svg {
+  margin-right: 12px;
+}

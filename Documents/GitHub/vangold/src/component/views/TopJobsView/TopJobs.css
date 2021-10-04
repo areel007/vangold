@@ -5,6 +5,9 @@
   max-width: 1140px;
   margin: auto;
 }
+.jobs__view-cover img {
+  width: 100%;
+}
 .top__jobs__freelancers {
   font-family: var(--inter);
   font-style: normal;
@@ -14,22 +17,24 @@
   color: #18191f;
   margin-top: 24px;
 }
-.follow-visit-site-btn{
+.follow-visit-site-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
 }
-.follow-visit-site-btn button{
+.follow-visit-site-btn button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.jobs-followers-text{
+.jobs-followers-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.follow-visit-site-btn button:nth-child(1) {
+.follow-visit-site-btn .follow__box button {
   width: 100px;
   height: 42px;
   background: #45b618;
@@ -43,7 +48,11 @@
   line-height: 14px;
   color: #ffffff;
 }
-.follow-visit-site-btn button:nth-child(2) {
+.follow-visit-site-btn .follow__box .following__btn {
+  display: none;
+}
+.follow-visit-site-btn .visit-website__btn button,
+.follow-visit-site-btn .follow__box button:nth-child(2) {
   width: 134px;
   height: 42px;
   background: #f8f8f8;
@@ -57,7 +66,6 @@
   font-size: var(--fs-12);
   line-height: 14px;
   color: var(--primary);
-  
 }
 .inn-top-jobs {
   display: flex;

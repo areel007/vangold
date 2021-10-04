@@ -1,0 +1,72 @@
+.sidecheck-bg-1 {
+  background: #45b61833;
+  padding: 2rem 1rem;
+}
+.sidecheck-head {
+  font-size: 16px;
+  font-weight: var(--font-wieght-bold);
+}
+.sidecheck-btn {
+  font-size: 12px;
+  font-weight: var(--font-wieght-bold);
+  color: #fff;
+  line-height: 14.09px;
+  background-color: var(--primary);
+  padding: 1rem;
+  text-transform: none;
+  border: 5px;
+  border-radius: 4px;
+}
+.sidecheck-btn:hover {
+  background-color: var(--primary);
+}
+.sidecheck-numb {
+  background-color: #083eb133;
+  color: #083eb1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.ManageTalentSide-bar-content {
+  align-items: center;
+  gap: 8px;
+}
+.ManageTalentSide-bar-content span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 20px;
+  color: var(--secondary);
+  position: relative;
+}
+.ManageTalent__sideBar__chat-view__svg {
+  margin-right: 8px;
+}
+.ManageTalent__sideBar__chat-listItem_header {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border: 1px solid rgba(128, 128, 128, 0.3) !important;
+  box-sizing: border-box !important;
+  margin-bottom: 24px !important;
+  max-width: 100% !important;
+  width: 380px !important;
+}
+.userChat__manageTalent__Box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 345px;
+}
+.userChat__manageTalent__Box__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.userChat__manageTalent__Box__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 46px;
+}
+
