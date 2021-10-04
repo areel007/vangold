@@ -112,3 +112,10 @@
     letter-spacing: 0.2px;
     color: #333333;
 }
+
+@media screen and (max-width: 1200px) {
+    .story__inner span {
+        white-space: normal;
+        text-align: center;
+    }
+}
