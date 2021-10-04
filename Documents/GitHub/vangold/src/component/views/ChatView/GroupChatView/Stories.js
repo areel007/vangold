@@ -62,6 +62,18 @@ const userStoriesData = [
         avatar: avatar3,
         userName: "Adam Sandler"
     },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
 
 ] 
 
@@ -80,11 +92,22 @@ const Stories = () => {
                                 </svg>
                             </div>
                         </div>
-                        <span>You story</span>
+                        <span>Your story</span>
                     </div>
                 </div>
                 <div className="stories-list">
-
+                    {
+                        userStoriesData.map((_user, index) => {
+                            return <div className="story">
+                                <div key={index} className="story__inner">
+                                    <div className="avatar">
+                                        <img src={_user.avatar} alt=""/>
+                                    </div>
+                                    <span>{_user.userName}</span>
+                                </div>
+                            </div>
+                        })
+                    }
                 </div>
             </div>
 
