@@ -8,11 +8,15 @@ import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { ImStarEmpty, ImStarHalf, ImStarFull } from "react-icons/im";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
+import UnfollowModal from "../../../core-ui/UnfollowModal/UnfollowModal";
+import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./FreelancerProfile.css";
 
 const FreelancerProfile = () => {
     const [image, setImage] = useState(false);
     const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
 
     function handleImageChange(e) {
         if (e.target.files && e.target.files[0]) {
@@ -68,16 +72,22 @@ const FreelancerProfile = () => {
                     </div>
                 </div>
                 <div className="text-center">
-                    <p className="text-16px mt-3 fw-bold">Product Designer</p>
+                    <p className="text-16px mt-3 fw-bold">Product Designers <span style={{fontSize: 16, fontWeight: 500, color: "#4F4F4F", cursor: "pointer" }} onClick={() => setModalShow3(true)}>164 Followers</span></p>
                 </div>
-                <div className="d-flex justify-content-center mt-5">
+                <div className="d-flex freelancer__profile_buttons justify-content-center mt-5">
                     <Button className="freelance-btn me-4"
                         onClick={() => setModalShow(true)}
                     >
                         CONTACT <CgArrowLongRight className="ms-2 mb-1" />
                     </Button>
-                    <Button className="freelance-btn">
+                    <Button className="freelance-btn me-4">
                         MAKE PAYMENT <CgArrowLongRight className="ms-2 mb-1" />
+                    </Button>
+                    <Button className="freelance-btn freelance-btn-follow-btn">
+                        FOLLOW
+                    </Button>
+                    <Button className="freelance-btn freelance-btn-following-btn" onClick={() => setModalShow2(true)}>
+                        FOLLOWING
                     </Button>
                 </div>
                 <Row>
@@ -232,6 +242,15 @@ const FreelancerProfile = () => {
                     head="Send an offer to Daramola"
                     para="State clearly what you want Daramola to do for you"
                     btntext='Send' />
+                <UnfollowModal 
+                        show={modalShow2}
+                        onHide={() => setModalShow2(false)}
+                        head="Unfollow Page"
+                        btntext='Unfollow' />
+                <FollowersModal 
+                        show={modalShow3}
+                        onHide={() => setModalShow3(false)}
+                        head="Followers"/>
             </Container>
         </section>
     );

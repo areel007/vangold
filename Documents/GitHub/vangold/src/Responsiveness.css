@@ -27,7 +27,8 @@
   .TopFreealancerContent {
     width: 100% !important;
   }
-  .side-nav-steppers, .chat-call-right {
+  .side-nav-steppers,
+  .chat-call-right {
     display: none;
   }
   .search__container,
@@ -242,7 +243,7 @@
     background: #fbfbfb;
     border-radius: 6px 6px 6px 0px;
   }
-  .dropDownIcon{
+  .dropDownIcon {
     color: #333333 !important;
   }
   .manage-your-team-image img {
@@ -252,10 +253,10 @@
   .business-chat-view {
     /* display: none; */
   }
-  .sideBarBusiness2{
+  .sideBarBusiness2 {
     display: none !important;
   }
-  .BusinessChatImg-content{
+  .BusinessChatImg-content {
     margin-top: 63px;
   }
   .business-chat-container {
@@ -268,19 +269,21 @@
     width: 100% !important;
     background-color: var(--white) !important;
   }
-  .business__channel-header h2{
+  .business__channel-header h2 {
     color: #333333 !important;
   }
-  .business__chat-view__svg path, .business-chat__side-bar-content svg path{
+  .business__chat-view__svg path,
+  .business-chat__side-bar-content svg path {
     fill: var(--primary) !important;
   }
-  .business-chat__side-bar-content span{
+  .business-chat__side-bar-content span {
     color: #333333 !important;
   }
-  .business-chat__side-bar-list:hover span{
+  .business-chat__side-bar-list:hover span {
     color: #ffffff !important;
   }
-  .business__chat__searchBox {
+  .business__chat__searchBox,
+  .mobile__video__call {
     display: block !important;
   }
   .accordion-header {
@@ -577,6 +580,16 @@
   .password-reset-success-box img {
     width: 40px !important;
     height: 40px !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  #freelancer-profile .freelancer__profile_buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  #freelancer-profile .freelancer__profile_buttons button{
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 550px) {

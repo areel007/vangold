@@ -235,6 +235,26 @@
   font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
 }
+.follow-visit-site-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+.follow-visit-site-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jobs-followers-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.follow-visit-site-btn .follow__box .follow__btn__ {
+  display: none;
+}
 @media (max-width: 700px) {
   #job-descrip .head {
     font-size: 18px;

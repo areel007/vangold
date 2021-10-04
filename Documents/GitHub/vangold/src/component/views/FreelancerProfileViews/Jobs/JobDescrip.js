@@ -1,5 +1,6 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
+import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ImShare2 } from "react-icons/im";
 import { useState } from "react";
@@ -7,6 +8,8 @@ import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
+import UnfollowModal from "../../../core-ui/UnfollowModal/UnfollowModal";
+import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 // import "../../Jobs.css";
 
 const jobs =
@@ -23,17 +26,21 @@ const jobs =
 
 const FreelancerJobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
 
     return (
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
-            <div className="top-jobs-view">
                 <Row>
-                    <Col xs={10} lg={3} className="mx-auto py-5 d-none d-lg-block">
+                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
+                        <SideMenu />
+                    </Col>
+                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
                         <SideCheckBoxes />
                     </Col>
-                    <Col xs={12} lg={9} className="mx-auto p-5">
+                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
                         <div className="bg-color1">
                             <div>
                                 <img src={cover} alt="cover" className='img-fluid' />
@@ -46,7 +53,7 @@ const FreelancerJobDescrip = () => {
                                     <Col xs={8} lg={8}>
                                         <h1 className='head'>{jobs.name}</h1>
                                     </Col>
-                                    <Col xs={4} lg={4} className="text-end">
+                                    <Col xs={4} lg={4} className="align-self-center text-end">
                                         <Button variant='light' className='job-btn me-2 me-lg-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
                                         <Button variant='light' className='job-btn mt-4' ><ImShare2 className='job-icon' /></Button>
                                     </Col>
@@ -56,7 +63,7 @@ const FreelancerJobDescrip = () => {
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
-                                            <p style={{marginLeft: 10}} className="text-16px-1 me-3">2,464 Followers</p>
+                                            <p style={{marginLeft: 10, cursor: "pointer"}} className="text-16px-1 me-3" onClick={() => setModalShow3(true)}>2,464 Followers</p>
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="text-lg-end">
@@ -68,10 +75,9 @@ const FreelancerJobDescrip = () => {
                                     <Col xs={12} lg={6} className="">
                                         <div className="follow-visit-site-btn">
                                             <div className="follow__box">
-                                                <button className="follow__btn">FOLLOW</button>
-                                                <button className="following__btn">FOLLOWING</button>
+                                                <button className="follow__btn_fl">FOLLOW</button>
+                                                <button className="following__btn_fl" onClick={() => setModalShow2(true)}>FOLLOWING</button>
                                             </div>
-
                                         </div>
                                     </Col>
                                 </Row>
@@ -116,11 +122,19 @@ const FreelancerJobDescrip = () => {
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
                                     btntext='Apply' />
+                                <UnfollowModal
+                                    show={modalShow2}
+                                    onHide={() => setModalShow2(false)}
+                                    head="Unfollow Page"
+                                    btntext='Unfollow' />
+                                <FollowersModal 
+                                    show={modalShow3}
+                                    onHide={() => setModalShow3(false)}
+                                    head="Followers"/>
                             </div>
                         </div>
                     </Col>
                 </Row>
-                </div>
             </Container>
         </section>
     );

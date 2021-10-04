@@ -7,7 +7,9 @@ import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
-import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
+import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
+import UnfollowModal from "../../../core-ui/UnfollowModal/UnfollowModal";
+import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./Jobs.css";
 
 const jobs =
@@ -24,7 +26,10 @@ const jobs =
 
 const JobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
+    
 
     return (
         <section id="job-descrip" className="my-5 py-3">
@@ -59,7 +64,7 @@ const JobDescrip = () => {
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
-                                            <p style={{marginLeft: 10}} className="text-16px-1 me-3">2,464 Followers</p>
+                                            <p style={{marginLeft: 10, cursor: "pointer"}} className="text-16px-1 me-3" onClick={() => setModalShow3(true)}>2,464 Followers</p>
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="text-lg-end">
@@ -71,8 +76,8 @@ const JobDescrip = () => {
                                     <Col xs={12} lg={6} className=".follow-visit-site-btn">
                                         <div className="follow-visit-site-btn">
                                             <div className="follow__box">
-                                                <button className="follow__btn">FOLLOW</button>
-                                                <button className="following__btn">FOLLOWING</button>
+                                                <button className="follow__btn__">FOLLOW</button>
+                                                <button className="following__btn__" onClick={() => setModalShow2(true)}>FOLLOWING</button>
                                             </div>
                                             <div className="visit-website__btn">
                                                 <button>WEBSITE</button>
@@ -121,6 +126,15 @@ const JobDescrip = () => {
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
                                     btntext='Apply' />
+                                    <UnfollowModal 
+                        show={modalShow2}
+                        onHide={() => setModalShow2(false)}
+                        head="Unfollow Page"
+                        btntext='Unfollow' />
+                <FollowersModal 
+                        show={modalShow3}
+                        onHide={() => setModalShow3(false)}
+                        head="Followers"/>
                             </div>
                         </div>
                     </Col>

@@ -1,15 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../core-ui/auth/authstyle.css"
-import bannerImage from "../../../assets/images/vangold-homepae-baner-img.png"
 import PureModal from 'react-pure-modal';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import CrossfadeImage from "react-crossfade-image";
+import FadeImg1 from "../../../assets/images/Banner_img/Rectangle8892491.png";
+import FadeImg2 from "../../../assets/images/Banner_img/Rectangle999249.png";
+import FadeImg3 from "../../../assets/images/Banner_img/vangold-homepae-baner-img--.png";
+
+const fadeImages = [
+    "https://i.ibb.co/hsGMCHF/Rectangle8892491.png",
+    "https://i.ibb.co/ssZ5G3P/Rectangle999249.png",
+    "https://i.ibb.co/f4Z2GH2/vangold-homepae-baner-img.png",
+  ];
+
 
 const AbBanner = (props) => {
     const [modal, setModal] = useState(false);
     const [modalTwo, setModalTwo] = useState(false);
+    const [curImg, setCurImg] = useState(0);
+
+    useEffect(() => {
+        let interval = null;
+    
+        interval = setInterval(() => {
+          if (curImg < 2) {
+            setCurImg(img => img + 1);
+          } else {
+            setCurImg(0);
+          }
+        }, 5000);
+    
+        return () => clearInterval(interval);
+      }, [curImg]);
+
     const validationSchema = Yup.object().shape({
         username: Yup.string().required('Username is required'),
         email: Yup.string().email().required('Email is required'),
@@ -28,6 +54,7 @@ const AbBanner = (props) => {
     
     function onSubmit(data) {}
 
+    
     return (
         <div>
             <div className="banner">
@@ -43,7 +70,12 @@ const AbBanner = (props) => {
                             </div> 
                         </div>
                         <div className="bannerTwo__image">
-                            <img src={bannerImage} alt="banner"/>
+                                <CrossfadeImage
+                                        src={fadeImages[curImg]}
+                                        duration={1000}
+                                        timingFunction={"ease-out"}
+                                    />
+                            
                         </div>
                     </div>
                     <PureModal className="homepage__modal__body"
