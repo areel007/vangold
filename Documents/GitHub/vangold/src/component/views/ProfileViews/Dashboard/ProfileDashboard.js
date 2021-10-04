@@ -244,7 +244,32 @@ const ProfileDashboard = () => {
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Row>
                             <Col xs={12} lg={6} className="mx-auto p-3">
-                                <h1 className='mb-4'>Activity</h1>
+                                {/* CALENDAR FOR MOBILE VIEW ONLY */}
+                                <Row className="d-lg-none">
+                                    <Col xs={12} lg={10}>
+                                        <div className="d-flex justify-content-between">
+                                            <div>
+                                                <h1>Calender</h1>
+                                            </div>
+                                            <div className="d-flex">
+                                                <p className="text-14px align-self-end me-4 ">March 2020</p>
+                                                <Button className="me-4" variant='light'><MdKeyboardArrowLeft /></Button>
+                                                <Button variant='light'><MdKeyboardArrowRight /></Button>
+                                            </div>
+                                        </div>
+                                        <div className='mt-4' style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
+                                            <Row>
+                                                {calender.map((cal) => (
+                                                    <Col className="text-center my-4 mx-3" xs={1} key={cal.date}>
+                                                        <p className="text-16px">{cal.day}</p>
+                                                        <p className="text-18px">{cal.date}</p>
+                                                    </Col>
+                                                ))}
+                                            </Row>
+                                        </div>
+                                    </Col>
+                                </Row>
+                                <h1 className='mb-4 mt-5 mt-lg-0'>Activity</h1>
                                 <Row>
                                     {
                                         cardItems.map((item) => (
@@ -354,7 +379,9 @@ const ProfileDashboard = () => {
                                 </Row>
                             </Col>
                             <Col xs={12} lg={6} className="mx-auto p-3 mt-5 mt-lg-0">
-                                <Row>
+
+                                {/* CALENDAR FOR DESKTOP VIEW ONLY */}
+                                <Row className="d-none d-lg-block">
                                     <Col xs={12} lg={10}>
                                         <div className="d-flex justify-content-between">
                                             <div>

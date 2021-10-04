@@ -94,8 +94,12 @@
 @media (max-width: 700px) {
   #profile-dash h1 {
     font-size: 18px;
+    font-weight: var(--font-wieght-extrabold);
+    font-family: var(--raleway);
   }
   #profile-dash h2 {
     font-size: 18px;
+    font-weight: var(--font-wieght-extrabold);
+    font-family: var(--raleway);
   }
 }

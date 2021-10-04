@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Modal } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import { BsFillHeartFill } from "react-icons/bs";
@@ -7,7 +7,7 @@ import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
-import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
+import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
 import "./Jobs.css";
 
 const jobs =
@@ -25,6 +25,11 @@ const jobs =
 const JobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
+    const [followBtn, setFollowBtn] = useState("follow");
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <section id="job-descrip" className="my-5 py-3">
@@ -68,6 +73,30 @@ const JobDescrip = () => {
                                         </div>
                                     </Col>
                                 </Row>
+                                <div className="mt-4">
+                                    {followBtn === "follow" ? (
+
+                                        <button className='follow-btn me-4' onClick={() => setFollowBtn('following')}>FOLLOW</button>
+                                    ) : (
+
+                                        <button className='web-btn me-4' onClick={handleShow}>FOLLOWING</button>
+                                    )}
+                                    <button className='web-btn'>VISIT WEBSITE</button>
+                                </div>
+                                <Modal show={show} onHide={handleClose}>
+                                    <Modal.Header closeButton>
+                                        <h2 className='unfollow-mod-head mt-4'>Unfollow Page</h2>
+                                    </Modal.Header>
+                                    <p className='p-3'>You are about to unfollow Vangold</p>
+                                    <Modal.Footer>
+                                        <button onClick={handleClose} className='cancel-mod-btn me-4' >
+                                            Cancel
+                                        </button>
+                                        <button variant="primary" onClick={() => { setFollowBtn('follow'); handleClose(); }} className='unfollow-mod-btn' >
+                                            Unfollow
+                                        </button>
+                                    </Modal.Footer>
+                                </Modal>
                                 <Row className='mt-4 row-border'>
                                     <Col xs={6} lg={3} className='border-right px-4 px-lg-5 py-4 border-botom'>
                                         <p className="text-16px-1">Experience</p>
