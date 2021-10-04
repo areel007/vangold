@@ -1,0 +1,44 @@
+.mobile-chat_modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+
+.mobile-chat_modal__body {
+  margin-top: 50px;
+  position: relative;
+  min-height: 500px;
+  /* padding: 21px; */
+}
+
+.messages-can-only-be-seen {
+  margin: 0 auto;
+  min-height: 48px;
+  background: #f6f6f6;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+}
+.mobile-call-chat-input {
+  background: #EEEDED !important;
+  /* opacity: 0.1 !important; */
+  border-radius: 15px !important;
+}
+.mobile-call-chat-bottom{
+  background-color: transparent !important;
+  margin-top: 40px !important;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 !important;
+}

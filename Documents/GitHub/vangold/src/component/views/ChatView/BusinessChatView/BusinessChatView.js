@@ -61,25 +61,34 @@ const BusinessChatView = (props) => {
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
-                        <div className="business__channel-header">
-                            <div className="business__channel-header-left">
-                                <h2>Channel</h2>
-                            </div>
-                            <div className="business__channel-header-right">
-                                <div className="business__channel-header-right-left">
-                                    <span>Channel</span>
-                                    <span>12 Members</span>
-                                </div>
-                                <svg style={{cursor: "pointer"}} onClick={toggle} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="white"/>
-                                </svg>
-                            </div>
+                        <div className="business__chat__searchBox">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="#808080"/>
+                            </svg>
+
+                            <input type="text" placeholder="Search" />
                         </div>
                         <div className="business-chat-container">
-                            <div className="sideBarBusinessChat d-none d-lg-block">
+                            <div className="sideBarBusinessChat">
+                                <div className="business__channel-header mobile__business__channel-header">
+                                    <div className="business__channel-header-left">
+                                        <h2>Channel</h2>
+                                    </div>
+                                </div>
                                 <BusinessSideBarDropDown />
                             </div>
                             <div className="business-chat-view">
+                                <div className="business__channel-header">
+                                    <div className="business__channel-header-right">
+                                        <div className="business__channel-header-right-left">
+                                            <span>Channel</span>
+                                            <span>12 Members</span>
+                                        </div>
+                                        <svg style={{cursor: "pointer"}} onClick={toggle} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="white"/>
+                                        </svg>
+                                    </div>
+                                </div>
                                 <div className="inn-business-chat-view">
                                         <div className="business-chat-box-content">
                                             <div className="inn-business-chat-box-content">
@@ -102,7 +111,7 @@ const BusinessChatView = (props) => {
                                                 <div className="reply__message__container reply__biz__message__container">
                                                     <img src={Avatar1} alt="366764" />
                                                     <div className="inn-send__message__container">
-                                                        <div className="reply__message__time">
+                                                        <div className="reply__message__top">
                                                             <span>Replied to Damola</span>
                                                         </div>
                                                         <div className="reply__to-message__box">
@@ -117,6 +126,26 @@ const BusinessChatView = (props) => {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className="inn-send__message__container">
+                                                    <div className="missed-call">
+                                                        <div className="missed-call-svg">
+                                                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <g clip-path="url(#clip0)">
+                                                            <path d="M2.74479 2.7179L5.0012 4.97431L7.873 2.10252L7.46274 1.69226L5.0012 4.1538L3.15505 2.30765H4.59095V1.69226H2.12941V4.1538H2.74479V2.7179ZM9.80531 7.30047C8.55402 6.11482 6.86377 5.38457 5.0012 5.38457C3.13864 5.38457 1.44838 6.11482 0.197099 7.30047C0.123253 7.37431 0.078125 7.47688 0.078125 7.59175C0.078125 7.70662 0.123253 7.80918 0.197099 7.88303L1.21454 8.90047C1.28838 8.97431 1.39095 9.01944 1.50582 9.01944C1.61659 9.01944 1.71915 8.97431 1.793 8.90457C2.1171 8.60098 2.48633 8.34662 2.88428 8.14559C3.01966 8.07995 3.11402 7.94047 3.11402 7.77636V6.50457C3.70889 6.30765 4.34479 6.20508 5.0012 6.20508C5.65761 6.20508 6.29351 6.30765 6.88838 6.50047V7.77226C6.88838 7.93226 6.98274 8.07585 7.11813 8.14149C7.52018 8.34252 7.88531 8.60098 8.21351 8.90047C8.28736 8.97431 8.38992 9.01534 8.50069 9.01534C8.61556 9.01534 8.71813 8.97021 8.79197 8.89636L9.80941 7.87893C9.88325 7.80508 9.92838 7.70252 9.92838 7.58765C9.92838 7.47277 9.87915 7.37431 9.80531 7.30047Z" fill="#333333"/>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0">
+                                                            <rect width="9.84615" height="9.84615" fill="white" transform="translate(0.078125 0.461548)"/>
+                                                            </clipPath>
+                                                            </defs>
+                                                            </svg>
+                                                        </div>
+                                                        <span>Missed call fom Jane Doe</span>
+                                                    </div>
+                                                    <div className="reply__message__time">
+                                                        <span>Saturday 11:50 PM</span>
+                                                    </div>
+                                                </div><br/>
                                                 <div className="reply__message__container reply__biz__message__container">
                                                     <img src={Avatar2} alt="366764" />
                                                     <div className="inn-send__message__container">
@@ -151,7 +180,7 @@ const BusinessChatView = (props) => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> 
                                             <div className="bottom-chat-footer biz-bottom-chat-footer">
                                                 <div className="chat-input-box">
                                                     <input type="text" placeholder="Message..." />

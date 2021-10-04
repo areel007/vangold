@@ -1,11 +1,17 @@
 import React, {useState} from "react";
-import { Button, Chip } from "@material-ui/core";
+import { Chip } from "@material-ui/core";
 import { Col, Container, Row, Form } from "react-bootstrap"
 import SideMenu from "../../../core-ui/SideMenu/SideMenu"
 import { makeStyles } from '@material-ui/core/styles';
 import avatar from "../../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import messageBoxImg from "../../../../assets/images/group-therapy/rafiki.png";
+import participantsAvatar1 from "../../../../assets/images/avatar/Ellipse-7.png";
+import participantsAvatar2 from "../../../../assets/images/avatar/Ellipse-7-1.png";
+import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.png";
+import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
+import useOnclickOutside from "react-cool-onclickoutside";
+import { Link } from "react-router-dom";
 import '../ChatComponent.css'
 
 const otherUsersData = [
@@ -34,6 +40,28 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
+const groupChatParticipantsUsersData = [
+    {
+        usersAvatar: participantsAvatar1,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+    {
+        usersAvatar: participantsAvatar2,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+    {
+        usersAvatar: participantsAvatar3,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+    {
+        usersAvatar: participantsAvatar4,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+]
 const useStyles = makeStyles((theme) => ({
 
     chip: {
@@ -44,6 +72,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const GroupChatView = () => {
+    const [isShow, setIsShow] = React.useState(false);
+    const [isShow2, setIsShow2] = React.useState(false);
     const classes = useStyles();
     const [value, setValue] = useState('');
     const [chipData, setChipData] = useState([]);
@@ -52,6 +82,25 @@ const GroupChatView = () => {
         return chipData.indexOf(elem) == pos;
     });
 
+    const openPopover = () => {
+      setIsShow(!isShow);
+    };
+    
+    const openPopoverTwo = () => {
+      setIsShow2(!isShow2);
+    };
+    
+    const closePopover = () => {
+        setIsShow(false);
+    };
+    const closePopoverTwo = () => {
+        setIsShow2(false);
+    };
+
+    const ref = useOnclickOutside(() => {
+        setIsShow(false);
+        setIsShow2(false);
+      });
 
     const handleDelete = (chipToDelete) => () => {
         setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
@@ -78,11 +127,65 @@ const GroupChatView = () => {
                         </div>
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
-                                <div className="arrow-top-G-Chat">
-                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 15L1 8L8 1" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <div className="grp__chat__view-left-top">
+                                    <div className="arrow-top-G-Chat">
+                                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 15L1 8L8 1" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span>Add group participants</span>
+                                    </div>
+                                    <svg onClick={openPopover} style={{cursor: "pointer"}} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
                                     </svg>
-                                    <span>Add group participants</span>
+                                    {isShow &&
+                                        <div ref={ref} class="popoverBox mobile__popoverBox arrow-top">
+                                            <div className="popover__close-btns">
+                                                <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
+                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div className="popover__links">
+                                                <li onClick={() => { closePopover(); openPopoverTwo();}}>Group Participant</li>
+                                                <li onClick={closePopover}>Search</li>
+                                                <li onClick={closePopover}>Report Group</li>
+                                                <li onClick={closePopover}>Exit Group</li>
+                                            </div>                                     
+                                        </div>
+                                    }
+                                    {isShow2 &&
+                                        <div ref={ref} className="mobile__popover__participants">
+                                            <div className="popover__participants__links">
+                                                <div className="popover__close-btns mobile-participants__close-btns">
+                                                    <svg onClick={closePopoverTwo} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
+                                                        <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                    </svg>
+                                                </div>
+                                                <div className="popover__partcipants_link__header">
+                                                    <span>70  Participants</span>
+                                                    <svg style={{cursor: "pointer"}} width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.33268 13.9993C8.81183 13.999 10.2484 13.5039 11.4135 12.5927L15.0768 16.256L16.2552 15.0777L12.5919 11.4143C13.5035 10.2491 13.999 8.81221 13.9993 7.33268C13.9993 3.65685 11.0085 0.666016 7.33268 0.666016C3.65685 0.666016 0.666016 3.65685 0.666016 7.33268C0.666016 11.0085 3.65685 13.9993 7.33268 13.9993ZM7.33268 2.33268C10.0902 2.33268 12.3327 4.57518 12.3327 7.33268C12.3327 10.0902 10.0902 12.3327 7.33268 12.3327C4.57518 12.3327 2.33268 10.0902 2.33268 7.33268C2.33268 4.57518 4.57518 2.33268 7.33268 2.33268Z" fill="#333333"/>
+                                                    </svg>
+                                                </div>
+                                                {
+                                                    groupChatParticipantsUsersData.map((groupParticipantsUsersData) => (
+                                                        <div className="chat__group__component_participants-data">
+                                                            <div className="userChatData-box">
+                                                                <img className="chat__avatar" src={groupParticipantsUsersData.usersAvatar} alt="chat Avatar" />
+                                                                <div className="userChatData">
+                                                                    <p className="chat__users_name">{groupParticipantsUsersData.userName}</p>
+                                                                    <p className="chat__users_title">{groupParticipantsUsersData.messages}</p>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <button className="choose-group-admin-button">Group Admin</button>
+                                                        </div>
+                                                    ))
+                                                }
+                                            </div>                                     
+                                        </div>
+                                    }
                                 </div>
                                 <div className="chat__search_box--user-avatar">
                                     <div className="chat__search-box">

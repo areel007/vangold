@@ -1,0 +1,8 @@
+.mobile__video__call{
+    border: 1px solid red;
+    min-height: 812px;
+
+}
+.mobile__video__call__top img{
+    height: 100%;
+}

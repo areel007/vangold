@@ -1,8 +1,21 @@
 import "./home2.css"
 import AbBanner from "../../core-ui/banner/banner2";
 import MainSectionTwo from "../../core-ui/main-section/main-section2";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
 const HomeTwo = (props) => {
+    const validationSchema = Yup.object().shape({
+        email: Yup.string().email().required('Email is required'),
+    });
+    const formOptions = { resolver: yupResolver(validationSchema) };
+    
+    // get functions to build form with useForm() hook
+    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { errors } = formState;
+    
+    function onSubmit(data) {}
     return (
         <div className="home">
             <AbBanner />
@@ -48,8 +61,11 @@ const HomeTwo = (props) => {
                         <p className="getNotifyBannerPara2">Your Every New Job</p>
                         <p className="getNotifyBannerPara3">Place your business on the path of success with the help of freelance talents that you can rely on.</p>
                         <div className="getNotifyInput">
-                            <input type="text" placeholder="Email Address" />
-                            <button>Join Waitlist</button>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input name="email" placeholder="Email Address" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
+                            <div className="invalid-feedback">{errors.email?.message}</div>
+                            <button type="submit">Join Waitlist</button>
+                        </form>
                         </div>
                     </div>
                 </div>

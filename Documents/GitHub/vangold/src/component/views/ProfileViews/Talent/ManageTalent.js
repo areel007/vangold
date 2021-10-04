@@ -1,5 +1,6 @@
-import { Card, Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../../core-ui/SideMenu/SideMenu"
+import { useState } from "react";
+import { Card, Col, Container, Row } from "react-bootstrap";
+import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import vid from "../../../../assets/images/profile/vid.png";
 import add from "../../../../assets/images/profile/add.png";
 import cal from "../../../../assets/images/profile/cal.png";
@@ -9,6 +10,9 @@ import clock from "../../../../assets/images/profile/clock.png";
 import avatar4 from "../../../../assets/images/profile/avatar4.png";
 import avatar5 from "../../../../assets/images/profile/avatar5.png";
 import avatar6 from "../../../../assets/images/profile/avatar6.png";
+import CreateEventModal from "../../../core-ui/CreateEventModal/CreateEventModal";
+import JoinMeetingModal from "../../../core-ui/JoinMeetingModal/JoinMeetingModal";
+import PresentScreenModal from "../../../core-ui/PresentScreenModal/PresentScreenModal";
 import './Talent.css'
 
 const avatars = [
@@ -42,6 +46,9 @@ const avatars = [
 
 ]
 const ManageTalent = () => {
+    const [modalShow, setModalShow] = useState(false);
+    const [modalShow2, setModalShow2] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
 
     return (
         <section id="talent" className="my-3 py-3">
@@ -55,7 +62,7 @@ const ManageTalent = () => {
                             <Col xs={12} lg={6}>
                                 <Row>
                                     <Col xs={6} className='p-2 p-md-4'>
-                                        <Card className="card-blue p-5">
+                                        <Card style={{cursor: "pointer"}} onClick={() => setModalShow(true)} className="card-blue p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={vid} alt="vid" className='img-fluid img-bg' />
                                             </div>
@@ -64,7 +71,7 @@ const ManageTalent = () => {
                                         </Card>
                                     </Col>
                                     <Col xs={6} className='p-2 p-md-4'>
-                                        <Card className="card-green p-5">
+                                        <Card style={{cursor: "pointer"}} onClick={() => setModalShow2(true)} className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={add} alt="add" className='img-fluid img-bg' />
                                             </div>
@@ -81,7 +88,7 @@ const ManageTalent = () => {
                                             <p className='card-text'>plan your meetings</p>
                                         </Card>
                                     </Col>
-                                    <Col xs={6} className='p-2 p-md-4'>
+                                    <Col style={{cursor: "pointer"}} onClick={() => setModalShow3(true)} xs={6} className='p-2 p-md-4'>
                                         <Card className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={share} alt="share" className='img-fluid img-bg' />
@@ -144,6 +151,21 @@ const ManageTalent = () => {
                     </Col>
                 </Row>
             </Container>
+            <CreateEventModal
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                head="Create Event"
+                btntext='Create Event' />
+            <JoinMeetingModal
+                show={modalShow2}
+                onHide={() => setModalShow2(false)}
+                head="Join Meeting"
+                btntext='Join' />
+            <PresentScreenModal
+                show={modalShow3}
+                onHide={() => setModalShow3(false)}
+                head="Present"
+                btntext='Present' />
         </section>
     );
 }

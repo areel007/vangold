@@ -56,19 +56,22 @@ const TopJobsTwo = () => {
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
+                                            <p style={{marginLeft: 10}} className="text-16px-1 me-3">2,464 Followers</p>
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="text-lg-end">
                                         <div className="jobs-followers-text">
-                                            <p className="text-16px-1 me-3">2,464 Followers</p>
                                             <p className="text-16px-1 me-3">Posted 8 Days ago</p>
                                             <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="">
                                         <div className="follow-visit-site-btn">
-                                            <button>FOLLOW</button>
-                                            <button>VISIT WEBSITE</button>
+                                            <div className="follow__box">
+                                                <button className="follow__btn">FOLLOW</button>
+                                                <button className="following__btn">FOLLOWING</button>
+                                            </div>
+
                                         </div>
                                     </Col>
                                 </Row>

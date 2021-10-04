@@ -1,0 +1,18 @@
+.invite__people_modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.invite__people_modal-footer span {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--primary);
+}
+.invite__people_modal-footer svg {
+  margin-right: 13.39px;
+}

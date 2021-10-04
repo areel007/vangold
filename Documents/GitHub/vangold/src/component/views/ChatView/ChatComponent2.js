@@ -1,19 +1,50 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap"
+import SideMenu from "../../core-ui/SideMenu/SideMenu";
 import { Link } from "react-router-dom";
-import SideMenu from "../../core-ui/SideMenu/SideMenu"
-import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-import './ChatComponent.css';
+import MessageOne from "../../core-ui/Messages/Messages1";
+import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import useOnclickOutside from "react-cool-onclickoutside";
+import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
+import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
+import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
+import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
+import './ChatComponent.css';
+
 
 const chatUserData = {
     userAvatar: avatar
 }
 
+const userMembersAdmin = [
+    {
+        usersAvatar: participantsAvatar1,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+    {
+        usersAvatar: participantsAvatar3,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+    {
+        usersAvatar: participantsAvatar4,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+]
+
+const userMembers = [
+    {
+        usersAvatar: participantsAvatar2,
+        userName: 'Kali Jay',
+        messages: 'Hi our deadlines are...',
+    },
+]
+
 const otherUsersData = [
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
@@ -21,7 +52,6 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
@@ -29,7 +59,6 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
@@ -39,19 +68,27 @@ const otherUsersData = [
 ]
 const ChatComponentTwo = () => {
     const [isShow, setIsShow] = React.useState(false);
+    const [isShow2, setIsShow2] = React.useState(false);
 
     const openPopover = () => {
       setIsShow(!isShow);
     };
     
+    const openPopoverTwo = () => {
+      setIsShow2(!isShow2);
+    };
+    
     const closePopover = () => {
         setIsShow(false);
+    };
+    const closePopoverTwo = () => {
+        setIsShow2(false);
     };
 
     const ref = useOnclickOutside(() => {
         setIsShow(false);
+        setIsShow2(false);
       });
-  
     return (
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
@@ -68,6 +105,58 @@ const ChatComponentTwo = () => {
                             <div className="chat__box__contaniner-left">
                                 <div className="personal__avatar">
                                     <p className="chat__TEXT">Chat</p>
+                                    <svg onClick={openPopover} style={{cursor: "pointer"}} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
+                                    </svg>
+                                    {isShow &&
+                                        <div ref={ref} className="popoverBox mobile__popoverBox arrow-top">
+                                            <div className="popover__close-btns">
+                                                <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
+                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div className="popover__links">
+                                                <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
+                                                <li onClick={() => { closePopover(); openPopoverTwo();}}>View Team Members</li>
+                                                <li onClick={closePopover} to="#">Search</li>
+                                                <li onClick={closePopover} to="#">Report Contact</li>
+                                            </div>                                     
+                                        </div>
+                                    }
+                                    <div ref={ref} className={isShow2 ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
+                                        <div className="business-chat-box-members-header">
+                                            <span>Members</span>
+                                            <svg style={{cursor: "pointer"}} onClick={closePopoverTwo} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#4F4F4F"/>
+                                            </svg>
+                                        </div>
+                                        <div className="business-chat-box-members-popup">
+                                            {
+                                                userMembersAdmin.map((userMembeAdmin) => (
+                                                    <div className="chat__group__component_participants-data">
+                                                        <img className="chat__avatar" src={userMembeAdmin.usersAvatar} alt="chat Avatar" />
+                                                        <div className="userChatData">
+                                                            <p className="chat__users_name">{userMembeAdmin.userName}</p>
+                                                            <p className="chat__users_title">{userMembeAdmin.messages}</p>
+                                                        </div>
+                                                        <button className="choose-group-admin-button">Group Admin</button>
+                                                    </div>
+                                                ))
+                                            }
+                                            {
+                                                userMembers.map((userMember) => (
+                                                    <div className="chat__group__component_participants-data">
+                                                        <img className="chat__avatar" src={userMember.usersAvatar} alt="chat Avatar" />
+                                                        <div className="userChatData">
+                                                            <p className="chat__users_name">{userMember.userName}</p>
+                                                            <p className="chat__users_title">{userMember.messages}</p>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
                                     <div className="chat__search-box">
@@ -92,109 +181,7 @@ const ChatComponentTwo = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="message__box-component2">
-                                <div className="message__box-component2_header">
-                                    <div className="chatBox__profile">
-                                        <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
-                                        <p>VanGold Website Design</p>
-                                    </div>
-                                    <svg className="open_popover_btn" onClick={openPopover} style={{cursor: "pointer"}} width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.125 4.5C11.3676 4.5 12.375 3.49264 12.375 2.25C12.375 1.00736 11.3676 0 10.125 0C8.88236 0 7.875 1.00736 7.875 2.25C7.875 3.49264 8.88236 4.5 10.125 4.5Z" fill="black"/>
-                                        <path d="M18 4.5C19.2426 4.5 20.25 3.49264 20.25 2.25C20.25 1.00736 19.2426 0 18 0C16.7574 0 15.75 1.00736 15.75 2.25C15.75 3.49264 16.7574 4.5 18 4.5Z" fill="black"/>
-                                        <path d="M2.25 4.5C3.49264 4.5 4.5 3.49264 4.5 2.25C4.5 1.00736 3.49264 0 2.25 0C1.00736 0 0 1.00736 0 2.25C0 3.49264 1.00736 4.5 2.25 4.5Z" fill="black"/>
-                                    </svg>
-                                    {isShow &&
-                                        <div ref={ref} class="popoverBox arrow-top">
-                                            <div className="popover__close-btns">
-                                                <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
-                                                    <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
-                                                </svg>
-                                            </div>
-                                            <div className="popover__links">
-                                                <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
-                                                <li onClick={closePopover} to="#">View Team Members</li>
-                                                <li onClick={closePopover} to="#">Search</li>
-                                                <li onClick={closePopover} to="#">Report Contact</li>
-                                            </div>                                     
-                                        </div>
-                                    }
-                                </div>
-                                <div className="chat-messager-container">
-                                    <div className="send-message-box">
-                                        <div className="inn-send-message-box">
-                                            Okay, some other time, I guess. Lorem Ipsum jji jksn jikkkms jkola kopol; kppp
-                                        </div>
-                                    </div>
-                                    <div className="send-message-time-date">
-                                        Saturday 11:50 PM
-                                    </div>
-                                    <div className="middle-message-time-date">
-                                        June 20, 10:46 pm
-                                    </div>
-                                    <div className="reply-message-box">
-                                        <div className="replied-message-to">
-                                            Replied to Damola
-                                        </div>
-                                        <div className="inn-reply-message-box">
-                                            Hey, Devon. Can we get on a quick call?
-                                        </div>
-                                        <div className="inn-reply-message-box2">
-                                            <span className="replyName">Koyote Stark</span>
-                                            Hi, Damola. Sure, but now I’m busy rn.
-                                        </div>
-                                        <div className="reply-message-ime-date">
-                                            11:50 AM
-                                        </div>
-                                        <div style={{marginTop: 24}} className="inn-reply-message-box2">
-                                            <span style={{color: "#00237B"}} className="replyName">Femi</span>
-                                            Hi, Emmie. Sure, but now I’m busy rn.
-                                        </div>
-                                        <div className="reply-message-ime-date">
-                                            Saturday 11:50 PM
-                                        </div>
-                                    </div>
-                                    <div className="send-message-box">
-                                        <div className="inn-send-message-box inn-send-message-box2">
-                                            Okay, some other time, I guess.
-                                        </div>
-                                    </div>
-                                    <div className="send-message-time-date">
-                                        Saturday 11:50 PM
-                                    </div>
-                                    <div style={{marginTop: 24}} className="inn-reply-message-box2 inn-reply-message-box3">
-                                            <span style={{color: "#00237B"}} className="replyName">Tola</span>
-                                            Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
-                                        </div>
-                                        <div className="reply-message-ime-date">
-                                            Saturday 11:50 PM
-                                        </div>
-                                    </div>
-                                    <div className="bottom-chat-footer">
-                                        <div className="chat-input-box">
-                                            <input type="text" placeholder="Message..." />
-                                            <div className="chat-input-icons">
-                                                <div className="inn-chat-input-icons">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M13.5 9C14.3284 9 15 8.32843 15 7.5C15 6.67157 14.3284 6 13.5 6C12.6716 6 12 6.67157 12 7.5C12 8.32843 12.6716 9 13.5 9Z" fill="#333333"/>
-                                                        <path d="M6.5 9C7.32843 9 8 8.32843 8 7.5C8 6.67157 7.32843 6 6.5 6C5.67157 6 5 6.67157 5 7.5C5 8.32843 5.67157 9 6.5 9Z" fill="#333333"/>
-                                                        <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM10 18C5.58 18 2 14.42 2 10C2 5.58 5.58 2 10 2C14.42 2 18 5.58 18 10C18 14.42 14.42 18 10 18ZM10 15.5C12.33 15.5 14.32 14.05 15.12 12H13.45C12.76 13.19 11.48 14 10 14C8.52 14 7.25 13.19 6.55 12H4.88C5.68 14.05 7.67 15.5 10 15.5Z" fill="#333333"/>
-                                                    </svg>
-                                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4.28215 18.4242C2.13255 16.2746 2.13255 12.7957 4.28215 10.6461L11.7068 3.22145C13.2695 1.65874 15.8009 1.65874 17.3636 3.22145C18.9263 4.78415 18.9263 7.3156 17.3636 8.8783L11.3532 14.8887C10.3774 15.8645 8.79349 15.8645 7.81769 14.8887C6.84188 13.9129 6.84188 12.329 7.81769 11.3532L13.121 6.04988L14.5352 7.46409L9.16826 12.831C8.77935 13.2199 9.48646 13.927 9.87537 13.5381L15.9494 7.46409C16.7272 6.68627 16.7272 5.41348 15.9494 4.63566C15.1716 3.85784 13.8988 3.85784 13.121 4.63566L5.69637 12.0603C4.33165 13.425 4.33165 15.6453 5.69637 17.01C7.06108 18.3747 9.2814 18.3747 10.6461 17.01L17.3636 10.2925L18.7778 11.7067L12.0603 18.4242C9.91072 20.5738 6.43176 20.5738 4.28215 18.4242Z" fill="#333333"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="send__message-btn">
-                                            <svg className="send__message-btn-svg" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="48" height="48" rx="8" fill="#45B618"/>
-                                                <path d="M34 15L23 26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M34 15L27 35L23 26L14 22L34 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                            </div>
+                            <MessageOne />
                         </div>
                     </Col>
                 </Row>
