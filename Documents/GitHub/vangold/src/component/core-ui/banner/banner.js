@@ -4,14 +4,14 @@ import bannerImageTwo from "../../../assets/images/business-page/banner-img/Grou
 
 const Banner = () => {
   return (
-    <div className="banner">
+    <div className="banner businesspage__banner">
       <div className="container">
         <div className="banner__inner">
           <div className="banner__text">
-            <h1 className="banner__text__title">
-              Secure the talent you need to grow your business
+            <h1 className="banner__text__title banner__text__title-businessPage">
+              <span style={{color: "#45b618"}}>Secure the talent</span> you need to grow your business
             </h1>
-            <p className="banner__text__subtitle">
+            <p className="banner__text__subtitle business-page-banner__text__subtitle">
               Place your business on the path of success by with the help of
               freelance talent that you can rely on
             </p>

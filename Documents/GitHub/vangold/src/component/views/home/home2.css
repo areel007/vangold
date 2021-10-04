@@ -213,6 +213,7 @@
 .getNotifyInput {
   margin-top: 24px;
   width: 100%;
+  position: relative;
 }
 .getNotifyInput input {
   width: 100%;
@@ -249,4 +250,11 @@
   position: relative;
   top: -56px;
   left: -10px;
+}
+.getNotifyInput form .invalid-feedback{
+  position: absolute;
+  text-align: left;
+}
+.getNotifyInput form .form-control.is-invalid, .was-validated .form-control:invalid{
+  background-image: none !important;
 }

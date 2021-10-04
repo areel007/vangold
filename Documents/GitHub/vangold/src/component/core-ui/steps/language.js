@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./steps.css"
-import LanguageSelect from "../inputs/select/f-language-select"
 import { FiPlus } from 'react-icons/fi';
 import SelectDropdown from "../select-dropdown/select-dropdown";
+import SelectLanguageDropDown from "../select-dropdown/select-language-dropdown";
 // import {languages} from "../../core-ui/steps/languageData"
 import PureModal from 'react-pure-modal';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
@@ -121,10 +121,13 @@ const Language = (props) => {
                         <div className="form-input">
                             <label htmlFor="Proficiency">Proficiency</label>
                             <div className="languageSelectTwo">
-                                <SelectDropdown
-                                    dataToDisplay={languages}
-                                    selectDropdownHeader={selectDropdownHeader}
-                                />
+                            <SelectDropdown
+                                dataToDisplay={languages}
+                                toggleDropdown={toggleDropdown}
+                                showDropdown={showDropdown}
+                                selectDropdownHeader={selectDropdownHeader}
+                                upDateDropdownHeader={upDateDropdownHeader}
+                            />
                             </div>
                         </div>
                         <div className="edu-btns">

@@ -27,9 +27,14 @@
   .TopFreealancerContent {
     width: 100% !important;
   }
-  /*.side-nav-steppers,*/
+  .side-nav-steppers, .chat-call-right {
+    display: none;
+  }
   .search__container,
   .dashboard__name {
+    display: none !important;
+  }
+  #talent.manage_-_Talent {
     display: none !important;
   }
   .dashboard-avatar-name-notify {
@@ -62,27 +67,58 @@
     grid-template-columns: 1fr !important;
   }
 }
-@media screen and (max-width: 523px) {
-  .bannerTwo__text .banner__text__title {
-    font-size: 32px;
-  }
-}
+
 @media screen and (max-width: 950px) {
   .home-two .home-two-card-container {
     flex-direction: column;
     gap: 24px;
     margin-top: 24px;
   }
-  .container .inner__secure-payment-section {
+  .main-section__inner .looking-for-talent,
+  .collaborate .collaborate__inner {
     flex-direction: column-reverse;
-    gap: 32px;
+    padding: 0;
   }
-  .container .collaborate__inner2 {
+  .main-section__inner .looking-for-talent .looking-for-talent-text,
+  .collaborate .collaborate__inner .collaborate-text {
+    width: 100%;
+  }
+
+  .inn-what-you-stand-to-gain__lists {
+    width: 100% !important;
+  }
+  .unlimited__access {
+    width: 100% !important;
+    max-width: 335px !important;
+    margin: 0 auto !important;
+    height: 300px !important;
+  }
+  .unlimited__access .unlimited__access_span {
+    min-height: 165px !important;
+  }
+  .what-you-stand-to-gain__list-container .what-you-stand-to-gain__lists {
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .container .inner__secure-payment-section {
     flex-direction: column;
     gap: 32px;
   }
-  .bannerTwo__image {
+  .what-you-stand-to-gain__list-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .manage-your-team__inner .manage-your-team-text {
+    grid-template-columns: 1fr;
+  }
+  .bannerTwo__image,
+  .banner-image__container {
     display: none;
+  }
+  .page__title .homepage__header {
+    margin-top: 24.62px;
+    margin-bottom: 28px;
   }
   .banner__button .banner__text__button {
     width: 100%;
@@ -125,8 +161,18 @@
   .b-step-title,
   .step-title,
   .modalformHeader h2,
-  .chat__container-title {
+  .chat__container-title,
+  .catalogue .inn-catalogue h2,
+  .trusted__clients .inn-trusted__clients h2,
+  .get-access-title,
+  .inn-what-you-stand-to-gain__lists h2,
+  .looking-for-talent-text__title,
+  .collaborate-text__title,
+  .manage-your-team-title,
+  .inn__ourclients__testimonial .inn__ourclients__testimonial__header h2,
+  .become-a-business-banner p {
     font-size: var(--fs-24) !important;
+    line-height: 32px !important;
   }
   .mobileAuth_h1,
   .form__title h1,
@@ -150,9 +196,28 @@
     padding-top: 16px !important;
     padding-bottom: 5px !important;
   }
+  .date-time-duration,
+  .form__-control .date-time-duration .__TimePicker__box,
+  .date-time-duration .__DatePicker {
+    flex-direction: column !important;
+    width: 100%;
+  }
+  .time__to {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+  .form__-control .date-time-duration .__TimePicker__box .TimePicker2 {
+    position: relative;
+    top: 0 !important;
+  }
   .chat__container-subtitle,
   .message__box-container .msg-P,
-  .chat__box__contaniner-left .arrow-top-G-Chat span {
+  .chat__box__contaniner-left .arrow-top-G-Chat span,
+  .looking-for-talent-text__subtitle,
+  .collaborate-text__subtitle,
+  .manage-your-team-subtitle,
+  .inn__ourclients__testimonial .inn__ourclients__testimonial__header p {
     font-size: var(--fs-16) !important;
   }
   .inn-send-message-box,
@@ -177,8 +242,59 @@
     background: #fbfbfb;
     border-radius: 6px 6px 6px 0px;
   }
+  .dropDownIcon{
+    color: #333333 !important;
+  }
+  .manage-your-team-image img {
+    max-width: 335px !important;
+    height: 120.72px !important;
+  }
+  .business-chat-view {
+    /* display: none; */
+  }
+  .sideBarBusiness2{
+    display: none !important;
+  }
+  .BusinessChatImg-content{
+    margin-top: 63px;
+  }
+  .business-chat-container {
+    margin-top: 0 !important;
+    flex-direction: column;
+  }
+  .sideBarBusinessChat,
+  .mobile__business__channel-header,
+  .business__channel-header .business__channel-header-left {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .business__channel-header h2{
+    color: #333333 !important;
+  }
+  .business__chat-view__svg path, .business-chat__side-bar-content svg path{
+    fill: var(--primary) !important;
+  }
+  .business-chat__side-bar-content span{
+    color: #333333 !important;
+  }
+  .business-chat__side-bar-list:hover span{
+    color: #ffffff !important;
+  }
+  .business__chat__searchBox {
+    display: block !important;
+  }
+  .accordion-header {
+    font-size: var(--fs-14) !important;
+    line-height: 24px !important;
+  }
+  .accordion__Para {
+    font-size: 12.5px !important;
+  }
   .rate-form-P {
     font-size: var(--fs-12) !important;
+  }
+  .unlimited__access .unlimited__access_span span {
+    font-size: 48px !important;
   }
   .authResetPassword__P {
     text-align: center;
@@ -190,6 +306,11 @@
   .getNotifyBannerPara2 {
     line-height: 10px !important;
   }
+  .looking-for-talent-image img,
+  .collaborate-image img {
+    max-width: 335px !important;
+    height: 335px !important;
+  }
   .banner {
     background-color: #ffffff !important;
     min-height: 400px !important;
@@ -198,9 +319,12 @@
   .banner__inner .bannerTwo__text {
     margin-top: 34px;
   }
-  .bannerTwo__text .banner__text__title {
+  .banner__inner .banner__text__title {
     color: var(--primary);
     line-height: 48px;
+  }
+  .banner__inner .banner__text__title-businessPage {
+    color: #18191f;
   }
   .bannerTwo__text .banner__text__subtitle {
     color: #18191f;
@@ -237,6 +361,9 @@
   .addStories_-img__svg {
     width: 80px;
   }
+  .catalogue .container.inn-catalogue .catalogue-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .stories__container .stories-show-box .avatar__stories {
     width: 44px !important;
     height: 44px !important;
@@ -252,8 +379,11 @@
   .select-dropdown-item p,
   .add_edu-btn,
   .banner__text__button,
-  .chatBox__profile p {
+  .chatBox__profile p,
+  .inn-what-you-stand-to-gain__lists p,
+  .unlimited__access .unlimited__access-top p {
     font-size: var(--fs-14) !important;
+    line-height: 24px !important;
   }
   .chatBox__profile p {
     position: relative;
@@ -276,10 +406,14 @@
   .card-image img {
     height: 168px;
   }
+  footer {
+    background-image: url(./assets//images/footer.PNG);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
   .footer__inner {
     flex-direction: column;
     gap: var(--fs-30);
-    /* align-items: center; */
   }
 
   .footer__inner .footer__links {
@@ -321,7 +455,10 @@
   .TopFreealancerContent__BOX_images {
     display: none !important;
   }
-  .MobileView-TopFreealancerContent__BOX-details_TOP {
+  .MobileView-TopFreealancerContent__BOX-details_TOP,
+  .mobile__call,
+  .chat__box__contaniner-left .personal__avatar svg,
+  .chat__box__contaniner-left .grp__chat__view-left-top svg {
     display: block !important;
   }
   .MobileView-TopFreealancerContent {
@@ -374,7 +511,8 @@
     gap: 21px !important;
   }
   .message__box-component2,
-  .message__box-container {
+  .message__box-container,
+  .Call_-_box-container {
     display: none !important;
   }
   .chat__box__contaniner-left,
@@ -454,8 +592,13 @@
   .verify-logo h2 {
     font-size: var(--fs-18) !important;
   }
+  .recentview__text {
+    font-size: var(--fs-18) !important;
+    line-height: 21px !important;
+  }
   .Top__Freelancer_info h3,
-  .job-_-_name {
+  .job-_-_name,
+  .banner__text__subtitle {
     font-size: var(--fs-16) !important;
   }
   .stars {
@@ -464,6 +607,7 @@
   .verify-logo {
     gap: 11px !important;
   }
+
   .verify-svg-logo {
     width: 14.67px;
     height: 14px;
@@ -508,11 +652,10 @@
     max-width: 83px !important;
     height: 42px !important;
   }
-  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(3) {
-    max-width: 129px !important;
-    height: 42px !important;
-  }
 
+  .mobile__call .inner__mobile--call .inner__mobile--call-top {
+    min-height: 200px !important;
+  }
   .TopJobsContent__BOX-BOTTOM_button button:nth-child(1) {
     width: 84px !important;
     height: 33px !important;
@@ -532,6 +675,15 @@
   .edu-btns .button1,
   .edu-btns .button2 {
     width: 100% !important;
+  }
+  .catalogue .container.inn-catalogue .catalogue-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .catalogue .inn-catalogue .catalogue-list div span {
+    font-size: var(--fs-13) !important;
+  }
+  .banner__inner .banner__text__title {
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 850px) {

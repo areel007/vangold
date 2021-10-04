@@ -16,16 +16,16 @@ const BusinessChatViewTwo = (props) => {
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
-                        <div className="business__channel-header business__channel-header-2">
-                            <div className="business__channel-header-left business__channel-header-left-2">
-                                <h2>Channel</h2>
-                            </div>
-                        </div>
                         <div className="business-chat-container">
-                            <div className="sideBarBusinessChat d-none d-lg-block">
+                            <div className="sideBarBusiness2">
+                                <div className="business__channel-header mobile__business__channel-header">
+                                    <div className="business__channel-header-left">
+                                        <h2>Channel</h2>
+                                    </div>
+                                </div>
                                 <BusinessSideBarDropDown />
                             </div>
-                            <div className="business-chat-view">
+                            <div className="business-chat-view2">
                                 <div className="inn-business-chat-view">
                                     <div className="business-chat-box-content">
                                         <div className="inn-business-chat-box-content BusinessChatImg-content">

@@ -230,81 +230,97 @@ const GroupChatComponentThree = () => {
                                     }  
                                 </div>
                                 <div className="chat-messager-container">
-                                    <div className="send__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="send__message__box desktop__send__message__box">
-                                                <span style={{color: "#FC7300", fontWeight: "bold"}}>Klaus</span>
-                                                <span>Lorem ipsum vel, penatibus</span>
+                                    <div className="sendChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__sendChatMsg">
+                                                <span className="send__chatUser__name__">Klaus</span>
+                                                <span>
+                                                    Hey, Devon. Can we get on a quick
+                                                    call?
+                                                </span>
                                             </div>
-                                            <div className="send__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="sendChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Damon</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Damon</span>
+                                                <span>
+                                                    Hi, Emmie. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="middle-message-time-date">
+                                   </div>
+                                   <div className="middle-_-time-date">
                                         <span>June 20, 10:46 pm</span>
                                     </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__time">
-                                                <span>Replied to Damola</span>
-                                            </div>
-                                            <div className="reply__to-message__box">
-                                                <span>Hey, Devon. Can we get on a quick call?</span>
-                                            </div>
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#009BBC", fontWeight: "bold"}}>Koyote Stark</span>
-                                                <span>Hi, Damola. Sure, but now I’m busy rn.</span>
-                                            </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                    <div className="replyChatMsg">
+                                        <span className="replied__to__text">Replied to Damola</span>
+                                        <div className="replied__to">
+                                            Hey, Devon. Can we get on a quick call?
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Femi</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Koyote Stark</span>
+                                                <span>
+                                                    Hi, Damola. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="send__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="send__message__box desktop__send__message__box">
-                                                <span style={{color: "#FC7300", fontWeight: "bold"}}>Kareem</span>
-                                                <span>Okay, some other time, I guess.</span>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                        <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Femi</span>
+                                                <span>
+                                                    Hi, Emmie. Sure, but now
+                                                    I’m busy rn.
+                                                </span>
                                             </div>
-                                            <div className="send__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
-                                    <div className="reply__message__container">
-                                        <div className="inn-send__message__container">
-                                            <div className="reply__message__box desktop__reply__message__box">
-                                                <span style={{color: "#00237B", fontWeight: "bold"}}>Femi</span>
-                                                <span>Hi, Emmie. Sure, but now I’m busy rn.</span>
+                                   </div>
+                                   <div className="sendChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__sendChatMsg">
+                                                <span className="send__chatUser__name__">Kareem</span>
+                                                <span>
+                                                    Okay, some other time, I guess.
+                                                </span>
                                             </div>
-                                            <div className="reply__message__time">
-                                                <span>Saturday 11:50 PM</span>
-                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="sendChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
                                         </div>
-                                    </div>
+                                   </div>
+                                   <div className="replyChatMsg">
+                                       <ContextMenuTrigger id="some_unique_identifier">
+                                            <div className="inn__replyChatMsg">
+                                                <span className="reply__chatUser__name__">Tola</span>
+                                                <span>
+                                                    Hey y’all, Burna new event is 
+                                                    coming up. Check out this new 
+                                                    link to register.
+                                                </span>
+                                            </div>
+                                       </ContextMenuTrigger>
+                                       <div className="replyChatMsg__time">
+                                            <span>Saturday 11:50 PM</span>
+                                        </div>
+                                   </div>
                                 </div>
                                 
                                 <div className="bottom-chat-footer">
