@@ -2,6 +2,8 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import apple from "../../../../assets/images/profile/apple.png";
+import filter from "../../../../assets/images/profile/filter.png";
+import cross from "../../../../assets/images/profile/cross1.png";
 import ReactPaginate from "react-paginate";
 import "./Jobs.css";
 import { useState } from "react";
@@ -41,7 +43,8 @@ const jobsLists = [
         img: apple,
     },
 ];
-const ProfileAllJobs = () => {
+const ProfileAllJobs = ({ showSideMenu }) => {
+    const [showCheck, setShowCheck] = useState(false)
     const [jobs, setJobs] = useState(jobsLists.slice(0, 30));
     const [pageNumber, setPageNumber] = useState(0);
     const jobsPerPage = 4;
@@ -53,16 +56,32 @@ const ProfileAllJobs = () => {
     };
 
     return (
-        <section id="profile-alljobs" className="my-5 py-3">
+        <section id="profile-alljobs" className="my-lg-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
-                        <SideCheckBoxes />
+                    <Col xs={12} lg={2} className={`mx-auto bg-color-w py-5 ${!showCheck && "d-none d-lg-block"}`}>
+                        {showCheck && (
+                            <>
+                                <div className="d-flex justify-content-between px-4">
+                                    <h1 className="side-filter">Filter</h1>
+                                    <div>
+                                        <img src={cross} alt="cross" onClick={() => setShowCheck(false)} />
+                                    </div>
+                                </div>
+                                <hr />
+                            </>
+                        )}
+                        <SideCheckBoxes showCheck={showCheck} />
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                        <div className="mb-5 text-end d-lg-none">
+                            {!showCheck && (
+                                <img src={filter} alt="filter button" className='img-fluid' onClick={() => setShowCheck(true)} />
+                            )}
+                        </div>
                         <Row>
                             {jobs
                                 .slice(pagesVisited, pagesVisited + jobsPerPage)

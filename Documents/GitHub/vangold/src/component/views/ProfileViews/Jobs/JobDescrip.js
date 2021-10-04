@@ -7,6 +7,8 @@ import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
+import filter from "../../../../assets/images/profile/filter.png";
+import cross from "../../../../assets/images/profile/cross1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
 import "./Jobs.css";
 
@@ -22,11 +24,12 @@ const jobs =
     offerSalary: "$2150/Month",
 }
 
-const JobDescrip = () => {
+const JobDescrip = ({ showSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
     const [show, setShow] = useState(false);
+    const [showCheck, setShowCheck] = useState(false)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -35,16 +38,32 @@ const JobDescrip = () => {
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
-                        <SideCheckBoxes />
+                    <Col xs={12} lg={2} className={`mx-auto bg-color-w py-5 ${!showCheck && "d-none d-lg-block"}`}>
+                        {showCheck && (
+                            <>
+                                <div className="d-flex justify-content-between px-4">
+                                    <h1 className="side-filter">Filter</h1>
+                                    <div>
+                                        <img src={cross} alt="cross" onClick={() => setShowCheck(false)} />
+                                    </div>
+                                </div>
+                                <hr />
+                            </>
+                        )}
+                        <SideCheckBoxes showCheck={showCheck} />
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                        <div className="mb-5 text-end d-lg-none">
+                            {!showCheck && (
+                                <img src={filter} alt="filter button" className='img-fluid' onClick={() => setShowCheck(true)} />
+                            )}
+                        </div>
                         <div className="bg-color1">
                             <div>
-                                <img src={cover} alt="cover" className='img-fluid' />
+                                <img src={cover} alt="cover" className='img-fluid' style={{ width: "100vw" }} />
                             </div>
                             <div>
                                 <img src={micro} alt="logo" className="job-logo" />

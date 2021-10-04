@@ -8,7 +8,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { BsThreeDots } from "react-icons/bs";
 import "./FreelancerProfileEdit.css";
 
-const FreelancerProfileEdit = () => {
+const FreelancerProfileEdit = ({ showSideMenu }) => {
     const [image, setImage] = useState(false);
     const [data, setData] = useState({
         firstName: '',
@@ -47,7 +47,7 @@ const FreelancerProfileEdit = () => {
         <section id="freelancer-profile-edit" className="pb-5 my-4">
             <Container fluid>
                 <Row>
-                    <Col xs={12} lg={2} className="mx-auto mt-4 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w">

@@ -2,6 +2,10 @@
   background: #45b61833;
   padding: 2rem 1rem;
 }
+.sidecheck-bg-2 {
+  background: #d9dad780;
+  padding: 2rem 1rem;
+}
 .sidecheck-head {
   font-size: 16px;
   font-weight: var(--font-wieght-bold);
@@ -26,4 +30,23 @@
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
   font-size: 12px;
+  align-self: center;
+}
+.btn-apply-filter {
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--mulish);
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background: #45b618;
+  border-radius: 4px;
+  width: 335px;
+  height: 42px;
+  border: transparent;
+  margin-top: 2rem;
+}
+@media (max-width: 990px) {
+  .sidecheck-numb {
+    margin-left: 13rem;
+  }
 }

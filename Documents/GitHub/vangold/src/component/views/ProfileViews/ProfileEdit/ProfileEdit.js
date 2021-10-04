@@ -4,7 +4,7 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import './ProfileEdit.css'
 
-const ProfileEdit = () => {
+const ProfileEdit = ({ showSideMenu }) => {
     const [data, setData] = useState({
         firstName: '',
         lastName: '',
@@ -28,7 +28,7 @@ const ProfileEdit = () => {
 
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mt-5 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="p-5 bg-color-w">
