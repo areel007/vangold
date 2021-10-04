@@ -98,8 +98,8 @@ const Stories = () => {
                 <div className="stories-list">
                     {
                         userStoriesData.map((_user, index) => {
-                            return <div className="story">
-                                <div key={index} className="story__inner">
+                            return <div key={index}  className="story">
+                                <div className="story__inner">
                                     <div className="avatar">
                                         <img src={_user.avatar} alt=""/>
                                     </div>
