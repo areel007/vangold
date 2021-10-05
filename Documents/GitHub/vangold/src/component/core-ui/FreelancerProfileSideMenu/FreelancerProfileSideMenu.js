@@ -35,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#45B618',
         borderLeft: '6px solid #45B618',
     },
-    lists: {
-        height: "100vh"
-    },
     signout: {
         position: "absolute",
         bottom: 0
@@ -54,7 +51,7 @@ const FreelancerProfileSideMenu = () => {
 
     return (
         <div className={classes.root}>
-            <List component="nav" className={classes.lists}>
+            <List component="nav" className="menu-list-height">
                 <ListItem
                     button
                     classes={{ root: classes.root, button: classes.button, }}

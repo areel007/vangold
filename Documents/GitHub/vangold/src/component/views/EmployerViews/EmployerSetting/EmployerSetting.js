@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     button: {},
 }));
 
-const EmployerSetting = () => {
+const EmployerSetting = ({ showSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [component, setComponent] = useState('payment');
@@ -49,7 +49,7 @@ const EmployerSetting = () => {
         <section id="employer-setting" className='py-3 my-5'>
             <Container fluid>
                 <Row>
-                    <Col lg={2} className='mx-auto d-none d-lg-block'>
+                    <Col xs={12} lg={2} className={`mx-auto ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>
