@@ -22,6 +22,22 @@
   line-height: 60px;
   color: #4f4f4f;
 }
+#freelancer-profile .followers {
+  font-family: var(--raleway);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+.followers-mod-head {
+  font-family: var(--mulish);
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+}
+
 #freelancer-profile .freelance-btn {
   background: #f8f8f8;
   color: #333333;
@@ -32,6 +48,30 @@
   font-size: 16px;
   line-height: 19px;
   padding: 1.5rem 3rem;
+}
+#freelancer-profile .follow-btn {
+  background: #45b618;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+  border: transparent;
+  width: 116px;
+  height: 53px;
+}
+#freelancer-profile .web-btn {
+  border: 1px solid #45b618;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+  width: 156px;
+  height: 53px;
 }
 #freelancer-profile .freelancer-rating {
   font-weight: 600;
@@ -81,6 +121,7 @@
 #freelancer-profile .text-18px {
   font-size: 18px;
 }
+
 @media (max-width: 700px) {
   #freelancer-profile .box-upload {
     height: 100px;
@@ -92,7 +133,20 @@
     width: 100px;
   }
   #freelancer-profile .freelance-btn {
-    font-size: 14px;
+    font-size: 12px;
+    width: 164px;
+    height: 48px;
+    padding: 0rem 0rem;
+  }
+  #freelancer-profile .follow-btn {
+    font-size: 12px;
+    width: 164px;
+    height: 48px;
+  }
+  #freelancer-profile .web-btn {
+    font-size: 12px;
+    width: 164px;
+    height: 48px;
   }
   #freelancer-profile label {
     position: absolute;

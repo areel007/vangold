@@ -14,7 +14,7 @@ import engineering from "../../../assets/images/sideMenu/engineering.png";
 import chat from "../../../assets/images/sideMenu/chat.png";
 import person from "../../../assets/images/sideMenu/person.png";
 import signout from "../../../assets/images/sideMenu/signout.png";
-import { useHistory, useLocation } from "react-router-dom"; 
+import { useHistory, useLocation } from "react-router-dom";  
 import LogoutModal from "../LogoutModal/LogoutModal";
 
 const useStyles = makeStyles((theme) => ({

@@ -111,6 +111,61 @@
   font-weight: var(--font-weight-medium);
   color: #4f4f4f;
 }
+#job-descrip .follow-btn {
+  background: #45b618;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+  border: transparent;
+  width: 116px;
+  height: 48px;
+}
+#job-descrip .web-btn {
+  border: 1px solid #45b618;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+  width: 156px;
+  height: 48px;
+}
+.cancel-mod-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #45b618;
+  border: 1px solid #45b618;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-family: var(--raleway);
+  width: 96px;
+  height: 38px;
+}
+.unfollow-mod-btn {
+  background: #45b618;
+  border-radius: 6px;
+  font-family: var(--raleway);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  width: 96px;
+  height: 38px;
+  border: transparent;
+}
+.unfollow-mod-head {
+  font-size: 24px;
+  line-height: 28px;
+  color: #141414;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
 #my-job .my-job-card {
   border: transparent;
   padding: 2rem;
@@ -271,7 +326,7 @@
     font-size: 1rem;
     color: #4f4f4f;
   }
- 
+
   #job-descrip .text-16px-1 {
     font-size: 14px;
   }
@@ -286,6 +341,16 @@
     font-size: 12px;
     margin-right: 0.5rem;
     padding: 0.7rem 1rem;
+  }
+  #job-descrip .follow-btn {
+    font-size: 12px;
+    width: 90px;
+    height: 40px;
+  }
+  #job-descrip .web-btn {
+    font-size: 12px;
+    width: 115px;
+    height: 40px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1110px) {

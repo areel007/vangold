@@ -1,0 +1,607 @@
+.MessageBox__ {
+  max-width: 699px;
+  margin: 0 auto;
+  min-height: 778px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.MessageBox__ .MessageBox__header {
+  height: 70px;
+  background: rgba(69, 182, 24, 0.2);
+  border-radius: 0px 10px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px 15px 35px;
+  position: relative;
+}
+.MessageBox__ .MessageBox__header svg {
+  cursor: pointer;
+}
+.MessageBox__ .MessageBox__header .MessageBox__header__icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.MessageBox__ .MessageBox__header .ChatBox__popoverBox {
+  width: 340px;
+  /* min-height: 262px; */
+  background: #ffffff;
+  box-shadow: 0px 4px 12px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  padding-bottom: 25px;
+  z-index: 1;
+}
+.MessageBox__ .MessageBox__header .ChatBox__popoverBox.ChatBox__arrow-top {
+  margin-top: 40px;
+}
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox.ChatBox__arrow-top:after {
+  content: " ";
+  position: absolute;
+  right: 30px;
+  top: -25px;
+  border-top: none;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 30px solid #ffffff;
+}
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox
+  .ChatBox__popover__close-btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 18px;
+  margin-right: 18px;
+  margin-bottom: 9.12px;
+}
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox
+  .ChatBox__popover__links
+  li,
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox
+  .ChatBox__popover__links
+  a {
+  height: 43px;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  padding-left: 34px;
+  cursor: pointer;
+}
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox
+  .ChatBox__popover__links
+  li:hover,
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox
+  .ChatBox__popover__links
+  a:hover {
+  background: #f7f6f6;
+}
+.MessageBox__ .MessageBox__header .MessageBox__profile__data {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.MessageBox__ .MessageBox__header .MessageBox__profile__data span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.MessageBox__ .ChatBox__ {
+  margin-top: 34px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.MessageBox__ .ChatBox2__ {
+  margin-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg .ChatBox__sendMsg__time span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 10px;
+  opacity: 0.3;
+  color: #333333;
+}
+.MessageBox__ .ChatBox__ .Inn__ChatBox__sendMsg {
+  max-width: 349px;
+  min-height: 43px;
+  background: #45b618;
+  border-radius: 6px 6px 0px 6px;
+  display: flex;
+  padding: 16px;
+}
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg .Inn__ChatBox__sendMsg {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+  color: #ffffff;
+}
+.MessageBox__ .ChatBox__ .center__time {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-14);
+  line-height: 18px;
+  text-align: center;
+  color: #888888;
+  margin-bottom: 24px;
+}
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.MessageBox__
+  .ChatBox__
+  .ChatBox__replyMsg
+  .Top__ChatBox__replyMsg
+  .Inn__Top__ChatBox__replyMsg {
+  margin-top: 9px;
+}
+
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg,
+.ChatBox__replyMsg .Top__ChatBox__replyMsg {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 11px;
+  color: #666666;
+}
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg .ChatBox__replyMsg__time,
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg .ChatBox__sendMsg__time,
+.ChatBox__replyMsg .Top__ChatBox__replyMsg span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 10px;
+  opacity: 0.3;
+  color: #333333;
+}
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg .ChatBox__sendMsg__time,
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg .ChatBox__replyMsg__time {
+  margin-top: 6px;
+  margin-bottom: 15px;
+}
+.MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg {
+  max-width: 190px;
+  /* min-height: 65px; */
+  background: #f2f2f2;
+  border-radius: 6px 6px 6px 0px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg-2 {
+  max-width: 245px;
+}
+.MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg .Inn__ChatBox__replyMsg__name {
+  font-family: var(--mulish);
+  font-weight: bold;
+  color: #009bbc;
+}
+.ChatBox__replyMsg .Top__ChatBox__replyMsg .Inn__Top__ChatBox__replyMsg {
+  max-width: 176px;
+  min-height: 38px;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 6px 6px 0px 6px;
+  padding: 8px 16px 8px 16px;
+}
+.ChatBox__ .ChatBox__Footer {
+  width: 100%;
+  min-height: 77px;
+  background: #f2f7ff;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 12px 15px 76px;
+}
+.ChatBox__ .ChatBox__Footer.ChatChatMsgBox__Footer {
+  padding: 15px 12px 15px 12px;
+}
+.ChatBox__ .ChatBox__Footer svg {
+  cursor: pointer;
+}
+.ChatBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input {
+  width: 100%;
+  min-height: 48px;
+  background: #e2e6ed;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+.ChatBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input svg {
+  margin-right: 16.39px;
+}
+.ChatBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input .ChatBox__Footer-input {
+  width: 100%;
+  padding-right: 10px;
+}
+.ChatBox__
+  .ChatBox__Footer
+  .Inn__ChatBox__Footer-input
+  .ChatBox__Footer-input
+  input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* ChatBoxTwo Style*/
+.ChatBox__ .ChatBox__sendMsg .Inn__ChatBox__sendMsg-2 {
+  gap: 10px;
+  background: #efefef;
+  flex-direction: column;
+  max-width: 176px;
+  min-height: 66px;
+}
+.ChatBox__ .ChatBox__sendMsg .Inn__ChatBox__sendMsg.Inn__ChatBox__sendMsg-2 {
+  color: #666666;
+}
+.ChatBox__
+  .ChatBox__sendMsg
+  .Inn__ChatBox__sendMsg.Inn__ChatBox__sendMsg-2
+  span {
+  color: #fc7300;
+  font-weight: bold;
+}
+.ChatBox__ .ChatBox__replyMsg .Inn__ChatBox__replyMsg-2 {
+  max-width: 144px;
+  min-height: 55px;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
+
+/*Biz ChatBoxFour*/
+.MessageBox__.Biz__MessageBox__ {
+  max-width: 909px;
+  min-height: 1062px;
+  position: relative;
+  left: -15px;
+}
+.MessageBox__.Biz__MessageBox__ .Biz__MessageBox__header {
+  width: 100%;
+  height: 62px;
+  border-radius: 0px;
+  background-color: var(--primary);
+}
+.MessageBox__.Biz__MessageBox__
+  .Biz__MessageBox__header
+  .MessageBox__profile__data {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.MessageBox__.Biz__MessageBox__
+  .Biz__MessageBox__header
+  .MessageBox__profile__data
+  span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-extrabold);
+  font-size: var(--fs-18);
+  line-height: 23px;
+  color: #ffffff;
+}
+.MessageBox__.Biz__MessageBox__
+  .Biz__MessageBox__header
+  .MessageBox__profile__data
+  span:nth-child(2) {
+  font-weight: normal;
+  font-size: var(--fs-12);
+  line-height: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.MessageBox__.Biz__MessageBox__ .ChatBox__ .ChatBox__MsgSendContainer {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+.MessageBox__.Biz__MessageBox__ .ChatBox__ .ChatBox__MsgSendContainer img,
+.MessageBox__.Biz__MessageBox__ .ChatBox__ .ChatBox__MsgReplyContainer img {
+  width: 24px;
+  height: 24px;
+}
+
+.MessageBox__.Biz__MessageBox__ .ChatBox__ .ChatBox__MsgReplyContainer {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+}
+.MessageBox__
+  .MessageBox__header
+  .ChatBox__popoverBox.Biz__ChatBox__arrow-top:after {
+  right: 23px;
+}
+
+/*Chat Box Members DropDown*/
+.ChatBoxMembers {
+  width: 272px;
+  margin: 0 auto;
+  min-height: 650px;
+  background: #ebecea;
+  border-radius: 0px 10px 0px 0px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+.ChatBoxMembers .inn__ChatBoxMembers__header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 17px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.ChatBoxMembers .inn__ChatBoxMembers__header svg {
+  cursor: pointer;
+}
+.ChatBoxMembers .inn__ChatBoxMembers__header input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.ChatBoxMembers .inn__ChatBoxMembers__header input::placeholder {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-16);
+  line-height: 100%;
+  color: var(--secondary);
+}
+.ChatBoxMembers .ChatBoxMembers__display_container {
+  padding: 30px 0px 20px 0px;
+}
+.ChatBoxMembers .ChatBoxMembers__display_box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 17px 3px 10px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+.ChatBoxMembers .ChatBoxMembers__display_box:hover {
+  background-color: #e2e6ed;
+}
+.ChatBoxMembers .ChatBoxMembers__display_box .ChatBoxMembers__display_l {
+  display: flex;
+  gap: 6px;
+}
+
+.ChatBoxMembers .ChatBoxMembers__display_box .ChatBoxMembers__display_l img {
+  width: 40px;
+  height: 40px;
+}
+.ChatBoxMembers
+  .ChatBoxMembers__display_box
+  .ChatBoxMembers__display_l
+  .ChatBoxMembers__display_l_name_msg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.ChatBoxMembers
+  .ChatBoxMembers__display_box
+  .ChatBoxMembers__display_l
+  .ChatBoxMembers__display_l_name_msg
+  span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-14);
+  line-height: 18px;
+  color: var(--secondary);
+}
+.ChatBoxMembers
+  .ChatBoxMembers__display_box
+  .ChatBoxMembers__display_l
+  .ChatBoxMembers__display_l_name_msg
+  span:nth-child(2) {
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-12);
+  line-height: 15px;
+  color: #666666;
+}
+.ChatBoxMembers__display_box .ChatBoxMembers__display_r button {
+  height: 19px;
+  width: 69px;
+  border-radius: 3px;
+  background: #e9e9e9;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-weight-medium);
+  font-size: 10px;
+  line-height: 20px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Group Participants */
+.ChatBoxMembers .top__inn__ChatBoxMembers__header {
+  min-height: 70px;
+  background: #daf0d1;
+  border-radius: 0px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.ChatBoxMembers .top__inn__ChatBoxMembers__header span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-bold);
+  font-size: var(--fs-18);
+  line-height: 100%;
+  text-align: center;
+  color: var(--secondary);
+}
+.ChatBoxMembers .top__inn__ChatBoxMembers__header svg {
+  cursor: pointer;
+}
+.ChatBoxMembers .top__inn__ChatBoxMembers__header .arrow__left {
+  display: none;
+}
+.GroupParticipants {
+  top: 0;
+}
+/* Mobile Message Box */
+.MessageBox__ .Mobile__MessageBox__header {
+  background-color: var(--primary);
+  border-radius: 10px 10px 0px 0px;
+}
+.MessageBox__ .Mobile__MessageBox__header .MessageBox__profile__data span {
+  color: var(--white);
+}
+.MessageBox__ .MessageBox__header .MessageBox__profile__data__svg svg {
+  margin-left: 18px;
+}
+.MessageBox__ .Mobile__MessageBox__header .MessageBox__profile__data__svg svg {
+  margin-left: 18px;
+}
+.MessageBox__
+  .Mobile__MessageBox__header
+  .MessageBox__profile__data__svg
+  svg
+  path {
+  fill: var(--white);
+}
+.MessageBox__ .ChatBox__ .ChatBox__sendMsg .Mobile__Inn__ChatBox__sendMsg {
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg .Mobile__Inn__ChatBox__replyMsg {
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.MessageBox__ .ChatBox__ .ChatBox__replyMsg .call__chatBox {
+  max-width: 100%;
+  min-height: 31px;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  background: #fbfbfb;
+  border-radius: 6px 6px 6px 0px;
+  padding: 8px 23px 8px 13px;
+  gap: 8px;
+}
+.Biz__MessageBox__ .Mobile__Biz__MessageBox__header {
+  background-color: var(--primary);
+}
+.Biz__MessageBox__
+  .Mobile__Biz__MessageBox__header
+  .MessageBox__profile__data
+  span {
+  color: var(--white);
+}
+
+/* ManageTalent__ChatBox__ */
+.MessageBox__ .ChatBox__ .ChatBox__Footer.ManageTalent__ChatBox__Footer {
+  padding: 0px;
+  background-color: #fbfbfb;
+}
+.MessageBox__ .ManageTalent__ChatBox__ {
+  padding: 0px;
+  margin: 0;
+}
+
+/* Biz Chat Screen Footer Input */
+
+.Biz__MessageBox__ .Biz__ChatBox__{
+  min-height: 888px;
+}
+.Biz__MessageBox__ .ChatBox__Footer {
+  width: 100%;
+  min-height: 77px;
+  background: #f2f7ff;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 12px 15px 76px;
+}
+.Biz__MessageBox__ .ChatBox__Footer.ChatChatMsgBox__Footer {
+  padding: 15px 12px 15px 12px;
+}
+.Biz__MessageBox__ .ChatBox__Footer svg {
+  cursor: pointer;
+}
+.Biz__MessageBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input {
+  width: 100%;
+  min-height: 48px;
+  background: #e2e6ed;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+}
+.Biz__MessageBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input svg {
+  margin-right: 16.39px;
+}
+.Biz__MessageBox__ .ChatBox__Footer .Inn__ChatBox__Footer-input .ChatBox__Footer-input {
+  width: 100%;
+  padding-right: 10px;
+}
+.Biz__MessageBox__
+  .ChatBox__Footer
+  .Inn__ChatBox__Footer-input
+  .ChatBox__Footer-input
+  input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.ChatBox__replyMsg .Inn__ChatBox__replyMsg.Biz__Inn__ChatBox__replyMsg{
+  max-width: 444px;
+}

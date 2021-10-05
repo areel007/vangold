@@ -3,13 +3,16 @@ import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../core-ui/SideMenu/SideMenu";
 import { Link } from "react-router-dom";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-import MessageOne from "../../core-ui/Messages/Messages1";
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
 import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
 import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
 import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
+import ChatBoxOne from "../../core-ui/AllMessagesBox/ChatBoxOne";
+import ChatBoxMembers from "../../core-ui/AllMessagesBox/ChatBoxMembers";
+
+
 import './ChatComponent.css';
 
 
@@ -66,28 +69,28 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
-const ChatComponentTwo = () => {
+const ChatViewFour = () => {
     const [isShow, setIsShow] = React.useState(false);
-    const [isShow2, setIsShow2] = React.useState(false);
+    const [memberShow, setMemberShow] = React.useState(false);
 
     const openPopover = () => {
       setIsShow(!isShow);
     };
-    
-    const openPopoverTwo = () => {
-      setIsShow2(!isShow2);
-    };
-    
+
     const closePopover = () => {
         setIsShow(false);
     };
-    const closePopoverTwo = () => {
-        setIsShow2(false);
+
+    const openMemberShow = () => {
+        setMemberShow(!memberShow);
+    };
+    const closeMemberShow = () => {
+        setMemberShow(false);
     };
 
     const ref = useOnclickOutside(() => {
         setIsShow(false);
-        setIsShow2(false);
+        setMemberShow(false);
       });
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -118,44 +121,14 @@ const ChatComponentTwo = () => {
                                             </div>
                                             <div className="popover__links">
                                                 <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
-                                                <li onClick={() => { closePopover(); openPopoverTwo();}}>View Team Members</li>
+                                                <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
                                                 <li onClick={closePopover} to="#">Search</li>
                                                 <li onClick={closePopover} to="#">Report Contact</li>
                                             </div>                                     
                                         </div>
                                     }
-                                    <div ref={ref} className={isShow2 ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
-                                        <div className="business-chat-box-members-header">
-                                            <span>Members</span>
-                                            <svg style={{cursor: "pointer"}} onClick={closePopoverTwo} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#4F4F4F"/>
-                                            </svg>
-                                        </div>
-                                        <div className="business-chat-box-members-popup">
-                                            {
-                                                userMembersAdmin.map((userMembeAdmin) => (
-                                                    <div className="chat__group__component_participants-data">
-                                                        <img className="chat__avatar" src={userMembeAdmin.usersAvatar} alt="chat Avatar" />
-                                                        <div className="userChatData">
-                                                            <p className="chat__users_name">{userMembeAdmin.userName}</p>
-                                                            <p className="chat__users_title">{userMembeAdmin.messages}</p>
-                                                        </div>
-                                                        <button className="choose-group-admin-button">Group Admin</button>
-                                                    </div>
-                                                ))
-                                            }
-                                            {
-                                                userMembers.map((userMember) => (
-                                                    <div className="chat__group__component_participants-data">
-                                                        <img className="chat__avatar" src={userMember.usersAvatar} alt="chat Avatar" />
-                                                        <div className="userChatData">
-                                                            <p className="chat__users_name">{userMember.userName}</p>
-                                                            <p className="chat__users_title">{userMember.messages}</p>
-                                                        </div>
-                                                    </div>
-                                                ))
-                                            }
-                                        </div>
+                                    <div ref={ref} className={memberShow ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
+                                        <ChatBoxMembers closeMemberShow={closeMemberShow}/>
                                     </div>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
@@ -181,7 +154,9 @@ const ChatComponentTwo = () => {
                                     </div>
                                 </div>
                             </div>
-                            <MessageOne />
+                            <div className="message__box-component2">
+                                <ChatBoxOne />
+                            </div>
                         </div>
                     </Col>
                 </Row>
@@ -190,4 +165,4 @@ const ChatComponentTwo = () => {
     );
 }
 
-export default ChatComponentTwo;
+export default ChatViewFour;

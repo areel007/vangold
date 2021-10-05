@@ -11,57 +11,35 @@ import participantsAvatar2 from "../../../../assets/images/avatar/Ellipse-7-1.pn
 import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.png";
 import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
 import useOnclickOutside from "react-cool-onclickoutside";
+import GroupParticipants from "../../../core-ui/AllMessagesBox/GroupParticipants";
 import { Link } from "react-router-dom";
 import '../ChatComponent.css'
 
 const otherUsersData = [
     {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-    {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-    {
-        avatar: avatar,
-        usersAvatar: chatUsersAvatar,
-        userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
-    },
-]
-const groupChatParticipantsUsersData = [
-    {
         usersAvatar: participantsAvatar1,
         userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
+        title: 'Designer',
+        title2: 'Frontend Developer',
+        title3: 'Backend Developer',
     },
     {
         usersAvatar: participantsAvatar2,
         userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
+        title: 'Designer',
     },
     {
         usersAvatar: participantsAvatar3,
         userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
+        title: 'Designer',
     },
     {
         usersAvatar: participantsAvatar4,
         userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
+        title: 'Designer',
     },
 ]
+
 const useStyles = makeStyles((theme) => ({
 
     chip: {
@@ -71,9 +49,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '14px'
     },
 }));
-const GroupChatView = () => {
+const AddGroupUsers = () => {
     const [isShow, setIsShow] = React.useState(false);
-    const [isShow2, setIsShow2] = React.useState(false);
+    const [memberShow, setMemberShow] = React.useState(false);
+    
     const classes = useStyles();
     const [value, setValue] = useState('');
     const [chipData, setChipData] = useState([]);
@@ -86,20 +65,20 @@ const GroupChatView = () => {
       setIsShow(!isShow);
     };
     
-    const openPopoverTwo = () => {
-      setIsShow2(!isShow2);
-    };
-    
     const closePopover = () => {
         setIsShow(false);
     };
-    const closePopoverTwo = () => {
-        setIsShow2(false);
+
+    const openMemberShow = () => {
+        setMemberShow(!memberShow);
+    };
+    const closeMemberShow = () => {
+        setMemberShow(false);
     };
 
     const ref = useOnclickOutside(() => {
         setIsShow(false);
-        setIsShow2(false);
+        setMemberShow(false);
       });
 
     const handleDelete = (chipToDelete) => () => {
@@ -128,7 +107,7 @@ const GroupChatView = () => {
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
                                 <div className="grp__chat__view-left-top">
-                                    <div className="arrow-top-G-Chat">
+                                    <div className="grp__chat__view-left-top-header">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 12H5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M12 19L5 12L12 5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -148,47 +127,20 @@ const GroupChatView = () => {
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
-                                                <li onClick={() => { closePopover(); openPopoverTwo();}}>Group Participant</li>
+                                                <li onClick={() => { closePopover();  openMemberShow()}}>Group Participant</li>
                                                 <li onClick={closePopover}>Search</li>
                                                 <li onClick={closePopover}>Report Group</li>
                                                 <li onClick={closePopover}>Exit Group</li>
                                             </div>                                     
                                         </div>
                                     }
-                                    {isShow2 &&
-                                        <div ref={ref} className="mobile__popover__participants">
-                                            <div className="popover__participants__links">
-                                                <div className="popover__close-btns mobile-participants__close-btns">
-                                                    <svg onClick={closePopoverTwo} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
-                                                        <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
-                                                    </svg>
-                                                </div>
-                                                <div className="popover__partcipants_link__header">
-                                                    <span>70  Participants</span>
-                                                    <svg style={{cursor: "pointer"}} width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M7.33268 13.9993C8.81183 13.999 10.2484 13.5039 11.4135 12.5927L15.0768 16.256L16.2552 15.0777L12.5919 11.4143C13.5035 10.2491 13.999 8.81221 13.9993 7.33268C13.9993 3.65685 11.0085 0.666016 7.33268 0.666016C3.65685 0.666016 0.666016 3.65685 0.666016 7.33268C0.666016 11.0085 3.65685 13.9993 7.33268 13.9993ZM7.33268 2.33268C10.0902 2.33268 12.3327 4.57518 12.3327 7.33268C12.3327 10.0902 10.0902 12.3327 7.33268 12.3327C4.57518 12.3327 2.33268 10.0902 2.33268 7.33268C2.33268 4.57518 4.57518 2.33268 7.33268 2.33268Z" fill="#333333"/>
-                                                    </svg>
-                                                </div>
-                                                {
-                                                    groupChatParticipantsUsersData.map((groupParticipantsUsersData) => (
-                                                        <div className="chat__group__component_participants-data">
-                                                            <div className="userChatData-box">
-                                                                <img className="chat__avatar" src={groupParticipantsUsersData.usersAvatar} alt="chat Avatar" />
-                                                                <div className="userChatData">
-                                                                    <p className="chat__users_name">{groupParticipantsUsersData.userName}</p>
-                                                                    <p className="chat__users_title">{groupParticipantsUsersData.messages}</p>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <button className="choose-group-admin-button">Group Admin</button>
-                                                        </div>
-                                                    ))
-                                                }
-                                            </div>                                     
-                                        </div>
+                                    {memberShow &&
+                                    <div ref={ref}>
+                                        <GroupParticipants closeMemberShow={closeMemberShow}/>
+                                    </div>
                                     }
                                 </div>
+                                
                                 <div className="chat__search_box--user-avatar">
                                     <div className="chat__search-box">
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,8 +171,8 @@ const GroupChatView = () => {
                                                 <div className="chat__component_users-data">
                                                     <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
                                                     <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title}</p>
+                                                        <span className="chat__users_name">{userChatData.userName}</span>
+                                                        <span className="chat__users_title">{userChatData.title}</span>
                                                     </div>
                                                 </div>
                                             ))
@@ -242,4 +194,4 @@ const GroupChatView = () => {
     );
 }
 
-export default GroupChatView;
+export default AddGroupUsers;

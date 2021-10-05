@@ -17,6 +17,12 @@
   .submit__btn {
     max-width: 100%;
   }
+  .message__box-component2{
+    display: none;
+  }
+  .chat__box__contaniner-left {
+    width: 100% !important;
+  }
   .mobile-sign-in-link {
     display: block !important;
   }
@@ -513,12 +519,11 @@
   .inn__datePickerBox {
     gap: 21px !important;
   }
-  .message__box-component2,
+
   .message__box-container,
   .Call_-_box-container {
     display: none !important;
   }
-  .chat__box__contaniner-left,
   .group__subject {
     width: 100% !important;
   }

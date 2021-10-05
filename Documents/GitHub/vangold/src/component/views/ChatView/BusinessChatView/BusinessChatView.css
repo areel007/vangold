@@ -85,7 +85,7 @@
 }
 .sideBarBusinessChat, .sideBarBusiness2 {
   width: 317px;
-  min-height: 1062px;
+  height: 1062px;
   background-color: var(--primary);
 }
 .business__chat-view__svg {

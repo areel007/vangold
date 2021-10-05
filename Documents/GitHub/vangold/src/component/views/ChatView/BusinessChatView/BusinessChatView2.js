@@ -6,7 +6,7 @@ import BusinessChatImg from "../../../../assets/images/business-chat.png";
 import "./BusinessChatView.css";
 
 const BusinessChatViewTwo = (props) => {
-    
+    const [requestAccess, setRequestAccess] = useState("requestaccess");
   
     return (
         <div>
@@ -33,11 +33,17 @@ const BusinessChatViewTwo = (props) => {
                                             <div className="BusinessChatImg__text">
                                                 <span>This is a private group</span>
                                                 <p>Request access to join this group.</p>
-                                                <button className="request_-_access-btn">Request Access</button>
-                                                <button className="request_-_sent-btn">Request Sent</button>
+                                                {requestAccess === "requestaccess" ? (
+
+                                                <button className='follow-btn me-4' onClick={() => setRequestAccess()}>Request Access</button>
+                                                ) : (
+
+                                                <button className='web-btn me-4'>Request Sent</button>
+                                                )}
+                                                
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div> 

@@ -1,10 +1,8 @@
-import { useState } from "react";
-import { Modal, ProgressBar } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import StoryBackgroundImg1 from "../../../assets/images/stories/Rectangle9222.PNG";
 import StoryBackgroundImg2 from "../../../assets/images/stories/Rectangle9223.jpg";
 import StoryBackgroundImg3 from "../../../assets/images/stories/Rectangle9220.png";
 import StoryBackgroundImg4 from "../../../assets/images/stories/Rectangle9221.jpg";
-import ShowStoryBackgroundImg from "../../../assets/images/stories/Rectangle9219.png";
 import StoryAvatar1 from "../../../assets/images/stories/Ellipse1520.png";
 import Stories from 'react-insta-stories';
  import "./StoriesModal.css";
@@ -77,13 +75,7 @@ import Stories from 'react-insta-stories';
  
   
 const StoriesModal = (props) => {
-    const [value, setValue] = useState('');
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(value);
-        props.onHide()
-    }
     return (
         <Modal
             {...props}

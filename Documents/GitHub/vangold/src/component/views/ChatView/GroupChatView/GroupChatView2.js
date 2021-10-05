@@ -62,7 +62,7 @@ const GroupChatViewTwo = () => {
                                 <div className="message__box-component2_header">
                                     <div className="chatBox__profile">
                                         <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
-                                        <p>VanGold Website Design</p>
+                                        <span>VanGold Website Design</span>
                                     </div>
                                 </div>
                                 <div className="group_chat-messager-container">

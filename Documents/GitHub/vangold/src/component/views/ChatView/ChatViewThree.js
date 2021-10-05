@@ -36,7 +36,7 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
-const ChatComponentFour = () => {
+const ChatViewThree = () => {
   
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -121,4 +121,4 @@ const ChatComponentFour = () => {
     );
 }
 
-export default ChatComponentFour;
+export default ChatViewThree;

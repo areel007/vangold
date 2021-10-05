@@ -37,32 +37,37 @@ import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfi
 import FreelancerProfileEdit from './component/views/FreelancerViews/FreelancerProfileEdit/FreelancerProfileEdit';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
 import FreelancerJobDescrip from './component/views/FreelancerProfileViews/Jobs/JobDescrip';
-import MobileBusinessChatView from './component/core-ui/Messages/MobileBusinessChatView';
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import FreelancerMyJobProjects from './component/views/FreelancerProfileViews/Jobs/FreelancerMyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
 import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
-import ChatComponentTwo from './component/views/ChatView/ChatComponent2';
-import GroupChatView from './component/views/ChatView/GroupChatView/GroupChatView';
+import AddGroupUsers from './component/views/ChatView/GroupChatView/AddGroupUsers';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
-import GroupChatComponentThree from './component/views/ChatView/ChatComponent3';
-import ChatBoxMobile from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile';
-import ChatBoxMobileTwo from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile2';
-import ChatBoxMobileThree from './component/views/ChatView/ChatBoxMobile/ChatBoxMobile3';
 import BusinessChatView from './component/views/ChatView/BusinessChatView/BusinessChatView';
 import BusinessChatViewTwo from './component/views/ChatView/BusinessChatView/BusinessChatView2';
 import BusinessChatViewThree from './component/views/ChatView/BusinessChatView/BusinessChatView3';
-import GroupParticipate from './component/views/ChatView/ChatBoxMobile/GroupParticipate';
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
-import ChatComponent from './component/views/ChatView/ChatComponent';
-import ChatComponentFour from './component/views/ChatView/ChatComponent4';
+import ChatViewOne from './component/views/ChatView/ChatViewOne';
+import GroupChatViewOne from './component/views/ChatView/GroupChatView/GroupChatView1';
+import ChatViewThree from './component/views/ChatView/ChatViewThree';
+import ChatViewFour from './component/views/ChatView/ChatViewFour';
 import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
-import ChatComponents from './component/core-ui/ChatComponent/ChatComponent';
 import MobileCall from "./component/core-ui/MobileCall/MobileCall";
 import ManageTalent from './component/views/ProfileViews/Talent/ManageTalent';
 import MeetingDetails from './component/views/ProfileViews/Talent/MeetingDetails';
+import ManageSchedule from './component/views/ProfileViews/Talent/ManageSchedule';
 import MobileVideoCall from './component/views/VideoCall/MobileVideoCall';
+import ChatBoxOne from "./component/core-ui/AllMessagesBox/ChatBoxOne";
+import ChatBoxTwo from "./component/core-ui/AllMessagesBox/ChatBoxTwo";
+import ChatBoxThree from "./component/core-ui/AllMessagesBox/ChatBoxThree";
+import ChatBoxFour from "./component/core-ui/AllMessagesBox/ChatBoxFour";
+import ChatBoxFive from "./component/core-ui/AllMessagesBox/ChatBoxFive";
+import ChatBoxSix from "./component/core-ui/AllMessagesBox/ChatBoxSix";
+import ChatBoxSeven from "./component/core-ui/AllMessagesBox/ChatBoxSeven";
+import ChatBoxNine from "./component/core-ui/AllMessagesBox/ChatBoxNine";
+import ManageTalentChat from "./component/core-ui/AllMessagesBox/ManageTalentChat";
+import FreelancerMessageBoxOne from "./component/views/FreelancerMessageBox/MessageBoxOne";
 
 function App() {
 
@@ -216,9 +221,6 @@ function App() {
                     <Route path="/profile/jobs/f-job-description">
                         <FreelancerJobDescrip />
                     </Route>
-                    <Route path="/mobile-biz-chat">
-                        <MobileBusinessChatView />
-                    </Route>
                     <Route path="/profile/jobs/job-description">
                         <JobDescrip />
                     </Route>
@@ -240,47 +242,38 @@ function App() {
                     <Route path="/profile/talent/manage-talent">
                         <ManageTalent />
                     </Route>
+                    <Route path="/profile/talent/ManageSchedule">
+                        <ManageSchedule />
+                    </Route>
                     <Route path="/profile/talent/meeting-details">
                         <MeetingDetails />
                     </Route>
                     <Route path="/profile/messages">
-                        <ChatComponent />
+                        <ChatViewOne />
                     </Route>
-                    <Route path="/profile/messages4">
-                        <ChatComponentFour />
+                    <Route path="/profile/f-messages">
+                        <FreelancerMessageBoxOne />
                     </Route>
-                    <Route path="/profile/chat">
-                        <ChatComponentTwo />
+                    <Route path="/profile/GroupChatViewOne">
+                        <GroupChatViewOne />
                     </Route>
-                    <Route path="/profile/group-chat">
-                        <GroupChatView />
+                    <Route path="/profile/ChatViewThree">
+                        <ChatViewThree />
+                    </Route>
+                    <Route path="/profile/ChatViewFour">
+                        <ChatViewFour />
+                    </Route>
+                    <Route path="/profile/AddGroupUsers">
+                        <AddGroupUsers />
                     </Route>
                     <Route path="/profile/group-chat2">
                         <GroupChatViewTwo />
-                    </Route>
-                    <Route path="/profile/group-chat3">
-                        <GroupChatComponentThree />
-                    </Route>
-                    <Route path="/profile/group-chat-mobile">
-                        <ChatBoxMobile/>
-                    </Route>
-                    <Route path="/profile/chat-mobile">
-                        <ChatBoxMobileTwo/>
                     </Route>
                     <Route path="/profile/mobile-call">
                         <MobileCall/>
                     </Route>
                     <Route path="/profile/mobile-video-call">
                         <MobileVideoCall/>
-                    </Route>
-                    <Route path="/profile/group-chat-mobile2">
-                        <ChatBoxMobileThree/>
-                    </Route>
-                    <Route path="/profile/GroupParticipants">
-                        <GroupParticipate/>
-                    </Route>
-                    <Route path="/ChatCompo">
-                        <ChatComponents/>
                     </Route>
                     <Route path="/profile/business-chat">
                         <BusinessChatView/>
@@ -302,6 +295,33 @@ function App() {
                     </Route>
                     <Route path="/profile/freelancer-profile-edit">
                         <FreelancerProfileEdit />
+                    </Route>
+                    <Route path="/ChatBoxOne">
+                        <ChatBoxOne />
+                    </Route>
+                    <Route path="/ChatBoxTwo">
+                        <ChatBoxTwo />
+                    </Route>
+                    <Route path="/ChatBoxThree">
+                        <ChatBoxThree />
+                    </Route>
+                    <Route path="/ChatBoxFour">
+                        <ChatBoxFour />
+                    </Route>
+                    <Route path="/ChatBoxFive">
+                        <ChatBoxFive />
+                    </Route>
+                    <Route path="/ChatBoxSix">
+                        <ChatBoxSix />
+                    </Route>
+                    <Route path="/ChatBoxSeven">
+                        <ChatBoxSeven />
+                    </Route>
+                    <Route path="/ChatBoxNine">
+                        <ChatBoxNine />
+                    </Route>
+                    <Route path="/ManageTalentChat">
+                        <ManageTalentChat />
                     </Route>
                 </Switch>
                 <Footer />

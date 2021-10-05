@@ -14,7 +14,7 @@ import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import participantsAvatar1 from "../../../assets/images/manage-talents/Rectangle9192.png";
 import participantsAvatar2 from "../../../assets/images/manage-talents/Rectangle9190.png";
 import participantsAvatar3 from "../../../assets/images/manage-talents/Rectangle9191.png";
-import ManageTalentChatCompo from "../ChatComponent/ManageTalentChatCompo"
+import ManageTalentChat from "../AllMessagesBox/ManageTalentChat";
 
 import "./ManageTalentSiderBarDropDown.css";
 
@@ -48,8 +48,8 @@ const GreenCheckbox = withStyles({
 const ManageTalentDropDown = () => {
     const classes = ManageTalentUsesStyles();
     const [checkValue, setCheckValue] = useState('')
-    const [skills, setSkills] = useState(true);
-    const [tools, setTools] = useState(true);
+    const [skills, setParticipants] = useState(true);
+    const [chats, setChats] = useState(true);
     const handleChange = (e) => {
         setCheckValue(e.target.value)
         console.log(checkValue);
@@ -66,7 +66,7 @@ const ManageTalentDropDown = () => {
                     <ListItem className="ManageTalent__sideBar__chat-listItem_header"
                         button
                         onClick={() => {
-                            setSkills(!skills);
+                            setParticipants(!skills);
                         }}
                     >
                         <svg className="ManageTalent__sideBar__chat-view__svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -196,7 +196,7 @@ const ManageTalentDropDown = () => {
                     <ListItem className="ManageTalent__sideBar__chat-listItem_header"
                         button
                         onClick={() => {
-                            setTools(!tools);
+                            setChats(!chats);
                         }}
                     >
                         <svg className="ManageTalent__sideBar__chat-view__svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -207,17 +207,17 @@ const ManageTalentDropDown = () => {
                             classes={{ primary: classes.BusinessListItemText }}
                             primary="Chat"
                         />
-                        {tools ? <MdExpandLess /> : <MdExpandMore />}
+                        {chats ? <MdExpandLess /> : <MdExpandMore />}
                     </ListItem>
 
-                    <Collapse in={tools} timeout="auto" unmountOnExit>
+                    <Collapse in={chats} timeout="auto" unmountOnExit>
                     <div className="ManageTalentSide-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>
                                     <FormControl component="fieldset" className={classes.formControl}>
                                         <FormGroup>
                                             <div className='ManageTalentSide-bar-chat-container'>
-                                                <ManageTalentChatCompo />
+                                                <ManageTalentChat />
                                             </div>
                                         </FormGroup>
                                     </FormControl>

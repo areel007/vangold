@@ -1,11 +1,22 @@
 import React, { useState } from "react";
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import StoriesModal from "../../../core-ui/StoriesModal/StoriesModal"; 
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
 import '../ChatComponent2.css';
 import "./stories.css"
 
 const userStoriesData = [
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
+    {
+        avatar: avatar3,
+        userName: "Adam Sandler"
+    },
     {
         avatar: avatar3,
         userName: "Adam Sandler"
@@ -80,11 +91,22 @@ const Stories = () => {
                                 </svg>
                             </div>
                         </div>
-                        <span>You story</span>
+                        <span>Your story</span>
                     </div>
                 </div>
                 <div className="stories-list">
-
+                    {
+                        userStoriesData.map((_user, index) => {
+                            return <div key={index}  className="story">
+                                <div className="story__inner">
+                                    <div className="avatar">
+                                        <img src={_user.avatar} alt=""/>
+                                    </div>
+                                    <span>{_user.userName}</span>
+                                </div>
+                            </div>
+                        })
+                    }
                 </div>
             </div>
 

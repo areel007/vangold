@@ -3,20 +3,50 @@ import avatar from "../../../../assets/images/profile/avatar3.png";
 import cam from "../../../../assets/images/profile/cam.png";
 import tick from "../../../../assets/images/profile/tick.png";
 import bullet from "../../../../assets/images/profile/bullet.png";
+import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import { CgArrowLongRight } from "react-icons/cg";
 import { useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import { ImStarEmpty, ImStarHalf, ImStarFull } from "react-icons/im";
+import { Button, Col, Container, Modal, Row } from "react-bootstrap";
+import { ImStarHalf, ImStarFull } from "react-icons/im";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
-import UnfollowModal from "../../../core-ui/UnfollowModal/UnfollowModal";
 import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./FreelancerProfile.css";
+
+const followersList = [
+    {
+        id: 1,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 2,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 3,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 4,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+]
+
 
 const FreelancerProfile = () => {
     const [image, setImage] = useState(false);
     const [modalShow, setModalShow] = useState(false);
-    const [modalShow2, setModalShow2] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
+    const [followBtn, setFollowBtn] = useState("follow");
+    const [showFollow, setShowFollow] = useState(false);
+    const [followers, setFollowers] = useState(false);
 
     function handleImageChange(e) {
         if (e.target.files && e.target.files[0]) {
@@ -83,13 +113,42 @@ const FreelancerProfile = () => {
                     <Button className="freelance-btn me-4">
                         MAKE PAYMENT <CgArrowLongRight className="ms-2 mb-1" />
                     </Button>
-                    <Button className="freelance-btn freelance-btn-follow-btn">
-                        FOLLOW
-                    </Button>
-                    <Button className="freelance-btn freelance-btn-following-btn" onClick={() => setModalShow2(true)}>
-                        FOLLOWING
-                    </Button>
+                    {followBtn === "follow" ? (
+
+                        <button className='follow-btn' onClick={() => setFollowBtn('following')}>FOLLOW</button>
+                    ) : (
+
+                        <button className='web-btn' onClick={() => setShowFollow(true)}>FOLLOWING</button>
+                    )}
                 </div>
+                <Modal show={showFollow} onHide={() => { setShowFollow(false) }}>
+                    <Modal.Header closeButton>
+                        <h2 className='unfollow-mod-head mt-4'>Unfollow Page</h2>
+                    </Modal.Header>
+                    <p className='p-3'>You are about to unfollow Vangold</p>
+                    <Modal.Footer>
+                        <button onClick={() => { setShowFollow(false) }} className='cancel-mod-btn me-4' >
+                            Cancel
+                        </button>
+                        <button variant="primary" onClick={() => { setFollowBtn('follow'); setShowFollow(false); }} className='unfollow-mod-btn' >
+                            Unfollow
+                        </button>
+                    </Modal.Footer>
+                </Modal>
+                <Modal show={followers} onHide={() => { setFollowers(false) }}>
+                    <Modal.Header closeButton>
+                        <h2 className='unfollow-mod-head mt-4'>Followers</h2>
+                    </Modal.Header>
+                    {followersList.map((follower => (
+                        <div className='mt-4 d-flex p-4' key={follower.key} >
+                            <div className='me-4'><img src={follower.avatar} alt="avatar" className='img-fluid' /></div>
+                            <div>
+                                <p className='followers-mod-head mb-0'>{follower.name}</p>
+                                <p style={{ color: "#666666" }}>{follower.position}</p>
+                            </div>
+                        </div>
+                    )))}
+                </Modal>
                 <Row>
                     <Col xs={10} md={12} className="mx-auto">
 
@@ -242,17 +301,12 @@ const FreelancerProfile = () => {
                     head="Send an offer to Daramola"
                     para="State clearly what you want Daramola to do for you"
                     btntext='Send' />
-                <UnfollowModal 
-                        show={modalShow2}
-                        onHide={() => setModalShow2(false)}
-                        head="Unfollow Page"
-                        btntext='Unfollow' />
                 <FollowersModal 
                         show={modalShow3}
                         onHide={() => setModalShow3(false)}
                         head="Followers"/>
             </Container>
-        </section>
+        </section >
     );
 };
 

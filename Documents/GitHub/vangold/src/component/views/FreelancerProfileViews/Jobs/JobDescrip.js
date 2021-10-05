@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Modal } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import { BsFillHeartFill } from "react-icons/bs";
@@ -8,7 +8,6 @@ import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
-import UnfollowModal from "../../../core-ui/UnfollowModal/UnfollowModal";
 import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 // import "../../Jobs.css";
 
@@ -26,9 +25,13 @@ const jobs =
 
 const FreelancerJobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
-    const [modalShow2, setModalShow2] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
-    const [freelancer, setFreelancer] = useState(true);
+    const [freelancer] = useState(true);
+    const [followBtn, setFollowBtn] = useState("follow");
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
         <section id="job-descrip" className="my-5 py-3">
@@ -72,15 +75,30 @@ const FreelancerJobDescrip = () => {
                                             <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={6} className="">
-                                        <div className="follow-visit-site-btn">
-                                            <div className="follow__box">
-                                                <button className="follow__btn_fl">FOLLOW</button>
-                                                <button className="following__btn_fl" onClick={() => setModalShow2(true)}>FOLLOWING</button>
-                                            </div>
-                                        </div>
-                                    </Col>
                                 </Row>
+                                <div className="mt-4">
+                                    {followBtn === "follow" ? (
+
+                                        <button className='follow-btn me-4' onClick={() => setFollowBtn('following')}>FOLLOW</button>
+                                    ) : (
+
+                                        <button className='web-btn me-4' onClick={handleShow}>FOLLOWING</button>
+                                    )}
+                                    </div>
+                                    <Modal show={show} onHide={handleClose}>
+                                    <Modal.Header closeButton>
+                                        <h2 className='unfollow-mod-head mt-4'>Unfollow Page</h2>
+                                    </Modal.Header>
+                                    <p className='p-3'>You are about to unfollow Vangold</p>
+                                    <Modal.Footer>
+                                        <button onClick={handleClose} className='cancel-mod-btn me-4' >
+                                            Cancel
+                                        </button>
+                                        <button variant="primary" onClick={() => { setFollowBtn('follow'); handleClose(); }} className='unfollow-mod-btn' >
+                                            Unfollow
+                                        </button>
+                                    </Modal.Footer>
+                                </Modal>
                                 <Row className='mt-4 row-border'>
                                     <Col xs={6} lg={3} className='border-right px-4 px-lg-5 py-4 border-botom'>
                                         <p className="text-16px-1">Experience</p>
@@ -122,11 +140,6 @@ const FreelancerJobDescrip = () => {
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
                                     btntext='Apply' />
-                                <UnfollowModal
-                                    show={modalShow2}
-                                    onHide={() => setModalShow2(false)}
-                                    head="Unfollow Page"
-                                    btntext='Unfollow' />
                                 <FollowersModal 
                                     show={modalShow3}
                                     onHide={() => setModalShow3(false)}

@@ -6,7 +6,7 @@ import './ChatComponent.css'
 const ManageTalentChatCompo = () => {
 
     return (
-        <section className="">
+        <section>
                 <div>
                     <div>
                         <div className="manageTalent__chat-messager-container">

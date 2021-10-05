@@ -1,0 +1,42 @@
+@media screen and (max-width: 768px) {
+  .MessageBox__ .MessageBox__header .MessageBox__profile__data span {
+    font-size: var(--fs-14);
+  }
+  .MessageBox__ .MessageBox__header .ChatBox__popoverBox {
+    width: 250px;
+  }
+  .MessageBox__
+    .MessageBox__header
+    .ChatBox__popoverBox
+    .ChatBox__popover__links
+    li,
+  .MessageBox__
+    .MessageBox__header
+    .ChatBox__popoverBox
+    .ChatBox__popover__links
+    a {
+    font-size: var(--fs-16);
+  }
+  .MessageBox__
+    .MessageBox__header
+    .ChatBox__popoverBox
+    .ChatBox__popover__close-btns
+    svg {
+    width: 16px;
+    height: 16px;
+  }
+  .ChatBoxMembers {
+    width: 100% !important;
+    top: 0;
+  }
+  .ChatBox__ .ChatBox__Footer{
+    min-height: 48px;
+  }
+  .ChatBox__ .ChatBox__Footer{
+    min-height: 36px;
+    padding: 6px 8px 6px 8px;
+  }
+  .ChatBoxMembers .top__inn__ChatBoxMembers__header .arrow__left {
+    display: block;
+  }
+}
