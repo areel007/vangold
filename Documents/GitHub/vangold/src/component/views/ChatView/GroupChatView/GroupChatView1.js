@@ -44,14 +44,14 @@ const otherUsersData = [
     },
 ]
 
-const GroupChatViewOne = () => {
+const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
 
     return (
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto d-none d-lg-block mt-5">
-                        <SideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Stories />
