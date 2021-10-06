@@ -24,7 +24,7 @@ const jobs =
     offerSalary: "$2150/Month",
 }
 
-const JobDescrip = ({ showSideMenu }) => {
+const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
@@ -39,7 +39,7 @@ const JobDescrip = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={2} className={`mx-auto bg-color-w py-5 ${!showCheck && "d-none d-lg-block"}`}>
                         {showCheck && (

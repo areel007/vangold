@@ -219,7 +219,7 @@ const chartData = [
 
 const percentage = 81.2;
 
-const ProfileDashboard = ({ showSideMenu }) => {
+const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex1, setSelectedIndex1] = useState(0);
@@ -239,7 +239,7 @@ const ProfileDashboard = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Row>
