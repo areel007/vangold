@@ -72,6 +72,7 @@ import FreelancerMessageBoxOne from "./component/views/FreelancerMessageBox/Mess
 function App() {
 
     const history = useHistory();
+    const [showSideMenu, setShowSideMenu] = useState(false);
 
     const routeChange = () => {
         let path = `sign-up`;
@@ -125,6 +126,8 @@ function App() {
                 <HeaderComponent
                     links={links}
                     toggleMobileNav={toggleMobileNav}
+                    showSideMenu={showSideMenu}
+                    setShowSideMenu={setShowSideMenu}
                 />
                 <MobileNav
                     links={links}
@@ -198,7 +201,7 @@ function App() {
                         <ProfilePostJob />
                     </Route>
                     <Route path="/employer-setting">
-                        <EmployerSetting />
+                        <EmployerSetting showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/pay-to-employer">
                         <PayToEmployer />
@@ -207,13 +210,13 @@ function App() {
                         <PaymentSuccess />
                     </Route>
                     <Route path="/profile/f-dashboard">
-                        <FreelancerProfileDashboard />
+                        <FreelancerProfileDashboard showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/dashboard">
-                        <ProfileDashboard />
+                        <ProfileDashboard showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/all-jobs">
-                        <ProfileAllJobs />
+                        <ProfileAllJobs showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/f-jobs/all-jobs">
                         <FreelancerProfileAllJobs />
@@ -222,31 +225,31 @@ function App() {
                         <FreelancerJobDescrip />
                     </Route>
                     <Route path="/profile/jobs/job-description">
-                        <JobDescrip />
+                        <JobDescrip showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/my-job">
-                        <ProfileMyJob />
+                        <ProfileMyJob showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/my-job-projects">
-                        <MyJobProjects />
+                        <MyJobProjects showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/f-my-job-projects">
                         <FreelancerMyJobProjects />
                     </Route>
                     <Route path="/profile/edit">
-                        <ProfileEdit />
+                        <ProfileEdit showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/talent/find-talent">
-                        <FindTalent />
+                        <FindTalent showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/talent/manage-talent">
-                        <ManageTalent />
+                        <ManageTalent showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/talent/ManageSchedule">
                         <ManageSchedule />
                     </Route>
                     <Route path="/profile/talent/meeting-details">
-                        <MeetingDetails />
+                        <MeetingDetails showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/profile/messages">
                         <ChatViewOne />
@@ -270,19 +273,19 @@ function App() {
                         <GroupChatViewTwo />
                     </Route>
                     <Route path="/profile/mobile-call">
-                        <MobileCall/>
+                        <MobileCall />
                     </Route>
                     <Route path="/profile/mobile-video-call">
-                        <MobileVideoCall/>
+                        <MobileVideoCall />
                     </Route>
                     <Route path="/profile/business-chat">
-                        <BusinessChatView/>
+                        <BusinessChatView />
                     </Route>
                     <Route path="/profile/business-chat-1">
-                        <BusinessChatViewThree/>
+                        <BusinessChatViewThree />
                     </Route>
                     <Route path="/profile/business-chat-2">
-                        <BusinessChatViewTwo/>
+                        <BusinessChatViewTwo />
                     </Route>
                     <Route path="/profile/ChatCall">
                         <ChatCall />
@@ -294,7 +297,7 @@ function App() {
                         <FreelancerProfile />
                     </Route>
                     <Route path="/profile/freelancer-profile-edit">
-                        <FreelancerProfileEdit />
+                        <FreelancerProfileEdit showSideMenu={showSideMenu} />
                     </Route>
                     <Route path="/ChatBoxOne">
                         <ChatBoxOne />

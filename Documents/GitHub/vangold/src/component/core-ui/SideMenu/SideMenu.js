@@ -16,6 +16,7 @@ import person from "../../../assets/images/sideMenu/person.png";
 import signout from "../../../assets/images/sideMenu/signout.png";
 import { useHistory, useLocation } from "react-router-dom";  
 import LogoutModal from "../LogoutModal/LogoutModal";
+import './SideMenu.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,9 +36,6 @@ const useStyles = makeStyles((theme) => ({
         color: '#45B618',
         borderLeft: '6px solid #45B618',
     },
-    lists: {
-        height: "100vh"
-    },
     signout: {
         position: "absolute",
         bottom: 0
@@ -54,7 +52,7 @@ const SideMenu = () => {
 
     return (
         <div className={classes.root}>
-            <List component="nav" className={classes.lists}>
+            <List component="nav" className="menu-list-height">
                 <ListItem
                     button
                     classes={{ root: classes.root, button: classes.button, }}

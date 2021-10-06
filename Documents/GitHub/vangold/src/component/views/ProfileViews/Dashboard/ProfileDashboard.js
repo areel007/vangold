@@ -219,13 +219,13 @@ const chartData = [
 
 const percentage = 81.2;
 
-const ProfileDashboard = () => {
+const ProfileDashboard = ({ showSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex1, setSelectedIndex1] = useState(0);
     const [component, setComponent] = useState('Client Review');
     const [component1, setComponent1] = useState('Client Review');
-
+ 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
     };
@@ -238,7 +238,7 @@ const ProfileDashboard = () => {
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">

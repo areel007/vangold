@@ -122,14 +122,14 @@ const BorderLinearProgress = withStyles((theme) => ({
     },
 }))(LinearProgress);
 
-const MyJobProjects = () => {
+const MyJobProjects = ({ showSideMenu }) => {
     const [select, setSelect] = useState('IN PROGRESS');
 
     return (
         <section id="my-job-projects" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w p-5">

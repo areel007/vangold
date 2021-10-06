@@ -47,7 +47,8 @@ const avatars = [
     },
 
 ]
-const ManageTalent = () => {
+
+const ManageTalent = ({ showSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
@@ -58,7 +59,7 @@ const ManageTalent = () => {
         <section id="talent" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color">
@@ -66,7 +67,7 @@ const ManageTalent = () => {
                             <Col xs={12} lg={6}>
                                 <Row>
                                     <Col xs={6} className='p-2 p-md-4'>
-                                        <Card style={{cursor: "pointer"}} onClick={() => setModalShow(true)} className="card-blue p-5">
+                                        <Card style={{ cursor: "pointer" }} onClick={() => setModalShow(true)} className="card-blue p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={vid} alt="vid" className='img-fluid img-bg' />
                                             </div>
@@ -75,7 +76,7 @@ const ManageTalent = () => {
                                         </Card>
                                     </Col>
                                     <Col xs={6} className='p-2 p-md-4'>
-                                        <Card style={{cursor: "pointer"}} onClick={() => setModalShow2(true)} className="card-green p-5">
+                                        <Card style={{ cursor: "pointer" }} onClick={() => setModalShow2(true)} className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={add} alt="add" className='img-fluid img-bg' />
                                             </div>
@@ -94,7 +95,7 @@ const ManageTalent = () => {
                                             <p className='card-text'>plan your meetings</p>
                                         </Card>
                                     </Col>
-                                    <Col style={{cursor: "pointer"}} onClick={() => setModalShow3(true)} xs={6} className='p-2 p-md-4'>
+                                    <Col style={{ cursor: "pointer" }} onClick={() => setModalShow3(true)} xs={6} className='p-2 p-md-4'>
                                         <Card className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={share} alt="share" className='img-fluid img-bg' />

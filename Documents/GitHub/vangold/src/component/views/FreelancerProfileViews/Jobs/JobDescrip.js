@@ -1,6 +1,6 @@
 import { Button, Col, Container, Row, Modal } from "react-bootstrap";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu"
 import { BsFillHeartFill } from "react-icons/bs";
 import { ImShare2 } from "react-icons/im";
 import { useState } from "react";
@@ -9,7 +9,8 @@ import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
 import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
-// import "../../Jobs.css";
+import ShareModal from "../../../core-ui/ShareModal/ShareModal";
+import "./Jobs.css";
 
 const jobs =
 {
@@ -25,6 +26,7 @@ const jobs =
 
 const FreelancerJobDescrip = () => {
     const [modalShow, setModalShow] = useState(false);
+    const [shareShow, setShareShow] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
     const [freelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
@@ -38,7 +40,7 @@ const FreelancerJobDescrip = () => {
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <SideMenu />
+                        <FreelancerProfileSideMenu />
                     </Col>
                     <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
                         <SideCheckBoxes />
@@ -58,7 +60,7 @@ const FreelancerJobDescrip = () => {
                                     </Col>
                                     <Col xs={4} lg={4} className="align-self-center text-end">
                                         <Button variant='light' className='job-btn me-2 me-lg-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
-                                        <Button variant='light' className='job-btn mt-4' ><ImShare2 className='job-icon' /></Button>
+                                        <Button variant='light' className='job-btn mt-4' onClick={() => setShareShow(true)}><ImShare2 className='job-icon' /></Button>
                                     </Col>
                                 </Row>
                                 <Row className='mt-4'>
@@ -144,6 +146,10 @@ const FreelancerJobDescrip = () => {
                                     show={modalShow3}
                                     onHide={() => setModalShow3(false)}
                                     head="Followers"/>
+                                <ShareModal 
+                                    show={shareShow}
+                                    onHide={() => setShareShow(false)}
+                                    head="Share this Job"/>
                             </div>
                         </div>
                     </Col>

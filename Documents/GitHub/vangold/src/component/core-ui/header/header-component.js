@@ -1,12 +1,13 @@
 import "./header-component.css"
 import headerLogo from "../../../assets/images/logo.png"
-import React, {useState} from "react";
+import cross from "../../../assets/images/profile/cross.png"
+import React, { useState } from "react";
 // import {Link} from "@material-ui/core";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const HeaderComponent = (props) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(true)
     const [languageDropdown, setLanguageDropdown] = useState(false)
     const [languages] = useState([
         'English',
@@ -37,7 +38,7 @@ const HeaderComponent = (props) => {
         <div className={className}>
             <nav className="header__inner">
                 <Link to="/" className="logo">
-                    <img src={headerLogo} alt="vangold logo"/>
+                    <img src={headerLogo} alt="vangold logo" />
                     <span>Vangold</span>
                 </Link>
                 {
@@ -46,9 +47,9 @@ const HeaderComponent = (props) => {
                             props.links.map(link => {
                                 return <li key={link.linkName}>{link.linkName.toLowerCase() === 'english' ?
                                     <div>
-                                    <div onClick={toggleLanguageSelection} className="language-selection__language">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
+                                        <div onClick={toggleLanguageSelection} className="language-selection__language">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20
                                             20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM16.92 6H13.97C13.65
                                             4.75 13.19 3.55 12.59 2.44C14.43 3.07 15.96 4.35 16.92 6ZM10
                                             2.04C10.83 3.24 11.48 4.57 11.91 6H8.09C8.52 4.57 9.17 3.24 10
@@ -62,18 +63,18 @@ const HeaderComponent = (props) => {
                                             13.97 14H16.92C15.96 15.65 14.43 16.93 12.59 17.56ZM14.36 12C14.44 11.34 14.5
                                             10.68 14.5 10C14.5 9.32 14.44 8.66 14.36 8H17.74C17.9 8.64 18 9.31 18 10C18
                                             10.69 17.9 11.36 17.74 12H14.36Z" fill="#333333" />
-                                        </svg>
-                                        {languageDropdownHeader}
-                                    </div>
+                                            </svg>
+                                            {languageDropdownHeader}
+                                        </div>
                                         {
                                             languageDropdown ? <ul className="language-selection-dropdown">
-                                                { languages.map(language => {
+                                                {languages.map(language => {
                                                     return <li onClick={updateLanguageDropdownHeader} key={language}>{language}</li>
-                                                }) }
+                                                })}
                                             </ul> : null
                                         }
-                                </div>
-                                    : <Link to={link.to}>{link.linkName}</Link> }
+                                    </div>
+                                    : <Link to={link.to}>{link.linkName}</Link>}
                                 </li>
                             })
                         }
@@ -114,7 +115,7 @@ const HeaderComponent = (props) => {
                     isLoggedIn ? <div className="user">
                         <div className="notification">
                             <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.00002 16C8.10377 16 8.99908 15.1047 8.99908 14H5.00096C5.00096 15.1047 5.89627 16 7.00002 16ZM13.731 11.3216C13.1272 10.6728 11.9975 9.69687 11.9975 6.5C11.9975 4.07188 10.295 2.12812 7.9994 1.65125V1C7.9994 0.447812 7.5519 0 7.00002 0C6.44815 0 6.00065 0.447812 6.00065 1V1.65125C3.70502 2.12812 2.00252 4.07188 2.00252 6.5C2.00252 9.69687 0.872834 10.6728 0.269084 11.3216C0.0815841 11.5231 -0.00154089 11.7641 2.16059e-05 12C0.00345911 12.5125 0.405647 13 1.00315 13H12.9969C13.5944 13 13.9969 12.5125 14 12C14.0016 11.7641 13.9185 11.5228 13.731 11.3216Z" fill="#45B618"/>
+                                <path d="M7.00002 16C8.10377 16 8.99908 15.1047 8.99908 14H5.00096C5.00096 15.1047 5.89627 16 7.00002 16ZM13.731 11.3216C13.1272 10.6728 11.9975 9.69687 11.9975 6.5C11.9975 4.07188 10.295 2.12812 7.9994 1.65125V1C7.9994 0.447812 7.5519 0 7.00002 0C6.44815 0 6.00065 0.447812 6.00065 1V1.65125C3.70502 2.12812 2.00252 4.07188 2.00252 6.5C2.00252 9.69687 0.872834 10.6728 0.269084 11.3216C0.0815841 11.5231 -0.00154089 11.7641 2.16059e-05 12C0.00345911 12.5125 0.405647 13 1.00315 13H12.9969C13.5944 13 13.9969 12.5125 14 12C14.0016 11.7641 13.9185 11.5228 13.731 11.3216Z" fill="#45B618" />
                             </svg>
                             <div className="notification-circle">
                                 <div className="notification-circle__inner">
@@ -145,15 +146,20 @@ const HeaderComponent = (props) => {
                         </svg> : null
                     }
                     {
-                        isLoggedIn ? <svg
+                        isLoggedIn && !props.showSideMenu ? <svg
                             height="24px"
                             viewBox="0 0 24 24"
                             width="24px"
                             fill="#000000"
+                            onClick={() => props.setShowSideMenu(true)}
                         >
                             <path d="M0 0h24v24H0V0z" fill="none" />
                             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                        </svg> : null
+                        </svg> : (
+                            <div>
+                                <img src={cross} alt="cross" onClick={() => props.setShowSideMenu(false)} />
+                            </div>
+                        )
                     }
                 </div>
             </nav>

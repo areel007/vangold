@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
         fontSize: "16px",
-        backgroundColor: "#D9DAD780",
         marginTop: "2rem",
     },
     listItemText: {
@@ -41,7 +40,7 @@ const GreenCheckbox = withStyles({
     checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-const SideCheckBoxes = () => {
+const SideCheckBoxes = ({ showCheck }) => {
     const classes = useStyles();
     const [value, setValue] = useState('')
     const [checkValue, setCheckValue] = useState('')
@@ -73,7 +72,7 @@ const SideCheckBoxes = () => {
             </div>
 
             {/* ----------------------------------CHECK BOXES STARTS FROM HERE------------------------------ */}
-            <div className={classes.root}>
+            <div className={`${classes.root} ${!showCheck && "sidecheck-bg-2"}`}>
                 <List component="nav">
 
                     {/* ---------------------------Type of Employment check boxes---------------------- */}
@@ -101,7 +100,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Figma" onChange={handleChange} />}
                                                 label="Figma"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -109,7 +108,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Sketch" onChange={handleChange} />}
                                                 label="Sketch"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -117,7 +116,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Adobe XD" onChange={handleChange} />}
                                                 label="Adobe XD"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -125,7 +124,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Adobe Illustrator" onChange={handleChange} />}
                                                 label="Adobe Illustrator"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -133,7 +132,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Adobe Photoshop" onChange={handleChange} />}
                                                 label="Adobe Photoshop"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                     </FormGroup>
                                 </FormControl>
@@ -166,7 +165,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Less than 1 year" onChange={handleChange} />}
                                                 label="Less than 1 year"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -174,7 +173,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="1-3 years" onChange={handleChange} />}
                                                 label="1-3 years"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -182,7 +181,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="More than 3 years" onChange={handleChange} />}
                                                 label="More than 3 years"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                     </FormGroup>
                                 </FormControl>
@@ -215,7 +214,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="Less than 1000USD" onChange={handleChange} />}
                                                 label="Less than 1000USD"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -223,7 +222,7 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="1000-10000USD" onChange={handleChange} />}
                                                 label="1000-10000USD"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                         <div className='d-flex justify-content-between mb-4'>
                                             <FormControlLabel
@@ -231,15 +230,17 @@ const SideCheckBoxes = () => {
                                                 control={<GreenCheckbox value="10000USD and above" onChange={handleChange} />}
                                                 label="10000USD and above"
                                             />
-                                            <div className='align-self-center sidecheck-numb'>64</div>
+                                            <div className='sidecheck-numb'>64</div>
                                         </div>
                                     </FormGroup>
                                 </FormControl>
                             </ListItem>
                         </List>
                     </Collapse>
-
                 </List>
+                <div className='text-center d-lg-none'>
+                    <button className='btn-apply-filter'>Apply Filter</button>
+                </div>
             </div>
         </>
     );

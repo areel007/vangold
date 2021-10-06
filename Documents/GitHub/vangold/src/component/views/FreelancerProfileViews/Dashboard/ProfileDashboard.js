@@ -219,7 +219,7 @@ const chartData = [
 
 const percentage = 81.2;
 
-const FreelancerProfileDashboard = () => {
+const FreelancerProfileDashboard = ({ showSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex1, setSelectedIndex1] = useState(0);
@@ -238,7 +238,7 @@ const FreelancerProfileDashboard = () => {
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
+                    <Col xs={10} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <FreelancerProfileSideMenu />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
