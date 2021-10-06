@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import StoriesModal from "../../../core-ui/StoriesModal/StoriesModal"; 
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
 import '../ChatComponent2.css';
 import "./stories.css"
@@ -110,12 +109,6 @@ const Stories = () => {
                 </div>
             </div>
 
-            <StoriesModal
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-                head="Vangold"
-                // btntext='Create'
-            />
         </div>
     );
 }

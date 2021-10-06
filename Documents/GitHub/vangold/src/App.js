@@ -258,7 +258,7 @@ function App() {
                         <FreelancerMessageBoxOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/GroupChatViewOne">
-                        <GroupChatViewOne />
+                        <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/ChatViewThree">
                         <ChatViewThree />
@@ -270,7 +270,7 @@ function App() {
                         <AddGroupUsers />
                     </Route>
                     <Route path="/profile/group-chat2">
-                        <GroupChatViewTwo />
+                        <GroupChatViewTwo showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/mobile-call">
                         <MobileCall />
