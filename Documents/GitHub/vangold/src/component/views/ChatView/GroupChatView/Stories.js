@@ -114,7 +114,7 @@ const Stories = () => {
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 head="Vangold"
-                btntext='Create'
+                // btntext='Create'
             />
         </div>
     );

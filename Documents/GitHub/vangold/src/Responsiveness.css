@@ -2,6 +2,9 @@
   #job-descrip .border-botom {
     border-bottom: 1px solid #00000033;
   }
+  .dashboard_mobile_searchBar{
+    display: block !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .bottom-chat-footer {
