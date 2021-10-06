@@ -353,6 +353,17 @@
   color: #333333;
 }
 
+.dashboard_mobile_searchBar__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.dashboard_mobile_searchBar__filter .dashboard_mobile_searchBar {
+  width: 100%;
+  margin-bottom: 19px;
+}
+
 @media (max-width: 600px) {
   .avatar-dim {
     width: 32px;
