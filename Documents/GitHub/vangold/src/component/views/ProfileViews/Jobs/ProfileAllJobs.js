@@ -44,7 +44,7 @@ const jobsLists = [
         img: apple,
     },
 ];
-const ProfileAllJobs = ({ showSideMenu }) => {
+const ProfileAllJobs = ({ showSideMenu, setShowSideMenu }) => {
     const [showCheck, setShowCheck] = useState(false)
     const [jobs, setJobs] = useState(jobsLists.slice(0, 30));
     const [pageNumber, setPageNumber] = useState(0);
@@ -63,7 +63,7 @@ const ProfileAllJobs = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={2} className={`mx-auto bg-color-w py-5 ${!showCheck && "d-none d-lg-block"}`}>
                         {showCheck && (

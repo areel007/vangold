@@ -196,7 +196,7 @@ function App() {
                         <ProfilePostJob />
                     </Route>
                     <Route path="/employer-setting">
-                        <EmployerSetting showSideMenu={showSideMenu} />
+                        <EmployerSetting showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/pay-to-employer">
                         <PayToEmployer />
@@ -208,10 +208,10 @@ function App() {
                         <FreelancerProfileDashboard />
                     </Route>
                     <Route path="/profile/dashboard">
-                        <ProfileDashboard showSideMenu={showSideMenu} />
+                        <ProfileDashboard showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/all-jobs">
-                        <ProfileAllJobs showSideMenu={showSideMenu} />
+                        <ProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/f-jobs/all-jobs">
                         <FreelancerProfileAllJobs />
@@ -223,28 +223,28 @@ function App() {
                         <MobileBusinessChatView />
                     </Route>
                     <Route path="/profile/jobs/job-description">
-                        <JobDescrip showSideMenu={showSideMenu} />
+                        <JobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/my-job">
-                        <ProfileMyJob showSideMenu={showSideMenu} />
+                        <ProfileMyJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/my-job-projects">
-                        <MyJobProjects showSideMenu={showSideMenu} />
+                        <MyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/f-my-job-projects">
                         <FreelancerMyJobProjects />
                     </Route>
                     <Route path="/profile/edit">
-                        <ProfileEdit showSideMenu={showSideMenu} />
+                        <ProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/find-talent">
-                        <FindTalent showSideMenu={showSideMenu} />
+                        <FindTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/manage-talent">
-                        <ManageTalent showSideMenu={showSideMenu} />
+                        <ManageTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/meeting-details">
-                        <MeetingDetails showSideMenu={showSideMenu} />
+                        <MeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/messages">
                         <ChatComponent />
@@ -304,7 +304,7 @@ function App() {
                         <FreelancerProfile />
                     </Route>
                     <Route path="/freelancer-profile-edit">
-                        <FreelancerProfileEdit showSideMenu={showSideMenu} />
+                        <FreelancerProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                 </Switch>
                 <Footer />

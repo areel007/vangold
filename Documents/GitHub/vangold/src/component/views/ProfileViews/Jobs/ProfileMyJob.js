@@ -37,14 +37,14 @@ const applicantsList = [
         avatar: avatar
     }
 ]
-const ProfileMyJob = ({ showSideMenu }) => {
+const ProfileMyJob = ({ showSideMenu, setShowSideMenu }) => {
     const [applicant, setApplicant] = useState(applicantsList)
     return (
         <section id="my-job" className="my-5 py-3">
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={4} className="mx-auto bg-color-w p-4">
                         <Card className="my-job-card">

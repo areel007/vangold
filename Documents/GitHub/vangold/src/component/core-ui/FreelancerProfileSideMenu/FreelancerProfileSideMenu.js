@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const FreelancerProfileSideMenu = () => {
+const FreelancerProfileSideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [jobList, setJobList] = useState(false);
     const [talentList, setTalentList] = useState(false);
@@ -57,6 +57,7 @@ const FreelancerProfileSideMenu = () => {
                     classes={{ root: classes.root, button: classes.button, }}
                     onClick={() => {
                         history.push("/profile/f-dashboard");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/f-dashboard" ? classes.active : null}
                 >
@@ -74,6 +75,7 @@ const FreelancerProfileSideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/f-jobs/all-jobs");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/f-jobs/all-jobs" ? classes.active : null}
                 >
@@ -91,6 +93,7 @@ const FreelancerProfileSideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/jobs/f-my-job-projects");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/jobs/f-my-job-projects" ? classes.active : null}
                 >
@@ -107,6 +110,7 @@ const FreelancerProfileSideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/messages");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/messages" ? classes.active : null}
                 >
@@ -123,6 +127,7 @@ const FreelancerProfileSideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/freelancer-profile-edit");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/freelancer-profile-edit" ? classes.active : null}
                 >

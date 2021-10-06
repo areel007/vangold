@@ -122,7 +122,7 @@ const BorderLinearProgress = withStyles((theme) => ({
     },
 }))(LinearProgress);
 
-const MyJobProjects = ({ showSideMenu }) => {
+const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
     const [select, setSelect] = useState('IN PROGRESS');
 
     return (
@@ -130,7 +130,7 @@ const MyJobProjects = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w p-5">
                         <Row>
