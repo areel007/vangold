@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import StoriesModal from "../../../core-ui/StoriesModal/StoriesModal"; 
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
 import '../ChatComponent2.css';

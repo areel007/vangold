@@ -14,7 +14,7 @@ import engineering from "../../../assets/images/sideMenu/engineering.png";
 import chat from "../../../assets/images/sideMenu/chat.png";
 import person from "../../../assets/images/sideMenu/person.png";
 import signout from "../../../assets/images/sideMenu/signout.png";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";  
 import LogoutModal from "../LogoutModal/LogoutModal";
 import './SideMenu.css'
 
@@ -49,7 +49,7 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const history = useHistory();
     const location = useLocation();
     const [modalShow, setModalShow] = useState(false);
-
+ 
     return (
         <div className={classes.root}>
             <List component="nav" className="menu-list-height">

@@ -25,11 +25,13 @@ const GroupChatViewTwo = () => {
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
                                 <div className="arrow-top-G-Chat">
-                                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 15L1 8L8 1" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 12H5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 19L5 12L12 5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
+
                                     <span>New group</span>
-                                </div> 
+                                </div>
                                 <div className="group__chat-subject">
                                     <div className="groupChatFileUpload">
                                         <input type="file" className="upload" />
@@ -60,7 +62,7 @@ const GroupChatViewTwo = () => {
                                 <div className="message__box-component2_header">
                                     <div className="chatBox__profile">
                                         <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
-                                        <p>VanGold Website Design</p>
+                                        <span>VanGold Website Design</span>
                                     </div>
                                 </div>
                                 <div className="group_chat-messager-container">

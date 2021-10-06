@@ -46,7 +46,7 @@ const FreelancerProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
     return (
         <section id="freelancer-profile-edit" className="pb-5 my-4">
             <Container fluid>
-                <Row>
+                <Row> 
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <FreelancerProfileSideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>

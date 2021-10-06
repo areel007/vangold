@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+
 const FreelancerProfileSideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [jobList, setJobList] = useState(false);
@@ -109,10 +110,10 @@ const FreelancerProfileSideMenu = ({ showSideMenu, setShowSideMenu }) => {
                     button
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
-                        history.push("/profile/messages");
+                        history.push("/profile/f-messages");
                         setShowSideMenu(!showSideMenu);
                     }}
-                    className={location.pathname === "/profile/messages" ? classes.active : null}
+                    className={location.pathname === "/profile/f-messages" ? classes.active : null}
                 >
                     <ListItemIcon>
                         <img src={chat} alt="chat" />
