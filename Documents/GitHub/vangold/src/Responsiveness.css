@@ -551,6 +551,15 @@
     left: 20px !important;
   }
 }
+@media screen and (max-width: 467px) {
+  .microsoft_jobs_discrip__{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
 @media screen and (max-width: 450px) {
   .header__inner .logo {
     gap: 8px;

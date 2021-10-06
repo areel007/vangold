@@ -7,6 +7,8 @@ import { useState } from "react";
 import micro from "../../../../assets/images/profile/micro.png";
 import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
+import filter from "../../../../assets/images/profile/filter.png";
+import cross from "../../../../assets/images/profile/cross1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal"; 
 import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import ShareModal from "../../../core-ui/ShareModal/ShareModal";
@@ -24,13 +26,14 @@ const jobs =
     offerSalary: "$2150/Month",
 }
 
-const FreelancerJobDescrip = () => {
+const FreelancerJobDescrip = ({showSideMenu, setShowSideMenu}) => {
     const [modalShow, setModalShow] = useState(false);
     const [shareShow, setShareShow] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
     const [freelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
     const [show, setShow] = useState(false);
+    const [showCheck, setShowCheck] = useState(false)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -39,13 +42,29 @@ const FreelancerJobDescrip = () => {
         <section id="job-descrip" className="my-5 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-4 d-none d-lg-block">
-                        <FreelancerProfileSideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <FreelancerProfileSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
-                    <Col xs={10} lg={2} className="mx-auto bg-color-w py-5 d-none d-lg-block">
-                        <SideCheckBoxes />
+                    <Col xs={12} lg={2} className={`mx-auto bg-color-w py-5 ${!showCheck && "d-none d-lg-block"}`}>
+                        {showCheck && (
+                            <>
+                                <div className="d-flex justify-content-between px-4">
+                                    <h1 className="side-filter">Filter</h1>
+                                    <div>
+                                        <img src={cross} alt="cross" onClick={() => setShowCheck(false)} />
+                                    </div>
+                                </div>
+                                <hr />
+                            </>
+                        )}
+                        <SideCheckBoxes showCheck={showCheck} />
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                        <div className="mb-5 text-end d-lg-none">
+                            {!showCheck && (
+                                <img src={filter} alt="filter button" className='img-fluid' onClick={() => setShowCheck(true)} />
+                            )}
+                        </div>
                         <div className="bg-color1">
                             <div>
                                 <img src={cover} alt="cover" className='img-fluid' />
@@ -65,14 +84,14 @@ const FreelancerJobDescrip = () => {
                                 </Row>
                                 <Row className='mt-4'>
                                     <Col xs={10} lg={6}>
-                                        <div className="d-flex">
+                                        <div className="d-flex microsoft_jobs_discrip__">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
-                                            <p className="text-16px-1">{jobs.address}</p>
-                                            <p style={{marginLeft: 10, cursor: "pointer"}} className="text-16px-1 me-3" onClick={() => setModalShow3(true)}>2,464 Followers</p>
+                                            <p style={{marginRight: 10}} className="text-16px-1">{jobs.address}</p>
+                                            <p style={{cursor: "pointer"}} className="text-16px-1 microsoft_jobs_discrip__paraG me-3" onClick={() => setModalShow3(true)}>2,464 Followers</p>
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="text-lg-end">
-                                        <div className="jobs-followers-text">
+                                        <div className="microsoft_posted__applicant_discrip__">
                                             <p className="text-16px-1 me-3">Posted 8 Days ago</p>
                                             <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                         </div>

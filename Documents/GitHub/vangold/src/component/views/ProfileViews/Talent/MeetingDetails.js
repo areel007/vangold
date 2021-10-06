@@ -25,14 +25,14 @@ const persons = [
     },
 ]
 
-const MeetingDetails = ({ showSideMenu }) => {
+const MeetingDetails = ({ showSideMenu, setShowSideMenu }) => {
 
     return (
         <section id="talent" className="my-3 py-3">
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <h1 className='meeting-head'>Vangold Daily Standup Meeting</h1>

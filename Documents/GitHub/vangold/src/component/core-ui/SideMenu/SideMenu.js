@@ -42,14 +42,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const SideMenu = () => {
+const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [jobList, setJobList] = useState(false);
     const [talentList, setTalentList] = useState(false);
     const history = useHistory();
     const location = useLocation();
     const [modalShow, setModalShow] = useState(false);
-
+ 
     return (
         <div className={classes.root}>
             <List component="nav" className="menu-list-height">
@@ -58,6 +58,7 @@ const SideMenu = () => {
                     classes={{ root: classes.root, button: classes.button, }}
                     onClick={() => {
                         history.push("/profile/dashboard");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/dashboard" ? classes.active : null}
                 >
@@ -94,6 +95,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/jobs/all-jobs");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/jobs/all-jobs" ? classes.active : null}
                         >
@@ -108,6 +110,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/jobs/my-job");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/jobs/my-job" ? classes.active : null}
                         >
@@ -122,6 +125,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/postjob");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/postjob" ? classes.active : null}
                         >
@@ -157,6 +161,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/talent/application");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/talent/application" ? classes.active : null}
                         >
@@ -171,6 +176,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/talent/find-talent");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/talent/find-talent" ? classes.active : null}
                         >
@@ -185,6 +191,7 @@ const SideMenu = () => {
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
                                 history.push("/profile/talent/manage-talent");
+                                setShowSideMenu(!showSideMenu);
                             }}
                             className={location.pathname === "/profile/talent/manage-talent" ? classes.active : null}
                         >
@@ -201,6 +208,7 @@ const SideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/messages");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/messages" ? classes.active : null}
                 >
@@ -217,6 +225,7 @@ const SideMenu = () => {
                     classes={{ root: classes.root, button: classes.button }}
                     onClick={() => {
                         history.push("/profile/edit");
+                        setShowSideMenu(!showSideMenu);
                     }}
                     className={location.pathname === "/profile/edit" ? classes.active : null}
                 >

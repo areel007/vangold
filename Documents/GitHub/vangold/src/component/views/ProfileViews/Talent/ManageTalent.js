@@ -48,7 +48,7 @@ const avatars = [
 
 ]
 
-const ManageTalent = ({ showSideMenu }) => {
+const ManageTalent = ({ showSideMenu, setShowSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
@@ -60,7 +60,7 @@ const ManageTalent = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color">
                         <Row>

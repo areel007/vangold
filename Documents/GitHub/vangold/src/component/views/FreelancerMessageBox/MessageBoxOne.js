@@ -3,9 +3,9 @@ import FreelancerProfileSideMenu from "../../core-ui/FreelancerProfileSideMenu/F
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
-import ChatBoxNine from "../../core-ui/AllMessagesBox/ChatBoxNine";
 
 import '../ChatView/ChatComponent.css';
+
 
 const chatUserData = {
     userAvatar: avatar
@@ -37,14 +37,14 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
-const FreelancerMessageBoxOne = () => {
+const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
   
     return (
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <FreelancerProfileSideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <FreelancerProfileSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="chat__container-header">

@@ -1,3 +1,8 @@
 .follow__box .follow__btn_fl{
   display: none;
 }
+.microsoft_posted__applicant_discrip__{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

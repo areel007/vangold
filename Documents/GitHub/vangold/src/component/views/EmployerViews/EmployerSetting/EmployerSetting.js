@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     button: {},
 }));
 
-const EmployerSetting = ({ showSideMenu }) => {
+const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [component, setComponent] = useState('payment');
@@ -50,7 +50,7 @@ const EmployerSetting = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>
                         <div className={classes.root}>
@@ -59,7 +59,7 @@ const EmployerSetting = ({ showSideMenu }) => {
                                     button
                                     classes={{ root: classes.root, selected: classes.selected, button: classes.button }}
                                     selected={selectedIndex === 0}
-                                    onClick={(event) => { handleListItemClick(event, 0); setComponent('payment'); }}
+                                    onClick={(event) => { handleListItemClick(event, 0); setComponent('payment');}}
                                 >
                                     <ListItemIcon >
                                         <GoPrimitiveDot />

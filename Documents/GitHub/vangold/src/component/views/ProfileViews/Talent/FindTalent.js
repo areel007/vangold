@@ -12,7 +12,7 @@ import Star from "../../../core-ui/star/star"
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
 
-const FindTalent = ({ showSideMenu }) => {
+const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
     const [showCheck, setShowCheck] = useState(false)
     const stars = Array(5).fill(0);
     const [currentValue] = useState(3);
@@ -129,7 +129,7 @@ const FindTalent = ({ showSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu />
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={2} className={`mx-auto bg-color-w py-2 ${!showCheck && "d-none d-lg-block"}`}>
                         {showCheck && (
@@ -146,11 +146,14 @@ const FindTalent = ({ showSideMenu }) => {
                         <SideCheckBoxes1 showCheck={showCheck} />
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                        
+                        {/* FILTER BUTTON HERE */}
                         <div className="mb-5 text-end d-lg-none">
                             {!showCheck && (
                                 <img src={filter} alt="filter button" className='img-fluid' onClick={() => setShowCheck(true)} />
                             )}
                         </div>
+
                         <div className="freelancers-list__freelancer">
                             {displayfreelancers}
                             <div className="paginationContainer">

@@ -219,7 +219,7 @@ const chartData = [
 
 const percentage = 81.2;
 
-const FreelancerProfileDashboard = ({ showSideMenu }) => {
+const FreelancerProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex1, setSelectedIndex1] = useState(0);
@@ -233,13 +233,13 @@ const FreelancerProfileDashboard = ({ showSideMenu }) => {
     const handleListItemClick1 = (event, index) => {
         setSelectedIndex1(index);
     };
-
+ 
     return (
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
                     <Col xs={10} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <FreelancerProfileSideMenu />
+                    <FreelancerProfileSideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Row>
