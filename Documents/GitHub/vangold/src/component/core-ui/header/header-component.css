@@ -219,7 +219,12 @@ p.user-name__name {
 .hamburger-hide {
   display: none;
 }
-
+.auth-buttons a.login:hover{
+  color: var(--primary);
+}
+.auth-buttons a.sign-up:hover{
+  color: #fff;
+}
 @media screen and (max-width: 991px) {
   .header__inner {
     /*justify-content: space-between;*/

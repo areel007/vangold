@@ -73,10 +73,16 @@
   gap: 24px;
 }
 .sideBarTopJobs {
-  height: 1079px;
+  width: 300px;
+  /* height: 1079px; */
   background: #c2c4bfab;
 }
-
+.mobile_searchBar__filter{
+  
+}
+.mobile__filter{
+  float: right;
+}
 .top-jobs_header {
   background: #45b618;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);

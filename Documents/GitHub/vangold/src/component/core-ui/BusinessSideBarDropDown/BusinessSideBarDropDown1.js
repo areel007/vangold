@@ -24,7 +24,7 @@ const BusinessUseStyles = makeStyles((theme) => ({
         fontSize: "16px",
         backgroundColor: "#45B618",
         marginTop: "2rem",
-        [theme.breakpoints.down("769")]: {
+        [theme.breakpoints.down("991")]: {
             backgroundColor: "white",
           }
     },
@@ -33,7 +33,7 @@ const BusinessUseStyles = makeStyles((theme) => ({
         fontWeight: "700",
         lineHeight: "15px",
         color: "white",
-        [theme.breakpoints.down("769")]: {
+        [theme.breakpoints.down("991")]: {
             color: "#333333",
             fontWeight: "normal"
           }

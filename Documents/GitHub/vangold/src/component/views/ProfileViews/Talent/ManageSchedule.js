@@ -1,4 +1,5 @@
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import { Col } from "react-bootstrap";
 import Calendar from "../../../../assets/images/ManageSchedule/calendar.png";
 import Clock from "../../../../assets/images/ManageSchedule/clock.png";
 import Member1 from "../../../../assets/images/ManageSchedule/user-1.png";
@@ -6,13 +7,13 @@ import Member2 from "../../../../assets/images/ManageSchedule/user-2.png";
 import Member3 from "../../../../assets/images/ManageSchedule/user-3.png";
 import "./ManageSchedule.css";
 
-function Manage__Schedule() {
+function ManageSchedule({ showSideMenu, setShowSideMenu }) {
 
   return (
     <div className="Manage__Schedule__container">
-      <div className="Manage__Schedule__SideBar">
-        <SideMenu />
-      </div>
+      <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+          <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+      </Col>
       <div className="Manage__Schedule">
       <div className="cal-header">
         <div className="left-box">
@@ -246,4 +247,4 @@ function Manage__Schedule() {
   );
 }
 
-export default Manage__Schedule;
+export default ManageSchedule;
