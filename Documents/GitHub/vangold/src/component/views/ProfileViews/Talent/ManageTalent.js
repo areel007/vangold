@@ -13,6 +13,8 @@ import avatar6 from "../../../../assets/images/profile/avatar6.png";
 import CreateEventModal from "../../../core-ui/CreateEventModal/CreateEventModal";
 import JoinMeetingModal from "../../../core-ui/JoinMeetingModal/JoinMeetingModal";
 import PresentScreenModal from "../../../core-ui/PresentScreenModal/PresentScreenModal";
+import { useHistory, useLocation } from "react-router-dom";
+
 import './Talent.css'
 
 const avatars = [
@@ -50,6 +52,8 @@ const ManageTalent = ({ showSideMenu, setShowSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
     const [modalShow3, setModalShow3] = useState(false);
+    const history = useHistory();
+
 
     return (
         <section id="talent" className="my-3 py-3">
@@ -81,7 +85,9 @@ const ManageTalent = ({ showSideMenu, setShowSideMenu }) => {
                                         </Card>
                                     </Col>
                                     <Col xs={6} className='p-2 p-md-4'>
-                                        <Card className="card-green p-5">
+                                        <Card style={{cursor: "pointer"}} onClick={() => {
+                                                history.push("/profile/talent/ManageSchedule");
+                                            }} className="card-green p-5">
                                             <div className="icon-bg text-center">
                                                 <img src={cal} alt="cal" className='img-fluid img-bg' />
                                             </div>

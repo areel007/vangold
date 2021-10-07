@@ -7,8 +7,9 @@ import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import { CgArrowLongRight } from "react-icons/cg";
 import { useState } from "react";
 import { Button, Col, Container, Modal, Row } from "react-bootstrap";
-import { ImStarEmpty, ImStarHalf, ImStarFull } from "react-icons/im";
+import { ImStarHalf, ImStarFull } from "react-icons/im";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
+import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./FreelancerProfile.css";
 
 const followersList = [
@@ -42,6 +43,7 @@ const followersList = [
 const FreelancerProfile = () => {
     const [image, setImage] = useState(false);
     const [modalShow, setModalShow] = useState(false);
+    const [modalShow3, setModalShow3] = useState(false);
     const [followBtn, setFollowBtn] = useState("follow");
     const [showFollow, setShowFollow] = useState(false);
     const [followers, setFollowers] = useState(false);
@@ -100,9 +102,9 @@ const FreelancerProfile = () => {
                     </div>
                 </div>
                 <div className="text-center">
-                    <p className="text-16px mt-3 fw-bold">Product Designer <span className="followers ms-2" onClick={() => setFollowers(true)}>{followersList.length} Followers</span> </p>
+                    <p className="text-16px mt-3 fw-bold">Product Designers <span style={{fontSize: 16, fontWeight: 500, color: "#4F4F4F", cursor: "pointer" }} onClick={() => setModalShow3(true)}>164 Followers</span></p>
                 </div>
-                <div className="d-flex justify-content-center mt-5">
+                <div className="d-flex freelancer__profile_buttons justify-content-center mt-5">
                     <Button className="freelance-btn me-4"
                         onClick={() => setModalShow(true)}
                     >
@@ -299,6 +301,10 @@ const FreelancerProfile = () => {
                     head="Send an offer to Daramola"
                     para="State clearly what you want Daramola to do for you"
                     btntext='Send' />
+                <FollowersModal 
+                        show={modalShow3}
+                        onHide={() => setModalShow3(false)}
+                        head="Followers"/>
             </Container>
         </section >
     );

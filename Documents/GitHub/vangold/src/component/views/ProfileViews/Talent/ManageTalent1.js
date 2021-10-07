@@ -1,7 +1,6 @@
 import { Card, Col, Container, Row } from "react-bootstrap";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import ManageTalentDropDown from "../../../core-ui/ManageTalentSiderBarDropDown/ManageTalentSiderBarDropDown";
-import { useState } from "react";
 import Image1 from "../../../../assets/images/manage-talents/Rectangle9205.png"
 import Image2 from "../../../../assets/images/manage-talents/Rectangle92062.png"
 import Image3 from "../../../../assets/images/manage-talents/Rectangle92061.png"

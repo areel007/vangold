@@ -1,5 +1,5 @@
-.bg-color-w {
-  background-color: #f9f9f9;
+.follow__box .follow__btn_fl {
+  display: none;
 }
 #profile-alljobs,
 #my-job,
@@ -93,7 +93,7 @@
 }
 #job-descrip .job-icon-fav {
   font-size: 2rem;
-  color: #45B618;
+  color: #45b618;
 }
 #job-descrip .job-btn {
   border: 1px solid #00000033;
@@ -255,7 +255,7 @@
     font-size: 1rem;
     color: #4f4f4f;
   }
- 
+
   #job-descrip .text-16px-1 {
     font-size: 14px;
   }
@@ -275,5 +275,10 @@
 @media (min-width: 1000px) and (max-width: 1110px) {
   #my-job .btn-2 {
     margin-right: 0.5rem;
+  }
+  .microsoft_posted__applicant_discrip__ {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 }

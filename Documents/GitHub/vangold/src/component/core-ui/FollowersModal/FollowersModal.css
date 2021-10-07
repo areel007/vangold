@@ -1,0 +1,47 @@
+.followers-unfollow-modalHeader {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.followers-unfollow-modalHeader h1 {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-24);
+  line-height: 28px;
+  color: #141414;
+}
+.followers_Modal-container{
+  overflow-y: scroll;
+  height: 483px;
+}
+.followers_Modal-box {
+  padding-left: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.followers_Modal-box img {
+  width: 53px;
+  height: 53px;
+}
+.followers-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.followers-details span:nth-child(1) {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-14);
+  line-height: 18px;
+  color: var(--secondary);
+}
+.followers-details span:nth-child(2) {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-12);
+  line-height: 15px;
+  color: #666666;
+}

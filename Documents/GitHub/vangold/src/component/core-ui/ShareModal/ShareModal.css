@@ -1,0 +1,28 @@
+.modal_-_channelHead.share__job__title {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: var(--fs-36);
+  line-height: 42px;
+  color: #141414;
+}
+.share_-_job_-_title_-_Parag {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #808080;
+  position: relative;
+  top: -10px;
+}
+.shareIcons_-_img{
+  text-align: center;
+}
+
+.shareIcons_-_img img{
+  max-width: 70px;
+  height: 70px;
+  cursor: pointer;
+  margin-right: 10px;
+}

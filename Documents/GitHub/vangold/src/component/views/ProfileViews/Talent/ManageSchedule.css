@@ -1,0 +1,602 @@
+.Manage__Schedule__container {
+  display: flex;
+}
+.Manage__Schedule__container .Manage__Schedule__SideBar {
+  width: 280px;
+}
+.Manage__Schedule {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 40px 44px 100px;
+}
+.Manage__Schedule .cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.Manage__Schedule .cal-header .left-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.Manage__Schedule .cal-header .left-box img {
+  cursor: pointer;
+}
+.Manage__Schedule .cal-header .left-box .p1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+  margin: 0;
+}
+.Manage__Schedule .cal-header .right-arrows {
+  display: flex;
+  gap: 12px;
+}
+.Manage__Schedule .cal-header .right-arrows button {
+  background: rgba(217, 218, 215, 0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: none;
+  outline: navajowhite;
+}
+.Manage__Schedule .cal-header .right-arrows button:hover {
+  background: #45b618;
+}
+.Manage__Schedule .cal-header .right-arrows button path {
+  fill: #333333;
+}
+.Manage__Schedule .cal-header .right-arrows button:hover path {
+  fill: white;
+}
+.Manage__Schedule .cal-body {
+  padding-left: 45px;
+}
+.Manage__Schedule .cal-body .cal-wrap {
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(217, 218, 215, 0.5);
+}
+.Manage__Schedule .cal-body .cal-wrap .row {
+  position: relative;
+  display: flex;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .time {
+  position: absolute;
+  left: 0;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .eight {
+  top: 78px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .eight-3 {
+  top: 158px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .nine {
+  top: 238px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .nine-3 {
+  top: 318px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .ten {
+  top: 398px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .ten-3 {
+  top: 478px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .eleven {
+  top: 558px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .eleven-3 {
+  top: 638px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .twelve {
+  top: 718px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .twelve-3 {
+  top: 798px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .one {
+  top: 878px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .one-3 {
+  top: 958px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .two {
+  top: 1038px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .two-3 {
+  top: 1118px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .three {
+  top: 1198px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .three-3 {
+  top: 1278px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .four {
+  top: 1358px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .four-3 {
+  top: 1438px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .five {
+  top: 1518px;
+  left: -50px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1,
+.Manage__Schedule .cal-body .cal-wrap .row .col2,
+.Manage__Schedule .cal-body .cal-wrap .row .col3,
+.Manage__Schedule .cal-body .cal-wrap .row .col4,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 {
+  height: 1600px;
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .day-date,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .day-date,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .day-date,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .day-date,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .day-date {
+  padding: 24px 16px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .day-date .day-noMeetings,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .day-date .day-noMeetings,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .day-date .day-noMeetings,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .day-date .day-noMeetings,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .day-date .day-noMeetings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .day-date
+  .day-noMeetings
+  .l-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .day-date
+  .day-noMeetings
+  .l-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .day-date
+  .day-noMeetings
+  .l-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .day-date
+  .day-noMeetings
+  .l-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .day-date
+  .day-noMeetings
+  .l-sp {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333333;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .day-date
+  .day-noMeetings
+  .r-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .day-date
+  .day-noMeetings
+  .r-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .day-date
+  .day-noMeetings
+  .r-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .day-date
+  .day-noMeetings
+  .r-sp,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .day-date
+  .day-noMeetings
+  .r-sp {
+  width: 24px;
+  height: 24px;
+  background: #45b618;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .day-date .date,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .day-date .date,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .day-date .date,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .day-date .date,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .day-date .date {
+  font-weight: normal;
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap {
+  position: relative;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event {
+  position: absolute;
+  top: 0;
+  padding: 32px 20px 20px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event .e-name,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event .e-name,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event .e-name,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event .e-name,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event .e-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 7px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event .e-time {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 50px;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .events-wrap
+  .event
+  .e-time
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .events-wrap
+  .event
+  .e-time
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .events-wrap
+  .event
+  .e-time
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .events-wrap
+  .event
+  .e-time
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .events-wrap
+  .event
+  .e-time
+  span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #4f4f4f;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event .e-members,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event .e-members,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event .e-members,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event .e-members,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .events-wrap
+  .event
+  .e-members {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .events-wrap
+  .event
+  .e-members
+  img,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .events-wrap
+  .event
+  .e-members
+  img,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .events-wrap
+  .event
+  .e-members
+  img,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .events-wrap
+  .event
+  .e-members
+  img,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .events-wrap
+  .event
+  .e-members
+  img {
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .events-wrap
+  .event
+  .e-members
+  .extra-members,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .events-wrap
+  .event
+  .e-members
+  .extra-members,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .events-wrap
+  .event
+  .e-members
+  .extra-members,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .events-wrap
+  .event
+  .e-members
+  .extra-members,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .events-wrap
+  .event
+  .e-members
+  .extra-members {
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #45b618;
+}
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col1
+  .events-wrap
+  .event
+  .e-members
+  .extra-members
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col2
+  .events-wrap
+  .event
+  .e-members
+  .extra-members
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col3
+  .events-wrap
+  .event
+  .e-members
+  .extra-members
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col4
+  .events-wrap
+  .event
+  .e-members
+  .extra-members
+  span,
+.Manage__Schedule
+  .cal-body
+  .cal-wrap
+  .row
+  .col5
+  .events-wrap
+  .event
+  .e-members
+  .extra-members
+  span {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event1,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event1,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event1,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event1,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event1 {
+  position: absolute;
+  top: 290px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event2,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event2,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event2,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event2,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event2 {
+  position: absolute;
+  top: 600px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event2 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event2 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event2 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event2 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event2 .e-time {
+  margin-bottom: 150px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event3,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event3,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event3,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event3,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event3 {
+  position: absolute;
+  top: 1000px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event3 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event3 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event3 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event3 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event3 .e-time {
+  margin-bottom: 240px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event4,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event4,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event4,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event4,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event4 {
+  position: absolute;
+  top: 400px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col1 .events-wrap .event4 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col2 .events-wrap .event4 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col3 .events-wrap .event4 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col4 .events-wrap .event4 .e-time,
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .events-wrap .event4 .e-time {
+  margin-bottom: 170px;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col5 {
+  border-right: 0;
+}
+.Manage__Schedule .cal-body .cal-wrap .row .col5 .day-date {
+  border-right: 0;
+}
+
+/*# sourceMappingURL=App.css.map */

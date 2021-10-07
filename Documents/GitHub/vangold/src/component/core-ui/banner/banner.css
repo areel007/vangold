@@ -61,8 +61,8 @@
 }
 .bannerTwo__image {
   width: 80rem;
-  position: relative;
-  top: 22px;
+  /* position: relative;
+  top: 22px; */
 }
 .bannerTwo__image img {
   width: 100%;
