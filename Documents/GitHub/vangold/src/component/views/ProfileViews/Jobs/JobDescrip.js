@@ -83,8 +83,7 @@ const followersList = [
 
 const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
-    const [modalShow3, setModalShow3] = useState(false);
-    const [freelancer] = useState(true);    
+    const [freelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
     const [shareList, setShareList] = useState(false);
     const [show, setShow] = useState(false);
@@ -163,18 +162,13 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
-<<<<<<< HEAD
                                             <p style={{ marginLeft: 10, cursor: 'pointer' }} className="text-16px-1 me-3" onClick={() => setFollowers(true)}>{followersList.length} Followers</p>
-=======
-                                            <p style={{marginLeft: 10, cursor: "pointer"}} className="text-16px-1 me-3" onClick={() => setModalShow3(true)}>2,464 Followers</p>
->>>>>>> 1a5a24d1ec61dd8cf41fc39a3fd31b3f74f0c2d3
                                         </div>
                                     </Col>
                                     <Col xs={12} lg={6} className="d-lg-flex justify-content-end">
                                         <p className="text-16px-1 me-3">Posted 8 Days ago</p>
                                         <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                     </Col>
-<<<<<<< HEAD
                                 </Row>
                                 <Modal show={followers} onHide={() => { setFollowers(false) }}>
                                     <Modal.Header closeButton>
@@ -190,10 +184,6 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                         </div>
                                     )))}
                                 </Modal>
-=======
-                              
-                                </Row>
->>>>>>> 1a5a24d1ec61dd8cf41fc39a3fd31b3f74f0c2d3
                                 <div className="mt-4">
                                     {followBtn === "follow" ? (
 
@@ -259,11 +249,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                     head="Send a bid for this job"
                                     para="What makes you the right person for this job"
                                     btntext='Apply' />
-                                    
-                <FollowersModal 
-                        show={modalShow3}
-                        onHide={() => setModalShow3(false)}
-                        head="Followers"/>
+
                             </div>
                         </div>
                     </Col>
