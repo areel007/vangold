@@ -9,6 +9,12 @@ import cover from "../../../../assets/images/profile/cover.png";
 import dot from "../../../../assets/images/profile/dot.png";
 import filter from "../../../../assets/images/profile/filter.png";
 import cross from "../../../../assets/images/profile/cross1.png";
+import fb from "../../../../assets/images/profile/fb.png";
+import wa from "../../../../assets/images/profile/wa.png";
+import tw from "../../../../assets/images/profile/tw.png";
+import ln from "../../../../assets/images/profile/in.png";
+import pin from "../../../../assets/images/profile/pin.png";
+import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
 import "./Jobs.css";
 
@@ -24,12 +30,66 @@ const jobs =
     offerSalary: "$2150/Month",
 }
 
+const socialList = [
+    {
+        icon: tw,
+        link: "/"
+    },
+    {
+        icon: fb,
+        link: "/"
+    },
+    {
+        icon: wa,
+        link: "/"
+    },
+    {
+        icon: ln,
+        link: "/"
+    },
+    {
+        icon: pin,
+        link: "/"
+    },
+]
+
+const followersList = [
+    {
+        id: 1,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 2,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 3,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+    {
+        id: 4,
+        name: "Kali Jay",
+        avatar: avatar1,
+        position: "Frontend Developer"
+    },
+]
+
 const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
     const [modalShow, setModalShow] = useState(false);
     const [freelancer, setFreelancer] = useState(true);
     const [followBtn, setFollowBtn] = useState("follow");
+    const [shareList, setShareList] = useState(false);
     const [show, setShow] = useState(false);
-    const [showCheck, setShowCheck] = useState(false)
+    const [showCheck, setShowCheck] = useState(false);
+    const [followers, setFollowers] = useState(false);
+    const [fav, setFav] = useState(false);
+
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -73,37 +133,56 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                     <Col xs={8} lg={8}>
                                         <h1 className='head'>{jobs.name}</h1>
                                     </Col>
-                                    <Col xs={4} lg={4} className="align-self-center text-end">
-                                        <Button variant='light' className='job-btn me-2 me-lg-4 mt-4'><BsFillHeartFill className='job-icon' /></Button>
-                                        <Button variant='light' className='job-btn mt-4' ><ImShare2 className='job-icon' /></Button>
+                                    <Col xs={4} lg={4} className="mt-2 mt-md-4 text-end">
+                                        <Button variant='light' className='job-btn me-2 me-lg-4 mt-4' onClick={() => setFav(!fav)}><BsFillHeartFill className={`${fav ? "job-icon-fav" : "job-icon"}`} /></Button>
+                                        <Button variant='light' className='job-btn mt-4' onClick={() => setShareList(true)}><ImShare2 className='job-icon' /></Button>
                                     </Col>
                                 </Row>
+                                <Modal show={shareList} onHide={() => setShareList(false)} dialogClassName="modal-style">
+                                    <Modal.Header closeButton>
+                                    </Modal.Header>
+                                    <div className="p-5 text-center">
+                                        <h2 className='unfollow-mod-head mt-4'>Share this Job</h2>
+                                        <p className='mt-2'>Spread the word about this Job on Vangold</p>
+                                        <div className='d-flex justify-content-center mt-5'>
+                                            {
+                                                socialList.map(social => (
+                                                    <div className="me-4">
+                                                        <a href={social.link}><img src={social.icon} alt="icon" className="img-fluid" /></a>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
+                                    </div>
+
+                                </Modal>
                                 <Row className='mt-4'>
                                     <Col xs={10} lg={6}>
                                         <div className="d-flex">
                                             <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                             <p className="text-16px-1">{jobs.address}</p>
-                                            <p style={{marginLeft: 10}} className="text-16px-1 me-3">2,464 Followers</p>
+                                            <p style={{ marginLeft: 10, cursor: 'pointer' }} className="text-16px-1 me-3" onClick={() => setFollowers(true)}>{followersList.length} Followers</p>
                                         </div>
                                     </Col>
-                                    <Col xs={12} lg={6} className="text-lg-end">
-                                        <div className="jobs-followers-text">
-                                            <p className="text-16px-1 me-3">Posted 8 Days ago</p>
-                                            <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} lg={6} className=".follow-visit-site-btn">
-                                        <div className="follow-visit-site-btn">
-                                            <div className="follow__box">
-                                                <button className="follow__btn">FOLLOW</button>
-                                                <button className="following__btn">FOLLOWING</button>
-                                            </div>
-                                            <div className="visit-website__btn">
-                                                <button>WEBSITE</button>
-                                            </div>
-                                        </div>
+                                    <Col xs={12} lg={6} className="d-lg-flex justify-content-end">
+                                        <p className="text-16px-1 me-3">Posted 8 Days ago</p>
+                                        <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                     </Col>
                                 </Row>
+                                <Modal show={followers} onHide={() => { setFollowers(false) }}>
+                                    <Modal.Header closeButton>
+                                        <h2 className='unfollow-mod-head mt-4'>Followers</h2>
+                                    </Modal.Header>
+                                    {followersList.map((follower => (
+                                        <div className='my-2 d-flex p-4' key={follower.key} >
+                                            <div className='me-4'><img src={follower.avatar} alt="avatar" className='img-fluid' /></div>
+                                            <div>
+                                                <p className='followers-mod-head mb-0'>{follower.name}</p>
+                                                <p style={{ color: "#666666" }}>{follower.position}</p>
+                                            </div>
+                                        </div>
+                                    )))}
+                                </Modal>
                                 <div className="mt-4">
                                     {followBtn === "follow" ? (
 
@@ -114,7 +193,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                     )}
                                     <button className='web-btn'>VISIT WEBSITE</button>
                                 </div>
-                                <Modal show={show} onHide={handleClose}>
+                                <Modal show={show} onHide={handleClose} className="mt-5">
                                     <Modal.Header closeButton>
                                         <h2 className='unfollow-mod-head mt-4'>Unfollow Page</h2>
                                     </Modal.Header>

@@ -91,6 +91,10 @@
   font-size: 2rem;
   color: #4f4f4f;
 }
+#job-descrip .job-icon-fav {
+  font-size: 2rem;
+  color: #45B618;
+}
 #job-descrip .job-btn {
   border: 1px solid #00000033;
   padding: 0.5rem 1rem;
