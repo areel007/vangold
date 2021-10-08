@@ -18,11 +18,6 @@ const BusinessChatViewTwo = (props) => {
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="business-chat-container">
                             <div className="sideBarBusiness2">
-                                <div className="business__channel-header mobile__business__channel-header">
-                                    <div className="business__channel-header-left">
-                                        <h2>Channel</h2>
-                                    </div>
-                                </div>
                                 <BusinessSideBarDropDown />
                             </div>
                             <div className="business-chat-view2">

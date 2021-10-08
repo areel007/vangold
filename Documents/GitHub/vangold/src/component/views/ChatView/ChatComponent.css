@@ -319,6 +319,12 @@
   line-height: 100%;
   color: #333333;
 }
+.chat__box__contaniner-left
+  .grp__chat__view-left-top
+  .grp__chat__view-left-top-header
+  svg {
+  cursor: pointer;
+}
 .chat__box__contaniner-left .arrow-top-G-Chat {
   height: 70px;
   background: rgba(69, 182, 24, 0.2);

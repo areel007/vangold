@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
+import { useHistory } from "react-router-dom";
 import "./AllMessagesBox.css";
 import "./responsive.css";
 
 const ChatBoxOne = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const history = useHistory();
 
     const openPopover = () => {
         setIsShow(!isShow);
@@ -53,7 +55,7 @@ const ChatBoxOne = (props) => {
                                 </svg>
                             </div>
                             <div className="ChatBox__popover__links">
-                                <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
+                                <Link onClick={() => { closePopover(); history.push("/profile/AddGroupUsers")}}>Create Group</Link>
                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
                             </div>                                     
                         </div>

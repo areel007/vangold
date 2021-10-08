@@ -11,6 +11,16 @@
   .SearchBox{
     display: none;
   }
+  .business-chat-view2 {
+    display: none !important;
+  }
+  .business__channel-header h2{
+    color: #333333 !important;
+  }
+  .sideBarBusinessChat, .sideBarBusiness2 {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
   .chat__box__container{
     display: none;
   }
@@ -303,9 +313,7 @@
   .collaborate__inner2 {
     flex-direction: column;
   }
-  .sideBarBusiness2 {
-    display: none !important;
-  }
+ 
   .BusinessChatImg-content {
     margin-top: 63px;
   }

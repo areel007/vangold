@@ -5,25 +5,21 @@ import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/Bu
 import BusinessChatImg from "../../../../assets/images/business-chat.png";
 import "./BusinessChatView.css";
 
-const BusinessChatViewThree = (props) => {
-    
+const BusinessChatViewThree = ({ showSideMenu, setShowSideMenu }) => {
+    const [showCheck, setShowCheck] = useState(false)
+
   
     return (
         <div>
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="business-chat-container">
                             <div className="sideBarBusiness2">
-                                <div className="business__channel-header mobile__business__channel-header">
-                                    <div className="business__channel-header-left">
-                                        <h2>Channel</h2>
-                                    </div>
-                                </div>
-                                <BusinessSideBarDropDown />
+                                <BusinessSideBarDropDown showCheck={showCheck}/>
                             </div>
                             <div className="business-chat-view2">
                                 <div className="inn-business-chat-view">

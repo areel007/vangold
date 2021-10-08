@@ -94,6 +94,9 @@
 .business-chat__side-bar-list:hover {
   background: #164d00;
 }
+.business-chat__side-bar-list:hover span{
+  color: #ffffff !important;
+}
 .mobile__business-chat__side-bar-list .MuiFormControl-root{
   width: 100% !important;
 }

@@ -267,7 +267,7 @@ function App() {
                         <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/AddGroupUsers">
-                        <AddGroupUsers />
+                        <AddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/group-chat2">
                         <GroupChatViewTwo showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
@@ -282,7 +282,7 @@ function App() {
                         <BusinessChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-1">
-                        <BusinessChatViewThree />
+                        <BusinessChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-2">
                         <BusinessChatViewTwo />

@@ -10,7 +10,8 @@ import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.pn
 import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import GroupParticipants from "../../../core-ui/AllMessagesBox/GroupParticipants";
-import '../ChatComponent.css'
+import { useHistory } from "react-router-dom";
+import '../ChatComponent.css';
 
 const otherUsersData = [
     {
@@ -53,10 +54,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '14px'
     },
 }));
-const AddGroupUsers = () => {
+const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
-    
+    const history = useHistory();
+
     const classes = useStyles();
     const [value, setValue] = useState('');
     const [chipData, setChipData] = useState([]);
@@ -100,8 +102,8 @@ const AddGroupUsers = () => {
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
+                <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="chat__container-header">
@@ -112,7 +114,9 @@ const AddGroupUsers = () => {
                             <div className="chat__box__contaniner-left">
                                 <div className="grp__chat__view-left-top">
                                     <div className="grp__chat__view-left-top-header">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg onClick={() => {
+                                                            history.push("/profile/messages")
+                                                        }} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19 12H5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M12 19L5 12L12 5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
