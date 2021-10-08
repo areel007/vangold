@@ -139,6 +139,8 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                         <Button variant='light' className='job-btn mt-4' onClick={() => setShareList(true)}><ImShare2 className='job-icon' /></Button>
                                     </Col>
                                 </Row>
+
+                                {/* social modal */}
                                 <Modal show={shareList} onHide={() => setShareList(false)} dialogClassName="modal-style">
                                     <Modal.Header closeButton>
                                     </Modal.Header>
@@ -170,6 +172,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                         <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                     </Col>
                                 </Row>
+                                {/* folllowers modal */}
                                 <Modal show={followers} onHide={() => { setFollowers(false) }}>
                                     <Modal.Header closeButton>
                                         <h2 className='unfollow-mod-head mt-4'>Followers</h2>
