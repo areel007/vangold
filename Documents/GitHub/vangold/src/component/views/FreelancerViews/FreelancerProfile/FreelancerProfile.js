@@ -140,7 +140,7 @@ const FreelancerProfile = () => {
                         <h2 className='unfollow-mod-head mt-4'>Followers</h2>
                     </Modal.Header>
                     {followersList.map((follower => (
-                        <div className='mt-4 d-flex p-4' key={follower.key} >
+                        <div className='my-2 d-flex p-4' key={follower.key} >
                             <div className='me-4'><img src={follower.avatar} alt="avatar" className='img-fluid' /></div>
                             <div>
                                 <p className='followers-mod-head mb-0'>{follower.name}</p>
