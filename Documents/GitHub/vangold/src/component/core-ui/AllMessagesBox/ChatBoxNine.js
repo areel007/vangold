@@ -1,13 +1,16 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
 import Avatar1 from "../../../assets/images/chat/Ellipse1476.png";
 import "./AllMessagesBox.css";
 
 const ChatBoxNine = (props) => {
-
+ 
     return (
         <>
             <div className="MessageBox__">
+                <div className="chat__container-header mt-5">
+                    <p className="chat__container-title">Inbox</p>
+                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                </div>
                 <div className="MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={Avatar1} alt="Avatar1" />

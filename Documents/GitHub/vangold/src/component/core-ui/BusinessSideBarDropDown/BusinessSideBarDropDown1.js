@@ -53,6 +53,26 @@ const GreenCheckbox = withStyles({
     checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
+
+const UsersData = [
+    {
+        usersAvatar: Avatar1,
+        userName: 'Carlos Pena',
+    },
+    {
+        usersAvatar: Avatar2,
+        userName: 'Damilare Olulana',
+    },
+    {
+        usersAvatar: Avatar3,
+        userName: 'Dare Bello',
+    },
+    {
+        usersAvatar: Avatar4,
+        userName: 'Vivian Ufot',
+    },
+]
+
 const BusinessSideBarDropDown1 = () => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
@@ -207,65 +227,23 @@ const BusinessSideBarDropDown1 = () => {
                     </ListItem>
 
                     <Collapse in={tools} timeout="auto" unmountOnExit>
-                    <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar1} alt="business-chat-msg-avatar" />
-                                                <span>Carlos Pena</span>
-                                            </div>
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar2} alt="business-chat-msg-avatar" />
-                                                <span>Damilare Olulana</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar3} alt="business-chat-msg-avatar" />
-                                                <span>Dare Bello</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar4} alt="business-chat-msg-avatar" />
-                                                <span>Vivian Ufot</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
+                        { UsersData.map((userChatData) => (
+                            <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
+                                <List component="div" disablePadding>
+                                    <ListItem>
+                                        <FormControl component="fieldset" className={classes.formControl}>
+                                            <FormGroup>
+                                                <div className='d-flex business-chat__side-bar-content justify-content-between'>
+                                                    <img className="business-chat__avatar_img" src={userChatData.usersAvatar} alt="business-chat-msg-avatar" />
+                                                    <span>{userChatData.userName}</span>
+                                                </div>
+                                            </FormGroup>
+                                        </FormControl>
+                                    </ListItem>
+                                </List>
+                            </div>
+                            ))
+                        }
                         <div onClick={() => setModalShow2(true)} className="business-chat__side-bar-list mobile__business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>

@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useState}  from 'react';
 import { Link } from "react-router-dom";
-import { Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../../core-ui/SideMenu/SideMenu"
+import { Col, Container, Row } from "react-bootstrap";
+import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import avatar from "../../../../assets/images/avatar/Ellipse7.png";
-import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png"
+import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png";
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import '../ChatComponent.css';
-import Stories from "./Stories"
-import ChatBoxTwo from "../../../core-ui/AllMessagesBox/ChatBoxTwo"
+import Stories from "./Stories";
+import ChatBoxTwo from "../../../core-ui/AllMessagesBox/ChatBoxTwo";
+import { useHistory } from "react-router-dom";  
+
 
 const chatUserData = {
     userAvatar: avatar,
@@ -45,6 +47,8 @@ const otherUsersData = [
 ]
 
 const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
+    const [seeMessage, setSeeMessage] = useState(false);
+    const history = useHistory();
 
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -84,18 +88,36 @@ const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
                                         <input type="text" placeholder="Type contact name" />
                                     </div>
                                     <div className="users__chat__avatar">
-                                        {
-                                            otherUsersData.map((userChatData, index) => (
-                                                <div key={index} className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat Avatar" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title}</p>
+                                        <div className="d-none d-lg-block">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            setSeeMessage(true);
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="d-lg-none">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            history.push("/profile/g-chat-user")
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>

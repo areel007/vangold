@@ -251,11 +251,8 @@ function App() {
                     <Route path="/profile/talent/meeting-details">
                         <MeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
-                    <Route path="/profile/messages">
+                    <Route path="/profile/ChatViewOne">
                         <ChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
-                    </Route>
-                    <Route path="/profile/f-messages">
-                        <FreelancerMessageBoxOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/GroupChatViewOne">
                         <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
@@ -263,7 +260,10 @@ function App() {
                     <Route path="/profile/ChatViewThree">
                         <ChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
-                    <Route path="/profile/ChatViewFour">
+                    <Route path="/profile/f-messages">
+                        <FreelancerMessageBoxOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/messages">
                         <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/AddGroupUsers">
@@ -299,10 +299,10 @@ function App() {
                     <Route path="/profile/freelancer-profile-edit">
                         <FreelancerProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
-                    <Route path="/ChatBoxOne">
+                    <Route path="/profile/chat-user">
                         <ChatBoxOne />
                     </Route>
-                    <Route path="/ChatBoxTwo">
+                    <Route path="/profile/g-chat-user">
                         <ChatBoxTwo />
                     </Route>
                     <Route path="/ChatBoxThree">
@@ -320,7 +320,7 @@ function App() {
                     <Route path="/ChatBoxSeven">
                         <ChatBoxSeven />
                     </Route>
-                    <Route path="/ChatBoxNine">
+                    <Route path="/profile/f-chat-user">
                         <ChatBoxNine />
                     </Route>
                     <Route path="/ManageTalentChat">

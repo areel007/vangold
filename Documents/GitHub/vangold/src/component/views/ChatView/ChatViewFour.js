@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../core-ui/SideMenu/SideMenu";
 import { Link } from "react-router-dom";
@@ -9,69 +9,47 @@ import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
 import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
 import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
 import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
+import messageBoxImg from "../../../assets/images/chat/rafiki.png";
 import ChatBoxOne from "../../core-ui/AllMessagesBox/ChatBoxOne";
 import ChatBoxMembers from "../../core-ui/AllMessagesBox/ChatBoxMembers";
-
+import { useHistory } from "react-router-dom";
 
 import './ChatComponent.css';
 
-
-const chatUserData = {
-    userAvatar: avatar
-}
-
-const userMembersAdmin = [
-    {
-        usersAvatar: participantsAvatar1,
-        userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
-    },
-    {
-        usersAvatar: participantsAvatar3,
-        userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
-    },
-    {
-        usersAvatar: participantsAvatar4,
-        userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
-    },
-]
-
-const userMembers = [
-    {
-        usersAvatar: participantsAvatar2,
-        userName: 'Kali Jay',
-        messages: 'Hi our deadlines are...',
-    },
-]
 
 const otherUsersData = [
     {
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
+    },
+    {
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Frontend Developer',
     },
     {
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
     },
     {
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
-        title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
+        title: 'Frontend Developer',
+    },
+    {
+        usersAvatar: chatUsersAvatar,
+        userName: 'Kali Jay',
+        title: 'Backend Developer',
     },
 ]
+
 const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const [seeMessage, setSeeMessage] = useState(false);
+    const history = useHistory();
 
     const openPopover = () => {
       setIsShow(!isShow);
@@ -139,23 +117,53 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
                                         <input type="text" placeholder="Type contact name" />
                                     </div>
                                     <div className="users__chat__avatar">
-                                        {
-                                            otherUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat Avatar" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title}</p>
+                                        <div className="d-none d-lg-block">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            setSeeMessage(true);
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="d-lg-none">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            history.push("/profile/chat-user")
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="message__box-component2">
-                                <ChatBoxOne />
+                                {
+                                seeMessage ? (
+
+                            <ChatBoxOne />
+                                ) : (
+                                <div className="message__box text-center">
+                                    <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
+                                    <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
+                                    <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
+                                </div>
+                                
+                                )
+                            }
                             </div>
                         </div>
                     </Col>

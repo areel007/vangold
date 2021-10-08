@@ -5,6 +5,9 @@
   margin-bottom: 100px;
   position: relative;
 }
+.MessageBox__ .chat__container-header{
+  display: none;
+}
 .MessageBox__ .MessageBox__header {
   height: 70px;
   background: rgba(69, 182, 24, 0.2);

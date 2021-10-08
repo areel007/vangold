@@ -3,18 +3,11 @@ import { Col, Container, Row } from "react-bootstrap";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import cross from "../../../../assets/images/profile/cross1.png";
 import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/BusinessSideBarDropDown1";
-import participantsAvatar1 from "../../../../assets/images/avatar/Ellipse-7.png";
-import participantsAvatar2 from "../../../../assets/images/avatar/Ellipse-7-1.png";
-import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.png";
-import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
-import Avatar1 from "../../../../assets/images/business-chat-content/Ellipse1531.png";
-import Avatar2 from "../../../../assets/images/business-chat-content/Group43951.png";
-import Avatar3 from "../../../../assets/images/business-chat-content/Ellipse1533.png";
-import Avatar4 from "../../../../assets/images/business-chat-content/Group43952.png";
 import ChatBoxFive from "../../../core-ui/AllMessagesBox/ChatBoxFive";
 import "./BusinessChatView.css";
 
 const BusinessChatView = ({ showSideMenu, setShowSideMenu }) => {
+    const [seeMessage, setSeeMessage] = useState(false);
     const [showCheck, setShowCheck] = useState(false)
 
     return (

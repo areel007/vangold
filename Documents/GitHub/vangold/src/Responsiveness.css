@@ -11,10 +11,22 @@
   .SearchBox{
     display: none;
   }
+  .chat__box__container{
+    display: none;
+  }
   .sideBarTopJobs {
     width: 100% !important;
     margin-bottom: 50px;
     /* min-height: 1079px; */
+  }
+  .message__box-component2 {
+    display: none;
+  }
+  .MessageBox__ {
+    padding: 15px;
+  }
+  .MessageBox__ .chat__container-header{
+    display: block !important;
   }
   .MessageBox__.Biz__MessageBox__ {
     left: 0px !important;
@@ -51,9 +63,7 @@
   .submit__btn {
     max-width: 100%;
   }
-  .message__box-component2 {
-    display: none;
-  }
+
   .chat__box__contaniner-left {
     width: 100% !important;
   }

@@ -30,6 +30,10 @@ const ChatBoxOne = (props) => {
     return (
         <>
             <div className="MessageBox__">
+                <div className="chat__container-header mt-5">
+                    <p className="chat__container-title">Inbox</p>
+                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                </div>
                 <div className="MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />
@@ -51,8 +55,6 @@ const ChatBoxOne = (props) => {
                             <div className="ChatBox__popover__links">
                                 <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
-                                <li onClick={closePopover} to="#">Search</li>
-                                <li onClick={closePopover} to="#">Report Contact</li>
                             </div>                                     
                         </div>
                     }

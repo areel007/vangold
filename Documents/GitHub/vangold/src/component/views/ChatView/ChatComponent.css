@@ -369,10 +369,12 @@
   position: relative;
   top: 15px;
 }
-.chat__search_box--user-avatar {
-  height: 696px;
+.add__participant__data {
   background: #f2f2f2;
   border-radius: 6px 0px 0px 6px;
+}
+.add__participant__data .addparticipant__btn{
+  margin-top: 40px;
 }
 .group-chat__search_box--user-avatar {
   height: 680px;
@@ -416,9 +418,6 @@
 .chat__search-box svg {
   position: relative;
   left: 23px;
-}
-.users__chat__avatar {
-  height: 55px;
 }
 
 .chat__component_users-data {

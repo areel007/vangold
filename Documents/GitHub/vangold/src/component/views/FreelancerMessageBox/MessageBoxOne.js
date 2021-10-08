@@ -1,10 +1,15 @@
+import React, {useState}  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
 import FreelancerProfileSideMenu from "../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu";
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
+import ChatBoxNine from "../../core-ui/AllMessagesBox/ChatBoxNine";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
+import { useHistory } from "react-router-dom";  
+
 
 import '../ChatView/ChatComponent.css';
+import './MessageBoxOne.css';
 
 
 const chatUserData = {
@@ -13,32 +18,26 @@ const chatUserData = {
 
 const otherUsersData = [
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
     },
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
     },
     {
-        avatar: avatar,
         usersAvatar: chatUsersAvatar,
         userName: 'Kali Jay',
         title: 'Designer',
-        title2: 'Frontend Developer',
-        title3: 'Backend Developer',
     },
 ]
 const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
-  
+    const [seeMessage, setSeeMessage] = useState(false);
+    const history = useHistory();
+
+
     return (
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
@@ -68,25 +67,53 @@ const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
                                         <input type="text" placeholder="Type contact name" />
                                     </div>
                                     <div className="users__chat__avatar">
-                                        {
-                                            otherUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
-                                                    <div className="userChatData">
-                                                        <p className="chat__users_name">{userChatData.userName}</p>
-                                                        <p className="chat__users_title">{userChatData.title}</p>
+                                        <div className="d-none d-lg-block">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            setSeeMessage(true);
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
-
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="d-lg-none">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            history.push("/profile/f-chat-user")
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="message__box-container">
-                                <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
-                                <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
-                                <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
+                            <div className="message__box-component2">
+                            {
+                                seeMessage ? (
+
+                            <ChatBoxNine />
+                                ) : (
+                                <div className="message__box text-center">
+                                    <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
+                                    <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
+                                    <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
+                                </div>
+                                
+                                )
+                            }
                             </div>
                         </div>
                     </Col>
