@@ -3,7 +3,7 @@ import Banner from "../../core-ui/banner/banner";
 import MainSection from "../../core-ui/main-section/main-section";
 import Accordion from 'react-bootstrap/Accordion';
 import AliceCarousel from 'react-alice-carousel';
-// import 'react-alice-carousel/lib/alice-carousel.css';
+import 'react-alice-carousel/lib/alice-carousel.css';
 import TestimonialImg from "../../../assets/images/_testimonial-clients/Picture.png"
 
 const responsive = {

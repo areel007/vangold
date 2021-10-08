@@ -69,7 +69,7 @@ const otherUsersData = [
         title3: 'Backend Developer',
     },
 ]
-const ChatViewFour = () => {
+const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
 
@@ -96,8 +96,8 @@ const ChatViewFour = () => {
         <div id="chat-component" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="chat__container-header">

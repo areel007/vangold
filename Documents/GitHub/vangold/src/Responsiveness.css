@@ -2,8 +2,39 @@
   #job-descrip .border-botom {
     border-bottom: 1px solid #00000033;
   }
-  .dashboard_mobile_searchBar{
+  .dashboard_mobile_searchBar {
     display: block !important;
+  }
+  .inn-top-freelancer{
+    flex-direction: column;
+  }
+  .SearchBox{
+    display: none;
+  }
+  .sideBarTopJobs {
+    width: 100% !important;
+    margin-bottom: 50px;
+    /* min-height: 1079px; */
+  }
+  .MessageBox__.Biz__MessageBox__ {
+    left: 0px !important;
+  }
+  .business-chat-container {
+    margin-top: 0 !important;
+    flex-direction: column;
+  }
+  .sideBarBusinessChat,
+  .mobile__business__channel-header,
+  .business__channel-header .business__channel-header-left {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .business__chat-view__svg path,
+  .business-chat__side-bar-content svg path {
+    fill: var(--primary) !important;
+  }
+  .business-chat__side-bar-content span {
+    color: #333333 !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -20,7 +51,7 @@
   .submit__btn {
     max-width: 100%;
   }
-  .message__box-component2{
+  .message__box-component2 {
     display: none;
   }
   .chat__box__contaniner-left {
@@ -259,8 +290,8 @@
     max-width: 335px !important;
     height: 120.72px !important;
   }
-  .business-chat-view {
-    /* display: none; */
+  .collaborate__inner2 {
+    flex-direction: column;
   }
   .sideBarBusiness2 {
     display: none !important;
@@ -268,26 +299,11 @@
   .BusinessChatImg-content {
     margin-top: 63px;
   }
-  .business-chat-container {
-    margin-top: 0 !important;
-    flex-direction: column;
-  }
-  .sideBarBusinessChat,
-  .mobile__business__channel-header,
-  .business__channel-header .business__channel-header-left {
-    width: 100% !important;
-    background-color: var(--white) !important;
-  }
+ 
   .business__channel-header h2 {
     color: #333333 !important;
   }
-  .business__chat-view__svg path,
-  .business-chat__side-bar-content svg path {
-    fill: var(--primary) !important;
-  }
-  .business-chat__side-bar-content span {
-    color: #333333 !important;
-  }
+
   .business-chat__side-bar-list:hover span {
     color: #ffffff !important;
   }
@@ -555,7 +571,7 @@
   }
 }
 @media screen and (max-width: 467px) {
-  .microsoft_jobs_discrip__{
+  .microsoft_jobs_discrip__ {
     display: grid !important;
     grid-template-columns: 1fr !important;
     flex-direction: column;
@@ -605,7 +621,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-  #freelancer-profile .freelancer__profile_buttons button{
+  #freelancer-profile .freelancer__profile_buttons button {
     width: 100% !important;
   }
 }
@@ -718,8 +734,7 @@
 }
 @media screen and (max-width: 850px) {
   .auth-form__image,
-  .top__jobs__freelancers,
-  .desktop-freelancers-searchBar {
+  .top__jobs__freelancers{
     display: none;
   }
   .inn_SearchInputBox .mobile-freelancers-searchBar {
@@ -734,7 +749,7 @@
     background: rgba(118, 118, 128, 0.12) !important;
     border-radius: 8px !important;
   }
-  .inn_SearchInputBox .inn_SearchInputBox_svg path {
+  /* .inn_SearchInputBox .inn_SearchInputBox_svg path {
     fill: #808080;
     width: 17.49px;
     height: 17.49px;
@@ -742,7 +757,7 @@
   .inn_SearchInputBox svg.inn_SearchInputBox_svg {
     width: 17.49px;
     height: 17.49px;
-  }
+  } */
   .auth-form__form {
     max-width: 100% !important;
   }

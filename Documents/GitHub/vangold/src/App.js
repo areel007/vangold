@@ -198,7 +198,7 @@ function App() {
                         <PostJob />
                     </Route>
                     <Route path="/profile/postjob">
-                        <ProfilePostJob />
+                        <ProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/employer-setting">
                         <EmployerSetting showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -246,7 +246,7 @@ function App() {
                         <ManageTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/ManageSchedule">
-                        <ManageSchedule />
+                        <ManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/talent/meeting-details">
                         <MeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -261,10 +261,10 @@ function App() {
                         <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/ChatViewThree">
-                        <ChatViewThree />
+                        <ChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/ChatViewFour">
-                        <ChatViewFour />
+                        <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/AddGroupUsers">
                         <AddGroupUsers />
@@ -279,7 +279,7 @@ function App() {
                         <MobileVideoCall />
                     </Route>
                     <Route path="/profile/business-chat">
-                        <BusinessChatView />
+                        <BusinessChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-1">
                         <BusinessChatViewThree />

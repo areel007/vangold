@@ -4,7 +4,7 @@
 #profile-alljobs,
 #my-job,
 #my-job-projects .head {
-  font-size: 24px;
+  /* font-size: 24px; */
   font-weight: var(--font-wieght-bold);
   font-family: var(--mulish);
   color: #333333;

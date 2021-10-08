@@ -3,13 +3,13 @@ import PostJobStepper from "./PostJobStepper/PostJobStepper";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import './PostJob.css'
 
-const ProfilePostJob = () => {
+const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
     return (
         <div id="postjob">
             <Container fluid>
                 <Row>
-                    <Col xs={10} lg={2} className="mx-auto mt-5 d-none d-lg-block">
-                        <SideMenu />
+                    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto py-3 my-3 bg-color">
                         <Row>

@@ -19,7 +19,6 @@ const SearchBox = (props) => {
             />
           </svg>
           <input className="desktop-freelancers-searchBar" type="text" placeholder="Search Freelance Jobs" />
-          <input className="mobile-freelancers-searchBar" type="text" placeholder="Search" />
           <div className="inn_SearchInputBoxRight">
             <input type="text" placeholder="Location" />
             <svg

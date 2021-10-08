@@ -9,7 +9,7 @@
 .dashboard_mobile_searchBar {
   display: none;
   margin-bottom: 30px;
-  padding-left: 18.5px;
+  /* padding-left: 18.5px; */
 }
 .dashboard_mobile_searchBar input {
   width: 100%;

@@ -28,6 +28,11 @@
 .auth-form__form {
   width: 452px;
 }
+.auth-form__form a:hover,
+.already-have-account a:hover,
+.dont-have-account a:hover, .change-account-pswrd a:hover {
+  color: var(--primary);
+}
 .auth-form__image img {
   max-width: 100%;
   height: 593.14px;
