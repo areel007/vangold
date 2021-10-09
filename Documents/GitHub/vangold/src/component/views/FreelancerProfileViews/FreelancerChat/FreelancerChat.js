@@ -1,15 +1,14 @@
 import React, {useState}  from 'react';
 import { Col, Container, Row } from "react-bootstrap";
-import FreelancerProfileSideMenu from "../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu";
-import avatar from "../../../assets/images/avatar/Ellipse7.png";
-import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-import ChatBoxNine from "../../core-ui/AllMessagesBox/ChatBoxNine";
-import messageBoxImg from "../../../assets/images/chat/rafiki.png";
+import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMenu/FreelancerProfileSideMenu";
+import avatar from "../../../../assets/images/avatar/Ellipse7.png";
+import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
+import ChatBoxNine from "../../../core-ui/AllMessagesBox/ChatBoxNine";
+import messageBoxImg from "../../../../assets/images/chat/rafiki.png";
 import { useHistory } from "react-router-dom";  
 
-
-import '../ChatView/ChatComponent.css';
-import './MessageBoxOne.css';
+// import '.../ChatView/ChatComponent.css';
+import './FreelancerChat.css';
 
 
 const chatUserData = {
@@ -33,7 +32,7 @@ const otherUsersData = [
         title: 'Designer',
     },
 ]
-const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
+const FreelancerChat = ({ showSideMenu, setShowSideMenu }) => {
     const [seeMessage, setSeeMessage] = useState(false);
     const history = useHistory();
 
@@ -54,10 +53,6 @@ const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
                             <div className="chat__box__contaniner-left">
                                 <div className="personal__avatar">
                                     <img className="chat__avatar" src={chatUserData.userAvatar} alt="fff"/>
-
-                                    <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#333333"/>
-                                    </svg>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
                                     <div className="chat__search-box">
@@ -123,4 +118,4 @@ const FreelancerMessageBoxOne = ({ showSideMenu, setShowSideMenu }) => {
     );
 }
 
-export default FreelancerMessageBoxOne;
+export default FreelancerChat;

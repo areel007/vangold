@@ -1,46 +1,77 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
-
+import { useState } from "react";
+import { Form, InputGroup } from "react-bootstrap";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 const ChangePasswordForm = () => {
-  const validationSchema = Yup.object().shape({
-    password: Yup.string()
-    .required('Password is required')
-    .min(6, 'Password must be at least 6 characters'),
-    confirmPassword: Yup.string().oneOf([Yup.ref("password"), null]),
-});
-const formOptions = { resolver: yupResolver(validationSchema) };
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
 
-// get functions to build form with useForm() hook
-const { register, handleSubmit, formState } = useForm(formOptions);
-const { errors } = formState;
+  const handleShowPassword = () =>
+    setShowPassword((prevShowPassword) => !prevShowPassword);
 
-function onSubmit(data) {}
+  const handleShowPassword2 = () =>
+    setShowPassword2((prevShowPassword2) => !prevShowPassword2);
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log("submission prevented");
+  };
 
   return (
-    <form className="auth__form" onSubmit={handleSubmit(onSubmit)}>
+    <form className="auth__form" onSubmit={handleFormSubmit}>
       <div className="form__title">
-        <h1>Reset your Password</h1> 
-        <p className="authResetPassword__P">Create a new password for your account. It must be at least 8 characters long.</p>
+        <h1>Reset your Password</h1>
+        <p className="authResetPassword__P">
+          Create a new password for your account. It must be at least 8
+          characters long.
+        </p>
       </div>
       <div className="form-input__container">
-      <div className="form__-control">
-          <label htmlFor="Password">Password</label>
-          <input name="password" type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
-          <div className="invalid-feedback">{errors.password?.message}</div>
+        <div className="form__-control">
+          <label htmlFor="Email">Password</label>
+
+          <InputGroup>
+            <Form.Control
+              size="lg"
+              required
+              type={showPassword ? "text" : "password"}
+              className="form-control-emp"
+            />
+            <InputGroup.Text className="form-control-eye">
+              <div onClick={handleShowPassword}>
+                {!showPassword ? (
+                  <AiOutlineEye style={{ fontSize: "20px" }} />
+                ) : (
+                  <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
+                )}
+              </div>
+            </InputGroup.Text>
+          </InputGroup>
         </div>
         <div className="form__-control">
-          <label htmlFor="Confirm Password">Confirm Password</label>
-          <input name="confirmPassword" type="password" {...register('confirmPassword')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
-          <div className="invalid-feedback">{errors.confirmPassword && "Passwords don't match!"}</div>
+          <label htmlFor="Email">Confirm Password</label>
+
+          <InputGroup>
+            <Form.Control
+              size="lg"
+              required
+              type={showPassword2 ? "text" : "password"}
+              className="form-control-emp"
+            />
+            <InputGroup.Text className="form-control-eye">
+              <div onClick={handleShowPassword2}>
+                {!showPassword2 ? (
+                  <AiOutlineEye style={{ fontSize: "20px" }} />
+                ) : (
+                  <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
+                )}
+              </div>
+            </InputGroup.Text>
+          </InputGroup>
         </div>
       </div>
       <button className="submit__btn reset-btn">Reset Password</button>
     </form>
-
   );
 };
 

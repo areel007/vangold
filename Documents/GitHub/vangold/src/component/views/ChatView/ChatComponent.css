@@ -379,8 +379,11 @@
   background: #f2f2f2;
   border-radius: 6px 0px 0px 6px;
 }
-.add__participant__data .addparticipant__btn{
+.add__participant__data .addparticipant__btn {
   margin-top: 40px;
+}
+.add__participant__data .addparticipant__btn svg {
+  cursor: pointer;
 }
 .group-chat__search_box--user-avatar {
   height: 680px;
@@ -896,6 +899,7 @@
 }
 .group__chat__mark-icon {
   margin-top: 84px;
+  cursor: pointer;
 }
 
 .group-chat-personal__avatar {

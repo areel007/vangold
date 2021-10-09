@@ -219,7 +219,7 @@
   width: 452px;
 }
 .form-link-P {
-  font-family: Mulish;
+  font-family: var(--mulish);
   font-style: normal;
   font-weight: var(--font-weight-normal);
   font-size: var(--fs-16);
@@ -227,6 +227,7 @@
   color: #4f4f4f;
   text-align: center;
 }
-.form-link{
+
+.form-link-P .form-link{
   color: var(--primary);
 }

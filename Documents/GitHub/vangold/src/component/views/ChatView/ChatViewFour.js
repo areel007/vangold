@@ -98,12 +98,11 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
-                                                <Link onClick={closePopover} to="/profile/group-chat">Create Group</Link>
+                                                <li onClick={() => { closePopover(); history.push("/profile/AddGroupUsers")}}>Create Group</li>
                                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
                                                 <li onClick={closePopover} to="#">Search</li>
-                                                <li onClick={closePopover} to="#">Report Contact</li>
                                             </div>                                     
-                                        </div>
+                                        </div> 
                                     }
                                     <div ref={ref} className={memberShow ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
                                         <ChatBoxMembers closeMemberShow={closeMemberShow}/>

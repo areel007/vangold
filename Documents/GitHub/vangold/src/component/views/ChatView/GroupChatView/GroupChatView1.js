@@ -7,7 +7,7 @@ import avatarTwo from "../../../../assets/images/profile/Rectangle9112-5.png";
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import '../ChatComponent.css';
 import Stories from "./Stories";
-import ChatBoxTwo from "../../../core-ui/AllMessagesBox/ChatBoxTwo";
+import ChatBoxFour from "../../../core-ui/AllMessagesBox/ChatBoxFour";
 import { useHistory } from "react-router-dom";  
 
 
@@ -107,7 +107,7 @@ const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
                                             {
                                                 otherUsersData.map((userChatData) => (
                                                     <div onClick={() => {
-                                                            history.push("/profile/g-chat-user")
+                                                            history.push("/profile/group-chat")
                                                         }} className="chat__component_users-data">
                                                         <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
                                                         <div className="userChatData">
@@ -122,7 +122,7 @@ const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
                                 </div>
                             </div>
                             <div className="message__box-component2">
-                                <ChatBoxTwo />
+                                <ChatBoxFour />
                             </div>
                         </div>
                     </Col>

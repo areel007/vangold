@@ -3,22 +3,14 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { Switch } from 'antd';
 import 'antd/dist/antd.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
  import "./CreateChanelModal.css";
 
 const CreateChannelModal = (props) => {
-    const validationSchema = Yup.object().shape({
-        name: Yup.string().required('Name is required'),
-    });
-    const formOptions = { resolver: yupResolver(validationSchema) };
-    
-    // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-    const { errors } = formState;
-    
-    function onSubmit(data) {}
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+      }
     return (
         <Modal
             {...props}
@@ -28,12 +20,11 @@ const CreateChannelModal = (props) => {
             <Modal.Body className='p-5'>
                 <AiOutlineCloseCircle className="modal-close" onClick={props.onHide} />
                 <h1 className="modal_-_channelHead mt-5">{props.head}</h1>
-                <form id="myform" onSubmit={handleSubmit(onSubmit)}>
+                <form id="myform" onSubmit={handleSubmit}>
                     <div className="form-input__container">
                         <div className="form__-control">
                             <label htmlFor="name">Name</label>
-                            <input name="text" type="name" {...register('name')} className={`form-control ${errors.name ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.name?.message}</div>
+                            <input name="text" type="name" />
                         </div>
                         <div className="form__-control">
                             <label htmlFor="Username">Description</label>

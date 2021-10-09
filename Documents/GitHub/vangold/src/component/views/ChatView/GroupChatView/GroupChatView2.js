@@ -1,14 +1,16 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap"
-import SideMenu from "../../../core-ui/SideMenu/SideMenu"
+import { Col, Container, Row } from "react-bootstrap";
+import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import avatar from "../../../../assets/images/avatar/Ellipse7.png";
-import '../ChatComponent.css'
+import { useHistory } from "react-router-dom";
+import '../ChatComponent.css';
 
 const chatUserData = {
     userAvatar: avatar
 }
 
 const GroupChatViewTwo = ({ showSideMenu, setShowSideMenu }) => {
+    const history = useHistory();
   
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -51,8 +53,10 @@ const GroupChatViewTwo = ({ showSideMenu, setShowSideMenu }) => {
                                                 <path d="M9.99 0C4.47 0 0 4.48 0 10C0 15.52 4.47 20 9.99 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 9.99 0ZM10 18C5.58 18 2 14.42 2 10C2 5.58 5.58 2 10 2C14.42 2 18 5.58 18 10C18 14.42 14.42 18 10 18ZM10 15.5C12.33 15.5 14.32 14.05 15.12 12H13.45C12.76 13.19 11.48 14 10 14C8.52 14 7.25 13.19 6.55 12H4.88C5.68 14.05 7.67 15.5 10 15.5Z" fill="#333333"/>
                                             </svg>
                                         </div>
-                                    </div>
-                                    <svg className="group__chat__mark-icon" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    </div> 
+                                    <svg onClick={() => {
+                                            history.push("/profile/GroupChatViewOne")
+                                        }} className="group__chat__mark-icon" width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="35.5" cy="35.5" r="35.5" fill="#45B618"/>
                                     <path d="M49.3327 26L30.9993 44.3333L22.666 36" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>

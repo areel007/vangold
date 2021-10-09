@@ -32,7 +32,7 @@ const ChatBoxFive = (props) => {
         setMemberShow(false);
     });
     return (
-        <Container fluid>
+        <>
             <div className="MessageBox__ Biz__MessageBox__">
                 <div className="MessageBox__header Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
@@ -56,77 +56,79 @@ const ChatBoxFive = (props) => {
                     </div>
                 }
                 </div>
-                {memberShow &&
-                <div ref={ref}>
-                    <ChatBoxMembers closeMemberShow={closeMemberShow}/>
-                </div>
-                }
-                <div className="ChatBox__ Biz__ChatBox__">
-                    <div className="ChatBox__MsgSendContainer">
-                        <img src={Avatar3} alt="ChatBox__MsgSendContainer" />
+                
+                <div className="topChatBox__">
+                    <div className="ChatBox__ Biz__ChatBox__">
+                        <div className="ChatBox__MsgSendContainer">
+                            <img src={Avatar3} alt="ChatBox__MsgSendContainer" />
+                            <div className="ChatBox__sendMsg">
+                                <div className="Inn__ChatBox__sendMsg">
+                                    Okay, some other time, I guess. Lorem Ipsum jji jksn jikkkms jkola kopol; kppp
+                                </div>
+                                <div className="ChatBox__sendMsg__time">
+                                    Saturday 11:50 PM
+                                </div>
+                            </div>
+                        </div>
+                        <div className="center__time">
+                            June 20, 10:46 pm
+                        </div>
+                        <div className="ChatBox__MsgReplyContainer">
+                            <img src={Avatar1} alt="ChatBox__MsgReplyContainer" />
+                            <div className="ChatBox__replyMsg">
+                                <div className="Top__ChatBox__replyMsg">
+                                    <span>Replied to Damola</span>
+                                    <div className="Inn__Top__ChatBox__replyMsg">
+                                        Hey, Devon. Can we get on a quick call?
+                                    </div>
+                                </div>
+                                <div className="Inn__ChatBox__replyMsg">
+                                    <span className="Inn__ChatBox__replyMsg__name">Koyote Stark</span>
+                                    Hi, Damola. Sure, but now I’m busy rn.
+                                </div>
+                                <div className="ChatBox__replyMsg__time">
+                                    11:50 PM
+                                </div>
+                            </div>
+                        </div>
+                        <div className="ChatBox__MsgReplyContainer">
+                            <img src={Avatar2} alt="ChatBox__MsgReplyContainer" />
+                            <div className="ChatBox__replyMsg">
+                                <div className="Inn__ChatBox__replyMsg">
+                                    <span className="Inn__ChatBox__replyMsg__name">Femi</span>
+                                    Hi, Emmie. Sure, but now I’m busy rn.
+                                </div>
+                                <div className="ChatBox__replyMsg__time">
+                                    Saturday 11:50 PM
+                                </div>
+                            </div>
+                        </div>
                         <div className="ChatBox__sendMsg">
                             <div className="Inn__ChatBox__sendMsg">
-                                Okay, some other time, I guess. Lorem Ipsum jji jksn jikkkms jkola kopol; kppp
+                                Okay, some other time, I guess.
                             </div>
                             <div className="ChatBox__sendMsg__time">
                                 Saturday 11:50 PM
                             </div>
                         </div>
-                    </div>
-                    <div className="center__time">
-                        June 20, 10:46 pm
-                    </div>
-                    <div className="ChatBox__MsgReplyContainer">
-                        <img src={Avatar1} alt="ChatBox__MsgReplyContainer" />
-                        <div className="ChatBox__replyMsg">
-                            <div className="Top__ChatBox__replyMsg">
-                                <span>Replied to Damola</span>
-                                <div className="Inn__Top__ChatBox__replyMsg">
-                                    Hey, Devon. Can we get on a quick call?
+                        <div className="ChatBox__MsgReplyContainer">
+                            <img src={Avatar4} alt="ChatBox__MsgReplyContainer" />
+                            <div className="ChatBox__replyMsg">
+                                <div className="Inn__ChatBox__replyMsg">
+                                    <span className="Inn__ChatBox__replyMsg__name">Tola</span>
+                                    Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
+                                </div>
+                                <div className="ChatBox__replyMsg__time">
+                                    Saturday 11:50 PM
                                 </div>
                             </div>
-                            <div className="Inn__ChatBox__replyMsg">
-                                <span className="Inn__ChatBox__replyMsg__name">Koyote Stark</span>
-                                Hi, Damola. Sure, but now I’m busy rn.
-                            </div>
-                            <div className="ChatBox__replyMsg__time">
-                                11:50 PM
-                            </div>
                         </div>
                     </div>
-                    <div className="ChatBox__MsgReplyContainer">
-                        <img src={Avatar2} alt="ChatBox__MsgReplyContainer" />
-                        <div className="ChatBox__replyMsg">
-                            <div className="Inn__ChatBox__replyMsg">
-                                <span className="Inn__ChatBox__replyMsg__name">Femi</span>
-                                Hi, Emmie. Sure, but now I’m busy rn.
-                            </div>
-                            <div className="ChatBox__replyMsg__time">
-                                Saturday 11:50 PM
-                            </div>
-                        </div>
+                    {memberShow &&
+                    <div ref={ref}>
+                        <ChatBoxMembers closeMemberShow={closeMemberShow}/>
                     </div>
-                    <div className="ChatBox__sendMsg">
-                        <div className="Inn__ChatBox__sendMsg">
-                            Okay, some other time, I guess.
-                        </div>
-                        <div className="ChatBox__sendMsg__time">
-                            Saturday 11:50 PM
-                        </div>
-                    </div>
-                    <div className="ChatBox__MsgReplyContainer">
-                        <img src={Avatar4} alt="ChatBox__MsgReplyContainer" />
-                        <div className="ChatBox__replyMsg">
-                            <div className="Inn__ChatBox__replyMsg">
-                                <span className="Inn__ChatBox__replyMsg__name">Tola</span>
-                                Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
-                            </div>
-                            <div className="ChatBox__replyMsg__time">
-                                Saturday 11:50 PM
-                            </div>
-                        </div>
-                    </div>
-                    
+                    }
                 </div>
                 <div className="ChatBox__Footer Biz__ChatBox__Footer">
                         <div className="Inn__ChatBox__Footer-input">
@@ -154,7 +156,7 @@ const ChatBoxFive = (props) => {
                         </svg>
                     </div>
             </div>
-        </Container>
+        </>
     )
 }
 

@@ -10,6 +10,7 @@ import participantsAvatar3 from "../../../../assets/images/avatar/Ellipse-7-2.pn
 import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import GroupParticipants from "../../../core-ui/AllMessagesBox/GroupParticipants";
+import ChatBoxOne from "../../../core-ui/AllMessagesBox/ChatBoxOne";
 import { useHistory } from "react-router-dom";
 import '../ChatComponent.css';
 
@@ -55,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
+    const [seeMessage, setSeeMessage] = useState(false);
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
     const history = useHistory();
@@ -173,20 +175,41 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
                                         </div>
                                     </div>
                                     <div className="users__chat__avatar">
-                                        {
-                                            otherUsersData.map((userChatData) => (
-                                                <div className="chat__component_users-data">
-                                                    <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
-                                                    <div className="userChatData">
-                                                        <span className="chat__users_name">{userChatData.userName}</span>
-                                                        <span className="chat__users_title">{userChatData.title}</span>
+                                        <div className="d-none d-lg-block">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            setSeeMessage(true);
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                        }
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="d-lg-none">
+                                            {
+                                                otherUsersData.map((userChatData) => (
+                                                    <div onClick={() => {
+                                                            history.push("/profile/chat-user")
+                                                        }} className="chat__component_users-data">
+                                                        <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
+                                                        <div className="userChatData">
+                                                            <span className="chat__users_name">{userChatData.userName}</span>
+                                                            <span className="chat__users_title">{userChatData.title}</span>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                     <div className="addparticipant__btn text-center">
-                                        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg onClick={() => {
+                                                            history.push("/profile/group-chat2")
+                                                        }} width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="28" cy="28" r="28" fill="#45B618"/>
                                         <path d="M31 21L29.59 22.41L34.17 27H18V29H34.17L29.58 33.59L31 35L38 28L31 21Z" fill="white"/>
                                         </svg>
@@ -194,10 +217,20 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
                                 </div>
                                 
                             </div>
-                            <div className="message__box-container">
-                                <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Group chats</h2>
-                                <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest as  a group</p>
-                                <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
+                            <div className="message__box-component2">
+                                {
+                                seeMessage ? (
+
+                            <ChatBoxOne />
+                                ) : (
+                                <div className="message__box text-center">
+                                    <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
+                                    <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>
+                                    <img className="msg-photo" style={{width: 500, height: 372.56}} src={messageBoxImg} alt="Message" />
+                                </div>
+                                
+                                )
+                            }
                             </div>
                         </div>
                     </Col>
