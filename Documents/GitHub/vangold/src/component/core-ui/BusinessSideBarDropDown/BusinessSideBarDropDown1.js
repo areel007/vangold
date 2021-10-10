@@ -17,6 +17,8 @@ import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.pn
 import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 import CreateChannelModal from "../../core-ui/CreateChannelModal/CreateChanelModal";
 import InvitePeopleModal from "../../core-ui/InvitePeopleModal/InvitePeopleModal";
+import { useHistory } from "react-router-dom";
+
 
 const BusinessUseStyles = makeStyles((theme) => ({
     root: {
@@ -24,7 +26,7 @@ const BusinessUseStyles = makeStyles((theme) => ({
         fontSize: "16px",
         backgroundColor: "#45B618",
         marginTop: "2rem",
-        [theme.breakpoints.down("991")]: {
+        [theme.breakpoints.down("992")]: {
             backgroundColor: "white",
           }
     },
@@ -33,7 +35,7 @@ const BusinessUseStyles = makeStyles((theme) => ({
         fontWeight: "700",
         lineHeight: "15px",
         color: "white",
-        [theme.breakpoints.down("991")]: {
+        [theme.breakpoints.down("992")]: {
             color: "#333333",
             fontWeight: "normal"
           }
@@ -53,25 +55,79 @@ const GreenCheckbox = withStyles({
     checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-const BusinessSideBarDropDown1 = () => {
+
+const UsersData = [
+    {
+        usersAvatar: Avatar1,
+        userName: 'Carlos Pena',
+    },
+    {
+        usersAvatar: Avatar2,
+        userName: 'Damilare Olulana',
+    },
+    {
+        usersAvatar: Avatar3,
+        userName: 'Dare Bello',
+    },
+    {
+        usersAvatar: Avatar4,
+        userName: 'Vivian Ufot',
+    },
+]
+
+const addChannels = [
+    {
+        Name: 'Vangold Product Team',
+    },
+    {
+        Name: 'Vangold Marketing Team',
+    },
+    {
+        Name: 'Vangold Developer Team',
+    },
+]
+
+const BusinessSideBarDropDown1 = ({setShowMessages}) => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShow2, setModalShow2] = useState(false);
     const classes = BusinessUseStyles();
-    const [checkValue, setCheckValue] = useState('')
     const [skills, setSkills] = useState(true);
     const [tools, setTools] = useState(true);
-    const [experience, setExperience] = useState(true);
-    const [teamTypes, setTeamTypes] = useState(true);
-    const [salaryRange, setSalaryRange] = useState(true);
+    const history = useHistory();
 
-    const handleChange = (e) => {
-        setCheckValue(e.target.value)
-        console.log(checkValue);
-    };
 
     return (
         <>
-
+            <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
+                <div className="dashboard_mobile_searchBar">
+                    <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none">
+                    <path d="M11.2028 9.85162C11.1006 9.74942 11.0866 9.57302 11.165
+                    9.45122C11.781 8.50342 12.1422 7.37502 12.1422 6.16262C12.1422
+                    2.81382 9.4178 0.0908203 6.0718 0.0908203C2.723 0.0908203 0 2.81382
+                    0 6.16262C0 9.51002 2.723 12.233 6.0718 12.233C7.3752 12.233 8.582
+                    11.8144 9.5732 11.1116C9.6894 11.0276 9.8644 11.0388 9.9666 11.1396L12.1366
+                    13.3096C12.1506 13.3236 12.166 13.3376 12.1814 13.3488C12.2066 13.3698
+                    12.3116 13.4678 12.4124 13.57L12.67 13.8262C12.7722 13.927 12.9374
+                    13.927 13.0382 13.8262L13.923 12.9414C14.0252 12.8392 14.0252 12.674
+                    13.9244 12.5718L11.2028 9.85162ZM9.744 8.99062C9.5438 9.25102 9.3184
+                    9.48902 9.0692 9.70042C8.26 10.3878 7.2142 10.805 6.0718 10.805C3.5112
+                    10.805 1.428 8.72182 1.428 6.16262C1.428 3.60342 3.5112 1.51882 6.0718
+                    1.51882C8.631 1.51882 10.7142 3.60202 10.7142 6.16262C10.7142 7.22662
+                    10.3488 8.20662 9.744 8.99062Z" fill="#4F4F4F"
+                    />
+                    </svg>
+                    <input type="text" placeholder="Search..."/>
+                </div>
+            </div>
+            <div className="business__channel-header mobile__business__channel-header">
+                <div className="business__channel-header-left">
+                    <h2>Channel</h2>
+                </div>
+            </div>
             {/* ----------------------------------CHECK BOXES STARTS FROM HERE------------------------------ */}
             <div className={classes.root}>
                 <List component="nav">
@@ -114,6 +170,7 @@ const BusinessSideBarDropDown1 = () => {
                                 </ListItem>
                             </List>
                         </div>
+                        { addChannels.map((addChannel) => (
                         <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
                             <List component="div" disablePadding>
                                 <ListItem>
@@ -123,53 +180,18 @@ const BusinessSideBarDropDown1 = () => {
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM8 17.5C6.62 17.5 5.5 16.38 5.5 15C5.5 13.62 6.62 12.5 8 12.5C9.38 12.5 10.5 13.62 10.5 15C10.5 16.38 9.38 17.5 8 17.5ZM9.5 8C9.5 6.62 10.62 5.5 12 5.5C13.38 5.5 14.5 6.62 14.5 8C14.5 9.38 13.38 10.5 12 10.5C10.62 10.5 9.5 9.38 9.5 8ZM16 17.5C14.62 17.5 13.5 16.38 13.5 15C13.5 13.62 14.62 12.5 16 12.5C17.38 12.5 18.5 13.62 18.5 15C18.5 16.38 17.38 17.5 16 17.5Z" fill="white"/>
                                                 </svg>
-                                                <span>Vangold Product Team</span>
+                                                <span>{addChannel.Name}</span>
                                                 <button className="business__chat-view__counters" disabled>2</button>
                                             </div>
-                                        
+                                         
                                         </FormGroup>
                                     </FormControl>
                                 </ListItem>
                             </List>
                         </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM8 17.5C6.62 17.5 5.5 16.38 5.5 15C5.5 13.62 6.62 12.5 8 12.5C9.38 12.5 10.5 13.62 10.5 15C10.5 16.38 9.38 17.5 8 17.5ZM9.5 8C9.5 6.62 10.62 5.5 12 5.5C13.38 5.5 14.5 6.62 14.5 8C14.5 9.38 13.38 10.5 12 10.5C10.62 10.5 9.5 9.38 9.5 8ZM16 17.5C14.62 17.5 13.5 16.38 13.5 15C13.5 13.62 14.62 12.5 16 12.5C17.38 12.5 18.5 13.62 18.5 15C18.5 16.38 17.38 17.5 16 17.5Z" fill="white"/>
-                                                </svg>
-
-                                                <span>Vangold Marketing Team</span>
-                                                <button className="business__chat-view__counters" disabled>2</button>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM8 17.5C6.62 17.5 5.5 16.38 5.5 15C5.5 13.62 6.62 12.5 8 12.5C9.38 12.5 10.5 13.62 10.5 15C10.5 16.38 9.38 17.5 8 17.5ZM9.5 8C9.5 6.62 10.62 5.5 12 5.5C13.38 5.5 14.5 6.62 14.5 8C14.5 9.38 13.38 10.5 12 10.5C10.62 10.5 9.5 9.38 9.5 8ZM16 17.5C14.62 17.5 13.5 16.38 13.5 15C13.5 13.62 14.62 12.5 16 12.5C17.38 12.5 18.5 13.62 18.5 15C18.5 16.38 17.38 17.5 16 17.5Z" fill="white"/>
-                                                </svg>
-
-                                                <span>Vangold Marketing Team</span>
-                                                <button className="business__chat-view__counters" disabled>2</button>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
+                        ))
+                        }
+                        
                         <div onClick={() => setModalShow(true)} className="business-chat__side-bar-list mobile__business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>
@@ -207,65 +229,48 @@ const BusinessSideBarDropDown1 = () => {
                     </ListItem>
 
                     <Collapse in={tools} timeout="auto" unmountOnExit>
-                    <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar1} alt="business-chat-msg-avatar" />
-                                                <span>Carlos Pena</span>
-                                            </div>
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar2} alt="business-chat-msg-avatar" />
-                                                <span>Damilare Olulana</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar3} alt="business-chat-msg-avatar" />
-                                                <span>Dare Bello</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
-                        <div className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
-                            <List component="div" disablePadding>
-                                <ListItem>
-                                    <FormControl component="fieldset" className={classes.formControl}>
-                                        <FormGroup>
-                                            <div className='d-flex business-chat__side-bar-content justify-content-between'>
-                                                <img className="business-chat__avatar_img" src={Avatar4} alt="business-chat-msg-avatar" />
-                                                <span>Vivian Ufot</span>
-                                            </div>
-                                        
-                                        </FormGroup>
-                                    </FormControl>
-                                </ListItem>
-                            </List>
-                        </div>
+                    <div className="d-none d-lg-block">
+                        { UsersData.map((userChatData) => (
+                            <div onClick={() => {
+                                    setShowMessages(true);
+                                }} className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
+                                <List component="div" disablePadding>
+                                    <ListItem>
+                                        <FormControl component="fieldset" className={classes.formControl}>
+                                            <FormGroup>
+                                                <div className='d-flex business-chat__side-bar-content justify-content-between'>
+                                                    <img className="business-chat__avatar_img" src={userChatData.usersAvatar} alt="business-chat-msg-avatar" />
+                                                    <span>{userChatData.userName}</span>
+                                                </div>
+                                            </FormGroup>
+                                        </FormControl> 
+                                    </ListItem>
+                                </List>
+                            </div>
+                            ))
+                        }
+                    </div>
+                    <div className="d-lg-none">
+                        { UsersData.map((userChatData) => (
+                            <div onClick={() => {
+                                    history.push('/profile/b-chat-user')
+                                }} className="business-chat__side-bar-list mobile__business-chat__side-bar-list mobile__business-chat__side-bar-list-header">
+                                <List component="div" disablePadding>
+                                    <ListItem>
+                                        <FormControl component="fieldset" className={classes.formControl}>
+                                            <FormGroup>
+                                                <div className='d-flex business-chat__side-bar-content justify-content-between'>
+                                                    <img className="business-chat__avatar_img" src={userChatData.usersAvatar} alt="business-chat-msg-avatar" />
+                                                    <span>{userChatData.userName}</span>
+                                                </div>
+                                            </FormGroup>
+                                        </FormControl> 
+                                    </ListItem>
+                                </List>
+                            </div>
+                            ))
+                        }
+                    </div>
                         <div onClick={() => setModalShow2(true)} className="business-chat__side-bar-list mobile__business-chat__side-bar-list">
                             <List component="div" disablePadding>
                                 <ListItem>

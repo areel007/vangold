@@ -1,0 +1,32 @@
+.home-form__modals{
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+.home-form-modal-style {
+  max-width: 652px !important;
+  margin: auto;
+}
+.modalFormHome_-_channelHead {
+  max-width: 500px;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #141414;
+  padding-left: 30px;
+}
+.social-divider{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #979faf;
+  line-height: 0.1em;
+  position: relative;
+  top: 40px;
+}
+
+.social-divider span{
+  background: #fff;
+  padding: 0 10px;
+}

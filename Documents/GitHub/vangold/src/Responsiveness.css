@@ -5,16 +5,55 @@
   .dashboard_mobile_searchBar {
     display: block !important;
   }
-  .inn-top-freelancer{
+  .inn-top-freelancer {
     flex-direction: column;
   }
-  .SearchBox{
+  .SearchBox {
+    display: none;
+  }
+  .footer__inner {
+    flex-direction: column;
+    gap: var(--fs-30);
+  }
+  .footer__inner .footer__links {
+    max-width: 100% !important;
+    border: none;
+  }
+  .ChatBoxMembers {
+    position: absolute !important;
+    z-index: 1;
+    right: 0;
+  }
+  .business-chat-view2 {
+    display: none !important;
+  }
+  .business__channel-header h2 {
+    color: #333333 !important;
+  }
+  .MessageBox__ .MessageBox__header {
+    border-radius: 10px 10px 0px 0px !important;
+  }
+  .sideBarBusinessChat,
+  .sideBarBusiness2 {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .chat__box__container {
     display: none;
   }
   .sideBarTopJobs {
     width: 100% !important;
     margin-bottom: 50px;
     /* min-height: 1079px; */
+  }
+  .message__box-component2 {
+    display: none;
+  }
+  .MessageBox__ {
+    padding: 15px;
+  }
+  .MessageBox__ .chat__container-header {
+    display: block !important;
   }
   .MessageBox__.Biz__MessageBox__ {
     left: 0px !important;
@@ -51,9 +90,7 @@
   .submit__btn {
     max-width: 100%;
   }
-  .message__box-component2 {
-    display: none;
-  }
+
   .chat__box__contaniner-left {
     width: 100% !important;
   }
@@ -293,13 +330,11 @@
   .collaborate__inner2 {
     flex-direction: column;
   }
-  .sideBarBusiness2 {
-    display: none !important;
-  }
+
   .BusinessChatImg-content {
     margin-top: 63px;
   }
- 
+
   .business__channel-header h2 {
     color: #333333 !important;
   }
@@ -438,15 +473,6 @@
     background-image: url(./assets//images/footer.PNG);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-  }
-  .footer__inner {
-    flex-direction: column;
-    gap: var(--fs-30);
-  }
-
-  .footer__inner .footer__links {
-    max-width: 100%;
-    border: none;
   }
 
   .bottomfooter__inner {
@@ -647,6 +673,9 @@
   .banner__text__subtitle {
     font-size: var(--fs-16) !important;
   }
+  .modalFormHome_-_channelHead{
+    font-size: var(--fs-24) !important;
+  }
   .stars {
     width: 13.33px;
   }
@@ -734,7 +763,7 @@
 }
 @media screen and (max-width: 850px) {
   .auth-form__image,
-  .top__jobs__freelancers{
+  .top__jobs__freelancers {
     display: none;
   }
   .inn_SearchInputBox .mobile-freelancers-searchBar {

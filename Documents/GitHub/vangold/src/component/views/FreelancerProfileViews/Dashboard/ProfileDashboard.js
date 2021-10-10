@@ -163,19 +163,16 @@ const application = [
         id: 1,
         name: 'John Adams',
         gender: 'Male',
-        level: 'Expert',
     },
     {
         id: 2,
         name: 'John Adams',
         gender: 'Male',
-        level: 'Expert',
     },
     {
         id: 3,
         name: 'John Adams',
         gender: 'Male',
-        level: 'Expert',
     },
 ]
 
@@ -443,9 +440,6 @@ const FreelancerProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                                                         <div className=" align-self-center" style={{ fontSize: "12px" }}>
                                                             <img src={user} alt="user" className='user me-3' />
                                                             {person.gender}
-                                                        </div>
-                                                        <div className="align-self-center" style={{ fontSize: "12px" }}>
-                                                            {person.level}
                                                         </div>
                                                         <div>
                                                             <Button className='employee-btn'>View Profile</Button>

@@ -25,24 +25,34 @@ import FreelancerRegistration from "./component/views/FreelancerViews/Auth/freel
 import BrandRegistration from './component/views/BrandViews/Auth/brand-registration';
 import PostJob from './component/views/EmployerViews/PostJob/PostJob';
 import ProfilePostJob from './component/views/ProfileViews/PostJob/PostJob';
+import EmployerProfilePostJob from './component/views/EmployerProfileView/PostJob/PostJob';
 import EmployerSetting from './component/views/EmployerViews/EmployerSetting/EmployerSetting';
 import PayToEmployer from './component/views/EmployerViews/PayToEmployer/PayToEmployer';
 import PaymentSuccess from './component/views/EmployerViews/PaymentSuccess/PaymentSucess';
 import ProfileDashboard from './component/views/ProfileViews/Dashboard/ProfileDashboard';
 import FreelancerProfileDashboard from './component/views/FreelancerProfileViews/Dashboard/ProfileDashboard';
+import EmployerProfileDashboard from './component/views/EmployerProfileView/Dashboard/ProfileDashboard';
 import ProfileAllJobs from './component/views/ProfileViews/Jobs/ProfileAllJobs';
+import EmployerProfileAllJobs from './component/views/EmployerProfileView/Jobs/ProfileAllJobs';
 import FreelancerProfileAllJobs from './component/views/FreelancerProfileViews/Jobs/FreelancerProfileAllJobs';
 import ProfileMyJob from './component/views/ProfileViews/Jobs/ProfileMyJob';
+import EmployerProfileMyJob from './component/views/EmployerProfileView/Jobs/ProfileMyJob';
 import FreelancerProfile from './component/views/FreelancerViews/FreelancerProfile/FreelancerProfile';
 import FreelancerProfileEdit from './component/views/FreelancerViews/FreelancerProfileEdit/FreelancerProfileEdit';
+import EmployerProfileEdit from './component/views/EmployerProfileView/ProfileEdit/ProfileEdit';
 import JobDescrip from './component/views/ProfileViews/Jobs/JobDescrip';
 import FreelancerJobDescrip from './component/views/FreelancerProfileViews/Jobs/JobDescrip';
+import EmployerJobDescrip from './component/views/EmployerProfileView/Jobs/JobDescrip';
 import MyJobProjects from './component/views/ProfileViews/Jobs/MyJobProjects';
 import FreelancerMyJobProjects from './component/views/FreelancerProfileViews/Jobs/FreelancerMyJobProjects';
+import EmployerMyJobProjects from './component/views/EmployerProfileView/Jobs/MyJobProjects';
 import ProfileEdit from './component/views/ProfileViews/ProfileEdit/ProfileEdit';
 import FindTalent from './component/views/ProfileViews/Talent/FindTalent';
+import EmployerFindTalent from './component/views/EmployerProfileView/Talent/FindTalent';
 import AddGroupUsers from './component/views/ChatView/GroupChatView/AddGroupUsers';
+import EmployerAddGroupUsers from './component/views/EmployerProfileView/AddGroupUsers';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
+import EmployerGroupChatView from './component/views/EmployerProfileView/GroupChatView';
 import BusinessChatView from './component/views/ChatView/BusinessChatView/BusinessChatView';
 import BusinessChatViewTwo from './component/views/ChatView/BusinessChatView/BusinessChatView2';
 import BusinessChatViewThree from './component/views/ChatView/BusinessChatView/BusinessChatView3';
@@ -50,13 +60,17 @@ import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
 import Stories from './component/views/ChatView/GroupChatView/Stories';
 import ChatViewOne from './component/views/ChatView/ChatViewOne';
 import GroupChatViewOne from './component/views/ChatView/GroupChatView/GroupChatView1';
-import ChatViewThree from './component/views/ChatView/ChatViewThree';
+import EmployerGroupChatViewOne from './component/views/EmployerProfileView/GroupChatView1';
 import ChatViewFour from './component/views/ChatView/ChatViewFour';
+import EmployerChat from './component/views/EmployerProfileView/EmployerChat';
 import ManageTalent1 from './component/views/ProfileViews/Talent/ManageTalent1';
 import MobileCall from "./component/core-ui/MobileCall/MobileCall";
 import ManageTalent from './component/views/ProfileViews/Talent/ManageTalent';
+import EmployerManageTalent from './component/views/EmployerProfileView/Talent/ManageTalent';
 import MeetingDetails from './component/views/ProfileViews/Talent/MeetingDetails';
+import EmployerMeetingDetails from './component/views/EmployerProfileView/Talent/MeetingDetails';
 import ManageSchedule from './component/views/ProfileViews/Talent/ManageSchedule';
+import EmployerManageSchedule from './component/views/EmployerProfileView/Talent/ManageSchedule';
 import MobileVideoCall from './component/views/VideoCall/MobileVideoCall';
 import ChatBoxOne from "./component/core-ui/AllMessagesBox/ChatBoxOne";
 import ChatBoxTwo from "./component/core-ui/AllMessagesBox/ChatBoxTwo";
@@ -65,9 +79,11 @@ import ChatBoxFour from "./component/core-ui/AllMessagesBox/ChatBoxFour";
 import ChatBoxFive from "./component/core-ui/AllMessagesBox/ChatBoxFive";
 import ChatBoxSix from "./component/core-ui/AllMessagesBox/ChatBoxSix";
 import ChatBoxSeven from "./component/core-ui/AllMessagesBox/ChatBoxSeven";
+import ChatBoxEight from "./component/core-ui/AllMessagesBox/ChatBoxEight";
 import ChatBoxNine from "./component/core-ui/AllMessagesBox/ChatBoxNine";
 import ManageTalentChat from "./component/core-ui/AllMessagesBox/ManageTalentChat";
-import FreelancerMessageBoxOne from "./component/views/FreelancerMessageBox/MessageBoxOne";
+import FreelancerChat from "./component/views/FreelancerProfileViews/FreelancerChat/FreelancerChat";
+import CallChat from "./component/core-ui/AllMessagesBox/CallChat";
 
 function App() {
 
@@ -200,6 +216,9 @@ function App() {
                     <Route path="/profile/postjob">
                         <ProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
+                    <Route path="/profile/e-postjob">
+                        <EmployerProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
                     <Route path="/employer-setting">
                         <EmployerSetting showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
@@ -215,14 +234,23 @@ function App() {
                     <Route path="/profile/dashboard">
                         <ProfileDashboard showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
+                    <Route path="/profile/e-dashboard">
+                        <EmployerProfileDashboard showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
                     <Route path="/profile/jobs/all-jobs">
                         <ProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/f-jobs/all-jobs">
                         <FreelancerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
+                    <Route path="/profile/e-jobs/all-jobs">
+                        <EmployerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
                     <Route path="/profile/jobs/f-job-description">
                         <FreelancerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/e-jobs/job-description">
+                        <EmployerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/jobs/job-description">
                         <JobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -230,8 +258,14 @@ function App() {
                     <Route path="/profile/jobs/my-job">
                         <ProfileMyJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
+                    <Route path="/profile/e-jobs/my-job">
+                        <EmployerProfileMyJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
                     <Route path="/profile/jobs/my-job-projects">
                         <MyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
+                    <Route path="/profile/jobs/e-my-job-projects">
+                        <EmployerMyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/f-my-job-projects">
                         <FreelancerMyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
@@ -239,38 +273,62 @@ function App() {
                     <Route path="/profile/edit">
                         <ProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
+                    <Route path="/profile/e-edit">
+                        <EmployerProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
                     <Route path="/profile/talent/find-talent">
                         <FindTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
+                    <Route path="/profile/e-talent/find-talent">
+                        <EmployerFindTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/manage-talent">
                         <ManageTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
+                    <Route path="/profile/e-talent/manage-talent">
+                        <EmployerManageTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
                     <Route path="/profile/talent/ManageSchedule">
                         <ManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/e-talent/ManageSchedule">
+                        <EmployerManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/talent/meeting-details">
                         <MeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
-                    <Route path="/profile/messages">
-                        <ChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    <Route path="/profile/e-talent/meeting-details">
+                        <EmployerMeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
-                    <Route path="/profile/f-messages">
-                        <FreelancerMessageBoxOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    <Route path="/profile/ChatViewOne">
+                        <ChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/GroupChatViewOne">
                         <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
-                    <Route path="/profile/ChatViewThree">
-                        <ChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    <Route path="/profile/e-group-chat1">
+                        <EmployerGroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
-                    <Route path="/profile/ChatViewFour">
+                    <Route path="/profile/f-messages">
+                        <FreelancerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/messages">
                         <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
+                    <Route path="/profile/e-messages">
+                        <EmployerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
                     <Route path="/profile/AddGroupUsers">
-                        <AddGroupUsers />
+                        <AddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/e-addgroup-user">
+                        <EmployerAddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/group-chat2">
                         <GroupChatViewTwo showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/e-group-chat">
+                        <EmployerGroupChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/mobile-call">
                         <MobileCall />
@@ -282,7 +340,7 @@ function App() {
                         <BusinessChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-1">
-                        <BusinessChatViewThree />
+                        <BusinessChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-2">
                         <BusinessChatViewTwo />
@@ -299,16 +357,16 @@ function App() {
                     <Route path="/profile/freelancer-profile-edit">
                         <FreelancerProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
-                    <Route path="/ChatBoxOne">
+                    <Route path="/profile/chat-user">
                         <ChatBoxOne />
                     </Route>
-                    <Route path="/ChatBoxTwo">
+                    <Route path="/profile/g-chat-user">
                         <ChatBoxTwo />
                     </Route>
                     <Route path="/ChatBoxThree">
                         <ChatBoxThree />
                     </Route>
-                    <Route path="/ChatBoxFour">
+                    <Route path="/profile/group-chat">
                         <ChatBoxFour />
                     </Route>
                     <Route path="/ChatBoxFive">
@@ -320,11 +378,17 @@ function App() {
                     <Route path="/ChatBoxSeven">
                         <ChatBoxSeven />
                     </Route>
-                    <Route path="/ChatBoxNine">
+                    <Route path="/profile/b-chat-user">
+                        <ChatBoxEight />
+                    </Route>
+                    <Route path="/profile/f-chat-user">
                         <ChatBoxNine />
                     </Route>
                     <Route path="/ManageTalentChat">
                         <ManageTalentChat />
+                    </Route>
+                    <Route path="/CallChat">
+                        <CallChat />
                     </Route>
                 </Switch>
                 <Footer />

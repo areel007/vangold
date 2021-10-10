@@ -27,7 +27,7 @@ const ChatBoxEight = (props) => {
         setMemberShow(false);
     });
     return (
-        <Container fluid>
+        <>
             <div className="MessageBox__ Biz__MessageBox__">
                 <div className="MessageBox__header Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
@@ -51,77 +51,80 @@ const ChatBoxEight = (props) => {
                     </div>
                 }
                 </div>
-                {memberShow &&
-                <div ref={ref}>
-                    <ChatBoxMembers closeMemberShow={closeMemberShow}/>
-                </div>
-                }
-                <div className="ChatBox__ Biz__ChatBox__">
-                    <div className="ChatBox__sendMsg">
-                        <div className="Inn__ChatBox__sendMsg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio feugiat donec imperdiet aliquam vel, penatibus quis pulvinar. Lectus pellentesque magna dapibus fringilla fermentum id urna.
+                
+                <div className="topChatBox__">
+                    <div className="ChatBox__ Biz__ChatBox__">
+                        <div className="ChatBox__sendMsg">
+                            <div className="Inn__ChatBox__sendMsg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum odio feugiat donec imperdiet aliquam vel, penatibus quis pulvinar. Lectus pellentesque magna dapibus fringilla fermentum id urna.
+                            </div>
+                            <div className="ChatBox__sendMsg__time">
+                                Saturday 11:50 PM
+                            </div>
                         </div>
-                        <div className="ChatBox__sendMsg__time">
-                            Saturday 11:50 PM
+                        
+                        <div className="ChatBox__replyMsg">
+                            <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
+                            </div>
+                            <div className="ChatBox__replyMsg__time">
+                                Saturday 11:50 PM
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div className="ChatBox__replyMsg">
-                        <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
-                        </div>
-                        <div className="ChatBox__replyMsg__time">
-                            Saturday 11:50 PM
-                        </div>
-                    </div>
-                    <div className="ChatBox__replyMsg">
-                        <div className="call__chatBox">
-                            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="16" height="14.7692" rx="4" fill="#C4C4C4" fill-opacity="0.5"/>
-                            <g clip-path="url(#clip0)">
-                            <path d="M5.74479 4.71802L8.0012 6.97443L10.873 4.10264L10.4627 3.69238L8.0012 6.15392L6.15505 4.30777H7.59095V3.69238H5.12941V6.15392H5.74479V4.71802ZM12.8053 9.30059C11.554 8.11495 9.86377 7.38469 8.0012 7.38469C6.13864 7.38469 4.44838 8.11495 3.1971 9.30059C3.12325 9.37443 3.07812 9.477 3.07812 9.59187C3.07812 9.70674 3.12325 9.80931 3.1971 9.88315L4.21454 10.9006C4.28838 10.9744 4.39095 11.0196 4.50582 11.0196C4.61659 11.0196 4.71915 10.9744 4.793 10.9047C5.1171 10.6011 5.48633 10.3467 5.88428 10.1457C6.01966 10.0801 6.11402 9.94059 6.11402 9.77649V8.50469C6.70889 8.30777 7.34479 8.2052 8.0012 8.2052C8.65761 8.2052 9.29351 8.30777 9.88838 8.50059V9.77238C9.88838 9.93238 9.98274 10.076 10.1181 10.1416C10.5202 10.3426 10.8853 10.6011 11.2135 10.9006C11.2874 10.9744 11.3899 11.0155 11.5007 11.0155C11.6156 11.0155 11.7181 10.9703 11.792 10.8965L12.8094 9.87905C12.8833 9.8052 12.9284 9.70264 12.9284 9.58777C12.9284 9.4729 12.8792 9.37443 12.8053 9.30059Z" fill="#333333"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0">
-                            <rect width="9.84615" height="9.84615" fill="white" transform="translate(3.07812 2.46143)"/>
-                            </clipPath>
-                            </defs>
-                            </svg>
+                        <div className="ChatBox__replyMsg">
+                            <div className="call__chatBox">
+                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="16" height="14.7692" rx="4" fill="#C4C4C4" fill-opacity="0.5"/>
+                                <g clip-path="url(#clip0)">
+                                <path d="M5.74479 4.71802L8.0012 6.97443L10.873 4.10264L10.4627 3.69238L8.0012 6.15392L6.15505 4.30777H7.59095V3.69238H5.12941V6.15392H5.74479V4.71802ZM12.8053 9.30059C11.554 8.11495 9.86377 7.38469 8.0012 7.38469C6.13864 7.38469 4.44838 8.11495 3.1971 9.30059C3.12325 9.37443 3.07812 9.477 3.07812 9.59187C3.07812 9.70674 3.12325 9.80931 3.1971 9.88315L4.21454 10.9006C4.28838 10.9744 4.39095 11.0196 4.50582 11.0196C4.61659 11.0196 4.71915 10.9744 4.793 10.9047C5.1171 10.6011 5.48633 10.3467 5.88428 10.1457C6.01966 10.0801 6.11402 9.94059 6.11402 9.77649V8.50469C6.70889 8.30777 7.34479 8.2052 8.0012 8.2052C8.65761 8.2052 9.29351 8.30777 9.88838 8.50059V9.77238C9.88838 9.93238 9.98274 10.076 10.1181 10.1416C10.5202 10.3426 10.8853 10.6011 11.2135 10.9006C11.2874 10.9744 11.3899 11.0155 11.5007 11.0155C11.6156 11.0155 11.7181 10.9703 11.792 10.8965L12.8094 9.87905C12.8833 9.8052 12.9284 9.70264 12.9284 9.58777C12.9284 9.4729 12.8792 9.37443 12.8053 9.30059Z" fill="#333333"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0">
+                                <rect width="9.84615" height="9.84615" fill="white" transform="translate(3.07812 2.46143)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
 
-                            <span>Missed call fom Jane Doe</span>
+                                <span>Missed call fom Jane Doe</span>
+                            </div>
+                            <div className="ChatBox__replyMsg__time">
+                                11:50 AM
+                            </div>
                         </div>
-                        <div className="ChatBox__replyMsg__time">
-                            11:50 AM
+                        <div className="ChatBox__replyMsg">
+                            <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
+                            </div>
+                            <div className="ChatBox__replyMsg__time">
+                                Saturday 11:50 PM
+                            </div>
                         </div>
+                        <div className="center__time">
+                            June 20, 10:46 pm
+                        </div>
+                        <div className="ChatBox__sendMsg">
+                            <div className="Inn__ChatBox__sendMsg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div className="ChatBox__sendMsg__time">
+                                Saturday 11:50 PM
+                            </div>
+                        </div>
+                        <div className="ChatBox__replyMsg">
+                            <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing fjfjjfjf mjfkfkf elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
+                            </div>
+                            <div className="ChatBox__replyMsg__time">
+                                Saturday 11:50 PM
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div className="ChatBox__replyMsg">
-                        <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
-                        </div>
-                        <div className="ChatBox__replyMsg__time">
-                            Saturday 11:50 PM
-                        </div>
-                    </div>
-                    <div className="center__time">
-                        June 20, 10:46 pm
-                    </div>
-                    <div className="ChatBox__sendMsg">
-                        <div className="Inn__ChatBox__sendMsg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-                        <div className="ChatBox__sendMsg__time">
-                            Saturday 11:50 PM
-                        </div>
-                    </div>
-                    <div className="ChatBox__replyMsg">
-                        <div className="Inn__ChatBox__replyMsg Biz__Inn__ChatBox__replyMsg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing fjfjjfjf mjfkfkf elit. Mi sed tempus convallis faucibus. Imperdiet fringilla vitae auctor diam duis.
-                        </div>
-                        <div className="ChatBox__replyMsg__time">
-                            Saturday 11:50 PM
-                        </div>
-                    </div>
-                    
+                    {memberShow &&
+                    <div ref={ref}>
+                        <ChatBoxMembers closeMemberShow={closeMemberShow}/>
+                    </div> 
+                    }
                 </div>
                 <div className="ChatBox__Footer Biz__ChatBox__Footer">
                         <div className="Inn__ChatBox__Footer-input">
@@ -149,7 +152,7 @@ const ChatBoxEight = (props) => {
                         </svg>
                     </div>
             </div>
-        </Container>
+        </>
     )
 }
 

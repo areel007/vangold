@@ -1,0 +1,30 @@
+.message__box{
+    padding-top: 30px;
+    background-color: #f9f9f9;
+    min-height: 800px;
+}
+.message__box .msg-h2 {
+  text-align: center;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+}
+.message__box .msg-P {
+  text-align: center;
+  margin: auto;
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.5;
+}
+.message__box .msg-photo{
+    margin-top: 24px;
+}

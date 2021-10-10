@@ -4,7 +4,6 @@ import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
 import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
 import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
 import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
-import useOnclickOutside from "react-cool-onclickoutside";
 
 import "./AllMessagesBox.css";
 
@@ -37,7 +36,7 @@ const userMembersAdmin = [
 const ChatBoxMembers = (props) => {
     
     return (
-        <Container>
+        <>
             <div className="ChatBoxMembers">
                 <div className="inn__ChatBoxMembers__header">
                     <input type="text" placeholder="Members" />
@@ -75,7 +74,7 @@ const ChatBoxMembers = (props) => {
                     }
                 </div>
             </div>
-        </Container>
+        </>
     )
 }
 
