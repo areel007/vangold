@@ -4,6 +4,7 @@ import 'react-pure-modal/dist/react-pure-modal.min.css';
 import CrossfadeImage from "react-crossfade-image";
 import HomeFormModalOne from "../FormsModal/HomeFormModalOne";
 import HomeFormModalTwo from "../FormsModal/HomeFormModalTwo";
+import { useHistory } from "react-router-dom";
 
 const fadeImages = [
     "https://i.ibb.co/hsGMCHF/Rectangle8892491.png",
@@ -15,6 +16,7 @@ const fadeImages = [
 const AbBanner = (props) => {
     const [modalShow, setModalShow] = useState(false);
     const [modalShowTwo, setModalShowTwo] = useState(false);
+    const history = useHistory();
 
     const [curImg, setCurImg] = useState(0);
 

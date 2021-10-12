@@ -10,7 +10,7 @@
 .collaborate.collaborate2 {
   padding-top: 100px;
   padding-bottom: 80px;
-  margin-top: 110px;
+  margin-top: 150px;
 }
 .collaborate__inner2 {
   display: flex;
@@ -190,7 +190,7 @@
   font-size: var(--fs-36);
   line-height: 48px;
   max-width: 75.7rem;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 3rem auto;
 }
 .get-notify-banner .getNotifyBannerPara2 {
   color: var(--secondary);
@@ -202,10 +202,9 @@
   max-width: 75.7rem;
 }
 .get-notify-banner .getNotifyBannerPara3 {
-  
   color: #18191f;
   font-size: var(--fs-16);
-  line-height: 32px;
+  line-height: 20px;
   font-family: var(--inter);
   font-style: normal;
   font-weight: normal;
@@ -251,10 +250,11 @@
   top: -56px;
   left: -10px;
 }
-.getNotifyInput form .invalid-feedback{
+.getNotifyInput form .invalid-feedback {
   position: absolute;
   text-align: left;
 }
-.getNotifyInput form .form-control.is-invalid, .was-validated .form-control:invalid{
+.getNotifyInput form .form-control.is-invalid,
+.was-validated .form-control:invalid {
   background-image: none !important;
 }

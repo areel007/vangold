@@ -220,8 +220,8 @@ const FreelancerProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [selectedIndex1, setSelectedIndex1] = useState(0);
-    const [component, setComponent] = useState('Client Review');
-    const [component1, setComponent1] = useState('Client Review');
+    const [setComponent] = useState('Client Review');
+    const [setComponent1] = useState('Client Review');
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
@@ -242,13 +242,13 @@ const FreelancerProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                         <Row>
                             <Col xs={12} lg={6} className="mx-auto p-3">
                                 <h1 className='mb-4'>Activity</h1>
-                                <Row>
+                                <Row className="jobsCreated__TotalHire">
                                     {
                                         cardItems.map((item) => (
                                             <Col xs={12} lg={6} className="mx-auto" key={item.value}>
                                                 <Card className="dash-card" style={{ backgroundColor: `${item.color}`, color: '#fff' }}>
 
-                                                    <div className="d-flex justify-content-between">
+                                                    <div className="d-flex Card_-_dashboard justify-content-between">
                                                         <div>
                                                             <Button className="card-btn" variant="light"><img src={item.icon} alt="icons" /></Button>
                                                         </div>

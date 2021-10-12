@@ -20,6 +20,7 @@
 }
 .secure-payment-section {
   background-color: #f9fafc;
+  
 }
 .inner__secure-payment-section {
   display: flex;
@@ -28,9 +29,24 @@
   padding-bottom: 32.25px;
   gap: 70px;
 }
-.secure-payment-section-img {
-  max-width: 495px;
-  /* height: 536px; */
+.secure-payment-section-img{
+  width: 495px;
+  height: 536px;
+}
+.secure-payment-section-img img{
+  width: 495px;
+  height: 536px;
+}
+.secure-payment-text{
+  width: 512px;
+}
+.secure-payment-text .popular-service-subtitle__title {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: 800;
+  font-size: var(--fs-30);
+  line-height: 54px;
+  color: #164d00;
 }
 .secure-payment-section-img img {
   width: 100%;

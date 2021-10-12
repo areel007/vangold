@@ -53,7 +53,7 @@ import AddGroupUsers from './component/views/ChatView/GroupChatView/AddGroupUser
 import EmployerAddGroupUsers from './component/views/EmployerProfileView/AddGroupUsers';
 import GroupChatViewTwo from './component/views/ChatView/GroupChatView/GroupChatView2';
 import EmployerGroupChatView from './component/views/EmployerProfileView/GroupChatView';
-import BusinessChatView from './component/views/ChatView/BusinessChatView/BusinessChatView';
+import AnnouncementChannel from './component/views/ChatView/BusinessChatView/AnnouncementChannel';
 import BusinessChatViewTwo from './component/views/ChatView/BusinessChatView/BusinessChatView2';
 import BusinessChatViewThree from './component/views/ChatView/BusinessChatView/BusinessChatView3';
 import ChatCall from './component/views/ChatView/GroupChatView/ChatCall';
@@ -77,6 +77,7 @@ import ChatBoxTwo from "./component/core-ui/AllMessagesBox/ChatBoxTwo";
 import ChatBoxThree from "./component/core-ui/AllMessagesBox/ChatBoxThree";
 import ChatBoxFour from "./component/core-ui/AllMessagesBox/ChatBoxFour";
 import ChatBoxFive from "./component/core-ui/AllMessagesBox/ChatBoxFive";
+import ChatBoxAnnouncement from "./component/core-ui/AllMessagesBox/ChatBoxAnnouncement";
 import ChatBoxSix from "./component/core-ui/AllMessagesBox/ChatBoxSix";
 import ChatBoxSeven from "./component/core-ui/AllMessagesBox/ChatBoxSeven";
 import ChatBoxEight from "./component/core-ui/AllMessagesBox/ChatBoxEight";
@@ -336,11 +337,11 @@ function App() {
                     <Route path="/profile/mobile-video-call">
                         <MobileVideoCall />
                     </Route>
-                    <Route path="/profile/business-chat">
-                        <BusinessChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
-                    </Route>
                     <Route path="/profile/business-chat-1">
                         <BusinessChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                    </Route>
+                    <Route path="/profile/announcement">
+                        <AnnouncementChannel showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
                     </Route>
                     <Route path="/profile/business-chat-2">
                         <BusinessChatViewTwo />
@@ -369,8 +370,11 @@ function App() {
                     <Route path="/profile/group-chat">
                         <ChatBoxFour />
                     </Route>
-                    <Route path="/ChatBoxFive">
+                    <Route path="/profile/b-channel-user-chat">
                         <ChatBoxFive />
+                    </Route>
+                    <Route path="/profile/b-announcement">
+                        <ChatBoxAnnouncement />
                     </Route>
                     <Route path="/ChatBoxSix">
                         <ChatBoxSix />

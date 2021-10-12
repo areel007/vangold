@@ -27,7 +27,9 @@ const GroupChatViewTwo = ({ showSideMenu, setShowSideMenu }) => {
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">
                                 <div className="arrow-top-G-Chat">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg style={{cursor: "pointer"}} onClick={() => {
+                                            history.push("/profile/AddGroupUsers")
+                                        }} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 12H5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M12 19L5 12L12 5" stroke="#333333" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>

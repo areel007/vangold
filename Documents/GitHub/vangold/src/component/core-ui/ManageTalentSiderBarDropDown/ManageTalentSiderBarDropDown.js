@@ -7,8 +7,6 @@ import {
     Collapse,
     FormControl,
     FormGroup,
-    Checkbox,
-    withStyles,
 } from "@material-ui/core";
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import participantsAvatar1 from "../../../assets/images/manage-talents/Rectangle9192.png";
@@ -36,25 +34,11 @@ const ManageTalentUsesStyles = makeStyles((theme) => ({
 
 }));
 
-const GreenCheckbox = withStyles({
-    root: {
-        '&$checked': {
-            color: "#45B618",
-        },
-    },
-    checked: {},
-})((props) => <Checkbox color="default" {...props} />);
 
 const ManageTalentDropDown = () => {
     const classes = ManageTalentUsesStyles();
-    const [checkValue, setCheckValue] = useState('')
     const [skills, setParticipants] = useState(true);
     const [chats, setChats] = useState(true);
-    const handleChange = (e) => {
-        setCheckValue(e.target.value)
-        console.log(checkValue);
-    };
-
     return (
         <>
 

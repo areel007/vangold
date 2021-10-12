@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Chip } from "@material-ui/core";
-import { Col, Container, Row, Form } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../../core-ui/SideMenu/SideMenu"
 import { makeStyles } from '@material-ui/core/styles';
 import messageBoxImg from "../../../../assets/images/group-therapy/rafiki.png";

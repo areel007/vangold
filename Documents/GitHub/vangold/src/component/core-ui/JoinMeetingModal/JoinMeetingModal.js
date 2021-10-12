@@ -2,19 +2,10 @@ import { Modal, Button } from "react-bootstrap";
 import 'antd/dist/antd.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
  import "./JoinMeetingModal.css";
 
 const JoinMeetingModal = (props) => {
-    const validationSchema = Yup.object().shape({
-        name: Yup.string().required('Name is required'),
-    });
-    const formOptions = { resolver: yupResolver(validationSchema) };
-    
-    // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-    const { errors } = formState;
+    const { handleSubmit } = useForm();
     
     function onSubmit(data) {}
     return (
@@ -26,7 +17,7 @@ const JoinMeetingModal = (props) => {
             <Modal.Body className='p-5'>
                 <AiOutlineCloseCircle className="modal-close" onClick={props.onHide} />
                 <h1 className="modal_-_channelHead mt-5">{props.head}</h1>
-                <form id="myform" onSubmit={handleSubmit(onSubmit)}>
+                <form id="" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-input__container">
                         <div className="form__-control">
                             <label htmlFor="name">Meeting ID</label>

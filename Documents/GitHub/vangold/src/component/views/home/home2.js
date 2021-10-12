@@ -12,7 +12,7 @@ const HomeTwo = (props) => {
     const formOptions = { resolver: yupResolver(validationSchema) };
     
     // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { register, handleSubmit, formState } = useForm(formOptions);
     const { errors } = formState;
     
     function onSubmit(data) {}
@@ -57,9 +57,9 @@ const HomeTwo = (props) => {
                 </div>
                 <div className="get-notify-banner">
                     <div className="container get-notify-banner">
-                        <p className="getNotifyBannerPara1">Get Notified</p>
-                        <p className="getNotifyBannerPara2">Your Every New Job</p>
-                        <p className="getNotifyBannerPara3">Place your business on the path of success with the help of freelance talents that you can rely on.</p>
+                        <span className="getNotifyBannerPara1">Get Notified</span>
+                        <span className="getNotifyBannerPara2">Your Every New Job</span>
+                        <span className="getNotifyBannerPara3">Place your business on the path of success with the help of freelance talents that you can rely on.</span>
                         <div className="getNotifyInput">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input name="email" placeholder="Email Address" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />

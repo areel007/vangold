@@ -38,7 +38,6 @@
   line-height: 59px;
   color: var(--white);
 }
-
 .sideBarTopFreealancer {
   width: 250px;
   height: 1579px;
@@ -235,4 +234,9 @@
   line-height: 28px;
   color: #141414;
   margin-bottom: 24px;
+}
+
+.sideBarTopFreelancerJobs{
+  background-color: #d8d8d7 !important;
+  width: 250px;
 }

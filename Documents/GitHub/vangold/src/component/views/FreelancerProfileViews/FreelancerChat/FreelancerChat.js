@@ -4,6 +4,7 @@ import FreelancerProfileSideMenu from "../../../core-ui/FreelancerProfileSideMen
 import avatar from "../../../../assets/images/avatar/Ellipse7.png";
 import chatUsersAvatar from "../../../../assets/images/avatar/Ellipse8.png";
 import ChatBoxNine from "../../../core-ui/AllMessagesBox/ChatBoxNine";
+import CallChat from "../../../core-ui/AllMessagesBox/CallChat";
 import messageBoxImg from "../../../../assets/images/chat/rafiki.png";
 import { useHistory } from "react-router-dom";  
 
@@ -34,6 +35,7 @@ const otherUsersData = [
 ]
 const FreelancerChat = ({ showSideMenu, setShowSideMenu }) => {
     const [seeMessage, setSeeMessage] = useState(false);
+    const [showCall, setShowCall] = useState(false);
     const history = useHistory();
 
 
@@ -97,10 +99,10 @@ const FreelancerChat = ({ showSideMenu, setShowSideMenu }) => {
                             </div>
                             <div className="message__box-component2">
                             {
-                                seeMessage ? (
+                                seeMessage ? ( 
 
-                            <ChatBoxNine />
-                                ) : (
+                            <ChatBoxNine setSeeMessage={setSeeMessage} setShowCall={setShowCall} />
+                                ) : showCall ? (<CallChat setSeeMessage={setSeeMessage} setShowCall={setShowCall} />) :(
                                 <div className="message__box text-center">
                                     <h2 className="msg-h2" style={{color: "#000000", fontSize: 31, fontWeight: "bold"}}>Message</h2>
                                     <p style={{maxWidth: 457}} className="msg-P">Have conversations around your different interest privately</p>

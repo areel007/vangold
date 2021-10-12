@@ -105,6 +105,16 @@
 }
 #job-descrip .border-right {
   border-right: 1px solid #00000033;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+.offer__salary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
 }
 #job-descrip .text-16px {
   font-size: 16px;
@@ -228,6 +238,7 @@
   cursor: pointer;
   margin-top: 2rem;
 }
+
 #my-job-projects .text-12px {
   font-size: 12px;
   font-weight: var(--font-wieght-bold);
@@ -281,4 +292,58 @@
     justify-content: flex-end;
     align-items: flex-end;
   }
+}
+
+.jobs-micro_add_follow__job-posted {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+@media screen and (max-width: 768px) {
+  .jobs-micro_add_follow__job-posted,
+  .jobs-micro_add_follow {
+    flex-direction: column;
+  }
+  .jobs-posted__applicants p:nth-child(3) {
+    display: none;
+  }
+  .jobs-posted__applicants {
+    justify-content: space-between !important;
+  }
+}
+
+.jobs-micro_add_follow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+.inn__jobs-micro_add_follow {
+  display: flex;
+  gap: 12px;
+}
+.inn__jobs-micro_add_follow p,
+.jobs-posted__applicants p {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: #4f4f4f;
+}
+.inn__jobs-micro_add_follow .jobs-micro__ {
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-16);
+  line-height: 19px;
+  color: var(--primary);
+}
+.jobs-posted__applicants {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.jobs-posted__applicants p:nth-child(3) {
+  font-weight: bold;
 }

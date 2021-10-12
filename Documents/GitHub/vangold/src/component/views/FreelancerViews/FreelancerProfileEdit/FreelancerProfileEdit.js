@@ -52,7 +52,7 @@ const FreelancerProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w">
                         <div>
-                            <img src={cover} alt="cover picture" className="img-fluid cover" />
+                            <img src={cover} alt="cover-img" className="img-fluid cover" />
                         </div>
                         <div className='d-flex justify-content-center'>
                             <div className="box-upload">

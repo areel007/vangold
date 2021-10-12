@@ -16,7 +16,6 @@ import ln from "../../../../assets/images/profile/in.png";
 import pin from "../../../../assets/images/profile/pin.png";
 import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
-import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./Jobs.css";
 
 const jobs =
@@ -114,7 +113,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                 <hr />
                             </>
                         )}
-                        <SideCheckBoxes showCheck={showCheck} />
+                        <SideCheckBoxes showCheck={showCheck} /> 
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
                         <div className="mb-5 text-end d-lg-none">

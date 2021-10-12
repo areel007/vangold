@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./TopFreelancer.css";
 import SearchBox from "../../core-ui/SearchInput/SearchBox";
-import ReactPaginate from "react-paginate";
 import TopHeader from "./TopHeader";
 import { topFreelancersData } from "../../../top-freelancers-data";
 import profileImg from "../../../assets/images/profile/Rectangle9112.png";
@@ -17,7 +16,7 @@ const RecentView = (props) => {
     const [currentValue] = useState(3);
 
   const [freelancers] = useState(topFreelancersData.slice(0, 30));
-  const [pageNumber, setPageNumber] = useState(0);
+  const [pageNumber] = useState(0);
   const freelancersPerPage = 5;
   const pagesVisited = pageNumber * freelancersPerPage;
 
@@ -116,12 +115,6 @@ const RecentView = (props) => {
                 </div>
             );
         });
-
-    const pageCount = Math.ceil(freelancers.length / freelancersPerPage);
-
-    const changePage = ({ selected }) => {
-        setPageNumber(selected);
-    };
 
     return (
         <div className="top-freelancer">
