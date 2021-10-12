@@ -1,81 +1,3 @@
-@media screen and (max-width: 991px) {
-  #job-descrip .border-botom {
-    border-bottom: 1px solid #00000033;
-  }
-  .dashboard_mobile_searchBar {
-    display: block !important;
-  }
-  .inn-top-freelancer {
-    flex-direction: column;
-  }
-  .SearchBox {
-    display: none;
-  }
-  .footer__inner {
-    flex-direction: column;
-    gap: var(--fs-30);
-  }
-  .footer__inner .footer__links {
-    max-width: 100% !important;
-    border: none;
-  }
-  .ChatBoxMembers {
-    position: absolute !important;
-    z-index: 1;
-    right: 0;
-  }
-  .business-chat-view2 {
-    display: none !important;
-  }
-  .business__channel-header h2 {
-    color: #333333 !important;
-  }
-  .MessageBox__ .MessageBox__header {
-    border-radius: 10px 10px 0px 0px !important;
-  }
-  .sideBarBusinessChat,
-  .sideBarBusiness2 {
-    width: 100% !important;
-    background-color: var(--white) !important;
-  }
-  .chat__box__container {
-    display: none;
-  }
-  .sideBarTopJobs {
-    width: 100% !important;
-    margin-bottom: 50px;
-    /* min-height: 1079px; */
-  }
-  .message__box-component2 {
-    display: none;
-  }
-  .MessageBox__ {
-    padding: 15px;
-  }
-  .MessageBox__ .chat__container-header {
-    display: block !important;
-  }
-  .MessageBox__.Biz__MessageBox__ {
-    left: 0px !important;
-  }
-  .business-chat-container {
-    margin-top: 0 !important;
-    flex-direction: column;
-  }
-  .sideBarBusinessChat,
-  .mobile__business__channel-header,
-  .business__channel-header .business__channel-header-left {
-    width: 100% !important;
-    background-color: var(--white) !important;
-  }
-  .business__chat-view__svg path,
-  .business-chat__side-bar-content svg path {
-    fill: var(--primary) !important;
-  }
-  .business-chat__side-bar-content span {
-    color: #333333 !important;
-  }
-}
 @media screen and (max-width: 1024px) {
   .bottom-chat-footer {
     padding-left: 12px !important;
@@ -127,13 +49,6 @@
     padding-bottom: 11.62px;
     padding: 24px;
   }
-  .logo img {
-    width: 24px !important;
-    height: 22.38px !important;
-  }
-  .logo h2 {
-    font-size: var(--fs-16) !important;
-  }
   .dashboard-avatar-name-notify .avatarImg {
     margin-right: 8px;
   }
@@ -180,7 +95,7 @@
     width: 100%;
   }
   .container .inner__secure-payment-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 32px;
   }
   .what-you-stand-to-gain__list-container {
@@ -202,7 +117,17 @@
     width: 100%;
     padding: 10px 5px;
   }
-
+  .secure-payment-section {
+    height: 653px !important;
+  }
+  .secure-payment-section-img,
+  .secure-payment-text {
+    width: 100% !important;
+  }
+  .secure-payment-section-img img {
+    max-width: 335px !important;
+    height: 362.75px !important;
+  }
   .collaborate-image2 .collaborate-circle {
     width: 223px;
     height: 225px;
@@ -228,6 +153,109 @@
     margin-top: 20px !important;
   }
 }
+
+@media screen and (max-width: 991px) {
+  #job-descrip .border-botom {
+    border-bottom: 1px solid #00000033;
+  }
+  .jobsCreated__TotalHire {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+  #my-job-projects .project-select {
+    width: 100% !important;
+  }
+
+  .Card_-_dashboard img {
+    width: 100% !important;
+  }
+  .dashboard_mobile_searchBar {
+    display: block !important;
+  }
+  .inn-top-freelancer,
+  .topjobtwo__container,
+  .top-jobs-right,
+  .top-freelancer {
+    flex-direction: column;
+  }
+  .topjobtwo__left {
+    width: 100% !important;
+  }
+
+  .SearchBox {
+    display: none;
+  }
+  .footer__inner {
+    flex-direction: column;
+    gap: var(--fs-30);
+  }
+  .footer__inner .footer__links {
+    max-width: 100% !important;
+    border: none;
+  }
+  .ChatBoxMembers {
+    position: absolute !important;
+    z-index: 1;
+    right: 0;
+  }
+  .business-chat-view2 {
+    display: none !important;
+  }
+  .business__channel-header h2 {
+    color: #333333 !important;
+  }
+  .MessageBox__ .MessageBox__header {
+    border-radius: 10px 10px 0px 0px !important;
+  }
+  .sideBarBusinessChat,
+  .sideBarBusiness2 {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .chat__box__container {
+    display: none;
+  }
+  .sideBarTopJobs {
+    width: 100% !important;
+    margin-bottom: 50px;
+    padding-top: 40px;
+    /* min-height: 1079px; */
+  }
+  .message__box-component2 {
+    display: none;
+  }
+  .MessageBox__ {
+    padding: 15px;
+  }
+  .MessageBox__ .chat__container-header {
+    display: block !important;
+  }
+  .MessageBox__.Biz__MessageBox__ {
+    left: 0px !important;
+  }
+  .business-chat-container {
+    margin-top: 0 !important;
+    flex-direction: column;
+  }
+  .sideBarBusinessChat,
+  .mobile__business__channel-header,
+  .business__channel-header .business__channel-header-left {
+    width: 100% !important;
+    background-color: var(--white) !important;
+  }
+  .business__chat-view__svg path,
+  .business-chat__side-bar-content svg path {
+    fill: var(--primary) !important;
+  }
+  .business-chat__side-bar-content span {
+    color: #333333 !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .jobsCreated__TotalHire {
+    grid-template-columns: 1fr;
+  }
+}
 @media screen and (max-width: 768px) {
   .home-two .home-two-title h2,
   .popular-service .popular-service-title,
@@ -248,7 +276,9 @@
   .collaborate-text__title,
   .manage-your-team-title,
   .inn__ourclients__testimonial .inn__ourclients__testimonial__header h2,
-  .become-a-business-banner p {
+  .become-a-business-banner,
+  .chat__box--header .chat__box--header__ .chat__box--header__title,
+  .secure-payment-text .popular-service-subtitle__title {
     font-size: var(--fs-24) !important;
     line-height: 32px !important;
   }
@@ -280,6 +310,9 @@
     flex-direction: column !important;
     width: 100%;
   }
+  .TopJobsContent__BOX {
+    min-height: 201px;
+  }
   .time__to {
     justify-content: flex-start !important;
     align-items: flex-start !important;
@@ -295,7 +328,8 @@
   .looking-for-talent-text__subtitle,
   .collaborate-text__subtitle,
   .manage-your-team-subtitle,
-  .inn__ourclients__testimonial .inn__ourclients__testimonial__header p {
+  .inn__ourclients__testimonial .inn__ourclients__testimonial__header p,
+  .chat__box--header .chat__box--header__ p {
     font-size: var(--fs-16) !important;
   }
   .inn-send-message-box,
@@ -305,6 +339,10 @@
   }
   .send-message-time-date {
     margin-bottom: 16px;
+  }
+  .card__image {
+    width: 250px !important;
+    min-height: 210px !important;
   }
   .created-_-Img {
     display: flex;
@@ -467,7 +505,8 @@
     height: 274.73px;
   }
   .card-image img {
-    height: 168px;
+    width: 200px;
+    height: 274.73px;
   }
   footer {
     background-image: url(./assets//images/footer.PNG);
@@ -606,12 +645,6 @@
   }
 }
 @media screen and (max-width: 450px) {
-  .header__inner .logo {
-    gap: 8px;
-  }
-  .header__inner .logo h2 {
-    font-size: var(--fs-16);
-  }
   .header__inner .logo img {
     width: 24px;
     height: 22.38px;
@@ -621,14 +654,6 @@
   .footer__contacts p,
   .right_bottom_f a {
     font-size: var(--fs-14) !important;
-  }
-
-  .option-buttons button {
-    max-width: 150px !important;
-    /* height: 36px !important; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .password-reset-success-box p {
     font-size: var(--fs-14) !important;
@@ -673,7 +698,7 @@
   .banner__text__subtitle {
     font-size: var(--fs-16) !important;
   }
-  .modalFormHome_-_channelHead{
+  .modalFormHome_-_channelHead {
     font-size: var(--fs-24) !important;
   }
   .stars {
@@ -718,6 +743,15 @@
   .job-_-_address,
   .top-jobs_NEW-TEXT {
     font-size: var(--fs-14) !important;
+  }
+  .job-_-_name {
+    line-height: 19px !important;
+  }
+  .job-_-_address {
+    line-height: 16px !important;
+  }
+  .job-_-_descrip {
+    line-height: 15px !important;
   }
   .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1) {
     max-width: 60px !important;

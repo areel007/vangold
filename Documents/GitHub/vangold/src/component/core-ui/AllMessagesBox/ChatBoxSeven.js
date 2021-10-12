@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Avatar1 from "../../../assets/images/business-chat-content/Ellipse1531.png";
 import Avatar2 from "../../../assets/images/business-chat-content/Group43951.png";

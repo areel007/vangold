@@ -1,22 +1,13 @@
-import { useState } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
-import { Switch } from 'antd';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
 import 'antd/dist/antd.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
  import "./InvitePeopleModal.css";
 
 const InvitePeopleModal = (props) => {
-    const validationSchema = Yup.object().shape({
-        email: Yup.string().email().required('Email is required'),
-    });
-    const formOptions = { resolver: yupResolver(validationSchema) };
     
-    // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-    const { errors } = formState;
+    const { handleSubmit } = useForm();
     
     function onSubmit(data) {}
     return (
@@ -32,8 +23,7 @@ const InvitePeopleModal = (props) => {
                     <div className="form-input__container">
                         <div className="form__-control">
                             <label htmlFor="Email">Email</label>
-                            <input name="email" type="email" {...register('email')} className={`form-control ${errors.email ? 'is-invalid' : ''}`} />
-                            <div className="invalid-feedback">{errors.email?.message}</div>
+                            <input name="email" type="email" required />
                         </div>
                     </div>
                 </form>

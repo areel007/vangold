@@ -47,7 +47,7 @@ const otherUsersData = [
 ]
 
 const GroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
-    const [seeMessage, setSeeMessage] = useState(false);
+    const [setSeeMessage] = useState(false);
     const history = useHistory();
 
     return (

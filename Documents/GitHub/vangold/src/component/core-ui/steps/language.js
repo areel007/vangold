@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./steps.css"
 import { FiPlus } from 'react-icons/fi';
 import SelectDropdown from "../select-dropdown/select-dropdown";
-import SelectLanguageDropDown from "../select-dropdown/select-language-dropdown";
-// import {languages} from "../../core-ui/steps/languageData"
 import PureModal from 'react-pure-modal';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import {languages} from "./language-option";

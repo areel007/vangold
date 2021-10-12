@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./steps.css";
 
 const PersonalInfo = () => {
-  const [picture, setPicture] = useState(null);
+  const [setPicture] = useState(null);
   const [imgData, setImgData] = useState(null);
   const onChangePicture = (e) => {
     if (e.target.files[0]) {

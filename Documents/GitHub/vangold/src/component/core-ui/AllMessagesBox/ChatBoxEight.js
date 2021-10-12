@@ -1,31 +1,9 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
-import useOnclickOutside from "react-cool-onclickoutside";
-import ChatBoxMembers from "./ChatBoxMembers";
 
 import "./AllMessagesBox.css";
 
 const ChatBoxEight = (props) => {
-    const [isShow, setIsShow] = React.useState(false);
-    const [memberShow, setMemberShow] = React.useState(false);
 
-    const openPopover = () => {
-        setIsShow(!isShow);
-      };
-    const closePopover = () => {
-        setIsShow(false);
-    };
-    const openMemberShow = () => {
-    setMemberShow(!memberShow);
-    };
-    const closeMemberShow = () => {
-    setMemberShow(false);
-    };
-
-    const ref = useOnclickOutside(() => {
-        setIsShow(false);
-        setMemberShow(false);
-    });
     return (
         <>
             <div className="MessageBox__ Biz__MessageBox__">
@@ -34,22 +12,6 @@ const ChatBoxEight = (props) => {
                         <span>Carlos Pena</span>
                         <span>Online</span>
                     </div>
-                    <svg onClick={openPopover} width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="white"/>
-                    </svg>
-                    {isShow &&
-                    <div ref={ref} class="ChatBox__popoverBox ChatBox__arrow-top Biz__ChatBox__arrow-top">
-                        <div className="ChatBox__popover__close-btns">
-                            <svg onClick={closePopover} style={{cursor: "pointer"}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
-                                <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <div className="ChatBox__popover__links">
-                            <li onClick={() => { closePopover(); openMemberShow()}}>View Members</li>
-                        </div>                                     
-                    </div>
-                }
                 </div>
                 
                 <div className="topChatBox__">
@@ -120,11 +82,6 @@ const ChatBoxEight = (props) => {
                         </div>
                         
                     </div>
-                    {memberShow &&
-                    <div ref={ref}>
-                        <ChatBoxMembers closeMemberShow={closeMemberShow}/>
-                    </div> 
-                    }
                 </div>
                 <div className="ChatBox__Footer Biz__ChatBox__Footer">
                         <div className="Inn__ChatBox__Footer-input">

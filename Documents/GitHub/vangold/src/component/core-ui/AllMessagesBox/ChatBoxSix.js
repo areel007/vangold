@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
-import useOnclickOutside from "react-cool-onclickoutside";
 import "./AllMessagesBox.css";
 import "./responsive.css";
 

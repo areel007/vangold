@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/BusinessSideBarDropDown1";
+import ChatBoxAnnouncement from "../../../core-ui/AllMessagesBox/ChatBoxAnnouncement";
 import ChatBoxFive from "../../../core-ui/AllMessagesBox/ChatBoxFive";
 import ChatBoxEight from "../../../core-ui/AllMessagesBox/ChatBoxEight";
 import "./BusinessChatView.css";
 
-const BusinessChatView = ({ showSideMenu, setShowSideMenu }) => {
-    const [showMessages, setShowMessages] = useState(false);
-    const [setShowChatBoxFive] = useState(false);
-    const [showCheck] = useState(false);
+const AnnouncementChannel = ({ showSideMenu, setShowSideMenu }) => {
+  const [showMessages, setShowMessages] = useState(false);
+  const [showChatBoxFive, setShowChatBoxFive] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
+  const [showCheck] = useState(false);
 
   return (
     <div>
@@ -33,17 +35,21 @@ const BusinessChatView = ({ showSideMenu, setShowSideMenu }) => {
                 <BusinessSideBarDropDown
                   setShowChatBoxFive={setShowChatBoxFive}
                   setShowMessages={setShowMessages}
+                  setShowAnnouncement={setShowAnnouncement}
                   showCheck={showCheck}
                 />
               </div>
 
               <div className="message__box-component2">
                 {showMessages ? (
-                    <ChatBoxEight />
-                    ) :  ( 
-                        <ChatBoxFive />
-                    )}
-
+                  <ChatBoxEight />
+                ) : showChatBoxFive ? (
+                  <ChatBoxFive />
+                ) : showAnnouncement ? (
+                  <ChatBoxAnnouncement />
+                ) : (
+                  <ChatBoxAnnouncement />
+                )}
               </div>
             </div>
           </Col>
@@ -53,4 +59,4 @@ const BusinessChatView = ({ showSideMenu, setShowSideMenu }) => {
   );
 };
 
-export default BusinessChatView;
+export default AnnouncementChannel;

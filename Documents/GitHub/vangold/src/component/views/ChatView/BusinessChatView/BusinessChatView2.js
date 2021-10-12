@@ -4,14 +4,17 @@ import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 import BusinessSideBarDropDown from "../../../core-ui/BusinessSideBarDropDown/BusinessSideBarDropDown1";
 import BusinessChatImg from "../../../../assets/images/business-chat.png";
 import ChatBoxEight from "../../../core-ui/AllMessagesBox/ChatBoxEight";
+import ChatBoxFive from "../../../core-ui/AllMessagesBox/ChatBoxFive";
+import ChatBoxAnnouncement from "../../../core-ui/AllMessagesBox/ChatBoxAnnouncement";
 
 import "./BusinessChatView.css";
 
 const BusinessChatViewTwo = ({ showSideMenu, setShowSideMenu }) => {
   const [requestAccess, setRequestAccess] = useState("requestaccess");
   const [showMessages, setShowMessages] = useState(false);
-  const [showCheck, setShowCheck] = useState(false);
-
+  const [showChatBoxFive, setShowChatBoxFive] = useState(false);
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
+  const [showCheck] = useState(false);
 
   return (
     <div>
@@ -33,33 +36,41 @@ const BusinessChatViewTwo = ({ showSideMenu, setShowSideMenu }) => {
             <div className="business-chat-container">
               <div className="sideBarBusiness2">
                 <BusinessSideBarDropDown
+                  setShowChatBoxFive={setShowChatBoxFive}
                   setShowMessages={setShowMessages}
+                  setShowAnnouncement={setShowAnnouncement}
                   showCheck={showCheck}
                 />
               </div>
               <div className="business-chat-view2">
                 <div className="inn-business-chat-view">
                   <div className="business-chat-box-content">
-                  {showMessages ? (
+                    {showMessages ? (
                       <ChatBoxEight />
+                    ) : showChatBoxFive ? (
+                      <ChatBoxFive />
+                    ) : showAnnouncement ? (
+                      <ChatBoxAnnouncement />
                     ) : (
-                    <div className="inn-business-chat-box-content BusinessChatImg-content">
-                      <img src={BusinessChatImg} alt="BusinessChatImg" />
-                      <div className="BusinessChatImg__text">
-                        <span>This is a private group</span>
-                        <p>Request access to join this group.</p>
-                        {requestAccess === "requestaccess" ? (
-                          <button
-                            className="follow-btn me-4"
-                            onClick={() => setRequestAccess()}
-                          >
-                            Request Access
-                          </button>
-                        ) : (
-                          <button className="web-btn me-4">Request Sent</button>
-                        )}
+                      <div className="inn-business-chat-box-content BusinessChatImg-content">
+                        <img src={BusinessChatImg} alt="BusinessChatImg" />
+                        <div className="BusinessChatImg__text">
+                          <span>This is a private group</span>
+                          <p>Request access to join this group.</p>
+                          {requestAccess === "requestaccess" ? (
+                            <button
+                              className="follow-btn me-4"
+                              onClick={() => setRequestAccess()}
+                            >
+                              Request Access
+                            </button>
+                          ) : (
+                            <button className="web-btn me-4">
+                              Request Sent
+                            </button>
+                          )}
+                        </div>
                       </div>
-                    </div>
                     )}
                   </div>
                 </div>

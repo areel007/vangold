@@ -1,14 +1,15 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import GroupParticipants from "./GroupParticipants";
+import { useHistory } from "react-router-dom";  
 
 import "./AllMessagesBox.css";
 
 const ChatBoxFour = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const history = useHistory();
 
     const openPopover = () => {
         setIsShow(!isShow);
@@ -50,7 +51,7 @@ const ChatBoxFour = (props) => {
                             </div>
                             <div className="ChatBox__popover__links">
                                 <li onClick={() => { closePopover(); openMemberShow()}}>Group Participant</li>
-                                <li onClick={closePopover}>Announcement Channel</li>
+                                <li onClick={() => { closePopover(); history.push("/profile/announcement")}}>Announcement Channel</li>
                                 <li onClick={closePopover}>Exit Group</li>
                             </div>                                     
                         </div>

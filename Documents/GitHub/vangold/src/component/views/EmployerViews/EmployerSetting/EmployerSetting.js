@@ -4,9 +4,7 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { useState } from "react";
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import './EmployerSetting.css'
-import ResetPassword from "./SettingContent/ResetPassword";
 import Notification from "./SettingContent/Notification";
-import RequestVerfication from "./SettingContent/RequestVerfication";
 import RequestVerfication1 from "./SettingContent/RequestVerfication1";
 import Jobs from "./SettingContent/Jobs";
 import ResetPassword1 from "./SettingContent/ResetPassword1";

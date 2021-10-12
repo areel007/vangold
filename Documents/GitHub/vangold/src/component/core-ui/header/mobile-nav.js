@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import "./mobile-nav.css"
-import { useHistory } from "react-router-dom";
 import logo from "../../../assets/images/logo.png"
 
 const MobileNav = (props) => {

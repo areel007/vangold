@@ -213,7 +213,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                         </Col>
                                                     </Row>
                                                     {work.car &&
-                                                        <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                        <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                     }
                                                     <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                     <div className="d-flex justify-content-between mt-4">
@@ -247,7 +247,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                         </Col>
                                                     </Row>
                                                     {work.car &&
-                                                        <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                        <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                     }
                                                     <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                     <div className="d-flex justify-content-between mt-4">
@@ -327,7 +327,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                             </Col>
                                                         </Row>
                                                         {work.car &&
-                                                            <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                            <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                         }
                                                         <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                         <div className="d-flex justify-content-between mt-4">
@@ -363,7 +363,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                             </Col>
                                                         </Row>
                                                         {work.car &&
-                                                            <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                            <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                         }
                                                         <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                         <div className="d-flex justify-content-between mt-4">

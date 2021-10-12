@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import { Switch } from 'antd';
 import 'antd/dist/antd.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";

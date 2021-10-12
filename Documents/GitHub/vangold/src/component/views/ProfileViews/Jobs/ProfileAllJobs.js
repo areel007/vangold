@@ -6,7 +6,7 @@ import cross from "../../../../assets/images/profile/cross1.png";
 import ReactPaginate from "react-paginate";
 import "./Jobs.css";
 import { useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const jobsLists = [
     {
@@ -51,7 +51,6 @@ const ProfileAllJobs = ({ showSideMenu, setShowSideMenu }) => {
     const pagesVisited = pageNumber * jobsPerPage;
     const pageCount = Math.ceil(jobs.length / jobsPerPage);
     const history = useHistory();
-    const location = useLocation();
 
     const changePage = ({ selected }) => {
         setPageNumber(selected);

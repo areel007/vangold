@@ -1,16 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import { Modal } from "react-bootstrap";
  import "./MobileCallChatModal.css";
 
 
 const MobileCallChatModal = (props) => {
-    const [value, setValue] = useState('');
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(value);
-        props.onHide()
-    }
     return (
         <Modal
             {...props}

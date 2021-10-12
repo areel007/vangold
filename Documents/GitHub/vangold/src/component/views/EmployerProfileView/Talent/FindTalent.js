@@ -16,7 +16,7 @@ const EmployerFindTalent = ({ showSideMenu, setShowSideMenu }) => {
     const stars = Array(5).fill(0);
     const [currentValue] = useState(3);
 
-    const [freelancers, setfreelancers] = useState(topFreelancersData.slice(0, 30));
+    const [freelancers] = useState(topFreelancersData.slice(0, 30));
     const [pageNumber, setPageNumber] = useState(0);
     const freelancersPerPage = 6;
     const pagesVisited = pageNumber * freelancersPerPage;
