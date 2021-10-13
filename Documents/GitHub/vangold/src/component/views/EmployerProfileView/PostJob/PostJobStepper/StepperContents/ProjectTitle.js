@@ -23,7 +23,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
 
                                     <Form id="myform" onSubmit={submitHandler}>
                                         <Form.Group>
-                                            <Form.Control required className="form-control" size='lg' onChange={(e) => setValue(e.target.value)} />
+                                            <Form.Control required className="form-control postjob__title-input" size='lg' onChange={(e) => setValue(e.target.value)} />
                                         </Form.Group>
                                     </Form>
                                 </div>
@@ -39,7 +39,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                         </Row>
                     </Container>
                     <Container fluid>
-                    <div className='mt-5 me-5 text-end'>
+                    <div className='d-flex postButtons-box justify-content-end mt-5'>
                         <Button
                             type="submit"
                             form="myform"

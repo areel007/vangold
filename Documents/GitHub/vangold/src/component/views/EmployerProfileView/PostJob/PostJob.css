@@ -79,6 +79,9 @@
   .post__job-container {
     flex-direction: column;
   }
+  .right_post__job-container{
+    margin-top: 30px !important;
+  }
 }
 @media (max-width: 500px) {
   #postjob .back-btn {
@@ -113,12 +116,17 @@
   margin: 0;
 }
 .textarea_postjob {
+  max-width: 740px;
+}
+.textarea_postjob textarea {
   border: 1px solid rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   border-radius: 4px;
   resize: none;
   outline: none;
   padding: 15px;
-  max-width: 500px;
   width: 100%;
+}
+.postjob__title-input {
+  max-width: 452px;
 }

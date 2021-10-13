@@ -18,7 +18,7 @@ const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
           setShowSideMenu={setShowSideMenu}
         />
       </Col>
-      <div className="right_post__job-container">
+      <div className="right_post__job-container mt-4">
         <Container>
           <Row>
             <div className="">

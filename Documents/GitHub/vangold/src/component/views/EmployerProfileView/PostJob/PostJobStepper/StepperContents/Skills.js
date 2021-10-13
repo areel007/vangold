@@ -88,7 +88,7 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
                                 <h1 className="project-title mb-5">Select skill or add your own</h1>
 
                                 <Form.Group>
-                                    <Form.Control type="text" value={value} className="form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
+                                    <Form.Control type="text" value={value} className="postjob__title-input form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
                                 </Form.Group>
 
                                 {chipData.length > 0 && <p>Selected Skills</p>}
