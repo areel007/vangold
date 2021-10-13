@@ -14,7 +14,7 @@ const SendBidModal = (props) => {
         <Modal
             {...props}
             centered
-            dialogClassName="modal-style"
+            dialogClassName="modal-style custom-modal"
         >
             <Modal.Body className='p-5'>
                 <AiOutlineCloseCircle className="modal-close" onClick={props.onHide} />

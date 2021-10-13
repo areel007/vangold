@@ -39,7 +39,7 @@ const Scope = ({ postJobData, setPostJobData, handleNext, handleBack, showScope1
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col className='ps-lg-4 mb-5'>
                                 <h1 className='mb-5 project-title'>Estimate the scope of your project</h1>
                                 <FormControl component="fieldset">
                                     <RadioGroup name="expertise" onChange={(e) => setValue(e.target.value)}>
@@ -54,8 +54,8 @@ const Scope = ({ postJobData, setPostJobData, handleNext, handleBack, showScope1
                             </Col>
                         </Row>
                     </Container>
-
-                    <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+                    <Container fluid>
+                    <div className='d-flex postButtons-box mt-5'>
                         <Button
                             className='back-btn'
                             onClick={handleBack}
@@ -69,6 +69,7 @@ const Scope = ({ postJobData, setPostJobData, handleNext, handleBack, showScope1
                             Continue
                         </Button>
                     </div>
+                    </Container>
                 </>
             ) : <Scope1 postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} setShowScope1={setShowScope1} />
             }

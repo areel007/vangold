@@ -37,7 +37,7 @@ const Scope1 = ({ postJobData, setPostJobData, handleNext, setShowScope1 }) => {
         <>
             <Container>
                 <Row>
-                    <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                    <Col className='ps-lg-4 mb-5'>
                         <h1 className='project-title'>Large</h1>
                         <p className='mt-3 mb-5 text-muted'>Longer term project e.g design a full mobile application</p>
                         <p className='mb-4'>How long will your work take</p>
@@ -51,8 +51,8 @@ const Scope1 = ({ postJobData, setPostJobData, handleNext, setShowScope1 }) => {
                     </Col>
                 </Row>
             </Container>
-
-            <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+            <Container fluid>
+            <div className='d-flex postButtons-box mt-5'>
                 <Button
                     className='back-btn'
                     onClick={() => setShowScope1(false)}
@@ -66,6 +66,7 @@ const Scope1 = ({ postJobData, setPostJobData, handleNext, setShowScope1 }) => {
                     Continue
                 </Button>
             </div>
+            </Container>
         </>
     );
 }

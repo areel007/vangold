@@ -10,7 +10,6 @@ import Stories from "./Stories";
 import ChatBoxFour from "../../../core-ui/AllMessagesBox/ChatBoxFour";
 import { useHistory } from "react-router-dom";  
 
-
 const chatUserData = {
     userAvatar: avatar,
     userAvatarTwo: avatarTwo

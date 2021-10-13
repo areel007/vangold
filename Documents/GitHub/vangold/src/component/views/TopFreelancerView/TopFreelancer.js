@@ -165,7 +165,7 @@ const TopFreelancer = (props) => {
                     )}
                 </div>
                 <div className="inn-top-freelancer">
-                    <Col xs={12} lg={2} className={`mx-auto sideBarTopFreelancerJobs bg-color-w ${!showCheck && "d-none d-lg-block"}`}>
+                    <Col xs={12} lg={2} className={`mx-auto sideBarTopFreelancer bg-color-w ${!showCheck && "d-none d-lg-block"}`}>
                         {showCheck && (
                             <>
                                 <div className="d-flex justify-content-between px-4">

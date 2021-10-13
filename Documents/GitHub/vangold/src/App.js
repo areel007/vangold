@@ -85,6 +85,7 @@ import ChatBoxNine from "./component/core-ui/AllMessagesBox/ChatBoxNine";
 import ManageTalentChat from "./component/core-ui/AllMessagesBox/ManageTalentChat";
 import FreelancerChat from "./component/views/FreelancerProfileViews/FreelancerChat/FreelancerChat";
 import CallChat from "./component/core-ui/AllMessagesBox/CallChat";
+import StoriesModal from "./component/core-ui/StoriesModal/StoriesModal";
 
 function App() {
 
@@ -393,6 +394,9 @@ function App() {
                     </Route>
                     <Route path="/CallChat">
                         <CallChat />
+                    </Route>
+                    <Route path="/stories">
+                        <StoriesModal />
                     </Route>
                 </Switch>
                 <Footer />
