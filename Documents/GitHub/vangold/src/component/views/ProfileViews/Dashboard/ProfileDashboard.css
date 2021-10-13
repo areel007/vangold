@@ -15,6 +15,7 @@
   color: #fff;
 }
 #profile-dash .dash-card {
+  width: 100%;
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 2rem;

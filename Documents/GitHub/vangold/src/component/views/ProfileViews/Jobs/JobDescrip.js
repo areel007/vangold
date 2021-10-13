@@ -140,7 +140,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                 <hr />
                             </>
                         )}
-                        <SideCheckBoxes showCheck={showCheck} />
+                        <SideCheckBoxes showCheck={showCheck} /> 
                     </Col>
                     <Col xs={12} lg={8} className="mx-auto bg-color-w p-lg-5">
                         <div className="mb-5 text-end d-lg-none">

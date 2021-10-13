@@ -11,7 +11,6 @@ import 'react-pure-modal/dist/react-pure-modal.min.css';
 
 const Education = (props) => {
     const [modal, setModal] = useState(false);
-    const [open, setOpen] = useState(false);
     // const [startDate, setStartDate] = useState(new Date());
     // const [startDateTwo, setStartDateTwo] = useState(new Date());
     const [educationHistory, setEducationHistory] = useState([])

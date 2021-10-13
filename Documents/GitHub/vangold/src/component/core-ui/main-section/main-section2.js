@@ -86,7 +86,7 @@ const MainSectionTwo = (props) => {
                 />
               </div>
               <div className="secure-payment-text">
-                <p className="popular-service-text__title">
+                <p className="popular-service-subtitle__title">
                   Secured Payment System
                 </p>
                 <p className="looking-for-talent-text__subtitle">

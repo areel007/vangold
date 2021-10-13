@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
 import { useHistory } from "react-router-dom";
 import "./AllMessagesBox.css";
 import "./responsive.css";
-import { light } from '@material-ui/core/styles/createPalette';
 
 const ChatBoxOne = (props) => {
     const [isShow, setIsShow] = React.useState(false);
@@ -33,16 +31,12 @@ const ChatBoxOne = (props) => {
     return (
         <>
             <div className="MessageBox__">
-                <div className="chat__container-header mt-5">
-                    <p className="chat__container-title">Inbox</p>
-                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
-                </div>
                 <div className="MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />
                         <span>VanGold Website Design</span>
                     </div>
-                    <svg  onClick={openPopover} width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={openPopover} width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.125 4.5C11.3676 4.5 12.375 3.49264 12.375 2.25C12.375 1.00736 11.3676 0 10.125 0C8.88236 0 7.875 1.00736 7.875 2.25C7.875 3.49264 8.88236 4.5 10.125 4.5Z" fill="black"/>
                         <path d="M18 4.5C19.2426 4.5 20.25 3.49264 20.25 2.25C20.25 1.00736 19.2426 0 18 0C16.7574 0 15.75 1.00736 15.75 2.25C15.75 3.49264 16.7574 4.5 18 4.5Z" fill="black"/>
                         <path d="M2.25 4.5C3.49264 4.5 4.5 3.49264 4.5 2.25C4.5 1.00736 3.49264 0 2.25 0C1.00736 0 0 1.00736 0 2.25C0 3.49264 1.00736 4.5 2.25 4.5Z" fill="black"/>
@@ -59,6 +53,7 @@ const ChatBoxOne = (props) => {
                                 <li onClick={() => { closePopover(); history.push("/profile/AddGroupUsers")}}>Create Group</li>
                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
                                 <li>Search</li>
+                                <li onClick={() => { closePopover(); history.push("/profile/Announcement")}}>Channel</li>
                             </div>                                     
                         </div>
                     }

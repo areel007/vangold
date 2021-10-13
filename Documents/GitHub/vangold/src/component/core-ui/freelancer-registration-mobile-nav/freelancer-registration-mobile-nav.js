@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React from "react";
 import SideNavSteppers from "../side-nav-steppers/side-nav-steppers";
 
 const FreelancerRegistrationMobileNav = (props) => {

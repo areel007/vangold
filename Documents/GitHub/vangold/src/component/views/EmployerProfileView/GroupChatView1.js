@@ -5,8 +5,6 @@ import EmployerSideMenu from "../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import avatarTwo from "../../../assets/images/profile/Rectangle9112-5.png";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-// import '../ChatComponent.css';
-import Stories from "../ChatView/GroupChatView/Stories";
 import ChatBoxTwo from "../../core-ui/AllMessagesBox/ChatBoxTwo";
 import { useHistory } from "react-router-dom";  
 
@@ -47,7 +45,7 @@ const otherUsersData = [
 ]
 
 const EmployerGroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
-    const [seeMessage, setSeeMessage] = useState(false);
+    const [setSeeMessage] = useState(false);
     const history = useHistory();
 
     return (
@@ -58,7 +56,6 @@ const EmployerGroupChatViewOne = ({ showSideMenu, setShowSideMenu }) => {
                         <EmployerSideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
-                        {/* <Stories /> */}
                         <div className="chat__container-header">
                             <p className="chat__container-title">Inbox</p>
                             <p className="chat__container-subtitle">Read, respond and respond to messages</p>

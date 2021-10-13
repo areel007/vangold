@@ -134,7 +134,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w p-5">
                         <Row>
-                            <Col xs={10} lg={6} className="mx-auto">
+                            <Col xs={10} lg={6} className="">
                                 <h1 style={{ color: "#000000" }}>Welcome back, Fred</h1>
                             </Col>
                             <Col xs={10} lg={6} className="mx-auto align-self-center text-end d-none d-lg-block">
@@ -145,13 +145,13 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col xs={10} lg={12} className="mx-auto">
+                            <Col xs={10} lg={12} className="">
                                 <p className="text-16px">You have <strong>9 tasks</strong> to complete</p>
                             </Col>
                         </Row>
 
                         <Row className="d-block d-lg-none">
-                            <Col xs={10} lg={12} className="mx-auto">
+                            <Col className="">
                                 <select className="project-select" onChange={(e) => setSelect(e.target.value)}>
                                     <option value="IN PROGRESS">IN PROGRESS</option>
                                     <option value="IN REVIEW">IN REVIEW</option>
@@ -198,7 +198,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                         </Row>
                                     ))}
                                 </Col>
-                                <Col xs={10} lg={4} className="mx-auto p-3">
+                                <Col xs={10} lg={4} className="p-3">
                                     <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#EED600" }} />IN REVIEW</h2>
                                     {reviewWork.map(work => (
                                         <Row key={work.id} className='mb-4'>
@@ -213,7 +213,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                         </Col>
                                                     </Row>
                                                     {work.car &&
-                                                        <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                        <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                     }
                                                     <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                     <div className="d-flex justify-content-between mt-4">
@@ -247,7 +247,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                         </Col>
                                                     </Row>
                                                     {work.car &&
-                                                        <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                        <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                     }
                                                     <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                     <div className="d-flex justify-content-between mt-4">
@@ -274,7 +274,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                             {
                                 select === "IN PROGRESS" ? (
 
-                                    <Col xs={10} lg={4} className="mx-auto  p-3">
+                                    <Col xs={10} lg={4} className="p-3">
                                         <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#45B618" }} />IN PROGRESS</h2>
                                         {progressWork.map(work => (
                                             <Row key={work.id} className='mb-4'>
@@ -327,7 +327,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                             </Col>
                                                         </Row>
                                                         {work.car &&
-                                                            <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                            <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                         }
                                                         <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                         <div className="d-flex justify-content-between mt-4">
@@ -363,7 +363,7 @@ const FreelancerMyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                                             </Col>
                                                         </Row>
                                                         {work.car &&
-                                                            <div><img src={work.car} alt="image" className="img-fluid" /></div>
+                                                            <div><img src={work.car} alt="work-car" className="img-fluid" /></div>
                                                         }
                                                         <p className='text-14px' style={{ color: "#808080" }}>{work.position}</p>
                                                         <div className="d-flex justify-content-between mt-4">

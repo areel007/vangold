@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from "react-bootstrap";
 import BgImg from "../../../assets/images/chat/Rectangle9160.png";
 import  CallImg from "../../../assets/images/chat/89889.PNG";
 
@@ -8,11 +7,11 @@ import "./AllMessagesBox.css";
 const CallChat = (props) => {
 
     return (
-        <Container fluid>
+        <>
             <div className="CallChat__">
                 <div className="CallChat__header">
                     <div>
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg  onClick={() => {props.setSeeMessage(true); props.setShowCall(false);}} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1.5" y="1.5" width="33" height="33" rx="2.5" stroke="white" stroke-width="3"/>
                             <path d="M21.41 13.41L20 12L14 18L20 24L21.41 22.59L16.83 18L21.41 13.41Z" fill="#45B618"/>
                         </svg>
@@ -46,7 +45,7 @@ const CallChat = (props) => {
                 </div>
                 
             </div>
-        </Container>
+        </>
     )
 }
 

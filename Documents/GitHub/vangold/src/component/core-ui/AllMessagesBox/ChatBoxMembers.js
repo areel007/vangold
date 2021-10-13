@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from "react-bootstrap";
 import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
 import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
 import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";

@@ -1,3 +1,24 @@
+.chat__box--header {
+  display: flex;
+  justify-content: space-between;
+}
+.chat__box--header .chat__box--header__ .chat__box--header__title {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-30);
+  line-height: 20px;
+  color: #000000;
+}
+.chat__box--header .chat__box--header__ p {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-20);
+  line-height: 20px;
+  color: #000000;
+  opacity: 0.6;
+}
 .MessageBox__ {
   width: 100%;
   min-height: 778px;
@@ -33,7 +54,7 @@
 .topChatBox__ .inn__topChatBox__ {
   width: 100%;
 }
-.ChatBox__.ChatBox4__{
+.ChatBox__.ChatBox4__ {
   min-height: 738px;
 }
 .MessageBox__ .MessageBox__header .ChatBox__popoverBox {
@@ -229,10 +250,69 @@
 .MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg-2 {
   max-width: 245px;
 }
-.MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg .Inn__ChatBox__replyMsg__name {
+.Announcement__ChatBox__container {
+  margin-bottom: 24px;
+}
+.MessageBox__ .ChatBox__ .Inn__ChatBox__replyMsg .Inn__ChatBox__replyMsg__name,
+.MessageBox__
+  .ChatBox__
+  .Announcement__ChatBox__replyMsg
+  .Inn__announcement__ChatBox__replyMsg
+  .Inn__ChatBox__replyMsg__name {
   font-family: var(--mulish);
   font-weight: bold;
   color: #009bbc;
+}
+.MessageBox__
+  .ChatBox__
+  .Announcement__ChatBox__replyMsg
+  .Inn__announcement__ChatBox__replyMsg
+  .announcement__time {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 10px;
+  opacity: 0.3;
+  color: #333333;
+  margin-left: 10px;
+}
+.MessageBox__ .ChatBox__ .Announcement__ChatBox__replyMsg {
+  width: 100%;
+}
+.MessageBox__
+  .ChatBox__
+  .Announcement__ChatBox__replyMsg
+  .Inn__announcement__ChatBox__replyMsg {
+  width: 100%;
+  background: #f2f2f2;
+  border-radius: 6px 6px 6px 0px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.love_announce_-icon {
+  background: rgba(242, 242, 242, 0.3);
+  border-radius: 2px;
+  width: 25px;
+  margin-top: 7.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: none;
+  outline: none;
+}
+.love_announce_-icon .ann__like__counter {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: var(--font-wieght-semibold);
+  font-size: 8px;
+  color: #808080;
+}
+.love_announce_-icon .heartGreen {
+  color: var(--primary);
 }
 .ChatBox__replyMsg .Top__ChatBox__replyMsg .Inn__Top__ChatBox__replyMsg {
   max-width: 176px;
@@ -490,7 +570,9 @@
   border-radius: 0px 10px 0px 0px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  padding-left: 10px;
+  padding-right: 15px;
+  justify-content: space-between;
 }
 .ChatBoxMembers .top__inn__ChatBoxMembers__header span {
   font-family: var(--mulish);

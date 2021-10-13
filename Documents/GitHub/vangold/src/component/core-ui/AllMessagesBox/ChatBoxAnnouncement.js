@@ -5,12 +5,19 @@ import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.pn
 import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
+import { BsHeart } from "react-icons/bs";
+import { BsHeartFill } from "react-icons/bs";
 
 import "./AllMessagesBox.css";
 
-const ChatBoxFive = (props) => {
+const ChatBoxAnnouncement = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const [changeIconOne, setChangeIconOne] = React.useState(false);
+    const [changeIconTwo, setChangeIconTwo] = React.useState(false);
+    const [changeIconThree, setChangeIconThree] = React.useState(false);
+    const [changeIconFour, setChangeIconFour] = React.useState(false);
+
 
     const openPopover = () => {
         setIsShow(!isShow);
@@ -57,68 +64,63 @@ const ChatBoxFive = (props) => {
                 
                 <div className="topChatBox__">
                     <div className="ChatBox__ Biz__ChatBox__">
-                        <div className="ChatBox__MsgSendContainer">
-                            <img src={Avatar3} alt="ChatBox__MsgSendContainer" />
-                            <div className="ChatBox__sendMsg">
-                                <div className="Inn__ChatBox__sendMsg">
-                                    Okay, some other time, I guess. Lorem Ipsum jji jksn jikkkms jkola kopol; kppp
-                                </div>
-                                <div className="ChatBox__sendMsg__time">
-                                    Saturday 11:50 PM
-                                </div>
-                            </div>
-                        </div>
                         <div className="center__time">
                             June 20, 10:46 pm
                         </div>
-                        <div className="ChatBox__MsgReplyContainer">
-                            <img src={Avatar1} alt="ChatBox__MsgReplyContainer" />
-                            <div className="ChatBox__replyMsg">
-                                <div className="Top__ChatBox__replyMsg">
-                                    <span>Replied to Damola</span>
-                                    <div className="Inn__Top__ChatBox__replyMsg">
-                                        Hey, Devon. Can we get on a quick call?
-                                    </div>
-                                </div>
-                                <div className="Inn__ChatBox__replyMsg">
-                                    <span className="Inn__ChatBox__replyMsg__name">Koyote Stark</span>
-                                    Hi, Damola. Sure, but now I’m busy rn.
-                                </div>
-                                <div className="ChatBox__replyMsg__time">
-                                    11:50 PM
-                                </div>
-                            </div>
-                        </div>
-                        <div className="ChatBox__MsgReplyContainer">
+                        <div className="ChatBox__MsgReplyContainer Announcement__ChatBox__container">
                             <img src={Avatar2} alt="ChatBox__MsgReplyContainer" />
-                            <div className="ChatBox__replyMsg">
-                                <div className="Inn__ChatBox__replyMsg">
-                                    <span className="Inn__ChatBox__replyMsg__name">Femi</span>
-                                    Hi, Emmie. Sure, but now I’m busy rn.
+                            <div className="ChatBox__replyMsg Announcement__ChatBox__replyMsg">
+                                <div className="Inn__announcement__ChatBox__replyMsg">
+                                    <p className="Inn__ChatBox__replyMsg__name">Femi <span className="announcement__time">11:50 PM</span></p>
+                                    Hi, Emmie. Sure, but now I’m busy rn. Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd 
                                 </div>
-                                <div className="ChatBox__replyMsg__time">
-                                    Saturday 11:50 PM
-                                </div>
+                                <button className="love_announce_-icon" onClick={() => setChangeIconOne(!changeIconOne)}>
+                                    {changeIconOne ? <BsHeartFill className="heartGreen" /> : <BsHeart />}
+                                    
+                                    <span class="ann__like__counter">2</span>
+                                </button>
                             </div>
                         </div>
-                        <div className="ChatBox__sendMsg">
-                            <div className="Inn__ChatBox__sendMsg">
-                                Okay, some other time, I guess.
-                            </div>
-                            <div className="ChatBox__sendMsg__time">
-                                Saturday 11:50 PM
-                            </div>
-                        </div>
-                        <div className="ChatBox__MsgReplyContainer">
+                        <div className="ChatBox__MsgReplyContainer Announcement__ChatBox__container">
                             <img src={Avatar4} alt="ChatBox__MsgReplyContainer" />
-                            <div className="ChatBox__replyMsg">
-                                <div className="Inn__ChatBox__replyMsg">
-                                    <span className="Inn__ChatBox__replyMsg__name">Tola</span>
-                                    Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
+                            <div className="ChatBox__replyMsg Announcement__ChatBox__replyMsg">
+                                <div className="Inn__announcement__ChatBox__replyMsg">
+                                    <p className="Inn__ChatBox__replyMsg__name">Tola <span className="announcement__time">11:50 PM</span></p>
+                                    Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnj Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
                                 </div>
-                                <div className="ChatBox__replyMsg__time">
-                                    Saturday 11:50 PM
+                                <button className="love_announce_-icon" onClick={() => setChangeIconTwo(!changeIconTwo)}>
+                                    {changeIconTwo ? <BsHeartFill className="heartGreen" /> : <BsHeart />}
+                                    
+                                    <span class="ann__like__counter">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="ChatBox__MsgReplyContainer Announcement__ChatBox__container">
+                            <img src={Avatar2} alt="ChatBox__MsgReplyContainer" />
+                            <div className="ChatBox__replyMsg Announcement__ChatBox__replyMsg">
+                                <div className="Inn__announcement__ChatBox__replyMsg">
+                                    <p className="Inn__ChatBox__replyMsg__name">Femi <span className="announcement__time">11:50 PM</span></p>
+                                    Hi, Emmie. Sure, but now I’m busy rn. Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd 
                                 </div>
+                                <button className="love_announce_-icon" onClick={() => setChangeIconThree(!changeIconThree)}>
+                                    {changeIconThree ? <BsHeartFill className="heartGreen" /> : <BsHeart />}
+                                    
+                                    <span class="ann__like__counter">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="ChatBox__MsgReplyContainer Announcement__ChatBox__container">
+                            <img src={Avatar4} alt="ChatBox__MsgReplyContainer" />
+                            <div className="ChatBox__replyMsg Announcement__ChatBox__replyMsg">
+                                <div className="Inn__announcement__ChatBox__replyMsg">
+                                    <p className="Inn__ChatBox__replyMsg__name">Tola <span className="announcement__time">11:50 PM</span></p>
+                                    Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnj Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn Hey y’all, Burna new event is coming up. Check out this nehhh jjjnnnd nnjjjnnnjn
+                                </div>
+                                <button className="love_announce_-icon" onClick={() => setChangeIconFour(!changeIconFour)}>
+                                    {changeIconFour ? <BsHeartFill className="heartGreen" /> : <BsHeart />}
+                                    
+                                    <span class="ann__like__counter">2</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -158,4 +160,4 @@ const ChatBoxFive = (props) => {
     )
 }
 
-export default ChatBoxFive;
+export default ChatBoxAnnouncement;

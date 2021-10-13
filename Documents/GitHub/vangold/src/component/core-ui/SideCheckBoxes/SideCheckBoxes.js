@@ -12,7 +12,7 @@ import {
     withStyles,
 } from "@material-ui/core";
 import { MdExpandLess, MdExpandMore } from "react-icons/md";
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import "./SideCheckBoxes.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +42,7 @@ const GreenCheckbox = withStyles({
 
 const SideCheckBoxes = ({ showCheck }) => {
     const classes = useStyles();
-    const [value, setValue] = useState('')
+    const [setValue] = useState('')
     const [checkValue, setCheckValue] = useState('')
     const [employementTypes, setEmployementTypes] = useState(true);
     const [experience, setExperience] = useState(true);

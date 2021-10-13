@@ -5,9 +5,7 @@ import {
     ListItem,
     ListItemIcon,
     ListItemText,
-    Collapse,
 } from "@material-ui/core";
-import { MdExpandLess, MdExpandMore } from "react-icons/md";
 import dashboard from "../../../assets/images/sideMenu/dashboard.png";
 import work from "../../../assets/images/sideMenu/work.png";
 import engineering from "../../../assets/images/sideMenu/engineering.png";
@@ -44,8 +42,6 @@ const useStyles = makeStyles((theme) => ({
 
 const FreelancerProfileSideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const classes = useStyles();
-    const [jobList, setJobList] = useState(false);
-    const [talentList, setTalentList] = useState(false);
     const history = useHistory();
     const location = useLocation();
     const [modalShow, setModalShow] = useState(false);

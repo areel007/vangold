@@ -8,7 +8,7 @@ const Expertise = (props) => {
 
     const [addedSkills, setAddedSkills] = useState([])
 
-    const [popularSkills, setPopularSkills] = useState([
+    const [popularSkills] = useState([
         {
             skill: "Mobile App Development",
             id: 1

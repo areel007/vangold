@@ -1,4 +1,4 @@
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import 'antd/dist/antd.css';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import FollowersAvatar from "../../../assets/images/avatar/Ellipse8.png";

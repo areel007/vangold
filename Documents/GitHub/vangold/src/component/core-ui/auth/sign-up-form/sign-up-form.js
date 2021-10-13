@@ -82,6 +82,7 @@ const SignUpForm = () => {
           <div className="option-buttons">
             <button className="option-btn">Hire for a project</button>
             <button className="option-btn">Work as a freelancer</button>
+            <button className="option-btn">Create a team</button>
           </div>
         </div>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">

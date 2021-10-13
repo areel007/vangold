@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import avatar3 from "../../../../assets/images/stories/Ellipse1520.png";
 import '../ChatComponent2.css';
 import "./stories.css"
@@ -76,7 +76,7 @@ const userStoriesData = [
 ] 
 
 const Stories = () => {
-    const [modalShow, setModalShow] = useState(false);
+
     return (
         <div className="stories">
             <div className="stories__inner">

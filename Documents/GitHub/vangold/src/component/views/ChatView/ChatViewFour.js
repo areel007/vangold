@@ -1,17 +1,12 @@
 import React, {useState} from "react";
 import { Col, Container, Row } from "react-bootstrap"
 import SideMenu from "../../core-ui/SideMenu/SideMenu";
-import { Link } from "react-router-dom";
 import chatUsersAvatar from "../../../assets/images/avatar/Ellipse8.png";
-import avatar from "../../../assets/images/avatar/Ellipse7.png";
 import useOnclickOutside from "react-cool-onclickoutside";
-import participantsAvatar1 from "../../../assets/images/avatar/Ellipse-7.png";
-import participantsAvatar2 from "../../../assets/images/avatar/Ellipse-7-1.png";
-import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
-import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
 import ChatBoxOne from "../../core-ui/AllMessagesBox/ChatBoxOne";
 import ChatBoxMembers from "../../core-ui/AllMessagesBox/ChatBoxMembers";
+import ChatHeader from "../../core-ui/AllMessagesBox/ChatBoxHeader";
 import { useHistory } from "react-router-dom";
 
 import './ChatComponent.css';
@@ -79,8 +74,7 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <div className="chat__container-header">
-                            <p className="chat__container-title">Inbox</p>
-                            <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                            <ChatHeader />
                         </div>
                         <div className="chat__box__contaniner">
                             <div className="chat__box__contaniner-left">

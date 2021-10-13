@@ -22,7 +22,7 @@
 }
 .card-image img {
   width: 273px;
-  height: 229px;
+  height: 375px;
 }
 .talent-card__inner {
   width: 100%;
@@ -30,6 +30,10 @@
 .card-image {
   width: 100%;
   overflow: hidden;
+}
+.card__image {
+  width: 273px;
+  min-height: 229px
 }
 .card-image img {
   width: 100%;

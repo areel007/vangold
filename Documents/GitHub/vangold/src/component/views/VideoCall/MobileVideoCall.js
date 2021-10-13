@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MobileVideoCall.css";
 import image1 from "../../../assets/images/chat/0_L18jRBr9cd7oRfS8.jpg";
 import image2 from "../../../assets/images/chat/mobile_call.png";

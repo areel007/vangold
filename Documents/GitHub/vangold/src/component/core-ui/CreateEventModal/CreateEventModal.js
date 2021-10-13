@@ -1,25 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Modal, Button } from "react-bootstrap";
 import 'antd/dist/antd.css';
 import { DatePicker, TimePicker, Checkbox } from 'antd';
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 import GuessAdded from "./GuessAdded";
  import "./CreateEventModal.css";
 
 const CreateEventModal = (props) => {
 
-    const validationSchema = Yup.object().shape({
-        name: Yup.string().required('Company’s Name is required'),
-        DatePicker: Yup.string().required('Field is required'),
-    });
-    const formOptions = { resolver: yupResolver(validationSchema) };
-    
     // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-    const { errors } = formState;
+    const { handleSubmit } = useForm();
     
     function onSubmit(data) {}
     
@@ -77,8 +68,8 @@ const CreateEventModal = (props) => {
                         </div>
                         <div className="form__-control add__guests__">
                             <label htmlFor="Add guests">Add guests</label>
-                            <input name="AddGuestPicker" name="addGuests" type="name"/>
-                            <button className="add_guests-btn" disabled={!formState.isValid}>Add</button>
+                            <input name="AddGuestPicker" type="name"/>
+                            <button className="add_guests-btn">Add</button>
 
                         </div>
                         <GuessAdded />
