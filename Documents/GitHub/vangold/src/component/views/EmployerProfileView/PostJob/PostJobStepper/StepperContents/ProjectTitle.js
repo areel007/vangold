@@ -17,7 +17,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col xs={12} lg={10} className='ps-lg-4 mb-5'>
                                 <h1 className="project-title">Give your job post a title</h1>
                                 <div>
 
@@ -38,6 +38,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                             </Col>
                         </Row>
                     </Container>
+                    <Container fluid>
                     <div className='mt-5 me-5 text-end'>
                         <Button
                             type="submit"
@@ -47,6 +48,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                             Continue
                         </Button>
                     </div>
+                    </Container>
                 </>
             ) : <ProjectDescrip postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} setShowDescrip={setShowDescrip} />}
         </>

@@ -2,8 +2,15 @@
   font-size: 36px;
   font-weight: var(--font-wieght-bold);
 }
-.profile-postjob-header {
+/* .profile-postjob-header {
   margin-left: 110px;
+} */
+.post__job-container {
+  display: flex;
+  width: 100%;
+}
+.right_post__job-container {
+  width: 100%;
 }
 #postjob .project-title {
   font-size: 24px;
@@ -68,6 +75,11 @@
   padding: 1.5rem;
 }
 
+@media (max-width: 991px) {
+  .post__job-container {
+    flex-direction: column;
+  }
+}
 @media (max-width: 500px) {
   #postjob .back-btn {
     font-size: 12px;
@@ -91,4 +103,22 @@
   #postjob .custom-radio {
     margin: 0 0 2rem 0 !important;
   }
+}
+
+.postButtons-box {
+  max-width: 900px;
+  justify-content: space-between;
+}
+#postjob .back-btn.back-btn2 {
+  margin: 0;
+}
+.textarea_postjob {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  padding: 15px;
+  max-width: 500px;
+  width: 100%;
 }

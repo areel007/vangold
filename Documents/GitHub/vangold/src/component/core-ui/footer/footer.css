@@ -12,7 +12,7 @@ footer {
 }
 
 .logo-container {
-  max-width: 385px;
+  max-width: 330px;
 }
 .logo-container .footer-logo {
   width: 100%;
@@ -46,7 +46,7 @@ footer {
 .footer-links-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 40px;
 
 }
 .footer__inner .footer__links {
@@ -80,7 +80,7 @@ footer {
   text-decoration: underline;
 }
 .footer__contacts {
-  max-width: 347px;
+  max-width: 300px;
 }
 .footer__contacts h2{
   font-size: var(--fs-20);

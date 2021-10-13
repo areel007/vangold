@@ -18,7 +18,7 @@ const TopJobsData = [
     level: "Expert",
     price: "$1200",
     img: apple,
-  },
+  }, 
   {
     name: "User Experience Design",
     address: "2972 Westminister Rd, Santa Ana",

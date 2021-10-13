@@ -142,7 +142,7 @@
   font-family: var(--mulish);
   font-style: normal;
   font-weight: var(--font-wieght-bold);
-  font-size: var(--fs-16);
+  font-size: var(--fs-14);
   line-height: 20px;
   width: 100%;
 }
@@ -163,6 +163,9 @@
   height: 48px;
   background: rgba(69, 182, 24, 0.3);
   color: var(--primary);
+  padding-left: 2px;
+  padding-right: 2px;
+  /* font-size: var(--fs-14); */
 }
 .TopFreealancerContent__BOX_images,
 .MobileView-TopFreealancerContent__BOX_images {
@@ -236,7 +239,7 @@
   margin-bottom: 24px;
 }
 
-.sideBarTopFreelancerJobs{
-  background-color: #d8d8d7 !important;
-  width: 250px;
+.sideBarTopFreelancer {
+  width: 220px;
+  background-color: #d9dad8 !important;
 }
