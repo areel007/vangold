@@ -16,7 +16,8 @@ import ln from "../../../../assets/images/profile/in.png";
 import pin from "../../../../assets/images/profile/pin.png";
 import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
-import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
+import cam from "../../../../assets/images/profile/cam.png";
+import coverc from "../../../../assets/images/profile/coverc.png";
 import "./Jobs.css";
 
 const jobs =
@@ -90,10 +91,35 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
     const [showCheck, setShowCheck] = useState(false);
     const [followers, setFollowers] = useState(false);
     const [fav, setFav] = useState(false);
+    const [image, setImage] = useState(false);
+    const [imageCover, setImageCover] = useState(false);
 
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    function handleImageChange(e) {
+        if (e.target.files && e.target.files[0]) {
+            let reader = new FileReader();
+
+            reader.onload = function (e) {
+                setImage(e.target.result);
+            };
+
+            reader.readAsDataURL(e.target.files[0]);
+        }
+    }
+    function handleImageCoverChange(e) {
+        if (e.target.files && e.target.files[0]) {
+            let reader = new FileReader();
+
+            reader.onload = function (e) {
+                setImageCover(e.target.result);
+            };
+
+            reader.readAsDataURL(e.target.files[0]);
+        }
+    }
 
     return (
         <section id="job-descrip" className="my-5 py-3">
@@ -116,7 +142,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                         )}
                         <SideCheckBoxes showCheck={showCheck} />
                     </Col>
-                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-5">
+                    <Col xs={12} lg={8} className="mx-auto bg-color-w p-lg-5">
                         <div className="mb-5 text-end d-lg-none">
                             {!showCheck && (
                                 <img src={filter} alt="filter button" className='img-fluid' onClick={() => setShowCheck(true)} />
@@ -124,10 +150,56 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                         </div>
                         <div className="bg-color1">
                             <div>
-                                <img src={cover} alt="cover" className='img-fluid' style={{ width: "100vw" }} />
+                            <div className="box-cover-upload">
+                                    <div className="image-upload">
+                                        <div className="d-flex">
+                                            <img
+                                                id="uploaded-cover-image"
+                                                src={imageCover ? imageCover : cover}
+                                                draggable={false}
+                                                alt="uploaded-img"
+                                            />
+                                            <div className="align-self-end cam">
+                                                <label htmlFor="upload-cover-input" className='cam-cover-label'>
+                                                    <img src={coverc} draggable={"false"} alt="placeholder" />
+                                                </label>
+
+                                                <input
+                                                    id="upload-cover-input"
+                                                    type="file"
+                                                    accept=".jpg,.jpeg,.gif,.png"
+                                                    onChange={handleImageCoverChange}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div>
-                                <img src={micro} alt="logo" className="job-logo" />
+                                <div className="box-upload">
+                                    <div className="image-upload">
+                                        <div className="d-flex">
+                                            <img
+                                                id="uploaded-image"
+                                                src={image ? image : micro}
+                                                draggable={false}
+                                                alt="uploaded-img"
+                                            />
+                                            <div className="align-self-end cam">
+                                                <label htmlFor="upload-input" className='cam-label'>
+                                                    <img src={cam} draggable={"false"} alt="placeholder" />
+                                                </label>
+
+                                                <input
+                                                    id="upload-input"
+                                                    type="file"
+                                                    accept=".jpg,.jpeg,.gif,.png"
+                                                    onChange={handleImageChange}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className='p-5'>
                                 <Row>

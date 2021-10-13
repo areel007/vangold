@@ -134,10 +134,10 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w p-5">
                         <Row>
-                            <Col xs={10} lg={6} className="mx-auto">
+                            <Col xs={12} lg={6} className="mx-auto">
                                 <h1 style={{ color: "#000000" }}>Welcome back, Daramola</h1>
                             </Col>
-                            <Col xs={10} lg={6} className="mx-auto align-self-center text-end d-none d-lg-block">
+                            <Col xs={12} lg={6} className="mx-auto align-self-center text-end d-none d-lg-block">
                                 <Button variant='light' className="btn-pro-job"><AiFillStar className="fs-4 me-1" /></Button>
                                 <Button variant='light' className="btn-pro-job"><RiFilterFill className="fs-4 me-1" /> Filter</Button>
                                 <Button variant='light' className="btn-pro-job"><GiHamburgerMenu className="fs-4 me-1" /> Menu</Button>
@@ -145,15 +145,15 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                             </Col>
                         </Row>
                         <Row>
-                            <Col xs={10} lg={12} className="mx-auto">
+                            <Col xs={12} lg={12} className="mx-auto">
                                 <p className="text-16px">You have <strong>9 tasks</strong> to complete</p>
                             </Col>
                         </Row>
 
                         <Row className="d-block d-lg-none">
-                            <Col xs={10} lg={12} className="mx-auto">
+                            <Col xs={12} lg={12} className="mx-auto">
                                 <select className="project-select" onChange={(e) => setSelect(e.target.value)}>
-                                    <option value="IN PROGRESS">IN PROGRESS</option>
+                                    <option className="project-sl-opt" value="IN PROGRESS">IN PROGRESS</option>
                                     <option value="IN REVIEW">IN REVIEW</option>
                                     <option value="COMPLETED">COMPLETED</option>
                                 </select>
@@ -162,7 +162,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
 
                         <div className="d-none d-lg-block">
                             <Row className="mt-5">
-                                <Col xs={10} lg={4} className="mx-auto p-3">
+                                <Col xs={12} lg={4} className="mx-auto p-3">
                                     <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#45B618" }} />IN PROGRESS</h2>
                                     {progressWork.map(work => (
                                         <Row key={work.id} className='mb-4'>
@@ -198,7 +198,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                         </Row>
                                     ))}
                                 </Col>
-                                <Col xs={10} lg={4} className="mx-auto p-3">
+                                <Col xs={12} lg={4} className="mx-auto p-3">
                                     <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#EED600" }} />IN REVIEW</h2>
                                     {reviewWork.map(work => (
                                         <Row key={work.id} className='mb-4'>
@@ -232,7 +232,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                         </Row>
                                     ))}
                                 </Col>
-                                <Col xs={10} lg={4} className="mx-auto p-3">
+                                <Col xs={12} lg={4} className="mx-auto p-3">
                                     <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#14E273" }} />COMPLETED</h2>
                                     {completeWork.map(work => (
                                         <Row key={work.id} className='mb-4'>
@@ -274,7 +274,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                             {
                                 select === "IN PROGRESS" ? (
 
-                                    <Col xs={10} lg={4} className="mx-auto  p-3">
+                                    <Col xs={12} lg={4} className="mx-auto  p-3">
                                         <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#45B618" }} />IN PROGRESS</h2>
                                         {progressWork.map(work => (
                                             <Row key={work.id} className='mb-4'>
@@ -312,7 +312,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                     </Col>
                                 ) : select === "IN REVIEW" ? (
 
-                                    <Col xs={10} lg={4} className="mx-auto p-3">
+                                    <Col xs={12} lg={4} className="mx-auto p-3">
                                         <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#EED600" }} />IN REVIEW</h2>
                                         {reviewWork.map(work => (
                                             <Row key={work.id} className='mb-4'>
@@ -348,7 +348,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
                                     </Col>
                                 ) : (
 
-                                    <Col xs={10} lg={4} className="mx-auto p-3">
+                                    <Col xs={12} lg={4} className="mx-auto p-3">
                                         <h2 className="mb-5"><GoPrimitiveDot className="mb-1" style={{ color: "#14E273" }} />COMPLETED</h2>
                                         {completeWork.map(work => (
                                             <Row key={work.id} className='mb-4'>

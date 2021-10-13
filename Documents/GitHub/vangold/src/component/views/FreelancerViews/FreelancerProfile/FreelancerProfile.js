@@ -102,7 +102,7 @@ const FreelancerProfile = () => {
                     </div>
                 </div>
                 <div className="text-center">
-                    <p className="text-16px mt-3 fw-bold">Product Designers <span style={{fontSize: 16, fontWeight: 500, color: "#4F4F4F", cursor: "pointer" }} onClick={() => setModalShow3(true)}>164 Followers</span></p>
+                    <p className="text-16px mt-3 fw-bold">Product Designers <span style={{ fontSize: 16, fontWeight: 500, color: "#4F4F4F", cursor: "pointer" }} onClick={() => setModalShow3(true)}>164 Followers</span></p>
                 </div>
                 <div className="d-flex freelancer__profile_buttons justify-content-center mt-5">
                     <Button className="freelance-btn me-4"
@@ -301,10 +301,10 @@ const FreelancerProfile = () => {
                     head="Send an offer to Daramola"
                     para="State clearly what you want Daramola to do for you"
                     btntext='Send' />
-                <FollowersModal 
-                        show={modalShow3}
-                        onHide={() => setModalShow3(false)}
-                        head="Followers"/>
+                <FollowersModal
+                    show={modalShow3}
+                    onHide={() => setModalShow3(false)}
+                    head="Followers" />
             </Container>
         </section >
     );
