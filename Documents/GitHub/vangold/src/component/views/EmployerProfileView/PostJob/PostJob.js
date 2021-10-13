@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import PostJobStepper from "./PostJobStepper/PostJobStepper";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import "./PostJob.css";
 
 const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
@@ -13,7 +13,7 @@ const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
           !showSideMenu ? "d-none d-lg-block" : "mb-5"
         }`}
       >
-        <SideMenu
+        <EmployerSideMenu
           showSideMenu={showSideMenu}
           setShowSideMenu={setShowSideMenu}
         />
