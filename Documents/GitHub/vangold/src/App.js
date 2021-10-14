@@ -212,13 +212,13 @@ function App() {
                         <BrandRegistration />
                     </Route>
                     <Route path="/postjob">
-                        <PostJob />
+                        <PostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/postjob">
-                        <ProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <ProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-postjob">
-                        <EmployerProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/employer-setting">
                         <EmployerSetting showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -242,16 +242,16 @@ function App() {
                         <ProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/f-jobs/all-jobs">
-                        <FreelancerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <FreelancerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-jobs/all-jobs">
-                        <EmployerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerProfileAllJobs showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/f-job-description">
-                        <FreelancerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <FreelancerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-jobs/job-description">
-                        <EmployerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerJobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/job-description">
                         <JobDescrip showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -269,7 +269,7 @@ function App() {
                         <EmployerMyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/jobs/f-my-job-projects">
-                        <FreelancerMyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <FreelancerMyJobProjects showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/edit">
                         <ProfileEdit showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -290,10 +290,10 @@ function App() {
                         <EmployerManageTalent showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/ManageSchedule">
-                        <ManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <ManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-talent/ManageSchedule">
-                        <EmployerManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerManageSchedule showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/talent/meeting-details">
                         <MeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
@@ -302,34 +302,34 @@ function App() {
                         <EmployerMeetingDetails showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/ChatViewOne">
-                        <ChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <ChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/GroupChatViewOne">
-                        <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <GroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-group-chat1">
-                        <EmployerGroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerGroupChatViewOne showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/f-messages">
-                        <FreelancerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <FreelancerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/messages">
-                        <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <ChatViewFour showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-messages">
-                        <EmployerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerChat showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/AddGroupUsers">
-                        <AddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <AddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-addgroup-user">
-                        <EmployerAddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerAddGroupUsers showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/group-chat2">
-                        <GroupChatViewTwo showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <GroupChatViewTwo showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/e-group-chat">
-                        <EmployerGroupChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <EmployerGroupChatView showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/mobile-call">
                         <MobileCall />
@@ -338,10 +338,10 @@ function App() {
                         <MobileVideoCall />
                     </Route>
                     <Route path="/profile/business-chat-1">
-                        <BusinessChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <BusinessChatViewThree showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/announcement">
-                        <AnnouncementChannel showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu}/>
+                        <AnnouncementChannel showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Route>
                     <Route path="/profile/business-chat-2">
                         <BusinessChatViewTwo />
