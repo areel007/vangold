@@ -235,7 +235,7 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
     };
 
     return (
-        <section id="profile-dash" className="my-3 py-3">
+        <section id="profile-dash">
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>

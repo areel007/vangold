@@ -1,11 +1,13 @@
 header {
   width: 100%;
-  padding: 20px 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
 }
 .header__inner {
   display: flex;
   align-items: center;
-  height: 50px;
+  /* height: 50px; */
 }
 .logo {
   display: flex;
@@ -44,6 +46,23 @@ header {
   align-items: center;
   height: 100%;
   position: relative;
+}
+.togglr--btn{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.beforeLogin-login_link {
+  font-family: "Poppins",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #4f4f4f;
+}
+.beforeLogin-login_link:hover {
+  color: #4f4f4f;
 }
 .header__inner ul li:last-child {
   margin-right: 0;
@@ -219,13 +238,13 @@ p.user-name__name {
 .hamburger-hide {
   display: none;
 }
-.auth-buttons a.login:hover{
+.auth-buttons a.login:hover {
   color: var(--primary);
 }
-.auth-buttons a.sign-up:hover{
+.auth-buttons a.sign-up:hover {
   color: #fff;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1140px) {
   .header__inner {
     /*justify-content: space-between;*/
   }

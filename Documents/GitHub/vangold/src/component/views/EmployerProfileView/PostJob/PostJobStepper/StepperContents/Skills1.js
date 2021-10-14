@@ -34,7 +34,7 @@ const Skills1 = ({ postJobData, setPostJobData, handleNext, setShowSkills1 }) =>
         <>
             <Container>
                 <Row>
-                    <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                    <Col xs={10} lg={7} className='ps-lg-4 mb-5'>
                         <h1 className='mb-5 project-title'>Select level of expertise</h1>
                         <FormControl component="fieldset">
                             <RadioGroup name="expertise" onChange={(e) => setValue(e.target.value)}>
@@ -49,8 +49,8 @@ const Skills1 = ({ postJobData, setPostJobData, handleNext, setShowSkills1 }) =>
                     </Col>
                 </Row>
             </Container>
-
-            <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+            <Container fluid>
+            <div className='d-flex postButtons-box mt-5'>
                 <Button
                     className='back-btn'
                     onClick={() => setShowSkills1(false)}
@@ -64,6 +64,7 @@ const Skills1 = ({ postJobData, setPostJobData, handleNext, setShowSkills1 }) =>
                     Continue
                 </Button>
             </div>
+            </Container>
         </>
     );
 }

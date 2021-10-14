@@ -126,7 +126,7 @@ const MyJobProjects = ({ showSideMenu, setShowSideMenu }) => {
     const [select, setSelect] = useState('IN PROGRESS');
 
     return (
-        <section id="my-job-projects" className="my-5 py-3">
+        <section id="my-job-projects">
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>

@@ -84,11 +84,11 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col className='ps-lg-4 mb-5'>
                                 <h1 className="project-title mb-5">Select skill or add your own</h1>
 
                                 <Form.Group>
-                                    <Form.Control type="text" value={value} className="form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
+                                    <Form.Control type="text" value={value} className="postjob__title-input form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
                                 </Form.Group>
 
                                 {chipData.length > 0 && <p>Selected Skills</p>}
@@ -119,7 +119,8 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
 
                         </Row>
                     </Container>
-                    <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+                    <Container fluid>
+                    <div className='d-flex postButtons-box mt-5'>
                         <Button
                             className='back-btn'
                             onClick={handleBack}
@@ -133,6 +134,7 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
                             Continue
                         </Button>
                     </div>
+                    </Container>
                 </>
             ) : (<Skills1 postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} setShowSkills1={setShowSkills1} />)
             }

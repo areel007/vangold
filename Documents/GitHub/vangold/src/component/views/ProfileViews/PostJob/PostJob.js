@@ -1,15 +1,15 @@
 import { Container, Row, Col } from "react-bootstrap";
 import PostJobStepper from "./PostJobStepper/PostJobStepper";
-import SideMenu from "../../../core-ui/SideMenu/SideMenu";
+import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import './PostJob.css'
 
-const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
+const EmployerProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
     return (
         <div id="postjob">
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    <EmployerSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto py-3 my-3 bg-color">
                         <Row>
@@ -28,5 +28,5 @@ const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
     );
 }
 
-export default ProfilePostJob;
+export default EmployerProfilePostJob;
 

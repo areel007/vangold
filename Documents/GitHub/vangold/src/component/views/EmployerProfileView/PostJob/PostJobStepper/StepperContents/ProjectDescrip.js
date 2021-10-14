@@ -15,19 +15,20 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
         <>
             <Container>
                 <Row>
-                    <Col xs={10} lg={8} className='offset-1 ps-lg-4 mb-5'>
+                    <Col className='ps-lg-4 mb-5'>
                         <h1 className="project-title">Give your job post a description</h1>
                         <Form id="myform" onSubmit={submitHandler}>
-                            <Form.Group className="mt-5">
-                                <Form.Control required size='lg' as="textarea" rows={12} onChange={(e) => setValue(e.target.value)} />
+                            <Form.Group className="textarea_postjob mt-5">
+                                <textarea name="textarea" id="" rows={10} onChange={(e) => setValue(e.target.value)} required />
                             </Form.Group>
                         </Form>
                     </Col>
                 </Row>
             </Container>
-            <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+            <Container>
+            <div className='d-flex postButtons-box mt-5'>
                 <Button
-                    className='back-btn'
+                    className='back-btn back-btn2'
                     onClick={() => setShowDescrip(false)}
                 >
                     Back
@@ -40,6 +41,7 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
                     Continue
                 </Button>
             </div>
+            </Container>
         </>
     );
 }

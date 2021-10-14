@@ -134,16 +134,22 @@ const HeaderComponent = (props) => {
                 }
                 <div className="hamburger-menu">
                     {
-                        !isLoggedIn ? <svg
-                            height="24px"
-                            viewBox="0 0 24 24"
-                            width="24px"
-                            fill="#000000"
-                            onClick={props.toggleMobileNav}
-                        >
-                            <path d="M0 0h24v24H0V0z" fill="none" />
-                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-                        </svg> : null
+                        !isLoggedIn ? 
+                        <div className="togglr--btn">
+                            <Link className="beforeLogin-login_link" to="/login">Sign In</Link>
+                            <svg
+                                height="24px"
+                                viewBox="0 0 24 24"
+                                width="24px"
+                                fill="#000000"
+                                onClick={props.toggleMobileNav}
+                            >
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                            </svg> 
+                        </div>
+                        
+                        : null
                     }
                     {
                         isLoggedIn && !props.showSideMenu ? <svg

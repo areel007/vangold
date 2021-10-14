@@ -17,13 +17,13 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                 <>
                     <Container>
                         <Row>
-                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
+                            <Col xs={12} lg={10} className='ps-lg-4 mb-5'>
                                 <h1 className="project-title">Give your job post a title</h1>
                                 <div>
 
                                     <Form id="myform" onSubmit={submitHandler}>
                                         <Form.Group>
-                                            <Form.Control required className="form-control" size='lg' onChange={(e) => setValue(e.target.value)} />
+                                            <Form.Control required className="form-control postjob__title-input" size='lg' onChange={(e) => setValue(e.target.value)} />
                                         </Form.Group>
                                     </Form>
                                 </div>
@@ -38,7 +38,8 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                             </Col>
                         </Row>
                     </Container>
-                    <div className='mt-5 me-5 text-end'>
+                    <Container fluid>
+                    <div className='d-flex postButtons-box justify-content-end mt-5'>
                         <Button
                             type="submit"
                             form="myform"
@@ -47,6 +48,7 @@ const ProjectTitle = ({ postJobData, setPostJobData, handleNext, showDescrip, se
                             Continue
                         </Button>
                     </div>
+                    </Container>
                 </>
             ) : <ProjectDescrip postJobData={postJobData} setPostJobData={setPostJobData} handleNext={handleNext} setShowDescrip={setShowDescrip} />}
         </>
