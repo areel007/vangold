@@ -32,6 +32,10 @@ const ChatBoxFive = (props) => {
     return (
         <>
             <div className="MessageBox__ Biz__MessageBox__">
+                <div className="chat__container-header mt-5">
+                    <p className="chat__container-title">Inbox</p>
+                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                </div>
                 <div className="MessageBox__header Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <span>Channel</span>

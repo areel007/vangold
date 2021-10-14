@@ -1,0 +1,39 @@
+.exit__group__modal {
+  max-width: 277px;
+  margin: auto;
+  height: 172px;
+}
+.exit__group-modal_-header {
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-16);
+  line-height: 32px;
+}
+.exit-group-modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.exit-group-modal button {
+  width: 80px;
+  height: 36px;
+  background: #ffffff;
+  border: 1px solid var(--primary);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-14);
+  line-height: 24px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exit-group-modal button:nth-child(2) {
+  width: 102px;
+  background: var(--primary);
+  color: var(--white);
+}

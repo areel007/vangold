@@ -275,6 +275,16 @@
 }
 .mobile__message-chat-box-members-none {
   width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+}
+.mobile__message-chat-box-members-none .ChatBoxMembers{
+  position: relative;
+  top: -60px;
+  background-color: #F2F2F2;
 }
 .mobile__popover__participants {
   width: 100%;

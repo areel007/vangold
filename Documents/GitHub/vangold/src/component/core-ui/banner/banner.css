@@ -1,9 +1,9 @@
 .banner {
   max-width: 100%;
   min-height: 595px;
-  background-color: #164D00;
+  background-color: #164d00;
 }
-.businesspage__banner{
+.businesspage__banner {
   background-color: #ffffff;
 }
 .banner__inner {
@@ -26,8 +26,8 @@
   align-items: flex-end;
 }
 .banner__image .bigG {
-  max-width: 400px;
-  height: 400px;
+  max-width: 350px;
+  height: 350px;
   position: relative;
   top: -80px;
 }
@@ -91,37 +91,61 @@
   font-style: normal;
   font-weight: var(--font-weight-normal);
   font-size: var(--fs-18);
-  line-height: 32px;
+  /* line-height: 32px; */
   color: var(--white);
   margin-bottom: 3.2rem;
 }
 .banner__text__subtitle.business-page-banner__text__subtitle {
-  color: #18191F;
+  color: #18191f;
 }
 .banner__button {
   display: flex;
   gap: 20px;
 }
 .banner__text__button {
-  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--primary);
   border: 1px solid var(--primary);
   color: var(--white);
   font-family: var(--inter);
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--fs-16);
   outline: none;
   border: none;
   line-height: 24px;
   border-radius: 6px;
   cursor: pointer;
 }
-
-.findwork__btn {
-  background-color: transparent;
-  border: 1px solid var(--white);
+.home__banner__button button:nth-child(1) {
+  width: 197px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 6px;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-16);
+  line-height: 24px;
+  color: var(--primary);
+  outline: none;
+  border: none;
+}
+.home__banner__button button:nth-child(2) {
+  width: 141px;
+  height: 48px;
+  background: #164D00;
+  border-radius: 6px;
+  font-family: var(--inter);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--fs-16);
+  line-height: 24px;
   color: var(--white);
+  border: 1px solid #ffffff;
+  outline: none;
 }
 .top-left-banner-small-img {
   width: 57px;
@@ -143,10 +167,10 @@
   width: 652px !important;
   margin-top: 20px;
 }
-.homepage__modal__body-Header{
+.homepage__modal__body-Header {
   margin-top: 20px;
 }
-.homepage__modal__body-Header h2{
+.homepage__modal__body-Header h2 {
   max-width: 452px;
   margin: auto;
   font-family: var(--raleway);

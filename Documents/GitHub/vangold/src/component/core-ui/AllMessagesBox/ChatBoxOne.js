@@ -2,6 +2,7 @@ import React from 'react';
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
+import ChatBoxSearch from "./ChatBoxSearch";
 import { useHistory } from "react-router-dom";
 import "./AllMessagesBox.css";
 import "./responsive.css";
@@ -9,6 +10,7 @@ import "./responsive.css";
 const ChatBoxOne = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const [showChatSearch, setChatShowSearch] = React.useState(false);
     const history = useHistory();
 
     const openPopover = () => {
@@ -23,14 +25,25 @@ const ChatBoxOne = (props) => {
     const closeMemberShow = () => {
     setMemberShow(false);
     };
+    const openChatSearch = () => {
+        setChatShowSearch(!showChatSearch);
+    };
+    const closeChatSearch = () => {
+        setChatShowSearch(false);
+    };
 
     const ref = useOnclickOutside(() => {
         setIsShow(false);
         setMemberShow(false);
+        setChatShowSearch(false);
     });
     return (
-        <>
+        <div className="MessageChatBox__">
             <div className="MessageBox__">
+                <div className="chat__container-header mt-5">
+                    <p className="chat__container-title">Inbox</p>
+                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                </div>
                 <div className="MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />
@@ -52,7 +65,7 @@ const ChatBoxOne = (props) => {
                             <div className="ChatBox__popover__links">
                                 <li onClick={() => { closePopover(); history.push("/profile/AddGroupUsers")}}>Create Group</li>
                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
-                                <li>Search</li>
+                                <li onClick={() => { closePopover(); openChatSearch()}}>Search</li>
                                 <li onClick={() => { closePopover(); history.push("/profile/Announcement")}}>Channel</li>
                             </div>                                     
                         </div>
@@ -150,7 +163,12 @@ const ChatBoxOne = (props) => {
                     }
                 </div>
             </div>
-        </>
+            {showChatSearch &&
+            <div ref={ref}>
+                <ChatBoxSearch closeChatSearch={closeChatSearch}/>
+            </div>
+            }
+        </div>
     )
 }
 

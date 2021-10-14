@@ -35,7 +35,7 @@ const userMembersAdmin = [
 const ChatBoxMembers = (props) => {
     
     return (
-        <>
+        <div className="llflfkdk">
             <div className="ChatBoxMembers">
                 <div className="inn__ChatBoxMembers__header">
                     <input type="text" placeholder="Members" />
@@ -73,7 +73,7 @@ const ChatBoxMembers = (props) => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

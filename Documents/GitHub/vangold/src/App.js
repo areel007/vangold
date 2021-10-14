@@ -365,7 +365,7 @@ function App() {
                     <Route path="/profile/g-chat-user">
                         <ChatBoxTwo />
                     </Route>
-                    <Route path="/ChatBoxThree">
+                    <Route path="/profile/chatbox">
                         <ChatBoxThree />
                     </Route>
                     <Route path="/profile/group-chat">

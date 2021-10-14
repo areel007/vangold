@@ -376,7 +376,7 @@
   top: 15px;
 }
 .add__participant__data {
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
   border-radius: 6px 0px 0px 6px;
 }
 .add__participant__data .addparticipant__btn {

@@ -8,6 +8,7 @@ import participantsAvatar3 from "../../../assets/images/avatar/Ellipse-7-2.png";
 import participantsAvatar4 from "../../../assets/images/avatar/Ellipse-7-3.png";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
 import ChatBoxThree from "../../core-ui/AllMessagesBox/ChatBoxThree";
+import ChatBoxSearch from "../../core-ui/AllMessagesBox/ChatBoxSearch";
 import ChatBoxMembers from "../../core-ui/AllMessagesBox/ChatBoxMembers";
 import { useHistory } from "react-router-dom";
 
@@ -44,6 +45,8 @@ const EmployerChat = ({ showSideMenu, setShowSideMenu }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
     const [seeMessage, setSeeMessage] = useState(false);
+    const [showChatSearch, setChatShowSearch] = React.useState(false);
+
     const history = useHistory();
 
     const openPopover = () => {
@@ -60,10 +63,16 @@ const EmployerChat = ({ showSideMenu, setShowSideMenu }) => {
     const closeMemberShow = () => {
         setMemberShow(false);
     };
-
+    const openChatSearch = () => {
+        setChatShowSearch(!showChatSearch);
+    };
+    const closeChatSearch = () => {
+        setChatShowSearch(false);
+    };
     const ref = useOnclickOutside(() => {
         setIsShow(false);
         setMemberShow(false);
+        setChatShowSearch(false);
       });
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -95,13 +104,16 @@ const EmployerChat = ({ showSideMenu, setShowSideMenu }) => {
                                             <div className="popover__links">
                                                 <li onClick={() => { closePopover(); history.push("/profile/e-addgroup-user")}}>Create Group</li>
                                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
-                                                <li onClick={closePopover} to="#">Search</li>
+                                                <li onClick={() => { closePopover(); openChatSearch()}}>Search</li>
                                                 <li onClick={closePopover} to="#">Report Contact</li>
                                             </div>                                     
                                         </div> 
-                                    }
+                                    } 
                                     <div ref={ref} className={memberShow ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
                                         <ChatBoxMembers closeMemberShow={closeMemberShow}/>
+                                    </div>
+                                    <div ref={ref} className={showChatSearch ? 'ChatBox__Mobile__' : 'business-chat-box-members '}>
+                                        <ChatBoxSearch closeChatSearch={closeChatSearch}/>
                                     </div>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
@@ -131,7 +143,7 @@ const EmployerChat = ({ showSideMenu, setShowSideMenu }) => {
                                             {
                                                 otherUsersData.map((userChatData) => (
                                                     <div onClick={() => {
-                                                            history.push("/profile/chat-user")
+                                                            history.push("/profile/chatbox")
                                                         }} className="chat__component_users-data">
                                                         <img className="chat__avatar" src={userChatData.usersAvatar} alt="chat avatar" />
                                                         <div className="userChatData">

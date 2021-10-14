@@ -34,6 +34,10 @@ const ChatBoxSeven = (props) => {
     return (
         <Container fluid>
             <div className="MessageBox__ Biz__MessageBox__">
+                <div className="chat__container-header mt-5">
+                    <p className="chat__container-title">Inbox</p>
+                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                </div>
                 <div className="MessageBox__header Mobile__Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />
