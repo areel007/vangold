@@ -225,7 +225,7 @@
   .chat__box__container {
     display: none;
   }
-  .sideBarTopJobs {
+  .sideBarTopJobs, .sideBarTopFreelancer {
     width: 100% !important;
     margin-bottom: 50px;
     padding-top: 40px;
@@ -305,9 +305,12 @@
   .banner__inner .banner__text__title {
     font-size: 32px;
   }
+  .header__inner .logo img {
+    width: 24px !important;
+    height: 22.38px !important;
+  }
   .banner__text__button {
-    width: 111px;
-    height: 36px;
+    width: 111px !important;
     font-size: var(--fs-14) !important;
   }
   .mobileAuth_h1,
@@ -462,6 +465,7 @@
     color: #18191f;
   }
   .bannerTwo__text .banner__text__subtitle {
+    width: 100% !important;
     color: #18191f;
     line-height: 32px;
   }
@@ -682,10 +686,6 @@
   }
 }
 @media screen and (max-width: 450px) {
-  .header__inner .logo img {
-    width: 24px;
-    height: 22.38px;
-  }
   .footer__inner .footer__links .ul li a,
   .logo-container .footer__text,
   .footer__contacts p,
@@ -775,6 +775,19 @@
   .select-dropdown-header p {
     font-size: var(--fs-12) !important;
   }
+  .freelancer__svg-top-right svg{
+    width: 14px !important;
+    height: 18px !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1){
+    max-width: 60px !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(2){
+    max-width: 83px !important;
+  }
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(3){
+    max-width: 129px !important;
+  }
   .inn__TopFreealancerContent__BOX-details_BOTTOM button,
   .job-_-_address,
   .top-jobs_NEW-TEXT {
@@ -836,9 +849,7 @@
   .inn_SearchInputBox .mobile-freelancers-searchBar {
     display: block !important;
   }
-  .top-freelancer_header {
-    margin-bottom: 16px;
-  }
+ 
   .inn_SearchInputBox input,
   .inn_SearchInputBoxRight input {
     height: 36px !important;

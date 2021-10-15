@@ -12,7 +12,9 @@ const AccountVerifySuccessful = () => {
                     <img src={SucessIcon} alt="sucess icon"></img>
                     <h1 className="success__title">Success</h1>
                     <p>Your account has been successfully verified</p>
-                    <Link to="/login" className="change__account__pswrd__success__btn">Proceed to Registration</Link>
+                        <div className="account__btns">
+                            <Link to="/login" className="change__account__pswrd__success__btn">Proceed to Registration</Link>
+                        </div>
                     </div>
                 </div>
             </div>

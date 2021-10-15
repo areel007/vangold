@@ -76,11 +76,11 @@
   justify-content: space-between;
   margin-top: 48px;
   margin-bottom: 64px;
-  gap: 95px;
+  gap: 70px;
 }
 .home-two-card {
-  padding: 40px 32px;
-  max-width: 350px;
+  padding: 32px;
+  width: 350px;
   min-height: 290px;
   background-color: var(--white);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
