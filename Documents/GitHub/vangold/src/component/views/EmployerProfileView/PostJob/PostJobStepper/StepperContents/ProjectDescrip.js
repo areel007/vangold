@@ -1,6 +1,6 @@
 import { Button } from "@material-ui/core";
 import { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescrip }) => {
     const [value, setValue] = useState('');
@@ -13,22 +13,17 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
 
     return (
         <>
-            <Container>
-                <Row>
-                    <Col className='ps-lg-4 mb-5'>
-                        <h1 className="project-title">Give your job post a description</h1>
-                        <Form id="myform" onSubmit={submitHandler}>
-                            <Form.Group className="textarea_postjob mt-5">
-                                <textarea name="textarea" id="" rows={10} onChange={(e) => setValue(e.target.value)} required />
-                            </Form.Group>
-                        </Form>
-                    </Col>
-                </Row>
-            </Container>
-            <Container>
-            <div className='d-flex postButtons-box mt-5'>
+            <h1 className="project-title">Give your job post a description</h1>
+            <div>
+                <Form id="myform" onSubmit={submitHandler}>
+                    <Form.Group className="mt-5">
+                        <Form.Control required  className="form-controll" size='lg' as="textarea" rows={12} onChange={(e) => setValue(e.target.value)} />
+                    </Form.Group>
+                </Form>
+            </div>
+            <div className='d-flex justify-content-between' style={{ marginTop: "5rem" }}>
                 <Button
-                    className='back-btn back-btn2'
+                    className='back-btnn'
                     onClick={() => setShowDescrip(false)}
                 >
                     Back
@@ -36,12 +31,11 @@ const ProjectDescrip = ({ postJobData, setPostJobData, handleNext, setShowDescri
                 <Button
                     type="submit"
                     form="myform"
-                    className='submit-btn'
+                    className='submit-btnn me-3 me-md-5'
                 >
                     Continue
                 </Button>
             </div>
-            </Container>
         </>
     );
 }

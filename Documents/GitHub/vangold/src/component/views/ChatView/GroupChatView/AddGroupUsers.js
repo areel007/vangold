@@ -11,6 +11,8 @@ import participantsAvatar4 from "../../../../assets/images/avatar/Ellipse-7-3.pn
 import useOnclickOutside from "react-cool-onclickoutside";
 import GroupParticipants from "../../../core-ui/AllMessagesBox/GroupParticipants";
 import ChatBoxOne from "../../../core-ui/AllMessagesBox/ChatBoxOne";
+import ExitGroupModal from "../../../core-ui/ExitGroupModal/ExitGroupModal";
+import ChatBoxSearch from "../../../core-ui/AllMessagesBox/ChatBoxSearch";
 import { useHistory } from "react-router-dom";
 import '../ChatComponent.css';
 
@@ -56,11 +58,21 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
+    const [exitGroup, setExitGroup] = React.useState(false);
     const [seeMessage, setSeeMessage] = useState(false);
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
     const history = useHistory();
+    const [showChatSearch, setChatShowSearch] = React.useState(false);
+    const [showIcon, setShowIcon] = React.useState(true);
 
+    const openIcons = () => {
+        setShowIcon(!showIcon);
+      };
+      
+      const closeIcons = () => {
+        setShowIcon(false);
+      };
     const classes = useStyles();
     const [value, setValue] = useState('');
     const [chipData, setChipData] = useState([]);
@@ -84,10 +96,18 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
         setMemberShow(false);
     };
 
+    const openChatSearch = () => {
+        setChatShowSearch(!showChatSearch);
+    };
+    const closeChatSearch = () => {
+        setChatShowSearch(false);
+    };
     const ref = useOnclickOutside(() => {
         setIsShow(false);
         setMemberShow(false);
-      });
+        setChatShowSearch(false);
+        setShowIcon(true);
+    });
 
     const handleDelete = (chipToDelete) => () => {
         setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
@@ -137,17 +157,24 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
                                                 </svg>
                                             </div>
                                             <div className="popover__links">
-                                                <li onClick={() => { closePopover();  openMemberShow()}}>Group Participant</li>
-                                                <li onClick={closePopover}>Search</li>
-                                                <li onClick={closePopover}>Report Group</li>
-                                                <li onClick={closePopover}>Exit Group</li>
+                                            <li onClick={() => { closePopover();  openMemberShow(); closeIcons()}}>Group Participant</li>
+                                            <li onClick={() => { closePopover(); openChatSearch()}}>Search</li>
+                                            <li>Report Group</li>
+                                            <li onClick={() => { closePopover(); setExitGroup(true)}}>Exit Group</li>
                                             </div>                                     
-                                        </div>
+                                        </div> 
                                     }
                                     {memberShow &&
-                                    <div ref={ref}>
-                                        <GroupParticipants closeMemberShow={closeMemberShow}/>
+                                    <div ref={ref} className="hshshshs">
+                                    <div className="hshshshs__jjj">
+                                    <GroupParticipants closeMemberShow={closeMemberShow} openIcons={openIcons}/>
                                     </div>
+                                    </div>
+                                    }
+                                    {showChatSearch &&
+                                        <div ref={ref}>
+                                            <ChatBoxSearch closeChatSearch={closeChatSearch}/>
+                                        </div>
                                     }
                                 </div>
                                 
@@ -236,6 +263,11 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
                     </Col>
                 </Row>
             </Container>
+            <ExitGroupModal 
+                    show={exitGroup}
+                    onHide={() => setExitGroup(false)}
+                    head="Exit this group?"
+                    btntext='Exit Group' />
         </div>
     );
 }
