@@ -447,9 +447,9 @@
     height: 75px;
     width: 75px;
   }
-  #job-descrip .cam-label {
-    bottom: 1rem;
-    right: 1rem;
+  #job-descrip .box-upload {
+    height: 75px;
+    width: 75px;  
   }
   #job-descrip #uploaded-cover-image {
     height: 100px;
