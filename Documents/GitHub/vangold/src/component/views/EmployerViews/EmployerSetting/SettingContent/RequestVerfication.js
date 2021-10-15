@@ -31,9 +31,9 @@ const RequestVerfication = () => {
     }
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <Col xs={11}>
+                <Col xs={12}>
                     <h1>Request for verification</h1>
                     <p className="text-muted" style={{ fontSize: '14px' }}>A verified badge is a check that appears next to a VanGold account’s name and Job Description
                         to indicate that the account is authentic and has been fully vetted by us.</p>

@@ -225,7 +225,7 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
     const [selectedIndex1, setSelectedIndex1] = useState(0);
     const [setComponent] = useState('Client Review');
     const [setComponent1] = useState('Client Review');
- 
+
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
     };
@@ -241,7 +241,7 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
-                    <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
+                    <Col xs={12} lg={10} className="mx-auto bg-color">
                         <Row>
                             <Col xs={12} lg={6} className="mx-auto p-3">
                                 {/* CALENDAR FOR MOBILE VIEW ONLY */}
@@ -322,7 +322,7 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                                     </Col>
                                     <Col xs={12} lg={8} className="mx-auto ps-4 py-4 mt-4 mt-lg-0" style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                         <Row>
-                                            <Col xs={9} className="align-self-center">
+                                            <Col xs={9} className="mt-2">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Positive Review</p>
                                                     <p className='text-12px'>60%</p>
@@ -334,7 +334,7 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                                             </Col>
                                         </Row>
                                         <Row className='mt-5'>
-                                            <Col xs={9} className="align-self-center">
+                                            <Col xs={9} className="mt-2">
                                                 <div className="d-flex justify-content-between">
                                                     <p className='text-12px'>Negative Review</p>
                                                     <p className='text-12px'>60%</p>
@@ -463,15 +463,17 @@ const ProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
                                             application.map((person) => (
                                                 <div className='mt-4 p-3' key={person.id} style={{ backgroundColor: '#FFFFFF', borderRadius: "5px" }}>
                                                     <div className="d-flex justify-content-between">
-                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
+                                                        <div className="mt-2" style={{ fontSize: "12px" }}>
                                                             <img src={avatar} alt="avatar" className="me-3" />
                                                             {person.name}
                                                         </div>
-                                                        <div className=" align-self-center" style={{ fontSize: "12px" }}>
-                                                            <img src={user} alt="user" className='user me-3' />
+                                                        <div className="d-flex mt-2" style={{ fontSize: "12px" }}>
+                                                            <div>
+                                                                <img src={user} alt="user" className='user me-3' />
+                                                            </div>
                                                             {person.gender}
                                                         </div>
-                                                        <div className="align-self-center" style={{ fontSize: "12px" }}>
+                                                        <div className="mt-2" style={{ fontSize: "12px" }}>
                                                             {person.level}
                                                         </div>
                                                         <div>

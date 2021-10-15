@@ -17,7 +17,7 @@ const PaymentSuccess = () => {
                 </Row>
             </Container>
             <section id="payment-success" className='py-5'>
-                <Container>
+                <Container fluid>
                     <Row>
                         <Col xs={10} lg={6} className='mx-auto text-center'>
                             <Paper elevation={3} className='p-5'>

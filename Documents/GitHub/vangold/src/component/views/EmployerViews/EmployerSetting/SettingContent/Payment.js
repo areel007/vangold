@@ -16,9 +16,9 @@ const Payment = () => {
     }
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <Col xs={11}>
+                <Col xs={12}>
                     <h1>Payment Settings</h1>
                     <Form onSubmit={submitHandler}>
                         <Form.Group className="mb-4">

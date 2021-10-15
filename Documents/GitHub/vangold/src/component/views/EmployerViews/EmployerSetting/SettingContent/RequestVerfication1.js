@@ -5,7 +5,7 @@ import requestImg from "../../../../../assets/images/requestveri.png";
 const RequestVerfication1 = () => {
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
                 <Col xs={12} className="text-center" >
                     <h1>Verification request submitted</h1>

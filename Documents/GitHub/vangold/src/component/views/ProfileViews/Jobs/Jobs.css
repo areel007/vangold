@@ -1,5 +1,16 @@
-.bg-color-w {
+.bg-colorr-w {
   background-color: #f9f9f9;
+}
+.bg-top-j {
+  background: #45b618;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 3rem 2rem 2rem 2rem;
+}
+.job-top-j {
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--mulish);
+  font-size: 20px;
+  color: #ffffff;
 }
 #profile-alljobs,
 #my-job,
@@ -157,6 +168,8 @@
   width: 100px;
   margin-top: -4rem;
   margin-left: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
 }
 #job-descrip .box-cover-upload {
   display: grid;
@@ -221,6 +234,20 @@
   font-size: 24px;
   line-height: 28px;
   color: #141414;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
+#my-job .head-wb {
+  font-size: 24px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
+#my-job .applic-head {
+  font-size: 24px;
+  line-height: 28px;
+  color: #45b618;
   font-weight: var(--font-wieght-bold);
   font-family: var(--raleway);
 }
@@ -429,6 +456,12 @@
   }
   #job-descrip .box-cover-upload {
     height: 100px;
+  }
+  .bg-colorr-w {
+    background-color: #ffff;
+  }
+  #job-descrip .bg-color11 {
+    background-color: #ffff;
   }
 }
 @media (min-width: 1000px) and (max-width: 1110px) {

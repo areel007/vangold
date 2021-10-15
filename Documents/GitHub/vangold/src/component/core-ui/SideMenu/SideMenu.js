@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     listItemText: {
-        fontSize: "16px",
+        fontSize: "15px",
     },
     button: {},
     active: {
