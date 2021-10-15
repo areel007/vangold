@@ -1,5 +1,16 @@
-.bg-color-w {
+.bg-colorr-w {
   background-color: #f9f9f9;
+}
+.bg-top-j {
+  background: #45b618;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 3rem 2rem 2rem 2rem;
+}
+.job-top-j {
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--mulish);
+  font-size: 20px;
+  color: #ffffff;
 }
 #profile-alljobs,
 #my-job,
@@ -149,7 +160,52 @@
   width: 156px;
   height: 48px;
 }
-
+#job-descrip .box-upload {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-top: -4rem;
+  margin-left: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+#job-descrip .box-cover-upload {
+  display: grid;
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+#job-descrip .cam-label {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  cursor: pointer;
+}
+#job-descrip .cam-cover-label {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+#job-descrip #uploaded-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+#job-descrip #uploaded-cover-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#job-descrip #upload-input {
+  display: none;
+}
+#job-descrip #upload-cover-input {
+  display: none;
+}
 .cancel-mod-btn {
   font-weight: 500;
   font-size: 14px;
@@ -178,6 +234,20 @@
   font-size: 24px;
   line-height: 28px;
   color: #141414;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
+#my-job .head-wb {
+  font-size: 24px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
+#my-job .applic-head {
+  font-size: 24px;
+  line-height: 28px;
+  color: #45b618;
   font-weight: var(--font-wieght-bold);
   font-family: var(--raleway);
 }
@@ -293,7 +363,13 @@
   font-family: var(--mulish);
   cursor: pointer;
   margin-top: 2rem;
+  width: 100%;
 }
+#my-job-projects option:checked {
+  background: #45b618;
+  color: #fff;
+}
+
 #my-job-projects .text-12px {
   font-size: 12px;
   font-weight: var(--font-wieght-bold);
@@ -366,6 +442,26 @@
     font-size: 12px;
     width: 115px;
     height: 40px;
+  }
+  #job-descrip #uploaded-image {
+    height: 75px;
+    width: 75px;
+  }
+  #job-descrip .box-upload {
+    height: 75px;
+    width: 75px;  
+  }
+  #job-descrip #uploaded-cover-image {
+    height: 100px;
+  }
+  #job-descrip .box-cover-upload {
+    height: 100px;
+  }
+  .bg-colorr-w {
+    background-color: #ffff;
+  }
+  #job-descrip .bg-color11 {
+    background-color: #ffff;
   }
 }
 @media (min-width: 1000px) and (max-width: 1110px) {

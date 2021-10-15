@@ -51,7 +51,7 @@ const TopJobsData = [
   },
 ];
 
-const EmployerProfileAllJobs  = ({ showSideMenu, setShowSideMenu }) => {
+const EmployerProfileAllJobs = ({ showSideMenu, setShowSideMenu }) => {
   const history = useHistory();
   const [showCheck, setShowCheck] = useState(false);
   const [jobs] = useState(TopJobsData.slice(0, 30));
@@ -72,8 +72,8 @@ const EmployerProfileAllJobs  = ({ showSideMenu, setShowSideMenu }) => {
                 <img src={job.img} alt="" />
               </div>
               <div className="TopJobs-info">
-                <h1 className="job-_-_name"onClick={() => {
-                history.push("/profile/e-jobs/job-description");
+                <h1 className="job-_-_name" onClick={() => {
+                  history.push("/profile/e-jobs/job-description");
                 }} style={{ cursor: "pointer" }}>{job.name}</h1>
                 <p className="job-_-_address">{job.address}</p>
                 <span className="job-_-_descrip">{job.descrip}</span>
@@ -142,12 +142,12 @@ const EmployerProfileAllJobs  = ({ showSideMenu, setShowSideMenu }) => {
   };
 
   return (
-    <div className="top-freelancer d-flex p-2 my-5 py-3">
-    <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-    <EmployerSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
-    </Col>
+    <div className="top-freelancer d-flex">
+      <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+        <EmployerSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+      </Col>
       <Container fluid>
-        <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
+        <div className="dashboard_mobile_searchBar__filter d-lg-none">
           <div className="dashboard_mobile_searchBar">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path
@@ -190,33 +190,32 @@ const EmployerProfileAllJobs  = ({ showSideMenu, setShowSideMenu }) => {
                 fill="#333333"
               />
             </svg>
-          )}
+          )} 
         </div>
         <div className="inn-top-freelancer top-jobs-right">
-            <Col
-              xs={12}
-              lg={2}
-              className={`mx-auto sideBarTopJobs bg-color-w ${
-                !showCheck && "d-none d-lg-block"
+          <Col
+            xs={12}
+            lg={2}
+            className={`mx-auto sideBarTopJobs bg-color-w ${!showCheck && "d-none d-lg-block"
               }`}
-            >
-              {showCheck && (
-                <>
-                  <div className="d-flex justify-content-between px-4">
-                    <h1 className="side-filter">Filter</h1>
-                    <div>
-                      <img
-                        src={cross}
-                        alt="cross"
-                        onClick={() => setShowCheck(false)}
-                      />
-                    </div>
+          >
+            {showCheck && (
+              <>
+                <div className="d-flex justify-content-between px-4">
+                  <h1 className="side-filter">Filter</h1>
+                  <div>
+                    <img
+                      src={cross}
+                      alt="cross"
+                      onClick={() => setShowCheck(false)}
+                    />
                   </div>
-                  <hr />
-                </>
-              )}
-              <SideCheckBoxes showCheck={showCheck} />
-            </Col>
+                </div>
+                <hr />
+              </>
+            )}
+            <SideCheckBoxes showCheck={showCheck} />
+          </Col>
           <div className="freelancers-list__freelancer jobs-list__jobs">
             {displayjobs}
             <div className="paginationContainer">
@@ -267,4 +266,4 @@ const EmployerProfileAllJobs  = ({ showSideMenu, setShowSideMenu }) => {
   );
 };
 
-export default EmployerProfileAllJobs ;
+export default EmployerProfileAllJobs;

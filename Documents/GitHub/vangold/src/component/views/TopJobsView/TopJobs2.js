@@ -10,6 +10,12 @@ import cover from "../../../assets/images/profile/cover.png";
 import dot from "../../../assets/images/profile/dot.png";
 import filter from "../../../assets/images/profile/filter.png";
 import cross from "../../../assets/images/profile/cross1.png";
+import fb from "../../../assets/images/profile/fb.png";
+import wa from "../../../assets/images/profile/wa.png";
+import tw from "../../../assets/images/profile/tw.png";
+import ln from "../../../assets/images/profile/in.png";
+import pin from "../../../assets/images/profile/pin.png";
+import avatar1 from "../../../assets/images/profile/avatar1.png";
 import SendBidModal from "../../core-ui/SendBidModal/SendBidModal";
 import FollowersModal from "../../core-ui/FollowersModal/FollowersModal";
 import ShareModal from "../../core-ui/ShareModal/ShareModal";
@@ -27,6 +33,57 @@ const jobs = {
   offerSalary: "$2150/Month",
 };
 
+const socialList = [
+  {
+      icon: tw,
+      link: "/"
+  },
+  {
+      icon: fb,
+      link: "/"
+  },
+  {
+      icon: wa,
+      link: "/"
+  },
+  {
+      icon: ln,
+      link: "/"
+  },
+  {
+      icon: pin,
+      link: "/"
+  },
+]
+
+const followersList = [
+  {
+      id: 1,
+      name: "Kali Jay",
+      avatar: avatar1,
+      position: "Frontend Developer"
+  },
+  {
+      id: 2,
+      name: "Kali Jay",
+      avatar: avatar1,
+      position: "Frontend Developer"
+  },
+  {
+      id: 3,
+      name: "Kali Jay",
+      avatar: avatar1,
+      position: "Frontend Developer"
+  },
+  {
+      id: 4,
+      name: "Kali Jay",
+      avatar: avatar1,
+      position: "Frontend Developer"
+  },
+]
+
+
 const TopJobsTwo = () => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
@@ -34,6 +91,7 @@ const TopJobsTwo = () => {
   const [followersShow, setFollowersShow] = useState(false);
   const [freelancer] = useState(true);
   const [followBtn, setFollowBtn] = useState("follow");
+  const [shareList, setShareList] = useState(false);
   const [showCheck, setShowCheck] = useState(false);
   const [show, setShow] = useState(false);
   const [fav, setFav] = useState(false);
@@ -110,48 +168,74 @@ const TopJobsTwo = () => {
                 <SideCheckBoxes showCheck={showCheck} />
               </Col>
               <div className="bg-color1 topjobtwo__right">
-                <div>
-                  <img src={cover} alt="cover" className="img-fluid" />
-                </div>
-                <div>
-                  <img src={micro} alt="logo" className="job-logo" />
-                </div>
+              <div>
+                  <div className="box-cover-upload">
+                      <div className="image-upload">
+                          <div className="d-flex">
+                              <img
+                                  id="uploaded-cover-image"
+                                  src={cover}
+                                  alt="uploaded-img"
+                              />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <div className="box-upload">
+                      <div className="image-upload">
+                          <div className="d-flex">
+                              <img
+                                  id="uploaded-image"
+                                  src={micro}
+                                  alt="uploaded-img"
+                              />
+                          </div>
+                      </div>
+                  </div>
+              </div>
                 <div className="p-5">
                   <Row>
-                    <Col xs={8} lg={8}>
-                      <h1 className="head">{jobs.name}</h1>
-                    </Col>
-                    <Col xs={4} lg={4} className="text-end">
-                      <Button
-                        variant="light"
-                        className="job-btn me-2 me-lg-4 mt-4"
-                        onClick={() => setFav(!fav)}
-                      >
-                        <BsFillHeartFill
-                          className={`${fav ? "job-icon-fav" : "job-icon"}`}
-                        />
-                      </Button> 
-
-                      <Button variant="light" className="job-btn mt-4" onClick={() => setShareShow(true)}>
-                        <ImShare2 className="job-icon" />
-                      </Button>
-                    </Col>
+                      <Col xs={8} lg={8}>
+                          <h1 className='head'>{jobs.name}</h1>
+                      </Col>
+                      <Col xs={4} lg={4} className="mt-2 mt-md-4 text-end">
+                          <Button variant='light' className='job-btn me-2 me-lg-4 mt-4' onClick={() => setFav(!fav)}><BsFillHeartFill className={`${fav ? "job-icon-fav" : "job-icon"}`} /></Button>
+                          <Button variant='light' className='job-btn mt-4' onClick={() => setShareList(true)}><ImShare2 className='job-icon' /></Button>
+                      </Col>
                   </Row>
-                  <Row className="mt-4">
-                      <div className="jobs-micro_add_follow__job-posted">
-                            <div className="jobs-micro_add_follow">
-                                <div className="inn__jobs-micro_add_follow">
-                                    <p className="jobs-micro__">Microsoft</p>
-                                    <p>{jobs.address}</p>
-                                </div>
-                                <div className="jobs-posted__applicants">
-                                  <p onClick={() => setFollowersShow(true)} style={{cursor: "pointer"}}>2,464 Followers</p>
-                                    <p>Posted 8 Days ago</p>
-                                    <p>76 Applicants</p>
-                                </div>
-                            </div>
-                            
+
+                  {/* social modal */}
+                  <Modal show={shareList} onHide={() => setShareList(false)} dialogClassName="modal-style">
+                      <Modal.Header closeButton>
+                      </Modal.Header>
+                      <div className="p-5 text-center">
+                          <h2 className='unfollow-mod-head mt-4'>Share this Job</h2>
+                          <p className='mt-2'>Spread the word about this Job on Vangold</p>
+                          <div className='d-flex justify-content-center mt-5'>
+                              {
+                                  socialList.map(social => (
+                                      <div className="me-4">
+                                          <a href={social.link}><img src={social.icon} alt="icon" className="img-fluid" /></a>
+                                      </div>
+                                  ))
+                              }
+                          </div>
                       </div>
+
+                  </Modal>
+                  <Row className="mt-4">
+                    <Col xs={10} lg={6}>
+                        <div className="d-flex">
+                            <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
+                            <p className="text-16px-1">{jobs.address}</p>
+                            <p style={{ marginLeft: 10, cursor: 'pointer' }} className="text-16px-1 me-3" onClick={() => setFollowersShow(true)} >{followersList.length} Followers</p>
+                        </div>
+                    </Col>
+                    <Col xs={12} lg={6} className="d-lg-flex justify-content-end">
+                        <p className="text-16px-1 me-3">Posted 8 Days ago</p>
+                        <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
+                    </Col>
                     <div className="mt-4">
                             {followBtn === "follow" ? (
 
@@ -190,42 +274,42 @@ const TopJobsTwo = () => {
                       </Modal>
                   </Row>
                   <Row className="mt-4 row-border">
-                    <Col
+                      <Col
                       xs={6}
                       lg={3}
-                      className="border-right px-4 px-lg-5 py-4 border-botom"
-                    >
+                      className="border-right border-botom"
+                      >
                       <p className="text-16px-1">Experience</p>
                       <p className="text-16px" style={{ color: "#4F4F4F" }}>
-                        {jobs.experience}
+                          {jobs.experience}
                       </p>
-                    </Col>
-                    <Col
+                      </Col>
+                      <Col
                       xs={6}
                       lg={3}
-                      className="border-right px-4 px-lg-5 py-4 border-botom"
-                    >
+                      className="border-right border-botom"
+                      >
                       <p className="text-16px-1">Employment Type</p>
                       <p className="text-16px" style={{ color: "#4F4F4F" }}>
-                        {jobs.employmentType}
+                          {jobs.employmentType}
                       </p>
-                    </Col>
-                    <Col
+                      </Col>
+                      <Col
                       xs={6}
                       lg={3}
-                      className="border-right px-4 px-lg-5 py-4"
-                    >
+                      className="border-right"
+                      >
                       <p className="text-16px-1">Duration</p>
                       <p className="text-16px" style={{ color: "#4F4F4F" }}>
-                        {jobs.duration}
+                          {jobs.duration}
                       </p>
-                    </Col>
-                    <Col xs={6} lg={3} className="px-4 px-lg-5 py-4">
+                      </Col>
+                      <Col xs={6} lg={3} className="offer__salary">
                       <p className="text-16px-1">Offer Salary</p>
                       <p className="text-16px" style={{ color: "#4F4F4F" }}>
-                        {jobs.offerSalary}
+                          {jobs.offerSalary}
                       </p>
-                    </Col>
+                      </Col>
                   </Row>
                   <h1 className="head2">Description</h1>
                   <p className="text-16px-1">{jobs.descrip}</p>

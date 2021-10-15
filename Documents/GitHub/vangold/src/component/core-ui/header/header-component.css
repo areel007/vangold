@@ -244,7 +244,7 @@ p.user-name__name {
 .auth-buttons a.sign-up:hover {
   color: #fff;
 }
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 991px) {
   .header__inner {
     /*justify-content: space-between;*/
   }

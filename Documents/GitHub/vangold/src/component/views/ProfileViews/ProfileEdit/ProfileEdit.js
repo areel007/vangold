@@ -24,14 +24,14 @@ const ProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
     }
 
     return (
-        <section id="profile-edit" className="my-3 py-3">
+        <section id="profile-edit" className="mb-5 my-lg-3 py-3">
 
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
-                    <Col xs={12} lg={10} className="p-5 bg-color-w">
+                    <Col xs={12} lg={10} className="p-5 bg-colorr-w">
                         <h1>Edit Profile</h1>
                         <Row>
                             <Col xs={12} lg={9}>

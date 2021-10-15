@@ -150,7 +150,7 @@ const FreelancerProfile = () => {
                     )))}
                 </Modal>
                 <Row>
-                    <Col xs={10} md={12} className="mx-auto">
+                    <Col xs={12} className="mx-auto">
 
                         <Row style={{ marginTop: "10rem" }}>
                             <Col xs={6} lg={7}>
@@ -281,10 +281,10 @@ const FreelancerProfile = () => {
                         <hr style={{ border: "2px solid #0000004D" }} />
 
                         <Row style={{ margin: "7rem 0" }}>
-                            <Col sm={6} lg={7}>
+                            <Col xs={5} lg={7}>
                                 <h2 className='mb-3 mb-sm-0'>Rating</h2>
                             </Col>
-                            <Col sm={6} lg={5} className="ps-md-5">
+                            <Col xs={7} lg={5} className="pt-2 pt-lg-0 ps-md-5">
                                 <span className='freelancer-rating'>4.5</span>
                                 <ImStarFull className='rating-star' />
                                 <ImStarFull className='rating-star' />

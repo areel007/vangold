@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import ReactPaginate from "react-paginate";
 import SideCheckBoxes from "../../../core-ui/SideCheckBoxes/SideCheckBoxes1";
@@ -129,9 +129,9 @@ const EmployerFindTalent = ({ showSideMenu, setShowSideMenu }) => {
         <div className="top-freelancer d-flex">
         <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
             <EmployerSideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
-        </Col>
+        </Col> 
 
-            <div className="container">
+            <Container fluid>
                 <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
                     <div className="dashboard_mobile_searchBar">
                         <svg
@@ -163,7 +163,7 @@ const EmployerFindTalent = ({ showSideMenu, setShowSideMenu }) => {
                         </svg>
                     )}
                 </div>
-                <div className="inn-top-freelancer top-jobs-right">
+                <div className="inn-top-freelancer top-freelancer-mobile top-jobs-right">
                     <Col xs={12} lg={2} className={`mx-auto sideBarTopFreelancer bg-color-w ${!showCheck && "d-none d-lg-block"}`}>
                         {showCheck && (
                             <>
@@ -224,7 +224,7 @@ const EmployerFindTalent = ({ showSideMenu, setShowSideMenu }) => {
 
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     );
 };

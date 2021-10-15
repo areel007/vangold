@@ -17,6 +17,7 @@ import avatar1 from "../../../../assets/images/profile/avatar1.png";
 import SendBidModal from "../../../core-ui/SendBidModal/SendBidModal";
 import cam from "../../../../assets/images/profile/cam.png";
 import coverc from "../../../../assets/images/profile/coverc.png";
+import FollowersModal from "../../../core-ui/FollowersModal/FollowersModal";
 import "./Jobs.css";
 
 const jobs =
@@ -88,7 +89,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
     const [shareList, setShareList] = useState(false);
     const [show, setShow] = useState(false);
     const [showCheck, setShowCheck] = useState(false);
-    const [followers, setFollowers] = useState(false);
+    const [followersShow, setFollowersShow] = useState(false);
     const [fav, setFav] = useState(false);
     const [image, setImage] = useState(false);
     const [imageCover, setImageCover] = useState(false);
@@ -276,7 +277,7 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                             <div className="d-flex">
                                                 <p className="text-16px me-3" style={{ color: "#45B618" }}>Microsoft</p>
                                                 <p className="text-16px-1">{jobs.address}</p>
-                                                <p style={{ marginLeft: 10, cursor: 'pointer' }} className="text-16px-1 me-3" onClick={() => setFollowers(true)}>{followersList.length} Followers</p>
+                                                <p style={{ marginLeft: 10, cursor: 'pointer' }} className="text-16px-1 me-3" onClick={() => setFollowersShow(true)} >{followersList.length} Followers</p>
                                             </div>
                                         </Col>
                                         <Col xs={12} lg={6} className="d-lg-flex justify-content-end">
@@ -284,21 +285,6 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                             <p className="text-16px d-none d-lg-block" style={{ color: "#4F4F4F" }}>76 Applicants</p>
                                         </Col>
                                     </Row>
-                                    {/* folllowers modal */}
-                                    <Modal show={followers} onHide={() => { setFollowers(false) }}>
-                                        <Modal.Header closeButton>
-                                            <h2 className='unfollow-mod-head mt-4'>Followers</h2>
-                                        </Modal.Header>
-                                        {followersList.map((follower => (
-                                            <div className='my-2 d-flex p-4' key={follower.key} >
-                                                <div className='me-4'><img src={follower.avatar} alt="avatar" className='img-fluid' /></div>
-                                                <div>
-                                                    <p className='followers-mod-head mb-0'>{follower.name}</p>
-                                                    <p style={{ color: "#666666" }}>{follower.position}</p>
-                                                </div>
-                                            </div>
-                                        )))}
-                                    </Modal>
                                     <div className="mt-4">
                                         {followBtn === "follow" ? (
 
@@ -364,7 +350,11 @@ const JobDescrip = ({ showSideMenu, setShowSideMenu }) => {
                                         head="Send a bid for this job"
                                         para="What makes you the right person for this job"
                                         btntext='Apply' />
-
+                                    <FollowersModal
+                                        show={followersShow}
+                                        onHide={() => setFollowersShow(false)}
+                                        head="Followers"
+                                    />
                                 </div>
                             </div>
                         </Col>

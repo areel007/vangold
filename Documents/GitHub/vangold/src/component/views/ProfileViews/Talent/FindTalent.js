@@ -18,10 +18,10 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
     const stars = Array(5).fill(0);
     const [currentValue] = useState(3);
 
-  const [freelancers] = useState(topFreelancersData.slice(0, 30));
-  const [pageNumber, setPageNumber] = useState(0);
-  const freelancersPerPage = 6;
-  const pagesVisited = pageNumber * freelancersPerPage;
+    const [freelancers] = useState(topFreelancersData.slice(0, 30));
+    const [pageNumber, setPageNumber] = useState(0);
+    const freelancersPerPage = 6;
+    const pagesVisited = pageNumber * freelancersPerPage;
 
     const displayfreelancers = freelancers
         .slice(pagesVisited, pagesVisited + freelancersPerPage)
@@ -57,7 +57,7 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
                                             <path d="M24 0H4C1.8 0 0.0200005 1.8 0.0200005 4L0 36L14 30L28 36V4C28 1.8 26.2 0 24 0Z" fill="#45B618" />
                                         </svg>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div className="TopFreealancerContent__BOX_images">
@@ -73,47 +73,47 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
                             </div>
                         </div>
                         <div className="MobileView-TopFreealancerContent__BOX-details_TOP">
-                                <div className="MobileView-TopFreealancerContent">
-                                    <div className="inn__TopFreealancerContent__BOX-details_TOP">
-                                        <div className="Top__Freelancer_pic">
-                                            <img src={profileImg} alt="" />
-                                        </div>
-                                        <div className="Top__Freelancer_info">
-                                            <div className="verify-logo">
-                                                <h2>{freelancer.freelancersName}</h2>
-                                                <svg className="verify-svg-logo" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M22 11L19.56 8.21L19.9 4.52L16.29 3.7L14.4 0.5L11 1.96L7.6 0.5L5.71 3.69L2.1 4.5L2.44 8.2L0 11L2.44 13.79L2.1 17.49L5.71 18.31L7.6 21.5L11 20.03L14.4 21.49L16.29 18.3L19.9 17.48L19.56 13.79L22 11ZM9.09 15.72L5.29 11.91L6.77 10.43L9.09 12.76L14.94 6.89L16.42 8.37L9.09 15.72Z" fill="#0038FF" />
-                                                </svg>
-                                            </div>
-                                            <h3>{freelancer.jobTitle}</h3>
-                                            <div style={{ marginTop: 10 }}>
-                                                <Star stars={stars} currentValue={currentValue} />
-                                            </div>
-                                        </div>
+                            <div className="MobileView-TopFreealancerContent">
+                                <div className="inn__TopFreealancerContent__BOX-details_TOP">
+                                    <div className="Top__Freelancer_pic">
+                                        <img src={profileImg} alt="" />
                                     </div>
-                                    <div className="svggg">
-                                        <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M24 0H4C1.8 0 0.0200005 1.8 0.0200005 4L0 36L14 30L28 36V4C28 1.8 26.2 0 24 0Z" fill="#45B618" />
-                                        </svg>
+                                    <div className="Top__Freelancer_info">
+                                        <div className="verify-logo">
+                                            <h2>{freelancer.freelancersName}</h2>
+                                            <svg className="verify-svg-logo" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22 11L19.56 8.21L19.9 4.52L16.29 3.7L14.4 0.5L11 1.96L7.6 0.5L5.71 3.69L2.1 4.5L2.44 8.2L0 11L2.44 13.79L2.1 17.49L5.71 18.31L7.6 21.5L11 20.03L14.4 21.49L16.29 18.3L19.9 17.48L19.56 13.79L22 11ZM9.09 15.72L5.29 11.91L6.77 10.43L9.09 12.76L14.94 6.89L16.42 8.37L9.09 15.72Z" fill="#0038FF" />
+                                            </svg>
+                                        </div>
+                                        <h3>{freelancer.jobTitle}</h3>
+                                        <div style={{ marginTop: 10 }}>
+                                            <Star stars={stars} currentValue={currentValue} />
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="MobileView-TopFreealancerContent__BOX_images">
-                                    <div className="inn-TopFreealancerContent__BOX_images">
-                                        <img src={Img1} alt="freelancer" />
-                                    </div>
-                                    <div className="inn-TopFreealancerContent__BOX_images">
-                                        <img src={Img2} alt="freelancer" />
-                                    </div>
-                                    <div className="inn-TopFreealancerContent__BOX_images">
-                                        <img src={Img3} alt="freelancer" />
-                                    </div>
-                                </div>
-                                <div className="inn__TopFreealancerContent__BOX-details_BOTTOM">
-                                    <button className="">{freelancer.jobHire}</button>
-                                    <button>35 USD</button>
-                                    <button>Send message</button>                                    
+                                <div className="svggg">
+                                    <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M24 0H4C1.8 0 0.0200005 1.8 0.0200005 4L0 36L14 30L28 36V4C28 1.8 26.2 0 24 0Z" fill="#45B618" />
+                                    </svg>
                                 </div>
                             </div>
+                            <div className="MobileView-TopFreealancerContent__BOX_images">
+                                <div className="inn-TopFreealancerContent__BOX_images">
+                                    <img src={Img1} alt="freelancer" />
+                                </div>
+                                <div className="inn-TopFreealancerContent__BOX_images">
+                                    <img src={Img2} alt="freelancer" />
+                                </div>
+                                <div className="inn-TopFreealancerContent__BOX_images">
+                                    <img src={Img3} alt="freelancer" />
+                                </div>
+                            </div>
+                            <div className="inn__TopFreealancerContent__BOX-details_BOTTOM">
+                                <button className="">{freelancer.jobHire}</button>
+                                <button>35 USD</button>
+                                <button>Send message</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             );
@@ -127,20 +127,20 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
 
     return (
         <div className="top-freelancer d-flex">
-        <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
-                    </Col>
+            <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+            </Col>
 
 
             <div className="container">
                 <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
                     <div className="dashboard_mobile_searchBar">
                         <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none">
-                        <path d="M11.2028 9.85162C11.1006 9.74942 11.0866 9.57302 11.165
+                            width="14"
+                            height="14"
+                            viewBox="0 0 14 14"
+                            fill="none">
+                            <path d="M11.2028 9.85162C11.1006 9.74942 11.0866 9.57302 11.165
                         9.45122C11.781 8.50342 12.1422 7.37502 12.1422 6.16262C12.1422
                         2.81382 9.4178 0.0908203 6.0718 0.0908203C2.723 0.0908203 0 2.81382
                         0 6.16262C0 9.51002 2.723 12.233 6.0718 12.233C7.3752 12.233 8.582
@@ -153,14 +153,14 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
                         10.805 1.428 8.72182 1.428 6.16262C1.428 3.60342 3.5112 1.51882 6.0718
                         1.51882C8.631 1.51882 10.7142 3.60202 10.7142 6.16262C10.7142 7.22662
                         10.3488 8.20662 9.744 8.99062Z" fill="#4F4F4F"
-                        />
+                            />
                         </svg>
-                        <input type="text" placeholder="Search..."/>
+                        <input type="text" placeholder="Search..." />
                     </div>
                     {!showCheck && (
                         <svg onClick={() => setShowCheck(true)} width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="36" height="36" rx="8" fill="#767680" fill-opacity="0.12"/>
-                        <path d="M16 24H20V22H16V24ZM9 12V14H27V12H9ZM12 19H24V17H12V19Z" fill="#333333"/>
+                            <rect width="36" height="36" rx="8" fill="#767680" fill-opacity="0.12" />
+                            <path d="M16 24H20V22H16V24ZM9 12V14H27V12H9ZM12 19H24V17H12V19Z" fill="#333333" />
                         </svg>
                     )}
                 </div>
@@ -172,13 +172,13 @@ const FindTalent = ({ showSideMenu, setShowSideMenu }) => {
                                     <h1 className="side-filter">Filter</h1>
                                     <div>
                                         <img src={cross} alt="cross" onClick={() => setShowCheck(false)} />
-                                      </div>
+                                    </div>
                                 </div>
                                 <hr />
                             </>
                         )}
                         <SideCheckBoxes showCheck={showCheck} />
-                    </Col> 
+                    </Col>
                     <div className="freelancers-list__freelancer">
                         {displayfreelancers}
                         <div className="paginationContainer">
