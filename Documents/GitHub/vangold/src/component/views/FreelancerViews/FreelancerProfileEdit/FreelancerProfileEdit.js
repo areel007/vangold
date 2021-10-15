@@ -24,7 +24,6 @@ const FreelancerProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
         state: '',
         postalCode: '',
         country: '',
-        password: '',
     });
 
     const submitHandler = (e) => {
@@ -46,9 +45,9 @@ const FreelancerProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
     return (
         <section id="freelancer-profile-edit" className="pb-5 my-4">
             <Container fluid>
-                <Row> 
+                <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <FreelancerProfileSideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                        <FreelancerProfileSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} lg={10} className="mx-auto bg-color-w">
                         <div>
@@ -176,10 +175,6 @@ const FreelancerProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
                                             <Form.Control required size='lg' className='form-control-1' onChange={(e) => setData({ ...data, country: e.target.value })} />
                                         </Form.Group>
                                     </Row>
-                                    <Form.Group className="mb-5">
-                                        <Form.Label className="text-16px">Password</Form.Label>
-                                        <Form.Control required size='lg' type='password' className='form-control-1' onChange={(e) => setData({ ...data, password: e.target.value })} />
-                                    </Form.Group>
                                     <div className="text-end mt-5">
                                         <Button type="submit" className="submit-btn">Save</Button>
                                     </div>

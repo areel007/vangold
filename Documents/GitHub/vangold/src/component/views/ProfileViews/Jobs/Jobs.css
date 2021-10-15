@@ -168,6 +168,8 @@
   width: 100px;
   margin-top: -4rem;
   margin-left: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
 }
 #job-descrip .box-cover-upload {
   display: grid;
