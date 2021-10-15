@@ -14,7 +14,7 @@ import engineering from "../../../assets/images/sideMenu/engineering.png";
 import chat from "../../../assets/images/sideMenu/chat.png";
 import person from "../../../assets/images/sideMenu/person.png";
 import signout from "../../../assets/images/sideMenu/signout.png";
-import { useHistory, useLocation } from "react-router-dom";  
+import { useHistory, useLocation } from "react-router-dom";
 import LogoutModal from "../LogoutModal/LogoutModal";
 import './SideMenu.css'
 
@@ -49,7 +49,7 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
     const history = useHistory();
     const location = useLocation();
     const [modalShow, setModalShow] = useState(false);
- 
+
     return (
         <div className={classes.root}>
             <div className="dashboard_mobile_searchBar">
@@ -73,7 +73,7 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
                     10.3488 8.20662 9.744 8.99062Z" fill="#4F4F4F"
                     />
                 </svg>
-                <input type="text" placeholder="Search..."/>
+                <input type="text" placeholder="Search..." />
             </div>
             <List component="nav" className="menu-list-height">
                 <ListItem
@@ -147,10 +147,10 @@ const SideMenu = ({ showSideMenu, setShowSideMenu }) => {
                             button
                             classes={{ root: classes.root, button: classes.button }}
                             onClick={() => {
-                                history.push("/profile/postjob");
+                                history.push("/postjob");
                                 setShowSideMenu(!showSideMenu);
                             }}
-                            className={location.pathname === "/profile/postjob" ? classes.active : null}
+                            className={location.pathname === "/postjob" ? classes.active : null}
                         >
                             <ListItemIcon></ListItemIcon>
                             <ListItemText

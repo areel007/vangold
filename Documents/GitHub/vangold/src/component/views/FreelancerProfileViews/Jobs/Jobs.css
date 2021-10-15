@@ -266,7 +266,10 @@
     font-size: 1rem;
     color: #4f4f4f;
   }
-
+  #job-descrip .job-icon-fav {
+    font-size: 1rem;
+    color: #45b618;
+  }
   #job-descrip .text-16px-1 {
     font-size: 14px;
   }
