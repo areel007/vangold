@@ -6,8 +6,10 @@ import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import './EmployerSetting.css'
 import Notification from "./SettingContent/Notification";
 import RequestVerfication1 from "./SettingContent/RequestVerfication1";
+import RequestVerfication from "./SettingContent/RequestVerfication";
 import Jobs from "./SettingContent/Jobs";
 import ResetPassword1 from "./SettingContent/ResetPassword1";
+import ResetPassword from "./SettingContent/ResetPassword";
 import Payment from "./SettingContent/Payment";
 import SideMenu from "../../../core-ui/SideMenu/SideMenu";
 
@@ -44,23 +46,23 @@ const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
     };
 
     return (
-        <section id="employer-setting" className='py-3 my-5'>
+        <section id="employer-setting" className='py-3 mb-5 my-lg-5'>
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
-                    <Col xs={10} lg={3} className='mx-auto bg-color-w p-4'>
+                    <Col xs={12} lg={3} className='mx-auto bg-employer-s p-5 p-lg-4'>
                         <div className={classes.root}>
                             <List component="nav">
                                 <ListItem
                                     button
                                     classes={{ root: classes.root, selected: classes.selected, button: classes.button }}
                                     selected={selectedIndex === 0}
-                                    onClick={(event) => { handleListItemClick(event, 0); setComponent('payment');}}
+                                    onClick={(event) => { handleListItemClick(event, 0); setComponent('payment'); }}
                                 >
                                     <ListItemIcon >
-                                        <GoPrimitiveDot />
+                                        <GoPrimitiveDot className={`${component === "payment" && "dot-w"}`} />
                                     </ListItemIcon>
                                     <ListItemText classes={{ primary: classes.listItemText }} primary="Payment" />
                                 </ListItem>
@@ -71,7 +73,7 @@ const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
                                     onClick={(event) => { handleListItemClick(event, 1); setComponent('resetPassword'); }}
                                 >
                                     <ListItemIcon>
-                                        <GoPrimitiveDot />
+                                        <GoPrimitiveDot className={`${component === "resetPassword" && "dot-w"}`} />
                                     </ListItemIcon>
                                     <ListItemText classes={{ primary: classes.listItemText }} primary="Reset Password" />
                                 </ListItem>
@@ -82,7 +84,7 @@ const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
                                     onClick={(event) => { handleListItemClick(event, 2); setComponent('notification'); }}
                                 >
                                     <ListItemIcon>
-                                        <GoPrimitiveDot />
+                                        <GoPrimitiveDot className={`${component === "notification" && "dot-w"}`} />
                                     </ListItemIcon>
                                     <ListItemText classes={{ primary: classes.listItemText }} primary="Notifications" />
                                 </ListItem>
@@ -93,7 +95,7 @@ const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
                                     onClick={(event) => { handleListItemClick(event, 3); setComponent('requestVerification'); }}
                                 >
                                     <ListItemIcon>
-                                        <GoPrimitiveDot />
+                                        <GoPrimitiveDot className={`${component === "requestVerification" && "dot-w"}`} />
                                     </ListItemIcon>
                                     <ListItemText classes={{ primary: classes.listItemText }} primary="Request Verification" />
                                 </ListItem>
@@ -104,14 +106,14 @@ const EmployerSetting = ({ showSideMenu, setShowSideMenu }) => {
                                     onClick={(event) => { handleListItemClick(event, 4); setComponent('jobs'); }}
                                 >
                                     <ListItemIcon>
-                                        <GoPrimitiveDot />
+                                        <GoPrimitiveDot className={`${component === "jobs" && "dot-w"}`} />
                                     </ListItemIcon>
                                     <ListItemText classes={{ primary: classes.listItemText }} primary="Jobs" />
                                 </ListItem>
                             </List>
                         </div>
                     </Col>
-                    <Col xs={10} lg={7} className='mx-auto mt-md-0 mt-5 bg-color-w p-4'>
+                    <Col xs={12} lg={7} className='mx-auto mt-5 mt-lg-0 bg-employer-s p-lg-4'>
                         {
                             component === 'payment' ? <Payment /> : component === 'resetPassword' ? <ResetPassword1 /> : component === 'notification' ? <Notification /> : component === 'requestVerification' ? <RequestVerfication1 /> : component === 'jobs' ? <Jobs /> : null
                         }

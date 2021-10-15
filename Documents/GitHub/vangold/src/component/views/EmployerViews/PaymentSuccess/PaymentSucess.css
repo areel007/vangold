@@ -22,6 +22,9 @@
   text-transform: none;
 }
 @media (max-width: 700px) {
+  #payment-success {
+    margin: 0 0 10rem 0;
+  }
   #payment-success h1 {
     font-size: 24px;
   }

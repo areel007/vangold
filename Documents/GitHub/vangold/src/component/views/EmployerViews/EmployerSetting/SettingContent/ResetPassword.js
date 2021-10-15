@@ -11,7 +11,7 @@ const ResetPassword = () => {
     }
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
                 <Col xs={12} md={8}>
                     <h1>Reset Password</h1>

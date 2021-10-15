@@ -70,7 +70,7 @@ const Notification = () => {
     console.log(value);
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
                 <h1>Notification Settings</h1>
                 <p className="text-muted" style={{ fontSize: '14px' }}>Message Notifications</p>

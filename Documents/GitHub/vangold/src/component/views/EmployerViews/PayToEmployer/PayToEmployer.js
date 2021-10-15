@@ -31,10 +31,10 @@ const PayToEmployer = () => {
     const classes = useStyles();
     const [data, setData] = useState({
         paymentMethod: '',
-        cardholderName: '',
-        cardNumber: '',
-        expDate: '',
-        cvv: ''
+        phoneNumber: '',
+        address: '',
+        city: '',
+        state: ''
     });
     const history = useHistory();
 
@@ -61,11 +61,11 @@ const PayToEmployer = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={10} lg={12} className='mx-auto'>
+                    <Col xs={12} className='mx-auto'>
                         <h1>Confirm order and pay</h1>
                         <p className="text-muted text-16px">Proceed to make payment so your order can be activated</p>
                     </Col>
-                    <Col xs={10} lg={8} className='mx-auto order-2 order-lg-1 mt-5 mt-lg-0'>
+                    <Col xs={12} lg={8} className='mx-auto order-2 order-lg-1 mt-5 mt-lg-0'>
                         <Form onSubmit={submitHandler}>
                             <p className="text-18px mb-5">Select Payment Method</p>
                             <FormControl component="fieldset">
@@ -84,22 +84,22 @@ const PayToEmployer = () => {
                             </FormControl>
                             <p className="text-18px my-5">Payment Details</p>
                             <Form.Group className="mb-4 me-lg-5 me-0">
-                                <Form.Label className="text-16px-a">Cardholder Name</Form.Label>
-                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cardholderName: e.target.value })} />
+                                <Form.Label className="text-16px-a">Phone Number</Form.Label>
+                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, phoneNumber: e.target.value })} />
                             </Form.Group>
                             <Form.Group className="mb-4 me-lg-5 me-0">
-                                <Form.Label className="text-16px-a">Card Number</Form.Label>
-                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cardNumber: e.target.value })} />
+                                <Form.Label className="text-16px-a">Address</Form.Label>
+                                <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, address: e.target.value })} />
                             </Form.Group>
                             <Row className="mb-4">
                                 <Form.Group className="mb-4 me-lg-5 me-0" as={Col}>
-                                    <Form.Label className="text-16px-a">Exp Date</Form.Label>
-                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, expDate: e.target.value })} />
+                                    <Form.Label className="text-16px-a">City</Form.Label>
+                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, city: e.target.value })} />
                                 </Form.Group>
 
                                 <Form.Group className="mb-4 me-lg-5 me-0" as={Col}>
-                                    <Form.Label className="text-16px-a">CVV</Form.Label>
-                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, cvv: e.target.value })} />
+                                    <Form.Label className="text-16px-a">State</Form.Label>
+                                    <Form.Control required size='lg' className='form-control-pay' onChange={(e) => setData({ ...data, state: e.target.value })} />
                                 </Form.Group>
                             </Row>
                             <div className="text-lg-end mt-5 me-lg-5 d-grid d-lg-block">
@@ -107,7 +107,7 @@ const PayToEmployer = () => {
                             </div>
                         </Form>
                     </Col>
-                    <Col xs={10} lg={4} className='mx-auto mt-lg-0 mt-2 order-1 order-lg-2'>
+                    <Col xs={12} lg={4} className='mx-auto order-1 order-lg-2'>
                         <Card className="p-5 card-order">
                             <h2>Order Details</h2>
                             <p className="text-18px my-4">You are paying</p>

@@ -46,11 +46,11 @@ const ProfileMyJob = ({ showSideMenu, setShowSideMenu }) => {
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
                         <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
-                    <Col xs={12} lg={4} className="mx-auto bg-color-w p-4">
+                    <Col xs={12} lg={4} className="mx-auto bg-colorr-w py-5 p-lg-4">
                         <Card className="my-job-card">
                             <div className="d-flex justify-content-between">
-                                <h1 className="head">Website Designer</h1>
-                                <div className="align-self-center">
+                                <h1 className="head-wb">Website Designer</h1>
+                                <div className="mt-1">
                                     <img src={pencil} alt="pencil menu" className="img-fluid" />
                                 </div>
                             </div>
@@ -97,13 +97,13 @@ const ProfileMyJob = ({ showSideMenu, setShowSideMenu }) => {
                             </div>
                         </Card>
                     </Col>
-                    <Col xs={12} lg={6} className="mx-auto bg-color-w py-4 ps-4 pe-4 pe-lg-5">
+                    <Col xs={12} lg={6} className="mx-auto bg-colorr-w pb-4 pt-lg-4 ps-4 pe-4 pe-lg-5">
                         <Card className="my-job-card-1">
                             {
                                 applicant &&
                                 <>
-                                    <div className="text-center">
-                                        <h1 className="head mb-4">4 Applicants applied</h1>
+                                    <div className="text-lg-center">
+                                        <h1 className="applic-head mb-4">{applicant.length > 0 ? `Applicantions (${applicant.length})` : "Applicantion"}</h1>
                                     </div>
                                     <hr style={{ border: "1px solid #0000004D" }} />
                                 </>

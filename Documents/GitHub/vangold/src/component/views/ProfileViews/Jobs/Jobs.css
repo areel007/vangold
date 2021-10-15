@@ -1,5 +1,16 @@
-.bg-color-w {
+.bg-colorr-w {
   background-color: #f9f9f9;
+}
+.bg-top-j {
+  background: #45b618;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+  padding: 3rem 2rem 2rem 2rem;
+}
+.job-top-j {
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--mulish);
+  font-size: 20px;
+  color: #ffffff;
 }
 #profile-alljobs,
 #my-job,
@@ -224,6 +235,20 @@
   font-weight: var(--font-wieght-bold);
   font-family: var(--raleway);
 }
+#my-job .head-wb {
+  font-size: 24px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
+#my-job .applic-head {
+  font-size: 24px;
+  line-height: 28px;
+  color: #45b618;
+  font-weight: var(--font-wieght-bold);
+  font-family: var(--raleway);
+}
 #my-job .my-job-card {
   border: transparent;
   padding: 2rem;
@@ -429,6 +454,12 @@
   }
   #job-descrip .box-cover-upload {
     height: 100px;
+  }
+  .bg-colorr-w {
+    background-color: #ffff;
+  }
+  #job-descrip .bg-color11 {
+    background-color: #ffff;
   }
 }
 @media (min-width: 1000px) and (max-width: 1110px) {

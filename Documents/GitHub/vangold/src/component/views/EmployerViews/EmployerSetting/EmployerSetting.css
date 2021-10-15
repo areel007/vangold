@@ -1,3 +1,6 @@
+#employer-setting .bg-employer-s {
+  background-color: #f9f9f9;
+}
 #employer-setting h1 {
   font-size: 36px;
   font-weight: var(--font-wieght-bold);
@@ -20,6 +23,9 @@
   background-color: var(--primary);
   padding: 1rem 2.5rem;
   text-transform: none;
+}
+#employer-setting .dot-w{
+  color: #fff;
 }
 #employer-setting .form-control-emp:not(active) {
   background-color: #e9eae8;
@@ -67,5 +73,8 @@
 @media (max-width: 700px) {
   #employer-setting h1 {
     font-size: 24px;
+  }
+  #employer-setting .bg-employer-s {
+    background-color: #fff;
   }
 }
