@@ -166,14 +166,16 @@ const AddGroupUsers = ({ showSideMenu, setShowSideMenu }) => {
                                     }
                                     {memberShow &&
                                     <div ref={ref} className="hshshshs">
-                                    <div className="hshshshs__jjj">
-                                    <GroupParticipants closeMemberShow={closeMemberShow} openIcons={openIcons}/>
-                                    </div>
+                                        <div className="hshshshs__jjj">
+                                            <GroupParticipants closeMemberShow={closeMemberShow} openIcons={openIcons}/>
+                                        </div>
                                     </div>
                                     }
                                     {showChatSearch &&
-                                        <div ref={ref}>
-                                            <ChatBoxSearch closeChatSearch={closeChatSearch}/>
+                                        <div ref={ref} className="hshshshs">
+                                            <div className="hshshshs__jjj">
+                                                <ChatBoxSearch closeChatSearch={closeChatSearch}/>
+                                            </div>
                                         </div>
                                     }
                                 </div>

@@ -178,6 +178,10 @@
     width: 100% !important;
     top: 0;
     z-index: 1;
+    background: #f2f2f2 !important;
+  }
+  .ChatBox__Search, .ChatBox__Mobile__ .ChatBox__Search .inn__chatBox__search{
+    background-color: #f2f2f2 !important;
   }
   .inn-top-freelancer,
   .topjobtwo__container,
@@ -225,7 +229,8 @@
   .chat__box__container {
     display: none;
   }
-  .sideBarTopJobs, .sideBarTopFreelancer {
+  .sideBarTopJobs,
+  .sideBarTopFreelancer {
     width: 100% !important;
     margin-bottom: 50px;
     padding-top: 40px;
@@ -775,17 +780,17 @@
   .select-dropdown-header p {
     font-size: var(--fs-12) !important;
   }
-  .freelancer__svg-top-right svg{
+  .freelancer__svg-top-right svg {
     width: 14px !important;
     height: 18px !important;
   }
-  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1){
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(1) {
     max-width: 60px !important;
   }
-  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(2){
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(2) {
     max-width: 83px !important;
   }
-  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(3){
+  .inn__TopFreealancerContent__BOX-details_BOTTOM button:nth-child(3) {
     max-width: 129px !important;
   }
   .inn__TopFreealancerContent__BOX-details_BOTTOM button,
@@ -849,7 +854,7 @@
   .inn_SearchInputBox .mobile-freelancers-searchBar {
     display: block !important;
   }
- 
+
   .inn_SearchInputBox input,
   .inn_SearchInputBoxRight input {
     height: 36px !important;
