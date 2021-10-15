@@ -12,14 +12,17 @@ import './Talent.css'
 
 const persons = [
     {
+        id: 1,
         img: avatar4,
         name: "Vivian Miles"
     },
     {
+        id: 2,
         img: avatar5,
         name: "Jackie Robinsin"
     },
     {
+        id: 3,
         img: avatar6,
         name: "Clark Griffen"
     },
@@ -32,7 +35,7 @@ const MeetingDetails = ({ showSideMenu, setShowSideMenu }) => {
             <Container fluid>
                 <Row>
                     <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <SideMenu  showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                        <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
                     </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <h1 className='meeting-head'>Vangold Daily Standup Meeting</h1>
@@ -60,14 +63,14 @@ const MeetingDetails = ({ showSideMenu, setShowSideMenu }) => {
                         </div>
                         <div className='d-flex' style={{ marginTop: "4rem" }}>
                             <div className='add-meet text-center'>
-                                <img src={user1} alt="user" className='img-fluid mt-4' />
+                                <img src={user1} alt="user" className='img-fluid mt-1 mt-sm-4' />
                             </div>
                             <p className='meet-part'>Participants:</p>
                         </div>
 
                         <Row className='mt-5'>
                             {persons.map((person) => (
-                                <Col xs={12} md={3} lg={2} className='mb-4'>
+                                <Col xs={6} md={3} lg={2} className='mb-4' key={person.id}>
                                     <div className='participant-bg p-5 text-center'>
                                         <img src={person.img} alt="avatar" className='img-fluid' />
                                         <p className='participant-text'>{person.name}</p>

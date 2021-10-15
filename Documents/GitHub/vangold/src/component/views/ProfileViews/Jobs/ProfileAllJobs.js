@@ -147,7 +147,7 @@ const ProfileAllJobs = ({ showSideMenu, setShowSideMenu }) => {
         <SideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
       </Col>
       <Container fluid>
-        <div className="dashboard_mobile_searchBar__filter d-lg-none">
+        <div className="dashboard_mobile_searchBar__filter d-lg-none px-4 px-lg-0">
           <div className="dashboard_mobile_searchBar">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path

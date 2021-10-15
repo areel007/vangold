@@ -15,7 +15,6 @@ const ProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
         state: '',
         postalCode: '',
         country: '',
-        password: '',
     });
 
     const submitHandler = (e) => {
@@ -81,10 +80,6 @@ const ProfileEdit = ({ showSideMenu, setShowSideMenu }) => {
                                             <Form.Control required size='lg' className='form-control-edit' onChange={(e) => setData({ ...data, country: e.target.value })} />
                                         </Form.Group>
                                     </Row>
-                                    <Form.Group className="mb-4">
-                                        <Form.Label className="text-16px">Password</Form.Label>
-                                        <Form.Control required size='lg' type='password' className='form-control-edit' onChange={(e) => setData({ ...data, password: e.target.value })} />
-                                    </Form.Group>
                                     <div className="text-end mt-5">
                                         <Button type="submit" className="submit-btn">Save</Button>
                                     </div>
