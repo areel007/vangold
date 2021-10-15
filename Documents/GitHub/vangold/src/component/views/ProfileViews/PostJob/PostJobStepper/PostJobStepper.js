@@ -164,7 +164,7 @@ const PostJobStepper = () => {
 
   return (
     <>
-      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+      <Stepper className='stepper-m' alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel StepIconComponent={ColorlibStepIcon} classes={{ label: classes.step_label_root }} >{label}</StepLabel>
