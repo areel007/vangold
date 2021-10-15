@@ -131,6 +131,9 @@
 .jobs-list__jobs {
   width: 100% !important;
 }
+.job-descrip{
+  margin-top: 10px;
+}
 .TopJobsContent__BOX {
   max-width: 100%;
   background: #f2f2f2;

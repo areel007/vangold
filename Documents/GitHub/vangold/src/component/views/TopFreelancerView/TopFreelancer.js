@@ -12,10 +12,12 @@ import Img2 from "../../../assets/images/photos/Rectangle 9114.png";
 import Img3 from "../../../assets/images/photos/Rectangle 9115.png";
 import Star from "../../core-ui/star/star";
 import cross from "../../../assets/images/profile/cross1.png";
+import { useHistory } from "react-router-dom";
 
 
 
 const TopFreelancer = (props) => {
+    const history = useHistory();
     const [showCheck, setShowCheck] = useState(false)
     const stars = Array(5).fill(0);
     const [currentValue] = useState(3);
@@ -131,9 +133,11 @@ const TopFreelancer = (props) => {
         <div className="top-freelancer">
             <TopHeader />
             <div className="container">
-                <p className="top__jobs__freelancers">Vangold > Browse Jobs</p>
+                <p className="top__jobs__freelancers"><span onClick={() => {
+                history.push("/");
+                }} style={{cursor: "pointer"}}>Vangold</span> > Find Freelancer</p>
                 <SearchBox />
-                <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
+                <div className="mb-3 dashboard_mobile_searchBar__filter d-lg-none">
                     <div className="dashboard_mobile_searchBar">
                         <svg
                         width="14"

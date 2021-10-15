@@ -504,7 +504,6 @@
   color: var(--secondary);
 }
 .ChatBox__Search .inn__chatBox__search {
-  background: rgba(217, 218, 215, 0.5);
   min-height: 675px;
 }
 .chatBox__search__text {
@@ -529,6 +528,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
+  z-index: 1;
 }
 .ChatBox__Search .chat__search_-_box input {
   width: 240px;

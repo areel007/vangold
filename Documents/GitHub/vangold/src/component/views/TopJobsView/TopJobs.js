@@ -73,7 +73,7 @@ const TopJobs = (props) => {
                 <img src={job.img} alt="" />
               </div>
               <div className="TopJobs-info">
-                <h1 className="job-_-_name"onClick={() => {
+                <h1 className="job-_-_name" onClick={() => {
                 history.push("/top-jobs-view");
                 }} style={{ cursor: "pointer" }}>{job.name}</h1>
                 <p className="job-_-_address">{job.address}</p>
@@ -146,9 +146,11 @@ const TopJobs = (props) => {
     <div className="top-freelancer">
       <TopJobsHeader />
       <div className="container">
-        <p className="top__jobs__freelancers">Vangold > Browse Jobs</p>
+        <p className="top__jobs__freelancers"><span onClick={() => {
+                history.push("/");
+                }} style={{cursor: "pointer"}}>Vangold</span> > Browse Jobs</p>
         <SearchBox />
-        <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
+        <div className="mb-3 dashboard_mobile_searchBar__filter d-lg-none">
           <div className="dashboard_mobile_searchBar">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path

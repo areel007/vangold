@@ -46,6 +46,26 @@ const AbBanner = (props) => {
                             <div className="banner__button home__banner__button">
                                 <button className="home__banner__text__button" onClick={() => setModalShow(true)}>Hire a Freelancer</button>
                                 <button className="home__banner__text__button findwork__btn" onClick={() => setModalShowTwo(true)}>Find Work</button>
+                            </div>
+                            <div className="hhh mt-3">
+                                <button onClick={() => {
+                                    history.push('/freelancer-registration')
+                                }}>freelancer registration</button>
+                                <button onClick={() => {
+                                    history.push('/brand-registration')
+                                }}>brand-registration</button>
+                                <button onClick={() => {
+                                    history.push('/reset-password')
+                                }}>reset-password</button>
+                                  <button onClick={() => {
+                                    history.push('/passwordresetsuccessful')
+                                }}>reset-successful</button>
+                                <button onClick={() => {
+                                    history.push('/VerifyEmail')
+                                }}>Verify-Email</button>
+                                <button onClick={() => {
+                                    history.push('/accountverifysuccessful')
+                                }}>verify-successful</button>
                             </div> 
                         </div>
                         <div className="bannerTwo__image">

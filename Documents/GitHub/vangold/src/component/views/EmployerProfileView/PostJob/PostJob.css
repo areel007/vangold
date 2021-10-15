@@ -2,15 +2,8 @@
   font-size: 36px;
   font-weight: var(--font-wieght-bold);
 }
-/* .profile-postjob-header {
-  margin-left: 110px;
-} */
-.post__job-container {
-  display: flex;
-  width: 100%;
-}
-.right_post__job-container {
-  width: 100%;
+#postjob .stepper-m {
+  margin-left: -12rem;
 }
 #postjob .project-title {
   font-size: 24px;
@@ -29,7 +22,7 @@
   list-style-type: disc;
   color: #767676;
 }
-#postjob .submit-btn {
+#postjob .submit-btnn {
   font-size: 18px;
   font-weight: var(--font-wieght-bold);
   color: #fff;
@@ -38,14 +31,13 @@
   padding: 1rem 2.5rem;
   text-transform: none;
 }
-#postjob .back-btn {
+#postjob .back-btnn {
   font-size: 18px;
   font-weight: var(--font-wieght-bold);
   color: var(--primary);
   line-height: 22.59px;
   background-color: #45b6184d;
   padding: 1rem 2.5rem;
-  margin-left: 8.5rem;
   text-transform: none;
 }
 #postjob .pills-btn {
@@ -59,11 +51,11 @@
   text-transform: capitalize;
   font-family: var(--raleway);
 }
-#postjob .custom-radio {
+#postjob .custom-radioo {
   position: relative;
   border: 1px solid #0000004d;
   height: 10rem;
-  width: 18.5rem;
+  width: 18rem;
   border-radius: 5px;
 }
 #postjob .radio-icon {
@@ -71,62 +63,42 @@
   top: 2rem;
   right: 8rem;
 }
-#postjob .form-control:not(active) {
+#postjob .form-controll:not(active) {
   padding: 1.5rem;
 }
-
-@media (max-width: 991px) {
-  .post__job-container {
-    flex-direction: column;
-  }
-  .right_post__job-container{
-    margin-top: 30px !important;
-  }
+#postjob .form-controll {
+  width: 452px;
 }
+
 @media (max-width: 500px) {
-  #postjob .back-btn {
+  #postjob .back-btnn {
     font-size: 12px;
   }
-  #postjob .submit-btn {
+  #postjob .submit-btnn {
     font-size: 12px;
+  }
+  #postjob .form-controll {
+    width: 362px;
   }
 }
 @media (max-width: 700px) {
-  #postjob .back-btn {
-    margin-left: 2rem;
-  }
   #postjob .project-title {
     font-size: 18px;
   }
   #postjob h1 {
     font-size: 20px;
   }
+  #postjob .stepper-m {
+    margin-left: -4rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  #postjob .stepper-m {
+    margin-left: -8rem;
+  }
 }
 @media (min-width: 200px) and (max-width: 530px) {
   #postjob .custom-radio {
     margin: 0 0 2rem 0 !important;
   }
-}
-
-.postButtons-box {
-  max-width: 900px;
-  justify-content: space-between;
-}
-#postjob .back-btn.back-btn2 {
-  margin: 0;
-}
-.textarea_postjob {
-  max-width: 740px;
-}
-.textarea_postjob textarea {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
-  outline: none;
-  padding: 15px;
-  width: 100%;
-}
-.postjob__title-input {
-  max-width: 452px;
 }

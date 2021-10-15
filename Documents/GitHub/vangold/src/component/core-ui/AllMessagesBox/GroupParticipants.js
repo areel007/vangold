@@ -34,12 +34,13 @@ const userMembers = [
  
 
 const GroupParticipants = (props) => {
+    
     return (
         <div className="ChatBoxMembers__container">
             <div className="ChatBoxMembers GroupParticipants">
                 <div className="top__inn__ChatBoxMembers__header">
                     <span>Group Participants</span>
-                    <svg onClick={props.closeMemberShow}width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={() => { props.closeMemberShow(); props.openIcons()}} width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.7501 10L14.9996 13.75L11.2499 10L10 11.25L13.7497 15L10 18.75L11.2499 20L14.9996 16.25L18.7501 20L20 18.75L16.2503 15L20 11.25L18.7501 10Z" fill="black"/>
                     <circle cx="14.5" cy="14.5" r="13.5" stroke="black" stroke-width="2"/>
                     </svg>

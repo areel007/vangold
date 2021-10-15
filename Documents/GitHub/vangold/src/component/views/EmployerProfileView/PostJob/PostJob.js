@@ -1,41 +1,48 @@
 import { Container, Row, Col } from "react-bootstrap";
 import PostJobStepper from "./PostJobStepper/PostJobStepper";
-import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import "./PostJob.css";
+import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 
-const ProfilePostJob = ({ showSideMenu, setShowSideMenu }) => {
+const PostJob = ({ showSideMenu, setShowSideMenu }) => {
   return (
-    <div id="postjob" className="post__job-container mb-5">
-      <Col
-        xs={12}
-        lg={2}
-        className={`mt-lg-4 ${
-          !showSideMenu ? "d-none d-lg-block" : "mb-5"
-        }`}
-      >
-        <EmployerSideMenu
-          showSideMenu={showSideMenu}
-          setShowSideMenu={setShowSideMenu}
-        />
-      </Col>
-      <div className="right_post__job-container mt-4">
-        <Container>
-          <Row>
-            <div className="">
-              <h1>Let’s help you post your first job</h1>
-            </div>
-          </Row>
-        </Container>
-        <Container fluid>
-          <Row>
-            <Col>
-              <PostJobStepper />
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    </div>
+    <section id="postjob" className="py-5">
+      <Container fluid>
+        <Row>
+          <Col
+            xs={12}
+            lg={2}
+            className={`mt-lg-4 ${
+              !showSideMenu ? "d-none d-lg-block" : "mb-5"
+            }`}
+          >
+            <EmployerSideMenu
+              showSideMenu={showSideMenu}
+              setShowSideMenu={setShowSideMenu}
+            />
+          </Col>
+          <Col xs={12} lg={10} className="px-4 px-sm-5 pt-2">
+            <Row>
+              <Col xs={10} lg={8} className="d-none d-lg-block">
+                <h1>Let’s help you post your first job</h1>
+              </Col>
+              <Col
+                xs={10}
+                lg={4}
+                className="mx-auto text-end d-none d-lg-block"
+              >
+                <Link to="">
+                  <Button>Back to Login</Button>
+                </Link>
+              </Col>
+            </Row>
+            <PostJobStepper />
+          </Col>
+        </Row>
+      </Container>
+    </section>
   );
 };
 
-export default ProfilePostJob;
+export default PostJob;
