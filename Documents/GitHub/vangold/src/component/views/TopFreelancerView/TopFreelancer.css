@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 150px;
+  min-height: 150px;
 }
 .inn-top-freelancer-header h2 {
   font-family: var(--mulish);
@@ -241,5 +241,8 @@
 
 .sideBarTopFreelancer {
   width: 220px;
-  background-color: #d9dad8 !important;
+  background-color: #f9faf9 !important;
+}
+.makeStyles-root-1{
+  margin-top: 0 !important;
 }

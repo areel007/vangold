@@ -3,6 +3,8 @@ import SideCheckBoxes from "../../core-ui/SideCheckBoxes/SideCheckBoxes";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ImShare2 } from "react-icons/im";
 import { useState } from "react";
+import TopJobsHeader from "./TopJobsHeader";
+import SearchBox from "../../core-ui/SearchInput/SearchBox";
 import micro from "../../../assets/images/profile/micro.png";
 import cover from "../../../assets/images/profile/cover.png";
 import dot from "../../../assets/images/profile/dot.png";
@@ -11,6 +13,7 @@ import cross from "../../../assets/images/profile/cross1.png";
 import SendBidModal from "../../core-ui/SendBidModal/SendBidModal";
 import FollowersModal from "../../core-ui/FollowersModal/FollowersModal";
 import ShareModal from "../../core-ui/ShareModal/ShareModal";
+import { useHistory } from "react-router-dom";
 // import "../../Jobs.css";
 
 const jobs = {
@@ -25,6 +28,7 @@ const jobs = {
 };
 
 const TopJobsTwo = () => {
+  const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
   const [shareShow, setShareShow] = useState(false);
   const [followersShow, setFollowersShow] = useState(false);
@@ -38,12 +42,17 @@ const TopJobsTwo = () => {
 
 
   return (
-    <section id="job-descrip" className="my-5 py-3">
+    <section id="job-descrip">
+    <TopJobsHeader />
       <Container>
+      <p className="top__jobs__freelancers"><span onClick={() => {
+                history.push("/browse-job")
+                }} style={{cursor: "pointer"}}>Brrowse Jobs</span> > Top Jobs View</p>
+                <SearchBox />
         <div className="top-jobs-view">
           <Row>
             <Col xs={12} lg={9} className="topjobtwo__container">
-              <div className="mb-5 dashboard_mobile_searchBar__filter d-lg-none">
+              <div className="dashboard_mobile_searchBar__filter d-lg-none">
                 <div className="dashboard_mobile_searchBar">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path

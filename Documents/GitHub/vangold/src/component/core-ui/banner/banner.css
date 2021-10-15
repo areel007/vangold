@@ -87,6 +87,7 @@
   color: var(--white);
 }
 .banner__text__subtitle {
+  width: 520px;
   font-family: var(--inter);
   font-style: normal;
   font-weight: var(--font-weight-normal);
@@ -103,6 +104,8 @@
   gap: 20px;
 }
 .banner__text__button {
+  width: 154px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +139,7 @@
 .home__banner__button button:nth-child(2) {
   width: 141px;
   height: 48px;
-  background: #164D00;
+  background: #164d00;
   border-radius: 6px;
   font-family: var(--inter);
   font-style: normal;

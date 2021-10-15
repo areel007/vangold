@@ -15,7 +15,9 @@
     padding-left: 20px;
     background-color: #d0e6c7 !important;
   }
-
+ .top__inn__ChatBoxMembers__header{
+  background-color: #d0e6c7 !important;
+ }
   .ChatBox__Mobile__ {
     width: 100%;
     position: absolute;

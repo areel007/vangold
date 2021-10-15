@@ -86,6 +86,7 @@ import ManageTalentChat from "./component/core-ui/AllMessagesBox/ManageTalentCha
 import FreelancerChat from "./component/views/FreelancerProfileViews/FreelancerChat/FreelancerChat";
 import CallChat from "./component/core-ui/AllMessagesBox/CallChat";
 import StoriesModal from "./component/core-ui/StoriesModal/StoriesModal";
+import ImgSlider from "./component/core-ui/imgSlider/imgSlider";
 
 function App() {
 
@@ -214,6 +215,9 @@ function App() {
                     </Route>
                     <Route path="/postjob">
                         <PostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                    </Route>
+                    <Route path="/ImgSlider">
+                        <ImgSlider />
                     </Route>
                     <Route path="/profile/postjob">
                         <ProfilePostJob showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />

@@ -11,7 +11,6 @@ const ChatBoxFour = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
     const [exitGroup, setExitGroup] = React.useState(false);
-
     const history = useHistory();
 
     const openPopover = () => {
@@ -147,7 +146,7 @@ const ChatBoxFour = (props) => {
                 </div>
                 {memberShow &&
                 <div ref={ref}>
-                    <GroupParticipants closeMemberShow={closeMemberShow}/>
+                    <GroupParticipants closeMemberShow={closeMemberShow} />
                 </div>
                 }
             </div>

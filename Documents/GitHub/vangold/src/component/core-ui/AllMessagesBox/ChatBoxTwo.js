@@ -14,6 +14,14 @@ const ChatBoxTwo = (props) => {
     const [showChatSearch, setChatShowSearch] = React.useState(false);
     const [showIcon, setShowIcon] = React.useState(true);
 
+    const openIcons = () => {
+        setShowIcon(!showIcon);
+      };
+      
+      const closeIcons = () => {
+        setShowIcon(false);
+      };
+
     const openPopover = () => {
         setIsShow(!isShow);
       };
@@ -38,6 +46,7 @@ const ChatBoxTwo = (props) => {
         setIsShow(false);
         setMemberShow(false);
         setChatShowSearch(false);
+        setShowIcon(true);
     });
     return (
         <>
@@ -80,7 +89,7 @@ const ChatBoxTwo = (props) => {
                                     </svg>
                                 </div>
                                 <div className="ChatBox__popover__links">
-                                    <li onClick={() => { closePopover();  openMemberShow(); setShowIcon(false)}}>Group Participant</li>
+                                    <li onClick={() => { closePopover();  openMemberShow(); closeIcons()}}>Group Participant</li>
                                     <li onClick={() => { closePopover(); openChatSearch()}}>Search</li>
                                     <li>Report Group</li>
                                     <li onClick={() => { closePopover(); setExitGroup(true)}}>Exit Group</li>
@@ -185,7 +194,7 @@ const ChatBoxTwo = (props) => {
                 </div>
                 {memberShow &&
                     <div ref={ref}>
-                        <GroupParticipants closeMemberShow={closeMemberShow}/>
+                        <GroupParticipants closeMemberShow={closeMemberShow} openIcons={openIcons}/>
                     </div>
                 }
                 {showChatSearch &&
