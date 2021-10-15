@@ -110,7 +110,7 @@
     display: none;
   }
   .page__title .homepage__header {
-    margin-top: 24.62px;
+    /* margin-top: 24.62px; */
     margin-bottom: 28px;
   }
   .banner__button .banner__text__button {
@@ -169,8 +169,15 @@
   .Card_-_dashboard img {
     width: 100% !important;
   }
-  .dashboard_mobile_searchBar {
+
+  .dashboard_mobile_searchBar,
+  .chat__box__contaniner-left .personal__avatar svg {
     display: block !important;
+  }
+  .ChatBoxMembers {
+    width: 100% !important;
+    top: 0;
+    z-index: 1;
   }
   .inn-top-freelancer,
   .topjobtwo__container,
@@ -193,10 +200,13 @@
     max-width: 100% !important;
     border: none;
   }
-  .ChatBoxMembers {
+  .llflfkdk {
     position: absolute !important;
-    z-index: 1;
     right: 0;
+    left: 0;
+    top: 133px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   .business-chat-view2 {
     display: none !important;
@@ -282,6 +292,24 @@
     font-size: var(--fs-24) !important;
     line-height: 32px !important;
   }
+  .homepage__header .page__title__inner {
+    font-size: var(--fs-18) !important;
+    line-height: 24px !important;
+    position: relative;
+    /* top: -20px; */
+  }
+  .homepage__header svg {
+    width: 36px;
+    height: 36px;
+  }
+  .banner__inner .banner__text__title {
+    font-size: 32px;
+  }
+  .banner__text__button {
+    width: 111px;
+    height: 36px;
+    font-size: var(--fs-14) !important;
+  }
   .mobileAuth_h1,
   .form__title h1,
   .group_chat-messager-container p {
@@ -290,6 +318,10 @@
   }
   .inn-chat-input-icons {
     gap: 10px !important;
+  }
+  .arrow_box span {
+    font-size: 18px !important;
+    line-height: 21.78px !important;
   }
   .mobile-message__box-component_header {
     padding-left: 24px !important;
@@ -329,7 +361,9 @@
   .collaborate-text__subtitle,
   .manage-your-team-subtitle,
   .inn__ourclients__testimonial .inn__ourclients__testimonial__header p,
-  .chat__box--header .chat__box--header__ p {
+  .chat__box--header .chat__box--header__ p,
+  .bannerTwo__text .banner__text__subtitle,
+  .logo span {
     font-size: var(--fs-16) !important;
   }
   .inn-send-message-box,
@@ -431,17 +465,21 @@
     color: #18191f;
     line-height: 32px;
   }
-  .banner__button .banner__text__button {
-    background-color: var(--primary);
-    color: var(--white);
-  }
   .home-two {
     margin-top: 0 !important;
   }
-  .banner__button .findwork__btn {
-    background-color: var(--white);
-    color: var(--primary);
-    border: 1px solid var(--primary);
+  .home__banner__button button:nth-child(1) {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+    width: 149px !important;
+    font-size: var(--fs-14) !important;
+  }
+  .home__banner__button button:nth-child(2) {
+    background-color: var(--white) !important;
+    color: var(--primary) !important;
+    border: 1px solid var(--primary) !important;
+    width: 100px !important;
+    font-size: var(--fs-14) !important;
   }
 
   .getNotifyBannerPara2 {
@@ -550,7 +588,6 @@
   }
   .MobileView-TopFreealancerContent__BOX-details_TOP,
   .mobile__call,
-  .chat__box__contaniner-left .personal__avatar svg,
   .chat__box__contaniner-left .grp__chat__view-left-top svg {
     display: block !important;
   }
@@ -694,8 +731,7 @@
     line-height: 21px !important;
   }
   .Top__Freelancer_info h3,
-  .job-_-_name,
-  .banner__text__subtitle {
+  .job-_-_name {
     font-size: var(--fs-16) !important;
   }
   .modalFormHome_-_channelHead {
@@ -790,9 +826,6 @@
   }
   .catalogue .inn-catalogue .catalogue-list div span {
     font-size: var(--fs-13) !important;
-  }
-  .banner__inner .banner__text__title {
-    font-size: 32px;
   }
 }
 @media screen and (max-width: 850px) {

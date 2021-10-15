@@ -43,9 +43,9 @@ const AbBanner = (props) => {
                             <h1 className="banner__text__title banner2__text__title">Find Best Solution for Top  Business</h1>
                             <p className="banner__text__subtitle">Hire top-notch professionals to get your project done. Worry not about their competence, we did our due diligence. 
                             </p>
-                            <div className="banner__button">
-                                <button className="banner__text__button" onClick={() => setModalShow(true)}>Hire a Freelancer</button>
-                                <button className="banner__text__button findwork__btn" onClick={() => setModalShowTwo(true)}>Find Work</button>
+                            <div className="banner__button home__banner__button">
+                                <button className="home__banner__text__button" onClick={() => setModalShow(true)}>Hire a Freelancer</button>
+                                <button className="home__banner__text__button findwork__btn" onClick={() => setModalShowTwo(true)}>Find Work</button>
                             </div> 
                         </div>
                         <div className="bannerTwo__image">

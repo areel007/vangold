@@ -35,7 +35,7 @@ const userMembers = [
 
 const GroupParticipants = (props) => {
     return (
-        <>
+        <div className="ChatBoxMembers__container">
             <div className="ChatBoxMembers GroupParticipants">
                 <div className="top__inn__ChatBoxMembers__header">
                     <span>Group Participants</span>
@@ -80,7 +80,7 @@ const GroupParticipants = (props) => {
                     }
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -16,7 +16,7 @@ const items = [
     <div className="testimonial-item" data-value="1">
         <div className="client__testimonial-details">
         <div className="arrow_box">
-            <span>Efficient Collaborating</span>
+            <span>Team Management</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
         </div>
             <div className="TestimonialImg">
@@ -29,7 +29,7 @@ const items = [
     <div className="testimonial-item" data-value="2">
         <div className="client__testimonial-details">
         <div className="arrow_box">
-            <span>Team Management</span>
+            <span>Mindblowing Service</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
         </div>
             <div className="TestimonialImg">
@@ -40,6 +40,19 @@ const items = [
         </div>
     </div>,
     <div className="testimonial-item" data-value="3">
+        <div className="client__testimonial-details">
+        <div className="arrow_box">
+            <span>Mindblowing Service</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.</p>
+        </div>
+            <div className="TestimonialImg">
+                <img src={TestimonialImg} alt="TestimonialImg" />
+                <span>Jane Cooper</span>
+                <p>CEO at ABC Corporation</p>
+            </div>
+        </div>
+    </div>,
+    <div className="testimonial-item" data-value="4">
         <div className="client__testimonial-details">
         <div className="arrow_box">
             <span>Mindblowing Service</span>

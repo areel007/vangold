@@ -31,17 +31,21 @@
 .MessageBox__ .MessageBox__header {
   height: 70px;
   background: rgba(69, 182, 24, 0.2);
-  /* border-radius: 0px 10px 0px 0px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 35px 15px 35px;
+  padding: 15px 20px 15px 35px;
   position: relative;
 }
 .MessageBox__ .MessageBox__header svg {
   cursor: pointer;
 }
 .MessageBox__ .MessageBox__header .MessageBox__header__icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.MessageBox__ .MessageBox__header .MessageBox__header__icons .call__video__icon{
   display: flex;
   align-items: center;
   gap: 18px;
@@ -77,7 +81,7 @@
   .ChatBox__popoverBox.ChatBox__arrow-top:after {
   content: " ";
   position: absolute;
-  right: 30px;
+  right: 15px;
   top: -25px;
   border-top: none;
   border-right: 15px solid transparent;
@@ -462,8 +466,12 @@
   min-height: 675px;
   background: #ebecea;
   border-radius: 0px 10px 0px 0px;
-  /* position: relative;
-  left: -9px; */
+}
+.ChatBox__Search {
+  width: 272px;
+  margin: 0 auto;
+  border-radius: 0px 10px 0px 0px;
+  background: #ebecea;
 }
 .ChatBoxMembers .inn__ChatBoxMembers__header {
   display: flex;
@@ -474,6 +482,68 @@
   padding-right: 17px;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
+}
+.ChatBox__Search .chat__search__header {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  background: #DAF0D1;
+  border-radius: 0px 10px 0px 0px;
+  height: 70px;
+}
+
+.ChatBox__Search .chat__search__header svg{
+  cursor: pointer;
+}
+.ChatBox__Search .chat__search__header span {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-18);
+  line-height: 100%;
+  color: var(--secondary);
+}
+.ChatBox__Search .inn__chatBox__search {
+  background: rgba(217, 218, 215, 0.5);
+  min-height: 675px;
+}
+.chatBox__search__text {
+  display: flex;
+  align-items: center;
+  max-width: 179px;
+  margin: auto;
+  margin-top: 40px;
+}
+.chatBox__search__text p {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--fs-14);
+  line-height: 18px;
+  text-align: center;
+  color: #888888;
+}
+.ChatBox__Search .chat__search_-_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.ChatBox__Search .chat__search_-_box input {
+  width: 240px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+}
+.ChatBox__Search .chat__search_-_box svg {
+  position: absolute;
+  left: 33px;
+  top: 30px;
+  cursor: pointer;
 }
 .ChatBoxMembers .inn__ChatBoxMembers__header svg {
   cursor: pointer;
@@ -764,4 +834,30 @@
   bottom: 0;
   gap: 32px;
   padding: 30px;
+}
+.MessageChatBox__ {
+  display: flex;
+}
+
+.ChatBox__Mobile__ .ChatBox__Search{
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+.ChatBox__Mobile__ .ChatBox__Search .inn__chatBox__search{
+  z-index: 5;
+  position: relative;
+  background-color: #ECECEB;
+}
+.ChatBox__Mobile__ .ChatBox__Search .chat__search__header {
+  background: #DAF0D1;
+  padding-left: 20px;
+}
+.ChatBox__Search .chat__search__header svg{
+  cursor: pointer;
+}
+.ChatBox__Search .chat__search_-_box input {
+  width: 100%;
 }

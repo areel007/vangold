@@ -238,9 +238,9 @@ const EmployerProfileDashboard = ({ showSideMenu, setShowSideMenu }) => {
         <section id="profile-dash" className="my-3 py-3">
             <Container fluid>
                 <Row>
-                    <Col xs={12} lg={2} className={`mx-auto mt-lg-5 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
-                        <EmployerSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
-                    </Col>
+                <Col xs={12} lg={2} className={`mx-auto mt-lg-4 ${!showSideMenu ? "d-none d-lg-block" : "mb-5"}`}>
+                <EmployerSideMenu showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
+                </Col>
                     <Col xs={12} md={10} lg={10} className="mx-auto bg-color">
                         <Row>
                             <Col xs={12} lg={6} className="mx-auto p-3">
