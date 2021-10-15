@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         width: "100%",
         fontSize: "16px",
-        marginTop: "2rem",
+        // marginTop: "2rem",
     },
     listItemText: {
         fontSize: "16px",

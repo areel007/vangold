@@ -1,4 +1,5 @@
 import React from 'react';
+import ChatBoxHeaderTwo from "./ChatBoxHeaderTwo";
 
 import "./AllMessagesBox.css";
 
@@ -7,6 +8,7 @@ const ChatBoxEight = (props) => {
     return (
         <>
             <div className="MessageBox__ Biz__MessageBox__">
+                <ChatBoxHeaderTwo />
                 <div className="MessageBox__header Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <span>Carlos Pena</span>

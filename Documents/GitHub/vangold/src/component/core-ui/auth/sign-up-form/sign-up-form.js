@@ -79,10 +79,19 @@ const SignUpForm = () => {
         </div>
         <div className="sign-up-options">
           <p>I want to:</p>
-          <div className="option-buttons">
-            <button className="option-btn">Hire for a project</button>
-            <button className="option-btn">Work as a freelancer</button>
-            <button className="option-btn">Create a team</button>
+          <div className="select_buttons">
+            <input type="radio" name="select" id="option-1" />
+            <input type="radio" name="select" id="option-2" />
+            <input type="radio" name="select" id="option-3" />
+              <label for="option-1" className="option option-1">
+                  <span>Hire for a project</span>
+                  </label>
+              <label for="option-2" className="option option-2">
+                  <span>Work as a freelancer</span>
+              </label>
+              <label for="option-3" className="option option-3">
+                  <span>Create a team</span>
+              </label>
           </div>
         </div>
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -96,8 +105,10 @@ const SignUpForm = () => {
           <p>or</p>
         </div>
         <div className="auth-icon-btns">
-          <button>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <input type="radio" name="select" id="connectGoogle" />
+            <input type="radio" name="select" id="connectFacebook" />
+              <label for="option-1" className="option option-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <g clipPath="url(#clip0)">
                 <path
                   fillRule="evenodd"
@@ -130,10 +141,10 @@ const SignUpForm = () => {
                 </clipPath>
               </defs>
             </svg>
-            <span>Continue with Google</span>
-          </button>
-          <button>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <span>Continue with Google</span>
+                  </label>
+              <label for="option-2" className="option option-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path
                 d="M20 10C20 4.48 15.52 0 10 0C4.48 0 0 4.48 0 10C0 14.84 3.44
                     18.87 8 19.8V13H6V10H8V7.5C8 5.57 9.57 4 11.5 4H14V7H12C11.45 7 11 7.45
@@ -142,9 +153,9 @@ const SignUpForm = () => {
               />
             </svg>
 
-            <span>Continue with Facebook</span>
-          </button>
-        </div>
+                  <span>Continue with Facebook</span>
+              </label>
+          </div>
       </form>
     </>
   );

@@ -12,7 +12,7 @@
   line-height: 42px;
   color: #141414;
 }
-.form__title .mobileAuth_h1{
+.form__title .mobileAuth_h1 {
   display: none;
 }
 .form__title p {
@@ -234,6 +234,76 @@
   text-align: center;
 }
 
-.form-link-P .form-link{
+.form-link-P .form-link {
   color: var(--primary);
+}
+
+.select_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100px;
+  width: 100%;
+}
+.select_buttons .option {
+  height: 36px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(242, 242, 242, 0.3);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--fs-12);
+  line-height: 14px;
+  color: #4f4f4f;
+}
+input[type="radio"] {
+  display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#option-3:checked:checked ~ .option-3 {
+  border: 1px solid #45b618;
+}
+.select_buttons .option span {
+  color: #808080;
+}
+
+.auth-icon-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.auth-icon-btns .option {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: var(--raleway);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
+  color: #4f4f4f;
+}
+.auth-icon-btns .option svg{
+  position: absolute;
+  left: 25.49px;
 }
