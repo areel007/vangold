@@ -2,6 +2,7 @@ import React from 'react';
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import GroupParticipants from "./GroupParticipants";
+import ExitGroupModal from "../../core-ui/ExitGroupModal/ExitGroupModal";
 import { useHistory } from "react-router-dom";  
 
 import "./AllMessagesBox.css";
@@ -9,6 +10,8 @@ import "./AllMessagesBox.css";
 const ChatBoxFour = (props) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
+    const [exitGroup, setExitGroup] = React.useState(false);
+
     const history = useHistory();
 
     const openPopover = () => {
@@ -31,6 +34,10 @@ const ChatBoxFour = (props) => {
         <>
             <div className="topChatBox__">
                 <div className="MessageBox__">
+                    <div className="chat__container-header mt-5">
+                        <p className="chat__container-title">Inbox</p>
+                        <p className="chat__container-subtitle">Read, respond and respond to messages</p>
+                    </div>
                     <div className="MessageBox__header">
                         <div className="MessageBox__profile__data">
                             <img src={imageOne} alt="imageOne" />
@@ -52,11 +59,11 @@ const ChatBoxFour = (props) => {
                             <div className="ChatBox__popover__links">
                                 <li onClick={() => { closePopover(); openMemberShow()}}>Group Participant</li>
                                 <li onClick={() => { closePopover(); history.push("/profile/announcement")}}>Announcement Channel</li>
-                                <li onClick={closePopover}>Exit Group</li>
+                                <li onClick={() => { closePopover(); setExitGroup(true)}}>Exit Group</li>
                             </div>                                     
                         </div>
                     }
-                    </div>
+                    </div> 
                 
                         <div className="ChatBox__ ChatBox4__">
                             <div className="ChatBox__sendMsg">
@@ -144,6 +151,11 @@ const ChatBoxFour = (props) => {
                 </div>
                 }
             </div>
+            <ExitGroupModal 
+                show={exitGroup}
+                onHide={() => setExitGroup(false)}
+                head="Exit this group?"
+                btntext='Exit Group' />
         </>
     )
 }

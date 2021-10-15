@@ -6,6 +6,7 @@ import useOnclickOutside from "react-cool-onclickoutside";
 import messageBoxImg from "../../../assets/images/chat/rafiki.png";
 import ChatBoxOne from "../../core-ui/AllMessagesBox/ChatBoxOne";
 import ChatBoxMembers from "../../core-ui/AllMessagesBox/ChatBoxMembers";
+import ChatBoxSearch from "../../core-ui/AllMessagesBox/ChatBoxSearch";
 import ChatHeader from "../../core-ui/AllMessagesBox/ChatBoxHeader";
 import { useHistory } from "react-router-dom";
 
@@ -44,6 +45,8 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
     const [isShow, setIsShow] = React.useState(false);
     const [memberShow, setMemberShow] = React.useState(false);
     const [seeMessage, setSeeMessage] = useState(false);
+    const [showChatSearch, setChatShowSearch] = React.useState(false);
+
     const history = useHistory();
 
     const openPopover = () => {
@@ -60,10 +63,16 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
     const closeMemberShow = () => {
         setMemberShow(false);
     };
-
+    const openChatSearch = () => {
+        setChatShowSearch(!showChatSearch);
+    };
+    const closeChatSearch = () => {
+        setChatShowSearch(false);
+    };
     const ref = useOnclickOutside(() => {
         setIsShow(false);
         setMemberShow(false);
+        setChatShowSearch(false);
       });
     return (
         <div id="chat-component" className="my-3 py-3">
@@ -94,12 +103,16 @@ const ChatViewFour = ({ showSideMenu, setShowSideMenu }) => {
                                             <div className="popover__links">
                                                 <li onClick={() => { closePopover(); history.push("/profile/AddGroupUsers")}}>Create Group</li>
                                                 <li onClick={() => { closePopover(); openMemberShow()}}>View Team Members</li>
-                                                <li onClick={closePopover} to="#">Search</li>
+                                                <li onClick={() => { closePopover(); openChatSearch()}}>Search</li>
+                                                <li onClick={() => { closePopover(); history.push("/profile/Announcement")}}>Channel</li>
                                             </div>                                     
                                         </div> 
                                     }
                                     <div ref={ref} className={memberShow ? 'message-chat-box-members-none mobile__message-chat-box-members-none' : 'business-chat-box-members '}>
                                         <ChatBoxMembers closeMemberShow={closeMemberShow}/>
+                                    </div>
+                                    <div ref={ref} className={showChatSearch ? 'ChatBox__Mobile__' : 'business-chat-box-members '}>
+                                        <ChatBoxSearch closeChatSearch={closeChatSearch}/>
                                     </div>
                                 </div>
                                 <div className="chat__search_box--user-avatar">
