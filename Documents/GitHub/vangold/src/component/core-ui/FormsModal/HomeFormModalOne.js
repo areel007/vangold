@@ -4,6 +4,10 @@ import { Modal, Form, InputGroup } from "react-bootstrap";
 import "antd/dist/antd.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
+
 import "./FormsModal.css";
 
 const HomeFormModalOne = (props) => {
@@ -16,9 +20,34 @@ const HomeFormModalOne = (props) => {
   const handleShowPassword2 = () =>
     setShowPassword2((prevShowPassword2) => !prevShowPassword2);
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log("submission prevented");
+    const validationSchema = Yup.object().shape({
+      username: Yup.string()
+        .required('Username is required')
+        .min(6, 'Username must be at least 6 characters')
+        .max(20, 'Username must not exceed 20 characters'),
+      email: Yup.string()
+        .required('Email is required')
+        .email('Email is invalid'),
+      password: Yup.string()
+        .required('Password is required')
+        .min(6, 'Password must be at least 6 characters')
+        .max(40, 'Password must not exceed 40 characters'),
+      confirmPassword: Yup.string()
+        .required('Confirm Password is required')
+        .oneOf([Yup.ref('password'), null], 'Password does not match'),
+      acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required')
+    });
+
+   const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(validationSchema)
+  });
+
+  const onSubmit = data => {
+    console.log(JSON.stringify(data, null, 2));
   };
 
   return (
@@ -27,86 +56,101 @@ const HomeFormModalOne = (props) => {
         <AiOutlineCloseCircle className="modal-close" onClick={props.onHide} />
         <h1 className="modalFormHome_-_channelHead mt-5 mb-5">{props.head}</h1>
         <div className="home-form__modals">
-          <form className="auth__form" onSubmit={handleFormSubmit}>
+          <form className="auth__form" onSubmit={onSubmit}>
             <div className="form-input__container">
               <div className="form__-control">
                 <label htmlFor="Username">Username</label>
-                <input name="text" type="username" required />
+                <input name="username" id="username" type="text" {...register('username')}
+                    error={errors.username ? true : false} required/>
+                    <span className="errors">{errors.username?.message}</span>
               </div>
               <div className="form__-control">
                 <label htmlFor="Email">Email</label>
-                <input name="email" type="email" required />
+                <input name="email" type="email" {...register('email')}
+                    error={errors.email ? true : false} required />
+                    <span className="errors">{errors.email?.message}</span>
               </div>
-              <div className="form__-control">
-                <label htmlFor="Email">Password</label>
+            <div className="form__-control">
+              <label htmlFor="Password">Password</label>
 
-                <InputGroup>
-                  <Form.Control
-                    size="lg"
-                    required
-                    type={showPassword ? "text" : "password"}
-                    className="form-control-emp"
-                  />
-                  <InputGroup.Text className="form-control-eye">
-                    <div onClick={handleShowPassword}>
-                      {!showPassword ? (
-                        <AiOutlineEye style={{ fontSize: "20px" }} />
-                      ) : (
-                        <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
-                      )}
-                    </div>
-                  </InputGroup.Text>
-                </InputGroup>
-              </div>
-              <div className="form__-control">
-                <label htmlFor="Email">Confirm Password</label>
-
-                <InputGroup>
-                  <Form.Control
-                    size="lg"
-                    required
-                    type={showPassword2 ? "text" : "password"}
-                    className="form-control-emp"
-                  />
-                  <InputGroup.Text className="form-control-eye">
-                    <div onClick={handleShowPassword2}>
-                      {!showPassword2 ? (
-                        <AiOutlineEye style={{ fontSize: "20px" }} />
-                      ) : (
-                        <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
-                      )}
-                    </div>
-                  </InputGroup.Text>
-                </InputGroup>
-              </div>
+              <InputGroup>
+                <Form.Control
+                  size="lg"
+                  required
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  className="form-control-emp"
+                  {...register('password')}
+                  error={errors.password ? true : false}
+                />
+                <InputGroup.Text className="form-control-eye">
+                  <div onClick={handleShowPassword}>
+                    {!showPassword ? (
+                      <AiOutlineEye style={{ fontSize: "20px" }} />
+                    ) : (
+                      <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
+                    )}
+                  </div>
+                </InputGroup.Text>
+              </InputGroup>
+              <span className="errors">{errors.password?.message}</span>
             </div>
-            <div className="sign-up-options">
-              <p>I want to:</p>
-              <div className="select_buttons">
-                <input type="radio" name="select" id="option-1" />
-                <input type="radio" name="select" id="option-2" />
-                <input type="radio" name="select" id="option-3" />
-                  <label for="option-1" className="option option-1">
-                      <span>Hire for a project</span>
-                      </label>
-                  <label for="option-2" className="option option-2">
-                      <span>Work as a freelancer</span>
-                  </label>
-                  <label for="option-3" className="option option-3">
-                      <span>Create a team</span>
-                  </label>
-              </div>
-            </div> 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check
-                type="checkbox"
-                label="By creating an account, you agree to the Terms of Service and
-                    Conditions and Privacy Policy"
-              />
-            </Form.Group>
-            <button type="submit" className="submit__btn">
-              Create account
-            </button>
+            <div className="form__-control">
+              <label htmlFor="Password">Confirm Password</label>
+
+              <InputGroup>
+                <Form.Control
+                  size="lg"
+                  required
+                  name="confirmPassword"
+                  type={showPassword2 ? "text" : "password"}
+                  className="form-control-emp"
+                  {...register('confirmPassword')}
+                  error={errors.confirmPassword ? true : false}
+                />
+                <InputGroup.Text className="form-control-eye">
+                  <div onClick={handleShowPassword2}>
+                    {!showPassword2 ? (
+                      <AiOutlineEye style={{ fontSize: "20px" }} />
+                    ) : (
+                      <AiOutlineEyeInvisible style={{ fontSize: "20px" }} />
+                    )}
+                  </div>
+                </InputGroup.Text>
+              </InputGroup>
+              <span className="errors">{errors.confirmPassword?.message}</span>
+            </div>
+          </div>
+          <div className="sign-up-options">
+            <p>I want to:</p>
+            <div className="select_buttons">
+              <input type="radio" name="select" id="option-1" />
+              <input type="radio" name="select" id="option-2" />
+              <input type="radio" name="select" id="option-3" />
+                <label for="option-1" className="option option-1">
+                    <span>Hire for a project</span>
+                    </label>
+                <label for="option-2" className="option option-2">
+                    <span>Work as a freelancer</span>
+                </label>
+                <label for="option-3" className="option option-3">
+                    <span>Create a team</span>
+                </label>
+            </div>
+          </div>
+          <div className="acceptTerms__">
+            <div className="form-group form-check">
+              <input name="acceptTerms" type="checkbox" {...register('acceptTerms')} id="acceptTerms" className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`} />
+              <label htmlFor="acceptTerms" className="form-check-label">By creating an account, you agree to the Terms of Service and
+                  Conditions and Privacy Policy</label>
+            </div>
+            <span className="errors acceptTerms">{errors.acceptTerms?.message}</span>
+          </div>
+          
+
+          <button type="submit" className="submit__btn"  onClick={handleSubmit(onSubmit)}>
+            Create account
+          </button>
             <div class="social-divider">
               <span>or</span>
             </div>

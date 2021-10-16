@@ -2,6 +2,9 @@ import { useState } from "react";
 import "../authstyle.css";
 import { Form, InputGroup } from "react-bootstrap";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as Yup from 'yup';
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,14 +16,38 @@ const SignUpForm = () => {
   const handleShowPassword2 = () =>
     setShowPassword2((prevShowPassword2) => !prevShowPassword2);
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    console.log("submission prevented");
-  };
+    const validationSchema = Yup.object().shape({
+      username: Yup.string()
+        .required('Username is required')
+        .min(6, 'Username must be at least 6 characters')
+        .max(20, 'Username must not exceed 20 characters'),
+      email: Yup.string()
+        .required('Email is required')
+        .email('Email is invalid'),
+      password: Yup.string()
+        .required('Password is required')
+        .min(6, 'Password must be at least 6 characters')
+        .max(40, 'Password must not exceed 40 characters'),
+      confirmPassword: Yup.string()
+        .required('Confirm Password is required')
+        .oneOf([Yup.ref('password'), null], 'Password does not match'),
+      acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required')
+    });
 
+   const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(validationSchema)
+  });
+
+  const onSubmit = data => {
+    console.log(JSON.stringify(data, null, 2));
+  };
   return (
     <>
-      <form className="auth__form" onSubmit={handleFormSubmit}>
+      <form className="auth__form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form__title">
           <h1 className="desktopAuth_h1">Create account</h1>
           <h1 className="mobileAuth_h1">Create a VanGold account</h1>
@@ -28,21 +55,28 @@ const SignUpForm = () => {
         <div className="form-input__container">
           <div className="form__-control">
             <label htmlFor="Username">Username</label>
-            <input name="text" type="username" required />
+            <input name="username" id="username" type="text" {...register('username')}
+                error={errors.username ? true : false} required/>
+                <span className="errors">{errors.username?.message}</span>
           </div>
           <div className="form__-control">
             <label htmlFor="Email">Email</label>
-            <input name="email" type="email" required />
+            <input name="email" type="email" {...register('email')}
+                error={errors.email ? true : false} required />
+                <span className="errors">{errors.email?.message}</span>
           </div>
           <div className="form__-control">
-            <label htmlFor="Email">Password</label>
+            <label htmlFor="Password">Password</label>
 
             <InputGroup>
               <Form.Control
                 size="lg"
                 required
+                name="password"
                 type={showPassword ? "text" : "password"}
                 className="form-control-emp"
+                {...register('password')}
+                error={errors.password ? true : false}
               />
               <InputGroup.Text className="form-control-eye">
                 <div onClick={handleShowPassword}>
@@ -54,16 +88,20 @@ const SignUpForm = () => {
                 </div>
               </InputGroup.Text>
             </InputGroup>
+            <span className="errors">{errors.password?.message}</span>
           </div>
           <div className="form__-control">
-            <label htmlFor="Email">Confirm Password</label>
+            <label htmlFor="Password">Confirm Password</label>
 
             <InputGroup>
               <Form.Control
                 size="lg"
                 required
+                name="confirmPassword"
                 type={showPassword2 ? "text" : "password"}
                 className="form-control-emp"
+                {...register('confirmPassword')}
+                error={errors.confirmPassword ? true : false}
               />
               <InputGroup.Text className="form-control-eye">
                 <div onClick={handleShowPassword2}>
@@ -75,6 +113,7 @@ const SignUpForm = () => {
                 </div>
               </InputGroup.Text>
             </InputGroup>
+            <span className="errors">{errors.confirmPassword?.message}</span>
           </div>
         </div>
         <div className="sign-up-options">
@@ -94,11 +133,17 @@ const SignUpForm = () => {
               </label>
           </div>
         </div>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="By creating an account, you agree to the Terms of Service and
-                Conditions and Privacy Policy" />
-        </Form.Group>
-        <button type="submit" className="submit__btn">
+        <div className="acceptTerms__">
+          <div className="form-group form-check">
+            <input name="acceptTerms" type="checkbox" {...register('acceptTerms')} id="acceptTerms" className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`} />
+            <label htmlFor="acceptTerms" className="form-check-label">By creating an account, you agree to the Terms of Service and
+                Conditions and Privacy Policy</label>
+          </div>
+          <span className="errors acceptTerms">{errors.acceptTerms?.message}</span>
+        </div>
+        
+
+        <button type="submit" className="submit__btn" onClick={handleSubmit(onSubmit)}>
           Create account
         </button>
         <div className="or">

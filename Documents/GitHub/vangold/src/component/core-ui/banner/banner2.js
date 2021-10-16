@@ -47,7 +47,7 @@ const AbBanner = (props) => {
                                 <button className="home__banner__text__button" onClick={() => setModalShow(true)}>Hire a Freelancer</button>
                                 <button className="home__banner__text__button findwork__btn" onClick={() => setModalShowTwo(true)}>Find Work</button>
                             </div>
-                            <div className="hhh mt-3">
+                            {/* <div className="hhh mt-3">
                                 <button onClick={() => {
                                     history.push('/freelancer-registration')
                                 }}>freelancer registration</button>
@@ -66,7 +66,7 @@ const AbBanner = (props) => {
                                 <button onClick={() => {
                                     history.push('/accountverifysuccessful')
                                 }}>verify-successful</button>
-                            </div> 
+                            </div>  */}
                         </div>
                         <div className="bannerTwo__image">
                                 <CrossfadeImage

@@ -237,7 +237,13 @@
 .form-link-P .form-link {
   color: var(--primary);
 }
-
+.errors{
+  color: rgb(211, 11, 11);
+}
+.errors.acceptTerms{
+  position: relative;
+  top: -15px;
+}
 .select_buttons {
   display: flex;
   flex-direction: column;
