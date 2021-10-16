@@ -1,7 +1,7 @@
 import { Button, Chip } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { AiOutlinePlus } from "react-icons/ai";
 import Skills1 from "./Skills1";
 
@@ -82,52 +82,44 @@ const Skills = ({ postJobData, setPostJobData, handleNext, handleBack, showSkill
         <>
             {!showSkills1 ? (
                 <>
-                    <Container>
-                        <Row>
-                            <Col xs={10} lg={7} className='offset-1 ps-lg-4 mb-5'>
-                                <h1 className="project-title mb-5">Select skill or add your own</h1>
+                    <h1 className="project-title mb-5">Select skill or add your own</h1>
 
-                                <Form.Group>
-                                    <Form.Control type="text" value={value} className="form-control" size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
-                                </Form.Group>
+                    <Form.Group>
+                        <Form.Control type="text" className="form-controll" placeholder="Add up to 10 keywords to help people discover your project" value={value} size='lg' onKeyDown={handleKeyDown} onChange={(e) => setValue(e.target.value)} />
+                    </Form.Group>
 
-                                {chipData.length > 0 && <p>Selected Skills</p>}
+                    {chipData.length > 0 && <p>Selected Skills</p>}
 
-                                <div className='d-inline'>
-                                    {dispSkills.map((data) => {
-                                        return (
-                                            <Chip
-                                                key={data.key}
-                                                label={data.label}
-                                                onDelete={handleDelete(data)}
-                                                className={classes.chip}
-                                            />
-                                        );
-                                    })}
-                                </div>
+                    <div className='d-inline'>
+                        {dispSkills.map((data) => {
+                            return (
+                                <Chip
+                                    key={data.key}
+                                    label={data.label}
+                                    onDelete={handleDelete(data)}
+                                    className={classes.chip}
+                                />
+                            );
+                        })}
+                    </div>
 
-                                <p>Popular Skills</p>
-                                <div className='d-inline'>
-                                    {skillsList.map(skills => (
-                                        <Button key={skills.key} className='pills-btn'
-                                            onClick={() => { setChipData([...chipData, skills]) }}>
-                                            {skills.label}<AiOutlinePlus /></Button>
-                                    ))}
-                                </div>
-
-                            </Col>
-
-                        </Row>
-                    </Container>
-                    <div className='d-flex justify-content-md-between mt-5 justify-content-around'>
+                    <p>Popular Skills</p>
+                    <div className='d-inline'>
+                        {skillsList.map(skills => (
+                            <Button key={skills.key} className='pills-btn'
+                                onClick={() => { setChipData([...chipData, skills]) }}>
+                                {skills.label}<AiOutlinePlus /></Button>
+                        ))}
+                    </div>
+                    <div className='d-flex justify-content-between' style={{ marginTop: "5rem" }}>
                         <Button
-                            className='back-btn'
+                            className='back-btnn'
                             onClick={handleBack}
                         >
                             Back
                         </Button>
                         <Button
-                            className='submit-btn'
+                            className='submit-btnn me-3 me-md-5'
                             onClick={sendData}
                         >
                             Continue

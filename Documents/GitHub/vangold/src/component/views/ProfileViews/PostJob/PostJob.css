@@ -2,8 +2,8 @@
   font-size: 36px;
   font-weight: var(--font-wieght-bold);
 }
-.profile-postjob-header {
-  margin-left: 110px;
+#postjob .stepper-m {
+  margin-left: -12rem;
 }
 #postjob .project-title {
   font-size: 24px;
@@ -22,7 +22,7 @@
   list-style-type: disc;
   color: #767676;
 }
-#postjob .submit-btn {
+#postjob .submit-btnn {
   font-size: 18px;
   font-weight: var(--font-wieght-bold);
   color: #fff;
@@ -31,14 +31,13 @@
   padding: 1rem 2.5rem;
   text-transform: none;
 }
-#postjob .back-btn {
+#postjob .back-btnn {
   font-size: 18px;
   font-weight: var(--font-wieght-bold);
   color: var(--primary);
   line-height: 22.59px;
   background-color: #45b6184d;
   padding: 1rem 2.5rem;
-  margin-left: 8.5rem;
   text-transform: none;
 }
 #postjob .pills-btn {
@@ -52,11 +51,11 @@
   text-transform: capitalize;
   font-family: var(--raleway);
 }
-#postjob .custom-radio {
+#postjob .custom-radioo {
   position: relative;
   border: 1px solid #0000004d;
   height: 10rem;
-  width: 18.5rem;
+  width: 18rem;
   border-radius: 5px;
 }
 #postjob .radio-icon {
@@ -64,27 +63,38 @@
   top: 2rem;
   right: 8rem;
 }
-#postjob .form-control:not(active) {
+#postjob .form-controll:not(active) {
   padding: 1.5rem;
+}
+#postjob .form-controll {
+  width: 452px;
 }
 
 @media (max-width: 500px) {
-  #postjob .back-btn {
+  #postjob .back-btnn {
     font-size: 12px;
   }
-  #postjob .submit-btn {
+  #postjob .submit-btnn {
     font-size: 12px;
+  }
+  #postjob .form-controll {
+    width: 362px;
   }
 }
 @media (max-width: 700px) {
-  #postjob .back-btn {
-    margin-left: 2rem;
-  }
   #postjob .project-title {
     font-size: 18px;
   }
   #postjob h1 {
     font-size: 20px;
+  }
+  #postjob .stepper-m {
+    margin-left: -4rem;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  #postjob .stepper-m {
+    margin-left: -8rem;
   }
 }
 @media (min-width: 200px) and (max-width: 530px) {
