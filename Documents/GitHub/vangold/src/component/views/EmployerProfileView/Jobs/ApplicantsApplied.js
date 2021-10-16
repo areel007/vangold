@@ -8,13 +8,13 @@ const EmployerApplicantsApplied = ({ name, position, avatar, notification }) => 
                 <Col xs={5} md={4} className='mx-auto'>
                     <div className="d-flex ps-3 ps-lg-5">
                         <div className='me-3'><img src={avatar} alt="person" className="img-fluid" /></div>
-                        <div className="align-self-center">
+                        <div className="mt-2">
                             <p className="text-14px mb-0">{name}</p>
                             <p className="text-muted" >{position}</p>
                         </div>
                     </div>
                 </Col>
-                <Col xs={7} md={8} className="mx-auto align-self-center ps-lg-5">
+                <Col xs={7} md={8} className="mx-auto mt-3 ps-lg-5">
                     <Button className='btn-1'>Approve</Button>
                     {notification ? (
                         <Button className='btn-2'>Message <span className='noti'>{notification}</span></Button>

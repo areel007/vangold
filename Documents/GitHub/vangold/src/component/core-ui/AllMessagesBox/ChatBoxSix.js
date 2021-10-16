@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from "react-bootstrap";
+import ChatBoxHeaderTwo from "./ChatBoxHeaderTwo";
 import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import "./AllMessagesBox.css";
 import "./responsive.css";
@@ -9,6 +10,7 @@ const ChatBoxSix = (props) => {
     return (
         <Container fluid>
             <div className="MessageBox__">
+                <ChatBoxHeaderTwo />
                 <div className="MessageBox__header Mobile__MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />

@@ -1,10 +1,9 @@
 import React from 'react';
-import Avatar1 from "../../../assets/images/business-chat-content/Ellipse1531.png";
 import Avatar2 from "../../../assets/images/business-chat-content/Group43951.png";
-import Avatar3 from "../../../assets/images/business-chat-content/Ellipse1533.png";
 import Avatar4 from "../../../assets/images/business-chat-content/Group43952.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
+import ChatBoxHeaderTwo from "./ChatBoxHeaderTwo";
 import { BsHeart } from "react-icons/bs";
 import { BsHeartFill } from "react-icons/bs";
 
@@ -39,6 +38,7 @@ const ChatBoxAnnouncement = (props) => {
     return (
         <>
             <div className="MessageBox__ Biz__MessageBox__">
+                <ChatBoxHeaderTwo />
                 <div className="MessageBox__header Biz__MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <span>Channel</span>

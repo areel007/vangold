@@ -3,6 +3,7 @@ import imageOne from "../../../assets/images/chat/Ellipse1476.png";
 import useOnclickOutside from "react-cool-onclickoutside";
 import ChatBoxMembers from "./ChatBoxMembers";
 import ChatBoxSearch from "./ChatBoxSearch";
+import ChatBoxHeaderTwo from "./ChatBoxHeaderTwo";
 import { useHistory } from "react-router-dom";
 import "./AllMessagesBox.css";
 import "./responsive.css";
@@ -39,10 +40,7 @@ const ChatBoxThree = (props) => {
     return (
         <div className="MessageChatBox__">
             <div className="MessageBox__">
-                <div className="chat__container-header mt-5">
-                    <p className="chat__container-title">Inbox</p>
-                    <p className="chat__container-subtitle">Read, respond and respond to messages</p>
-                </div>
+                <ChatBoxHeaderTwo />
                 <div className="MessageBox__header">
                     <div className="MessageBox__profile__data">
                         <img src={imageOne} alt="imageOne" />

@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
 import "./banner.css";
 import bannerImageOne from "../../../assets/images/business-page/banner-img/Mobile-Mockup.png";
 import bannerImageTwo from "../../../assets/images/business-page/banner-img/Group-43711.png";
+import { useHistory } from "react-router-dom";
 
 const Banner = () => {
+  const history = useHistory();
+
   return (
     <div className="banner businesspage__banner">
       <div className="container">
@@ -15,8 +19,8 @@ const Banner = () => {
               Place your business on the path of success by with the help of
               freelance talent that you can rely on
             </p>
-            <button className="banner__text__button">Get Started</button>
-          </div>
+            <Link to="/brand-registration"><button className="banner__text__button">Get Started</button></Link>
+          </div> 
           <div className="banner-image__container">
             <div className="banner__image">
               <div className="banner__imag__top__left">

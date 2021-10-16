@@ -1,0 +1,376 @@
+.ManageScheduleMobile {
+  background: white;
+  display: none;
+}
+.ManageScheduleMobile .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.ManageScheduleMobile .header .l-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.ManageScheduleMobile .header .l-box span {
+  font-weight: 800;
+  font-size: 16px;
+  color: #333333;
+}
+.ManageScheduleMobile .header .r-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ManageScheduleMobile .header .r-box .bell-wrap {
+  position: relative;
+}
+.ManageScheduleMobile .header .r-box .bell-wrap .dot {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #45b618;
+  border: 1px solid #f7f8fc;
+}
+.ManageScheduleMobile .header .r-box .wrap {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(69, 182, 24, 0.2);
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.ManageScheduleMobile .header .r-box .wrap .user-img {
+  border-radius: 50%;
+  position: absolute;
+  width: 26px;
+}
+.ManageScheduleMobile .header .r-box img {
+  cursor: pointer;
+}
+.ManageScheduleMobile .sec1 {
+  padding: 25px 30px 64px;
+}
+.ManageScheduleMobile .sec1 .selct-head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+.ManageScheduleMobile .sec1 .selct-head p {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-18);
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  position: relative;
+  top: 8px;
+}
+.ManageScheduleMobile .sec1 .date-day-select {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 32px;
+}
+.ManageScheduleMobile .sec1 .select-wrapper {
+  width: 100%;
+  position: relative;
+}
+.ManageScheduleMobile .sec1 .select-wrapper .selct-box {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 20px 19px;
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ManageScheduleMobile .sec1 .select-wrapper .slct-menu {
+  padding: 24px 20px;
+  background: white;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  z-index: 2;
+  display: grid;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+}
+.ManageScheduleMobile .sec1 .select-wrapper .slct-menu span {
+  font-size: 14px;
+  color: #333333;
+  padding: 15px 12px;
+  background: white;
+  border-radius: 4px;
+}
+.ManageScheduleMobile .sec1 .select-wrapper .slct-menu span:hover {
+  background: #45b618;
+  color: white;
+}
+.ManageScheduleMobile .sec1 .select-wrapper .slct-menu .active {
+  color: white;
+  background: #45b618;
+}
+.ManageScheduleMobile .sec1 .meeting-item {
+  margin-bottom: 25px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap {
+  margin-bottom: 40px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap p {
+  font-family: var(--mulish);
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--fs-16);
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap .times {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap .times .span-wrap {
+  display: flex;
+  align-items: center;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap .times .span-wrap .span1 {
+  font-size: 12px;
+  color: #4f4f4f;
+  padding-right: 4px;
+  border-right: 1px solid #4f4f4f;
+}
+.ManageScheduleMobile .sec1 .meeting-item .time-wrap .times .span-wrap .span2 {
+  font-size: 12px;
+  color: #4f4f4f;
+  padding-left: 4px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .members {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .members img {
+  border-radius: 4px;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .members .img-div {
+  border-radius: 4px;
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  background-color: #45b618;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .btns .id-btn {
+  font-weight: bold;
+  font-size: 14px;
+  color: #45b618;
+  padding: 6px 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: rgba(69, 182, 24, 0.2);
+  border-radius: 4px;
+}
+.ManageScheduleMobile .sec1 .meeting-item .members-wrap .btns .join-btn {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  padding: 6px 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: #45b618;
+  border-radius: 4px;
+}
+.ManageScheduleMobile .footer {
+  background: url("../../../../assets/img/footer-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 15px;
+}
+.ManageScheduleMobile .footer .row-1 {
+  margin-bottom: 75px;
+}
+.ManageScheduleMobile .footer .row-1 .van-brand {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ManageScheduleMobile .footer .row-1 .van-brand span {
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+.ManageScheduleMobile .footer .row-1 p {
+  font-size: 14px;
+  color: #eeeff4;
+}
+.ManageScheduleMobile .footer .row-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.ManageScheduleMobile .footer .row-2 .l-div {
+  display: grid;
+}
+.ManageScheduleMobile .footer .row-2 .l-div p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #f4f5f7;
+  margin-bottom: 16px;
+}
+.ManageScheduleMobile .footer .row-2 .l-div a {
+  font-weight: normal;
+  font-size: 14px;
+  color: #eeeff4;
+  margin-bottom: 8px;
+}
+.ManageScheduleMobile .footer .row-2 .r-div {
+  display: grid;
+}
+.ManageScheduleMobile .footer .row-2 .r-div p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #f4f5f7;
+  margin-bottom: 16px;
+}
+.ManageScheduleMobile .footer .row-2 .r-div a {
+  font-weight: normal;
+  font-size: 14px;
+  color: #eeeff4;
+  margin-bottom: 8px;
+}
+.ManageScheduleMobile .footer .row-3 {
+  margin-bottom: 16px;
+}
+.ManageScheduleMobile .footer .row-3 h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #f4f5f7;
+  margin-bottom: 16px;
+}
+.ManageScheduleMobile .footer .row-3 p {
+  font-size: 14px;
+  color: #eeeff4;
+  margin-bottom: 8px;
+}
+.ManageScheduleMobile .footer .row-4 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid white;
+}
+.ManageScheduleMobile .footer .row-4 .social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.ManageScheduleMobile .footer .row-4 .social-links .img-wrap {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ManageScheduleMobile .footer .row-4 .social-links .img-wrap:hover {
+  background: #45b618;
+  border-radius: 0;
+}
+.ManageScheduleMobile .footer .row-5 {
+  padding: 24px 20px 0;
+}
+.ManageScheduleMobile .footer .row-5 p {
+  font-size: 14px;
+  color: #d9dbe1;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.ManageScheduleMobile .footer .row-5 .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.ManageScheduleMobile .footer .row-5 .links a {
+  font-size: 14px;
+  color: #eeeff4;
+}
+
+.flickity-page-dots {
+  display: none !important;
+}
+
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 20px;
+  border: none;
+}
+.flickity-prev-next-button:hover {
+  background: transparent !important;
+}
+.flickity-prev-next-button .arrow {
+  fill: #45b618 !important;
+}
+
+.flickity-prev-next-button svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -38px;
+  position: absolute;
+  opacity: 1;
+}
+
+.flickity-prev-next-button.next {
+  right: -32px;
+  position: absolute;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=ManageScheduleMobile.css.map */

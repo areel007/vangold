@@ -98,6 +98,13 @@
     flex-direction: column-reverse;
     gap: 32px;
   }
+  .home-two-card {
+    max-width: 335px !important;
+    min-height: 222px !important;
+  }
+  .card-icon {
+    margin-bottom: 25px !important;
+  }
   .what-you-stand-to-gain__list-container {
     flex-direction: column;
     align-items: center;
@@ -169,7 +176,16 @@
   .Card_-_dashboard img {
     width: 100% !important;
   }
-
+  .ManageScheduleMobile{
+    display: block !important;
+  }
+  .Manage__Schedule__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .Manage__Schedule__container .Manage__Schedule {
+    display: none;
+  }
   .dashboard_mobile_searchBar,
   .chat__box__contaniner-left .personal__avatar svg {
     display: block !important;
@@ -180,8 +196,13 @@
     z-index: 1;
     background: #f2f2f2 !important;
   }
-  .ChatBox__Search, .ChatBox__Mobile__ .ChatBox__Search .inn__chatBox__search{
+  .ChatBox__Search,
+  .ChatBox__Mobile__ .ChatBox__Search .inn__chatBox__search {
     background-color: #f2f2f2 !important;
+  }
+  .top-freelancer-mobile{
+    position: relative;
+    top: -20px;
   }
   .inn-top-freelancer,
   .topjobtwo__container,
@@ -189,10 +210,12 @@
   .top-freelancer {
     flex-direction: column;
   }
+  .top-jobs-right{
+    padding: 0 !important;
+  }
   .topjobtwo__left {
     width: 100% !important;
   }
-
   .SearchBox {
     display: none;
   }
@@ -629,9 +652,11 @@
   .paginationContainer {
     margin-top: 40px !important;
   }
-  .inn-top-freelancer-header {
+  .top-freelancer_header {
     height: 73px !important;
-    margin-bottom: 16px !important;
+    /* margin-bottom: 16px !important; */
+    display: flex;
+    align-items: center;
   }
   .inn-top-freelancer-header h2 {
     font-size: var(--fs-24) !important;

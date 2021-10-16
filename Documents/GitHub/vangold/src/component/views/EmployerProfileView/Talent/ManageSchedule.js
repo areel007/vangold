@@ -1,5 +1,6 @@
 import EmployerSideMenu from "../../../core-ui/EmployerSideMenu/EmployerSideMenu";
 import { Col } from "react-bootstrap";
+import ManageScheduleMobile from "./ManageScheduleMobile";
 import Calendar from "../../../../assets/images/ManageSchedule/calendar.png";
 import Clock from "../../../../assets/images/ManageSchedule/clock.png";
 import Member1 from "../../../../assets/images/ManageSchedule/user-1.png";
@@ -243,6 +244,7 @@ function EmployerManageSchedule({ showSideMenu, setShowSideMenu }) {
         </div>
       </div>
     </div>
+    <ManageScheduleMobile />
   </div>
   );
 }
