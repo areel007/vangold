@@ -195,10 +195,10 @@ function App() {
                     <Route path="/terms-and-conditions">
                         <TermsAndConditions />
                     </Route>
-                    <Route path="/privacypolicy">
+                    <Route path="/privacy-policy">
                         <PrivacyPolicy />
                     </Route>
-                    <Route path="/cookiepolicy">
+                    <Route path="/cookie-policy">
                         <CookiesPolicy />
                     </Route>
                     <Route path="/ManageTalent1">

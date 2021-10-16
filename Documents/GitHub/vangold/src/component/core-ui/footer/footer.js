@@ -26,10 +26,10 @@ const Footer = () => {
               <h2>RESOURCE</h2>
               <div className="ul">
                 <li>
-                  <Link to="/over">Terms & Conditions</Link>
+                  <Link to="/terms-and-conditions">Terms & Conditions</Link>
                 </li>
                 <li>
-                  <Link to="/over">Privacy Policy</Link>
+                  <Link to="/privacy-policy">Privacy Policy</Link>
                 </li>
                 <li>
                   <Link to="/over">Contact Us</Link>
