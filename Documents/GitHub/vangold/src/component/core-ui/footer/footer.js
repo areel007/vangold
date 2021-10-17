@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="footer__text">
               <p>We match you with top professionals in whatever
-                  field you requiremto help you scale your business and increase revenue for you. </p>
+                  field you required to help you scale your business and increase revenue for you. </p>
             </div>
           </div>
           <div className="footer-links-container">
@@ -26,16 +26,10 @@ const Footer = () => {
               <h2>RESOURCE</h2>
               <div className="ul">
                 <li>
-                  <Link to="/terms-and-conditions">Terms & Conditions</Link>
+                  <Link to="/cookie-policy">Cookie Policy</Link>
                 </li>
                 <li>
-                  <Link to="/privacy-policy">Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link to="/over">Contact Us</Link>
-                </li>
-                <li>
-                  <Link to="/over">News</Link>
+                  <Link target="_blank" to="http://Vangoldfinance.medium.com">News</Link>
                 </li>
               </div>
             </div>
@@ -46,39 +40,34 @@ const Footer = () => {
                   <Link to="/over">FAQ’s</Link>
                 </li>
                 <li>
-                  <Link to="/over">Proof of Payment</Link>
+                  <a target="_blank" rel="noreferrer" href="mailto:support@vangoldservices.com">Feedback</a>
                 </li>
                 <li>
-                  <Link to="/over">Feedback</Link>
-                </li>
-                <li>
-                  <Link to="/over">Home</Link>
+                  <Link target="_blank" to="http://Vangoldfinance.medium.com">Blog</Link>
                 </li>
               </div>
             </div>
           </div>
           <div className="footer__contacts">
             <h2>CONTACTS</h2>
-            <p>Address: Park Avenue, 5th Street, Manhattan
-              NYC. <br/>Phones: 987-7654-3210   987-7654-3210<br/>
-              Email: Info@website.com</p>
+              <p>Email: support@vangoldservices.com</p>
               <div className="footer__contacts-icons">
-              <Link to="/over">
+              <Link target="_blank" to="https://twitter.com/vangoldservices">
                 <div className="icon_box">
                   <img src={Twitter} alt="Twitter" />
                 </div>
               </Link>
-              <Link to="/over">
+              <Link target="_blank" to="https://instagram.com/vangoldservices?r=nametag">
                 <div className="icon_box">
                   <img src={Instagram} alt="Instagram" />
                 </div>
               </Link>
-              <Link to="/over">
+              <Link target="_blank" to="https://www.linkedin.com/company/vangold-services">
                 <div className="icon_box">
                   <img src={Linkedln} alt="Linkedln" />
                 </div>
               </Link>
-              <Link to="/over">
+              <Link target="_blank" to="https://youtube.com/channel/UCIQ2CKeTBmfCYwS0_K_g-lw">
                 <div className="icon_box">
                   <img src={Youtube} alt="Youtube" />
                 </div>
@@ -94,8 +83,8 @@ const Footer = () => {
               <p>© 2020 Vangold Technologies. All rights reserved</p>
             </div>
             <div className="right_bottom_f">
-              <Link to="#">Privacy Policy</Link>
-              <Link to="#">Terms of Use</Link>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/terms-and-conditions">Terms of Use</Link>
             </div>
           </div>
         </div>
