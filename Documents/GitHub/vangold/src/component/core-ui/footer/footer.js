@@ -37,7 +37,7 @@ const Footer = () => {
               <h2>SUPPORT</h2>
               <div className="ul">
                 <li>
-                  <Link to="/over">FAQ’s</Link>
+                  <Link to="/Faqs">FAQ’s</Link>
                 </li>
                 <li>
                   <a target="_blank" rel="noreferrer" href="mailto:support@vangoldservices.com">Feedback</a>

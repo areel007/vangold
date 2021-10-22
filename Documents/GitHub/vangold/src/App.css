@@ -29,4 +29,20 @@ li {
 a {
     text-decoration: none;
 }
-
+.Faqs{
+    margin-bottom: 100px;
+    border: 1px solid white;
+}
+.faqs__header__title{
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.faqs__header__title h1{
+    text-align: center;
+    font-family: var(--inter);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: #333333;
+}

@@ -111,6 +111,7 @@ const HeaderComponent = (props) => {
                         <Link to="/sign-up" className="auth sign-up">Sign up</Link>
                     </div> : null
                 }
+             
                 {
                     isLoggedIn ? <div className="user">
                         <div className="notification">
