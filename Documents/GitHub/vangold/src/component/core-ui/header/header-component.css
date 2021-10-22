@@ -7,8 +7,7 @@ header {
 .header__inner {
   display: flex;
   align-items: center;
-  /* height: 50px; */
-}
+  /* height: 50px; */}
 .logo {
   display: flex;
   align-items: center;
@@ -24,7 +23,7 @@ header {
   font-weight: 800;
   font-size: 24px;
   line-height: 30px;
-  color: #333333;
+  color: #333;
 }
 .header__inner ul {
   display: flex;
@@ -40,7 +39,7 @@ header {
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
-  color: #333333;
+  color: var(--light-text);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -69,6 +68,10 @@ header {
 }
 .header__inner ul li svg {
   margin-right: 10px;
+}
+.language-selection__language svg path{
+  color: #333;
+  /* display: none; */
 }
 .header__inner ul li a {
   text-decoration: none;

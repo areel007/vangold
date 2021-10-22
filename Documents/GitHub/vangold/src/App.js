@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 // import Header from "./component/core-ui/header/header"
@@ -11,7 +12,6 @@ import AccountVerifySuccessful from "./component/views/auth/account-verify-succe
 import TermsAndConditions from "./component/views/terms-and-conditions";
 import PrivacyPolicy from "./component/views/privacy-policy";
 import CookiesPolicy from "./component/views/cookies-policy";
-import { useState } from "react";
 import MobileNav from "./component/core-ui/header/mobile-nav";
 import ResetPassword from "./component/views/auth/reset-password";
 import Home from "./component/views/home/home";
@@ -87,6 +87,7 @@ import FreelancerChat from "./component/views/FreelancerProfileViews/FreelancerC
 import CallChat from "./component/core-ui/AllMessagesBox/CallChat";
 import StoriesModal from "./component/core-ui/StoriesModal/StoriesModal";
 import ImgSlider from "./component/core-ui/imgSlider/imgSlider";
+import Faqs from "./component/views/faq";
 
 function App() {
 
@@ -197,6 +198,9 @@ function App() {
                     </Route>
                     <Route path="/privacy-policy">
                         <PrivacyPolicy />
+                    </Route>
+                    <Route path="/Faqs">
+                        <Faqs />
                     </Route>
                     <Route path="/cookie-policy">
                         <CookiesPolicy />

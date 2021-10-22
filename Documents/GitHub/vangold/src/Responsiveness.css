@@ -316,7 +316,7 @@
   .inn__ourclients__testimonial .inn__ourclients__testimonial__header h2,
   .become-a-business-banner,
   .chat__box--header .chat__box--header__ .chat__box--header__title,
-  .secure-payment-text .popular-service-subtitle__title {
+  .secure-payment-text .popular-service-subtitle__title, .faqs__header__title h1, .accordion .accordionH2 {
     font-size: var(--fs-24) !important;
     line-height: 32px !important;
   }
