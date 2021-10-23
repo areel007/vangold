@@ -132,6 +132,7 @@ footer {
 }
 .right_bottom_f a:hover {
   text-decoration: underline;
+  color: #eeeff4;
 }
 .footer__contacts-icons{
   display: flex;
