@@ -29,7 +29,7 @@ const Footer = () => {
                   <Link to="/cookie-policy">Cookie Policy</Link>
                 </li>
                 <li>
-                  <Link target="_blank" to="http://Vangoldfinance.medium.com">News</Link>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
                   <a target="_blank" rel="noreferrer" href="mailto:support@vangoldservices.com">Feedback</a>
                 </li>
                 <li>
-                  <Link target="_blank" to="http://Vangoldfinance.medium.com">Blog</Link>
+                  <a target="_blank" href="http://Vangoldfinance.medium.com">Blog</a>
                 </li>
               </div>
             </div>
@@ -52,26 +52,26 @@ const Footer = () => {
             <h2>CONTACTS</h2>
               <p>Email: support@vangoldservices.com</p>
               <div className="footer__contacts-icons">
-              <Link target="_blank" to="https://twitter.com/vangoldservices">
+              <a target="_blank" href="https://twitter.com/vangoldservices">
                 <div className="icon_box">
                   <img src={Twitter} alt="Twitter" />
                 </div>
-              </Link>
-              <Link target="_blank" to="https://instagram.com/vangoldservices?r=nametag">
+              </a>
+              <a target="_blank" href="https://instagram.com/vangoldservices?r=nametag">
                 <div className="icon_box">
                   <img src={Instagram} alt="Instagram" />
                 </div>
-              </Link>
-              <Link target="_blank" to="https://www.linkedin.com/company/vangold-services">
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/company/vangold-services">
                 <div className="icon_box">
                   <img src={Linkedln} alt="Linkedln" />
                 </div>
-              </Link>
-              <Link target="_blank" to="https://youtube.com/channel/UCIQ2CKeTBmfCYwS0_K_g-lw">
+              </a>
+              <a target="_blank" href="https://youtube.com/channel/UCIQ2CKeTBmfCYwS0_K_g-lw">
                 <div className="icon_box">
                   <img src={Youtube} alt="Youtube" />
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

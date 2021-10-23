@@ -88,6 +88,7 @@ import CallChat from "./component/core-ui/AllMessagesBox/CallChat";
 import StoriesModal from "./component/core-ui/StoriesModal/StoriesModal";
 import ImgSlider from "./component/core-ui/imgSlider/imgSlider";
 import Faqs from "./component/views/faq";
+import ContactUs from "./component/views/contactus";
 
 function App() {
 
@@ -405,6 +406,9 @@ function App() {
                     </Route>
                     <Route path="/stories">
                         <StoriesModal />
+                    </Route>
+                    <Route path="/contact-us">
+                        <ContactUs />
                     </Route>
                 </Switch>
                 <Footer />
