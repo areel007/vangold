@@ -3,20 +3,22 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__logo">
-          <img src="../assets/logo-1.png" alt="footer logo">
+          <img src="../assets/jb-farms-logo.png" alt="footer logo">
         </div>
         <div class="contact-us">
           <p class="contact-us__title">Contact Us</p>
           <div class="contact-us__subtitle">
-            <p><b style="color: #A8CF45">E:</b> enquiries@panagro.ng</p>
-            <p><b style="color: #A8CF45">T:</b> +234 908 799 1341</p>
+            <p style="margin-bottom: 10px"> 8, Okuwa Avenue <br>  off Okun Owa Road, Odogbolu, <br> Ogun State</p>
+            <p style="margin-bottom: 10px"><b style="color: #A8CF45">E:</b> info@jbfarms.com </p>
+            <p><b style="color: #A8CF45">T:</b>+234 815 590 1666</p>
           </div>
         </div>
         <div class="copyright">
-          <p>&copy; 2021 Panagro</p>
+          <p>&copy; 2021 JBFarms</p>
         </div>
       </div>
     </div>
+    <p style="text-align: center; margin-top: 10px; font-size: 16px; color: var(--white); font-weight: 200">Powered by <b style="color: #A8CF45">Ahead By Design</b></p>
   </footer>
 </template>
 
@@ -29,14 +31,18 @@ export default {
 <style scoped>
 footer {
   padding: 40px 0;
-  background-color: #2a2a2a;
+  background-color: var(--primary);
+  position: relative;
+  top: 100px;
 }
 .footer__inner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .footer__logo {
-  width: 150px;
+  width: 100px;
 }
 .footer__logo img {
   width: 150px;
@@ -59,7 +65,7 @@ footer {
   justify-self: right;
 }
 .copyright p {
-  color: var(--primary);
+  color: var(--white);
 }
 
 @media screen and (max-width: 650px) {

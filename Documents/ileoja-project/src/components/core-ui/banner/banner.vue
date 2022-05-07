@@ -1,13 +1,13 @@
 <template>
   <div class="banner">
     <div class="overlay"></div>
+    <img src="../../../assets/images/banner-img.png" alt="banner">
     <div class="container">
       <div class="banner__inner">
-        <img src="../../../assets/images/banner-img.png" alt="banner">
         <div class="search">
           <div class="location__search">
             <span class="find-anything">Find anything in</span>
-            <button>
+            <button @click="$emit('open-states')">
               <span class="all-nigeria">All Nigeria</span>
               <svg
                   width="12"
@@ -28,6 +28,7 @@
             </button>
           </div>
           <search-input></search-input>
+          {{ searchInput }}
         </div>
       </div>
     </div>
@@ -61,8 +62,11 @@ export default {
 .banner {
   width: 100%;
   background-color: var(--primary-color);
+  margin-bottom: 1.1rem;
+  position: relative;
 }
 .banner__inner {
+  width: 100%;
   height: 31rem;
   display: flex;
   justify-content: center;
@@ -70,6 +74,12 @@ export default {
   --search-box-width: 67.7rem;
   --search-box-background-color: #000;
   position: relative;
+}
+.banner img {
+  width: 100%;
+  height: 31rem;
+  position: absolute;
+  object-fit: cover;
 }
 .overlay {
   width: 100%;

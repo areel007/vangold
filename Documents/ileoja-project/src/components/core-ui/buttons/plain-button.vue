@@ -26,6 +26,7 @@ button {
   cursor: pointer;
   border-radius: var(--plain-button-border-radius, .4rem);
   box-shadow: var(--plain-button-box-shadow, 0px 2px 4px rgba(0, 0, 0, 0.15));
+  letter-spacing: 1.25px;
 }
 
 </style>

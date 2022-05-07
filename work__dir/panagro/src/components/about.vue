@@ -2,53 +2,78 @@
   <div class="about">
     <div class="container">
       <div class="about__inner">
-        <p class="_title">About Us</p>
-        <p class="_subtitle">Panagro is a local fertilizer distribution company that supports agribusinesses,
-          farmers, and growers across Nigeria.</p>
+        <div class="left-column">
+          <section-title section-title="About us"></section-title>
+        </div>
+        <div class="right-column">
+          <p class="right-column__title">
+            JB Farms Nigeria Limited (JBFNL) was incorporated on the 20th of February 1985 as a palm oil
+            trading company. The company is involved in the development of commercial oil palm plantation,
+            production of palm oil and other palm produce.
+          </p>
+          <p class="right-column__subtitle">
+            Over the years, JB farms has established a reputation as one of the leading local producers
+            of palm oil in Nigeria. The company is an indigenous fast growing integrated agribusiness with
+            fresh plans to diversify into other areas along the agricultural value chain.
+            <span
+                style="color: var(--primary);
+                font-size: 14px; cursor: pointer;
+                font-weight: 600"
+                @click="$router.push('/about-us')"
+            >
+              Read more</span>
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SectionTitle from "./section-title";
 export default {
-  name: "about"
+  name: "about",
+  components: {SectionTitle}
 }
 </script>
 
 <style scoped>
-.about {
-  width: 100%;
-  background-color: whitesmoke;
-}
 .about__inner {
-  padding: 60px 0 20px 0;
-  width: 60%;
-  margin: 0 auto;
+  padding: 40px 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-column-gap: 60px;
 }
-._title {
-  font-size: 32px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: var(--primary);
-  font-weight: 500;
-  text-transform: uppercase;
-
+.left-column {
+  position: relative;
+  border-top: 2px solid var(--complementary);
+  --section-title-color: var(--primary)
 }
-._subtitle {
-  font-size: 22px;
+.right-column {
+  border-top: 1px solid #c5c2c2;
+  padding: 40px 0 0 0;
+}
+.right-column .right-column__title {
+  margin-bottom: 40px;
+  font-size: 26px;
+  line-height: 150%;
+  color: grey;
+}
+.right-column .right-column__subtitle {
+  font-size: 18px;
   line-height: 200%;
-  text-align: center;
-  color: var(--secondary);
-}
-.what section:last-child {
-  margin-bottom: 0;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1100px) {
   .about__inner {
-    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .right-column .right-column__title {
+    text-align: left;
+  }
+  .right-column .right-column__subtitle {
+    text-align: justify;
   }
 }
-
 </style>

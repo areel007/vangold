@@ -34,6 +34,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  letter-spacing: 1.25px;
 }
 .icon {
   margin-right: 4rem;

@@ -1,32 +1,18 @@
 <template>
   <div class="slider">
     <Carousel :autoplay="5000" :wrap-around="true">
-
       <Slide v-for="slide in slides" :key="slide">
         <div class="carousel__item">
           <div class="overlay"></div>
           <img :src="require(`../assets/${slide.imgUrl}`)">
           <div class="slider__article">
-            <transition
-                appear
-                @before-enter="beforeEnterTitle"
-                @enter="enterTitle"
-            >
-              <p
-                  :class="`slider__title ${slide.imgUrl==='home_slider1.jpg'?'slider__title-one':slide.imgUrl==='home_slider2.jpg'?'slider__title-two':slide.imgUrl==='home_slider3.jpg'?'slider__title-three':slide.imgUrl==='home_slider4.jpg'?'slider__title-four':null}`"
-              >{{ slide.slideArticle.articleTitle }}</p>
-            </transition>
-            <transition
-                appear
-                @before-enter="beforeEnterSubtitle"
-                @enter="enterSubtitle"
-            >
-              <p class="slider__subtitle">{{ slide.slideArticle.articleSubtitle }}</p>
-            </transition>
+            <p
+                :class="`slider__title ${slide.imgUrl==='home_slider1.jpg'?'slider__title-one':slide.imgUrl==='home_slider2.jpg'?'slider__title-two':slide.imgUrl==='home_slider3.jpg'?'slider__title-three':slide.imgUrl==='home_slider4.jpg'?'slider__title-four':null}`"
+            >{{ slide.slideArticle.articleTitle }}</p>
+            <p class="slider__subtitle">{{ slide.slideArticle.articleSubtitle }}</p>
           </div>
         </div>
       </Slide>
-
       <template #addons>
         <Pagination />
       </template>
@@ -35,99 +21,19 @@
 </template>
 
 <script>
-import { defineComponent, reactive } from "vue";
+import { defineComponent } from "vue";
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
-import gsap from 'gsap'
 
 export default defineComponent({
   name: "slider",
+  props: ["slides"],
   components: {
     Carousel,
     Slide,
   },
   setup() {
-    const slides = reactive([
-      {
-        imgUrl: "home_slider1.jpg",
-        slideArticle: {
-          articleTitle: "Pan Agro",
-          articleSubtitle: "We support agribusinesses, farmers, and growers across Nigeria",
-        }
-      },
-      {
-        imgUrl: "home_slider2.jpg",
-        slideArticle: {
-          articleTitle: "Positive Impact",
-          articleSubtitle: "Changing lives and improving the livelihoods of farmers, crop growers and local communities as a result",
-        }
-      },
-      {
-        imgUrl: "home_slider3.jpg",
-        slideArticle: {
-          articleTitle: "Crop Yields",
-          articleSubtitle: "To improve crop yields, the efficient use and application of fertilizers is recommended",
-        }
-      },
-      {
-        imgUrl: "home_slider4.jpg",
-        slideArticle: {
-          articleTitle: "Pan Agro",
-          articleSubtitle: "We support agribusinesses, farmers, and growers across Nigeria",
-        }
-      },
-    ])
 
-    const beforeEnterTitle = (el) => {
-      el.style.transform = 'translateY(-100px)'
-      el.style.opacity = '0'
-    }
-
-    const enterTitle = (el) => {
-      gsap.to(el, {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1,
-        ease: 'bounce.out'
-      })
-    }
-
-    const beforeEnterSubtitle = (el) => {
-      el.style.transform = 'translateY(100px)'
-      el.style.opacity = '0'
-    }
-
-    const enterSubtitle = (el) => {
-      gsap.to(el, {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 1,
-      })
-    }
-
-    const beforeEnterBtn = (el) => {
-      el.style.opacity = '0'
-    }
-
-    const enterBtn = (el) => {
-      gsap.to(el, {
-        opacity: 1,
-        duration: 1,
-        delay: 2
-      })
-    }
-
-    return {
-      slides,
-      beforeEnterTitle,
-      enterTitle,
-      beforeEnterSubtitle,
-      enterSubtitle,
-      beforeEnterBtn,
-      enterBtn,
-    }
   }
 
 });
@@ -145,7 +51,7 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 800px;
-  background-color: black;
+  background-color: var(--primary);
   opacity: .5;
   z-index: 2;
 }
@@ -173,6 +79,7 @@ export default defineComponent({
   text-align: center;
   margin: 0 auto 10px auto;
   font-weight: bold;
+  color: var(--white);
 }
 .slider__title-one,
 .slider__title-two,
@@ -182,9 +89,9 @@ export default defineComponent({
 }
 .slider__subtitle {
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 20px;
   max-width: 700px;
-  color: var(--primary);
+  color: var(--complementary);
 }
 
 @media screen and (max-width: 900px) {

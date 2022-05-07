@@ -1,6 +1,8 @@
 <template>
   <div class="banner">
-    <slider></slider>
+    <slider
+        :slides="slides"
+    ></slider>
   </div>
 </template>
 
@@ -8,6 +10,7 @@
 import Slider from "./slider";
 export default {
   name: "banner",
+  props: ["slides"],
   components: {Slider},
 }
 </script>

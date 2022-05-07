@@ -4,7 +4,7 @@
         :value='modelValue'
         @input='$emit("update:modelValue", $event.target.value)'
     >
-      <option value="">Select category</option>
+      <option value="">{{ placeholder }}</option>
       <option v-for="(value, index) in values" :value="value" :key="index">{{ value }}</option>
     </select>
     <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +17,7 @@
 <script>
 export default {
   name: "select-input",
-  props: ["values", "modelValue"]
+  props: ["values", "modelValue", 'placeholder']
 }
 </script>
 
@@ -27,6 +27,7 @@ export default {
   align-items: center;
   width: var(--select-input-width, 100%);
   position: relative;
+  margin-bottom: var(--select-input-margin-bottom, 0)
 }
 select {
   padding: 1.6rem 2.9rem;
@@ -44,6 +45,7 @@ select {
   color: var(--secondary-color);
   text-transform: capitalize;
   cursor: pointer !important;
+  background-color: var(--select-input-bg, var(--color-white));
 }
 svg {
   position: absolute;
